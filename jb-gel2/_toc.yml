@@ -3,4 +3,33 @@
 format: jb-book
 root: docs/index
 chapters:
-- file: docs/lec-01-introduction
+- file: docs/01_lec
+  title: Einleitung
+
+- file: docs/02_lec
+  title: Netzwerkerregung
+
+- file: docs/03_lec
+  title: Frequenzbereich
+
+- file: docs/04_lec
+  title: Impedanz, Admittanz und Leistung
+
+- file: docs/05_lec
+  title: Graphische Analysemethoden
+
+- file: docs/06_lec
+  title: Netzwerkanalyse
+
+- file: docs/07_lec
+  title: Messbrücken
+
+- file: docs/08_lec
+  title: Resonanzkreise
+
+- file: docs/09_lec
+  title: Transformatoren und Übertrager
+
+- file: docs/10_lec
+  title: Literaturverzeichnis
+
