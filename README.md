@@ -1,1 +1,1 @@
-# Grundlagen der Elektrotechnik 2 - GEL2
+# M2.7 GEL2 - Grundlagen der Elektrotechnik 2 
