@@ -1,2 +1,1 @@
-# GEL2
-Grundlagen der Elektrotechnik 2
+# Grundlagen der Elektrotechnik 2 - GEL2
