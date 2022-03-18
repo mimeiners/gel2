@@ -4,7 +4,7 @@
 
 <div id="sec:netpwr"></div>
 <!-- !split -->
-### Schaltzeichen
+## Schaltzeichen
 
 *Notice.* 
 "In Deutschland sind elektrische Schaltzeichen durch DIN EN 60617 Graphische Symbole für Schaltpläne bzw. IEC 60617 genormt.
@@ -15,7 +15,7 @@
 
 
 <!-- !split -->
-### Erregungsarten
+## Erregungsarten
 
 * Gleichvorgänge
 * Nichtperiodische Vorgänge
@@ -24,7 +24,7 @@
 * Zeitveränderliche Größen, hierbei ändert die Erregergröße $f(t)$ ihre Amplitude und/oder ihre Richtung zeitlich. Der Wert von $f(t)$ zum momentanen Zeitpunkt heißt Augenblicks- oder Momentanwert $f(t)$ der physikalischen Größe. Momentanwerte erhalten kleine lateinische Buchstaben, Spannung $u$ und Strom $i$.
 
 <!-- !split -->
-### Sinusförmige Erregung, periodische Vorgänge
+## Sinusförmige Erregung, periodische Vorgänge
 
 *Definitionen.* 
 * $f(t)=f(t+nT)$ mit $n=0, 1 ...$
@@ -40,14 +40,14 @@
 
 
 <!-- !split -->
-### Eigenschaften der harmonischen Funktionen
+## Eigenschaften der harmonischen Funktionen
 
 * Differentiation, Integration und Addition, Subtraktion mithilfe von Additiontheoremen
 * Aufspaltung einer harmonischen Schwingung und Koeffizientenvergleich
 * Zusammengefasst: Bei Addition, Differentiation und Integration von harmonischen Funktionen der Kreisfrequenz $\omega$ entstehen wieder harmonische Funktionen der gleichen Frequenz, aber veränderter Amplitude und Phase. Bei der Überlagerung zweier harmonischer Größen mit verschiedener Frequenz entsteht zwar eine periodische Schwingung, aber keine Sinusschwingung (harmonische).
 
 <!-- !split -->
-### Mittelwerte periodischer Zeitfunktionen
+## Mittelwerte periodischer Zeitfunktionen
 
 *Arithmetischer Mittelwert - linearer Mittelwert - Gleichwert.* 
 $$
@@ -77,7 +77,7 @@ $$
 
 
 <!-- !split -->
-### $u/i$-Verhalten von $R$
+## $u/i$-Verhalten von $R$
 
 *Widerstand $R$ - Einheit: $1 \Omega$.* 
 $$
@@ -91,7 +91,7 @@ $$
 
 
 <!-- !split -->
-### u/i-Verhalten von $L$
+## u/i-Verhalten von $L$
 
 *Induktivität $L$ - Einheit: $1 H = 1 Vs/A$.* 
 $$
@@ -105,7 +105,7 @@ $$
 
 
 <!-- !split -->
-### u/i-Verhalten von $C$
+## u/i-Verhalten von $C$
 
 *Kapazität $C$ - Einheit: $1 F = 1 C/V = 1 As/V$.* 
 $$

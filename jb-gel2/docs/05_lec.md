@@ -6,7 +6,7 @@
 * Nyquist-Ortskurve, kurz [Ortskurve](https://elektroniktutor.de/elektrophysik/ortskurv.html) <a href="mietke2020.html#mietke2020">[4]</a><a href="schenke2020.html#schenke2020">[5]</a>
 
 <!-- !split -->
-### Frequenzgang &ndash; Übergangsverhalten
+## Frequenzgang &ndash; Übergangsverhalten
 
 *Kurzbeschreibung.* 
 Der Frequenzgang beschreibt, wie ein dynamisches System eine sinusförmige Eingangsgröße überträgt.
@@ -21,7 +21,7 @@ $$
 
 
 <!-- !split -->
-#### Exercise: Bode-Diagramm einer RC-Schaltung
+### Exercise: Bode-Diagramm einer RC-Schaltung
 
 <div id="ipynb:bode"></div>
 
@@ -72,7 +72,7 @@ plt.show()
 ~~~
 
 <!-- !split -->
-### Ortskurven
+## Ortskurven
 Als Referenz zu diesem Thema sei das Kapitel 5 aus <a href="buettner2014.html#buettner2014">[6]</a> empfohlen.
 
 *Vergleich zum Zeigerdiagramm.* 
@@ -84,7 +84,7 @@ Als Referenz zu diesem Thema sei das Kapitel 5 aus <a href="buettner2014.html#bu
 
 
 <!-- !split -->
-#### Exercise: Ortskurve einer RC-Schaltung
+### Exercise: Ortskurve einer RC-Schaltung
 
 <div id="ipynb:rc"></div>
 
@@ -133,13 +133,13 @@ parallel zur imaginären Achse. Die Achsenbezeichnungen der Leitwerte werden in 
 auf die Re-Achse bezogen positiv." <a href="mietke2020.html#mietke2020">[4]</a>
 
 <!-- !split -->
-#### Reihenschaltung von $R$, $L$ und $C$
+### Reihenschaltung von $R$, $L$ und $C$
 
 <!-- !split -->
-#### Parallelschaltung von $R$, $L$ und $C$
+### Parallelschaltung von $R$, $L$ und $C$
 
 <!-- !split -->
-#### Inversion von Ortskurven
+### Inversion von Ortskurven
 
 <div id="inversion"></div>
 

@@ -4,7 +4,7 @@
 
 <div id="sec:freq"></div>
 <!-- !split -->
-### Beschreibung und Analyse im Frequenzbereich (1)
+## Beschreibung und Analyse im Frequenzbereich (1)
 *Problemstellung.* 
 Bei zukünftigen Schaltungen ist es nicht mehr möglich, direkt mit den Zeitfunktionen für Spannungen und Ströme zu
 arbeiten.
@@ -15,7 +15,7 @@ Gleichungssystemen ausgehen (Maschen-, Knoten- und andere Verfahren) können nic
 
 
 <!-- !split -->
-### Beschreibung und Analyse im Frequenzbereich (2)
+## Beschreibung und Analyse im Frequenzbereich (2)
 *Symbolische Verfahren/Methoden.* 
   * komplexe Darstellung (analytisches Verfahren)
   * Zeigerdarstellung (graphisches Verfahren)
@@ -27,7 +27,7 @@ Gleichungssystemen ausgehen (Maschen-, Knoten- und andere Verfahren) können nic
 
 
 <!-- !split -->
-### Symbolisches Verfahren
+## Symbolisches Verfahren
 * Man ordnet nach einer gewissen Regel jeder Sinusgrö{\ss}e eine symbolische Grö{\ss}e zu (z.B. einen Vektor oder eine komplexe Zahl);
 * Man schreibt die Differentialgleichungen des Netzwerkes mit den symbolischen Grö{\ss}en;
 * Statt die Differentialgleichungen zu lösen, löst man die Gleichungen für die Symbole und bestimmt die unbekannten Grö{\ss}en. 
@@ -35,7 +35,7 @@ Gleichungssystemen ausgehen (Maschen-, Knoten- und andere Verfahren) können nic
 * entn. <a href="marinescu2016.html#marinescu2016">[1]</a>
 
 <!-- !split -->
-### Vorteile des Frequenzbereichs
+## Vorteile des Frequenzbereichs
 * zeitl. Differentiation und Integration geht über in Multiplikation und Division mit dem Differentialoperator $s=\sigma+j\omega$ (komplexe Frequenz); häufig genügt es sich auf die imaginäre Frequenz $s=j \omega$ zu beschränken.
 * u-i-Zusammenhänge des Zeitbereichs $\rightarrow$ ohmsche Form im Frequenzbereich durch komplexen Widerstands-/Leitwertbegriff
 * ODE's gehen über in algebraische Gleichungen
@@ -44,7 +44,7 @@ Gleichungssystemen ausgehen (Maschen-, Knoten- und andere Verfahren) können nic
 
 
 <!-- !split -->
-### Funktionaltransformation (1) - Zerlegung
+## Funktionaltransformation (1) - Zerlegung
 
 *Zerlegung periodischer Signale.* 
 $$
@@ -58,7 +58,7 @@ $$
 
 
 <!-- !split -->
-### Funktionaltransformation (2) - Euler'sche Formel
+## Funktionaltransformation (2) - Euler'sche Formel
 
 *Euler'sche Formel.* 
 $$
@@ -71,7 +71,7 @@ $$
 
 
 <!-- !split -->
-### Funktionaltransformation (3) - Exponentialdarstellung
+## Funktionaltransformation (3) - Exponentialdarstellung
 
 *Exponentialdarstellung von Sinussignalen.* 
 $$
@@ -84,7 +84,7 @@ $$
 
 
 <!-- !split -->
-### Funktionaltransformation (4) - Fourierreihe
+## Funktionaltransformation (4) - Fourierreihe
 
 *Exponentialdarstellung der Fourierreihe.* 
 $$
@@ -100,7 +100,7 @@ $$
 
 
 <!-- !split -->
-### Funktionaltransformation (5) - Transformation
+## Funktionaltransformation (5) - Transformation
 
 *Transformation.* 
 $$
@@ -117,7 +117,7 @@ $$
 
 
 <!-- !split -->
-### Funktionaltransformation (6) - Definition
+## Funktionaltransformation (6) - Definition
 
 *Definitionen.* 
 $$
@@ -131,13 +131,13 @@ $$
 
 
 <!-- !split -->
-### Zeigerdarstellung (1)
+## Zeigerdarstellung (1)
 
 <!-- <img src="fig/lec_3-zeigerdarstellung.png" width="400"> -->
 ![](fig/lec_3-zeigerdarstellung.png)
 
 <!-- !split -->
-### Zeigerdarstellung (2)
+## Zeigerdarstellung (2)
 
 *Grundschaltelemente in Zeigerdarstellung.* 
 * Sinusgrö{\ss}e $i(t) = I \sqrt{2} \sin(\omega t + \varphi)$

@@ -3,13 +3,13 @@
 # Transformatoren und Übertrager
 
 <div id="sec:transf-und-ubertr"></div>
-### Allgemeine Erläuterung
+## Allgemeine Erläuterung
 label(sec:allg-erl)
 
-### Der verlustlose Übertrager
+## Der verlustlose Übertrager
 <div id="sec:verl-uebertr"></div>
 
-### Realer (verlustbehafteter) Übertrager
+## Realer (verlustbehafteter) Übertrager
 <div id="sec:real-uebertr"></div>
 
 <!-- !split -->

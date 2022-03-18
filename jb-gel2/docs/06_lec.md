@@ -4,7 +4,7 @@
 
 <div id="sec:netana"></div>
 <!-- !split -->
-### Systemsimulation
+## Systemsimulation
 
 
           Ebene             Maß       Simulation     
@@ -17,7 +17,7 @@ Gatter/Komponenten         10 mm   Verhaltensmodell
 
 
 <!-- !split -->
-### Makrotheorie, Ref. <a href="kasper2000.html#kasper2000">[7]</a>
+## Makrotheorie, Ref. <a href="kasper2000.html#kasper2000">[7]</a>
 
 * Mittelwerte charakteristischer Größen des Systems
 * Temperatur, Wärmekapazität, Leitfähigkeit etc.
@@ -26,7 +26,7 @@ Gatter/Komponenten         10 mm   Verhaltensmodell
 * nur noch dt kein dx (nach dem Ort)
 
 <!-- !split -->
-### Netzwerksimulation
+## Netzwerksimulation
 
 * Maschenwiderstandsmatrix
 * Knotenleitwertmatrix
@@ -34,13 +34,13 @@ Gatter/Komponenten         10 mm   Verhaltensmodell
 * für praktische Berechnungen (Simulation) "Knotenanalyse"
 
 <!-- !split -->
-### Netzwerk
+## Netzwerk
 
 <!-- <img src="fig/lec_6s20.png" width="400"> -->
 ![](fig/lec_6s20.png)
 
 <!-- !split -->
-### Transiente Analyse
+## Transiente Analyse
 
 * Knoten 0:
 
@@ -70,7 +70,7 @@ $$
 $$
 
 <!-- !split -->
-### Differentialgleichungssystem
+## Differentialgleichungssystem
 
 $$
 \begin{align*}
@@ -120,7 +120,7 @@ $$
 $$
 
 <!-- !split -->
-### Netzwerkanalyse zeitabhängiger Signale
+## Netzwerkanalyse zeitabhängiger Signale
 
 * Matrix $\mathbf{B}$ ist nicht immer invertierbar, ggf. blockweise zerlegen
 * Algebro-Differentialgleichungen
@@ -132,7 +132,7 @@ $$
 
 
 <!-- !split -->
-### Lösung im Frequenzbereich
+## Lösung im Frequenzbereich
 
 
                       Zeitbereich                             Frequenzbereich                    
@@ -147,7 +147,7 @@ Spule        $u_L(t)=L \frac{di_L(t)}{dt}$  $\underline{u}_L(t)= j \omega L \und
 
 
 <!-- !split -->
-### Grundaufgabe der Netzwerkanalyse
+## Grundaufgabe der Netzwerkanalyse
 
 * Gewinnung des Netzwerkes
 * Wahl des Lösungsverfahrens
@@ -171,7 +171,7 @@ Spule        $u_L(t)=L \frac{di_L(t)}{dt}$  $\underline{u}_L(t)= j \omega L \und
 
 
 <!-- !split -->
-### Netzwerkstruktur <a href="paul2012.html#paul2012">[8]</a>
+## Netzwerkstruktur <a href="paul2012.html#paul2012">[8]</a>
 
 *Unabhängige Knoten und Maschen.* 
 
@@ -190,7 +190,7 @@ Knoten- und Maschengleichungen und kann durch "topologische Matrizen" (sog. "Inz
 
 
 <!-- !split -->
-### Vollständiger Baum
+## Vollständiger Baum
 
 *Eigenschaften:* 
 
@@ -216,14 +216,14 @@ heißt "Fundamentalschleife" ("unabhängige Masche"). Davon gibt es $m=z-(k-1)$.
 
 
 <!-- !split -->
-### Maschenstromverfahren
+## Maschenstromverfahren
 <div id="sec:masch"></div>
 
 <!-- <img src="fig/lec_6s30.png" width="400"> -->
 ![](fig/lec_6s30.png)
 
 <!-- !split -->
-### Wahl der unabhängigen Ströme $I_M$
+## Wahl der unabhängigen Ströme $I_M$
 
 $$
  I_1, I_4, I_7, I_8 
@@ -260,7 +260,7 @@ $$
 $$
 
 <!-- !split -->
-### 4 Maschengleichungen
+## 4 Maschengleichungen
 
 $$
 \begin{align}
@@ -303,7 +303,7 @@ $$
 
 <!-- --- begin exercise --- -->
 
-### Maschenstromverfahren &ndash; Kettenschaltung
+## Maschenstromverfahren &ndash; Kettenschaltung
 <div id="exer:ladder"></div>
 
 Berechnen Sie mittels des Maschenstromverfahrens den Strom $I$ durch den Abschlußwiderstand $R$.
@@ -325,7 +325,7 @@ Das Netzwerk ist ein Tiefpassfilter höherer Ordnung. Wie können Sie das überp
 <!-- --- end exercise --- -->
 
 <!-- !split -->
-### Knotenspannungsanalyse
+## Knotenspannungsanalyse
 
 Beim Knotenspannungsverfahren, das auf Maxwell (1873) zurückgeht, wird die Hilfsvariable *Knotenspannung* so eingeführt,
 dass jede *Maschengleichung* automatisch erfüllt ist und daher alle wegfallen.
@@ -338,7 +338,7 @@ Das Verfahren umfasst dann:
 (statt der Zweigspannung) und die Lösung der Gleichungen nach den Knotenspannungen.
 
 <!-- !split -->
-### Knotenspannungs- vs Maschenstromanalyse
+## Knotenspannungs- vs Maschenstromanalyse
 
 * Wegfall der Baumsuche, auch spielt die Zahl unabhängiger Maschen $m = z-(k-1)$ und damit die Anzahl der Zweige keine Rolle,
 * weil die Knotenspannungen unabhängige Variablen sind, dürfen Spannungsquellen nicht auftreten, denn eine ideale Spannungsquelle zwischen zwei Knoten macht den Strom durch die Quelle unbestimmt. 
@@ -347,7 +347,7 @@ Das Verfahren umfasst dann:
 
 <!-- --- begin exercise --- -->
 
-### Knotenpotentialverfahren mit X-Schaltung
+## Knotenpotentialverfahren mit X-Schaltung
 <div id="exer:x-circuit"></div>
 
 Das folgende Netzwerk enthält vier Impedanzen in der sogenannten X-Schaltung. Die beiden Quellen haben dieselbe

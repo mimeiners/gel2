@@ -4,7 +4,7 @@
 
 <div id="sec:imp"></div>
 <!-- !split -->
-### Widerstandsoperator (1)
+## Widerstandsoperator (1)
 *u/i-Verhalten.* 
 $$
 \begin{equation}
@@ -17,7 +17,7 @@ $$
 
 
 <!-- !split -->
-### Widerstandsoperator (2)
+## Widerstandsoperator (2)
 *Impedanz.* 
 $$
 \begin{align}
@@ -33,7 +33,7 @@ $$
 
 
 <!-- !split -->
-### Widerstandsoperator (3)
+## Widerstandsoperator (3)
 *Eigenschaften.* 
 $$
 \begin{align}
@@ -48,7 +48,7 @@ $$
 
 
 <!-- !split -->
-### Leitwertoperator (1)
+## Leitwertoperator (1)
 *Harmonische Anregung.* 
 $$
 \begin{align}
@@ -60,7 +60,7 @@ $$
 
 
 <!-- !split -->
-### Leitwertoperator (2)
+## Leitwertoperator (2)
 *Admittanz.* 
 $$
 \begin{align}
@@ -76,7 +76,7 @@ $$
 
 
 <!-- !split -->
-### Leitwertoperator (3)
+## Leitwertoperator (3)
 *Eigenschaften.* 
 $$
 \begin{align}
@@ -91,7 +91,7 @@ $$
 
 
 <!-- !split -->
-### $R$, $L$, $C$ &ndash; Netzwerke
+## $R$, $L$, $C$ &ndash; Netzwerke
 *Vergleich.* 
 $$
 \begin{align*}
@@ -109,7 +109,7 @@ $$
 
 
 <!-- !split -->
-### Leistung von Wechselsignalen (1)
+## Leistung von Wechselsignalen (1)
 *Harmonische Anregung.* 
 $$
 \begin{align}
@@ -123,7 +123,7 @@ $$
 
 
 <!-- !split -->
-### Leistung von Wechselsignalen (2)
+## Leistung von Wechselsignalen (2)
 *Komplexe Leistung.* 
 $$
 \begin{align}
@@ -142,7 +142,7 @@ $$
 
 
 <!-- !split -->
-### Leistung von Wechselsignalen (3)
+## Leistung von Wechselsignalen (3)
 *Komplexe Leistung.* 
 $$
 \begin{align}
@@ -158,7 +158,7 @@ $$
 
 
 <!-- !split -->
-### Leistung von Wechselsignalen (4)
+## Leistung von Wechselsignalen (4)
 *Eigenschaften.* 
 $$
 \begin{align}

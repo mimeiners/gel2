@@ -3,7 +3,7 @@
 # Resonanzkreise
 
 <div id="sec:resonanzkreise"></div>
-### Physikalische Grundlagen
+## Physikalische Grundlagen
 
 * periodische Zustandsänderung in einem physikalischen System
 * periodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder udn Masse, Induktivität und Kapazität
@@ -38,7 +38,7 @@ $$
 * freie und erzwungene Schwingung
 * ungedämpfte und gedämpfte Schwingung
 
-### Realer (verlustbehafteter) Schwingkreis
+## Realer (verlustbehafteter) Schwingkreis
 \begin{block}{Maschengleichung}
 $$
 \begin{align}
@@ -54,7 +54,7 @@ $$
 * Reihenkreis $Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}$
 * Parallelkreis $Q = \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}$
 
-### Grundeigenschaften von Reihen- und Parallelschwingkreis
+## Grundeigenschaften von Reihen- und Parallelschwingkreis
 \begin{block}{Reihenkreis/Impedanz}
 
 $$
@@ -96,7 +96,7 @@ $\omega < \omega_0$   kapazitiv     induktiv
 $\omega > \omega_0$    induktiv    kapazitiv   
 
 
-### Vereinheitlichte Kennzeichnung
+## Vereinheitlichte Kennzeichnung
 
 * Verstimmung $v$
 * 3dB-Frequenz
