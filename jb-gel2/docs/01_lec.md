@@ -253,4 +253,3 @@ $$
 U = \lvert \hat{U} \lvert e^{j \phi}
 \end{equation}
 $$
-
