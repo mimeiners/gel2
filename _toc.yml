@@ -1,0 +1,33 @@
+# Table of contents
+
+format: jb-book
+root: about/unsyllabus
+parts:
+- caption: About this course
+  chapters:
+    - file: about/syllabus
+    - file: about/course_schedule
+    - file: about/accommodations
+    - file: about/doing_well
+    - file: about/faq
+- caption: Seminar
+  chapters:
+    - file: class/01_lec
+      title: Einleitung
+    - file: class/02_lec
+      title: Netzwerkerregung
+    - file: class/03_lec
+      title: Frequenzbereich
+    - file: class/04_lec
+      title: Impedanz, Admittanz und Leistung
+    - file: class/05_lec
+      title: Graphische Analysemethoden
+    - file: class/06_lec
+      title: Netzwerkanalyse
+    - file: class/07_lec
+      title: Messbrücken
+    - file: class/08_lec
+      title: Resonanzkreise
+    - file: class/09_lec
+      title: Transformatoren und Übertrager
+
