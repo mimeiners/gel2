@@ -69,3 +69,33 @@ sphinx:
     - linkify
     - replacements
     - substitution
+
+    myst_substitutions:
+      INSTRUCTOR: "Prof. Dr.-Ing. Mirco Meiners (he/his/him)"
+      PRONOUNCE: ""
+      OFFICE: "E 508"
+      PHONE: "N/A"
+      COURSE_CODE: "M2.6"
+      SECTION: ""
+      CREDITS: "6"
+      TITLE: "Grundalgen der Elektrotechnik 2 (GEL2)"
+      PREREQS: "GEL1"
+      COREQS: ""
+      TERM: "2022 Sommer"
+      ROOM: "E 509"
+      MEETING_TIMES: "Montags von 13:30 bis 15:00 (16:00) Uhr"
+      GRACE_PERIOD: ""
+      W_DATE_1: ""
+      W_DATE_2: ""
+      W_DATE_3: ""
+      EXAM_PERIOD: ""
+      CANVAS_ID: ""
+      CANVAS_LINK: ""
+      ZOOM_LINK: ""
+      ANNOUNCEMENTS_LINK: ""
+      COURSE_LINK: ""
+      FORUM_LINK: ""
+      ANALYTICS_OPTOUT: ""
+      FORMAT: "Seminar und Übungen"
+      ASSOCIATE_HEAD: "Christian Ymele Dega [cymela-dega@stud.hs-bremen.de](mailto:cymela-dega@stud.hs-bremen.de)"
+      ANON_FEEDBACK: ""
