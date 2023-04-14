@@ -58,7 +58,7 @@ latex:
 sphinx:
   config:
     html_show_copyright: false
-#    html_extra_path: ['files']
+    html_extra_path: ['files']
     bibtex_reference_style: author_year
     myst_enable_extensions: 
     - amsmath
@@ -78,12 +78,12 @@ sphinx:
       COURSE_CODE: "M2.6"
       SECTION: ""
       CREDITS: "6"
-      TITLE: "Grundalgen der Elektrotechnik 2 (GEL2)"
+      TITLE: "Grundlagen der Elektrotechnik 2 (GEL2)"
       PREREQS: "GEL1"
       COREQS: ""
-      TERM: "2022 Sommer"
+      TERM: "2023 Sommer"
       ROOM: "E 509"
-      MEETING_TIMES: "Montags von 13:30 bis 15:00 (16:00) Uhr"
+      MEETING_TIMES: "Montags von 11:30 bis 13:00 Uhr"
       GRACE_PERIOD: ""
       W_DATE_1: ""
       W_DATE_2: ""
