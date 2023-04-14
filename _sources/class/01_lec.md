@@ -1,14 +1,19 @@
+<!-- !split -->
+<!-- jupyter-book 01_lec.md -->
 # Einleitung
 
-## Wissenschaftliches Rechnen / Datenwissenschaft
+<div id="sec:intro"></div>
+<!-- !split -->
+### Wissenschaftliches Rechnen / Datenwissenschaft
 * [Python](https://www.anaconda.com/download/)
 * [R Project](https://www.r-project.org) 
-* [Matlab](http://de.mathworks.com/?requestedDomain=de.mathworks.com)
+* [Matlab](https://de.mathworks.com)
 * [Gnu Octave](https://www.gnu.org/software/octave/)
 * [Gnuplot](http://www.gnuplot.info) ([Gnuplotting](http://www.gnuplotting.org))
 * [Command-line tools](http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html) 
 
-## Schaltungssimulation (SPICE)
+<!-- !split -->
+### Schaltungssimulation (SPICE)
 * [LTspice Linear Technology](http://www.linear.com/designtools/software/)
 * [TINA-TI SPICE-Based Analog Simulation Program](http://www.ti.com/tool/tina-ti) 
 * [ngspice (open-source)](http://ngspice.sourceforge.net)
@@ -16,112 +21,143 @@
 * [Spectre (Cadence)](https://www.cadence.com/content/cadence-www/global/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation/spectre-circuit-simulator.html)
 * [HSPICE (Synopsys)](https://www.synopsys.com/tools/Verification/AMSVerification/CircuitSimulation/HSPICE/Pages/default.aspx)
 
-## Betriebssystem (OS) - Werkzeuge (Tools)
-* [Shell](https://en.wikipedia.org/wiki/Shell_%28computing%29)
-  * [oh-my-zsh](https://ohmyz.sh),
-  * [bash-it](https://bash-it.readthedocs.io/en/latest/)
-  * [SSH (Secure Shell)](https://de.wikipedia.org/wiki/Secure_Shell)
+<!-- !split -->
+### Betriebssystem (OS) - Werkzeuge (Tools)
+  * [Shell](https://en.wikipedia.org/wiki/Shell_%28computing%29)
+    * [oh-my-zsh](https://ohmyz.sh),
+    * [bash-it](https://bash-it.readthedocs.io/en/latest/)
+    * [SSH (Secure Shell)](https://de.wikipedia.org/wiki/Secure_Shell)
 
-* [GIT (Versionskontrolle)](https://git-scm.com)
-* [Cygwin](https://cygwin.com)
+  * [GIT (Versionskontrolle)](https://git-scm.com)
+  * [Cygwin](https://cygwin.com)
 
+<!-- !split -->
+### Code Editoren
+  * [Emacs](https://www.gnu.org/software/emacs/)
+  * [Vim](https://www.vim.org)
+  * [Notepad++](https://notepad-plus-plus.org) (Windows)
+  * [Atom](https://atom.io)
+  * [Visual Studio Code](https://code.visualstudio.com)
+  * [PyCharm](https://www.jetbrains.com/pycharm/)
 
-## Code Editoren
-* [Emacs](https://www.gnu.org/software/emacs/)
-* [Vim](https://www.vim.org)
-* [Notepad++](https://notepad-plus-plus.org) (Windows)
-* [Atom](https://atom.io)
-* [Visual Studio Code](https://code.visualstudio.com)
-* [PyCharm](https://www.jetbrains.com/pycharm/)
+<!-- !split -->
+### Schreibst Du noch oder TeXst Du schon?
+  * [MikTeX (Windows, MacOS, Linux)](https://miktex.org/)
+  * [MacTeX (MacOS)](https://www.tug.org/mactex/)
+  * [TeXLive (Linux)](http://tug.org/texlive/)
 
+<!-- !split -->
+### LaTeX Editoren
+  * IDE's
+    * [TeXStudio](http://www.texstudio.org)
+    * [TeXMaker](http://www.xm1math.net/texmaker/)
+    * [TeXWorks](http://www.tug.org/texworks/)
 
-## Schreibst Du noch oder TeXst Du schon?
-* [MikTeX (Windows, MacOS, Linux)](https://miktex.org/)
-* [MacTeX (MacOS)](https://www.tug.org/mactex/)
-* [TeXLive (Linux)](http://tug.org/texlive/)
-
-## LaTeX Editoren
-* IDE's
-  * [TeXStudio](http://www.texstudio.org)
-  * [TeXMaker](http://www.xm1math.net/texmaker/)
-  * [TeXWorks](http://www.tug.org/texworks/)
-
-* Kollaborative Frameworks
-  * [ShareLaTeX, Online LaTeX](https://www.sharelatex.com/)
-  * [CoCalc - Online LaTeX](https://cocalc.com/doc/latex-editor.html)
-
-
-## Literaturverwaltung und LaTeX
-* [Citavi im Detail > Titel exportieren > Export nach BibTeX](https://www1.citavi.com/sub/manual5/de/exporting_to_bibtex.html)
-* [RefWorks - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3912294)
-* [Benutzerdefinierte BibTex-Keys mit Zotero | nerdpause](https://nerdpause.de/benutzerdefinierte-bibtex-keys-mit-zotero/)
-* [JabRef - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3897117)
-* [EndNote - Library Guide Univ. Melbourne](https://unimelb.libguides.com/latexbibtex/endnote)
-
-## Schöne neue Welt
-![<p><em>AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016 <div id="fig:jaguar"></div></em></p>](fig/lec_AMD@16nm@Jaguar.jpg)
+  * Kollaborative Frameworks
+    * [ShareLaTeX, Online LaTeX](https://www.sharelatex.com/)
+    * [CoCalc - Online LaTeX](https://cocalc.com/doc/latex-editor.html)
 
 
-## Halbleiterherstellung (Infineon, Dresden)
+<!-- !split -->
+### Literaturverwaltung und LaTeX
+  * [Citavi im Detail > Titel exportieren > Export nach BibTeX](https://www1.citavi.com/sub/manual5/de/exporting_to_bibtex.html)
+  * [RefWorks - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3912294)
+  * [Benutzerdefinierte BibTex-Keys mit Zotero | nerdpause](https://nerdpause.de/benutzerdefinierte-bibtex-keys-mit-zotero/)
+  * [JabRef - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3897117)
+  * [EndNote - Library Guide Univ. Melbourne](https://unimelb.libguides.com/latexbibtex/endnote)
+
+<!-- !split -->
+### Schöne neue Welt
+<!-- !bslidecell 00 0.9 -->
+
+<!-- <img src="../../lecture/doconce/fig/lec_AMD@16nm@Jaguar.jpg" width="400"><p><em>AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016 <div id="fig:jaguar"></div></em></p> -->
+![<p><em>AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016 <div id="fig:jaguar"></div></em></p>](../../lecture/doconce/fig/lec_AMD@16nm@Jaguar.jpg)
+
+<!-- !eslidecell -->
+
+<!-- !split -->
+### Halbleiterherstellung (Infineon, Dresden)
+<!-- !bslidecell 00 0.9 -->
+
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/_Kj58yQ67KI" frameborder="0" allowfullscreen></iframe>
 
+<!-- !eslidecell -->
 
-## FinFET (Intel)
+<!-- !split -->
+### FinFET (Intel)
+<!-- !bslidecell 00 0.9 -->
+
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/_VMYPLXnd7E" frameborder="0" allowfullscreen></iframe>
 
+<!-- !eslidecell -->
 
-## TSMC Fab (Next Gen 7/5 nm)
+<!-- !split -->
+### TSMC Fab (Next Gen 7/5 nm)
+<!-- !bslidecell 00 0.9 -->
+
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/Hb1WDxSoSec" frameborder="0" allowfullscreen></iframe>
 
+<!-- !eslidecell -->
 
-## Es war einmal ...
+<!-- !split -->
+### Es war einmal ...
 <div id="sec:history"></div>
 
-![<p><em>1906 die Elektronenröhre</em></p>](fig/lec_vacuum_tube.png)
+<!-- !bslidecell 00 0.45 -->
+<!-- <img src="../../lecture/doconce/fig/lec_vacuum_tube.png" width="400"><p><em>1906 die Elektronenröhre</em></p> -->
+![<p><em>1906 die Elektronenröhre</em></p>](../../lecture/doconce/fig/lec_vacuum_tube.png)
+<!-- !eslidecell -->
 
-![<p><em>1947 der erste Transistor, Bell Labs Foto</em></p>](fig/lec_1st_transistor.png)
+<!-- !bslidecell 01 0.45 -->
+<!-- <img src="../../lecture/doconce/fig/lec_1st_transistor.png" width="400"><p><em>1947 der erste Transistor, Bell Labs Foto</em></p> -->
+![<p><em>1947 der erste Transistor, Bell Labs Foto</em></p>](../../lecture/doconce/fig/lec_1st_transistor.png)
+<!-- !eslidecell -->
 
+<!-- !split -->
+### Damals und heute
+<!-- !bslidecell 00 0.45 -->
+<!-- <img src="../../lecture/doconce/fig/lec_1st_ic_kilby.png" width="400"><p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p> -->
+![<p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p>](../../lecture/doconce/fig/lec_1st_ic_kilby.png)
+<!-- !eslidecell -->
 
-## Damals und heute
+<!-- !bslidecell 01 0.45 -->
+<!-- <img src="../../lecture/doconce/fig/lec_modern_ic.png" width="400"><p><em>Moderner IC <div id="fig:modernic"></div></em></p> -->
+![<p><em>Moderner IC <div id="fig:modernic"></div></em></p>](../../lecture/doconce/fig/lec_modern_ic.png)
+<!-- !eslidecell -->
 
-![<p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p>](fig/lec_1st_ic_kilby.png)
+<!-- !split -->
+### Systemhierarchie
 
-![<p><em>Moderner IC <div id="fig:modernic"></div></em></p>](fig/lec_modern_ic.png)
-
-
-## Systemhierarchie
-
-![<p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p>](fig/lec_system_hierarchy.png)
+<!-- <img src="../../lecture/doconce/fig/lec_system_hierarchy.png" width="400"><p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p> -->
+![<p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p>](../../lecture/doconce/fig/lec_system_hierarchy.png)
 
 * Nutzen Sie Hierarchien zur Beschreibung komplexer Systeme
 * Teile und herrsche
 
 <!-- !split -->
-## Schnittstellen zur Aussenwelt
+### Schnittstellen zur Aussenwelt
 
-<!-- <img src="fig/lec_real_world_interface.png" width="600"><p><em>Interfacing. <div id="fig:interfaces"></div></em></p> -->
-![<p><em>Interfacing. <div id="fig:interfaces"></div></em></p>](fig/lec_real_world_interface.png)
-
-<!-- !split -->
-## Meeting mit einem System
-
-<!-- <img src="fig/lec_smartphone.png" width="600"><p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p> -->
-![<p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p>](fig/lec_smartphone.png)
+<!-- <img src="../../lecture/doconce/fig/lec_real_world_interface.png" width="600"><p><em>Interfacing. <div id="fig:interfaces"></div></em></p> -->
+![<p><em>Interfacing. <div id="fig:interfaces"></div></em></p>](../../lecture/doconce/fig/lec_real_world_interface.png)
 
 <!-- !split -->
-## System in a Package (SiP)
+### Meeting mit einem System
 
-<!-- <img src="fig/lec_system_in_package.png" width="600"><p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p> -->
-![<p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p>](fig/lec_system_in_package.png)
+<!-- <img src="../../lecture/doconce/fig/lec_smartphone.png" width="600"><p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p> -->
+![<p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p>](../../lecture/doconce/fig/lec_smartphone.png)
 
 <!-- !split -->
-## Sie werden unsere Experten
+### System in a Package (SiP)
 
+<!-- <img src="../../lecture/doconce/fig/lec_system_in_package.png" width="600"><p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p> -->
+![<p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p>](../../lecture/doconce/fig/lec_system_in_package.png)
+
+<!-- !split -->
+### Sie werden unsere Experten
 *Leistungsmerkmale.* 
-
 * Hintergrundwissen
   * Systemverständnis, Architektur, Herstellungsverfahren, Implementation
 
@@ -135,22 +171,20 @@
   * Kommunikationsfähigkeit, Berichtswesen und technische Präsentation
 
 * Kreativität
-
 * Tool-Kenntnisse
 
 
 
-## Lernziele des Moduls
-
-### Studierende können nach Abschluss des Moduls:
-
+<!-- !split -->
+### Lernziele des Moduls
+*Studierende können nach Abschluss des Moduls:* 
 * Elektrische Systeme mathematisch und graphisch im Zeit- und Frequenzbereich beschreiben
 * Netzwerkanalyse mit RLC-Gliedern
 * Spezielle Netzwerke, wie Messbrücken, Schwingkreise und ideale Transformatoren, dimensionieren.
 
 
-### Seminaristischer Unterricht:
 
+*Seminaristischer Unterricht:* 
 * Komplexe Wechselstromrechnung
 * Disktrete Bauelemente und ihre Modellierung (RLC)
 * Methodik der Netzwerkanalyse
@@ -158,8 +192,8 @@
 
 
 
-## Beschreibung elektrotechnischer Systeme (1)
-
+<!-- !split -->
+### Beschreibung elektrotechnischer Systeme (1)
 * verschiedene Stufen der Vereinfachung
 
 *Felder / Wellen / Optik / HF-Technik.* 
@@ -174,12 +208,11 @@ $$
 
 
 
-## Beschreibung elektrotechnischer Systeme (2)
-
+<!-- !split -->
+### Beschreibung elektrotechnischer Systeme (2)
 * bei lokaler Konzentration der Feldenergie $\Rightarrow$ quasi-statische Näherung
 
 *Mikrowellentechnik / Leitungstechnik.* 
-
 * verteilte Schaltungen $l,c,\rho$
 * Kopplung, Laufzeit $\tau = a/v$
 
@@ -188,18 +221,19 @@ $$
 * *kleine* Systeme mit $a < < \lambda$ bzw. *kurze* Laufzeiten mit $\tau < < T$
 
 *Regelungstechnik / Impulstechnik.* 
-
 * Ersatzschaltungen
 * (Block-)Schaltbilder
 
 
 
-## Beschreibung elektrotechnischer Systeme (3)
-
+<!-- !split -->
+### Beschreibung elektrotechnischer Systeme (3)
 * eingeschwungener Zustand
 
 *NF-Technik.* 
 * stationär-periodische Signale
+
+
 
 * Sinussignale
 
@@ -208,8 +242,8 @@ $$
 
 
 
-## Beschreibung elektrotechnischer Systeme (4)
-
+<!-- !split -->
+### Beschreibung elektrotechnischer Systeme (4)
 * Frequenz $f \rightarrow 0$
 
 *Gleichstromtechnik.* 
@@ -217,10 +251,9 @@ $$
 
 
 
-## Konzentrierte Schaltelemente
-
+<!-- !split -->
+### Konzentrierte Schaltelemente
 *Stromdichte.* 
-
 $$
 \begin{equation}
 \frac{\int E(r,t) ds}{\iint J(r,t) dA} = \frac{u(t)}{i(t)} \Rightarrow R
@@ -230,7 +263,6 @@ $$
 
 
 *Verschiebungsdichte.* 
-
 $$
 \begin{equation}
 \frac{\iint D(r,t) dA}{\int E(r,t) ds} = \frac{q(t)}{u(t)} \Rightarrow C
@@ -240,7 +272,6 @@ $$
 
 
 *Flußdichte.* 
-
 $$
 \begin{equation}
 \frac{\iint B(r,t) dA}{\oint H(r,t) ds} = \frac{u(t)}{i(t)} \Rightarrow L
@@ -249,10 +280,9 @@ $$
 
 
 
-## Harmonische Signale
-
+<!-- !split -->
+### Harmonische Signale
 *als Zeitfunktion.* 
-
 $$
 \begin{equation}
 u(t) = \hat{U} \cos(\omega t + \phi)
@@ -260,10 +290,14 @@ u(t) = \hat{U} \cos(\omega t + \phi)
 $$
 
 
-*als Zeiger / komplexe Grösse (Phasor).* 
 
+*als Zeiger / komplexe Grösse (Phasor).* 
 $$
 \begin{equation}
 U = \lvert \hat{U} \lvert e^{j \phi}
 \end{equation}
 $$
+
+
+
+<!-- !split -->
