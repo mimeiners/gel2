@@ -102,7 +102,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://mimeiners.github.io/gel2/class/01_lec.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Literaturverzeichnis" href="02_lec.html" />
+    <link rel="next" title="Netzwerkerregung" href="02_lec.html" />
     <link rel="prev" title="Unsyllabus" href="../about/unsyllabus.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -197,7 +197,10 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Seminar</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Einleitung</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_lec.html">Literaturverzeichnis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_lec.html">Netzwerkerregung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_lec.html">Frequenzbereich</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_lec.html">Impedanz, Admittanz und Leistung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_lec.html">Literaturverzeichnis</a></li>
 </ul>
 
     </div>
@@ -450,21 +453,18 @@ document.write(`
 <!-- !split -->
 ### Wissenschaftliches Rechnen / Datenwissenschaft
 * [Python](https://www.anaconda.com/download/)
-* [R Project](https://www.r-project.org) 
 * [Matlab](https://de.mathworks.com)
 * [Gnu Octave](https://www.gnu.org/software/octave/)
-* [Gnuplot](http://www.gnuplot.info) ([Gnuplotting](http://www.gnuplotting.org))
 * [Command-line tools](http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html) 
 <!-- !split -->
 <section id="schaltungssimulation-spice">
 <h2>Schaltungssimulation (SPICE)<a class="headerlink" href="#schaltungssimulation-spice" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.linear.com/designtools/software/">LTspice Linear Technology</a></p></li>
-<li><p><a class="reference external" href="http://www.ti.com/tool/tina-ti">TINA-TI SPICE-Based Analog Simulation Program</a></p></li>
 <li><p><a class="reference external" href="http://ngspice.sourceforge.net">ngspice (open-source)</a></p></li>
-<li><p><a class="reference external" href="https://www.mentor.com/products/ic_nanometer_design/analog-mixed-signal-verification/eldo/">ELDO (Mentor Graphics)</a></p></li>
-<li><p><a class="reference external" href="https://www.cadence.com/content/cadence-www/global/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation/spectre-circuit-simulator.html">Spectre (Cadence)</a></p></li>
-<li><p><a class="reference external" href="https://www.synopsys.com/tools/Verification/AMSVerification/CircuitSimulation/HSPICE/Pages/default.aspx">HSPICE (Synopsys)</a></p></li>
+<li><p><a class="reference external" href="https://eda.sw.siemens.com/en-US/eldo/">ELDO (Siemens EDA)</a></p></li>
+<li><p><a class="reference external" href="https://www.cadence.com/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation/spectre-simulation-platform.html">Spectre (cadence)</a></p></li>
+<li><p><a class="reference external" href="https://www.synopsys.com/implementation-and-signoff/ams-simulation/primesim-hspice.html">PrimeSim HSPICE (SYNOPSIS)</a></p></li>
 </ul>
 <!-- !split -->
 </section>
@@ -486,12 +486,10 @@ document.write(`
 <section id="code-editoren">
 <h2>Code Editoren<a class="headerlink" href="#code-editoren" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
+<li><p><a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a></p></li>
+<li><p><a class="reference external" href="https://notepad-plus-plus.org">Notepad++</a> (Windows)</p></li>
 <li><p><a class="reference external" href="https://www.gnu.org/software/emacs/">Emacs</a></p></li>
 <li><p><a class="reference external" href="https://www.vim.org">Vim</a></p></li>
-<li><p><a class="reference external" href="https://notepad-plus-plus.org">Notepad++</a> (Windows)</p></li>
-<li><p><a class="reference external" href="https://atom.io">Atom</a></p></li>
-<li><p><a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a></p></li>
-<li><p><a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a></p></li>
 </ul>
 <!-- !split -->
 </section>
@@ -656,7 +654,7 @@ document.write(`
 <p><em>Seminaristischer Unterricht:</em></p>
 <ul class="simple">
 <li><p>Komplexe Wechselstromrechnung</p></li>
-<li><p>Disktrete Bauelemente und ihre Modellierung (RLC)</p></li>
+<li><p>Diskrete Bauelemente und ihre Modellierung (RLC)</p></li>
 <li><p>Methodik der Netzwerkanalyse</p></li>
 <li><p>Anwendungsbeispiele mit EDA-Werkzeugen und wissenschaftliches Rechnen (Scientific Computing)</p></li>
 </ul>
@@ -666,10 +664,11 @@ document.write(`
 <h2>Beschreibung elektrotechnischer Systeme (1)<a class="headerlink" href="#beschreibung-elektrotechnischer-systeme-1" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>verschiedene Stufen der Vereinfachung</p></li>
-</ul>
-<p><em>Felder / Wellen / Optik / HF-Technik.</em></p>
-<ul class="simple">
+<li><p>Felder / Wellen / Optik / HF-Technik</p>
+<ul>
 <li><p>Maxwell-Gleichungen</p></li>
+</ul>
+</li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -684,17 +683,19 @@ document.write(`
 <h2>Beschreibung elektrotechnischer Systeme (2)<a class="headerlink" href="#beschreibung-elektrotechnischer-systeme-2" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>bei lokaler Konzentration der Feldenergie <span class="math notranslate nohighlight">\(\Rightarrow\)</span> quasi-statische Näherung</p></li>
-</ul>
-<p><em>Mikrowellentechnik / Leitungstechnik.</em></p>
-<ul class="simple">
+<li><p>Mikrowellentechnik / Leitungstechnik</p>
+<ul>
 <li><p>verteilte Schaltungen <span class="math notranslate nohighlight">\(l,c,\rho\)</span></p></li>
 <li><p>Kopplung, Laufzeit <span class="math notranslate nohighlight">\(\tau = a/v\)</span></p></li>
-<li><p><em>kleine</em> Systeme mit <span class="math notranslate nohighlight">\(a &lt; &lt; \lambda\)</span> bzw. <em>kurze</em> Laufzeiten mit <span class="math notranslate nohighlight">\(\tau &lt; &lt; T\)</span></p></li>
 </ul>
-<p><em>Regelungstechnik / Impulstechnik.</em></p>
-<ul class="simple">
+</li>
+<li><p><em>kleine</em> Systeme mit <span class="math notranslate nohighlight">\(a &lt; &lt; \lambda\)</span> bzw. <em>kurze</em> Laufzeiten mit <span class="math notranslate nohighlight">\(\tau &lt; &lt; T\)</span></p></li>
+<li><p>Regelungstechnik / Impulstechnik</p>
+<ul>
 <li><p>Ersatzschaltungen</p></li>
 <li><p>(Block-)Schaltbilder</p></li>
+</ul>
+</li>
 </ul>
 <!-- !split -->
 </section>
@@ -702,15 +703,17 @@ document.write(`
 <h2>Beschreibung elektrotechnischer Systeme (3)<a class="headerlink" href="#beschreibung-elektrotechnischer-systeme-3" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>eingeschwungener Zustand</p></li>
-</ul>
-<p><em>NF-Technik.</em></p>
-<ul class="simple">
+<li><p>NF-Technik</p>
+<ul>
 <li><p>stationär-periodische Signale</p></li>
-<li><p>Sinussignale</p></li>
 </ul>
-<p><em>Energietechnik.</em></p>
-<ul class="simple">
+</li>
+<li><p>Sinussignale</p></li>
+<li><p>Energietechnik</p>
+<ul>
 <li><p>monofrequente Signale <span class="math notranslate nohighlight">\(U = Z \cdot I\)</span></p></li>
+</ul>
+</li>
 </ul>
 <!-- !split -->
 </section>
@@ -718,10 +721,11 @@ document.write(`
 <h2>Beschreibung elektrotechnischer Systeme (4)<a class="headerlink" href="#beschreibung-elektrotechnischer-systeme-4" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Frequenz <span class="math notranslate nohighlight">\(f \rightarrow 0\)</span></p></li>
-</ul>
-<p><em>Gleichstromtechnik.</em></p>
-<ul class="simple">
+<li><p>Gleichstromtechnik</p>
+<ul>
 <li><p>Ohmsches Gesetz <span class="math notranslate nohighlight">\(U = R \cdot I\)</span></p></li>
+</ul>
+</li>
 </ul>
 <!-- !split -->
 </section>
@@ -729,22 +733,22 @@ document.write(`
 <h2>Konzentrierte Schaltelemente<a class="headerlink" href="#konzentrierte-schaltelemente" title="Permalink to this headline">#</a></h2>
 <p><em>Stromdichte.</em>
 $$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0925a111-deef-438e-8209-07cd9a1abe1a">
-<span class="eqno">(1)<a class="headerlink" href="#equation-0925a111-deef-438e-8209-07cd9a1abe1a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-633539ff-d63a-4484-ade9-84f6ebe8551d">
+<span class="eqno">(1)<a class="headerlink" href="#equation-633539ff-d63a-4484-ade9-84f6ebe8551d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\int E(r,t) ds}{\iint J(r,t) dA} = \frac{u(t)}{i(t)} \Rightarrow R
 \end{equation}\]</div>
 <div class="math notranslate nohighlight">
 \[*Verschiebungsdichte.* 
 \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-e22b6a49-77ec-4c26-9e05-d651d1472294">
-<span class="eqno">(2)<a class="headerlink" href="#equation-e22b6a49-77ec-4c26-9e05-d651d1472294" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8d185590-8888-4e59-a965-2f914bba5d0f">
+<span class="eqno">(2)<a class="headerlink" href="#equation-8d185590-8888-4e59-a965-2f914bba5d0f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\iint D(r,t) dA}{\int E(r,t) ds} = \frac{q(t)}{u(t)} \Rightarrow C
 \end{equation}\]</div>
 <div class="math notranslate nohighlight">
 \[*Flußdichte.* 
 \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-fb8fc761-6faa-407c-b94e-bf6d6f0d287c">
-<span class="eqno">(3)<a class="headerlink" href="#equation-fb8fc761-6faa-407c-b94e-bf6d6f0d287c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e69c4d65-15ff-4615-b531-168ace65f276">
+<span class="eqno">(3)<a class="headerlink" href="#equation-e69c4d65-15ff-4615-b531-168ace65f276" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\iint B(r,t) dA}{\oint H(r,t) ds} = \frac{u(t)}{i(t)} \Rightarrow L
 \end{equation}\]</div>
 <div class="math notranslate nohighlight">
@@ -752,15 +756,15 @@ $$</p>
 ### Harmonische Signale
 *als Zeitfunktion.* 
 \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-ea2900bf-ee31-4696-a7ea-e9a07e31a7cd">
-<span class="eqno">(4)<a class="headerlink" href="#equation-ea2900bf-ee31-4696-a7ea-e9a07e31a7cd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-362c6292-086f-40b6-9f7a-8254d3acee64">
+<span class="eqno">(4)<a class="headerlink" href="#equation-362c6292-086f-40b6-9f7a-8254d3acee64" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(t) = \hat{U} \cos(\omega t + \phi)
 \end{equation}\]</div>
 <div class="math notranslate nohighlight">
 \[*als Zeiger / komplexe Grösse (Phasor).* 
 \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-bdfabe65-aaa7-49ef-9bf5-9d2a6aa730c1">
-<span class="eqno">(5)<a class="headerlink" href="#equation-bdfabe65-aaa7-49ef-9bf5-9d2a6aa730c1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-40fa5e7d-2662-4fad-ac63-e6aedad4647c">
+<span class="eqno">(5)<a class="headerlink" href="#equation-40fa5e7d-2662-4fad-ac63-e6aedad4647c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 U = \lvert \hat{U} \lvert e^{j \phi}
 \end{equation}\]</div>
 <p>$$</p>
@@ -810,7 +814,7 @@ U = \lvert \hat{U} \lvert e^{j \phi}
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Literaturverzeichnis</p>
+        <p class="prev-next-title">Netzwerkerregung</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

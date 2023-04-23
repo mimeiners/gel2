@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Netzwerkerregung &#8212; M2.6 Grundlagen der Elektrotechnik (GEL2)</title>
+    <title>Frequenzbereich &#8212; M2.6 Grundlagen der Elektrotechnik (GEL2)</title>
   
   
   
@@ -98,12 +98,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'class/02_lec';</script>
-    <link rel="canonical" href="https://mimeiners.github.io/gel2/class/02_lec.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'class/03_lec';</script>
+    <link rel="canonical" href="https://mimeiners.github.io/gel2/class/03_lec.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Frequenzbereich" href="03_lec.html" />
-    <link rel="prev" title="Einleitung" href="01_lec.html" />
+    <link rel="next" title="Impedanz, Admittanz und Leistung" href="04_lec.html" />
+    <link rel="prev" title="Netzwerkerregung" href="02_lec.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -197,8 +197,8 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Seminar</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01_lec.html">Einleitung</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Netzwerkerregung</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_lec.html">Frequenzbereich</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_lec.html">Netzwerkerregung</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Frequenzbereich</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04_lec.html">Impedanz, Admittanz und Leistung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_lec.html">Literaturverzeichnis</a></li>
 </ul>
@@ -272,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/mimeiners/gel2/edit/master/class/02_lec.md" target="_blank"
+      <li><a href="https://github.com/mimeiners/gel2/edit/master/class/03_lec.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -289,7 +289,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/mimeiners/gel2/issues/new?title=Issue%20on%20page%20%2Fclass/02_lec.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/mimeiners/gel2/issues/new?title=Issue%20on%20page%20%2Fclass/03_lec.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Öffnen Sie ein Problem"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -319,7 +319,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/class/02_lec.md" target="_blank"
+      <li><a href="../_sources/class/03_lec.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Quelldatei herunterladen"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -401,7 +401,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Netzwerkerregung</h1>
+    <h1>Frequenzbereich</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -411,10 +411,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erregungsarten">Erregungsarten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sinusformige-erregung-periodische-vorgange">Sinusförmige Erregung, periodische Vorgänge</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-der-harmonischen-funktionen">Eigenschaften der harmonischen Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mittelwerte-periodischer-zeitfunktionen">Mittelwerte periodischer Zeitfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beschreibung-und-analyse-im-frequenzbereich-2">Beschreibung und Analyse im Frequenzbereich (2)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolisches-verfahren">Symbolisches Verfahren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorteile-des-frequenzbereichs">Vorteile des Frequenzbereichs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionaltransformation-1-euler-sche-formel">Funktionaltransformation (1) - Euler’sche Formel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionaltransformation-2-exponentialdarstellung">Funktionaltransformation (2) - Exponentialdarstellung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionaltransformation-3-transformation">Funktionaltransformation (3) - Transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionaltransformation-4-definition">Funktionaltransformation (4) - Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeigerdarstellung-1">Zeigerdarstellung (1)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeigerdarstellung-2">Zeigerdarstellung (2)</a></li>
 </ul>
             </nav>
         </div>
@@ -427,106 +432,115 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <!-- !split -->
-<!-- jupyter-book 02_lec.md -->
-<section class="tex2jax_ignore mathjax_ignore" id="netzwerkerregung">
-<h1>Netzwerkerregung<a class="headerlink" href="#netzwerkerregung" title="Permalink to this headline">#</a></h1>
-<div id="sec:netpwr"></div>
+<!-- jupyter-book 03_lec.md -->
+<section class="tex2jax_ignore mathjax_ignore" id="frequenzbereich">
+<h1>Frequenzbereich<a class="headerlink" href="#frequenzbereich" title="Permalink to this headline">#</a></h1>
+<div id="sec:freq"></div>
 <!-- !split -->
-### Schaltzeichen
-<p><em>Notice.</em>
-“In Deutschland sind elektrische Schaltzeichen durch DIN EN 60617 Graphische Symbole für Schaltpläne bzw. IEC 60617 genormt.
-Sie ersetzen seit 1996–1998 die DIN 40700 / DIN 40900.”</p>
-<p><a class="reference external" href="https://de.wikipedia.org/wiki/Liste_der_Schaltzeichen_%28Elektrik/Elektronik%29#Ideale_Stromkreise">Schaltzeichen nach DIN EN 60617</a></p>
+### Beschreibung und Analyse im Frequenzbereich (1)
+*Problemstellung.* 
+Bei zukünftigen Schaltungen ist es nicht mehr möglich, direkt mit den Zeitfunktionen für Spannungen und Ströme zu
+arbeiten.
+<p>Die von den Gleichstromnetzen bekannten Lösungsverfahren aus dem ersten Semester, die von linearen algebraischen
+Gleichungssystemen ausgehen (Maschen-, Knoten- und andere Verfahren) können nicht übernommen werden.</p>
 <!-- !split -->
-<section id="erregungsarten">
-<h2>Erregungsarten<a class="headerlink" href="#erregungsarten" title="Permalink to this headline">#</a></h2>
+<section id="beschreibung-und-analyse-im-frequenzbereich-2">
+<h2>Beschreibung und Analyse im Frequenzbereich (2)<a class="headerlink" href="#beschreibung-und-analyse-im-frequenzbereich-2" title="Permalink to this headline">#</a></h2>
+<p><em>Symbolische Verfahren/Methoden.</em></p>
 <ul class="simple">
-<li><p>Gleichvorgänge</p></li>
-<li><p>Nichtperiodische Vorgänge</p></li>
-<li><p>Periodische Vorgänge, Spezialfall sind harmonische (sinus-, cosinusförmige) Vorgänge mit der Periodendauer <span class="math notranslate nohighlight">\(T\)</span></p></li>
-<li><p>Gleichgrößen mit <span class="math notranslate nohighlight">\(f(t)\)</span>=const. werden mit großen lateinischen Buchstaben gekennzeichnet, Gleichspannung <span class="math notranslate nohighlight">\(U\)</span> und Gleichstrom <span class="math notranslate nohighlight">\(I\)</span></p></li>
-<li><p>Zeitveränderliche Größen, hierbei ändert die Erregergröße <span class="math notranslate nohighlight">\(f(t)\)</span> ihre Amplitude und/oder ihre Richtung zeitlich. Der Wert von <span class="math notranslate nohighlight">\(f(t)\)</span> zum momentanen Zeitpunkt heißt Augenblicks- oder Momentanwert <span class="math notranslate nohighlight">\(f(t)\)</span> der physikalischen Größe. Momentanwerte erhalten kleine lateinische Buchstaben, Spannung <span class="math notranslate nohighlight">\(u\)</span> und Strom <span class="math notranslate nohighlight">\(i\)</span>.</p></li>
+<li><p>komplexe Darstellung (analytisches Verfahren)</p></li>
+<li><p>Zeigerdarstellung (graphisches Verfahren)</p></li>
+<li><p>Wechselstromanalyse</p></li>
+<li><p>Betrachtungen beruhen auf der Verwendung sinusförmiger Eingangsgrößen</p></li>
+<li><p>Zeitbereich ist physikalische Realität mit gew. und partiellen Differentialgleichung (ODE, PDE)</p></li>
+<li><p>Frequenzbereich hat mathematisch-formale Bedeutung</p></li>
 </ul>
 <!-- !split -->
 </section>
-<section id="sinusformige-erregung-periodische-vorgange">
-<h2>Sinusförmige Erregung, periodische Vorgänge<a class="headerlink" href="#sinusformige-erregung-periodische-vorgange" title="Permalink to this headline">#</a></h2>
-<p><em>Definitionen.</em></p>
+<section id="symbolisches-verfahren">
+<h2>Symbolisches Verfahren<a class="headerlink" href="#symbolisches-verfahren" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(f(t)=f(t+nT)\)</span> mit <span class="math notranslate nohighlight">\(n=0, 1 ...\)</span></p></li>
-<li><p>Frequenz <span class="math notranslate nohighlight">\(f=1/T\)</span></p></li>
-<li><p>Kreisfrequenz <span class="math notranslate nohighlight">\(\omega=2\pi f = 2\pi/T\)</span></p></li>
-<li><p>Periodendauer <span class="math notranslate nohighlight">\(T\)</span></p></li>
-<li><p>Wechselgröße allgem. <span class="math notranslate nohighlight">\(a(t)=\hat{A} \sin (\omega t +\varphi) = \hat{A} \sin(\omega t + \omega t_0)\)</span></p></li>
-<li><p>Scheitelwert, Maximalwert der Amplitude <span class="math notranslate nohighlight">\(\hat{A}=\max{A}=A_{max}\)</span></p></li>
-<li><p>Nullphasenwinkel bzw. Nullzeitpunkt <span class="math notranslate nohighlight">\(\varphi=\omega t_0\)</span></p></li>
-<li><p>Erregergröße wird aufgetragen mit <span class="math notranslate nohighlight">\(\omega t\)</span> und nicht <span class="math notranslate nohighlight">\(t\)</span>; <span class="math notranslate nohighlight">\(\psi(t) = \omega t + \varphi = \omega t + \omega t_0\)</span></p></li>
-<li><p>Bogenmaß <span class="math notranslate nohighlight">\(\psi/\mbox{Bogenmaß} = \frac{2 \pi}{360} \psi/\mbox{Grad}\)</span></p></li>
+<li><p>Man ordnet nach einer gewissen Regel jeder Sinusgrö{\ss}e eine symbolische Grö{\ss}e zu (z.B. einen Vektor oder eine komplexe Zahl);</p></li>
+<li><p>Man schreibt die Differentialgleichungen des Netzwerkes mit den symbolischen Grö{\ss}en;</p></li>
+<li><p>Statt die Differentialgleichungen zu lösen, löst man die Gleichungen für die Symbole und bestimmt die unbekannten Grö{\ss}en.</p></li>
+<li><p>Man transformiert die gefundenen Symbolgrö{\ss}en zurück in die gesuchten Sinusgrö{\ss}en.</p></li>
+<li><p>entn. <a href="marinescu2016.html#marinescu2016">[1]</a></p></li>
 </ul>
 <!-- !split -->
 </section>
-<section id="eigenschaften-der-harmonischen-funktionen">
-<h2>Eigenschaften der harmonischen Funktionen<a class="headerlink" href="#eigenschaften-der-harmonischen-funktionen" title="Permalink to this headline">#</a></h2>
+<section id="vorteile-des-frequenzbereichs">
+<h2>Vorteile des Frequenzbereichs<a class="headerlink" href="#vorteile-des-frequenzbereichs" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Differentiation, Integration und Addition, Subtraktion mithilfe von Additiontheoremen</p></li>
-<li><p>Aufspaltung einer harmonischen Schwingung und Koeffizientenvergleich</p></li>
-<li><p>Zusammengefasst: Bei Addition, Differentiation und Integration von harmonischen Funktionen der Kreisfrequenz <span class="math notranslate nohighlight">\(\omega\)</span> entstehen wieder harmonische Funktionen der gleichen Frequenz, aber veränderter Amplitude und Phase. Bei der Überlagerung zweier harmonischer Größen mit verschiedener Frequenz entsteht zwar eine periodische Schwingung, aber keine Sinusschwingung (harmonische).</p></li>
+<li><p>zeitl. Differentiation und Integration geht über in Multiplikation und Division mit dem Differentialoperator <span class="math notranslate nohighlight">\(s=\sigma+j\omega\)</span> (komplexe Frequenz); häufig genügt es sich auf die imaginäre Frequenz <span class="math notranslate nohighlight">\(s=j \omega\)</span> zu beschränken.</p></li>
+<li><p>u-i-Zusammenhänge des Zeitbereichs <span class="math notranslate nohighlight">\(\rightarrow\)</span> ohmsche Form im Frequenzbereich durch komplexen Widerstands-/Leitwertbegriff</p></li>
+<li><p>ODE’s gehen über in algebraische Gleichungen</p></li>
+<li><p>gleichwertige Darstellung harmonischer Funktionen durch komplexe Größen <span class="math notranslate nohighlight">\(\rightarrow\)</span> Zeiger</p></li>
 </ul>
 <!-- !split -->
 </section>
-<section id="mittelwerte-periodischer-zeitfunktionen">
-<h2>Mittelwerte periodischer Zeitfunktionen<a class="headerlink" href="#mittelwerte-periodischer-zeitfunktionen" title="Permalink to this headline">#</a></h2>
-<p><em>Arithmetischer Mittelwert - linearer Mittelwert - Gleichwert.</em>
-$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f1c7f9fb-e03e-44c4-9d40-9342076fb9d2">
-<span class="eqno">(6)<a class="headerlink" href="#equation-f1c7f9fb-e03e-44c4-9d40-9342076fb9d2" title="Permalink to this equation">#</a></span>\[\begin{align}
-\overline{u(t)} &amp;= \frac{1}{T} \int_t^{t+T} u(\tau) d \tau
-\end{align}\]</div>
+<section id="funktionaltransformation-1-euler-sche-formel">
+<h2>Funktionaltransformation (1) - Euler’sche Formel<a class="headerlink" href="#funktionaltransformation-1-euler-sche-formel" title="Permalink to this headline">#</a></h2>
 <div class="math notranslate nohighlight">
-\[*Gleichrichtwert.* 
-\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-40fa05d3-37cc-42d6-82a9-8230c99ad75f">
-<span class="eqno">(7)<a class="headerlink" href="#equation-40fa05d3-37cc-42d6-82a9-8230c99ad75f" title="Permalink to this equation">#</a></span>\[\begin{align}
-\overline{\lvert u(t) \lvert} &amp;= \frac{1}{T} \int_t^{t+T} \lvert u(\tau) \lvert d \tau
-\end{align}\]</div>
+\[\begin{split}
+\begin{align}
+\sigma + j \omega = a e^{j \varphi} &amp;= a \left( \cos(\varphi) + j \sin(\varphi) \right) \\
+a = \sqrt{\sigma^2 + \omega^2} \quad &amp;\mbox{und} \quad \varphi = \arctan\left(\frac{\omega}{\sigma}\right)
+\end{align}
+\end{split}\]</div>
+<!-- !split -->
+</section>
+<section id="funktionaltransformation-2-exponentialdarstellung">
+<h2>Funktionaltransformation (2) - Exponentialdarstellung<a class="headerlink" href="#funktionaltransformation-2-exponentialdarstellung" title="Permalink to this headline">#</a></h2>
 <div class="math notranslate nohighlight">
-\[*Quadratischer Mittelwert - Effektivwert.* 
-\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-7a4b7e5e-6c8d-4f83-aee1-688b084615d9">
-<span class="eqno">(8)<a class="headerlink" href="#equation-7a4b7e5e-6c8d-4f83-aee1-688b084615d9" title="Permalink to this equation">#</a></span>\[\begin{align}
-U_{eff} &amp;= \sqrt{\frac{1}{T} \int_t^{t+T} \overline{u^2(\tau)} d \tau}
-\end{align}\]</div>
+\[\begin{split}
+\begin{align}
+\cos(n\omega t) &amp;= \frac{1}{2}\left( e^{j n \omega t} + e^{-jn\omega t}\right), \quad n=0, 1, \ldots \\
+\sin(n\omega t) &amp;= \frac{1}{j2}\left( e^{j n \omega t} - e^{-jn\omega t}\right), \quad n=0, 1, \ldots
+\end{align}
+\end{split}\]</div>
+<!-- !split -->
+</section>
+<section id="funktionaltransformation-3-transformation">
+<h2>Funktionaltransformation (3) - Transformation<a class="headerlink" href="#funktionaltransformation-3-transformation" title="Permalink to this headline">#</a></h2>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}&lt;!-- !split --&gt;
-### $u/i$-Verhalten von $R$\\*Widerstand $R$ - Einheit: $1 \Omega$.* 
-\end{aligned}\end{align} \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-32739f73-f894-4920-8971-52e370033bca">
-<span class="eqno">(9)<a class="headerlink" href="#equation-32739f73-f894-4920-8971-52e370033bca" title="Permalink to this equation">#</a></span>\[\begin{align}
-u(t) &amp;= R \cdot i(t) \\
-&amp;= R \cdot \hat{I} \sin(\omega t + \varphi_i) \\
-&amp;= \hat{U} \sin(\omega t + \varphi_u)
-\end{align}\]</div>
+\[\begin{split}
+\begin{align}
+f(t) &amp;= \hat{A}\cos(\omega t + \varphi_a) \\
+&amp;= \frac{1}{2} \underbrace{\hat{A} e^{j \varphi_a}}_{Phasor} e^{j \omega t} + \frac{1}{2} \underbrace{\hat{A} e^{-j\varphi_a}}_{Phasor} e^{-j \omega t} \\
+&amp;= \frac{1}{2}\underline{\hat{A}} e^{j \omega t} + \frac{1}{2}\underline{\hat{A}}^{*} e^{-j \omega t} \\
+&amp;= \mathfrak{Re}\left\{\underline{\hat{A}}e^{j\omega t}\right\} \\
+&amp;= \mathfrak{Re}\left\{\hat{A}e^{j \varphi_a}e^{j \omega t}\right\} \\
+&amp;= \mathfrak{Re}\left\{\hat{A}\left( \cos(\omega t + \varphi_a) + j \sin(\omega t + \varphi_a)\right)\right\}
+\end{align}
+\end{split}\]</div>
+<!-- !split -->
+</section>
+<section id="funktionaltransformation-4-definition">
+<h2>Funktionaltransformation (4) - Definition<a class="headerlink" href="#funktionaltransformation-4-definition" title="Permalink to this headline">#</a></h2>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}&lt;!-- !split --&gt;
-### u/i-Verhalten von $L$\\*Induktivität $L$ - Einheit: $1 H = 1 Vs/A$.* 
-\end{aligned}\end{align} \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-40b6dccf-e43e-4d47-a4af-f102aabf48fc">
-<span class="eqno">(10)<a class="headerlink" href="#equation-40b6dccf-e43e-4d47-a4af-f102aabf48fc" title="Permalink to this equation">#</a></span>\[\begin{align}
-u(t) &amp;= L \cdot \frac{di_L(t)}{dt} \\
-&amp;= \omega L \cdot \hat{I} \cos(\omega t + \varphi_i) \\
-&amp;= \omega L \hat{I} \sin(\omega t + \varphi_i + \frac{\pi}{2})
-\end{align}\]</div>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}&lt;!-- !split --&gt;
-### u/i-Verhalten von $C$\\*Kapazität $C$ - Einheit: $1 F = 1 C/V = 1 As/V$.* 
-\end{aligned}\end{align} \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-88379648-dfd4-4b33-9815-64bf8a568516">
-<span class="eqno">(11)<a class="headerlink" href="#equation-88379648-dfd4-4b33-9815-64bf8a568516" title="Permalink to this equation">#</a></span>\[\begin{align}
-i(t) &amp;= C \cdot \frac{du_C(t)}{dt} \\
-&amp;= \omega C \cdot \hat{U} \cos(\omega t + \varphi_u) \\
-&amp;= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2})
-\end{align}\]</div>
-<p>$$</p>
+\[\begin{split}
+\begin{align}
+\underline{f}(t) &amp;= \underline{\hat{A}} e^{j\omega t} = \hat{A} e^{j \varphi_a} e^{j \omega t}, \quad \mbox{rotierender Zeiger, komplexer Momentanwert} \\
+\underline{f}(0) &amp;= \underline{\hat{A}} = \hat{A} e^{j\varphi_a}, \quad \mbox{ruhender Zeiger, komplexer Scheitelwert, Phasor} \\
+\underline{A} &amp;= \frac{1}{\sqrt{2}} \hat{A} e^{j \varphi_a}, \quad \mbox{komplexer Effektivwert}
+\end{align}
+\end{split}\]</div>
+<!-- !split -->
+</section>
+<section id="zeigerdarstellung-1">
+<h2>Zeigerdarstellung (1)<a class="headerlink" href="#zeigerdarstellung-1" title="Permalink to this headline">#</a></h2>
+<!-- <img src="fig/lec_3-zeigerdarstellung.png" width="400"> -->
+<p><img alt="" src="class/fig/lec_3-zeigerdarstellung.png" /></p>
+<!-- !split -->
+</section>
+<section id="zeigerdarstellung-2">
+<h2>Zeigerdarstellung (2)<a class="headerlink" href="#zeigerdarstellung-2" title="Permalink to this headline">#</a></h2>
+<p><em>Grundschaltelemente in Zeigerdarstellung.</em></p>
+<ul class="simple">
+<li><p>Sinusgrö{\ss}e <span class="math notranslate nohighlight">\(i(t) = I \sqrt{2} \sin(\omega t + \varphi)\)</span></p></li>
+<li><p>da alle in einer Schaltung vorkommenen Sinusgrö{\ss}en (meist) dieselbe Kreisfrequenz <span class="math notranslate nohighlight">\(\omega\)</span> aufweisen, kann man diese au{\ss}er Acht lassen und die Zeiger als stehend betrachten;</p></li>
+<li><p>Der Faktor 2 in den Scheitelwerten aller Sinusgrö{\ss}en wird nicht berücksichtigt und man arbeitet mit Effektivwerten, […], vor allem zur Bestimmung von Leistungen. Man reduziert also die Zeigerlängen im Ma{\ss}stab <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{2}}\)</span>.</p></li>
+</ul>
 <!-- !split -->
 </section>
 </section>
@@ -560,20 +574,20 @@ i(t) &amp;= C \cdot \frac{du_C(t)}{dt} \\
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="01_lec.html"
+       href="02_lec.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Einleitung</p>
+        <p class="prev-next-title">Netzwerkerregung</p>
       </div>
     </a>
     <a class="right-next"
-       href="03_lec.html"
+       href="04_lec.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Frequenzbereich</p>
+        <p class="prev-next-title">Impedanz, Admittanz und Leistung</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -592,10 +606,15 @@ i(t) &amp;= C \cdot \frac{du_C(t)}{dt} \\
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erregungsarten">Erregungsarten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sinusformige-erregung-periodische-vorgange">Sinusförmige Erregung, periodische Vorgänge</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-der-harmonischen-funktionen">Eigenschaften der harmonischen Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mittelwerte-periodischer-zeitfunktionen">Mittelwerte periodischer Zeitfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beschreibung-und-analyse-im-frequenzbereich-2">Beschreibung und Analyse im Frequenzbereich (2)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolisches-verfahren">Symbolisches Verfahren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorteile-des-frequenzbereichs">Vorteile des Frequenzbereichs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionaltransformation-1-euler-sche-formel">Funktionaltransformation (1) - Euler’sche Formel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionaltransformation-2-exponentialdarstellung">Funktionaltransformation (2) - Exponentialdarstellung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionaltransformation-3-transformation">Funktionaltransformation (3) - Transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionaltransformation-4-definition">Funktionaltransformation (4) - Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeigerdarstellung-1">Zeigerdarstellung (1)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeigerdarstellung-2">Zeigerdarstellung (2)</a></li>
 </ul>
   </nav></div>
 

@@ -6,20 +6,17 @@
 <!-- !split -->
 ### Wissenschaftliches Rechnen / Datenwissenschaft
 * [Python](https://www.anaconda.com/download/)
-* [R Project](https://www.r-project.org) 
 * [Matlab](https://de.mathworks.com)
 * [Gnu Octave](https://www.gnu.org/software/octave/)
-* [Gnuplot](http://www.gnuplot.info) ([Gnuplotting](http://www.gnuplotting.org))
 * [Command-line tools](http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html) 
 
 <!-- !split -->
 ### Schaltungssimulation (SPICE)
 * [LTspice Linear Technology](http://www.linear.com/designtools/software/)
-* [TINA-TI SPICE-Based Analog Simulation Program](http://www.ti.com/tool/tina-ti) 
 * [ngspice (open-source)](http://ngspice.sourceforge.net)
-* [ELDO (Mentor Graphics)](https://www.mentor.com/products/ic_nanometer_design/analog-mixed-signal-verification/eldo/)
-* [Spectre (Cadence)](https://www.cadence.com/content/cadence-www/global/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation/spectre-circuit-simulator.html)
-* [HSPICE (Synopsys)](https://www.synopsys.com/tools/Verification/AMSVerification/CircuitSimulation/HSPICE/Pages/default.aspx)
+* [ELDO (Siemens EDA)](https://eda.sw.siemens.com/en-US/eldo/)
+* [Spectre (cadence)](https://www.cadence.com/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation/spectre-simulation-platform.html)
+* [PrimeSim HSPICE (SYNOPSIS)](https://www.synopsys.com/implementation-and-signoff/ams-simulation/primesim-hspice.html)
 
 <!-- !split -->
 ### Betriebssystem (OS) - Werkzeuge (Tools)
@@ -33,12 +30,10 @@
 
 <!-- !split -->
 ### Code Editoren
-  * [Emacs](https://www.gnu.org/software/emacs/)
-  * [Vim](https://www.vim.org)
-  * [Notepad++](https://notepad-plus-plus.org) (Windows)
-  * [Atom](https://atom.io)
   * [Visual Studio Code](https://code.visualstudio.com)
-  * [PyCharm](https://www.jetbrains.com/pycharm/)
+  * [Notepad++](https://notepad-plus-plus.org) (Windows)
+  * [Emacs](https://www.gnu.org/software/emacs/)	
+  * [Vim](https://www.vim.org)
 
 <!-- !split -->
 ### Schreibst Du noch oder TeXst Du schon?
@@ -186,7 +181,7 @@
 
 *Seminaristischer Unterricht:* 
 * Komplexe Wechselstromrechnung
-* Disktrete Bauelemente und ihre Modellierung (RLC)
+* Diskrete Bauelemente und ihre Modellierung (RLC)
 * Methodik der Netzwerkanalyse
 * Anwendungsbeispiele mit EDA-Werkzeugen und wissenschaftliches Rechnen (Scientific Computing)
 
@@ -195,9 +190,9 @@
 <!-- !split -->
 ### Beschreibung elektrotechnischer Systeme (1)
 * verschiedene Stufen der Vereinfachung
+* Felder / Wellen / Optik / HF-Technik
+  * Maxwell-Gleichungen
 
-*Felder / Wellen / Optik / HF-Technik.* 
-* Maxwell-Gleichungen
 
 $$
 \begin{align}
@@ -206,49 +201,35 @@ $$
 \end{align}
 $$
 
-
-
 <!-- !split -->
 ### Beschreibung elektrotechnischer Systeme (2)
 * bei lokaler Konzentration der Feldenergie $\Rightarrow$ quasi-statische Näherung
-
-*Mikrowellentechnik / Leitungstechnik.* 
-* verteilte Schaltungen $l,c,\rho$
-* Kopplung, Laufzeit $\tau = a/v$
-
-
+* Mikrowellentechnik / Leitungstechnik
+  * verteilte Schaltungen $l,c,\rho$
+  * Kopplung, Laufzeit $\tau = a/v$
 
 * *kleine* Systeme mit $a < < \lambda$ bzw. *kurze* Laufzeiten mit $\tau < < T$
-
-*Regelungstechnik / Impulstechnik.* 
-* Ersatzschaltungen
-* (Block-)Schaltbilder
-
+* Regelungstechnik / Impulstechnik
+  * Ersatzschaltungen
+  * (Block-)Schaltbilder
 
 
 <!-- !split -->
 ### Beschreibung elektrotechnischer Systeme (3)
 * eingeschwungener Zustand
-
-*NF-Technik.* 
-* stationär-periodische Signale
-
-
+* NF-Technik
+  * stationär-periodische Signale
 
 * Sinussignale
-
-*Energietechnik.* 
-* monofrequente Signale $U = Z \cdot I$
-
+* Energietechnik
+  * monofrequente Signale $U = Z \cdot I$
 
 
 <!-- !split -->
 ### Beschreibung elektrotechnischer Systeme (4)
 * Frequenz $f \rightarrow 0$
-
-*Gleichstromtechnik.* 
-* Ohmsches Gesetz $U = R \cdot I$
-
+* Gleichstromtechnik
+  * Ohmsches Gesetz $U = R \cdot I$
 
 
 <!-- !split -->

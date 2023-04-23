@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Netzwerkerregung &#8212; M2.6 Grundlagen der Elektrotechnik (GEL2)</title>
+    <title>Impedanz, Admittanz und Leistung &#8212; M2.6 Grundlagen der Elektrotechnik (GEL2)</title>
   
   
   
@@ -98,12 +98,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'class/02_lec';</script>
-    <link rel="canonical" href="https://mimeiners.github.io/gel2/class/02_lec.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'class/04_lec';</script>
+    <link rel="canonical" href="https://mimeiners.github.io/gel2/class/04_lec.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Frequenzbereich" href="03_lec.html" />
-    <link rel="prev" title="Einleitung" href="01_lec.html" />
+    <link rel="next" title="Literaturverzeichnis" href="05_lec.html" />
+    <link rel="prev" title="Frequenzbereich" href="03_lec.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -197,9 +197,9 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Seminar</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01_lec.html">Einleitung</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Netzwerkerregung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_lec.html">Netzwerkerregung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_lec.html">Frequenzbereich</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_lec.html">Impedanz, Admittanz und Leistung</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Impedanz, Admittanz und Leistung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_lec.html">Literaturverzeichnis</a></li>
 </ul>
 
@@ -272,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/mimeiners/gel2/edit/master/class/02_lec.md" target="_blank"
+      <li><a href="https://github.com/mimeiners/gel2/edit/master/class/04_lec.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -289,7 +289,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/mimeiners/gel2/issues/new?title=Issue%20on%20page%20%2Fclass/02_lec.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/mimeiners/gel2/issues/new?title=Issue%20on%20page%20%2Fclass/04_lec.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Öffnen Sie ein Problem"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -319,7 +319,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/class/02_lec.md" target="_blank"
+      <li><a href="../_sources/class/04_lec.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Quelldatei herunterladen"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -401,7 +401,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Netzwerkerregung</h1>
+    <h1>Impedanz, Admittanz und Leistung</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -411,10 +411,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erregungsarten">Erregungsarten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sinusformige-erregung-periodische-vorgange">Sinusförmige Erregung, periodische Vorgänge</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-der-harmonischen-funktionen">Eigenschaften der harmonischen Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mittelwerte-periodischer-zeitfunktionen">Mittelwerte periodischer Zeitfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#widerstandsoperator-2">Widerstandsoperator (2)</a></li>
 </ul>
             </nav>
         </div>
@@ -427,104 +424,148 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <!-- !split -->
-<!-- jupyter-book 02_lec.md -->
-<section class="tex2jax_ignore mathjax_ignore" id="netzwerkerregung">
-<h1>Netzwerkerregung<a class="headerlink" href="#netzwerkerregung" title="Permalink to this headline">#</a></h1>
-<div id="sec:netpwr"></div>
+<!-- jupyter-book 04_lec.md -->
+<section class="tex2jax_ignore mathjax_ignore" id="impedanz-admittanz-und-leistung">
+<h1>Impedanz, Admittanz und Leistung<a class="headerlink" href="#impedanz-admittanz-und-leistung" title="Permalink to this headline">#</a></h1>
+<div id="sec:imp"></div>
 <!-- !split -->
-### Schaltzeichen
-<p><em>Notice.</em>
-“In Deutschland sind elektrische Schaltzeichen durch DIN EN 60617 Graphische Symbole für Schaltpläne bzw. IEC 60617 genormt.
-Sie ersetzen seit 1996–1998 die DIN 40700 / DIN 40900.”</p>
-<p><a class="reference external" href="https://de.wikipedia.org/wiki/Liste_der_Schaltzeichen_%28Elektrik/Elektronik%29#Ideale_Stromkreise">Schaltzeichen nach DIN EN 60617</a></p>
+### Widerstandsoperator (1)
+*u/i-Verhalten.* 
+$$
+\begin{equation}
+\frac{\underline{u}(t)}{\underline{i}(t)} 
+= \frac{\underline{\hat{U}}e^{j \omega t}}{\underline{\hat{I}}e^{j \omega t}}
+= \frac{\hat{U}}{\hat{I}} e^{j(\varphi_u \varphi_i)} = \underline{Z}
+\end{equation}
+$$
 <!-- !split -->
-<section id="erregungsarten">
-<h2>Erregungsarten<a class="headerlink" href="#erregungsarten" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>Gleichvorgänge</p></li>
-<li><p>Nichtperiodische Vorgänge</p></li>
-<li><p>Periodische Vorgänge, Spezialfall sind harmonische (sinus-, cosinusförmige) Vorgänge mit der Periodendauer <span class="math notranslate nohighlight">\(T\)</span></p></li>
-<li><p>Gleichgrößen mit <span class="math notranslate nohighlight">\(f(t)\)</span>=const. werden mit großen lateinischen Buchstaben gekennzeichnet, Gleichspannung <span class="math notranslate nohighlight">\(U\)</span> und Gleichstrom <span class="math notranslate nohighlight">\(I\)</span></p></li>
-<li><p>Zeitveränderliche Größen, hierbei ändert die Erregergröße <span class="math notranslate nohighlight">\(f(t)\)</span> ihre Amplitude und/oder ihre Richtung zeitlich. Der Wert von <span class="math notranslate nohighlight">\(f(t)\)</span> zum momentanen Zeitpunkt heißt Augenblicks- oder Momentanwert <span class="math notranslate nohighlight">\(f(t)\)</span> der physikalischen Größe. Momentanwerte erhalten kleine lateinische Buchstaben, Spannung <span class="math notranslate nohighlight">\(u\)</span> und Strom <span class="math notranslate nohighlight">\(i\)</span>.</p></li>
-</ul>
-<!-- !split -->
-</section>
-<section id="sinusformige-erregung-periodische-vorgange">
-<h2>Sinusförmige Erregung, periodische Vorgänge<a class="headerlink" href="#sinusformige-erregung-periodische-vorgange" title="Permalink to this headline">#</a></h2>
-<p><em>Definitionen.</em></p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(f(t)=f(t+nT)\)</span> mit <span class="math notranslate nohighlight">\(n=0, 1 ...\)</span></p></li>
-<li><p>Frequenz <span class="math notranslate nohighlight">\(f=1/T\)</span></p></li>
-<li><p>Kreisfrequenz <span class="math notranslate nohighlight">\(\omega=2\pi f = 2\pi/T\)</span></p></li>
-<li><p>Periodendauer <span class="math notranslate nohighlight">\(T\)</span></p></li>
-<li><p>Wechselgröße allgem. <span class="math notranslate nohighlight">\(a(t)=\hat{A} \sin (\omega t +\varphi) = \hat{A} \sin(\omega t + \omega t_0)\)</span></p></li>
-<li><p>Scheitelwert, Maximalwert der Amplitude <span class="math notranslate nohighlight">\(\hat{A}=\max{A}=A_{max}\)</span></p></li>
-<li><p>Nullphasenwinkel bzw. Nullzeitpunkt <span class="math notranslate nohighlight">\(\varphi=\omega t_0\)</span></p></li>
-<li><p>Erregergröße wird aufgetragen mit <span class="math notranslate nohighlight">\(\omega t\)</span> und nicht <span class="math notranslate nohighlight">\(t\)</span>; <span class="math notranslate nohighlight">\(\psi(t) = \omega t + \varphi = \omega t + \omega t_0\)</span></p></li>
-<li><p>Bogenmaß <span class="math notranslate nohighlight">\(\psi/\mbox{Bogenmaß} = \frac{2 \pi}{360} \psi/\mbox{Grad}\)</span></p></li>
-</ul>
-<!-- !split -->
-</section>
-<section id="eigenschaften-der-harmonischen-funktionen">
-<h2>Eigenschaften der harmonischen Funktionen<a class="headerlink" href="#eigenschaften-der-harmonischen-funktionen" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>Differentiation, Integration und Addition, Subtraktion mithilfe von Additiontheoremen</p></li>
-<li><p>Aufspaltung einer harmonischen Schwingung und Koeffizientenvergleich</p></li>
-<li><p>Zusammengefasst: Bei Addition, Differentiation und Integration von harmonischen Funktionen der Kreisfrequenz <span class="math notranslate nohighlight">\(\omega\)</span> entstehen wieder harmonische Funktionen der gleichen Frequenz, aber veränderter Amplitude und Phase. Bei der Überlagerung zweier harmonischer Größen mit verschiedener Frequenz entsteht zwar eine periodische Schwingung, aber keine Sinusschwingung (harmonische).</p></li>
-</ul>
-<!-- !split -->
-</section>
-<section id="mittelwerte-periodischer-zeitfunktionen">
-<h2>Mittelwerte periodischer Zeitfunktionen<a class="headerlink" href="#mittelwerte-periodischer-zeitfunktionen" title="Permalink to this headline">#</a></h2>
-<p><em>Arithmetischer Mittelwert - linearer Mittelwert - Gleichwert.</em>
+<section id="widerstandsoperator-2">
+<h2>Widerstandsoperator (2)<a class="headerlink" href="#widerstandsoperator-2" title="Permalink to this headline">#</a></h2>
+<p><em>Impedanz.</em>
 $$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f1c7f9fb-e03e-44c4-9d40-9342076fb9d2">
-<span class="eqno">(6)<a class="headerlink" href="#equation-f1c7f9fb-e03e-44c4-9d40-9342076fb9d2" title="Permalink to this equation">#</a></span>\[\begin{align}
-\overline{u(t)} &amp;= \frac{1}{T} \int_t^{t+T} u(\tau) d \tau
+<div class="amsmath math notranslate nohighlight" id="equation-887fe5d6-de3e-4def-b09a-cb5b1a4a2f95">
+<span class="eqno">(12)<a class="headerlink" href="#equation-887fe5d6-de3e-4def-b09a-cb5b1a4a2f95" title="Permalink to this equation">#</a></span>\[\begin{align}
+\underline{Z} &amp;= \frac{\underline{u}(t)}{\underline{i}(t)} =
+\frac{\underline{\hat{U}}e^{j \omega t}}{\underline{\hat{I}}e^{j \omega t}} =
+\frac{\hat{U}}{\hat{I}}e^{\varphi_u-\varphi_i} \\
+&amp;= Z e^{j \varphi_z} = Z \left( \cos(\varphi_z) + j \sin(\varphi_z) \right) \\
+&amp;= \operatorname{Re}{\underline{Z}} + j \operatorname{Im}{\underline{Z}} \\
+&amp;= R + j X
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
-\[*Gleichrichtwert.* 
+\[&lt;!-- !split --&gt;
+### Widerstandsoperator (3)
+*Eigenschaften.* 
 \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-40fa05d3-37cc-42d6-82a9-8230c99ad75f">
-<span class="eqno">(7)<a class="headerlink" href="#equation-40fa05d3-37cc-42d6-82a9-8230c99ad75f" title="Permalink to this equation">#</a></span>\[\begin{align}
-\overline{\lvert u(t) \lvert} &amp;= \frac{1}{T} \int_t^{t+T} \lvert u(\tau) \lvert d \tau
+<div class="amsmath math notranslate nohighlight" id="equation-c44a01dd-90ec-4301-b846-768de8804292">
+<span class="eqno">(13)<a class="headerlink" href="#equation-c44a01dd-90ec-4301-b846-768de8804292" title="Permalink to this equation">#</a></span>\[\begin{align}
+Z &amp;= \lvert\underline{Z}\lvert = \sqrt{R^2 + X^2} &amp; &amp;\mbox{Scheinwiderstand} \\
+R &amp;= \operatorname{Re}{\underline{Z}} &amp; &amp;\mbox{Wirkwiderstand (Resistanz)} \\
+X &amp;= \operatorname{Im}{\underline{Z}} &amp; &amp;\mbox{Blindwiderstand (Reaktanz)} \\
+\tan(\varphi_z) &amp;= \frac{\operatorname{Im}{\underline{Z}}}{\operatorname{Re}{\underline{Z}}} = \frac{X_r}{R_r}  &amp; &amp; \\
+\varphi_z &amp;= \varphi_u - \varphi_i = \arctan\left(\frac{X_r}{R_r}\right) &amp; &amp;
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
-\[*Quadratischer Mittelwert - Effektivwert.* 
+\[&lt;!-- !split --&gt;
+### Leitwertoperator (1)
+*Harmonische Anregung.* 
 \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-7a4b7e5e-6c8d-4f83-aee1-688b084615d9">
-<span class="eqno">(8)<a class="headerlink" href="#equation-7a4b7e5e-6c8d-4f83-aee1-688b084615d9" title="Permalink to this equation">#</a></span>\[\begin{align}
-U_{eff} &amp;= \sqrt{\frac{1}{T} \int_t^{t+T} \overline{u^2(\tau)} d \tau}
+<div class="amsmath math notranslate nohighlight" id="equation-ae5782b9-04e1-48c1-9f29-a055574c745c">
+<span class="eqno">(14)<a class="headerlink" href="#equation-ae5782b9-04e1-48c1-9f29-a055574c745c" title="Permalink to this equation">#</a></span>\[\begin{align}
+u(t) &amp;= \hat{U} \cos(\omega t + \varphi_u) &amp; \underline{u}(t) &amp;= \underline{\hat{U}} e^{j \omega t} \\
+i(t) &amp;= \hat{I} \cos(\omega t + \varphi_i) &amp; \underline{i}(t) &amp;= \underline{\hat{I}} e^{j \omega t}
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}&lt;!-- !split --&gt;
-### $u/i$-Verhalten von $R$\\*Widerstand $R$ - Einheit: $1 \Omega$.* 
-\end{aligned}\end{align} \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-32739f73-f894-4920-8971-52e370033bca">
-<span class="eqno">(9)<a class="headerlink" href="#equation-32739f73-f894-4920-8971-52e370033bca" title="Permalink to this equation">#</a></span>\[\begin{align}
-u(t) &amp;= R \cdot i(t) \\
-&amp;= R \cdot \hat{I} \sin(\omega t + \varphi_i) \\
-&amp;= \hat{U} \sin(\omega t + \varphi_u)
+\[&lt;!-- !split --&gt;
+### Leitwertoperator (2)
+*Admittanz.* 
+\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-8f8c217f-4a45-46b3-a1ea-87adc0215604">
+<span class="eqno">(15)<a class="headerlink" href="#equation-8f8c217f-4a45-46b3-a1ea-87adc0215604" title="Permalink to this equation">#</a></span>\[\begin{align}
+\underline{Y} &amp;= \frac{\underline{i}(t)}{\underline{u}(t)} =
+\frac{\underline{\hat{I}}e^{j \omega t}}{\underline{\hat{U}}e^{j \omega t}} =
+\frac{\hat{I}}{\hat{U}}e^{\varphi_i-\varphi_u} \\
+&amp;= Y e^{j \varphi_y} = Y \left( \cos(\varphi_y) + j \sin(\varphi_y) \right) \\
+&amp;= \operatorname{Re}{\underline{Y}} + j \operatorname{Im}{\underline{Y}} \\
+&amp;= G + j B
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}&lt;!-- !split --&gt;
-### u/i-Verhalten von $L$\\*Induktivität $L$ - Einheit: $1 H = 1 Vs/A$.* 
-\end{aligned}\end{align} \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-40b6dccf-e43e-4d47-a4af-f102aabf48fc">
-<span class="eqno">(10)<a class="headerlink" href="#equation-40b6dccf-e43e-4d47-a4af-f102aabf48fc" title="Permalink to this equation">#</a></span>\[\begin{align}
-u(t) &amp;= L \cdot \frac{di_L(t)}{dt} \\
-&amp;= \omega L \cdot \hat{I} \cos(\omega t + \varphi_i) \\
-&amp;= \omega L \hat{I} \sin(\omega t + \varphi_i + \frac{\pi}{2})
+\[&lt;!-- !split --&gt;
+### Leitwertoperator (3)
+*Eigenschaften.* 
+\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-67ea420d-0b52-4d53-8a15-4364035b78e0">
+<span class="eqno">(16)<a class="headerlink" href="#equation-67ea420d-0b52-4d53-8a15-4364035b78e0" title="Permalink to this equation">#</a></span>\[\begin{align}
+Y &amp;= \lvert\underline{Y}\lvert = \sqrt{G^2 + B^2} &amp; &amp;\mbox{Scheinleitwert} \\
+G &amp;= \operatorname{Re}{\underline{Y}} &amp; &amp;\mbox{Wirkleitwert (Konduktanz)} \\
+B &amp;= \operatorname{Im}{\underline{Y}} &amp; &amp;\mbox{Blindleitwert (Suszeptanz)} \\
+\tan(\varphi_y) &amp;= \frac{\operatorname{Im}{\underline{Y}}}{\operatorname{Re}{\underline{Y}}} = \frac{B}{G}  &amp; &amp; \\
+\varphi_y &amp;= \varphi_i - \varphi_u = \arctan\left(\frac{B}{G}\right) &amp; &amp;
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}&lt;!-- !split --&gt;
-### u/i-Verhalten von $C$\\*Kapazität $C$ - Einheit: $1 F = 1 C/V = 1 As/V$.* 
-\end{aligned}\end{align} \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-88379648-dfd4-4b33-9815-64bf8a568516">
-<span class="eqno">(11)<a class="headerlink" href="#equation-88379648-dfd4-4b33-9815-64bf8a568516" title="Permalink to this equation">#</a></span>\[\begin{align}
-i(t) &amp;= C \cdot \frac{du_C(t)}{dt} \\
-&amp;= \omega C \cdot \hat{U} \cos(\omega t + \varphi_u) \\
-&amp;= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2})
+\[&lt;!-- !split --&gt;
+### Vergleich von RLC-Netzwerken
+\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\mbox{Zeitbereich}&amp;: &amp; u&amp;= i R &amp;  u&amp;= \frac{1}{C} \int i\, dt &amp; u&amp;= L \frac{di}{dt} \\
+\mbox{Frequenzbereich}&amp;: &amp; \underline{u}&amp;= \underline{i} R &amp;
+\underline{u}&amp;= \frac{1}{j \omega C} \underline{i} &amp;
+\underline{u}&amp;= j \omega L \underline{i} \\
+\mbox{Impedanz}&amp;: &amp; \underline{Z}&amp;= R &amp;
+\underline{Z}&amp;= j X_C = -\frac{j}{\omega C} &amp;
+\underline{Z}&amp;= j X_L = j \omega L \\
+\mbox{Phase}&amp;: &amp; \varphi_Z&amp;= 0 &amp; \varphi_Z&amp;= -\frac{\pi}{2} &amp; \varphi_Z&amp;= \frac{\pi}{2}
+\end{align*}\]</div>
+<div class="math notranslate nohighlight">
+\[&lt;!-- !split --&gt;
+### Leistung von Wechselsignalen (1) &amp;ndash; Harmonische Anregung
+\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-773b7ef4-5b42-4abd-a2b8-e740c852cc5c">
+<span class="eqno">(17)<a class="headerlink" href="#equation-773b7ef4-5b42-4abd-a2b8-e740c852cc5c" title="Permalink to this equation">#</a></span>\[\begin{align}
+u(t) &amp;= \hat{U} \cos(\omega t + \varphi_u) &amp; i(t) &amp;= \hat{I} \cos(\omega t + \varphi_i) \\
+&amp;= \frac{1}{2} \left( \underline{\hat{U}} e^{j \omega t} + \underline{\hat{U}}^* e^{-j \omega t}\right) &amp; 
+&amp;= \frac{1}{2} \left( \underline{\hat{I}} e^{j \omega t} +  \underline{\hat{I}}^* e^{-j \omega t}\right) \\
+&amp;= \operatorname{Re}{\underline{\hat{U}}e^{j \omega t}} &amp; &amp;= \operatorname{Re}{\underline{\hat{U}}e^{j \omega t}}
+\end{align}\]</div>
+<div class="math notranslate nohighlight">
+\[&lt;!-- !split --&gt;
+### Leistung von Wechselsignalen (2) &amp;ndash; Komplexe Leistung
+\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-bc1680a0-cdf4-4cb6-a738-1c9115d3da74">
+<span class="eqno">(18)<a class="headerlink" href="#equation-bc1680a0-cdf4-4cb6-a738-1c9115d3da74" title="Permalink to this equation">#</a></span>\[\begin{align}
+p(t) &amp;= u(t) \cdot i(t) \\
+&amp;= \frac{1}{4} \left( \underline{\hat{U}} e^{j \omega t} +
+\underline{\hat{U}}^* e^{-j \omega t}\right)  
+\left(\underline{\hat{I}} e^{j \omega t} + \underline{\hat{I}}^* e^{-j \omega t}\right) \\
+&amp;= \underbrace{\frac{1}{4} \left(\underline{\hat{U}} \underline{\hat{I}}^* +
+\underline{\hat{U}}^* \underline{\hat{I}} \right)}_{\mbox{zeitunabh. Anteil}} +
+\underbrace{\frac{1}{4} \left( \underline{\hat{U}}
+\underline{\hat{I}} e^{2j \omega t} + \underline{\hat{U}}^*
+\underline{\hat{I}}^* e^{-2j \omega t}\right)}_{\mbox{zeitabh. Anteil}}
+\end{align}\]</div>
+<div class="math notranslate nohighlight">
+\[&lt;!-- !split --&gt;
+### Leistung von Wechselsignalen (3) - Definitionen
+\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d7b620a1-d417-4851-9327-effe256b22c3">
+<span class="eqno">(19)<a class="headerlink" href="#equation-d7b620a1-d417-4851-9327-effe256b22c3" title="Permalink to this equation">#</a></span>\[\begin{align}
+\underline{P} &amp;= \frac{1}{4} \left(\underline{\hat{U}} \underline{\hat{I}}^* +
+\underline{\hat{U}}^* \underline{\hat{I}} \right), \quad
+\mbox{Momentanwert, konstanter Anteil bzw. linearer Mittelwert, Momentanleistung} \\
+p(t) &amp;= \frac{1}{2} \operatorname{Re}{\underline{\hat{U}}\underline{\hat{I}}^*} \\
+&amp;= \frac{1}{2} \operatorname{Re}{\hat{U}\hat{I} e^{j(\varphi_u-\varphi_i)}} \\
+&amp;= \frac{1}{2} \hat{U} \hat{I} \cos(\varphi_u-\varphi_i)
+\end{align}\]</div>
+<div class="math notranslate nohighlight">
+\[&lt;!-- !split --&gt;
+### Leistung von Wechselsignalen (4) - Eigenschaften
+\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e6511d3d-1819-4e8e-8028-0f03c05c0658">
+<span class="eqno">(20)<a class="headerlink" href="#equation-e6511d3d-1819-4e8e-8028-0f03c05c0658" title="Permalink to this equation">#</a></span>\[\begin{align}
+S &amp;= \lvert\underline{P}\lvert = \sqrt{P^2 + Q^2} &amp; &amp;\mbox{Scheinleistung} \\
+P &amp;= \operatorname{Re}{\underline{P}} &amp; &amp;\mbox{Wirkleistung} \\
+Q &amp;= \operatorname{Im}{\underline{P}} &amp; &amp;\mbox{Blindleistung}
 \end{align}\]</div>
 <p>$$</p>
 <!-- !split -->
@@ -560,20 +601,20 @@ i(t) &amp;= C \cdot \frac{du_C(t)}{dt} \\
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="01_lec.html"
+       href="03_lec.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Einleitung</p>
+        <p class="prev-next-title">Frequenzbereich</p>
       </div>
     </a>
     <a class="right-next"
-       href="03_lec.html"
+       href="05_lec.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Frequenzbereich</p>
+        <p class="prev-next-title">Literaturverzeichnis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -592,10 +633,7 @@ i(t) &amp;= C \cdot \frac{du_C(t)}{dt} \\
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erregungsarten">Erregungsarten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sinusformige-erregung-periodische-vorgange">Sinusförmige Erregung, periodische Vorgänge</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-der-harmonischen-funktionen">Eigenschaften der harmonischen Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mittelwerte-periodischer-zeitfunktionen">Mittelwerte periodischer Zeitfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#widerstandsoperator-2">Widerstandsoperator (2)</a></li>
 </ul>
   </nav></div>
 
