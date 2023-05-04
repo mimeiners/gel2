@@ -5,7 +5,6 @@
 <div id="sec:netpwr"></div>
 <!-- !split -->
 ### Schaltzeichen
-
 *Notice.* 
 "In Deutschland sind elektrische Schaltzeichen durch DIN EN 60617 Graphische Symbole für Schaltpläne bzw. IEC 60617 genormt.
  Sie ersetzen seit 1996–1998 die DIN 40700 / DIN 40900."
@@ -16,7 +15,6 @@
 
 <!-- !split -->
 ### Erregungsarten
-
 * Gleichvorgänge
 * Nichtperiodische Vorgänge
 * Periodische Vorgänge, Spezialfall sind harmonische (sinus-, cosinusförmige) Vorgänge mit der Periodendauer $T$
@@ -25,7 +23,6 @@
 
 <!-- !split -->
 ### Sinusförmige Erregung, periodische Vorgänge
-
 *Definitionen.* 
 * $f(t)=f(t+nT)$ mit $n=0, 1 ...$
 * Frequenz $f=1/T$
@@ -41,14 +38,12 @@
 
 <!-- !split -->
 ### Eigenschaften der harmonischen Funktionen
-
 * Differentiation, Integration und Addition, Subtraktion mithilfe von Additiontheoremen
 * Aufspaltung einer harmonischen Schwingung und Koeffizientenvergleich
 * Zusammengefasst: Bei Addition, Differentiation und Integration von harmonischen Funktionen der Kreisfrequenz $\omega$ entstehen wieder harmonische Funktionen der gleichen Frequenz, aber veränderter Amplitude und Phase. Bei der Überlagerung zweier harmonischer Größen mit verschiedener Frequenz entsteht zwar eine periodische Schwingung, aber keine Sinusschwingung (harmonische).
 
 <!-- !split -->
 ### Mittelwerte periodischer Zeitfunktionen
-
 *Arithmetischer Mittelwert - linearer Mittelwert - Gleichwert.* 
 $$
 \begin{align}
@@ -58,7 +53,7 @@ $$
 
 
 
-*Gleichrichtwert.* 
+*Gleichrichtmittelwert.* 
 $$
 \begin{align}
 \overline{\lvert u(t) \lvert} &= \frac{1}{T} \int_t^{t+T} \lvert u(\tau) \lvert d \tau
@@ -78,7 +73,6 @@ $$
 
 <!-- !split -->
 ### $u/i$-Verhalten von $R$
-
 *Widerstand $R$ - Einheit: $1 \Omega$.* 
 $$
 \begin{align}
@@ -92,7 +86,6 @@ $$
 
 <!-- !split -->
 ### u/i-Verhalten von $L$
-
 *Induktivität $L$ - Einheit: $1 H = 1 Vs/A$.* 
 $$
 \begin{align}
@@ -106,7 +99,6 @@ $$
 
 <!-- !split -->
 ### u/i-Verhalten von $C$
-
 *Kapazität $C$ - Einheit: $1 F = 1 C/V = 1 As/V$.* 
 $$
 \begin{align}

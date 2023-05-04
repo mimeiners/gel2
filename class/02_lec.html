@@ -433,9 +433,9 @@ document.write(`
 <div id="sec:netpwr"></div>
 <!-- !split -->
 ### Schaltzeichen
-<p><em>Notice.</em>
-“In Deutschland sind elektrische Schaltzeichen durch DIN EN 60617 Graphische Symbole für Schaltpläne bzw. IEC 60617 genormt.
-Sie ersetzen seit 1996–1998 die DIN 40700 / DIN 40900.”</p>
+*Notice.* 
+"In Deutschland sind elektrische Schaltzeichen durch DIN EN 60617 Graphische Symbole für Schaltpläne bzw. IEC 60617 genormt.
+ Sie ersetzen seit 1996–1998 die DIN 40700 / DIN 40900."
 <p><a class="reference external" href="https://de.wikipedia.org/wiki/Liste_der_Schaltzeichen_%28Elektrik/Elektronik%29#Ideale_Stromkreise">Schaltzeichen nach DIN EN 60617</a></p>
 <!-- !split -->
 <section id="erregungsarten">
@@ -478,50 +478,53 @@ Sie ersetzen seit 1996–1998 die DIN 40700 / DIN 40900.”</p>
 <h2>Mittelwerte periodischer Zeitfunktionen<a class="headerlink" href="#mittelwerte-periodischer-zeitfunktionen" title="Permalink to this headline">#</a></h2>
 <p><em>Arithmetischer Mittelwert - linearer Mittelwert - Gleichwert.</em>
 $$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-35f5ca00-b5f1-45fc-b145-264f07018939">
-<span class="eqno">(1)<a class="headerlink" href="#equation-35f5ca00-b5f1-45fc-b145-264f07018939" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-da279412-d03a-4b90-a6fa-5c162287bf72">
+<span class="eqno">(1)<a class="headerlink" href="#equation-da279412-d03a-4b90-a6fa-5c162287bf72" title="Permalink to this equation">#</a></span>\[\begin{align}
 \overline{u(t)} &amp;= \frac{1}{T} \int_t^{t+T} u(\tau) d \tau
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
-\[*Gleichrichtwert.* 
+\[*Gleichrichtmittelwert.* 
 \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-c3359bd9-ced5-4156-9686-4a7cbf14c55d">
-<span class="eqno">(2)<a class="headerlink" href="#equation-c3359bd9-ced5-4156-9686-4a7cbf14c55d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-266b95f3-1e34-4669-9a22-60b69c440c1a">
+<span class="eqno">(2)<a class="headerlink" href="#equation-266b95f3-1e34-4669-9a22-60b69c440c1a" title="Permalink to this equation">#</a></span>\[\begin{align}
 \overline{\lvert u(t) \lvert} &amp;= \frac{1}{T} \int_t^{t+T} \lvert u(\tau) \lvert d \tau
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[*Quadratischer Mittelwert - Effektivwert.* 
 \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-3a7b4f8a-381c-41a5-9861-9106189ff6df">
-<span class="eqno">(3)<a class="headerlink" href="#equation-3a7b4f8a-381c-41a5-9861-9106189ff6df" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7be27acb-b0e9-46ae-bec7-1e325a8b984c">
+<span class="eqno">(3)<a class="headerlink" href="#equation-7be27acb-b0e9-46ae-bec7-1e325a8b984c" title="Permalink to this equation">#</a></span>\[\begin{align}
 U_{eff} = \sqrt{\overline{u^2(t)}} &amp;= \sqrt{\frac{1}{T} \int_t^{t+T} u^2(\tau) d \tau}
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}&lt;!-- !split --&gt;
-### $u/i$-Verhalten von $R$\\*Widerstand $R$ - Einheit: $1 \Omega$.* 
-\end{aligned}\end{align} \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-0c0ca0b0-43c3-497d-a6ef-e8af6c9793f8">
-<span class="eqno">(4)<a class="headerlink" href="#equation-0c0ca0b0-43c3-497d-a6ef-e8af6c9793f8" title="Permalink to this equation">#</a></span>\[\begin{align}
+\[&lt;!-- !split --&gt;
+### $u/i$-Verhalten von $R$
+*Widerstand $R$ - Einheit: $1 \Omega$.* 
+\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-96c5afba-8913-4ab2-be3c-47d4b6ab1924">
+<span class="eqno">(4)<a class="headerlink" href="#equation-96c5afba-8913-4ab2-be3c-47d4b6ab1924" title="Permalink to this equation">#</a></span>\[\begin{align}
 u(t) &amp;= R \cdot i(t) \\
 &amp;= R \cdot \hat{I} \sin(\omega t + \varphi_i) \\
 &amp;= \hat{U} \sin(\omega t + \varphi_u)
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}&lt;!-- !split --&gt;
-### u/i-Verhalten von $L$\\*Induktivität $L$ - Einheit: $1 H = 1 Vs/A$.* 
-\end{aligned}\end{align} \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-fd459619-2c02-4b8e-9e82-346b4c7b64ae">
-<span class="eqno">(5)<a class="headerlink" href="#equation-fd459619-2c02-4b8e-9e82-346b4c7b64ae" title="Permalink to this equation">#</a></span>\[\begin{align}
+\[&lt;!-- !split --&gt;
+### u/i-Verhalten von $L$
+*Induktivität $L$ - Einheit: $1 H = 1 Vs/A$.* 
+\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-6379b18b-29cb-4a0e-a075-77af2f986f48">
+<span class="eqno">(5)<a class="headerlink" href="#equation-6379b18b-29cb-4a0e-a075-77af2f986f48" title="Permalink to this equation">#</a></span>\[\begin{align}
 u(t) &amp;= L \cdot \frac{di_L(t)}{dt} \\
 &amp;= \omega L \cdot \hat{I} \cos(\omega t + \varphi_i) \\
 &amp;= \omega L \hat{I} \sin(\omega t + \varphi_i + \frac{\pi}{2})
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}&lt;!-- !split --&gt;
-### u/i-Verhalten von $C$\\*Kapazität $C$ - Einheit: $1 F = 1 C/V = 1 As/V$.* 
-\end{aligned}\end{align} \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-d5b85063-9287-4e15-9e75-7a841cf2ebba">
-<span class="eqno">(6)<a class="headerlink" href="#equation-d5b85063-9287-4e15-9e75-7a841cf2ebba" title="Permalink to this equation">#</a></span>\[\begin{align}
+\[&lt;!-- !split --&gt;
+### u/i-Verhalten von $C$
+*Kapazität $C$ - Einheit: $1 F = 1 C/V = 1 As/V$.* 
+\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ed4f654a-f74a-4c85-9f39-9752c85b18f3">
+<span class="eqno">(6)<a class="headerlink" href="#equation-ed4f654a-f74a-4c85-9f39-9752c85b18f3" title="Permalink to this equation">#</a></span>\[\begin{align}
 i(t) &amp;= C \cdot \frac{du_C(t)}{dt} \\
 &amp;= \omega C \cdot \hat{U} \cos(\omega t + \varphi_u) \\
 &amp;= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2})

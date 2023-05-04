@@ -3,7 +3,7 @@
 # Impedanz, Admittanz und Leistung
 
 <div id="sec:imp"></div>
-<!-- !split -->
+!splitFIGURE: [path, width=400 frac=1.0] caption on one line. \label{}
 ### Widerstandsoperator (1) &ndash; u/i-Verhalten
 $$
 \begin{equation}

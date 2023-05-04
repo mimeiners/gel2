@@ -45,7 +45,6 @@ Gleichungssystemen ausgehen (Maschen-, Knoten- und andere Verfahren) können nic
 
 <!-- !split -->
 ### Funktionaltransformation (1) - Euler'sche Formel
-
 $$
 \begin{align}
 \sigma + j \omega = a e^{j \varphi} &= a \left( \cos(\varphi) + j \sin(\varphi) \right) \\
@@ -55,7 +54,6 @@ $$
 
 <!-- !split -->
 ### Funktionaltransformation (2) - Exponentialdarstellung
-
 $$
 \begin{align}
 \cos(n\omega t) &= \frac{1}{2}\left( e^{j n \omega t} + e^{-jn\omega t}\right), \quad n=0, 1, \ldots \\
@@ -65,7 +63,6 @@ $$
 
 <!-- !split -->
 ### Funktionaltransformation (3) - Transformation
-
 $$
 \begin{align}
 f(t) &= \hat{A}\cos(\omega t + \varphi_a) \\
@@ -80,7 +77,6 @@ $$
 
 <!-- !split -->
 ### Funktionaltransformation (4) - Definition
-
 $$
 \begin{align}
 \underline{f}(t) &= \underline{\hat{A}} e^{j\omega t} = \hat{A} e^{j \varphi_a} e^{j \omega t}, \quad \mbox{rotierender Zeiger, komplexer Momentanwert} \\
@@ -97,9 +93,8 @@ $$
 
 <!-- !split -->
 ### Zeigerdarstellung (2) &ndash; Grundschaltelemente
-
-* Sinusgrö{\ss}e $i(t) = I \sqrt{2} \sin(\omega t + \varphi)$
-* da alle in einer Schaltung vorkommenen Sinusgrö{\ss}en (meist) dieselbe Kreisfrequenz $\omega$ aufweisen, kann man diese au{\ss}er Acht lassen und die Zeiger als stehend betrachten;
-* Der Faktor 2 in den Scheitelwerten aller Sinusgrö{\ss}en wird nicht berücksichtigt und man arbeitet mit Effektivwerten, [...], vor allem zur Bestimmung von Leistungen. Man reduziert also die Zeigerlängen im Ma{\ss}stab $\frac{1}{\sqrt{2}}$.
+* Sinusgröße $i(t) = I \sqrt{2} \sin(\omega t + \varphi)$
+* da alle in einer Schaltung vorkommenen Sinusgrößen (meist) dieselbe Kreisfrequenz $\omega$ aufweisen, kann man diese außer Acht lassen und die Zeiger als stehend betrachten;
+* Der Faktor 2 in den Scheitelwerten aller Sinusgrößen wird nicht berücksichtigt und man arbeitet mit Effektivwerten, [...], vor allem zur Bestimmung von Leistungen. Man reduziert also die Zeigerlängen im Maßstab $\frac{1}{\sqrt{2}}$.
 
 <!-- !split -->

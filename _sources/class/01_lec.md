@@ -20,46 +20,46 @@
 
 <!-- !split -->
 ### Betriebssystem (OS) - Werkzeuge (Tools)
-  * [Shell](https://en.wikipedia.org/wiki/Shell_%28computing%29)
-    * [oh-my-zsh](https://ohmyz.sh),
-    * [bash-it](https://bash-it.readthedocs.io/en/latest/)
-    * [SSH (Secure Shell)](https://de.wikipedia.org/wiki/Secure_Shell)
+* [Shell](https://en.wikipedia.org/wiki/Shell_%28computing%29)
+  * [oh-my-zsh](https://ohmyz.sh),
+  * [bash-it](https://bash-it.readthedocs.io/en/latest/)
+  * [SSH (Secure Shell)](https://de.wikipedia.org/wiki/Secure_Shell)
 
-  * [GIT (Versionskontrolle)](https://git-scm.com)
-  * [Cygwin](https://cygwin.com)
+* [GIT (Versionskontrolle)](https://git-scm.com)
+* [Cygwin](https://cygwin.com)
 
 <!-- !split -->
 ### Code Editoren
-  * [Visual Studio Code](https://code.visualstudio.com)
-  * [Notepad++](https://notepad-plus-plus.org) (Windows)
-  * [Emacs](https://www.gnu.org/software/emacs/)	
-  * [Vim](https://www.vim.org)
+* [Visual Studio Code](https://code.visualstudio.com)
+* [Notepad++](https://notepad-plus-plus.org) (Windows)
+* [Emacs](https://www.gnu.org/software/emacs/)	
+* [Vim](https://www.vim.org)
 
 <!-- !split -->
 ### Schreibst Du noch oder TeXst Du schon?
-  * [MikTeX (Windows, MacOS, Linux)](https://miktex.org/)
-  * [MacTeX (MacOS)](https://www.tug.org/mactex/)
-  * [TeXLive (Linux)](http://tug.org/texlive/)
+* [MikTeX (Windows, MacOS, Linux)](https://miktex.org/)
+* [MacTeX (MacOS)](https://www.tug.org/mactex/)
+* [TeXLive (Linux)](http://tug.org/texlive/)
 
 <!-- !split -->
 ### LaTeX Editoren
-  * IDE's
-    * [TeXStudio](http://www.texstudio.org)
-    * [TeXMaker](http://www.xm1math.net/texmaker/)
-    * [TeXWorks](http://www.tug.org/texworks/)
+* IDE's
+  * [TeXStudio](http://www.texstudio.org)
+  * [TeXMaker](http://www.xm1math.net/texmaker/)
+  * [TeXWorks](http://www.tug.org/texworks/)
 
-  * Kollaborative Frameworks
-    * [ShareLaTeX, Online LaTeX](https://www.sharelatex.com/)
-    * [CoCalc - Online LaTeX](https://cocalc.com/doc/latex-editor.html)
+* Kollaborative Frameworks
+  * [ShareLaTeX, Online LaTeX](https://www.sharelatex.com/)
+  * [CoCalc - Online LaTeX](https://cocalc.com/doc/latex-editor.html)
 
 
 <!-- !split -->
 ### Literaturverwaltung und LaTeX
-  * [Citavi im Detail > Titel exportieren > Export nach BibTeX](https://www1.citavi.com/sub/manual5/de/exporting_to_bibtex.html)
-  * [RefWorks - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3912294)
-  * [Benutzerdefinierte BibTex-Keys mit Zotero | nerdpause](https://nerdpause.de/benutzerdefinierte-bibtex-keys-mit-zotero/)
-  * [JabRef - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3897117)
-  * [EndNote - Library Guide Univ. Melbourne](https://unimelb.libguides.com/latexbibtex/endnote)
+* [Citavi im Detail > Titel exportieren > Export nach BibTeX](https://www1.citavi.com/sub/manual5/de/exporting_to_bibtex.html)
+* [RefWorks - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3912294)
+* [Benutzerdefinierte BibTex-Keys mit Zotero | nerdpause](https://nerdpause.de/benutzerdefinierte-bibtex-keys-mit-zotero/)
+* [JabRef - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3897117)
+* [EndNote - Library Guide Univ. Melbourne](https://unimelb.libguides.com/latexbibtex/endnote)
 
 <!-- !split -->
 ### Schöne neue Welt
