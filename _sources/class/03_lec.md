@@ -69,7 +69,8 @@ $$
 $$
 \begin{align}
 f(t) &= \hat{A}\cos(\omega t + \varphi_a) \\
-&= \frac{1}{2} \underbrace{\hat{A} e^{j \varphi_a}}_{Phasor} e^{j \omega t} + \frac{1}{2} \underbrace{\hat{A} e^{-j\varphi_a}}_{Phasor} e^{-j \omega t} \\
+&= \frac{1}{2} \underbrace{\hat{A} e^{j \varphi_a}}_{Phasor} e^{j \omega t}
++ \frac{1}{2} \underbrace{\hat{A} e^{-j\varphi_a}}_{Phasor} e^{-j \omega t} \\
 &= \frac{1}{2}\underline{\hat{A}} e^{j \omega t} + \frac{1}{2}\underline{\hat{A}}^{*} e^{-j \omega t} \\
 &= \mathfrak{Re}\left\{\underline{\hat{A}}e^{j\omega t}\right\} \\
 &= \mathfrak{Re}\left\{\hat{A}e^{j \varphi_a}e^{j \omega t}\right\} \\
@@ -95,13 +96,10 @@ $$
 ![](fig/lec_3-zeigerdarstellung.png)
 
 <!-- !split -->
-### Zeigerdarstellung (2)
+### Zeigerdarstellung (2) &ndash; Grundschaltelemente
 
-*Grundschaltelemente in Zeigerdarstellung.* 
 * Sinusgrö{\ss}e $i(t) = I \sqrt{2} \sin(\omega t + \varphi)$
 * da alle in einer Schaltung vorkommenen Sinusgrö{\ss}en (meist) dieselbe Kreisfrequenz $\omega$ aufweisen, kann man diese au{\ss}er Acht lassen und die Zeiger als stehend betrachten;
 * Der Faktor 2 in den Scheitelwerten aller Sinusgrö{\ss}en wird nicht berücksichtigt und man arbeitet mit Effektivwerten, [...], vor allem zur Bestimmung von Leistungen. Man reduziert also die Zeigerlängen im Ma{\ss}stab $\frac{1}{\sqrt{2}}$.
-
-
 
 <!-- !split -->

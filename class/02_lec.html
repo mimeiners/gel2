@@ -478,30 +478,30 @@ Sie ersetzen seit 1996–1998 die DIN 40700 / DIN 40900.”</p>
 <h2>Mittelwerte periodischer Zeitfunktionen<a class="headerlink" href="#mittelwerte-periodischer-zeitfunktionen" title="Permalink to this headline">#</a></h2>
 <p><em>Arithmetischer Mittelwert - linearer Mittelwert - Gleichwert.</em>
 $$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f1c7f9fb-e03e-44c4-9d40-9342076fb9d2">
-<span class="eqno">(6)<a class="headerlink" href="#equation-f1c7f9fb-e03e-44c4-9d40-9342076fb9d2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-35f5ca00-b5f1-45fc-b145-264f07018939">
+<span class="eqno">(1)<a class="headerlink" href="#equation-35f5ca00-b5f1-45fc-b145-264f07018939" title="Permalink to this equation">#</a></span>\[\begin{align}
 \overline{u(t)} &amp;= \frac{1}{T} \int_t^{t+T} u(\tau) d \tau
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[*Gleichrichtwert.* 
 \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-40fa05d3-37cc-42d6-82a9-8230c99ad75f">
-<span class="eqno">(7)<a class="headerlink" href="#equation-40fa05d3-37cc-42d6-82a9-8230c99ad75f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c3359bd9-ced5-4156-9686-4a7cbf14c55d">
+<span class="eqno">(2)<a class="headerlink" href="#equation-c3359bd9-ced5-4156-9686-4a7cbf14c55d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \overline{\lvert u(t) \lvert} &amp;= \frac{1}{T} \int_t^{t+T} \lvert u(\tau) \lvert d \tau
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[*Quadratischer Mittelwert - Effektivwert.* 
 \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-7a4b7e5e-6c8d-4f83-aee1-688b084615d9">
-<span class="eqno">(8)<a class="headerlink" href="#equation-7a4b7e5e-6c8d-4f83-aee1-688b084615d9" title="Permalink to this equation">#</a></span>\[\begin{align}
-U_{eff} &amp;= \sqrt{\frac{1}{T} \int_t^{t+T} \overline{u^2(\tau)} d \tau}
+<div class="amsmath math notranslate nohighlight" id="equation-3a7b4f8a-381c-41a5-9861-9106189ff6df">
+<span class="eqno">(3)<a class="headerlink" href="#equation-3a7b4f8a-381c-41a5-9861-9106189ff6df" title="Permalink to this equation">#</a></span>\[\begin{align}
+U_{eff} = \sqrt{\overline{u^2(t)}} &amp;= \sqrt{\frac{1}{T} \int_t^{t+T} u^2(\tau) d \tau}
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}&lt;!-- !split --&gt;
 ### $u/i$-Verhalten von $R$\\*Widerstand $R$ - Einheit: $1 \Omega$.* 
 \end{aligned}\end{align} \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-32739f73-f894-4920-8971-52e370033bca">
-<span class="eqno">(9)<a class="headerlink" href="#equation-32739f73-f894-4920-8971-52e370033bca" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0c0ca0b0-43c3-497d-a6ef-e8af6c9793f8">
+<span class="eqno">(4)<a class="headerlink" href="#equation-0c0ca0b0-43c3-497d-a6ef-e8af6c9793f8" title="Permalink to this equation">#</a></span>\[\begin{align}
 u(t) &amp;= R \cdot i(t) \\
 &amp;= R \cdot \hat{I} \sin(\omega t + \varphi_i) \\
 &amp;= \hat{U} \sin(\omega t + \varphi_u)
@@ -510,8 +510,8 @@ u(t) &amp;= R \cdot i(t) \\
 \[ \begin{align}\begin{aligned}&lt;!-- !split --&gt;
 ### u/i-Verhalten von $L$\\*Induktivität $L$ - Einheit: $1 H = 1 Vs/A$.* 
 \end{aligned}\end{align} \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-40b6dccf-e43e-4d47-a4af-f102aabf48fc">
-<span class="eqno">(10)<a class="headerlink" href="#equation-40b6dccf-e43e-4d47-a4af-f102aabf48fc" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fd459619-2c02-4b8e-9e82-346b4c7b64ae">
+<span class="eqno">(5)<a class="headerlink" href="#equation-fd459619-2c02-4b8e-9e82-346b4c7b64ae" title="Permalink to this equation">#</a></span>\[\begin{align}
 u(t) &amp;= L \cdot \frac{di_L(t)}{dt} \\
 &amp;= \omega L \cdot \hat{I} \cos(\omega t + \varphi_i) \\
 &amp;= \omega L \hat{I} \sin(\omega t + \varphi_i + \frac{\pi}{2})
@@ -520,8 +520,8 @@ u(t) &amp;= L \cdot \frac{di_L(t)}{dt} \\
 \[ \begin{align}\begin{aligned}&lt;!-- !split --&gt;
 ### u/i-Verhalten von $C$\\*Kapazität $C$ - Einheit: $1 F = 1 C/V = 1 As/V$.* 
 \end{aligned}\end{align} \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-88379648-dfd4-4b33-9815-64bf8a568516">
-<span class="eqno">(11)<a class="headerlink" href="#equation-88379648-dfd4-4b33-9815-64bf8a568516" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d5b85063-9287-4e15-9e75-7a841cf2ebba">
+<span class="eqno">(6)<a class="headerlink" href="#equation-d5b85063-9287-4e15-9e75-7a841cf2ebba" title="Permalink to this equation">#</a></span>\[\begin{align}
 i(t) &amp;= C \cdot \frac{du_C(t)}{dt} \\
 &amp;= \omega C \cdot \hat{U} \cos(\omega t + \varphi_u) \\
 &amp;= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2})

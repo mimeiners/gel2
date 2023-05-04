@@ -4,8 +4,7 @@
 
 <div id="sec:imp"></div>
 <!-- !split -->
-### Widerstandsoperator (1)
-*u/i-Verhalten.* 
+### Widerstandsoperator (1) &ndash; u/i-Verhalten
 $$
 \begin{equation}
 \frac{\underline{u}(t)}{\underline{i}(t)} 
@@ -14,11 +13,8 @@ $$
 \end{equation}
 $$
 
-
-
 <!-- !split -->
-### Widerstandsoperator (2)
-*Impedanz.* 
+### Widerstandsoperator (2) &ndash; Impedanz
 $$
 \begin{align}
 \underline{Z} &= \frac{\underline{u}(t)}{\underline{i}(t)} =
@@ -30,11 +26,8 @@ $$
 \end{align}
 $$
 
-
-
 <!-- !split -->
-### Widerstandsoperator (3)
-*Eigenschaften.* 
+### Widerstandsoperator (3) &ndash; Eigenschaften
 $$
 \begin{align}
 Z &= \lvert\underline{Z}\lvert = \sqrt{R^2 + X^2} & &\mbox{Scheinwiderstand} \\
@@ -45,11 +38,8 @@ X &= \operatorname{Im}{\underline{Z}} & &\mbox{Blindwiderstand (Reaktanz)} \\
 \end{align}
 $$
 
-
-
 <!-- !split -->
-### Leitwertoperator (1)
-*Harmonische Anregung.* 
+### Leitwertoperator (1) &ndash; Harm. Anregung
 $$
 \begin{align}
 u(t) &= \hat{U} \cos(\omega t + \varphi_u) & \underline{u}(t) &= \underline{\hat{U}} e^{j \omega t} \\
@@ -57,11 +47,8 @@ i(t) &= \hat{I} \cos(\omega t + \varphi_i) & \underline{i}(t) &= \underline{\hat
 \end{align}
 $$
 
-
-
 <!-- !split -->
-### Leitwertoperator (2)
-*Admittanz.* 
+### Leitwertoperator (2) &ndash; Admittanz
 $$
 \begin{align}
 \underline{Y} &= \frac{\underline{i}(t)}{\underline{u}(t)} =
@@ -73,11 +60,8 @@ $$
 \end{align}
 $$
 
-
-
 <!-- !split -->
-### Leitwertoperator (3)
-*Eigenschaften.* 
+### Leitwertoperator (3) &ndash; Eigenschaften
 $$
 \begin{align}
 Y &= \lvert\underline{Y}\lvert = \sqrt{G^2 + B^2} & &\mbox{Scheinleitwert} \\
@@ -87,8 +71,6 @@ B &= \operatorname{Im}{\underline{Y}} & &\mbox{Blindleitwert (Suszeptanz)} \\
 \varphi_y &= \varphi_i - \varphi_u = \arctan\left(\frac{B}{G}\right) & &
 \end{align}
 $$
-
-
 
 <!-- !split -->
 ### Vergleich von RLC-Netzwerken

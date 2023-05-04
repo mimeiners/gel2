@@ -70,7 +70,7 @@ $$
 *Quadratischer Mittelwert - Effektivwert.* 
 $$
 \begin{align}
-U_{eff} &= \sqrt{\frac{1}{T} \int_t^{t+T} \overline{u^2(\tau)} d \tau}
+U_{eff} = \sqrt{\overline{u^2(t)}} &= \sqrt{\frac{1}{T} \int_t^{t+T} u^2(\tau) d \tau}
 \end{align}
 $$
 

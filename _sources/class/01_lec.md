@@ -234,51 +234,46 @@ $$
 
 <!-- !split -->
 ### Konzentrierte Schaltelemente
-*Stromdichte.* 
+* Stromdichte
+
 $$
 \begin{equation}
 \frac{\int E(r,t) ds}{\iint J(r,t) dA} = \frac{u(t)}{i(t)} \Rightarrow R
 \end{equation}
 $$
 
+* Verschiebungsdichte
 
-
-*Verschiebungsdichte.* 
 $$
 \begin{equation}
 \frac{\iint D(r,t) dA}{\int E(r,t) ds} = \frac{q(t)}{u(t)} \Rightarrow C
 \end{equation}
 $$
 
+* Flußdichte
 
-
-*Flußdichte.* 
 $$
 \begin{equation}
 \frac{\iint B(r,t) dA}{\oint H(r,t) ds} = \frac{u(t)}{i(t)} \Rightarrow L
 \end{equation}
 $$
 
-
-
 <!-- !split -->
 ### Harmonische Signale
-*als Zeitfunktion.* 
+* als Zeitfunktion
+
 $$
 \begin{equation}
 u(t) = \hat{U} \cos(\omega t + \phi)
 \end{equation}
 $$
 
+* als Zeiger / komplexe Grösse (Phasor)
 
-
-*als Zeiger / komplexe Grösse (Phasor).* 
 $$
 \begin{equation}
 U = \lvert \hat{U} \lvert e^{j \phi}
 \end{equation}
 $$
-
-
 
 <!-- !split -->
