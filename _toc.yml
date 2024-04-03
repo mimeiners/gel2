@@ -15,6 +15,7 @@ parts:
       title: Impedanz, Admittanz und Leistung
     - file: class/05_lec
       title: Literaturverzeichnis
+<<<<<<< HEAD
     #   title: Graphische Analysemethoden
     # - file: class/06_lec
     #   title: Netzwerkanalyse
@@ -25,6 +26,28 @@ parts:
     # - file: class/09_lec
     #   title: Transformatoren und Übertrager
 - caption: Übungen
+=======
+      #      title: Netzwerkerregung
+      #- file: class/03_lec
+      #title: Frequenzbereich
+      #- file: class/04_lec
+      #title: Impedanz, Admittanz und Leistung
+      #- file: class/05_lec
+      #title: Graphische Analysemethoden
+      #- file: class/06_lec
+      #title: Netzwerkanalyse
+      #- file: class/07_lec
+      # title: Messbrücken
+      #- file: class/08_lec
+      #title: Resonanzkreise
+      #- file: class/09_lec
+      #title: Transformatoren und Übertrager
+- caption: Tutorium
+>>>>>>> 16a479c6ecaabb0b31d05674f98cec699280890e
   chapters:
-    - file: exercise/01_exec
-      title: Übungsblatt 1
+    - file: Tutorium/1_Einfuehrung
+      title: Einführung
+    - file: Tutorium/2_Periodische-Signale
+      title: Periodische Signale
+    - file: Tutorium/3_Komplexe-Zahlen
+      title: Komplexe Zahlen
