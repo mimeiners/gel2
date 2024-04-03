@@ -24,7 +24,11 @@ parts:
       #title: Resonanzkreise
       #- file: class/09_lec
       #title: Transformatoren und Übertrager
-- caption: Übungen
+- caption: Tutorium
   chapters:
-    - file: exercise/01_exec
-      title: Übungsblatt 1
+    - file: Tutorium/1_Einfuehrung
+      title: Einführung
+    - file: Tutorium/2_Periodische-Signale
+      title: Periodische Signale
+    - file: Tutorium/3_Komplexe-Zahlen
+      title: Komplexe Zahlen
