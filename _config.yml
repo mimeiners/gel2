@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: M2.6 Grundlagen der Elektrotechnik (GEL2)
-author: M. Meiners
+author: M. Meiners / A. von Ahlen
 copyright: ""
 logo: hsb-logo.png
 exclude_patterns: ["LICENSE.md", "README.md"]
@@ -81,9 +81,9 @@ sphinx:
       TITLE: "Grundlagen der Elektrotechnik 2 (GEL2)"
       PREREQS: "GEL1"
       COREQS: ""
-      TERM: "2023 Sommer"
+      TERM: "2024 Sommer"
       ROOM: "E 509"
-      MEETING_TIMES: "Montags von 11:30 bis 13:00 Uhr"
+      MEETING_TIMES: "Montags von 13:30 bis 15:00 Uhr"
       GRACE_PERIOD: ""
       W_DATE_1: ""
       W_DATE_2: ""
@@ -97,5 +97,5 @@ sphinx:
       FORUM_LINK: ""
       ANALYTICS_OPTOUT: ""
       FORMAT: "Seminar und Übungen"
-      ASSOCIATE_HEAD: "Christian Ymele Dega [cymela-dega@stud.hs-bremen.de](mailto:cymela-dega@stud.hs-bremen.de)"
+      ASSOCIATE_HEAD: "Alicia von Ahlen [avahlen@stud.hs-bremen.de](mailto:avahlen@stud.hs-bremen.de)"
       ANON_FEEDBACK: ""
