@@ -19,8 +19,8 @@ Eine grobe Zeit- und Themenplanung ist in der folgenden Tabelle zu sehen. Dabei 
 
 | Datum | Thema |
 | :---: | :---- |
-| 15.04.24 | Einführung & Periodische Signale |
-| 22.04.24 | Komplexe Zahlen |
+| 15.04.24 | Einführung & Komplexe Zahlen |
+| 22.04.24 | Periodische Signale |
 | 29.04.24 | Komplexe Größen der Sinusstromtechnik |
 | 06.05.24 | Verhalten der Grundzweipole 1 |
 | 13.05.24 | Verhalten der Grundzweipole 2 |
