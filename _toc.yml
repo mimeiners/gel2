@@ -28,7 +28,7 @@ parts:
   chapters:
     - file: Tutorium/1_Einfuehrung
       title: Einführung
-    - file: Tutorium/2_Periodische-Signale
-      title: Periodische Signale
-    - file: Tutorium/3_Komplexe-Zahlen
+    - file: Tutorium/2_Komplexe-Zahlen
       title: Komplexe Zahlen
+    - file: Tutorium/3_Periodische-Signale
+      title: Periodische Signale
