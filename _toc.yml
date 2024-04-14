@@ -17,9 +17,9 @@ parts:
       title: Resonanzkreis
     - file: class/06_lec
       title: Netzwerkanalyse
-    - file: class/09_lec
+    - file: class/07_lec
       title: Transformatoren und Übertrager
-    - file: class/10_lec
+    - file: class/08_lec
       title: Literaturverzeichnis
 - caption: Tutorium
   chapters:
