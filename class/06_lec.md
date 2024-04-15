@@ -1,298 +1,181 @@
 <!-- !split -->
 <!-- jupyter-book 06_lec.md -->
-# Netzwerkanalyse
+# Resonanzkreise
 
-<div id="sec:netana"></div>
-<!-- !split -->
-### Systemsimulation
+<div id="sec:resonanz"></div>
+### Physikalische Grundlagen
 
-
-          Ebene             Maß       Simulation     
--------------------------  ------  ----------------  
-Atom                       0.1 nm                    
-Festkörper/Atomverbund     1.0 nm                    
-Device                     0.1 mm  Feld              
-Transistor/Subkomponenten  1.0 mm                    
-Gatter/Komponenten         10 mm   Verhaltensmodell  
-
-
-<!-- !split -->
-### Makrotheorie
-* Mittelwerte charakteristischer Größen des Systems
-* Temperatur, Wärmekapazität, Leitfähigkeit etc.
-* schwache oder homogene Ortsabhängigkeit
-* partielle Differentialgleichungen (PDE's) der Feldtheorie gehen über in gewöhnliche Differentialgleichungen (ODE's)
-* nur noch dt kein dx (nach dem Ort)
-
-<!-- !split -->
-### Netzwerksimulation
-
-* Maschenwiderstandsmatrix
-* Knotenleitwertmatrix
-* mathematisch äquivalente Beschreibungen
-* für praktische Berechnungen (Simulation) "Knotenanalyse"
-
-<!-- !split -->
-### Netzwerk
-
-<!-- <img src="fig/lec6s20.png" width="400"> -->
-![](fig/lec6s20.png)
-
-<!-- !split -->
-### Transiente Analyse
-
-* Knoten 0:
-
-$$
-\begin{align*}
-    -i_0-i_1-i_5&=0 \\
-    -G_1(v_3-v_0) - C_5 \frac{d}{dt}(v_1-v_0) &= i_0
-  \end{align*}
-$$
-
-* Knoten 1:
-
-$$
-\begin{align*}
-    -i_2+i_3+i_5+i_6&=0 \\
-    -G_2(v_3-v_1)+G_3(v_1-v_3)+C_5 \frac{d}{dt}(v_1-v_0)+C_6 \frac{d}{dt}(v_1-v_6)&=0
-  \end{align*}
-$$
-
-* Knoten 2:
-
-$$
-\begin{align*}
-    -i_3+i_4-i_6 &= 0 \\
-    -G_3(v_1-v_2)+G_4(v_2-v_4)-C_6 \frac{d}{t}(v_1-v_2) &= 0
-  \end{align*}
-$$
-
-<!-- !split -->
-### Differentialgleichungssystem
-
-$$
-\begin{align*}
-    \begin{pmatrix}
-      G_2+G_3 & -G_3 & -G_2 & 0 \\
-      -G_3 & G_3+G_4 & 0 & -G_4 \\
-      -G_2 & 0 & G_1+G_2 & 0 \\
-      0 & -G_4 & 0 & G_4
-    \end{pmatrix} & 
-    \begin{pmatrix}
-      v_1 \\
-      v_2 \\
-      v_3 \\
-      v_4
-    \end{pmatrix}
-    + \cdots \\ 
-    \begin{pmatrix}
-      C_5+C_6 & -C_6 & 0 & 0 \\
-      -C_6 & C_6 & 0 & 0 \\
-      0 & 0 & 0 & 0 \\
-      0 & 0 & 0 & 0
-    \end{pmatrix}
-    \frac{d}{dt} &
-    \begin{pmatrix}
-      v_1 \\
-      v_2 \\
-      v_3 \\
-      v_4
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-      0 \\
-      0 \\
-      0 \\
-      -i_0
-    \end{pmatrix}
-     \end{align*}
-$$
-
-$$
-\begin{align*}
-    \mathbf{A} \mathbf{x} + \mathbf{B} \dot{\mathbf{x}} &= \mathbf{b} \\
-    \dot{\mathbf{x}} &= -\mathbf{B}^{-1}\mathbf{A}\mathbf{x} +
-    \mathbf{B}^{-1}\mathbf{b}(t) \\
-    &= \mathbf{T}\mathbf{x} + \mathbf{g}(t)
-  \end{align*}
-$$
-
-<!-- !split -->
-### Netzwerkanalyse zeitabhängiger Signale
-
-* Matrix $\mathbf{B}$ ist nicht immer invertierbar, ggf. blockweise zerlegen
-* Algebro-Differentialgleichungen
-* Euler-Verfahren, explizit (vorwärts), implizit (rückwärts)
-* Trapez- oder Mittelpunktregel
-  * Adams-Bashforth-,Adams-Multon- und Gear-Verfahren
-  * *Gut für den Rechner* $\rightarrow$ Python, SPICE
-  * Wir machen Transformation und dann Gauss'sches-Eliminationsverfahren
-
-
-<!-- !split -->
-### Lösung im Frequenzbereich
-
-
-                      Zeitbereich                             Frequenzbereich                    
------------  -----------------------------  ---------------------------------------------------  
-             Urbildbereich                  Bildbereich                                          
-Spannung     $u_n(t)$                       $\underline{u}(t)=\underline{\hat{U}}e^{j\omega t}$  
-Strom        $i_n(t)$                       $\underline{i}(t)=\underline{\hat{U}}e^{j\omega t}$  
-Widerstand   $u_R(t)=Ri_R(t)$               $\underline{u}_R(t)=R \underline{i}(t)$              
-Kondensator  $i_C(t)=C \frac{du_C(t)}{dt}$  $\underline{i}_C(t)= j \omega C \underline{u}_C(t)$  
-Spule        $u_L(t)=L \frac{di_L(t)}{dt}$  $\underline{u}_L(t)= j \omega L \underline{i}_L(t)$  
-             (wenn für $t=0$ energielos)                                                         
-
-
-<!-- !split -->
-### Grundaufgabe der Netzwerkanalyse
-
-* Gewinnung des Netzwerkes
-* Wahl des Lösungsverfahrens
-* Durchführung der Netzwerkanalyse
-* Diskussion der Lösung
-
-<!-- !split -->
-### Netzwerkgleichungen &ndash; Kirchhoff'sche Gesetze
-
-* Knotensatz: $\sum i_n(t)=0$
-* Maschensatz: $\sum u_n(t)=0$
-* Zweigbeziehungen: $u_n = f(i_n)$
-
-<!-- !split -->
-### Vollständiges Kirchhoff'sches Gleichungssystem
-
-* $p=k-1$, unabhängige Knotengleichungen
-* $m=z-(k-1)$, unabhängige Maschengleichungen
-* $z$, $u,i$-Beziehungen der Zweigelemente
-
-<!-- !split -->
-### Netzwerkstruktur
-
-* **Unabhängige Knoten und Maschen** Die Eigenschaften eines Netzwerkes werden von den Netzwerkelementen und der Netzwerkstruktur oder -topologie bestimmt. Das ist die Art ihrer Zusammenschaltung. Sie wird auch als "Gerüst" bezeichnet und zeichnerisch durch den "Streckenkomplex" (engl. graph) ausgedrückt. Die Beschreibung kann gleichwertig durch eine "topologische Matrix" erfolgen. 
-* **Netzwerkgraph** Der Netzwerkgraph beschreibt die Verbindung der Netzwerkelemente durch Abstraktion der Netzwerkgeometrie. Jedem Knoten im Graphen entspricht ein Knoten im Netzwerk und jeder Verbindungslinie ein Zweig zwischen zwei Knoten. Er ist Grundlage der Zahl unabhängiger Knoten- und Maschengleichungen und kann durch "topologische Matrizen" (sog. "Inzidenzmatrizen") mathematisch beschrieben werden. 
-
-<!-- !split -->
-### Vollständiger Baum
-
-Ein vollständiger Baum (engl. tree) ist ein Teilgraph, der keine Umläufe besitzt und alle Knoten des Ausgangsgraphen miteinander
-verbindet. In einem Netzwerk mit $k$ Knoten hat der vollständige Baum insgesamt $k-1$ Zweige.
-
-* **Merkmale**
-  * alle Knoten sind direkt oder indirekt miteinander verbunden,
-  * wird ein weiterer Zweig entfernt, so geht Merkmal 1. verloren,
-  * es treten keine Umläufe auf.
-
-
-<!-- !split -->
-### Baumkomplement
-
-Das Baumkomplement bildet als Gesamtheit aller Verbindungszweige das "System unabhängiger Zweige". Jeder Verbindungszweig gehört
-genau zu einer Schleife (Masche), die nur aus diesem Verbindungszweig und Zweigen des vollständigen Baumes besteht. Eine solche Schleife
-heißt "Fundamentalschleife" ("unabhängige Masche"). Davon gibt es $m=z-(k-1)$.  
-
-<!-- !split -->
-### Maschenstromverfahren
-<div id="sec:masch"></div>
-
-<!-- <img src="fig/lec6s30.png" width="400"> -->
-![](fig/lec6s30.png)
-
-<!-- !split -->
-### Wahl der unabhängigen Ströme $I_M$
-
-$$
- I_1, I_4, I_7, I_8 
-$$
-
-Abbildung der abhängigen Ströme durch die unabhängigen Ströme:
+* periodische Zustandsänderung in einem physikalischen System
+* periodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder udn Masse, Induktivität und Kapazität
+* maßgebende Zustandsgröße $x(t)$, z.B. Auslenkung, Spannung oder Ladung, folgen einer DGL
 
 $$
 \begin{align}
-    \begin{pmatrix}
-      I_2 \\
-      I_3 \\
-      I_5 \\
-      I_6 \\
-      I_9 \\
-      I_{10}
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-      -1 & -1 & -1 & 0 \\
-      -1 & 0 & -1 & 0 \\
-      0 & -1 & -1 & 0 \\
-      0 & -1 & -1 & 0 \\
-      0 & 1 & 1 & -1 \\
-      0 & 0 & 1 & -1 \\
-    \end{pmatrix}
-    \begin{pmatrix}
-      I_1 \\
-      I_4 \\
-      I_7 \\
-      I_8
-    \end{pmatrix}
-  \end{align}
-$$
-
-<!-- !split -->
-### 4 Maschengleichungen
-
-$$
-\begin{align}
-I_1Z_1 - I_2Z_2 - I_3Z_3 &= 0 \\
-U_4 + I_4Z_4 + I_9+Z_9 - I_6Z_6 - I_5Z_5 - I_2Z_2 &= 0 \\
-I_7Z_7 + I_{10}Z_{10} + I_9Z_9 - I_6Z_6 - I_5Z_5 - I_2Z_2 -
-I_3Z_3 &= 0 \\
-U_8 + I_8Z_8 - I_9Z_9 - I_{10}Z_{10} &= 0
+\ddot{x} + \omega_0 x &=0
 \end{align}
 $$
 
-Sortieren und aufstellen des Gleichungssystems:
+* harmonische Schwingung, $x(t+T_0) = x(t)$, wobei $T_0$ Periode, $\omega_0=2 \pi f_0 = 2\pi \frac{1}{T_0}$ Eigenfrequenz und $f_0$ Resonanzfrequenz
+* DGL gehorcht dem Energieerhlatungssatz
 
 $$
 \begin{align}
-    \underbrace{\begin{pmatrix}
-        \sum Z_{1,3} & Z_2 & \sum Z_{2,3} & 0 \\
-        Z_2 & \sum Z_{2,4,5,6,9} & \sum Z_{2,5,6,9,10} & -Z_9 \\
-        \sum Z_{2,3} & \sum Z_{2,5,6,9,10} & \sum Z_{2,3,5,6,7,9,10} &
-        \sum -Z_{9,10} \\
-        0 & -Z_9 & \sum -Z_{9,10} & \sum Z_{8,9,10}
-      \end{pmatrix}}_{\mathbf{Z}}
-    \underbrace{\begin{pmatrix}
-        I_1 \\
-	I_4 \\
-	I_7 \\
-	I_8
-      \end{pmatrix}}_{\mathbf{I_M}}
-    &=
-    \underbrace{\begin{pmatrix}
-        0 \\
-	-U_4 \\
-	0 \\
-	-U_8
-      \end{pmatrix}}_{\mathbf{U}}
-  \end{align}
+W_{ges}(x) &= W_{pot}(x) + W_{kin}(x) = \const. \\
+\frac{d W_{ges}}{dt} &= \frac{dW_{pot}}{dx} \frac{dx}{dt} + \frac{d W_{kin}}{dx} \frac{d x}{dt} = 0 \\
+x(t) &= x_{max} \cos(\omega_0 t + \varphi_0)\quad\mbox{Lösung}
+\end{align}
+$$
+
+* Zusammenschaltung von Induktivität $L$ und Kapazität $C$ heißt (idealer) Schwing- oder Resonanzkreis
+
+$$
+\begin{align}
+W_{pot} &:= \mbox{Kondensator} \\
+W_{kin} &:= \mbox{Induktivität}
+\end{align}
+$$
+
+* freie und erzwungene Schwingung
+* ungedämpfte und gedämpfte Schwingung
+
+### Realer (verlustbehafteter) Schwingkreis
+* Maschengleichung
+
+$$
+\begin{align}
+u_Q(t) &= L \frac{di}{dt} + i\, R + \frac{1}{C} \int i dt  \\
+0 &= \frac{di}{dt^2} + \frac{R}{L} \frac{di}{dt} + \frac{1}{LC} i  \\
+i(t) &= I_0 e^{-d \omega_0 t} \cos(\sqrt{1 -d^2} \omega_0 t) \quad \mbox{Lösung}
+\end{align}
+$$
+
+* Dämpfung $d = \frac{1}{2 Q} = \frac{R}{\omega_0 L}$
+* Güte $Q = \frac{\omega_0 \cdot \mbox{ges. Speicherenergie}}{\mbox{Verlustleistung}}$
+* Reihenkreis $Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}$
+* Parallelkreis $Q = \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}$
+
+<!-- !split -->
+### Grundeigenschaften vom Reihenschwingkreis
+* Impedanz
+
+$$
+\begin{align}
+\underline{Z} &= R_r + j\left(\omega L_r - \frac{1}{\omega C_r}\right) \\
+          &= R_r + j X(\omega) \\
+\magn{\underline{Z}} &= \sqrt{R_r^2 + X^2(\omega)} \\
+\arg{\underline{Z}} &= \arctan \frac{X(\omega)}{R_r}
+\end{align}
 $$
 
 <!-- !split -->
-### Knotenspannungsanalyse
+### Grundeigenschaften vom Parallelschwingkreis
+* Admittanz
 
-Beim Knotenspannungsverfahren, das auf Maxwell (1873) zurückgeht, wird die Hilfsvariable *Knotenspannung* so eingeführt,
-dass jede *Maschengleichung* automatisch erfüllt ist und daher alle wegfallen.
+$$
+\begin{align}
+\underline{Y} &= G_p + j\left(\omega C_p- \frac{1}{\omega L_p}\right) \\
+          &= G_r + j B(\omega) \\
+\magn{\underline{Y}} &= \sqrt{G_p^2 + B^2(\omega)} \\
+\arg{\underline{Y}} &= \arctan \frac{B(\omega)}{G_p}
+\end{align}
+$$
 
-Das Verfahren umfasst dann:
+### Grundeigenschaften von Reihen- und Parallelschwingkreis
 
-* die Aufstellung der Knotengleichungen für die Zweigströme,
-* ihren Ersatz durch die Zweigbeziehungen $I=f(U)$ der Netzwerkelemente ausgedrückt durch Knotenspannungen
+* Thomsonsche Formel $\omega_0 = \frac{1}{L_r C_r} = \frac{1}{L_p C_p}$
+* bei Resonanz erreichen Impedanz und Admittanz ein Minimum
 
-(statt der Zweigspannung) und die Lösung der Gleichungen nach den Knotenspannungen.
+$$
+\begin{align}
+\left . \underline{Z} \right\lvert_{\omega_0} &\Rightarrow \magn{\underline{Z}} = R_r \\
+\left . \underline{Y} \right\lvert_{\omega_0} &\Rightarrow \magn{\underline{Y}} = G_p
+\end{align}
+$$
+
+
+                     $X(\omega)$  $B(\omega)$  
+-------------------  -----------  -----------  
+$\omega < \omega_0$   kapazitiv     induktiv   
+$\omega > \omega_0$    induktiv    kapazitiv   
+
 
 <!-- !split -->
-### Knotenspannungs- vs Maschenstromanalyse
+### Vereinheitlichte Kennzeichnung (1)
+* Verstimmung $v$, relative Frequenzabweichung
 
-* Wegfall der Baumsuche, auch spielt die Zahl unabhängiger Maschen $m = z-(k-1)$ und damit die Anzahl der Zweige keine Rolle,
-* weil die Knotenspannungen unabhängige Variablen sind, dürfen Spannungsquellen nicht auftreten, denn eine ideale Spannungsquelle zwischen zwei Knoten macht den Strom durch die Quelle unbestimmt. 
+$$
+\begin{align}
+v &= \frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}
+\end{align}
+$$
+
+* Normierte Darstellung:
+
+$$
+\begin{align}
+\underline{Z} &= R \left( 1 + j \frac{1}{R} \left( \frac{\omega \omega_0 \omega L}{\omega_0}
+- \frac{\omega_0}{\omega_0 \omega C}\right)\right) \\
+&= R (1 + Q v) \\
+\underline{Y} &= G (1 + j Q v)
+\end{align}
+$$
+
+<!-- !split -->
+### Vereinheitlichte Kennzeichnung (2)
+* Betrag und Phase
+
+$$
+\begin{align}
+\frac{\lvert\underline{Z}\lvert}{R} = \frac{\lvert \underline{Y}\lvert}{G} &= \sqrt{1 + \left( Q v \right)} \\
+\varphi_Z = \varphi_Y &= \arctan\left( Q v \right)
+\end{align}
+$$
+
+* \SI{45}{\degree}-, $\frac{\pi}{4}$-, oder 3dB-Frequenz 
+
+Der Phasenwinkel $\varphi$ ist gleich \SI{45}{\degree} und Betrag der Blindkomponente ist gleich der Wirkkomponente.
+$$
+\begin{align}
+\lvert X(\omega_{\pm 45}) \lvert &= \pm R &  \lvert B(\omega_{\pm 45}) \lvert &= \pm G \\
+\omega_{\pm 45} L - \frac{1}{\omega_{\pm 45} C} &= \pm R &  \omega_{\pm 45} C - \frac{1}{\omega_{\pm 45} L} &= \pm G
+\end{align}
+$$
+
+$$
+\begin{align}
+\omega_{\pm 45} &= \omega_0 \left( \sqrt{1 + \left(\frac{1}{2Q}\right)^2} \pm \frac{1}{2Q}\right) \approx \omega_0 \left( 1 \pm \frac{1}{2Q}\right)
+\end{align}
+$$
+
+$$
+\begin{align}
+\lvert \underline{Z(\omega_{\pm 45})} \lvert &= \sqrt{2} R &  \lvert \underline{Y(\omega_{\pm 45})} \lvert &= \sqrt{2} G
+\end{align}
+$$
+
+* Bandbreite BW (bandwidth)
+
+$$
+\begin{align}
+BW &= \omega_{45} - \omega_{-45} \\
+&= f_{45} - f_{-45} \\
+&= \frac{\omega_0}{Q} = \frac{f_0}{Q}
+\end{align}
+$$
+
+<!-- !split -->
+### Wien-Robinson-Oszillator
+<div id="sec:wien-rob-oszi"></div>
+
+<!-- !split -->
+#### Gleichstrommessbrücke
+
+<!-- !split -->
+#### Wechselstrom-Abgleichbrücke
+
+<!-- !split -->
+#### Wien-Robinson-Brücke
+
+<a href="hewlett1942.html#hewlett1942">[4]</a>
 
 <!-- !split -->
