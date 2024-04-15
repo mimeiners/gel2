@@ -1,6 +1,6 @@
 <!-- !split -->
 <!-- jupyter-book 05_lec.md -->
-# Graphische Analysemethoden
+# Grafische Analysemethoden
 
 <div id="sec:graph"></div>
 * Bode-Diagramm, Frequenz- und Phasengang

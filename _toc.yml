@@ -14,7 +14,7 @@ parts:
     - file: class/04_lec
       title: Impedanz, Admittanz und Leistung
     - file: class/05_lec
-      title: Graphische Analysemethoden
+      title: Grafische Analysemethoden
     - file: class/06_lec
       title: Resonanzkreis
     - file: class/07_lec
