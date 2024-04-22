@@ -2,17 +2,20 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: M2.6 Grundlagen der Elektrotechnik (GEL2)
-author: M. Meiners / A. von Ahlen
-copyright: ""
+author: A. von Ahlen, M. Meiners
+copyright: "2024"
 logo: hsb-logo.png
-exclude_patterns: ["LICENSE.md", "README.md"]
-only_build_toc_files: true
-# Short description about the book
-# description: >-
-#  Elektronik-Experimente mit dem ASLK Pro.
 
-# execute:
-#  execute_notebooks: cache
+exclude_patterns: ["LICENSE.md", "README.md"]
+
+only_build_toc_files: true
+
+# Short description about the book
+description: >-
+  Skriptum zum B.Eng. ET Modul GEL2 an der HSB.
+
+execute:
+  execute_notebooks: off
 
 # HTML-specific settings
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
@@ -21,11 +24,11 @@ html:
   use_issues_button: true
   use_repository_button: true
   use_edit_page_button: true
-  navbar_number_sections: false
+  navbar_number_sections: true
   baseurl: "https://mimeiners.github.io/gel2/"
 # google_analytics_id: UA-11111111 # add your Google Analytics Tracking Code
   comments:
-    hypothesis: false
+    hypothesis: true
     utterances:
       repo: "mimeiners/gel2"
     dokieli: true
@@ -56,9 +59,14 @@ latex:
     targetname: gel2.tex
 
 sphinx:
+  extra_extensions:
+    - sphinx_proof
+    - sphinx_jupyter_latex
   config:
     html_show_copyright: false
     html_extra_path: ['files']
+    language: de
+    # latex_engine: pdflatex
     bibtex_reference_style: author_year
     myst_enable_extensions: 
     - amsmath

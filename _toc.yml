@@ -1,33 +1,38 @@
 # Table of contents
-
 format: jb-book
 root: about/unsyllabus
+options:
+  numbered: True
 parts:
-- caption: Seminar
-  chapters:
-    - file: class/01_lec
-      title: Einleitung und Übersicht
-    - file: class/02_lec
-      title: Netzwerkerregung
-    - file: class/03_lec
-      title: Komplexe Wechselstromrechnung
-    - file: class/04_lec
-      title: Impedanz, Admittanz und Leistung
-    - file: class/05_lec
-      title: Grafische Analysemethoden
-    - file: class/06_lec
-      title: Resonanzkreis
-    - file: class/07_lec
-      title: Netzwerkanalyse
-    - file: class/08_lec
-      title: Transformatoren und Übertrager
-    - file: class/09_lec
-      title: Literaturverzeichnis
-- caption: Tutorium
-  chapters:
-    - file: Tutorium/1_Einfuehrung
-      title: Einführung
-    - file: Tutorium/2_Komplexe-Zahlen
-      title: Komplexe Zahlen
-    - file: Tutorium/3_Periodische-Signale
-      title: Periodische Signale
+  - caption: Seminar
+    chapters:
+      - file: class/01_lec
+        title: Einleitung und Übersicht
+      - file: class/02_lec
+        title: Netzwerkerregung
+      - file: class/03_lec
+        title: Komplexe Wechselstromrechnung
+      - file: class/04_lec
+        title: Impedanz, Admittanz und Leistung
+      - file: class/05_lec
+        title: Grafische Analysemethoden
+      - file: class/06_lec
+        title: Resonanzkreis
+      - file: class/07_lec
+        title: Netzwerkanalyse
+      - file: class/08_lec
+        title: Transformatoren und Übertrager
+      - file: class/09_lec
+        title: Literaturverzeichnis
+  - caption: Übungungen
+    chapters:
+      - file: exercise/01_hw
+        title: Periodische Signale
+  - caption: Tutorium
+    chapters:
+      - file: Tutorium/1_Einfuehrung
+        title: Einführung
+      - file: Tutorium/2_Komplexe-Zahlen
+        title: Komplexe Zahlen
+      - file: Tutorium/3_Periodische-Signale
+        title: Periodische Signale
