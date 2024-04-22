@@ -24,10 +24,12 @@ parts:
         title: Transformatoren und Übertrager
       - file: class/09_lec
         title: Literaturverzeichnis
-  - caption: Übungungen
+  - caption: Übungen
     chapters:
-      - file: exercise/01_hw
+      - file: exercise/hw1
         title: Periodische Signale
+      - file: exercise/hw2
+        title: Komplexe Wechselstromrechnung
   - caption: Tutorium
     chapters:
       - file: Tutorium/1_Einfuehrung

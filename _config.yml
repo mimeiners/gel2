@@ -61,13 +61,13 @@ latex:
 sphinx:
   extra_extensions:
     - sphinx_proof
-    - sphinx_jupyter_latex
   config:
     html_show_copyright: false
     html_extra_path: ['files']
     language: de
     # latex_engine: pdflatex
     bibtex_reference_style: author_year
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     myst_enable_extensions: 
     - amsmath
     - colon_fence
