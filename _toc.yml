@@ -38,3 +38,5 @@ parts:
         title: Komplexe Zahlen
       - file: Tutorium/3_Periodische-Signale
         title: Periodische Signale
+      - file: Tutorium/4_Komplexe-Groessen
+        title: komplexe Groessen
