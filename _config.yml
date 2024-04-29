@@ -60,7 +60,7 @@ latex:
 
 sphinx:
   extra_extensions:
-    - sphinx_proof
+   - sphinx_proof
   config:
     html_show_copyright: false
     html_extra_path: ['files']
