@@ -1,16 +1,11 @@
-<!-- !split -->
-<!-- jupyter-book 01_lec.md -->
 # Einleitung
 
-<div id="sec:intro"></div>
-<!-- !split -->
 ### Wissenschaftliches Rechnen / Datenwissenschaft
 * [Python](https://www.anaconda.com/download/)
 * [Matlab](https://de.mathworks.com)
 * [Gnu Octave](https://www.gnu.org/software/octave/)
 * [Command-line tools](http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html) 
 
-<!-- !split -->
 ### Schaltungssimulation (SPICE)
 * [LTspice Linear Technology](http://www.linear.com/designtools/software/)
 * [ngspice (open-source)](http://ngspice.sourceforge.net)
@@ -18,7 +13,7 @@
 * [Spectre (cadence)](https://www.cadence.com/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation/spectre-simulation-platform.html)
 * [PrimeSim HSPICE (SYNOPSIS)](https://www.synopsys.com/implementation-and-signoff/ams-simulation/primesim-hspice.html)
 
-<!-- !split -->
+
 ### Betriebssystem (OS) - Werkzeuge (Tools)
 * [Shell](https://en.wikipedia.org/wiki/Shell_%28computing%29)
   * [oh-my-zsh](https://ohmyz.sh),
@@ -28,20 +23,20 @@
 * [GIT (Versionskontrolle)](https://git-scm.com)
 * [Cygwin](https://cygwin.com)
 
-<!-- !split -->
+
 ### Code Editoren
 * [Visual Studio Code](https://code.visualstudio.com)
 * [Notepad++](https://notepad-plus-plus.org) (Windows)
 * [Emacs](https://www.gnu.org/software/emacs/)	
 * [Vim](https://www.vim.org)
 
-<!-- !split -->
+
 ### Schreibst Du noch oder TeXst Du schon?
 * [MikTeX (Windows, MacOS, Linux)](https://miktex.org/)
 * [MacTeX (MacOS)](https://www.tug.org/mactex/)
 * [TeXLive (Linux)](http://tug.org/texlive/)
 
-<!-- !split -->
+
 ### LaTeX Editoren
 * IDE's
   * [TeXStudio](http://www.texstudio.org)
@@ -53,7 +48,7 @@
   * [CoCalc - Online LaTeX](https://cocalc.com/doc/latex-editor.html)
 
 
-<!-- !split -->
+
 ### Literaturverwaltung und LaTeX
 * [Citavi im Detail > Titel exportieren > Export nach BibTeX](https://www1.citavi.com/sub/manual5/de/exporting_to_bibtex.html)
 * [RefWorks - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3912294)
@@ -61,96 +56,65 @@
 * [JabRef - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3897117)
 * [EndNote - Library Guide Univ. Melbourne](https://unimelb.libguides.com/latexbibtex/endnote)
 
-<!-- !split -->
+
 ### Schöne neue Welt
-<!-- !bslidecell 00 0.9 -->
 
-<!-- <img src="../../lecture/doconce/fig/lec_AMD@16nm@Jaguar.jpg" width="400"><p><em>AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016 <div id="fig:jaguar"></div></em></p> -->
-![<p><em>AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016 <div id="fig:jaguar"></div></em></p>](../../lecture/doconce/fig/lec_AMD@16nm@Jaguar.jpg)
+![<p><em>AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016 <div
+id="fig:jaguar"></div></em></p>](../images/class/lec_AMD@16nm@Jaguar.jpg) 
 
-<!-- !eslidecell -->
 
-<!-- !split -->
 ### Halbleiterherstellung (Infineon, Dresden)
-<!-- !bslidecell 00 0.9 -->
-
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/_Kj58yQ67KI" frameborder="0" allowfullscreen></iframe>
 
-<!-- !eslidecell -->
 
-<!-- !split -->
 ### FinFET (Intel)
-<!-- !bslidecell 00 0.9 -->
-
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/_VMYPLXnd7E" frameborder="0" allowfullscreen></iframe>
 
-<!-- !eslidecell -->
 
-<!-- !split -->
 ### TSMC Fab (Next Gen 7/5 nm)
-<!-- !bslidecell 00 0.9 -->
-
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/Hb1WDxSoSec" frameborder="0" allowfullscreen></iframe>
 
-<!-- !eslidecell -->
 
-<!-- !split -->
 ### Es war einmal ...
-<div id="sec:history"></div>
 
-<!-- !bslidecell 00 0.45 -->
-<!-- <img src="../../lecture/doconce/fig/lec_vacuum_tube.png" width="400"><p><em>1906 die Elektronenröhre</em></p> -->
-![<p><em>1906 die Elektronenröhre</em></p>](../../lecture/doconce/fig/lec_vacuum_tube.png)
-<!-- !eslidecell -->
+![<p><em>1906 die Elektronenröhre</em></p>](../images/class/lec_vacuum_tube.png)
 
-<!-- !bslidecell 01 0.45 -->
-<!-- <img src="../../lecture/doconce/fig/lec_1st_transistor.png" width="400"><p><em>1947 der erste Transistor, Bell Labs Foto</em></p> -->
-![<p><em>1947 der erste Transistor, Bell Labs Foto</em></p>](../../lecture/doconce/fig/lec_1st_transistor.png)
-<!-- !eslidecell -->
+![<p><em>1947 der erste Transistor, Bell Labs Foto</em></p>](../images/class/lec_1st_transistor.png)
 
-<!-- !split -->
+
 ### Damals und heute
-<!-- !bslidecell 00 0.45 -->
-<!-- <img src="../../lecture/doconce/fig/lec_1st_ic_kilby.png" width="400"><p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p> -->
-![<p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p>](../../lecture/doconce/fig/lec_1st_ic_kilby.png)
-<!-- !eslidecell -->
 
-<!-- !bslidecell 01 0.45 -->
-<!-- <img src="../../lecture/doconce/fig/lec_modern_ic.png" width="400"><p><em>Moderner IC <div id="fig:modernic"></div></em></p> -->
-![<p><em>Moderner IC <div id="fig:modernic"></div></em></p>](../../lecture/doconce/fig/lec_modern_ic.png)
-<!-- !eslidecell -->
+![<p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p>](../images/class/lec_1st_ic_kilby.png)
 
-<!-- !split -->
+![<p><em>Moderner IC <div id="fig:modernic"></div></em></p>](../images/class/lec_modern_ic.png)
+
+
 ### Systemhierarchie
 
-<!-- <img src="../../lecture/doconce/fig/lec_system_hierarchy.png" width="400"><p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p> -->
-![<p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p>](../../lecture/doconce/fig/lec_system_hierarchy.png)
+![<p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p>](../images/class/lec_system_hierarchy.png)
 
 * Nutzen Sie Hierarchien zur Beschreibung komplexer Systeme
 * Teile und herrsche
 
-<!-- !split -->
+
 ### Schnittstellen zur Aussenwelt
 
-<!-- <img src="../../lecture/doconce/fig/lec_real_world_interface.png" width="600"><p><em>Interfacing. <div id="fig:interfaces"></div></em></p> -->
-![<p><em>Interfacing. <div id="fig:interfaces"></div></em></p>](../../lecture/doconce/fig/lec_real_world_interface.png)
+![<p><em>Interfacing. <div id="fig:interfaces"></div></em></p>](../images/class/lec_real_world_interface.png)
 
-<!-- !split -->
+
 ### Meeting mit einem System
 
-<!-- <img src="../../lecture/doconce/fig/lec_smartphone.png" width="600"><p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p> -->
-![<p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p>](../../lecture/doconce/fig/lec_smartphone.png)
+![<p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p>](../images/class/lec_smartphone.png)
 
-<!-- !split -->
+
 ### System in a Package (SiP)
 
-<!-- <img src="../../lecture/doconce/fig/lec_system_in_package.png" width="600"><p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p> -->
-![<p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p>](../../lecture/doconce/fig/lec_system_in_package.png)
+![<p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p>](../images/class/lec_system_in_package.png)
 
-<!-- !split -->
+
 ### Sie werden unsere Experten
 *Leistungsmerkmale.* 
 * Hintergrundwissen
@@ -170,7 +134,6 @@
 
 
 
-<!-- !split -->
 ### Lernziele des Moduls
 *Studierende können nach Abschluss des Moduls:* 
 * Elektrische Systeme mathematisch und graphisch im Zeit- und Frequenzbereich beschreiben
@@ -187,8 +150,8 @@
 
 
 
-<!-- !split -->
 ### Beschreibung elektrotechnischer Systeme (1)
+
 * verschiedene Stufen der Vereinfachung
 * Felder / Wellen / Optik / HF-Technik
   * Maxwell-Gleichungen
@@ -201,8 +164,9 @@ $$
 \end{align}
 $$
 
-<!-- !split -->
+
 ### Beschreibung elektrotechnischer Systeme (2)
+
 * bei lokaler Konzentration der Feldenergie $\Rightarrow$ quasi-statische Näherung
 * Mikrowellentechnik / Leitungstechnik
   * verteilte Schaltungen $l,c,\rho$
@@ -214,8 +178,8 @@ $$
   * (Block-)Schaltbilder
 
 
-<!-- !split -->
 ### Beschreibung elektrotechnischer Systeme (3)
+
 * eingeschwungener Zustand
 * NF-Technik
   * stationär-periodische Signale
@@ -225,15 +189,14 @@ $$
   * monofrequente Signale $U = Z \cdot I$
 
 
-<!-- !split -->
 ### Beschreibung elektrotechnischer Systeme (4)
 * Frequenz $f \rightarrow 0$
 * Gleichstromtechnik
   * Ohmsches Gesetz $U = R \cdot I$
 
 
-<!-- !split -->
 ### Konzentrierte Schaltelemente
+
 * Stromdichte
 
 $$
@@ -258,7 +221,6 @@ $$
 \end{equation}
 $$
 
-<!-- !split -->
 ### Harmonische Signale
 * als Zeitfunktion
 
@@ -276,4 +238,3 @@ U = \lvert \hat{U} \lvert e^{j \phi}
 \end{equation}
 $$
 
-<!-- !split -->

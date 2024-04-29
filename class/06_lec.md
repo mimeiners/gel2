@@ -20,7 +20,7 @@ $$
 
 $$
 \begin{align}
-W_{ges}(x) &= W_{pot}(x) + W_{kin}(x) = \const. \\
+W_{ges}(x) &= W_{pot}(x) + W_{kin}(x) = const. \\
 \frac{d W_{ges}}{dt} &= \frac{dW_{pot}}{dx} \frac{dx}{dt} + \frac{d W_{kin}}{dx} \frac{d x}{dt} = 0 \\
 x(t) &= x_{max} \cos(\omega_0 t + \varphi_0)\quad\mbox{Lösung}
 \end{align}
@@ -62,7 +62,7 @@ $$
 \begin{align}
 \underline{Z} &= R_r + j\left(\omega L_r - \frac{1}{\omega C_r}\right) \\
           &= R_r + j X(\omega) \\
-\magn{\underline{Z}} &= \sqrt{R_r^2 + X^2(\omega)} \\
+\lvert\underline{Z}\lvert &= \sqrt{R_r^2 + X^2(\omega)} \\
 \arg{\underline{Z}} &= \arctan \frac{X(\omega)}{R_r}
 \end{align}
 $$
@@ -75,7 +75,7 @@ $$
 \begin{align}
 \underline{Y} &= G_p + j\left(\omega C_p- \frac{1}{\omega L_p}\right) \\
           &= G_r + j B(\omega) \\
-\magn{\underline{Y}} &= \sqrt{G_p^2 + B^2(\omega)} \\
+\lvert\underline{Y}\lvert &= \sqrt{G_p^2 + B^2(\omega)} \\
 \arg{\underline{Y}} &= \arctan \frac{B(\omega)}{G_p}
 \end{align}
 $$
@@ -87,8 +87,8 @@ $$
 
 $$
 \begin{align}
-\left . \underline{Z} \right\lvert_{\omega_0} &\Rightarrow \magn{\underline{Z}} = R_r \\
-\left . \underline{Y} \right\lvert_{\omega_0} &\Rightarrow \magn{\underline{Y}} = G_p
+\left . \underline{Z} \right\lvert_{\omega_0} &\Rightarrow \lvert\underline{Z}\lvert = R_r \\
+\left . \underline{Y} \right\lvert_{\omega_0} &\Rightarrow \lvert\underline{Y}\lvert = G_p
 \end{align}
 $$
 

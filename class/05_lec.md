@@ -1,36 +1,28 @@
-<!-- !split -->
-<!-- jupyter-book 05_lec.md -->
 # Grafische Analysemethoden
 
-<div id="sec:graph"></div>
 * Bode-Diagramm, Frequenz- und Phasengang
+
 * Nyquist-Ortskurve, kurz [Ortskurve](https://elektroniktutor.de/elektrophysik/ortskurv.html)
 
-<!-- !split -->
-### Frequenzgang &ndash; Übergangsverhalten
+
+### Frequenzgang und Übergangsverhalten
 
 *Kurzbeschreibung.* 
 Der Frequenzgang beschreibt, wie ein dynamisches System eine sinusförmige Eingangsgröße überträgt.
 
-<!-- <img src="fig/lec5s1.png" width="200"> -->
-![](fig/lec5s1.png)
+![](../images/class/lec5s1.png)
 
 $$
- F(j\omega) = \frac{\underline{U}_2}{\underline{U}_1} = \frac{j \omega R_1 C_1}{1+j \omega R_1 C_1} 
+F(j\omega) = \frac{\underline{U}_2}{\underline{U}_1} = \frac{j \omega R_1 C_1}{1+j \omega R_1 C_1} 
 $$
 
 
+#### Übung: Bode-Diagramm einer RC-Schaltung
 
-<!-- !split -->
-#### Exercise: Bode-Diagramm einer RC-Schaltung
-
-<div id="ipynb:bode"></div>
-
-Ermitteln Sie den Betrags- und Phasengang der einfachen RC-Schaltung mit Hilfe der komplexen Wechselstromrechnung (KWR).
-Nutzen Sie Python oder Matlab zur Darstellung des Bode-Diagramms.
+Ermitteln Sie den Betrags- und Phasengang der einfachen RC-Schaltung mit Hilfe der komplexen Wechselstromrechnung (KWR).Nutzen Sie Python oder Matlab zur Darstellung des Bode-Diagramms.
 
 
-~~~{.Python}
+```{python}
 #!/usr/bin/env python
 
 """ Bode-Diagramm einer RC-Schaltung """
@@ -70,9 +62,9 @@ plt.ylabel(r'arg(F(j$\omega$)/rad')
 plt.grid(b=True)
 
 plt.show()
-~~~
+```
 
-<!-- !split -->
+
 ### Ortskurven
 Als Referenz zu diesem Thema sei das Kapitel 5 aus <a href="buettner2014.html#buettner2014">[2]</a> empfohlen.
 
@@ -88,47 +80,46 @@ Impedanz, Admittanz, Ausgangsspannung oder den Ausgangsstrom an. Die Phasenlage 
 reellen Achse bestimmt.
 
 In der Elektronik beschreibt die Systemtheorie unter anderem das Übertragungsverhalten von Signalen. Eine hilfreiche
-Voraussetzung ist das [Operatoren der Widerstände und Leitwerte](../fachmathematik/operator.html) Rechnen
-mit komplexen Größen sowie deren Darstellungen im Polarkoordinatensystem oder der
-[Einführung in die komplexe Rechnung](../fachmathematik/komplex.html) Gaußschen Zahlenebene. Die oben genannten
-komplexen Größen sind von den Bauteilwerten abhängig. Die Impedanz Z einer dimensionierten RC- oder RL-Reihenschaltung ist
-frequenzabhängig. Die Ortskurve ist die Verbindung der errechneten Impedanzwerte in der komplexen Ebene durch einen
-Kurvenzug mit der Frequenz als Parameter. Die Zeigerlänge vom Nullpunkt zum Kurvenpunkt auf der Ortskurve entspricht dem
-skalaren Impedanzwert der aktuellen Frequenz. Der Phasenwinkel bezogen auf die Re-Achse zählt linksdrehend positiv und
-rechtsdrehend negativ. Die Lote vom Zeigerendpunkt auf die Koordinatenachsen ergeben für die jeweilige Frequenz als
-Achsenabschnitte die Wirk- und Blindkomponente des Systems. 
+Voraussetzung ist das [Operatoren der Widerstände und Leitwerte](../fachmathematik/operator.html) Rechnen mit komplexen
+Größen sowie deren Darstellungen im Polarkoordinatensystem oder der [Einführung in die komplexe
+Rechnung](../fachmathematik/komplex.html) Gaußschen Zahlenebene. Die oben genannten komplexen Größen sind von den
+Bauteilwerten abhängig. Die Impedanz Z einer dimensionierten RC- oder RL-Reihenschaltung ist frequenzabhängig. Die
+Ortskurve ist die Verbindung der errechneten Impedanzwerte in der komplexen Ebene durch einen Kurvenzug mit der Frequenz
+als Parameter. Die Zeigerlänge vom Nullpunkt zum Kurvenpunkt auf der Ortskurve entspricht dem skalaren Impedanzwert der
+aktuellen Frequenz. Der Phasenwinkel bezogen auf die Re-Achse zählt linksdrehend positiv und rechtsdrehend negativ. Die
+Lote vom Zeigerendpunkt auf die Koordinatenachsen ergeben für die jeweilige Frequenz als Achsenabschnitte die Wirk- und
+Blindkomponente des Systems.
+
 
 *Vergleich zum Zeigerdiagramm.* 
+
 * Zeigerdiagramm nur für konstante Parameter
+
 * Im Zeigerdiagramm keine Aussagen über Auswirkungen von Änderungen der Frequenz oder Schaltelemente
+
 * "Für jeden Wert der Zweipole $R$, $L$, und $C$ oder jede Frequenz müssten gesonderte Zeigerdiagramme erstellt werden."
+
 * "Man verzichtet auf die Darstellung der Zeiger und trägt in der komplexen Zahlenebene nur die Kurve auf."
 
 
 
-<!-- !split -->
-#### Exercise: Ortskurve einer RC-Schaltung
+#### Übung: Ortskurve einer RC-Schaltung
+"Mit den Bauteilen $R$ = 2 k $\Omega$ und $C$ = 159 nF kann eine Reihen- oder Parallelschaltung gebildet werden. Die
+komplexe Impedanz der Reihenschaltung ist von der Frequenz abhängig und grafisch in der komplexen Ebene als Ortskurve
+mit der Frequenz als Parameter dargestellt. Die Blindwiderstandswerte wurden für einen bestimmten Frequenzbereich
+errechnet und im Polarkoordinatensystem eingetragen. Alle Werte liegen im 4. Quadranten auf einer Geraden. Da der
+ohmsche Widerstand ist von der Frequenz unabhängig ist, verläuft sie parallel zur imaginären Achse im Abstand von 
+2 k$\Omega$. Auf die reelle (Re) Achse bezogen ist der Phasenwinkel der Impedanz negativ. Das Diagramm ist mit den
+angegebenen gerundeten Rechenwerten des Blindwiderstands, der Impedanz und des Phasenwinkels erstellt." 
 
-<div id="sec:rc"></div>
-
-"Mit den Bauteilen $R$ = 2 k $\Omega$ und $C$ = 159 nF kann eine Reihen- oder Parallelschaltung
-gebildet werden. Die komplexe Impedanz der Reihenschaltung ist von der Frequenz abhängig und grafisch in der komplexen
-Ebene als Ortskurve mit der Frequenz als Parameter dargestellt. Die Blindwiderstandswerte wurden für einen bestimmten
-Frequenzbereich errechnet und im Polarkoordinatensystem eingetragen. Alle Werte liegen im 4. Quadranten auf einer
-Geraden. Da der ohmsche Widerstand ist von der Frequenz unabhängig ist, verläuft sie parallel zur imaginären Achse im
-Abstand von 2 k $\Omega$. Auf die reelle (Re) Achse bezogen ist der Phasenwinkel der Impedanz negativ. Das Diagramm
-ist mit den angegebenen gerundeten Rechenwerten des Blindwiderstands, der Impedanz und des Phasenwinkels erstellt."
-
-<!-- <img src="fig/lec5s2.png" width="200"> -->
-![](fig/lec5s2.png)
+![](../images/class/lec5s2.png)
 
 $$
- \underline{Z} = R_1 + \frac{1}{j \omega C_1} 
+\underline{Z} = R_1 + \frac{1}{j \omega C_1} 
 $$
 
 
-~~~{.Python}
-#!/usr/bin/env python
+```{python}
 
 """ Ortskurve einer RC-Reihenschltung """
 
@@ -148,21 +139,20 @@ plt.grid(b=True)
 plt.xlabel(r'Re{Z}')
 plt.ylabel(r'Im{Z}')
 plt.show()
-~~~
+```
 
 "Die Ortskurve kann auch für die Parallelschaltung von R und C mit der Frequenz als Parameter gezeichnet werden. Im
 Polardiagramm wird sie durch die Zeiger aller Gesamtleitwerte oder Admittanzen gebildet und verläuft im 1. Quadranten
 parallel zur imaginären Achse. Die Achsenbezeichnungen der Leitwerte werden in Siemens S angeben. Die Phasenwinkel sind
 auf die Re-Achse bezogen positiv." <a href="mietke2023.html#mietke2023">[3]</a>
 
-<!-- !split -->
-#### Inversion von Ortskurven
 
-<div id="sec:inversion"></div>
+#### Inversion von Ortskurven
 
 "Bei der Konstruktion einer Ortskurve ist es oft notwendig von der Widerstandsform $\underline{Z}(\omega)$ auf die
 Leitwertsform $\underline{Y}(\omega)$ überzugehen und umgekehrt. Beide Funktionen gehen jeweils aus der Kehrwertbildung
-der anderen hervor, man nennt sie zueinander inverse Funktionen und die Kehrwertbildung selbst Inversion." <a href="buettner2014.html#buettner2014">[2]</a>
+der anderen hervor, man nennt sie zueinander inverse Funktionen und die Kehrwertbildung selbst Inversion." <a
+href="buettner2014.html#buettner2014">[2]</a>
 
 Die Inversion der Ortskurve hat als Ergebnis die zur Ausgangsschaltung äquivalente Schaltung. Diese Umrechnung ist immer
 dann notwendig, wenn es sich um gemischte Reihen- und Parallelschaltungen wie bei T- und $\Pi$-Filtern, belasteten
@@ -170,44 +160,61 @@ Filtern und Schwingkreisen handelt.
 
 Die Ortskurven einfacher RC- und RL-Schaltungen verhalten sich wie folgt:
 
-* Verläuft die Ortskurve der Impedanz oder Admittanz im 1. Quadranten, so befindet sich die dazu invertierte Ortskurve im 4. Quadranten.
-* Die Ortskurve der Impedanz einer Reihenschaltung ist eine Parallele zur imaginären Achse im Abstand des ohmschen Widerstandswerts. Die invertierte Ortskurve der Admittanz ist ein im Nullpunkt endender Halbkreis mit dem Durchmesser des reellen Leitwerts.
-* Die Ortskurve der Admittanz einer Parallelschaltung ist eine Parallele zur imaginären Achse im Abstand des reellen Leitwerts. Die invertierte Ortskurve der Impedanz ist ein im Nullpunkt endender Halbkreis mit dem Durchmesser des ohmschen Widerstandswerts.
+* Verläuft die Ortskurve der Impedanz oder Admittanz im 1. Quadranten, so befindet sich die dazu invertierte Ortskurve
+  im 4. Quadranten.
+  
+* Die Ortskurve der Impedanz einer Reihenschaltung ist eine Parallele zur imaginären Achse im Abstand des ohmschen
+  Widerstandswerts. Die invertierte Ortskurve der Admittanz ist ein im Nullpunkt endender Halbkreis mit dem Durchmesser
+  des reellen Leitwerts. 
+  
+* Die Ortskurve der Admittanz einer Parallelschaltung ist eine Parallele zur imaginären Achse im Abstand des reellen
+  Leitwerts. Die invertierte Ortskurve der Impedanz ist ein im Nullpunkt endender Halbkreis mit dem Durchmesser des
+  ohmschen Widerstandswerts. 
+  
 * Inversion eines Punktes (Widerstandsform/Impedanz): $\underline{Z} (5 + 5j) \Omega$
+
 * Ma{\ss}stäbe $M_Z = 2 \Omega/cm$ und $M_Y = 0.1 S/cm$
+
 * Leitwertform/Admittanz: $\underline{Y} = 1 / \underline{Z}$
 
+
 $$
-\begin{equation}
 \underline{Y} = \frac{1}{(5 + 5j) \Omega} = \frac{(5 - 5j)S}{50} = (0.1 - 0.1j) S
-\end{equation}
 $$
 
 * Inversion von Ortskuven durch Inversion einzelner Punkte <a href="buettner2014.html#buettner2014">[2]</a>:
  a. In die komplexe Zahlenebene wird der Zeiger $Z$ eingetragen, dessen Spitze invertiert werden soll.
+ 
  b. Um den Ursprung des Koordinatensystems wird ein Inversionskreis mit beliebigem Radius $r$ geschlagen.
- c. Von der Spitze des Zeigers $Z$ aus werden Tangenten an den Kreis gelegt, sie ergeben die Berührungspunkte $T_1$ und $T_2$. Die Tangentenpunkte kann man auch finden, wenn man um die Mitte des Zeigers einen Kreis mit dem Radius $Z / 2$, d.h. einen Thaleskreis, schlägt (siehe [Höhensatz](https://de.wikipedia.org/wiki/Höhensatz)).
+ 
+ c. Von der Spitze des Zeigers $Z$ aus werden Tangenten an den Kreis gelegt, sie ergeben die Berührungspunkte $T_1$ und
+ $T_2$. Die Tangentenpunkte kann man auch finden, wenn man um die Mitte des Zeigers einen Kreis mit dem Radius $Z / 2$,  d.h. einen Thaleskreis, schlägt (siehe [Höhensatz](https://de.wikipedia.org/wiki/Höhensatz)).
+ 
  d. Die beiden Punkte $T_1$ und $T_2$ werden miteinander verbunden.
+ 
  e. Wo die Verbindungslinie den Zeiger $Z$ schneidet, liegt die Spitze des konjugiert komplexen Zeigers $Y^*$.
- f. Spiegelt man den Zeiger $Y^*$ an der reellen Achse, so erhält man $Y$. Die Spitze dieses Zeigers entspricht also der invertierten Spitze von $Z$.
- g. Bezeichnet man die Maßstäbe für den komplexen Scheinwiderstand mit $M_Z$ und den Scheinleitwert mit $M_Y$ sowie die Länge des Zeigers $Z$ mit $L_Z$ und die der Zeiger $Y$  bzw. $Y^*$ mit $L_Y^*$  bzw. $L_Y$, so ist – da das Dreieck 0T1P rechtwinklig ist – nach dem [Kathetensatz](https://de.wikipedia.org/wiki/Satzgruppe_des_Pythagoras#Kathetensatz_des_Euklid):
+ 
+ f. Spiegelt man den Zeiger $Y^*$ an der reellen Achse, so erhält man $Y$. Die Spitze dieses Zeigers entspricht also der  invertierten Spitze von $Z$.
+ 
+ g. Bezeichnet man die Maßstäbe für den komplexen Scheinwiderstand mit $M_Z$ und den Scheinleitwert mit $M_Y$ sowie die
+ Länge des Zeigers $Z$ mit $L_Z$ und die der Zeiger $Y$  bzw. $Y^*$ mit $L_Y^*$  bzw. $L_Y$, so ist – da das Dreieck
+ 0T1P rechtwinklig ist – nach dem
+ [Kathetensatz](https://de.wikipedia.org/wiki/Satzgruppe_des_Pythagoras#Kathetensatz_des_Euklid):  
 
 
-#### Exercise: Ortskurve einer Übertragungsfunktion
+#### Übung: Ortskurve einer Übertragungsfunktion
 
-<div id="sec:transfer"></div>
-
-Innerhalb dieses Webprojekts sind die Übertragungsfunktionen fast immer als Bodediagramm dargestellt, bestehend aus dem 
+Innerhalb dieses Webprojekts sind die Übertragungsfunktionen fast immer als Bodediagramm dargestellt, bestehend aus dem
 [Übertragungsverhalten von RC- und RL-Tiefpässen](../analogtechnik/tiefpass.html) Amplituden- und
-Phasenfrequenzgang. Mit der Übertragungsfunktion des Zweitors (Vierpols) wird nachfolgend für einen RL-Tiefpass die 
+Phasenfrequenzgang. Mit der Übertragungsfunktion des Zweitors (Vierpols) wird nachfolgend für einen RL-Tiefpass die
 Ortskurve erstellt.
 
 Gesucht ist das Verhältnis der Ausgangs- zur Eingangsspannung am Zweitor. Es ist von der Frequenz abhängig und somit
 eine komplexe Größe. Die Eingangsspannung liegt an der Reihenschaltung aus je einem Wirk- und Blindwiderstand. Die
 Ausgangsspannung ist beim RL-Tiefpass am ohmschen Widerstand messbar. Zur Vereinfachung wird auf die Ausgangsgröße
 normiert, wobei der Zähler den Wert 1 annimmt. Eine weitere Vereinfachung ist die Normierung auf die Grenzfrequenz. In
-der Systemtechnik wird die normierte Kreisfrequenz $\Omega$ bezeichnet. Sie hat bei der Grenzfrequenz den Wert
-$\Omega$ = 1.
+der Systemtechnik wird die normierte Kreisfrequenz $\Omega$ bezeichnet. Sie hat bei der Grenzfrequenz den Wert $\Omega$
+= 1.
 
 Die gerundeten Werte der Ortskurvenpunkte gelten für einen dimensionierten RL-Tiefpass mit $R$=1k$\Omega$
 und $L$=100 mH. Mit den Werten $\Omega$, $|v|$ und $\phi$ könnten auch die Diagramme des Amplituden- und
@@ -220,9 +227,8 @@ errechnende Faktor des ohmschen Widerstands folgt aus $|v| \cos(\phi)$ und der F
 $|v| \sin(\phi)$. Bei Vorgabe einer Grenzfrequenz und des ohmschen Widerstandes sind mit den Faktoren für jeden
 RL-Tiefpass alle interessierenden Diagramme erstellbar.
 
-#### Exercise: Ortskurve eines Reihenschwingkreises
 
-<div id="sec:ortsk-reihen-oszi"></div>
+#### Übung: Ortskurve eines Reihenschwingkreises
 
 Eine [Ausführliche Beschreibung eines Reihenschwingkreises](../analogtechnik/rei_swkr.html) realer
 Reihenschwingkreis wird mindestens durch den ohmschen Drahtwiderstand der Spule gedämpft, der für die Kreisgüte
@@ -238,7 +244,4 @@ Parameter positiv.
 Liegt am Reihenschwingkreis für alle Frequenzen eine konstante Spannung an, so fließt im Resonanzfall der maximale Strom
 und beim verstimmten Kreis bleibt er geringer. Der rechte Teil der Grafik zeigt die Ortskurve mit dem Parameter $\Omega$
 für den auf seinen Maximalwert normierten komplexen Strom. Bei $\Omega$ = $\pm$ 1 beträgt der Phasenwinkel $\phi$ =
-$\pm$ 45 Grad. Der Strom erreicht den Wert $I=\frac{I_{max}}{\sqrt{2}}$. Durch $\Omega$ = $\pm$ 1 ist die Bandbreite des
-Schwingkreises bestimmt.
-
-<!-- !split -->
+$\pm$ 45 Grad. Der Strom erreicht den Wert $I=\frac{I_{max}}{\sqrt{2}}$. Durch $\Omega$ = $\pm$ 1 ist die Bandbreite des   Schwingkreises bestimmt.
