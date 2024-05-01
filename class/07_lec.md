@@ -1,10 +1,6 @@
-<!-- !split -->
-<!-- jupyter-book 07_lec.md -->
 # Netzwerkanalyse
 
-<div id="sec:netana"></div>
-<!-- !split -->
-### Systemsimulation
+## Systemsimulation
 
 
           Ebene             Maß       Simulation     
@@ -16,32 +12,38 @@ Transistor/Subkomponenten  1.0 mm
 Gatter/Komponenten         10 mm   Verhaltensmodell  
 
 
-<!-- !split -->
-### Makrotheorie
+
+## Makrotheorie
 <a href="kasper2000.html#kasper2000">[5]</a>
 
 * Mittelwerte charakteristischer Größen des Systems
+
 * Temperatur, Wärmekapazität, Leitfähigkeit etc.
+
 * schwache oder homogene Ortsabhängigkeit
+
 * partielle Differentialgleichungen (PDE's) der Feldtheorie gehen über in gewöhnliche Differentialgleichungen (ODE's)
+
 * nur noch dt kein dx (nach dem Ort)
 
-<!-- !split -->
-### Netzwerksimulation
+
+## Netzwerksimulation
 
 * Maschenwiderstandsmatrix
+
 * Knotenleitwertmatrix
+
 * mathematisch äquivalente Beschreibungen
+
 * für praktische Berechnungen (Simulation) "Knotenanalyse"
 
-<!-- !split -->
-### Netzwerk
 
-<!-- <img src="fig/lec6s20.png" width="400"> -->
-![](fig/lec6s20.png)
+## Netzwerk
 
-<!-- !split -->
-### Transiente Analyse
+![](../images/class/lec6s20.png)
+
+
+## Transiente Analyse
 
 * Knoten 0:
 
@@ -70,8 +72,8 @@ $$
   \end{align*}
 $$
 
-<!-- !split -->
-### Differentialgleichungssystem
+
+## Differentialgleichungssystem
 
 $$
 \begin{align*}
@@ -120,8 +122,8 @@ $$
   \end{align*}
 $$
 
-<!-- !split -->
-### Netzwerkanalyse zeitabhängiger Signale
+
+## Netzwerkanalyse zeitabhängiger Signale
 
 * Matrix $\mathbf{B}$ ist nicht immer invertierbar, ggf. blockweise zerlegen
 * Algebro-Differentialgleichungen
@@ -132,8 +134,8 @@ $$
   * Wir machen Transformation und dann Gauss'sches-Eliminationsverfahren
 
 
-<!-- !split -->
-### Lösung im Frequenzbereich
+
+## Lösung im Frequenzbereich
 
 
                       Zeitbereich                             Frequenzbereich                    
@@ -147,36 +149,43 @@ Spule        $u_L(t)=L \frac{di_L(t)}{dt}$  $\underline{u}_L(t)= j \omega L \und
              (wenn für $t=0$ energielos)                                                         
 
 
-<!-- !split -->
-### Grundaufgabe der Netzwerkanalyse
+
+## Grundaufgabe der Netzwerkanalyse
 
 * Gewinnung des Netzwerkes
 * Wahl des Lösungsverfahrens
 * Durchführung der Netzwerkanalyse
 * Diskussion der Lösung
 
-<!-- !split -->
-### Netzwerkgleichungen &ndash; Kirchhoff'sche Gesetze
+
+## Netzwerkgleichungen &ndash; Kirchhoff'sche Gesetze
 
 * Knotensatz: $\sum i_n(t)=0$
 * Maschensatz: $\sum u_n(t)=0$
 * Zweigbeziehungen: $u_n = f(i_n)$
 
-<!-- !split -->
-### Vollständiges Kirchhoff'sches Gleichungssystem
+
+## Vollständiges Kirchhoff'sches Gleichungssystem
 
 * $p=k-1$, unabhängige Knotengleichungen
 * $m=z-(k-1)$, unabhängige Maschengleichungen
 * $z$, $u,i$-Beziehungen der Zweigelemente
 
-<!-- !split -->
-### Netzwerkstruktur
 
-* **Unabhängige Knoten und Maschen** Die Eigenschaften eines Netzwerkes werden von den Netzwerkelementen und der Netzwerkstruktur oder -topologie bestimmt. Das ist die Art ihrer Zusammenschaltung. Sie wird auch als "Gerüst" bezeichnet und zeichnerisch durch den "Streckenkomplex" (engl. graph) ausgedrückt. Die Beschreibung kann gleichwertig durch eine "topologische Matrix" erfolgen. 
-* **Netzwerkgraph** Der Netzwerkgraph beschreibt die Verbindung der Netzwerkelemente durch Abstraktion der Netzwerkgeometrie. Jedem Knoten im Graphen entspricht ein Knoten im Netzwerk und jeder Verbindungslinie ein Zweig zwischen zwei Knoten. Er ist Grundlage der Zahl unabhängiger Knoten- und Maschengleichungen und kann durch "topologische Matrizen" (sog. "Inzidenzmatrizen") mathematisch beschrieben werden. 
+## Netzwerkstruktur
 
-<!-- !split -->
-### Vollständiger Baum
+* **Unabhängige Knoten und Maschen** Die Eigenschaften eines Netzwerkes werden von den Netzwerkelementen und der
+Netzwerkstruktur oder -topologie bestimmt. Das ist die Art ihrer Zusammenschaltung. Sie wird auch als "Gerüst"
+bezeichnet und zeichnerisch durch den "Streckenkomplex" (engl. graph) ausgedrückt. Die Beschreibung kann gleichwertig
+durch eine "topologische Matrix" erfolgen.
+
+* **Netzwerkgraph** Der Netzwerkgraph beschreibt die Verbindung der Netzwerkelemente durch Abstraktion der
+Netzwerkgeometrie. Jedem Knoten im Graphen entspricht ein Knoten im Netzwerk und jeder Verbindungslinie ein Zweig
+zwischen zwei Knoten. Er ist Grundlage der Zahl unabhängiger Knoten- und Maschengleichungen und kann durch "topologische
+Matrizen" (sog. "Inzidenzmatrizen") mathematisch beschrieben werden.
+
+
+## Vollständiger Baum
 
 Ein vollständiger Baum (engl. tree) ist ein Teilgraph, der keine Umläufe besitzt und alle Knoten des Ausgangsgraphen miteinander
 verbindet. In einem Netzwerk mit $k$ Knoten hat der vollständige Baum insgesamt $k-1$ Zweige.
@@ -187,22 +196,20 @@ verbindet. In einem Netzwerk mit $k$ Knoten hat der vollständige Baum insgesamt
   * es treten keine Umläufe auf.
 
 
-<!-- !split -->
-### Baumkomplement
+
+## Baumkomplement
 
 Das Baumkomplement bildet als Gesamtheit aller Verbindungszweige das "System unabhängiger Zweige". Jeder Verbindungszweig gehört
 genau zu einer Schleife (Masche), die nur aus diesem Verbindungszweig und Zweigen des vollständigen Baumes besteht. Eine solche Schleife
 heißt "Fundamentalschleife" ("unabhängige Masche"). Davon gibt es $m=z-(k-1)$.  
 
-<!-- !split -->
-### Maschenstromverfahren
-<div id="sec:masch"></div>
 
-<!-- <img src="fig/lec6s30.png" width="400"> -->
-![](fig/lec6s30.png)
+## Maschenstromverfahren
 
-<!-- !split -->
-### Wahl der unabhängigen Ströme $I_M$
+![](../images/class/lec6s30.png)
+
+
+## Wahl der unabhängigen Ströme $I_M$
 
 $$
  I_1, I_4, I_7, I_8 
@@ -238,8 +245,8 @@ $$
   \end{align}
 $$
 
-<!-- !split -->
-### 4 Maschengleichungen
+
+## 4 Maschengleichungen
 
 $$
 \begin{align}
@@ -278,8 +285,8 @@ $$
   \end{align}
 $$
 
-<!-- !split -->
-### Knotenspannungsanalyse
+
+## Knotenspannungsanalyse
 
 Beim Knotenspannungsverfahren, das auf Maxwell (1873) zurückgeht, wird die Hilfsvariable *Knotenspannung* so eingeführt,
 dass jede *Maschengleichung* automatisch erfüllt ist und daher alle wegfallen.
@@ -291,10 +298,10 @@ Das Verfahren umfasst dann:
 
 (statt der Zweigspannung) und die Lösung der Gleichungen nach den Knotenspannungen.
 
-<!-- !split -->
-### Knotenspannungs- vs Maschenstromanalyse
+
+## Knotenspannungs- vs Maschenstromanalyse
 
 * Wegfall der Baumsuche, auch spielt die Zahl unabhängiger Maschen $m = z-(k-1)$ und damit die Anzahl der Zweige keine Rolle,
 * weil die Knotenspannungen unabhängige Variablen sind, dürfen Spannungsquellen nicht auftreten, denn eine ideale Spannungsquelle zwischen zwei Knoten macht den Strom durch die Quelle unbestimmt. 
 
-<!-- !split -->
+

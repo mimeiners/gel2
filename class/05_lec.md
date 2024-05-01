@@ -5,7 +5,7 @@
 * Nyquist-Ortskurve, kurz [Ortskurve](https://elektroniktutor.de/elektrophysik/ortskurv.html)
 
 
-### Frequenzgang und Übergangsverhalten
+## Frequenzgang und Übergangsverhalten
 
 *Kurzbeschreibung.* 
 Der Frequenzgang beschreibt, wie ein dynamisches System eine sinusförmige Eingangsgröße überträgt.
@@ -17,14 +17,12 @@ F(j\omega) = \frac{\underline{U}_2}{\underline{U}_1} = \frac{j \omega R_1 C_1}{1
 $$
 
 
-#### Übung: Bode-Diagramm einer RC-Schaltung
+### Übung: Bode-Diagramm einer RC-Schaltung
 
 Ermitteln Sie den Betrags- und Phasengang der einfachen RC-Schaltung mit Hilfe der komplexen Wechselstromrechnung (KWR).Nutzen Sie Python oder Matlab zur Darstellung des Bode-Diagramms.
 
 
-```{python}
-#!/usr/bin/env python
-
+```python
 """ Bode-Diagramm einer RC-Schaltung """
 
 import numpy as np
@@ -65,7 +63,7 @@ plt.show()
 ```
 
 
-### Ortskurven
+## Ortskurven
 Als Referenz zu diesem Thema sei das Kapitel 5 aus <a href="buettner2014.html#buettner2014">[2]</a> empfohlen.
 
 Passive lineare Schaltungen mit R, L und C an sinusförmigen Signalen sind durch ihre Impedanz, dem
@@ -103,7 +101,7 @@ Blindkomponente des Systems.
 
 
 
-#### Übung: Ortskurve einer RC-Schaltung
+### Übung: Ortskurve einer RC-Schaltung
 "Mit den Bauteilen $R$ = 2 k $\Omega$ und $C$ = 159 nF kann eine Reihen- oder Parallelschaltung gebildet werden. Die
 komplexe Impedanz der Reihenschaltung ist von der Frequenz abhängig und grafisch in der komplexen Ebene als Ortskurve
 mit der Frequenz als Parameter dargestellt. Die Blindwiderstandswerte wurden für einen bestimmten Frequenzbereich
@@ -119,10 +117,7 @@ $$
 $$
 
 
-```{python}
-
-""" Ortskurve einer RC-Reihenschltung """
-
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -147,7 +142,7 @@ parallel zur imaginären Achse. Die Achsenbezeichnungen der Leitwerte werden in 
 auf die Re-Achse bezogen positiv." <a href="mietke2023.html#mietke2023">[3]</a>
 
 
-#### Inversion von Ortskurven
+### Inversion von Ortskurven
 
 "Bei der Konstruktion einer Ortskurve ist es oft notwendig von der Widerstandsform $\underline{Z}(\omega)$ auf die
 Leitwertsform $\underline{Y}(\omega)$ überzugehen und umgekehrt. Beide Funktionen gehen jeweils aus der Kehrwertbildung
@@ -188,13 +183,15 @@ $$
  b. Um den Ursprung des Koordinatensystems wird ein Inversionskreis mit beliebigem Radius $r$ geschlagen.
  
  c. Von der Spitze des Zeigers $Z$ aus werden Tangenten an den Kreis gelegt, sie ergeben die Berührungspunkte $T_1$ und
- $T_2$. Die Tangentenpunkte kann man auch finden, wenn man um die Mitte des Zeigers einen Kreis mit dem Radius $Z / 2$,  d.h. einen Thaleskreis, schlägt (siehe [Höhensatz](https://de.wikipedia.org/wiki/Höhensatz)).
+ $T_2$. Die Tangentenpunkte kann man auch finden, wenn man um die Mitte des Zeigers einen Kreis mit dem Radius $Z / 2$,
+ d.h. einen Thaleskreis, schlägt (siehe [Höhensatz](https://de.wikipedia.org/wiki/Höhensatz)). 
  
  d. Die beiden Punkte $T_1$ und $T_2$ werden miteinander verbunden.
  
  e. Wo die Verbindungslinie den Zeiger $Z$ schneidet, liegt die Spitze des konjugiert komplexen Zeigers $Y^*$.
  
- f. Spiegelt man den Zeiger $Y^*$ an der reellen Achse, so erhält man $Y$. Die Spitze dieses Zeigers entspricht also der  invertierten Spitze von $Z$.
+ f. Spiegelt man den Zeiger $Y^*$ an der reellen Achse, so erhält man $Y$. Die Spitze dieses Zeigers entspricht also der
+ invertierten Spitze von $Z$. 
  
  g. Bezeichnet man die Maßstäbe für den komplexen Scheinwiderstand mit $M_Z$ und den Scheinleitwert mit $M_Y$ sowie die
  Länge des Zeigers $Z$ mit $L_Z$ und die der Zeiger $Y$  bzw. $Y^*$ mit $L_Y^*$  bzw. $L_Y$, so ist – da das Dreieck
@@ -202,7 +199,7 @@ $$
  [Kathetensatz](https://de.wikipedia.org/wiki/Satzgruppe_des_Pythagoras#Kathetensatz_des_Euklid):  
 
 
-#### Übung: Ortskurve einer Übertragungsfunktion
+### Übung: Ortskurve einer Übertragungsfunktion
 
 Innerhalb dieses Webprojekts sind die Übertragungsfunktionen fast immer als Bodediagramm dargestellt, bestehend aus dem
 [Übertragungsverhalten von RC- und RL-Tiefpässen](../analogtechnik/tiefpass.html) Amplituden- und
@@ -228,7 +225,7 @@ $|v| \sin(\phi)$. Bei Vorgabe einer Grenzfrequenz und des ohmschen Widerstandes 
 RL-Tiefpass alle interessierenden Diagramme erstellbar.
 
 
-#### Übung: Ortskurve eines Reihenschwingkreises
+### Übung: Ortskurve eines Reihenschwingkreises
 
 Eine [Ausführliche Beschreibung eines Reihenschwingkreises](../analogtechnik/rei_swkr.html) realer
 Reihenschwingkreis wird mindestens durch den ohmschen Drahtwiderstand der Spule gedämpft, der für die Kreisgüte
@@ -244,4 +241,5 @@ Parameter positiv.
 Liegt am Reihenschwingkreis für alle Frequenzen eine konstante Spannung an, so fließt im Resonanzfall der maximale Strom
 und beim verstimmten Kreis bleibt er geringer. Der rechte Teil der Grafik zeigt die Ortskurve mit dem Parameter $\Omega$
 für den auf seinen Maximalwert normierten komplexen Strom. Bei $\Omega$ = $\pm$ 1 beträgt der Phasenwinkel $\phi$ =
-$\pm$ 45 Grad. Der Strom erreicht den Wert $I=\frac{I_{max}}{\sqrt{2}}$. Durch $\Omega$ = $\pm$ 1 ist die Bandbreite des   Schwingkreises bestimmt.
+$\pm$ 45 Grad. Der Strom erreicht den Wert $I=\frac{I_{max}}{\sqrt{2}}$. Durch $\Omega$ = $\pm$ 1 ist die Bandbreite des
+Schwingkreises bestimmt. 

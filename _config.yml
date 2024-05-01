@@ -54,7 +54,7 @@ repository:
 bibtex_bibfiles:
    - _bibliography/references.bib
 latex:
-  latex_engine: "xelatex"
+  latex_engine: pdflatex
   latex_documents:
     targetname: gel2.tex
 
@@ -65,7 +65,7 @@ sphinx:
     html_show_copyright: false
     html_extra_path: ['files']
     language: de
-    # latex_engine: pdflatex
+    latex_engine: pdflatex
     bibtex_reference_style: author_year
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     myst_enable_extensions: 

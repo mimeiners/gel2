@@ -1,17 +1,22 @@
-## 1. Einführung
+# Einführung
 
-### Organisatorisches
+## Organisatorisches
 
 Tutor: **Alicia von Ahlen**
 
-Zu meiner Person:  
-Ich studiere Elektrotechnik mit der Vertiefungsrichtung Informationstechnik und bin zur Zeit im 6. Semester. Ich hatte im vorherigen Semester bereits das Tutorium _Grundlagen der Elektrotechnik 1_ durchgeführt und werde dies nun mit _GEL2_ weiterführen.
+Zu meiner Person:
+Ich studiere Elektrotechnik mit der Vertiefungsrichtung Informationstechnik und bin zur Zeit im 6. Semester. Ich hatte
+im vorherigen Semester bereits das Tutorium _Grundlagen der Elektrotechnik 1_ durchgeführt und werde dies nun mit _GEL2_
+weiterführen. 
 
-Das Tutorium ist als Unterstützung zur Vorlesung gedacht und legt den Fokus auf eine Wiederholung der Unterrichtsinhalte und Übungsaufgaben. Es besteht auch die Möglichkeit Fragen zu den Vorlesungsinhalten zu stellen und Wünsche zu äußern, zum Beispiel auf welche Themen besonders Wert gelegt oder speziell wiederholt werden sollen.  
-Zur besseren Vorbereitung meinerseits, bitte ich darum, dass Themenwünsche und wenn möglich auch Fragen, mir im Vorfeld per Email geschickt werden, damit ich genug Zeit habe, diese zu bearbeiten. Meine Email-Adresse lautet:
+Das Tutorium ist als Unterstützung zur Vorlesung gedacht und legt den Fokus auf eine Wiederholung der Unterrichtsinhalte
+und Übungsaufgaben. Es besteht auch die Möglichkeit Fragen zu den Vorlesungsinhalten zu stellen und Wünsche zu äußern,
+zum Beispiel auf welche Themen besonders Wert gelegt oder speziell wiederholt werden sollen.
+Zur besseren Vorbereitung meinerseits, bitte ich darum, dass Themenwünsche und wenn möglich auch Fragen, mir im Vorfeld
+per Email geschickt werden, damit ich genug Zeit habe, diese zu bearbeiten. Meine Email-Adresse lautet:
 >avahlen@stud.hs-bremen.de
 
-### Termine
+## Termine
 
 Das GEL2-Tutorium findet montags im ersten Block (08:00 - 09:30 Uhr) statt.
 

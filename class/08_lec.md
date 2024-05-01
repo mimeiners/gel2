@@ -1,15 +1,7 @@
-<!-- !split -->
-<!-- jupyter-book 08_lec.md -->
 # Transformatoren und Übertrager
 
-<div id="sec:trafo"></div>
-### Allgemeine Erläuterung
-label(sec:allg-erl)
+## Allgemeine Erläuterung
 
-### Der verlustlose Übertrager
-<div id="sec:verl-uebertr"></div>
+## Der verlustlose Übertrager
 
-### Realer (verlustbehafteter) Übertrager
-<div id="sec:real-uebertr"></div>
-
-<!-- !split -->
+## Realer (verlustbehafteter) Übertrager

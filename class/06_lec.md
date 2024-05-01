@@ -1,12 +1,12 @@
-<!-- !split -->
-<!-- jupyter-book 06_lec.md -->
 # Resonanzkreise
 
-<div id="sec:resonanz"></div>
-### Physikalische Grundlagen
+## Physikalische Grundlagen
 
 * periodische Zustandsänderung in einem physikalischen System
-* periodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder udn Masse, Induktivität und Kapazität
+
+* periodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder
+  udn Masse, Induktivität und Kapazität 
+  
 * maßgebende Zustandsgröße $x(t)$, z.B. Auslenkung, Spannung oder Ladung, folgen einer DGL
 
 $$
@@ -15,7 +15,9 @@ $$
 \end{align}
 $$
 
-* harmonische Schwingung, $x(t+T_0) = x(t)$, wobei $T_0$ Periode, $\omega_0=2 \pi f_0 = 2\pi \frac{1}{T_0}$ Eigenfrequenz und $f_0$ Resonanzfrequenz
+* harmonische Schwingung, $x(t+T_0) = x(t)$, wobei $T_0$ Periode, $\omega_0=2 \pi f_0 = 2\pi \frac{1}{T_0}$
+  Eigenfrequenz und $f_0$ Resonanzfrequenz 
+  
 * DGL gehorcht dem Energieerhlatungssatz
 
 $$
@@ -36,9 +38,12 @@ W_{kin} &:= \mbox{Induktivität}
 $$
 
 * freie und erzwungene Schwingung
+
 * ungedämpfte und gedämpfte Schwingung
 
-### Realer (verlustbehafteter) Schwingkreis
+
+## Realer (verlustbehafteter) Schwingkreis
+
 * Maschengleichung
 
 $$
@@ -54,8 +59,8 @@ $$
 * Reihenkreis $Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}$
 * Parallelkreis $Q = \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}$
 
-<!-- !split -->
-### Grundeigenschaften vom Reihenschwingkreis
+## Grundeigenschaften des Reihenschwingkreises
+
 * Impedanz
 
 $$
@@ -67,8 +72,9 @@ $$
 \end{align}
 $$
 
-<!-- !split -->
-### Grundeigenschaften vom Parallelschwingkreis
+
+## Grundeigenschaften des Parallelschwingkreises
+
 * Admittanz
 
 $$
@@ -80,7 +86,7 @@ $$
 \end{align}
 $$
 
-### Grundeigenschaften von Reihen- und Parallelschwingkreis
+## Grundeigenschaften von Reihen- und Parallelschwingkreis
 
 * Thomsonsche Formel $\omega_0 = \frac{1}{L_r C_r} = \frac{1}{L_p C_p}$
 * bei Resonanz erreichen Impedanz und Admittanz ein Minimum
@@ -99,8 +105,9 @@ $\omega < \omega_0$   kapazitiv     induktiv
 $\omega > \omega_0$    induktiv    kapazitiv   
 
 
-<!-- !split -->
-### Vereinheitlichte Kennzeichnung (1)
+
+## Vereinheitlichte Kennzeichnung (1)
+
 * Verstimmung $v$, relative Frequenzabweichung
 
 $$
@@ -120,8 +127,8 @@ $$
 \end{align}
 $$
 
-<!-- !split -->
-### Vereinheitlichte Kennzeichnung (2)
+
+## Vereinheitlichte Kennzeichnung (2)
 * Betrag und Phase
 
 $$
@@ -163,19 +170,12 @@ BW &= \omega_{45} - \omega_{-45} \\
 \end{align}
 $$
 
-<!-- !split -->
-### Wien-Robinson-Oszillator
-<div id="sec:wien-rob-oszi"></div>
+## Wien-Robinson-Oszillator
 
-<!-- !split -->
-#### Gleichstrommessbrücke
+### Gleichstrommessbrücke
 
-<!-- !split -->
-#### Wechselstrom-Abgleichbrücke
+### Wechselstrom-Abgleichbrücke
 
-<!-- !split -->
-#### Wien-Robinson-Brücke
-
+### Wien-Robinson-Brücke
 <a href="hewlett1942.html#hewlett1942">[4]</a>
 
-<!-- !split -->
