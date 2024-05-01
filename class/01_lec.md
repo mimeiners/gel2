@@ -168,12 +168,11 @@ id="fig:jaguar"></div></em></p>](../images/class/lec_AMD@16nm@Jaguar.jpg)
 * Felder / Wellen / Optik / HF-Technik
   * Maxwell-Gleichungen
 
-$$
-\begin{align}
-\oint \mathbf{H} d\mathbf{s} &= \iint \mathbf{J} + \dot{D} d\mathbf{A} \\
-\oint \mathbf{E} d\mathbf{s} &= - \iint \dot{B} d\mathbf{A}
-\end{align}
-$$
+	\begin{align}
+	\oint \mathbf{H} d\mathbf{s} &= \iint \mathbf{J} + \dot{D} d\mathbf{A} \\
+	\oint \mathbf{E} d\mathbf{s} &= - \iint \dot{B} d\mathbf{A}
+	\end{align}
+
 
 * bei lokaler Konzentration der Feldenergie $\Rightarrow$ quasi-statische Näherung
 
@@ -206,43 +205,33 @@ $$
 ## Konzentrierte Schaltelemente
 
 ```{admonition} Stromdichte
-$$
 \begin{equation}
 \frac{\int E(r,t) ds}{\iint J(r,t) dA} = \frac{u(t)}{i(t)} \Rightarrow R
 \end{equation}
-$$
 ```
 
 ```{admonition} Verschiebungsdichte
-$$
 \begin{equation}
 \frac{\iint D(r,t) dA}{\int E(r,t) ds} = \frac{q(t)}{u(t)} \Rightarrow C
 \end{equation}
-$$
 ```
 
 ```{admonition} Flußdichte
-$$
 \begin{equation}
 \frac{\iint B(r,t) dA}{\oint H(r,t) ds} = \frac{u(t)}{i(t)} \Rightarrow L
 \end{equation}
-$$
 ```
 
 ## Harmonische Signale
 
 ```{admonition} als Zeitfunktion
-$$
 \begin{equation}
 u(t) = \hat{U} \cos(\omega t + \phi)
 \end{equation}
-$$
 ```
 
 ```{admonition} als Zeiger / komplexe Grösse (Phasor)
-$$
 \begin{equation}
 U = \lvert \hat{U} \lvert e^{j \phi}
 \end{equation}
-$$
 ```

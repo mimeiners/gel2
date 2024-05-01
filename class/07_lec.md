@@ -47,35 +47,35 @@ Gatter/Komponenten         10 mm   Verhaltensmodell
 
 * Knoten 0:
 
-$$
+
 \begin{align*}
     -i_0-i_1-i_5&=0 \\
     -G_1(v_3-v_0) - C_5 \frac{d}{dt}(v_1-v_0) &= i_0
   \end{align*}
-$$
+
 
 * Knoten 1:
 
-$$
+
 \begin{align*}
     -i_2+i_3+i_5+i_6&=0 \\
     -G_2(v_3-v_1)+G_3(v_1-v_3)+C_5 \frac{d}{dt}(v_1-v_0)+C_6 \frac{d}{dt}(v_1-v_6)&=0
   \end{align*}
-$$
+
 
 * Knoten 2:
 
-$$
+
 \begin{align*}
     -i_3+i_4-i_6 &= 0 \\
     -G_3(v_1-v_2)+G_4(v_2-v_4)-C_6 \frac{d}{t}(v_1-v_2) &= 0
   \end{align*}
-$$
+
 
 
 ## Differentialgleichungssystem
 
-$$
+
 \begin{align*}
     \begin{pmatrix}
       G_2+G_3 & -G_3 & -G_2 & 0 \\
@@ -111,16 +111,16 @@ $$
       -i_0
     \end{pmatrix}
      \end{align*}
-$$
 
-$$
+
+
 \begin{align*}
     \mathbf{A} \mathbf{x} + \mathbf{B} \dot{\mathbf{x}} &= \mathbf{b} \\
     \dot{\mathbf{x}} &= -\mathbf{B}^{-1}\mathbf{A}\mathbf{x} +
     \mathbf{B}^{-1}\mathbf{b}(t) \\
     &= \mathbf{T}\mathbf{x} + \mathbf{g}(t)
   \end{align*}
-$$
+
 
 
 ## Netzwerkanalyse zeitabhängiger Signale
@@ -217,7 +217,7 @@ $$
 
 Abbildung der abhängigen Ströme durch die unabhängigen Ströme:
 
-$$
+
 \begin{align}
     \begin{pmatrix}
       I_2 \\
@@ -243,12 +243,12 @@ $$
       I_8
     \end{pmatrix}
   \end{align}
-$$
+
 
 
 ## 4 Maschengleichungen
 
-$$
+
 \begin{align}
 I_1Z_1 - I_2Z_2 - I_3Z_3 &= 0 \\
 U_4 + I_4Z_4 + I_9+Z_9 - I_6Z_6 - I_5Z_5 - I_2Z_2 &= 0 \\
@@ -256,11 +256,11 @@ I_7Z_7 + I_{10}Z_{10} + I_9Z_9 - I_6Z_6 - I_5Z_5 - I_2Z_2 -
 I_3Z_3 &= 0 \\
 U_8 + I_8Z_8 - I_9Z_9 - I_{10}Z_{10} &= 0
 \end{align}
-$$
+
 
 Sortieren und aufstellen des Gleichungssystems:
 
-$$
+
 \begin{align}
     \underbrace{\begin{pmatrix}
         \sum Z_{1,3} & Z_2 & \sum Z_{2,3} & 0 \\
@@ -283,7 +283,7 @@ $$
 	-U_8
       \end{pmatrix}}_{\mathbf{U}}
   \end{align}
-$$
+
 
 
 ## Knotenspannungsanalyse
@@ -294,6 +294,7 @@ dass jede *Maschengleichung* automatisch erfüllt ist und daher alle wegfallen.
 Das Verfahren umfasst dann:
 
 * die Aufstellung der Knotengleichungen für die Zweigströme,
+
 * ihren Ersatz durch die Zweigbeziehungen $I=f(U)$ der Netzwerkelemente ausgedrückt durch Knotenspannungen
 
 (statt der Zweigspannung) und die Lösung der Gleichungen nach den Knotenspannungen.
@@ -301,7 +302,10 @@ Das Verfahren umfasst dann:
 
 ## Knotenspannungs- vs Maschenstromanalyse
 
-* Wegfall der Baumsuche, auch spielt die Zahl unabhängiger Maschen $m = z-(k-1)$ und damit die Anzahl der Zweige keine Rolle,
-* weil die Knotenspannungen unabhängige Variablen sind, dürfen Spannungsquellen nicht auftreten, denn eine ideale Spannungsquelle zwischen zwei Knoten macht den Strom durch die Quelle unbestimmt. 
+* Wegfall der Baumsuche, auch spielt die Zahl unabhängiger Maschen $m = z-(k-1)$ und damit die Anzahl der Zweige keine
+  Rolle, 
+
+* weil die Knotenspannungen unabhängige Variablen sind, dürfen Spannungsquellen nicht auftreten, denn eine ideale
+  Spannungsquelle zwischen zwei Knoten macht den Strom durch die Quelle unbestimmt.
 
 
