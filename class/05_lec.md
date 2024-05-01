@@ -78,9 +78,8 @@ Impedanz, Admittanz, Ausgangsspannung oder den Ausgangsstrom an. Die Phasenlage 
 reellen Achse bestimmt.
 
 In der Elektronik beschreibt die Systemtheorie unter anderem das Übertragungsverhalten von Signalen. Eine hilfreiche
-Voraussetzung ist das [Operatoren der Widerstände und Leitwerte](../fachmathematik/operator.html) Rechnen mit komplexen
-Größen sowie deren Darstellungen im Polarkoordinatensystem oder der [Einführung in die komplexe
-Rechnung](../fachmathematik/komplex.html) Gaußschen Zahlenebene. Die oben genannten komplexen Größen sind von den
+Voraussetzung ist das Rechnen mit komplexen
+Größen sowie deren Darstellungen im Polarkoordinatensystem oder der [Einführung in die komplexe Gaußschen Zahlenebene. Die oben genannten komplexen Größen sind von den
 Bauteilwerten abhängig. Die Impedanz Z einer dimensionierten RC- oder RL-Reihenschaltung ist frequenzabhängig. Die
 Ortskurve ist die Verbindung der errechneten Impedanzwerte in der komplexen Ebene durch einen Kurvenzug mit der Frequenz
 als Parameter. Die Zeigerlänge vom Nullpunkt zum Kurvenpunkt auf der Ortskurve entspricht dem skalaren Impedanzwert der
@@ -202,7 +201,7 @@ $$
 ### Übung: Ortskurve einer Übertragungsfunktion
 
 Innerhalb dieses Webprojekts sind die Übertragungsfunktionen fast immer als Bodediagramm dargestellt, bestehend aus dem
-[Übertragungsverhalten von RC- und RL-Tiefpässen](../analogtechnik/tiefpass.html) Amplituden- und
+Amplituden- und
 Phasenfrequenzgang. Mit der Übertragungsfunktion des Zweitors (Vierpols) wird nachfolgend für einen RL-Tiefpass die
 Ortskurve erstellt.
 
@@ -227,8 +226,8 @@ RL-Tiefpass alle interessierenden Diagramme erstellbar.
 
 ### Übung: Ortskurve eines Reihenschwingkreises
 
-Eine [Ausführliche Beschreibung eines Reihenschwingkreises](../analogtechnik/rei_swkr.html) realer
-Reihenschwingkreis wird mindestens durch den ohmschen Drahtwiderstand der Spule gedämpft, der für die Kreisgüte
+Ein realer Reihenschwingkreis wird mindestens durch den ohmschen Drahtwiderstand der Spule gedämpft, der für die
+Kreisgüte 
 mitbestimmend ist. Setzt man in der komplexen Impedanzfunktion den imaginären Teil gleich null, kann daraus die
 Resonanzfrequenz ermittelt werden. Bei ihr wirkt der Reihenschwingkreis nach außen hin als reeller ohmscher Widerstand
 und zwischen Spannung und Strom besteht keine Phasenverschiebung. 
