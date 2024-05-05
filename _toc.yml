@@ -40,3 +40,5 @@ parts:
         title: Periodische Signale
       - file: Tutorium/4_Komplexe-Groessen
         title: Komplexe Größen
+      - file: Tutorium/5_Grundzweipole1
+        title: Verhalten der Grundzweipole 1
