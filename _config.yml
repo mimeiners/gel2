@@ -14,8 +14,8 @@ only_build_toc_files: true
 description: >-
   Skriptum zum B.Eng. ET Modul GEL2 an der HSB.
 
-execute:
-  execute_notebooks: off
+# execute:
+#  execute_notebooks: off
 
 # HTML-specific settings
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
@@ -26,17 +26,17 @@ html:
   use_edit_page_button: true
   navbar_number_sections: true
   baseurl: "https://mimeiners.github.io/gel2/"
-# google_analytics_id: UA-11111111 # add your Google Analytics Tracking Code
+  # google_analytics_id: UA-11111111 # add your Google Analytics Tracking Code
   comments:
     hypothesis: true
     utterances:
       repo: "mimeiners/gel2"
-    dokieli: true
+      dokieli: true
   extra_footer : |
-      <div>
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
-          All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
-      </div>
+    <div>
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+    </div>
       
 # Launch button settings
 launch_buttons:
@@ -52,7 +52,7 @@ repository:
 
 # LaTeX settings
 bibtex_bibfiles:
-   - _bibliography/references.bib
+  - _bibliography/references.bib
 latex:
   latex_engine: pdflatex
   latex_documents:
@@ -60,12 +60,11 @@ latex:
 
 sphinx:
   extra_extensions:
-   - sphinx_proof
+    - sphinx_proof
   config:
     html_show_copyright: false
     html_extra_path: ['files']
     language: de
-    latex_engine: pdflatex
     bibtex_reference_style: author_year
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     myst_enable_extensions: 

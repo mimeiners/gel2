@@ -30,6 +30,8 @@ parts:
         title: Periodische Signale
       - file: exercise/hw2
         title: Komplexe Wechselstromrechnung
+      - file: exercise/hw3
+        title: Spannungsteiler
   - caption: Tutorium
     chapters:
       - file: Tutorium/1_Einfuehrung

@@ -1,4 +1,3 @@
-
 # Unsyllabus
 
 ## Important Details
