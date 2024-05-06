@@ -14,7 +14,7 @@ Gatter/Komponenten         10 mm   Verhaltensmodell
 
 
 ## Makrotheorie
-<a href="kasper2000.html#kasper2000">[5]</a>
+{cite}`kasper2000`
 
 * Mittelwerte charakteristischer Größen des Systems
 
@@ -35,7 +35,7 @@ Gatter/Komponenten         10 mm   Verhaltensmodell
 
 * mathematisch äquivalente Beschreibungen
 
-* für praktische Berechnungen (Simulation) "Knotenanalyse"
+* für praktische Berechnungen (Simulation) $\rightarrow$ Knotenanalyse
 
 
 ## Netzwerk
@@ -47,7 +47,6 @@ Gatter/Komponenten         10 mm   Verhaltensmodell
 
 * Knoten 0:
 
-
 \begin{align*}
     -i_0-i_1-i_5&=0 \\
     -G_1(v_3-v_0) - C_5 \frac{d}{dt}(v_1-v_0) &= i_0
@@ -55,7 +54,6 @@ Gatter/Komponenten         10 mm   Verhaltensmodell
 
 
 * Knoten 1:
-
 
 \begin{align*}
     -i_2+i_3+i_5+i_6&=0 \\
@@ -65,7 +63,6 @@ Gatter/Komponenten         10 mm   Verhaltensmodell
 
 * Knoten 2:
 
-
 \begin{align*}
     -i_3+i_4-i_6 &= 0 \\
     -G_3(v_1-v_2)+G_4(v_2-v_4)-C_6 \frac{d}{t}(v_1-v_2) &= 0
@@ -74,7 +71,6 @@ Gatter/Komponenten         10 mm   Verhaltensmodell
 
 
 ## Differentialgleichungssystem
-
 
 \begin{align*}
     \begin{pmatrix}
@@ -113,7 +109,6 @@ Gatter/Komponenten         10 mm   Verhaltensmodell
      \end{align*}
 
 
-
 \begin{align*}
     \mathbf{A} \mathbf{x} + \mathbf{B} \dot{\mathbf{x}} &= \mathbf{b} \\
     \dot{\mathbf{x}} &= -\mathbf{B}^{-1}\mathbf{A}\mathbf{x} +
@@ -126,12 +121,18 @@ Gatter/Komponenten         10 mm   Verhaltensmodell
 ## Netzwerkanalyse zeitabhängiger Signale
 
 * Matrix $\mathbf{B}$ ist nicht immer invertierbar, ggf. blockweise zerlegen
+
 * Algebro-Differentialgleichungen
+
 * Euler-Verfahren, explizit (vorwärts), implizit (rückwärts)
+
 * Trapez- oder Mittelpunktregel
-  * Adams-Bashforth-,Adams-Multon- und Gear-Verfahren
-  * *Gut für den Rechner* $\rightarrow$ Python, SPICE
-  * Wir machen Transformation und dann Gauss'sches-Eliminationsverfahren
+
+	* Adams-Bashforth-,Adams-Multon- und Gear-Verfahren
+  
+	* *Gut für den Rechner* $\rightarrow$ Python, SPICE
+  
+	* Wir machen Transformation und dann Gauss'sches-Eliminationsverfahren
 
 
 
@@ -153,55 +154,68 @@ Spule        $u_L(t)=L \frac{di_L(t)}{dt}$  $\underline{u}_L(t)= j \omega L \und
 ## Grundaufgabe der Netzwerkanalyse
 
 * Gewinnung des Netzwerkes
+
 * Wahl des Lösungsverfahrens
+
 * Durchführung der Netzwerkanalyse
+
 * Diskussion der Lösung
 
 
 ## Netzwerkgleichungen &ndash; Kirchhoff'sche Gesetze
 
 * Knotensatz: $\sum i_n(t)=0$
+
 * Maschensatz: $\sum u_n(t)=0$
+
 * Zweigbeziehungen: $u_n = f(i_n)$
 
 
 ## Vollständiges Kirchhoff'sches Gleichungssystem
 
 * $p=k-1$, unabhängige Knotengleichungen
+
 * $m=z-(k-1)$, unabhängige Maschengleichungen
+
 * $z$, $u,i$-Beziehungen der Zweigelemente
 
 
 ## Netzwerkstruktur
 
-* **Unabhängige Knoten und Maschen** Die Eigenschaften eines Netzwerkes werden von den Netzwerkelementen und der
-Netzwerkstruktur oder -topologie bestimmt. Das ist die Art ihrer Zusammenschaltung. Sie wird auch als "Gerüst"
-bezeichnet und zeichnerisch durch den "Streckenkomplex" (engl. graph) ausgedrückt. Die Beschreibung kann gleichwertig
-durch eine "topologische Matrix" erfolgen.
+```{admonition} Unabhängige Knoten und Maschen
+Die Eigenschaften eines Netzwerkes werden von den Netzwerkelementen und der Netzwerkstruktur oder -topologie
+bestimmt. Das ist die Art ihrer Zusammenschaltung. Sie wird auch als "Gerüst" bezeichnet und zeichnerisch durch den
+"Streckenkomplex" (engl. graph) ausgedrückt. Die Beschreibung kann gleichwertig durch eine "topologische Matrix"
+erfolgen.
+```
 
-* **Netzwerkgraph** Der Netzwerkgraph beschreibt die Verbindung der Netzwerkelemente durch Abstraktion der
-Netzwerkgeometrie. Jedem Knoten im Graphen entspricht ein Knoten im Netzwerk und jeder Verbindungslinie ein Zweig
-zwischen zwei Knoten. Er ist Grundlage der Zahl unabhängiger Knoten- und Maschengleichungen und kann durch "topologische
-Matrizen" (sog. "Inzidenzmatrizen") mathematisch beschrieben werden.
-
+```{admonition} Netzwerkgraph
+Der Netzwerkgraph beschreibt die Verbindung der Netzwerkelemente durch Abstraktion der Netzwerkgeometrie. Jedem Knoten im
+Graphen entspricht ein Knoten im Netzwerk und jeder Verbindungslinie ein Zweig zwischen zwei Knoten. Er ist Grundlage
+der Zahl unabhängiger Knoten- und Maschengleichungen und kann durch "topologische Matrizen" (sog. "Inzidenzmatrizen")
+mathematisch beschrieben werden.
+```
 
 ## Vollständiger Baum
 
 Ein vollständiger Baum (engl. tree) ist ein Teilgraph, der keine Umläufe besitzt und alle Knoten des Ausgangsgraphen miteinander
 verbindet. In einem Netzwerk mit $k$ Knoten hat der vollständige Baum insgesamt $k-1$ Zweige.
 
-* **Merkmale**
-  * alle Knoten sind direkt oder indirekt miteinander verbunden,
-  * wird ein weiterer Zweig entfernt, so geht Merkmal 1. verloren,
-  * es treten keine Umläufe auf.
+```{admonition} Merkmale
+* alle Knoten sind direkt oder indirekt miteinander verbunden,
 
+* wird ein weiterer Zweig entfernt, so geht Merkmal 1. verloren,
+
+* es treten keine Umläufe auf.
+```
 
 
 ## Baumkomplement
 
-Das Baumkomplement bildet als Gesamtheit aller Verbindungszweige das "System unabhängiger Zweige". Jeder Verbindungszweig gehört
-genau zu einer Schleife (Masche), die nur aus diesem Verbindungszweig und Zweigen des vollständigen Baumes besteht. Eine solche Schleife
-heißt "Fundamentalschleife" ("unabhängige Masche"). Davon gibt es $m=z-(k-1)$.  
+Das Baumkomplement bildet als Gesamtheit aller Verbindungszweige das "System unabhängiger Zweige". Jeder
+Verbindungszweig gehört genau zu einer Schleife (Masche), die nur aus diesem Verbindungszweig und Zweigen des
+vollständigen Baumes besteht. Eine solche Schleife heißt "Fundamentalschleife" ("unabhängige Masche"). Davon gibt es
+$m=z-(k-1)$.
 
 
 ## Maschenstromverfahren
@@ -212,11 +226,10 @@ heißt "Fundamentalschleife" ("unabhängige Masche"). Davon gibt es $m=z-(k-1)$.
 ## Wahl der unabhängigen Ströme $I_M$
 
 $$
- I_1, I_4, I_7, I_8 
+I_1, I_4, I_7, I_8 
 $$
 
 Abbildung der abhängigen Ströme durch die unabhängigen Ströme:
-
 
 \begin{align}
     \begin{pmatrix}
@@ -307,5 +320,3 @@ Das Verfahren umfasst dann:
 
 * weil die Knotenspannungen unabhängige Variablen sind, dürfen Spannungsquellen nicht auftreten, denn eine ideale
   Spannungsquelle zwischen zwei Knoten macht den Strom durch die Quelle unbestimmt.
-
-

@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: M2.6 Grundlagen der Elektrotechnik (GEL2)
+title: M 2.3 Grundlagen der Elektrotechnik (GEL2)
 author: A. von Ahlen, M. Meiners
 copyright: "2024"
 logo: hsb-logo.png
@@ -14,9 +14,6 @@ only_build_toc_files: true
 description: >-
   Skriptum zum B.Eng. ET Modul GEL2 an der HSB.
 
-# execute:
-#  execute_notebooks: off
-
 # HTML-specific settings
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
@@ -26,7 +23,7 @@ html:
   use_edit_page_button: true
   navbar_number_sections: true
   baseurl: "https://mimeiners.github.io/gel2/"
-  # google_analytics_id: UA-11111111 # add your Google Analytics Tracking Code
+
   comments:
     hypothesis: true
     utterances:
@@ -37,27 +34,23 @@ html:
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
     All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
     </div>
-      
-# Launch button settings
-launch_buttons:
-  notebook_interface: "jupyterlab"
-  binderhub_url: "https://mybinder.org"
-  thebe: true
-  
-repository:
-  url: https://github.com/mimeiners/gel2
-  path_to_book: ""
-  branch: master
 
 
 # LaTeX settings
 bibtex_bibfiles:
   - _bibliography/references.bib
 latex:
-  latex_engine: pdflatex
   latex_documents:
     targetname: gel2.tex
 
+# Launch button settings
+launch_buttons:
+  notebook_interface: "jupyterlab"
+  
+repository:
+  url: https://github.com/mimeiners/gel2
+
+# Advanced and power-user settings
 sphinx:
   extra_extensions:
     - sphinx_proof
@@ -67,11 +60,12 @@ sphinx:
     language: de
     bibtex_reference_style: author_year
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
     myst_enable_extensions: 
     - amsmath
+    - dollarmath
     - colon_fence
     - deflist
-    - dollarmath
     - html_image
     - linkify
     - replacements
@@ -82,7 +76,7 @@ sphinx:
       PRONOUNCE: ""
       OFFICE: "E 508"
       PHONE: "N/A"
-      COURSE_CODE: "M 2.6"
+      COURSE_CODE: "M 2.3"
       SECTION: ""
       CREDITS: "6"
       TITLE: "Grundlagen der Elektrotechnik 2 (GEL2)"
@@ -90,7 +84,7 @@ sphinx:
       COREQS: ""
       TERM: "2024 Sommer"
       ROOM: "E 509"
-      MEETING_TIMES: "Montags von 13:30 bis 15:00 Uhr"
+      MEETING_TIMES: "Mo. 8:00 Uhr - 9:30 Uhr (Tutorium), 13:30 Uhr - 15:00 Uhr (Seminar)"
       GRACE_PERIOD: ""
       W_DATE_1: ""
       W_DATE_2: ""

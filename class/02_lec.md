@@ -62,7 +62,6 @@ keine Sinusschwingung (harmonische).
 
 ## Mittelwerte periodischer Zeitfunktionen
 
-
 ```{admonition} Arithmetischer Mittelwert - linearer Mittelwert - Gleichwert
 \begin{align}
 \overline{u(t)} &= \frac{1}{T} \int_t^{t+T} u(\tau) \mathrm{d} \tau
@@ -76,41 +75,33 @@ keine Sinusschwingung (harmonische).
 ```
 
 ```{admonition} Quadratischer Mittelwert - Effektivwert
-
 \begin{align}
 U_{eff} = \sqrt{\overline{u^2(t)}} &= \sqrt{\frac{1}{T} \int_t^{t+T} u^2(\tau) \mathrm{d} \tau}
 \end{align}
-
 ```
 
 ## $u/i$-Verhalten
 
 ```{admonition} Widerstand $R$ - Einheit: 1 $\Omega$
-
 \begin{align}
 u(t) &= R \cdot i(t) \\
 &= R \cdot \hat{I} \sin(\omega t + \varphi_i) \\
 &= \hat{U} \sin(\omega t + \varphi_u)
 \end{align}
-
 ```
 
 ```{admonition} Induktivität $L$ - Einheit: 1 H = 1 Vs/A
-
 \begin{align}
 u(t) &= L \cdot \frac{di_L(t)}{dt} \\
 &= \omega L \cdot \hat{I} \cos(\omega t + \varphi_i) \\
 &= \omega L \hat{I} \sin(\omega t + \varphi_i + \frac{\pi}{2})
 \end{align}
-
 ```
 
 ```{admonition} Kapazität $C$ - Einheit: 1 F = 1 C/V = 1 As/V
-
 \begin{align}
 i(t) &= C \cdot \frac{du_C(t)}{dt} \\
 &= \omega C \cdot \hat{U} \cos(\omega t + \varphi_u) \\
 &= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2})
 \end{align}
-
 ```
