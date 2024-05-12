@@ -44,3 +44,5 @@ parts:
         title: Komplexe Größen
       - file: Tutorium/5_Grundzweipole1
         title: Verhalten der Grundzweipole 1
+      - file: Tutorium/6_Grundzweipole2
+        title: Verhalten der Grundzweipole 2
