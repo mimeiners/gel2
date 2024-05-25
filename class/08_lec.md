@@ -5,3 +5,9 @@
 ## Der verlustlose Übertrager
 
 ## Realer (verlustbehafteter) Übertrager
+
+## Literaturverzeichnis
+
+```{bibliography}
+:filter: docname in docnames
+```

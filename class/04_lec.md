@@ -135,5 +135,11 @@ S &= \lvert\underline{P}\lvert = \sqrt{P^2 + Q^2} & &\mbox{Scheinleistung} \\
 P &= \operatorname{Re}{\underline{P}} & &\mbox{Wirkleistung} \\
 Q &= \operatorname{Im}{\underline{P}} & &\mbox{Blindleistung}
 \end{align}
-
 ```
+
+## Literaturverzeichnis
+
+```{bibliography}
+:filter: docname in docnames
+```
+

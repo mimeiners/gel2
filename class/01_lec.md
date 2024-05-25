@@ -235,3 +235,9 @@ u(t) = \hat{U} \cos(\omega t + \phi)
 U = \lvert \hat{U} \lvert e^{j \phi}
 \end{equation}
 ```
+
+## Literaturverzeichnis
+
+```{bibliography}
+:filter: docname in docnames
+```

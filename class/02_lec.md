@@ -105,3 +105,9 @@ i(t) &= C \cdot \frac{du_C(t)}{dt} \\
 &= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2})
 \end{align}
 ```
+
+## Literaturverzeichnis
+
+```{bibliography}
+:filter: docname in docnames
+```

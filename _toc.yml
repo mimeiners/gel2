@@ -22,8 +22,6 @@ parts:
         title: Netzwerkanalyse
       - file: class/08_lec
         title: Transformatoren und Übertrager
-      - file: class/09_lec
-        title: Literaturverzeichnis
   - caption: Hörsaalübungen 
     chapters:
       - file: exercise/hw1

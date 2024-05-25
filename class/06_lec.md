@@ -159,3 +159,9 @@ Gegenüberstellung der Eigenschaften der elementaren Schwingkreise {cite}`harrie
 ### Wien-Robinson-Brücke
 {cite}`hewlett1942`
 
+
+## Literaturverzeichnis
+
+```{bibliography}
+:filter: docname in docnames
+```
