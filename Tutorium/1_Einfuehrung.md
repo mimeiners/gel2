@@ -32,7 +32,7 @@ Eine grobe Zeit- und Themenplanung ist in der folgenden Tabelle zu sehen. Dabei 
 | 20.05.24 | **Pfingstmontag** |
 | 27.05.24 | KWR |
 | 03.06.24 | Schwingkreise |
-| 10.06.24 | Filterschaltungen & Bodediagramm |
+| 10.06.24 | Filterschaltungen, Bodediagramm und Ortskurven |
 | 17.05.24 | LT-Spice und Python |
 | 24.06.24 | Transformatoren |
 | 01.07.24 | Klausurvorbereitung |

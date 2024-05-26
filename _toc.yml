@@ -46,3 +46,5 @@ parts:
         title: Verhalten der Grundzweipole 1
       - file: Tutorium/6_Grundzweipole2
         title: Verhalten der Grundzweipole 2
+      - file: Tutorium/7_KWR
+        title: Komplexe Wechselstromrechnung
