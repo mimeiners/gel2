@@ -142,4 +142,3 @@ Q &= \operatorname{Im}{\underline{P}} & &\mbox{Blindleistung}
 ```{bibliography}
 :filter: docname in docnames
 ```
-

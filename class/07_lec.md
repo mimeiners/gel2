@@ -39,7 +39,12 @@
 
 ## Netzwerk
 
-![](../images/class/lec6s20.png)
+```{figure} ../images/class/lec6s20.png
+:width: 600
+:name: fig:lec7knoten
+
+Netzwerk für die Knotenspannungsanalyse
+```
 
 
 ## Transiente Analyse
@@ -138,15 +143,15 @@
 ## Lösung im Frequenzbereich
 
 
-                      Zeitbereich                             Frequenzbereich                    
------------  -----------------------------  ---------------------------------------------------  
-             Urbildbereich                  Bildbereich                                          
-Spannung     $u_n(t)$                       $\underline{u}(t)=\underline{\hat{U}}e^{j\omega t}$  
-Strom        $i_n(t)$                       $\underline{i}(t)=\underline{\hat{U}}e^{j\omega t}$  
-Widerstand   $u_R(t)=Ri_R(t)$               $\underline{u}_R(t)=R \underline{i}(t)$              
-Kondensator  $i_C(t)=C \frac{du_C(t)}{dt}$  $\underline{i}_C(t)= j \omega C \underline{u}_C(t)$  
-Spule        $u_L(t)=L \frac{di_L(t)}{dt}$  $\underline{u}_L(t)= j \omega L \underline{i}_L(t)$  
-             (wenn für $t=0$ energielos)                                                         
+|   | Zeitbereich | Frequenzbereich |
+|---|---|---|
+|   | Urbildbereich | Bildbereich |
+| Spannung | $u_n(t)$ | $\underline{u}(t)=\underline{\hat{U}}e^{j\omega t}$ |
+| Strom | $i_n(t)$ | $\underline{i}(t)=\underline{\hat{U}}e^{j\omega t}$ |
+| Widerstand | $u_R(t)=Ri_R(t)$ | $\underline{u}_R(t)=R \underline{i}(t)$ |             
+| Kondensator | $i_C(t)=C \frac{du_C(t)}{dt}$ | $\underline{i}_C(t)= j \omega C \underline{u}_C(t)$ |
+| Spule | $u_L(t)=L \frac{di_L(t)}{dt}$ | $\underline{u}_L(t)= j \omega L \underline{i}_L(t)$ |
+|       | (wenn für $t=0$ energielos) |   |
 
 
 
@@ -219,8 +224,12 @@ $m=z-(k-1)$.
 
 ## Maschenstromverfahren
 
-![](../images/class/lec6s30.png)
+```{figure} ../images/class/lec6s30.png
+:width: 600
+:name: fig:lec7masch
 
+Netzwerk für die Maschenstromanalyse
+```
 
 ## Wahl der unabhängigen Ströme $I_M$
 

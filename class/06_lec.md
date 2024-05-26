@@ -146,8 +146,10 @@ BW &= \omega_{45} - \omega_{-45} \\
 ```{figure} ../images/class/lec6elemSchwing.pdf
 :name: fig:lec6elemSchwing
 
-Gegenüberstellung der Eigenschaften der elementaren Schwingkreise {cite}`harriehausen2020`
+Gegenüberstellung der Eigenschaften der elementaren Schwingkreise
 ```
+Entn. {cite}`harriehausen2020`
+
 
 ## Wien-Robinson-Oszillator
 
