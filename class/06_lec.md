@@ -13,7 +13,7 @@
 * harmonische Schwingung, $x(t+T_0) = x(t)$, wobei $T_0$ Periode, $\omega_0=2 \pi f_0 = 2\pi \frac{1}{T_0}$
   Eigenfrequenz und $f_0$ Resonanzfrequenz 
   
-* DGL gehorcht dem Energieerhlatungssatz
+* DGL gehorcht dem Energieerhaltungssatz
 
 \begin{align}
 W_{ges}(x) &= W_{pot}(x) + W_{kin}(x) = const. \\
