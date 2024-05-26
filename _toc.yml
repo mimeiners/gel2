@@ -30,6 +30,8 @@ parts:
         title: Komplexe Wechselstromrechnung
       - file: exercise/hw3
         title: Spannungsteiler
+      - file: exercise/hw4
+        title: Bode-Diagramm und Nyquist-Ortskurve
   - caption: Tutorium
     chapters:
       - file: Tutorium/1_Einfuehrung

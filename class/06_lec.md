@@ -88,11 +88,10 @@ i(t) &= I_0 e^{-d \omega_0 t} \cos(\sqrt{1 -d^2} \omega_0 t) \quad \mbox{Lösung
 \end{align}
 
 
-                     $X(\omega)$  $B(\omega)$  
--------------------  -----------  -----------  
-$\omega < \omega_0$   kapazitiv     induktiv   
-$\omega > \omega_0$    induktiv    kapazitiv   
-
+|   | $X(\omega)$ | $B(\omega)$ |
+|---|---|---|
+|$\omega < \omega_0$ | *kapazitiv* | *induktiv* | 
+|$\omega > \omega_0$ | *induktiv* | *kapazitiv* |
 
 
 ## Vereinheitlichte Kennzeichnung

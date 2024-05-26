@@ -3,14 +3,13 @@
 ## Systemsimulation
 
 
-          Ebene             Maß       Simulation     
--------------------------  ------  ----------------  
-Atom                       0.1 nm                    
-Festkörper/Atomverbund     1.0 nm                    
-Device                     0.1 mm  Feld              
-Transistor/Subkomponenten  1.0 mm                    
-Gatter/Komponenten         10 mm   Verhaltensmodell  
-
+| Ebene | Maß | Simulation |
+|---|---|---|
+| Atom | 0.1 nm |   |
+| Festkörper/Atomverbund | 1.0 nm |   |
+| Device | 0.1 mm | Feld |
+| Transistor/Subkomponenten | 1.0 mm |   |
+| Gatter/Komponenten | 10 mm | Verhaltensmodell |
 
 
 ## Makrotheorie
