@@ -31,8 +31,8 @@ Eine grobe Zeit- und Themenplanung ist in der folgenden Tabelle zu sehen. Dabei 
 | 13.05.24 | Verhalten der Grundzweipole 2 |
 | 20.05.24 | **Pfingstmontag** |
 | 27.05.24 | KWR |
-| 03.06.24 | Schwingkreise |
-| 10.06.24 | Filterschaltungen, Bodediagramm und Ortskurven |
+| 03.06.24 | Filterschaltungen, Bodediagramm und Ortskurven |
+| 10.06.24 | Schwingkreise |
 | 17.05.24 | LT-Spice und Python |
 | 24.06.24 | Transformatoren |
 | 01.07.24 | Klausurvorbereitung |
