@@ -48,3 +48,5 @@ parts:
         title: Verhalten der Grundzweipole 2
       - file: Tutorium/7_KWR
         title: Komplexe Wechselstromrechnung
+      - file: Tutorium/8_Filterschaltungen
+        title: Bode-Diagramme, Ortskurven, Filterschaltungen
