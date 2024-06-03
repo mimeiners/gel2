@@ -32,6 +32,8 @@ parts:
         title: Spannungsteiler
       - file: exercise/hw4
         title: Bode-Diagramm und Nyquist-Ortskurve
+      - file: exercise/hw5
+        title: Anpassung und Wechselstrommessbrücke
   - caption: Tutorium
     chapters:
       - file: Tutorium/1_Einfuehrung
