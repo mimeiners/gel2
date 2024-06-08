@@ -52,3 +52,5 @@ parts:
         title: Komplexe Wechselstromrechnung
       - file: Tutorium/8_Filterschaltungen
         title: Bode-Diagramme, Ortskurven, Filterschaltungen
+      - file: Tutorium/9_Schwingkreise
+        title: Schwingkreise
