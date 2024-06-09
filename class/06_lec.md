@@ -7,8 +7,8 @@
 * periodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder
   und Masse, Induktivität und Kapazität 
   
-* maßgebende Zustandsgröße $x(t)$, z.B. Auslenkung, Spannung oder Ladung, folgen einer gew|ohnlichen
-  Differenzialgleichung (DGL) vgl. HMA 3: $\ddot{x} + \omega_0 x = 0$
+* maßgebende Zustandsgröße $x(t)$, z.B. Auslenkung, Spannung oder Ladung, folgen einer gewöhnlichen
+  Differenzialgleichung (DGL) $\ddot{x} + \omega_0 x = 0$
 
 * harmonische Schwingung, $x(t+T_0) = x(t)$, wobei $T_0$ Periode, $\omega_0=2 \pi f_0 = 2\pi \frac{1}{T_0}$
   Eigenfrequenz und $f_0$ Resonanzfrequenz 
@@ -18,7 +18,7 @@
 \begin{align}
 W_{ges}(x) &= W_{pot}(x) + W_{kin}(x) = const. \\
 \frac{d W_{ges}}{dt} &= \frac{dW_{pot}}{dx} \frac{dx}{dt} + \frac{d W_{kin}}{dx} \frac{d x}{dt} = 0 \\
-x(t) &= x_{max} \cos(\omega_0 t + \varphi_0)\quad\mbox{Lösung}
+x(t) &= x_{max} \cos(\omega_0 t + \varphi_0)
 \end{align}
 
 
@@ -148,17 +148,13 @@ BW &= \omega_{45} - \omega_{-45} \\
 
 Gegenüberstellung der Eigenschaften der elementaren Schwingkreise
 ```
-Entn. {cite}`harriehausen2020`
+entn. {cite}`harriehausen2020`
 
 
-## Wien-Robinson-Oszillator
 
-### Gleichstrommessbrücke
+## Übertragungsfaktor des RLC-Reihenschwingkreises
+{cite}`reisch2007` Kap. 1.3.7
 
-### Wechselstrom-Abgleichbrücke
-
-### Wien-Robinson-Brücke
-{cite}`hewlett1942`
 
 
 ## Literaturverzeichnis
