@@ -137,9 +137,8 @@ Der Phasenwinkel $\varphi$ ist gleich \SI{45}{\degree} und Betrag der Blindkompo
 
 ```{admonition} Bandbreite BW (bandwidth)
 \begin{align}
-BW &= \omega_{45} - \omega_{-45} \\
-&= f_{45} - f_{-45} \\
-&= \frac{\omega_0}{Q} = \frac{f_0}{Q}
+BW &= \omega_{45} - \omega_{-45} = \frac{\omega_0}{Q} \\
+&= f_{45} - f_{-45} = \frac{f_0}{Q} \\
 \end{align}
 ```
 
