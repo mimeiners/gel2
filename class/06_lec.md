@@ -36,7 +36,14 @@ W_{kin} &:= \mbox{Induktivität}
 
 ## Realer (verlustbehafteter) Schwingkreis
 
-* Maschengleichung
+<!-- ```{figure} ../../images/class/lec06rlc.png -->
+<!-- :width: 400 -->
+<!-- :name: fig:lec06rlc -->
+
+<!-- RLC-Schwingkreis -->
+<!-- ``` -->
+
+* Maschengleichung (Zeitbereich)
 
 \begin{align}
 u_Q(t) &= L \frac{di}{dt} + i\, R + \frac{1}{C} \int i dt  \\
@@ -44,39 +51,15 @@ u_Q(t) &= L \frac{di}{dt} + i\, R + \frac{1}{C} \int i dt  \\
 i(t) &= I_0 e^{-d \omega_0 t} \cos(\sqrt{1 -d^2} \omega_0 t) \quad \mbox{Lösung}
 \end{align}
 
+* Übertragungsfaktor
+{cite}`reisch2007` Kap. 1.3.7
+
 * Dämpfung $d = \frac{1}{2 Q} = \frac{R}{\omega_0 L}$
 
 * Güte $Q = \frac{\omega_0 \cdot \mbox{ges. Speicherenergie}}{\mbox{Verlustleistung}}$
 
-* Reihenkreis $Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}$
 
-* Parallelkreis $Q = \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}$
-
-## Grundeigenschaften des Reihenschwingkreises
-
-```{admonition} Impedanz
-\begin{align}
-\underline{Z} &= R_r + j\left(\omega L_r - \frac{1}{\omega C_r}\right) \\
-&= R_r + j X(\omega) \\
-\lvert\underline{Z}\lvert &= \sqrt{R_r^2 + X^2(\omega)} \\
-\arg{\underline{Z}} &= \arctan \frac{X(\omega)}{R_r}
-\end{align}
-```
-
-
-## Grundeigenschaften des Parallelschwingkreises
-
-```{admonition} Admittanz
-\begin{align}
-\underline{Y} &= G_p + j\left(\omega C_p- \frac{1}{\omega L_p}\right) \\
-&= G_r + j B(\omega) \\
-\lvert\underline{Y}\lvert &= \sqrt{G_p^2 + B^2(\omega)} \\
-\arg{\underline{Y}} &= \arctan \frac{B(\omega)}{G_p}
-\end{align}
-```
-
-
-## Grundeigenschaften von Reihen- und Parallelschwingkreis
+## Resonanzfrequenz
 
 * Thomsonsche Formel $\omega_0 = \frac{1}{L_r C_r} = \frac{1}{L_p C_p}$
 
@@ -93,6 +76,32 @@ i(t) &= I_0 e^{-d \omega_0 t} \cos(\sqrt{1 -d^2} \omega_0 t) \quad \mbox{Lösung
 |$\omega < \omega_0$ | *kapazitiv* | *induktiv* | 
 |$\omega > \omega_0$ | *induktiv* | *kapazitiv* |
 
+
+
+## Grundeigenschaften des Reihenschwingkreises
+
+```{admonition} Impedanz
+\begin{align}
+\underline{Z} &= R_r + j\left(\omega L_r - \frac{1}{\omega C_r}\right) \\
+&= R_r + j X(\omega) \\
+\lvert\underline{Z}\lvert &= \sqrt{R_r^2 + X^2(\omega)} \\
+\arg{\underline{Z}} &= \arctan \frac{X(\omega)}{R_r}
+Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}
+\end{align}
+```
+
+
+## Grundeigenschaften des Parallelschwingkreises
+
+```{admonition} Admittanz
+\begin{align}
+\underline{Y} &= G_p + j\left(\omega C_p- \frac{1}{\omega L_p}\right) \\
+&= G_r + j B(\omega) \\
+\lvert\underline{Y}\lvert &= \sqrt{G_p^2 + B^2(\omega)} \\
+\arg{\underline{Y}} &= \arctan \frac{B(\omega)}{G_p}
+Q &= \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}
+\end{align}
+```
 
 ## Vereinheitlichte Kennzeichnung
 
@@ -148,11 +157,6 @@ BW &= \omega_{45} - \omega_{-45} = \frac{\omega_0}{Q} \\
 Gegenüberstellung der Eigenschaften der elementaren Schwingkreise
 ```
 entn. {cite}`harriehausen2020`
-
-
-
-## Übertragungsfaktor des RLC-Reihenschwingkreises
-{cite}`reisch2007` Kap. 1.3.7
 
 
 
