@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+
+
+<html lang="de" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Netzwerkerregung &#8212; M 2.3 Grundlagen der Elektrotechnik (GEL2)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=91fba89f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "mimeiners/gel2");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/translations.js?v=70a09b52"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'class/02_lec';</script>
+    <link rel="canonical" href="https://mimeiners.github.io/gel2/class/02_lec.html" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Komplexe Wechselstromrechnung" href="03_lec.html" />
+    <link rel="prev" title="Einleitung" href="01_lec.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="de"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../about/unsyllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>
+    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Suche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/unsyllabus.html">
+                    Unsyllabus
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Seminar</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_lec.html">Einleitung und Übersicht</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Netzwerkerregung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_lec.html">Komplexe Wechselstromrechnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_lec.html">Impedanz, Admittanz und Leistung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_lec.html">Grafische Analysemethoden</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_lec.html">Resonanzkreis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_lec.html">Netzwerkanalyse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_lec.html">Transformatoren und Übertrager</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hörsaalübungen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw1.html">Periodische Signale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw2.html">Komplexe Wechselstromrechnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw3.html">Spannungsteiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw4.html">Bode-Diagramm und Nyquist-Ortskurve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw5.html">Anpassung und Wechselstrommessbrücke</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw6.html">Leistungsanpassung und Schwingkreis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw7.html">Audio-Applikationen</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorium</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/1_Einfuehrung.html">Einführung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/2_Komplexe-Zahlen.html">Komplexe Zahlen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/3_Periodische-Signale.html">Periodische Signale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/4_Komplexe-Groessen.html">Komplexe Größen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/5_Grundzweipole1.html">Verhalten der Grundzweipole 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/6_Grundzweipole2.html">Verhalten der Grundzweipole 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/7_KWR.html">Komplexe Wechselstromrechnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/8_Filterschaltungen.html">Bode-Diagramme, Ortskurven, Filterschaltungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/9_Schwingkreise.html">Schwingkreise</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/mimeiners/gel2" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Quell-Repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mimeiners/gel2/edit/master/class/02_lec.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mimeiners/gel2/issues/new?title=Issue%20on%20page%20%2Fclass/02_lec.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Öffnen Sie ein Problem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Laden Sie diese Seite herunter">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/class/02_lec.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Quelldatei herunterladen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="In PDF drucken"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Vollbildmodus"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Netzwerkerregung</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhalt </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schaltzeichen">Schaltzeichen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erregungsarten">Erregungsarten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sinusformige-erregung-periodische-vorgange">Sinusförmige Erregung, periodische Vorgänge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-harmonischer-funktionen">Eigenschaften harmonischer Funktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mittelwerte-periodischer-zeitfunktionen">Mittelwerte periodischer Zeitfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#u-i-verhalten"><span class="math notranslate nohighlight">\(u/i\)</span>-Verhalten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literaturverzeichnis">Literaturverzeichnis</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="netzwerkerregung">
+<h1>Netzwerkerregung<a class="headerlink" href="#netzwerkerregung" title="Link to this heading">#</a></h1>
+<section id="schaltzeichen">
+<h2>Schaltzeichen<a class="headerlink" href="#schaltzeichen" title="Link to this heading">#</a></h2>
+<p>„In Deutschland sind elektrische Schaltzeichen durch DIN EN 60617 Graphische Symbole für Schaltpläne bzw. IEC 60617
+genormt. Sie ersetzen seit 1996–1998 die DIN 40700 / DIN 40900.“</p>
+<p><a class="reference external" href="https://de.wikipedia.org/wiki/Liste_der_Schaltzeichen_%28Elektrik/Elektronik%29#Ideale_Stromkreise">Schaltzeichen nach DIN EN 60617</a></p>
+</section>
+<section id="erregungsarten">
+<h2>Erregungsarten<a class="headerlink" href="#erregungsarten" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Gleichvorgänge</p></li>
+<li><p>Nichtperiodische Vorgänge</p></li>
+<li><p>Periodische Vorgänge, Spezialfall sind harmonische (sinus-, cosinusförmige) Vorgänge mit der Periodendauer <span class="math notranslate nohighlight">\(T\)</span></p></li>
+<li><p>Gleichgrößen mit <span class="math notranslate nohighlight">\(f(t)\)</span> = const. werden mit großen lateinischen Buchstaben gekennzeichnet, Gleichspannung <span class="math notranslate nohighlight">\(U\)</span> und
+Gleichstrom <span class="math notranslate nohighlight">\(I\)</span></p></li>
+<li><p>Zeitveränderliche Größen, hierbei ändert die Erregergröße <span class="math notranslate nohighlight">\(f(t)\)</span> ihre Amplitude und/oder ihre Richtung zeitlich. Der
+Wert von <span class="math notranslate nohighlight">\(f(t)\)</span> zum momentanen Zeitpunkt heißt Augenblicks- oder Momentanwert <span class="math notranslate nohighlight">\(f(t)\)</span> der physikalischen
+Größe. Momentanwerte erhalten kleine lateinische Buchstaben, Spannung <span class="math notranslate nohighlight">\(u\)</span> und Strom <span class="math notranslate nohighlight">\(i\)</span>.</p></li>
+</ul>
+</section>
+<section id="sinusformige-erregung-periodische-vorgange">
+<h2>Sinusförmige Erregung, periodische Vorgänge<a class="headerlink" href="#sinusformige-erregung-periodische-vorgange" title="Link to this heading">#</a></h2>
+<div class="admonition-definitionen admonition">
+<p class="admonition-title">Definitionen</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(t)=f(t+nT)\)</span> mit <span class="math notranslate nohighlight">\(n=0, 1 ...\)</span></p></li>
+<li><p>Frequenz <span class="math notranslate nohighlight">\(f=1/T\)</span></p></li>
+<li><p>Kreisfrequenz <span class="math notranslate nohighlight">\(\omega=2\pi f = 2\pi/T\)</span></p></li>
+<li><p>Periodendauer <span class="math notranslate nohighlight">\(T\)</span></p></li>
+<li><p>Wechselgröße allgem. <span class="math notranslate nohighlight">\(a(t)=\hat{A} \sin (\omega t +\varphi) = \hat{A} \sin(\omega t + \omega t_0)\)</span></p></li>
+<li><p>Scheitelwert, Maximalwert der Amplitude <span class="math notranslate nohighlight">\(\hat{A}=\max{A}=A_{max}\)</span></p></li>
+<li><p>Nullphasenwinkel bzw. Nullzeitpunkt <span class="math notranslate nohighlight">\(\varphi=\omega t_0\)</span></p></li>
+<li><p>Erregergröße wird aufgetragen mit <span class="math notranslate nohighlight">\(\omega t\)</span> und nicht <span class="math notranslate nohighlight">\(t\)</span>; <span class="math notranslate nohighlight">\(\psi(t) = \omega t + \varphi = \omega t + \omega t_0\)</span></p></li>
+<li><p>Bogenmaß <span class="math notranslate nohighlight">\(\psi/\mbox{Bogenmaß} = \frac{2 \pi}{360} \psi/\mbox{Grad}\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="eigenschaften-harmonischer-funktionen">
+<h2>Eigenschaften harmonischer Funktionen<a class="headerlink" href="#eigenschaften-harmonischer-funktionen" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Differentiation, Integration und Addition, Subtraktion mithilfe von Additionstheoremen</p></li>
+<li><p>Aufspaltung einer harmonischen Schwingung und Koeffizientenvergleich</p></li>
+</ul>
+<div class="admonition-zusammengefasst admonition">
+<p class="admonition-title">Zusammengefasst</p>
+<p>Bei Addition, Differentiation und Integration von harmonischen Funktionen der Kreisfrequenz <span class="math notranslate nohighlight">\(\omega\)</span>
+entstehen wieder harmonische Funktionen der gleichen Frequenz, aber veränderter Amplitude und Phase. Bei der
+Überlagerung zweier harmonischer Größen mit verschiedener Frequenz entsteht zwar eine periodische Schwingung, aber
+keine Sinusschwingung (harmonische).</p>
+</div>
+</section>
+<section id="mittelwerte-periodischer-zeitfunktionen">
+<h2>Mittelwerte periodischer Zeitfunktionen<a class="headerlink" href="#mittelwerte-periodischer-zeitfunktionen" title="Link to this heading">#</a></h2>
+<div class="admonition-arithmetischer-mittelwert-linearer-mittelwert-gleichwert admonition">
+<p class="admonition-title">Arithmetischer Mittelwert - linearer Mittelwert - Gleichwert</p>
+<div class="amsmath math notranslate nohighlight" id="equation-aecfaf53-ea19-4846-bc18-4e5a5fe2af03">
+<span class="eqno">(7)<a class="headerlink" href="#equation-aecfaf53-ea19-4846-bc18-4e5a5fe2af03" title="Permalink to this equation">#</a></span>\[\begin{align}
+\overline{u(t)} &amp;= \frac{1}{T} \int_t^{t+T} u(\tau) \mathrm{d} \tau
+\end{align}\]</div>
+</div>
+<div class="admonition-gleichrichtmittelwert admonition">
+<p class="admonition-title">Gleichrichtmittelwert</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2ecba93d-564c-4eaa-b4b5-0daa27d59caa">
+<span class="eqno">(8)<a class="headerlink" href="#equation-2ecba93d-564c-4eaa-b4b5-0daa27d59caa" title="Permalink to this equation">#</a></span>\[\begin{align}
+\overline{\lvert u(t) \lvert} &amp;= \frac{1}{T} \int_t^{t+T} \lvert u(\tau) \lvert \mathrm{d} \tau
+\end{align}\]</div>
+</div>
+<div class="admonition-quadratischer-mittelwert-effektivwert admonition">
+<p class="admonition-title">Quadratischer Mittelwert - Effektivwert</p>
+<div class="amsmath math notranslate nohighlight" id="equation-06815633-8fa5-4969-970f-c9114a74e702">
+<span class="eqno">(9)<a class="headerlink" href="#equation-06815633-8fa5-4969-970f-c9114a74e702" title="Permalink to this equation">#</a></span>\[\begin{align}
+U_{eff} = \sqrt{\overline{u^2(t)}} &amp;= \sqrt{\frac{1}{T} \int_t^{t+T} u^2(\tau) \mathrm{d} \tau}
+\end{align}\]</div>
+</div>
+</section>
+<section id="u-i-verhalten">
+<h2><span class="math notranslate nohighlight">\(u/i\)</span>-Verhalten<a class="headerlink" href="#u-i-verhalten" title="Link to this heading">#</a></h2>
+<div class="admonition-widerstand-r-einheit-1-omega admonition">
+<p class="admonition-title">Widerstand <span class="math notranslate nohighlight">\(R\)</span> - Einheit: 1 <span class="math notranslate nohighlight">\(\Omega\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-09f2be96-b381-4ed9-9ba1-6d86dc045797">
+<span class="eqno">(10)<a class="headerlink" href="#equation-09f2be96-b381-4ed9-9ba1-6d86dc045797" title="Permalink to this equation">#</a></span>\[\begin{align}
+u(t) &amp;= R \cdot i(t) \\
+&amp;= R \cdot \hat{I} \sin(\omega t + \varphi_i) \\
+&amp;= \hat{U} \sin(\omega t + \varphi_u)
+\end{align}\]</div>
+</div>
+<div class="admonition-induktivitat-l-einheit-1-h-1-vs-a admonition">
+<p class="admonition-title">Induktivität <span class="math notranslate nohighlight">\(L\)</span> - Einheit: 1 H = 1 Vs/A</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2cce6a29-6d3e-4a61-9e0d-9baad86f8d5a">
+<span class="eqno">(11)<a class="headerlink" href="#equation-2cce6a29-6d3e-4a61-9e0d-9baad86f8d5a" title="Permalink to this equation">#</a></span>\[\begin{align}
+u(t) &amp;= L \cdot \frac{di_L(t)}{dt} \\
+&amp;= \omega L \cdot \hat{I} \cos(\omega t + \varphi_i) \\
+&amp;= \omega L \hat{I} \sin(\omega t + \varphi_i + \frac{\pi}{2})
+\end{align}\]</div>
+</div>
+<div class="admonition-kapazitat-c-einheit-1-f-1-c-v-1-as-v admonition">
+<p class="admonition-title">Kapazität <span class="math notranslate nohighlight">\(C\)</span> - Einheit: 1 F = 1 C/V = 1 As/V</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9b90827f-20a0-4ab7-aec5-492019487ac5">
+<span class="eqno">(12)<a class="headerlink" href="#equation-9b90827f-20a0-4ab7-aec5-492019487ac5" title="Permalink to this equation">#</a></span>\[\begin{align}
+i(t) &amp;= C \cdot \frac{du_C(t)}{dt} \\
+&amp;= \omega C \cdot \hat{U} \cos(\omega t + \varphi_u) \\
+&amp;= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2})
+\end{align}\]</div>
+</div>
+</section>
+<section id="literaturverzeichnis">
+<h2>Literaturverzeichnis<a class="headerlink" href="#literaturverzeichnis" title="Link to this heading">#</a></h2>
+<span class="target" id="id1"></span></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./class"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01_lec.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">zurück</p>
+        <p class="prev-next-title">Einleitung</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03_lec.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">weiter</p>
+        <p class="prev-next-title">Komplexe Wechselstromrechnung</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhalt
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schaltzeichen">Schaltzeichen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erregungsarten">Erregungsarten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sinusformige-erregung-periodische-vorgange">Sinusförmige Erregung, periodische Vorgänge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-harmonischer-funktionen">Eigenschaften harmonischer Funktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mittelwerte-periodischer-zeitfunktionen">Mittelwerte periodischer Zeitfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#u-i-verhalten"><span class="math notranslate nohighlight">\(u/i\)</span>-Verhalten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literaturverzeichnis">Literaturverzeichnis</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Durch A. von Ahlen, M. Meiners
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

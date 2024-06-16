@@ -1,0 +1,1046 @@
+
+<!DOCTYPE html>
+
+
+<html lang="de" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>9. Komplexe Wechselstromrechnung &#8212; M 2.3 Grundlagen der Elektrotechnik (GEL2)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=91fba89f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "mimeiners/gel2");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/translations.js?v=70a09b52"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorium/7_KWR';</script>
+    <link rel="canonical" href="https://mimeiners.github.io/gel2/Tutorium/7_KWR.html" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="7. Filterschaltungen, Bode-Diagramme und Ortskurven" href="8_Filterschaltungen.html" />
+    <link rel="prev" title="6. Verhalten der Grundzweipole 2" href="6_Grundzweipole2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="de"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../about/unsyllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>
+    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Suche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/unsyllabus.html">
+                    Unsyllabus
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Seminar</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../class/01_lec.html">Einleitung und Übersicht</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/02_lec.html">Netzwerkerregung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/03_lec.html">Komplexe Wechselstromrechnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/04_lec.html">Impedanz, Admittanz und Leistung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/05_lec.html">Grafische Analysemethoden</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/06_lec.html">Resonanzkreis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/07_lec.html">Netzwerkanalyse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/08_lec.html">Transformatoren und Übertrager</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hörsaalübungen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw1.html">Periodische Signale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw2.html">Komplexe Wechselstromrechnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw3.html">Spannungsteiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw4.html">Bode-Diagramm und Nyquist-Ortskurve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw5.html">Anpassung und Wechselstrommessbrücke</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw6.html">Leistungsanpassung und Schwingkreis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/hw7.html">Audio-Applikationen</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorium</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_Einfuehrung.html">Einführung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_Komplexe-Zahlen.html">Komplexe Zahlen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_Periodische-Signale.html">Periodische Signale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_Komplexe-Groessen.html">Komplexe Größen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_Grundzweipole1.html">Verhalten der Grundzweipole 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_Grundzweipole2.html">Verhalten der Grundzweipole 2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Komplexe Wechselstromrechnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_Filterschaltungen.html">Bode-Diagramme, Ortskurven, Filterschaltungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_Schwingkreise.html">Schwingkreise</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/mimeiners/gel2" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Quell-Repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mimeiners/gel2/edit/master/Tutorium/7_KWR.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mimeiners/gel2/issues/new?title=Issue%20on%20page%20%2FTutorium/7_KWR.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Öffnen Sie ein Problem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Laden Sie diese Seite herunter">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Tutorium/7_KWR.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Quelldatei herunterladen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="In PDF drucken"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Vollbildmodus"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>9. Komplexe Wechselstromrechnung</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhalt </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komplexer-spannungs-und-stromteiler">Komplexer Spannungs- und Stromteiler</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leistungsanpassung">Leistungsanpassung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blindleistungskompensation">Blindleistungskompensation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uberlagerungsprinzip">Überlagerungsprinzip</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maschenstromverfahren">Maschenstromverfahren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knotenpotentialverfahren">Knotenpotentialverfahren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubungen">Übungen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubung-9-1-zusammenfassung-komplexer-impedanzen">Übung 9.1 (Zusammenfassung komplexer Impedanzen)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubung-9-2-netzwerkberechnung">Übung 9.2 (Netzwerkberechnung)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubung-9-3-leistungsanpassung">Übung 9.3 (Leistungsanpassung)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubung-9-4-blindleistungskompensation">Übung 9.4 (Blindleistungskompensation)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubung-9-5-maschenstromverfahren">Übung 9.5 (Maschenstromverfahren)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubung-9-6-uberlagerungsverfahren">Übung 9.6 (Überlagerungsverfahren)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quellen">Quellen</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="komplexe-wechselstromrechnung">
+<h1>9. Komplexe Wechselstromrechnung<a class="headerlink" href="#komplexe-wechselstromrechnung" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Komplexer Spannungs- und Stromteiler</p></li>
+<li><p>Anpassung</p></li>
+<li><p>Überlagerungsverfahren</p></li>
+<li><p>Maschenstromverfahren</p></li>
+<li><p>Knotenpotentialerfahren</p></li>
+</ul>
+<section id="komplexer-spannungs-und-stromteiler">
+<h2>Komplexer Spannungs- und Stromteiler<a class="headerlink" href="#komplexer-spannungs-und-stromteiler" title="Link to this heading">#</a></h2>
+<p>Der Spannungs- und Stromteiler ist bereits aus GEL1 bekannt. Unter Anwendung der komplexen Zahlen können diese Konzepte auf den Sinusstrom übertragen werden.</p>
+<figure class="align-default" id="fig-tutchap7spannungsteiler">
+<img alt="../_images/chap7_spannungs-stromteiler.jpg" src="../_images/chap7_spannungs-stromteiler.jpg" />
+</figure>
+<p><span id="id1">[<a class="reference internal" href="#id15" title="H. Fricke and P. Vaske. Elektrische Netzwerke Grundlagen der Elektrotechnik 1. B.G. Teubner, Stuttgart, Germany, 17 edition, 1982.">Fricke and Vaske, 1982</a>]</span></p>
+</section>
+<section id="leistungsanpassung">
+<h2>Leistungsanpassung<a class="headerlink" href="#leistungsanpassung" title="Link to this heading">#</a></h2>
+<p>Bei der Leistungsanpassung soll der Empfänger die größtmögliche Leistung übertragen bekommen.</p>
+<figure class="align-default" id="fig-tutchap7leistungsanpassung">
+<img alt="../_images/chap7_leistungsanpassung.jpg" src="../_images/chap7_leistungsanpassung.jpg" />
+</figure>
+<p><span id="id2">[<a class="reference internal" href="#id15" title="H. Fricke and P. Vaske. Elektrische Netzwerke Grundlagen der Elektrotechnik 1. B.G. Teubner, Stuttgart, Germany, 17 edition, 1982.">Fricke and Vaske, 1982</a>]</span></p>
+<div class="math notranslate nohighlight">
+\[\underline{Z}_a = \underline{Z}_i^*\]</div>
+<div class="math notranslate nohighlight">
+\[\underline{Y}_a = \underline{Y}_i^*\]</div>
+</section>
+<section id="blindleistungskompensation">
+<h2>Blindleistungskompensation<a class="headerlink" href="#blindleistungskompensation" title="Link to this heading">#</a></h2>
+<p>Da eine Induktivität positive Blindleistung aufnimmt und eine Kapazität negative Blindleistung, kann man die Zweipole so zusammenschalten, dass sich die Blindleistungen gegenseitig ausgleichen. Damit werden die Zuleitungen durch weniger Blindleistung belastet. Dieses Vorgehen nennt man Blindleistungskompensation.</p>
+<figure class="align-default" id="fig-tutchap7blindleistungskompensation">
+<img alt="../_images/chap6_zusammenfassung-westermann21.jpg" src="../_images/chap6_zusammenfassung-westermann21.jpg" />
+</figure>
+<p><span id="id3">[<a class="reference internal" href="#id14" title="M. Dzieia, H. Hübscher, D. Jagla, J. Klaue, H.-J. Petersen, and H. Wickert. Elektronik Tabellen Betriebs- und Automatisierungstechnik. Westermann, Braunschweig, 2 edition, 2016.">Dzieia <em>et al.</em>, 2016</a>]</span></p>
+</section>
+<section id="uberlagerungsprinzip">
+<h2>Überlagerungsprinzip<a class="headerlink" href="#uberlagerungsprinzip" title="Link to this heading">#</a></h2>
+<p>Das Überlagerungsprinzip darf <strong>nur</strong> in linearen Netzwerken benutzt werden.</p>
+<p>Bei Sinusstrom gilt Linearität bei den komplexen Effektivwerten <span class="math notranslate nohighlight">\(\underline{U}\)</span> und <span class="math notranslate nohighlight">\(\underline{I}\)</span>, sowie bei den komplexen Scheitelwerten <span class="math notranslate nohighlight">\(\underline{\hat{u}}\)</span> und <span class="math notranslate nohighlight">\(\underline{\hat{i}}\)</span>.</p>
+<p>Bei dem Überlagerungsprinzip berechnet man das Netzwerk für jede Quelle einzelnd. Spannungsquellen werden kurzgeschlossen und Stromquellen werden abgetrennt. Nach Berechnung z.B. aller Teilströme für alle einzelnd wirksamen Quellen, wird aus allen Teilströmen der Gesamtstrom berechnet.</p>
+<figure class="align-default" id="fig-tutchap7uberlagerung">
+<img alt="../_images/chap7_ueberlagerungsverfahren.jpg" src="../_images/chap7_ueberlagerungsverfahren.jpg" />
+</figure>
+<p><span id="id4">[<a class="reference internal" href="#id15" title="H. Fricke and P. Vaske. Elektrische Netzwerke Grundlagen der Elektrotechnik 1. B.G. Teubner, Stuttgart, Germany, 17 edition, 1982.">Fricke and Vaske, 1982</a>]</span></p>
+</section>
+<section id="maschenstromverfahren">
+<h2>Maschenstromverfahren<a class="headerlink" href="#maschenstromverfahren" title="Link to this heading">#</a></h2>
+<p>Das Maschenstromverfahren kann auf Sinusstromnetzwerke angewendet werden, indem man die reellen Gleichstromgrößen durch die komplexen Größen <span class="math notranslate nohighlight">\(\underline{U}\)</span>, <span class="math notranslate nohighlight">\(\underline{I}\)</span> und <span class="math notranslate nohighlight">\(\underline{Z}\)</span> ersetzt.</p>
+<p>Zusammenfassung des Maschenstromverfahrens:</p>
+<p>Vorbereitung:</p>
+<ul class="simple">
+<li><p>Vereinfachung des Netzwerkes als Graphen</p></li>
+<li><p>Einzeichnen des vollständigen Baumes (Verbindung aller Knoten ohne Maschen/Schleifen zu erzeugen)</p>
+<ul>
+<li><p>alle Zweige des Baumes sind Baumzweige/Verbindungszweige -&gt; Maschenströme</p></li>
+</ul>
+</li>
+</ul>
+<p>Maschenumläufe:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m = z - k + 1\)</span> Maschengleichungen (= Anzahl Verbindungszweige)</p>
+<ul>
+<li><p>m: Anzahl Maschengleichungen</p></li>
+<li><p>z: Anzahl Zweige insgesamt</p></li>
+<li><p>k: Anzahl Knoten insgesamt</p></li>
+</ul>
+</li>
+<li><p>Maschenumläufe einzeichnen (jeder Verbindungszweig nur <strong>1-mal</strong> durchlaufen; der Umlaufsinn entspricht der Flussrichtung der Maschenströme)</p></li>
+<li><p>Maschengleichungen aufstellen</p></li>
+</ul>
+<p>Knotengleichungen:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(r = k - 1\)</span> Anzahl Knotengleichungen</p></li>
+<li><p>Knotengleichungen nach Baumzweigen umstellen</p></li>
+</ul>
+<p>Kombinieren:</p>
+<ul class="simple">
+<li><p>Knotengleichungen im Maschengleichungen einsetzen</p></li>
+<li><p>Maschenströme als Spalte; Quellspannungen nach rechts</p></li>
+<li><p>Impedanzmatrix aufstellen</p></li>
+</ul>
+<p>Kontrolle:</p>
+<ul class="simple">
+<li><p>Hauptdiagonale: Umlaufimpedanzen</p></li>
+<li><p>Koppelimpedanzen: gehören zu mehr als einer Maschen -&gt; negatives Vorzeichen, wenn Umlaufrichtungen entgegengesetzt sind</p></li>
+<li><p>Quellspannungen: sind positiv wenn sie entgegen des Maschenumlaufsinns sind</p></li>
+<li><p>Symmetrie:</p>
+<ul>
+<li><p>Maschenumlaufsinn entsprechend Maschenströme</p></li>
+<li><p>Spaltenn und Zeilen richtig sortiert</p></li>
+</ul>
+</li>
+</ul>
+<p>Sonderfälle:</p>
+<ul class="simple">
+<li><p>reale Stromquelle:</p>
+<ul>
+<li><p>Umwandlung in reale Spannungsquelle</p></li>
+<li><p>Stromzweig muss nachträglich berechent werden</p></li>
+</ul>
+</li>
+<li><p>ideale Stromquelle:</p>
+<ul>
+<li><p>Stromzweig als Maschenstrom</p></li>
+<li><p>nur 1 Maschenumlauf über den Zweig q</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="knotenpotentialverfahren">
+<h2>Knotenpotentialverfahren<a class="headerlink" href="#knotenpotentialverfahren" title="Link to this heading">#</a></h2>
+<p>Das Knotenpotentialverfahren kann auf Sinusstromnetzwerke angewendet werden, indem man die reellen Gleichstromgrößen durch die komplexen Größen <span class="math notranslate nohighlight">\(\underline{U}\)</span>, <span class="math notranslate nohighlight">\(\underline{I}\)</span> und <span class="math notranslate nohighlight">\(\underline{Z}\)</span> bzw. <span class="math notranslate nohighlight">\(\underline{Y}\)</span> ersetzt.</p>
+<p>Zusammenfassung des Maschenstromverfahrens:</p>
+<ul class="simple">
+<li><p>willkürlich Ströme ins Netzwerk einzeichnen</p></li>
+<li><p>Impedanzen in Admittanzen umwandeln</p></li>
+<li><p>Spannungsquellen in Stromquellen umwandeln (bewirkt eine Änderung der Anzahl an Strömen im Netzwerk)</p></li>
+<li><p>Null-Bezugspotential <span class="math notranslate nohighlight">\(\varphi_0 = 0\)</span> festlegen</p></li>
+<li><p>restlichen Knoten nummerieren</p></li>
+<li><p>Knotenpotentiale einzeichnen + restliche Spannungen (in Stromrichtung einzeichnen)</p></li>
+<li><p>Knotengleichungen aufstellen</p></li>
+<li><p>Ströme als Produkt aus Spannung <span class="math notranslate nohighlight">\(\cdot\)</span> Leitwert darstellen</p></li>
+<li><p>Spannungen aus Knotenpotentialen darstellen</p></li>
+<li><p>Spannungen in Knotengleichung einsetzen (Gleichungen bestehen aus Leitwerten und Knotenpotentialen)</p></li>
+<li><p>invertieren, umstellen, sortieren</p></li>
+<li><p>Admittanzmatrix aufstellen</p></li>
+</ul>
+<p>Shortcut:</p>
+<ul class="simple">
+<li><p>Matrix ist symmetrisch um die Hauptdiagonale</p></li>
+<li><p>HD sind Knotenadmittanzen</p></li>
+<li><p>andere Admittanzen sind Koppeladmittanzen (die zwischen 2 Knoten sitzen); sie sind <strong>immer</strong> negativ</p></li>
+<li><p>Stromvektor besteht aus Quellströmen (auf Knoten zu -&gt; positiv; von Knoten weg -&gt; negativ)</p></li>
+</ul>
+</section>
+<section id="ubungen">
+<h2>Übungen<a class="headerlink" href="#ubungen" title="Link to this heading">#</a></h2>
+<section id="ubung-9-1-zusammenfassung-komplexer-impedanzen">
+<h3>Übung 9.1 (Zusammenfassung komplexer Impedanzen)<a class="headerlink" href="#ubung-9-1-zusammenfassung-komplexer-impedanzen" title="Link to this heading">#</a></h3>
+<p>(Albach Kapitel 8 Level 2 Aufgabe 8.8)</p>
+<p>Gegeben ist das folgende Netzwerk.</p>
+<figure class="align-default" id="fig-tutchap7aufgabe7-1">
+<img alt="../_images/chap7_aufgabe7.1.jpg" src="../_images/chap7_aufgabe7.1.jpg" />
+</figure>
+<p><span id="id5">[<a class="reference internal" href="#id20" title="Manfred Albach and Janina Fischer. Elektrotechnik Aufgabensammlung. Pearson, 2020. ISBN 978-3-86326-893-0. URL: https://elibrary.pearson.de/book/99.150005/9783863268930.">Albach and Fischer, 2020</a>]</span></p>
+<p>Bestimmen Sie die Eingangsimpedanz <span class="math notranslate nohighlight">\(\underline{Z}_E\)</span> für das gegebene Netzwerk, indem Sie nacheinander geeignete
+Teilnetzwerke zusammenfassen und entsprechende Abkürzungen einführen.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Lösung 9.1</p>
+<p>Reihenschaltung von <span class="math notranslate nohighlight">\(R_1\)</span> und <span class="math notranslate nohighlight">\(C_1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\underline{Z}_1 = R_1 + \frac{1}{j \omega C_1}\]</div>
+<p>Reihenschaltung von <span class="math notranslate nohighlight">\(R_2\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\underline{Z}_2 = R_2 + \frac{1}{j\omega C_2}\]</div>
+<p>Reihenschaltung von <span class="math notranslate nohighlight">\(R_3\)</span> und <span class="math notranslate nohighlight">\(L_3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\underline{Z}_3 = R_3 + j\omega L_3\]</div>
+<p>Parallelschaltung von <span class="math notranslate nohighlight">\(L_1\)</span> und <span class="math notranslate nohighlight">\(R_4\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\underline{Z}_4 = \frac{R_4 \cdot j\omega L}{R_4 + j\omega L}\]</div>
+<figure class="align-default" id="fig-tutchap7aufgabe7-1a">
+<img alt="../_images/chap7_aufgabe7.1a.jpg" src="../_images/chap7_aufgabe7.1a.jpg" />
+</figure>
+<p><span id="id6">[<a class="reference internal" href="#id20" title="Manfred Albach and Janina Fischer. Elektrotechnik Aufgabensammlung. Pearson, 2020. ISBN 978-3-86326-893-0. URL: https://elibrary.pearson.de/book/99.150005/9783863268930.">Albach and Fischer, 2020</a>]</span></p>
+<p>Parallelschaltung von <span class="math notranslate nohighlight">\(\underline{Z}_2\)</span> und <span class="math notranslate nohighlight">\(\underline{Z}_3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\underline{Z}_5 = \frac{\underline{Z}_2 \cdot \underline{Z}_3}{\underline{Z}_2 + \underline{Z}_3} = \frac{\left( R_2 + \frac{1}{j\omega C_2} \right) \cdot (R_3 + j\omega L_3)}{R_2 + \frac{1}{j\omega C_2} + R_3 + j\omega L_3} = \frac{(1 + j\omega C_2 R_2)\cdot (R_3 + j\omega L_3)}{1 - \omega^2 C_2 L_3 + j \omega C_2 (R_2 + R_3)}\]</div>
+<p>Reihenschaltung von <span class="math notranslate nohighlight">\(\underline{Z}_1\)</span>, <span class="math notranslate nohighlight">\(\underline{Z}_5\)</span> und <span class="math notranslate nohighlight">\(\underline{Z}_4\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\underline{Z}_E = \underline{Z}_1 + \underline{Z}_5 + \underline{Z}_4\]</div>
+</div>
+</section>
+<section id="ubung-9-2-netzwerkberechnung">
+<h3>Übung 9.2 (Netzwerkberechnung)<a class="headerlink" href="#ubung-9-2-netzwerkberechnung" title="Link to this heading">#</a></h3>
+<p>(Hagmann Aufgabe 7.4)</p>
+<p>Die im Bild angegebene Schaltung enthält die ohmschen Widerstände <span class="math notranslate nohighlight">\(R_1 = 150\,\Omega\)</span>, <span class="math notranslate nohighlight">\(R_2 = 200\,\Omega\)</span> und <span class="math notranslate nohighlight">\(R_3 = 350\,\Omega\)</span>. Die beiden vorhandenen Spulen haben die Induktivitäten <span class="math notranslate nohighlight">\(L_1 = 10\,mH\)</span> und <span class="math notranslate nohighlight">\(L_2 = 30\,mH\)</span>. Der Kondensator besitzt die Kapazität <span class="math notranslate nohighlight">\(C = 1\,\mu F\)</span>. Die Schaltung liegt an der Spannung <span class="math notranslate nohighlight">\(U = 40\,V\)</span> der Frequenz <span class="math notranslate nohighlight">\(f = 1,2\,kHz\)</span>.</p>
+<p>Es sind alle auftretenden Ströme zu berechnen.</p>
+<figure class="align-default" id="fig-tutchap7aufgabe7-2">
+<img alt="../_images/chap7_aufgabe7.2.jpg" src="../_images/chap7_aufgabe7.2.jpg" />
+</figure>
+<p><span id="id7">[<a class="reference internal" href="9_Schwingkreise.html#id27" title="Gert Hagmann. Aufgabensammlung zu den Grundlagen der Elektrotechnik. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.">Hagmann, 2019</a>]</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Lösung 9.2</p>
+<p>Berechnung der Blindwiderstände:</p>
+<div class="math notranslate nohighlight">
+\[\omega L_1 = 2\pi \cdot 1,2\,kHz \cdot 10\,mH = 75,4\,\Omega\]</div>
+<div class="math notranslate nohighlight">
+\[\omega L_2 = 2\pi \cdot 1,2\,kHz \cdot 30\,mH = 226\,\Omega\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\omega C} = \frac{1}{2\pi \cdot 1,2\,kHz \cdot 1\,\mu F} = 133\,\Omega\]</div>
+<p>Berechnung der Impedanzen:</p>
+<div class="math notranslate nohighlight">
+\[\underline{Z}_2 = R_2 + j\omega L_2 = (200 + j226)\,\Omega\]</div>
+<div class="math notranslate nohighlight">
+\[\underline{Z}_3 = R_3 + \frac{1}{j \omega C} = (350 - j133)\,\Omega\]</div>
+<p>Parallelschaltung von <span class="math notranslate nohighlight">\(\underline{Z}_2\)</span> und <span class="math notranslate nohighlight">\(\underline{Z}_3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\underline{Z}_{23} = \frac{\underline{Z}_2 \underline{Z}_3}{\underline{Z}_2 + \underline{Z}_3} = \frac{(200 + j226)\cdot (350 - j133)}{(200 + j 226) + (350 - j133)}\,\Omega = 203\,\Omega \angle{18,1°}\]</div>
+<p>Mit Spannung <span class="math notranslate nohighlight">\(\underline{U}\)</span> als Bezugsgröße und reell:</p>
+<div class="math notranslate nohighlight">
+\[\underline{I}_1 = \frac{\underline{U}}{\underline{Z}_1 + \underline{Z}_{23}} = \frac{40\,V}{(150 + j75,4 + 203 \angle{18,1°})\,\Omega} = 108\,mA \angle{-22°}\]</div>
+<p>Stromteiler:</p>
+<div class="math notranslate nohighlight">
+\[\underline{I}_2 = \underline{I}_1 \frac{\underline{Z}_3}{\underline{Z}_2 + \underline{Z}_3} = 108\,mA \angle{-22°} \frac{(350 - j133)\,\Omega}{(200 + j226 + 350 - j133)\,\Omega} = 73\,mA\angle{-52,4°}\]</div>
+<p>Knotenregel:</p>
+<div class="math notranslate nohighlight">
+\[\underline{I}_3 = \underline{I}_1 - \underline{I}_2 = 108\,mA\angle{-22°} - 73\,mA\angle{-52,4°} = 59\,mA\angle{16,9°}\]</div>
+</div>
+</section>
+<section id="ubung-9-3-leistungsanpassung">
+<h3>Übung 9.3 (Leistungsanpassung)<a class="headerlink" href="#ubung-9-3-leistungsanpassung" title="Link to this heading">#</a></h3>
+<p>(Hagman Aufgabe 7.31)</p>
+<p>Die im Bild dargestellte Schaltung enthält eine Spannungsquelle mit dem (ohmschen) Innenwiderstand <span class="math notranslate nohighlight">\(R_i = 100\,\Omega\)</span>. Die Frequenz der gelieferten Spannung beträgt <span class="math notranslate nohighlight">\(f = 100\,Hz\)</span>. Ein ohmscher Belastungswiderstand (Verbraucherwiderstand) <span class="math notranslate nohighlight">\(R_a = 10\,\Omega\)</span> soll -wie dargestellt- übe eine LC-Kombination an die Spannungsquelle angeschlossen werden. Dabei sollen die Induktivität <span class="math notranslate nohighlight">\(L\)</span> und die Kapazität <span class="math notranslate nohighlight">\(C\)</span> so gewählt werden, dass Wirkleistungsanpassung besteht, <span class="math notranslate nohighlight">\(R_a\)</span> also die maximal mögliche Wirkleistung aufnimmt.</p>
+<p>Welche Werte sind für <span class="math notranslate nohighlight">\(L\)</span> und <span class="math notranslate nohighlight">\(C\)</span> erforderlich?</p>
+<figure class="align-default" id="fig-tutchap7aufgabe7-3">
+<img alt="../_images/chap7_aufgabe7.3.jpg" src="../_images/chap7_aufgabe7.3.jpg" />
+</figure>
+<p><span id="id8">[<a class="reference internal" href="9_Schwingkreise.html#id27" title="Gert Hagmann. Aufgabensammlung zu den Grundlagen der Elektrotechnik. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.">Hagmann, 2019</a>]</span></p>
+<div class="toggle docutils container">
+<h4 class="rubric" id="losung-9-3">Lösung 9.3</h4>
+<p>Zusammenfassen der RLC-Kombination:</p>
+<div class="math notranslate nohighlight">
+\[\underline{Y}_a = \frac{1}{\underline{Z}_A} = j \omega C + \frac{1}{R_a + j \omega L} = j \omega C + \frac{1}{R_a + j\omega L} \cdot \frac{R_a - j\omega L}{R_a - j\omega L} = j\omega C + \frac{R_a}{R_a^2 + (\omega L)^2} - j \frac{\omega L}{R_a^2 + (\omega L)^2}\]</div>
+<p>Für Wirkleistungsanpassung gilt: <span class="math notranslate nohighlight">\(\underline{Z}_a = \underline{Z}_i^*\)</span></p>
+<div class="math notranslate nohighlight">
+\[\underline{Z}_i^* = R_i = \underline{Z}_i\]</div>
+<div class="math notranslate nohighlight">
+\[\underline{Z}_a = R_i\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{1}{R_i} = \frac{1}{\underline{Z}_a} = \underline{Y}_a = j\omega C + \frac{R_a}{R_a^2 + (\omega L)^2} - j \frac{\omega L}{R_a^2 + (\omega L)^2}\]</div>
+<p>Trennung Real- und Imaginärteil:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{R_i} = \frac{R_a}{R_a^2 + (\omega L)^2}\]</div>
+<div class="math notranslate nohighlight">
+\[j \omega C - j \frac{\omega L}{R_a^2 + (\omega L)^2} = 0\]</div>
+<ol class="arabic simple">
+<li><p>Gleichung Induktivität:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[L = \frac{1}{\omega} \sqrt{R_i R_a - R_a^2} = \frac{1}{2\pi \cdot 100\,Hz} \cdot \sqrt{100 \cdot 10 - 10^2}\Omega = 47,7\,mH\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Gleichung Kapazität:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[C = \frac{L}{R_a^2 + (\omega L)^2} = \frac{47,7\,mH}{(10\,\Omega)^2 + (2\pi \cdot 100\,Hz \cdot 47,7\,mH)^2} = 47,7\,\mu F\]</div>
+</div>
+</section>
+<section id="ubung-9-4-blindleistungskompensation">
+<h3>Übung 9.4 (Blindleistungskompensation)<a class="headerlink" href="#ubung-9-4-blindleistungskompensation" title="Link to this heading">#</a></h3>
+<p>(Vaske/Fricke Beispiel 3.103)</p>
+<p>Ein Verbraucher entnimmt einem Netz für die Sinusspannung <span class="math notranslate nohighlight">\(U = 20\,kV\)</span> bei der Frequenz <span class="math notranslate nohighlight">\(f = 50\,Hz\)</span> die Wirkleistung <span class="math notranslate nohighlight">\(P = 300\,kW\)</span> bei dem induktiven Wirkfaktor <span class="math notranslate nohighlight">\(\cos(\varphi) = 0,8\)</span>. Der Wirkfaktor soll auf <span class="math notranslate nohighlight">\(\cos(\varphi ') = 0,95\)</span> verbessert werden. Die erfoderliche Kapazität <span class="math notranslate nohighlight">\(C\)</span> soll bestimmt werden.</p>
+<div class="admonition-losung-9-4 admonition">
+<p class="admonition-title">Lösung 9.4</p>
+<p>(Bild Fricke Seite 325 Bild 3.139)</p>
+<figure class="align-default" id="fig-tutchap7aufgabe7-4">
+<img alt="../_images/chap7_aufgabe7.4.jpg" src="../_images/chap7_aufgabe7.4.jpg" />
+</figure>
+<p><span id="id9">[<a class="reference internal" href="#id15" title="H. Fricke and P. Vaske. Elektrische Netzwerke Grundlagen der Elektrotechnik 1. B.G. Teubner, Stuttgart, Germany, 17 edition, 1982.">Fricke and Vaske, 1982</a>]</span></p>
+<p>Berechnung Scheinleistung:</p>
+<div class="math notranslate nohighlight">
+\[S = \frac{P}{\cos(\varphi)} = \frac{300\,kW}{0,8} = 375\,kVA\]</div>
+<p>Scheinleistung nach Kompensation:</p>
+<div class="math notranslate nohighlight">
+\[S' = \frac{P}{\cos(\varphi ')} = \frac{300\,kW}{0,95} = 315,8\, kVA\]</div>
+<p>Phasenwinkel berechnen:</p>
+<div class="math notranslate nohighlight">
+\[\varphi = \arccos(0,8) = 36,87°\]</div>
+<div class="math notranslate nohighlight">
+\[\varphi ' = \arccos(0.95) = 18,19°\]</div>
+<p>ursprüngliche induktive Blindleistung:</p>
+<div class="math notranslate nohighlight">
+\[Q_L = S \cdot \sin(\varphi) = 375 \, kVA \cdot \sin(36,87°) = 225 \, kvar\]</div>
+<p>induktive Blindleistung nach Kompensation:</p>
+<div class="math notranslate nohighlight">
+\[Q'_L = S' \cdot \sin(\varphi ') = 315,8 \, kVA \cdot \sin(18,19°) = 98,58 \, kvar\]</div>
+<p>kapazitive Blindleistung:</p>
+<div class="math notranslate nohighlight">
+\[|Q_C| = Q_L - Q'_L = 225 \, kvar - 98,58 \, kvar = 126,42 \, kvar\]</div>
+<p>Kapazität berechnen:</p>
+<div class="math notranslate nohighlight">
+\[C = \frac{|Q_C|}{\omega U^2} = \frac{126,42 \, kvar}{2\pi \cdot 50 \,Hz \cdot (20\,kV)^2} = 1,006\, \mu F\]</div>
+</div>
+</section>
+<section id="ubung-9-5-maschenstromverfahren">
+<h3>Übung 9.5 (Maschenstromverfahren)<a class="headerlink" href="#ubung-9-5-maschenstromverfahren" title="Link to this heading">#</a></h3>
+<p>(Hagmann Aufgabe 7.27)</p>
+<p>In der Schaltung haben die ohmschen Widerstände die Werte <span class="math notranslate nohighlight">\(R_1 = 85\,\Omega\)</span>, <span class="math notranslate nohighlight">\(R_2 = 35\,\Omega\)</span> und <span class="math notranslate nohighlight">\(R_3 = 75\,\Omega\)</span>. Die Induktivitäten der Spulen betragen <span class="math notranslate nohighlight">\(L_1 = 21,22\,mH\)</span> und <span class="math notranslate nohighlight">\(L_2 = 50,4\,mH\)</span>. Der vorhandene Kondensator besitzt die Kapazität <span class="math notranslate nohighlight">\(C = 17,68 \,\mu F\)</span>. Die Versorgungsspannung hat eine Frequenz von <span class="math notranslate nohighlight">\(f = 300\,Hz\)</span> und beträgt <span class="math notranslate nohighlight">\(U = 100\,V\)</span>.</p>
+<p>Die Widerstandsmatrix soll über das Maschenstromverfahren aufgestellt werden.</p>
+<figure class="align-default" id="fig-tutchap7aufgabe7-5">
+<img alt="../_images/chap7_aufgabe7.5.jpg" src="../_images/chap7_aufgabe7.5.jpg" />
+</figure>
+<p><span id="id10">[<a class="reference internal" href="9_Schwingkreise.html#id27" title="Gert Hagmann. Aufgabensammlung zu den Grundlagen der Elektrotechnik. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.">Hagmann, 2019</a>]</span></p>
+<div class="toggle docutils container">
+<h4 class="rubric" id="losung-9-5">Lösung 9.5</h4>
+<p>Berechnung der Blindwiderstände:</p>
+<div class="math notranslate nohighlight">
+\[\omega L_1 = 2\pi \cdot 300\,Hz \cdot 21,22\,mH = 40\,\Omega\]</div>
+<div class="math notranslate nohighlight">
+\[\omega L_2 = 2\pi \cdot 300\,Hz \cdot 50,4\,mH = 95\,\Omega\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\omega C} = \frac{1}{2\pi \cdot 300\,Hz \cdot 17,68\, \mu F} = 30 \,\Omega\]</div>
+<p>Maschenströme: <span class="math notranslate nohighlight">\(\underline{I}_1\)</span>, <span class="math notranslate nohighlight">\(\underline{I}_2\)</span> und <span class="math notranslate nohighlight">\(\underline{I}_3\)</span></p>
+<p>Maschengleichungen:</p>
+<p>M1:</p>
+<div class="math notranslate nohighlight">
+\[-\underline{U} + \underline{I}_1 j\omega L_1 + (\underline{I}_1 - \underline{I}_2)R_1 = 0\]</div>
+<p>M2:</p>
+<div class="math notranslate nohighlight">
+\[(\underline{I}_2 - \underline{I}_1)R_1 + \underline{I}_2 R_2 + (\underline{I}_2 - \underline{I}_3) j \omega L_2 = 0\]</div>
+<p>M3:</p>
+<div class="math notranslate nohighlight">
+\[(\underline{I}_3 - \underline{I}_2) j\omega L_2 + \underline{I}_3 \left( R_3 - j\frac{1}{\omega C} \right) = 0\]</div>
+<p>nach unbekannten Strömen ordnen:</p>
+<p>M1:</p>
+<div class="math notranslate nohighlight">
+\[\underline{I}_1 (R_1 + j\omega L_1) - \underline{I}_2 R_1 = \underline{U}\]</div>
+<p>M2:</p>
+<div class="math notranslate nohighlight">
+\[-\underline{I}_1 R_1 + \underline{I}_2 (R_1 + R_2 + j\omega L_2) - \underline{I}_3 j\omega L_2 = 0\]</div>
+<p>M3:</p>
+<div class="math notranslate nohighlight">
+\[-\underline{I}_2 j\omega L_2 + \underline{I}_3 \left( R_3 + j\omega L_2 - j\frac{1}{\omega C} \right) = 0\]</div>
+<p>Matrixe aufstellen:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\begin{bmatrix}
+(85 + j40) &amp; -85 &amp; 0\\
+-85 &amp; (120 + j95) &amp; -j95\\
+0 &amp; -j95 &amp; (75 + j65)
+\end{bmatrix} \,\Omega \cdot
+\begin{bmatrix}
+\underline{I}_1\\\underline{I}_2\\\underline{I}_3
+\end{bmatrix} =
+\begin{bmatrix}
+100\\0\\0
+\end{bmatrix} \,V
+\end{align*}\end{split}\]</div>
+</div>
+</section>
+<section id="ubung-9-6-uberlagerungsverfahren">
+<h3>Übung 9.6 (Überlagerungsverfahren)<a class="headerlink" href="#ubung-9-6-uberlagerungsverfahren" title="Link to this heading">#</a></h3>
+<p>(Vaske/Fricke Beispiel 3.92)</p>
+<p>Das Netzwerk im Bild besteht aus Wirkwiderstand <span class="math notranslate nohighlight">\(R = 5\,\Omega\)</span>, den Blindwiderständen <span class="math notranslate nohighlight">\(X_L = 10\,\Omega\)</span> und <span class="math notranslate nohighlight">\(X_C = -20\,\Omega\)</span>, sowie den komplexen Widerständen <span class="math notranslate nohighlight">\(\underline{Z}_b = 100\,\Omega \angle{-30°}\)</span> und <span class="math notranslate nohighlight">\(\underline{Z}_c = 50\,\Omega \angle{50°}\)</span> und führt die Ströme <span class="math notranslate nohighlight">\(\underline{I}_{qb} = -j4\,A\)</span> und <span class="math notranslate nohighlight">\(\underline{I}_{qc} = 3\,A\)</span>.</p>
+<p>Es sollen alle Ströme berechent werden.</p>
+<figure class="align-default" id="fig-tutchap7aufgabe7-6">
+<img alt="../_images/chap7_aufgabe7.6.jpg" src="../_images/chap7_aufgabe7.6.jpg" />
+</figure>
+<p><span id="id11">[<a class="reference internal" href="#id15" title="H. Fricke and P. Vaske. Elektrische Netzwerke Grundlagen der Elektrotechnik 1. B.G. Teubner, Stuttgart, Germany, 17 edition, 1982.">Fricke and Vaske, 1982</a>]</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Lösung 9.6</p>
+<figure class="align-default" id="fig-tutchap7aufgabe7-6loesung">
+<img alt="../_images/chap7_ueberlagerungsverfahren.jpg" src="../_images/chap7_ueberlagerungsverfahren.jpg" />
+</figure>
+<p><span id="id12">[<a class="reference internal" href="#id15" title="H. Fricke and P. Vaske. Elektrische Netzwerke Grundlagen der Elektrotechnik 1. B.G. Teubner, Stuttgart, Germany, 17 edition, 1982.">Fricke and Vaske, 1982</a>]</span></p>
+<ol class="arabic simple">
+<li><p>Teilschaltung (im Bild: b):</p></li>
+</ol>
+<p>Stromteiler:</p>
+<div class="math notranslate nohighlight">
+\[\underline{I}'_1 = \underline{I}'_2 = \underline{I}_{qc} \frac{jX_C}{R + jX_L + jX_C} = 3\,A \frac{-j20\,\Omega}{5\,\Omega + j10\,\Omega - j20\,\Omega} = 5,37\,A\angle{-26,57°}\]</div>
+<p>Knotenregel:</p>
+<div class="math notranslate nohighlight">
+\[\underline{I}'_3 = \underline{I}_{qc} - \underline{I}'_1 = 3\,A\angle{126,89°}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Teilschaltung (im Bild: c):</p></li>
+</ol>
+<p>Stromteiler:</p>
+<div class="math notranslate nohighlight">
+\[\underline{I}''_2 = \underline{I}''_3 = \underline{I}_{qb} \frac{jX_L}{R + jX_L + jX_C} = -j4\,A \frac{j10\,\Omega}{5\,\Omega + j10\,\Omega - j20\,\Omega} = 3,578\,A\angle{63,43°}\]</div>
+<p>Knotenregel:</p>
+<div class="math notranslate nohighlight">
+\[\underline{I}''_1 = \underline{I}_{qb} - \underline{I}''_2 = 7,38\,A\angle{-102,53°}\]</div>
+<p>Überlagerung der Ströme:</p>
+<div class="math notranslate nohighlight">
+\[\underline{I}_1 = \underline{I}'_1 + \underline{I}''_1 = 5,37\,A\angle{-26,57°} + 7,38\,A\angle{-102,53°} = 10,13\,A\angle{-71,57°}\]</div>
+<div class="math notranslate nohighlight">
+\[\underline{I}_2 = \underline{I}'_2 - \underline{I}''_2 = 5,37\,A\angle{-26,57°} - 3,578\,A\angle{63,43°} = 6,45\,A\angle{-60,25°}\]</div>
+<div class="math notranslate nohighlight">
+\[\underline{I}_3 = \underline{I}'_3 + \underline{I}''_3 = - 3\,A\angle{126,89°} - 3,578\,A\angle{63,43°} = 5,6\,A\angle{-87,95°}\]</div>
+</div>
+</section>
+</section>
+<section id="quellen">
+<h2>Quellen<a class="headerlink" href="#quellen" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id13">
+<div role="list" class="citation-list">
+<div class="citation" id="id20" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>AF20<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id5">1</a>,<a role="doc-backlink" href="#id6">2</a>)</span>
+<p>Manfred Albach and Janina Fischer. <em>Elektrotechnik Aufgabensammlung</em>. Pearson, 2020. ISBN 978-3-86326-893-0. URL: <a class="reference external" href="https://elibrary.pearson.de/book/99.150005/9783863268930">https://elibrary.pearson.de/book/99.150005/9783863268930</a>.</p>
+</div>
+<div class="citation" id="id14" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">DHubscherJ+16</a><span class="fn-bracket">]</span></span>
+<p>M. Dzieia, H. Hübscher, D. Jagla, J. Klaue, H.-J. Petersen, and H. Wickert. <em>Elektronik Tabellen Betriebs- und Automatisierungstechnik</em>. Westermann, Braunschweig, 2 edition, 2016.</p>
+</div>
+<div class="citation" id="id15" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>FV82<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id4">3</a>,<a role="doc-backlink" href="#id9">4</a>,<a role="doc-backlink" href="#id11">5</a>,<a role="doc-backlink" href="#id12">6</a>)</span>
+<p>H. Fricke and P. Vaske. <em>Elektrische Netzwerke Grundlagen der Elektrotechnik 1</em>. B.G. Teubner, Stuttgart, Germany, 17 edition, 1982.</p>
+</div>
+<div class="citation" id="id31" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Hag19<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id7">1</a>,<a role="doc-backlink" href="#id8">2</a>,<a role="doc-backlink" href="#id10">3</a>)</span>
+<p>Gert Hagmann. <em>Aufgabensammlung zu den Grundlagen der Elektrotechnik</em>. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Tutorium"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="6_Grundzweipole2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">zurück</p>
+        <p class="prev-next-title">6. Verhalten der Grundzweipole 2</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="8_Filterschaltungen.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">weiter</p>
+        <p class="prev-next-title">7. Filterschaltungen, Bode-Diagramme und Ortskurven</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhalt
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komplexer-spannungs-und-stromteiler">Komplexer Spannungs- und Stromteiler</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leistungsanpassung">Leistungsanpassung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blindleistungskompensation">Blindleistungskompensation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uberlagerungsprinzip">Überlagerungsprinzip</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maschenstromverfahren">Maschenstromverfahren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knotenpotentialverfahren">Knotenpotentialverfahren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubungen">Übungen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubung-9-1-zusammenfassung-komplexer-impedanzen">Übung 9.1 (Zusammenfassung komplexer Impedanzen)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubung-9-2-netzwerkberechnung">Übung 9.2 (Netzwerkberechnung)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubung-9-3-leistungsanpassung">Übung 9.3 (Leistungsanpassung)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubung-9-4-blindleistungskompensation">Übung 9.4 (Blindleistungskompensation)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubung-9-5-maschenstromverfahren">Übung 9.5 (Maschenstromverfahren)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubung-9-6-uberlagerungsverfahren">Übung 9.6 (Überlagerungsverfahren)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quellen">Quellen</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Durch A. von Ahlen, M. Meiners
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

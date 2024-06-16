@@ -1,0 +1,755 @@
+
+<!DOCTYPE html>
+
+
+<html lang="de" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Leistungsanpassung und Schwingkreis &#8212; M 2.3 Grundlagen der Elektrotechnik (GEL2)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=91fba89f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "mimeiners/gel2");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/translations.js?v=70a09b52"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'exercise/hw6';</script>
+    <link rel="canonical" href="https://mimeiners.github.io/gel2/exercise/hw6.html" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Audio-Applikationen" href="hw7.html" />
+    <link rel="prev" title="Anpassung und Wechselstrommessbrücke" href="hw5.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="de"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../about/unsyllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>
+    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Suche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/unsyllabus.html">
+                    Unsyllabus
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Seminar</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../class/01_lec.html">Einleitung und Übersicht</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/02_lec.html">Netzwerkerregung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/03_lec.html">Komplexe Wechselstromrechnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/04_lec.html">Impedanz, Admittanz und Leistung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/05_lec.html">Grafische Analysemethoden</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/06_lec.html">Resonanzkreis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/07_lec.html">Netzwerkanalyse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/08_lec.html">Transformatoren und Übertrager</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hörsaalübungen</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="hw1.html">Periodische Signale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw2.html">Komplexe Wechselstromrechnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw3.html">Spannungsteiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw4.html">Bode-Diagramm und Nyquist-Ortskurve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw5.html">Anpassung und Wechselstrommessbrücke</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Leistungsanpassung und Schwingkreis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw7.html">Audio-Applikationen</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorium</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/1_Einfuehrung.html">Einführung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/2_Komplexe-Zahlen.html">Komplexe Zahlen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/3_Periodische-Signale.html">Periodische Signale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/4_Komplexe-Groessen.html">Komplexe Größen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/5_Grundzweipole1.html">Verhalten der Grundzweipole 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/6_Grundzweipole2.html">Verhalten der Grundzweipole 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/7_KWR.html">Komplexe Wechselstromrechnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/8_Filterschaltungen.html">Bode-Diagramme, Ortskurven, Filterschaltungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/9_Schwingkreise.html">Schwingkreise</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/mimeiners/gel2" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Quell-Repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mimeiners/gel2/edit/master/exercise/hw6.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mimeiners/gel2/issues/new?title=Issue%20on%20page%20%2Fexercise/hw6.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Öffnen Sie ein Problem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Laden Sie diese Seite herunter">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/exercise/hw6.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Quelldatei herunterladen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="In PDF drucken"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Vollbildmodus"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Leistungsanpassung und Schwingkreis</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhalt </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leistungsberechnung">Leistungsberechnung</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leistungsaufnahme">Leistungsaufnahme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bestimmung-der-kapazitat">Bestimmung der Kapazität</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximale-leistung">Maximale Leistung</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parallelresonanzkreis-mit-ubertrager">Parallelresonanzkreis mit Übertrager</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ersatzschaltbild">Ersatzschaltbild</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassen">Zusammenfassen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gute-und-resonanz">Güte und Resonanz</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="leistungsanpassung-und-schwingkreis">
+<h1>Leistungsanpassung und Schwingkreis<a class="headerlink" href="#leistungsanpassung-und-schwingkreis" title="Link to this heading">#</a></h1>
+<section id="leistungsberechnung">
+<h2>Leistungsberechnung<a class="headerlink" href="#leistungsberechnung" title="Link to this heading">#</a></h2>
+<p>An eine Spannungsquelle mit der Leerlaufspannung <span class="math notranslate nohighlight">\(\underline{U}_0\)</span>, der inneren Impedanz <span class="math notranslate nohighlight">\(\underline{Z}_i=R_i+j\omega
+L_i\)</span> und der Kreisfrequenz <span class="math notranslate nohighlight">\(\omega\)</span> ist ein Widerstand <span class="math notranslate nohighlight">\(R_2\)</span> angeschlossen. In Reihe mit dem Widerstand <span class="math notranslate nohighlight">\(R_2\)</span> soll ein
+Kondensator <span class="math notranslate nohighlight">\(C_2\)</span> geschaltet werden.</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/hw6p1.png"><img alt="../_images/hw6p1.png" src="../_images/hw6p1.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Abb. 29 </span><span class="caption-text">Schaltung für die Leistungsberechnung.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="leistungsaufnahme">
+<h3>Leistungsaufnahme<a class="headerlink" href="#leistungsaufnahme" title="Link to this heading">#</a></h3>
+<p>Leiten Sie einen Ausdruck für die Leistung in Abhängigkeit der gegebenen Größen her. Wählen Sie dabei eine
+Darstellungsform, so dass die Kapazität <span class="math notranslate nohighlight">\(C_2=C_{opt}\)</span> des Kondensators bestimmt werden kann, damit die vom Widerstand
+<span class="math notranslate nohighlight">\(R_2\)</span> aufgenommene mittlere Leistung möglichst groß wird.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Lösung</p>
+<div class="amsmath math notranslate nohighlight" id="equation-88d0929d-1791-4fbb-8210-7722ac3f10bd">
+<span class="eqno">(70)<a class="headerlink" href="#equation-88d0929d-1791-4fbb-8210-7722ac3f10bd" title="Permalink to this equation">#</a></span>\[\begin{align}
+\underline{S} &amp;= \underline{U} \cdot \underline{I}^* \\
+P &amp;= \operatorname{Re}(\underline{S}) = \operatorname{Re}(\underline{U}_{R_2} \cdot \underline{I}^*) \\
+&amp;= \operatorname{Re}(R_2 \cdot \underline{I} \cdot  \underline{I}^*) = R_2 \vert{\underline{I}}^2\vert \\
+&amp;= \frac{1}{2} R_2 \hat{I}^2 = R_2 I_{eff}^2 \\
+\underline{I} &amp;= \frac{\underline{U}_0}{R_i+R_2+j(\omega L_i-\frac{1}{\omega C_2})} \\
+P &amp;= R_2 \frac{\vert\underline{U}_0\vert^2}{\vert R_i+R_2+j(\omega L_i-\frac{1}{\omega C_2})\vert^2} \\
+&amp;= \frac{1}{2} R_2 \frac{\hat{U}_0^2}{(R_i+R_2)^2+(\omega L_i-\frac{1}{\omega C_2})^2} \\
+&amp;= \frac{R_2 U_{0,eff}^2}{(R_i+R_2)^2+(\omega L_i-\frac{1}{\omega C_2})^2} 
+\end{align}\]</div>
+<p>Daraus folgt, dass die Wirkleistung <span class="math notranslate nohighlight">\(P\)</span> im Resonanzfall maximal wird, wenn <span class="math notranslate nohighlight">\((\omega L_i-\frac{1}{\omega C_2})=0\)</span> gilt.</p>
+</div>
+</section>
+<section id="bestimmung-der-kapazitat">
+<h3>Bestimmung der Kapazität<a class="headerlink" href="#bestimmung-der-kapazitat" title="Link to this heading">#</a></h3>
+<p>Wie groß ist <span class="math notranslate nohighlight">\(C_{opt}\)</span> zu wählen für den Fall <span class="math notranslate nohighlight">\(R_2=90\,\Omega\)</span>, <span class="math notranslate nohighlight">\(R_i=10\,\Omega\)</span>,
+<span class="math notranslate nohighlight">\(L_i=20\,mH\)</span>, <span class="math notranslate nohighlight">\(U_0=141\,V\)</span> und <span class="math notranslate nohighlight">\(\omega=2\pi 100\,Hz\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\omega_0 = \frac{1}{\sqrt{L_i C_{opt}}} \\
+C_{opt} = \frac{1}{\omega^2_0 L_i} = 127\,\mu F 
+\end{split}\]</div>
+</div>
+</section>
+<section id="maximale-leistung">
+<h3>Maximale Leistung<a class="headerlink" href="#maximale-leistung" title="Link to this heading">#</a></h3>
+<p>Welche maximale Leistung nimmt der Widerstand <span class="math notranslate nohighlight">\(R_2\)</span> für den berechneten Fall auf?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[
+P_{max} = \frac{1}{2} R_2 \frac{\hat{U}_0^2}{(R_i+R_2)^2} = 90\,W
+\]</div>
+</div>
+</section>
+</section>
+<section id="parallelresonanzkreis-mit-ubertrager">
+<h2>Parallelresonanzkreis mit Übertrager<a class="headerlink" href="#parallelresonanzkreis-mit-ubertrager" title="Link to this heading">#</a></h2>
+<p>An einen Parallelresonanzkreis ist über einen idealen Übertrager mit dem Übersetzungsverhältnis ü=2 die
+Parallelschaltung eines Widerstandes <span class="math notranslate nohighlight">\(R_2\)</span> und eines Kondensators <span class="math notranslate nohighlight">\(C_2\)</span> angeschlossen. Die Werte der Bauteile lauten
+<span class="math notranslate nohighlight">\(L_1=1\,\mu H\)</span>, <span class="math notranslate nohighlight">\(C_1=100\,pF\)</span>, <span class="math notranslate nohighlight">\(R_1=2\,k\Omega\)</span>, <span class="math notranslate nohighlight">\(R_2=R_1\)</span> und <span class="math notranslate nohighlight">\(C_2=C_1\)</span>. Wie beeinflusst die Parallelschaltung aus
+<span class="math notranslate nohighlight">\(R_2\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> die Resonanzfrequenz und die Güte des Parallelschwingkreises?</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/hw6p2.png"><img alt="../_images/hw6p2.png" src="../_images/hw6p2.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Abb. 30 </span><span class="caption-text">Schaltung mit idealem Übertrager.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="ersatzschaltbild">
+<h3>Ersatzschaltbild<a class="headerlink" href="#ersatzschaltbild" title="Link to this heading">#</a></h3>
+<p>Skizzieren Sie das Ersatzschaltbild der transformierten Parallelschaltung aus <span class="math notranslate nohighlight">\(R_2\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span>.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Lösung</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/hw6p2a.png"><img alt="../_images/hw6p2a.png" src="../_images/hw6p2a.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Abb. 31 </span><span class="caption-text">Ersatzschaltbild mit transformierter Impedanz.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Impedanztransformation mit einem idealen Übertrager:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a90f29c4-0153-4a5b-b4c8-a139859df043">
+<span class="eqno">(71)<a class="headerlink" href="#equation-a90f29c4-0153-4a5b-b4c8-a139859df043" title="Permalink to this equation">#</a></span>\[\begin{align}
+Z_{2t} &amp;= \mbox{ü}^2 Z_2 \\
+Y_{2t} &amp;= \frac{1}{R_{2t}} + j\omega C_{2t} = \frac{1}{\mbox{ü}^2}Y_2 \\
+&amp;= \frac{1}{\mbox{ü}^2}\left(\frac{1}{R_2} + j\omega C_2 \right) = \frac{1}{\mbox{ü}^2 R_2} + j \omega \frac{C_2}{\mbox{ü}^2} \\
+R_{2t} &amp;= \mbox{ü}^2 R_2 = 4 R_2 \\
+C_{2t} &amp;= \frac{C_2}{\mbox{ü}^2} = \frac{C_2}{4}
+\end{align}\]</div>
+</div>
+</section>
+<section id="zusammenfassen">
+<h3>Zusammenfassen<a class="headerlink" href="#zusammenfassen" title="Link to this heading">#</a></h3>
+<p>Fassen Sie gleichartige Zweipole zusammen.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Lösung</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/hw6p2b.png"><img alt="../_images/hw6p2b.png" src="../_images/hw6p2b.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Abb. 32 </span><span class="caption-text">Ersatzschaltbild mit zusammengefassten Zweipolen.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="amsmath math notranslate nohighlight" id="equation-39cef819-f6f3-4e4f-a6aa-cf11ba91af2d">
+<span class="eqno">(72)<a class="headerlink" href="#equation-39cef819-f6f3-4e4f-a6aa-cf11ba91af2d" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{1}{R_{ges}} &amp;= \frac{1}{R_1} + \frac{1}{R_{2t}} = \frac{5}{4 R} \\
+R_{ges} &amp;= \frac{4}{5} R \\
+C_{ges} &amp;= C_1 + C_{2t} = \frac{5}{4} C
+\end{align}\]</div>
+</div>
+</section>
+<section id="gute-und-resonanz">
+<h3>Güte und Resonanz<a class="headerlink" href="#gute-und-resonanz" title="Link to this heading">#</a></h3>
+<p>Bestimmen Sie mit den Bezeichnungen aus der vorherigen Unteraufgabe die Resonanzfrequenz <span class="math notranslate nohighlight">\(\omega_{0t}\)</span> und
+die Güte <span class="math notranslate nohighlight">\(Q_t\)</span>.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Lösung</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b6c00e33-06e6-470a-8453-7feefdffaf1f">
+<span class="eqno">(73)<a class="headerlink" href="#equation-b6c00e33-06e6-470a-8453-7feefdffaf1f" title="Permalink to this equation">#</a></span>\[\begin{align}
+\omega_0 &amp;= \frac{1}{\sqrt{L_1 C_1}} = 100\,MHz \\
+\omega_{0t} &amp;= \frac{1}{\sqrt{L_1 C_{ges}}} = \sqrt{\frac{4}{5}} \omega_0 = 89.44\,MHz \\
+Q &amp;= \frac{R_p}{\omega_0 L_p} = \frac{1}{G_p}\sqrt{\frac{C_p}{L_p}} = 20 \\
+Q_t &amp;= \frac{1}{G_{ges}}\sqrt{\frac{C_{ges}}{L_1}} = R_{ges}\sqrt{\frac{C_{ges}}{L_1}} \\
+&amp;= \frac{4}{5}\sqrt{\frac{5}{4}}Q = \sqrt{\frac{4}{5}} Q = 17.89
+\end{align}\]</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./exercise"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="hw5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">zurück</p>
+        <p class="prev-next-title">Anpassung und Wechselstrommessbrücke</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="hw7.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">weiter</p>
+        <p class="prev-next-title">Audio-Applikationen</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhalt
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leistungsberechnung">Leistungsberechnung</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leistungsaufnahme">Leistungsaufnahme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bestimmung-der-kapazitat">Bestimmung der Kapazität</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximale-leistung">Maximale Leistung</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parallelresonanzkreis-mit-ubertrager">Parallelresonanzkreis mit Übertrager</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ersatzschaltbild">Ersatzschaltbild</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassen">Zusammenfassen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gute-und-resonanz">Güte und Resonanz</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Durch A. von Ahlen, M. Meiners
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
