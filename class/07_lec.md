@@ -40,7 +40,7 @@
 ## Netzwerk
 
 ```{figure} ../images/class/lec6s20.png
-:width: 400
+:width: 400px
 :name: fig:lec7knoten
 
 Netzwerk für die Knotenspannungsanalyse
@@ -225,7 +225,7 @@ $m=z-(k-1)$.
 ## Maschenstromverfahren
 
 ```{figure} ../images/class/lec6s30.png
-:width: 400
+:width: 400px
 :name: fig:lec7masch
 
 Netzwerk für die Maschenstromanalyse

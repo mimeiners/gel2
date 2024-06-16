@@ -34,6 +34,10 @@ parts:
         title: Bode-Diagramm und Nyquist-Ortskurve
       - file: exercise/hw5
         title: Anpassung und Wechselstrommessbrücke
+      - file: exercise/hw6
+        title: Leistungsanpassung und Schwingkreis
+      - file: exercise/hw7
+        title: Audio-Applikationen
   - caption: Tutorium
     chapters:
       - file: Tutorium/1_Einfuehrung

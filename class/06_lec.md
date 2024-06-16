@@ -156,7 +156,9 @@ BW &= \omega_{45} - \omega_{-45} = \frac{\omega_0}{Q} \\
 
 Gegenüberstellung der Eigenschaften der elementaren Schwingkreise
 ```
-entn. {cite}`harriehausen2020`
+
+Entn. aus {cite}`harriehausen2020`
+
 
 
 
