@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -685,8 +685,8 @@ document.write(`
 <li><p>Felder / Wellen / Optik / HF-Technik</p>
 <ul>
 <li><p>Maxwell-Gleichungen</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f1123e37-d714-41df-96ca-c4f071338aa6">
-<span class="eqno">(1)<a class="headerlink" href="#equation-f1123e37-d714-41df-96ca-c4f071338aa6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a3a25b21-64e0-4141-ab3d-a858a2a28b7e">
+<span class="eqno">(1)<a class="headerlink" href="#equation-a3a25b21-64e0-4141-ab3d-a858a2a28b7e" title="Permalink to this equation">#</a></span>\[\begin{align}
 	\oint \mathbf{H} d\mathbf{s} &amp;= \iint \mathbf{J} + \dot{D} d\mathbf{A} \\
 	\oint \mathbf{E} d\mathbf{s} &amp;= - \iint \dot{B} d\mathbf{A}
 	\end{align}\]</div>
@@ -731,22 +731,22 @@ document.write(`
 <h2>Konzentrierte Schaltelemente<a class="headerlink" href="#konzentrierte-schaltelemente" title="Link to this heading">#</a></h2>
 <div class="admonition-stromdichte admonition">
 <p class="admonition-title">Stromdichte</p>
-<div class="amsmath math notranslate nohighlight" id="equation-68ab8240-4ed8-46ac-81a2-3baa91113795">
-<span class="eqno">(2)<a class="headerlink" href="#equation-68ab8240-4ed8-46ac-81a2-3baa91113795" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2343e5be-51ce-404b-b313-0ecabcd6412f">
+<span class="eqno">(2)<a class="headerlink" href="#equation-2343e5be-51ce-404b-b313-0ecabcd6412f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\int E(r,t) ds}{\iint J(r,t) dA} = \frac{u(t)}{i(t)} \Rightarrow R
 \end{equation}\]</div>
 </div>
 <div class="admonition-verschiebungsdichte admonition">
 <p class="admonition-title">Verschiebungsdichte</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cf64181e-3a0d-4558-a124-aa0513e0a9c6">
-<span class="eqno">(3)<a class="headerlink" href="#equation-cf64181e-3a0d-4558-a124-aa0513e0a9c6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0fbc74a4-5d84-4ee5-b83b-9701510022f3">
+<span class="eqno">(3)<a class="headerlink" href="#equation-0fbc74a4-5d84-4ee5-b83b-9701510022f3" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\iint D(r,t) dA}{\int E(r,t) ds} = \frac{q(t)}{u(t)} \Rightarrow C
 \end{equation}\]</div>
 </div>
 <div class="admonition-fluszdichte admonition">
 <p class="admonition-title">Flußdichte</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1a16ef0f-cc08-4636-8932-dc752085f73d">
-<span class="eqno">(4)<a class="headerlink" href="#equation-1a16ef0f-cc08-4636-8932-dc752085f73d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-43740f0b-90b7-4796-bd96-7d83ba5d548d">
+<span class="eqno">(4)<a class="headerlink" href="#equation-43740f0b-90b7-4796-bd96-7d83ba5d548d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\iint B(r,t) dA}{\oint H(r,t) ds} = \frac{u(t)}{i(t)} \Rightarrow L
 \end{equation}\]</div>
 </div>
@@ -755,15 +755,15 @@ document.write(`
 <h2>Harmonische Signale<a class="headerlink" href="#harmonische-signale" title="Link to this heading">#</a></h2>
 <div class="admonition-als-zeitfunktion admonition">
 <p class="admonition-title">als Zeitfunktion</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7ee6bd5c-c8f0-4834-97c2-b792c27952c0">
-<span class="eqno">(5)<a class="headerlink" href="#equation-7ee6bd5c-c8f0-4834-97c2-b792c27952c0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7bdaf7e8-5703-4c73-b844-ad1d7f631dda">
+<span class="eqno">(5)<a class="headerlink" href="#equation-7bdaf7e8-5703-4c73-b844-ad1d7f631dda" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(t) = \hat{U} \cos(\omega t + \phi)
 \end{equation}\]</div>
 </div>
 <div class="admonition-als-zeiger-komplexe-grosse-phasor admonition">
 <p class="admonition-title">als Zeiger / komplexe Grösse (Phasor)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8a30d3ae-d706-4178-999b-10899c80e7d9">
-<span class="eqno">(6)<a class="headerlink" href="#equation-8a30d3ae-d706-4178-999b-10899c80e7d9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-027eb4e3-546b-4efb-9e24-9e1da765dc52">
+<span class="eqno">(6)<a class="headerlink" href="#equation-027eb4e3-546b-4efb-9e24-9e1da765dc52" title="Permalink to this equation">#</a></span>\[\begin{equation}
 U = \lvert \hat{U} \lvert e^{j \phi}
 \end{equation}\]</div>
 </div>

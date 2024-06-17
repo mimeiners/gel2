@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -548,27 +548,27 @@ komplexe Zahl);</p></li>
 <h2>Funktionaltransformation<a class="headerlink" href="#funktionaltransformation" title="Link to this heading">#</a></h2>
 <div class="admonition-euler-sche-formel admonition">
 <p class="admonition-title">Euler’sche Formel</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cad849f5-682e-470d-980e-e6b712b6d428">
-<span class="eqno">(13)<a class="headerlink" href="#equation-cad849f5-682e-470d-980e-e6b712b6d428" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9e1a44e9-6b69-4518-8609-a548f9c066d3">
+<span class="eqno">(13)<a class="headerlink" href="#equation-9e1a44e9-6b69-4518-8609-a548f9c066d3" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \sigma + j \omega = a e^{j \varphi} = a \left( \cos(\varphi) + j \sin(\varphi) \right) 
 \end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-a66e1e28-78cc-4dcf-8a81-fd13fb52909e">
-<span class="eqno">(14)<a class="headerlink" href="#equation-a66e1e28-78cc-4dcf-8a81-fd13fb52909e" title="Permalink to this equation">#</a></span>\[\begin{equation} 
+<div class="amsmath math notranslate nohighlight" id="equation-3ddcd7d7-c0c3-40d1-8dd3-efb0e38e2aed">
+<span class="eqno">(14)<a class="headerlink" href="#equation-3ddcd7d7-c0c3-40d1-8dd3-efb0e38e2aed" title="Permalink to this equation">#</a></span>\[\begin{equation} 
 a = \sqrt{\sigma^2 + \omega^2} \quad \mbox{und} \quad \varphi = \arctan\left(\frac{\omega}{\sigma}\right)
 \end{equation}\]</div>
 </div>
 <div class="admonition-exponentialdarstellung admonition">
 <p class="admonition-title">Exponentialdarstellung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-98ffe54a-a7d2-499c-bdce-a44379ff326b">
-<span class="eqno">(15)<a class="headerlink" href="#equation-98ffe54a-a7d2-499c-bdce-a44379ff326b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-47f78740-1641-49b8-84d6-776f73f8ae86">
+<span class="eqno">(15)<a class="headerlink" href="#equation-47f78740-1641-49b8-84d6-776f73f8ae86" title="Permalink to this equation">#</a></span>\[\begin{align}
 \cos(n\omega t) &amp;= \frac{1}{2}\left( e^{j n \omega t} + e^{-jn\omega t}\right), \quad n=0, 1, \ldots \\
 \sin(n\omega t) &amp;= \frac{1}{j2}\left( e^{j n \omega t} - e^{-jn\omega t}\right), \quad n=0, 1, \ldots
 \end{align}\]</div>
 </div>
 <div class="admonition-transformation admonition">
 <p class="admonition-title">Transformation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a4acfbf7-a05c-4686-8bf9-2c3cf237c9e6">
-<span class="eqno">(16)<a class="headerlink" href="#equation-a4acfbf7-a05c-4686-8bf9-2c3cf237c9e6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-149d59b9-57fd-4995-89a2-07625498b481">
+<span class="eqno">(16)<a class="headerlink" href="#equation-149d59b9-57fd-4995-89a2-07625498b481" title="Permalink to this equation">#</a></span>\[\begin{align}
 f(t) &amp;= \hat{A}\cos(\omega t + \varphi_a) \\
 	&amp;= \frac{1}{2} \underbrace{\hat{A} e^{j \varphi_a}}_{Phasor} e^{j \omega t} + \frac{1}{2} \underbrace{\hat{A}
 	e^{-j\varphi_a}}_{Phasor} e^{-j \omega t} \\ 
@@ -688,7 +688,7 @@ Phase in Grad = 45.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x109be4250&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x109b28190&gt;]
 </pre></div>
 </div>
 <img alt="../_images/bad347629d0a8b012d0088cfc5baff173a011b42930d295dbf828c7ef58e2007.png" src="../_images/bad347629d0a8b012d0088cfc5baff173a011b42930d295dbf828c7ef58e2007.png" />
