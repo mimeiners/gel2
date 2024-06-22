@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="de" data-content_root="../" >
+<html lang="de" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Periodische Signale &#8212; M 2.3 Grundlagen der Elektrotechnik (GEL2)</title>
   
@@ -28,30 +29,32 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../_static/documentation_options.js?v=91fba89f"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -87,21 +90,11 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/translations.js?v=70a09b52"></script>
+    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercise/hw1';</script>
@@ -256,6 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/7_KWR.html">Komplexe Wechselstromrechnung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/8_Filterschaltungen.html">Bode-Diagramme, Ortskurven, Filterschaltungen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/9_Schwingkreise.html">Schwingkreise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/10_Transformatoren.html">Transformator</a></li>
 </ul>
 
     </div>
@@ -521,9 +515,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="periodische-signale">
-<h1>Periodische Signale<a class="headerlink" href="#periodische-signale" title="Link to this heading">#</a></h1>
+<h1>Periodische Signale<a class="headerlink" href="#periodische-signale" title="Permalink to this heading">#</a></h1>
 <section id="darstellung-von-signalen">
-<h2>Darstellung von Signalen<a class="headerlink" href="#darstellung-von-signalen" title="Link to this heading">#</a></h2>
+<h2>Darstellung von Signalen<a class="headerlink" href="#darstellung-von-signalen" title="Permalink to this heading">#</a></h2>
 <p>Stellen Sie die Signale des angegebenen Netzwerks mit Python (und/oder von Ihnen gewählten alternativen Softwarepaketen
 des wissenschaflichten Rechnens, z.B. Matlab oder Gnu Octave) dar.</p>
 <p>Die Komponenten Werte sind: <span class="math notranslate nohighlight">\(\omega\)</span> = <span class="math notranslate nohighlight">\(2 \pi\)</span> 1 kHz, <span class="math notranslate nohighlight">\(\hat{U}_0\)</span> = 10 V, <span class="math notranslate nohighlight">\(R\)</span> = 30 <span class="math notranslate nohighlight">\(\Omega\)</span>, <span class="math notranslate nohighlight">\(L\)</span> = 3 mH,
@@ -531,11 +525,11 @@ des wissenschaflichten Rechnens, z.B. Matlab oder Gnu Octave) dar.</p>
 <figure class="align-default" id="fig-hw1p1">
 <a class="reference internal image-reference" href="../_images/hw1p1.png"><img alt="../_images/hw1p1.png" src="../_images/hw1p1.png" style="height: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Abb. 7 </span><span class="caption-text">Wechselstromschaltung.</span><a class="headerlink" href="#fig-hw1p1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 7 </span><span class="caption-text">Wechselstromschaltung.</span><a class="headerlink" href="#fig-hw1p1" title="Link zu diesem Bild">#</a></p>
 </figcaption>
 </figure>
 <section id="losung">
-<h3>Lösung<a class="headerlink" href="#losung" title="Link to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#losung" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -570,23 +564,23 @@ des wissenschaflichten Rechnens, z.B. Matlab oder Gnu Octave) dar.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a5f207f2725206d76388330fc312fcc9e297a74f6374e0c7773b83d6d270e8b3.png" src="../_images/a5f207f2725206d76388330fc312fcc9e297a74f6374e0c7773b83d6d270e8b3.png" />
+<img alt="../_images/42ecb8fc6c21c74ea5b4355e778b0dcdc2c2521f73d70324bc93733611dc78ed.png" src="../_images/42ecb8fc6c21c74ea5b4355e778b0dcdc2c2521f73d70324bc93733611dc78ed.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="uberlagerung-von-sinusformigen-spannungen-mit-verschiedenen-frequenzen">
-<h2>Überlagerung von sinusförmigen Spannungen mit verschiedenen Frequenzen<a class="headerlink" href="#uberlagerung-von-sinusformigen-spannungen-mit-verschiedenen-frequenzen" title="Link to this heading">#</a></h2>
+<h2>Überlagerung von sinusförmigen Spannungen mit verschiedenen Frequenzen<a class="headerlink" href="#uberlagerung-von-sinusformigen-spannungen-mit-verschiedenen-frequenzen" title="Permalink to this heading">#</a></h2>
 <p>Der zeitliche Verlauf einer Spannung mit <span class="math notranslate nohighlight">\(\omega_2 = 3 \omega_1\)</span> sei gegeben durch</p>
 <div class="math notranslate nohighlight">
 \[
 u(t) = U_0 + \hat{U}_1 \cos(\omega_1 t) + \hat{U}_2 \cos(\omega_2 t + \varphi).
 \]</div>
 <section id="periodendauer">
-<h3>Periodendauer<a class="headerlink" href="#periodendauer" title="Link to this heading">#</a></h3>
+<h3>Periodendauer<a class="headerlink" href="#periodendauer" title="Permalink to this heading">#</a></h3>
 <p>Wie groß ist die Periodendauer <span class="math notranslate nohighlight">\(T\)</span>?</p>
 <section id="id1">
-<h4>Lösung<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<h4>Lösung<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <p>Die Periodendauer <span class="math notranslate nohighlight">\(T\)</span> ist der kleinste Zeitabschnitt mit <span class="math notranslate nohighlight">\(u(t+T)=u(t)\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -595,10 +589,10 @@ T = \frac{2 \pi}{\omega_1}
 </section>
 </section>
 <section id="mittelwert">
-<h3>Mittelwert<a class="headerlink" href="#mittelwert" title="Link to this heading">#</a></h3>
+<h3>Mittelwert<a class="headerlink" href="#mittelwert" title="Permalink to this heading">#</a></h3>
 <p>Berechnen Sie den Mittelwert der Spannung <span class="math notranslate nohighlight">\(u(t)\)</span>!</p>
 <section id="id2">
-<h4>Lösung<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<h4>Lösung<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[
 \overline{u(t)} = \frac{1}{T} \int_0^T u(t) dt = U_0
@@ -606,7 +600,7 @@ T = \frac{2 \pi}{\omega_1}
 </section>
 </section>
 <section id="effektivwert">
-<h3>Effektivwert<a class="headerlink" href="#effektivwert" title="Link to this heading">#</a></h3>
+<h3>Effektivwert<a class="headerlink" href="#effektivwert" title="Permalink to this heading">#</a></h3>
 <p>Berechnen Sie den Effektivwert <span class="math notranslate nohighlight">\(U_{eff}\)</span> der Spannung <span class="math notranslate nohighlight">\(u(t)\)</span>! Wie läßt sich <span class="math notranslate nohighlight">\(U_{eff}\)</span> aus den Effektivwerten der
 drei Einzelspannungen berechnen?</p>
 <div class="admonition hint">
@@ -619,9 +613,9 @@ drei Einzelspannungen berechnen?</p>
 \]</div>
 </div>
 <section id="id3">
-<h4>Lösung<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
-<div class="amsmath math notranslate nohighlight" id="equation-f633e21a-4027-45ef-91ec-28f100e4c251">
-<span class="eqno">(44)<a class="headerlink" href="#equation-f633e21a-4027-45ef-91ec-28f100e4c251" title="Permalink to this equation">#</a></span>\[\begin{align}
+<h4>Lösung<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<div class="amsmath math notranslate nohighlight" id="equation-6292a9f0-8259-443a-98d0-39ae83e581cf">
+<span class="eqno">(44)<a class="headerlink" href="#equation-6292a9f0-8259-443a-98d0-39ae83e581cf" title="Permalink to this equation">#</a></span>\[\begin{align}
 U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 &amp;= \frac{1}{T} \int_0^{T} ( U_0 + \hat{U}_1 \cos(\omega_1 t) + \hat{U}_2 \cos(\omega_2 t + \varphi) )^2 \\
 &amp;= \frac{1}{T} \int_0^{T} (  U^2_0 + 2U_0\hat{U}_1\cos(\omega_1t) + 2U_0\hat{U}_2\cos(\omega_2 t + \varphi) \\
@@ -633,7 +627,7 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 </section>
 </section>
 <section id="scheitelfaktor">
-<h3>Scheitelfaktor<a class="headerlink" href="#scheitelfaktor" title="Link to this heading">#</a></h3>
+<h3>Scheitelfaktor<a class="headerlink" href="#scheitelfaktor" title="Permalink to this heading">#</a></h3>
 <p>Wie groß ist der Scheitelfaktor <span class="math notranslate nohighlight">\(U_{max}/U_{eff}\)</span>, wenn <span class="math notranslate nohighlight">\(U_0\)</span> = 1 V, <span class="math notranslate nohighlight">\(\hat{U}_1\)</span> = <span class="math notranslate nohighlight">\(\hat{U}_2\)</span> = 100 mV und
 <span class="math notranslate nohighlight">\(\varphi\)</span> = 60 Grad?</p>
 <div class="cell docutils container">
@@ -695,7 +689,7 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/216ea7fed096d2f8c5b3571f6ce5ea7fa6a951e6ec9d62a7923994421bd16e65.png" src="../_images/216ea7fed096d2f8c5b3571f6ce5ea7fa6a951e6ec9d62a7923994421bd16e65.png" />
+<img alt="../_images/c7371f0337a776450e6c3442bbc4cc691a6dd36d405b53177fc98ef2f40effcf.png" src="../_images/c7371f0337a776450e6c3442bbc4cc691a6dd36d405b53177fc98ef2f40effcf.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Der Mittelwert: 1.0
 Der Effektivwert: 1.004987562112089
 Der Scheitelfaktor: -0.31462061084367027
@@ -704,9 +698,9 @@ Der Scheitelfaktor: -0.31462061084367027
 </div>
 </div>
 <section id="id4">
-<h4>Lösung<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
-<div class="amsmath math notranslate nohighlight" id="equation-71528687-454d-4e82-8f81-adfe36cd7672">
-<span class="eqno">(45)<a class="headerlink" href="#equation-71528687-454d-4e82-8f81-adfe36cd7672" title="Permalink to this equation">#</a></span>\[\begin{align}
+<h4>Lösung<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<div class="amsmath math notranslate nohighlight" id="equation-4c815283-d0e0-47fd-aad1-daf1f67abd4e">
+<span class="eqno">(45)<a class="headerlink" href="#equation-4c815283-d0e0-47fd-aad1-daf1f67abd4e" title="Permalink to this equation">#</a></span>\[\begin{align}
 U_{max} &amp;= u(t_{max}); \quad \left. \frac{du(t)}{dt} \right\lvert_{t=t_{max}} = 0 \\
 \frac{du(t)}{dt} &amp;= -\hat{U}_1\omega_1\sin(\omega_1 t) - \hat{U}_2 \omega_2\sin(\omega_2 t + \varphi) \\
 \sin(3\omega_1 t_{max} + \varphi) &amp;= -\frac{\hat{U}_1}{2\hat{U}_2}\sin(\omega_1 t_{max}) \\
@@ -725,43 +719,43 @@ Daraus ergeben sich <span class="math notranslate nohighlight">\(U_{max}\)</span
 </section>
 </section>
 <section id="schaltungsberechnung-in-reeller-schreibweise">
-<h2>Schaltungsberechnung in reeller Schreibweise<a class="headerlink" href="#schaltungsberechnung-in-reeller-schreibweise" title="Link to this heading">#</a></h2>
+<h2>Schaltungsberechnung in reeller Schreibweise<a class="headerlink" href="#schaltungsberechnung-in-reeller-schreibweise" title="Permalink to this heading">#</a></h2>
 <figure class="align-default" id="fig-hw1p3">
 <a class="reference internal image-reference" href="../_images/hw1p3.png"><img alt="../_images/hw1p3.png" src="../_images/hw1p3.png" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Abb. 8 </span><span class="caption-text">Netzwerk zur Schaltungsanalyse.</span><a class="headerlink" href="#fig-hw1p3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 8 </span><span class="caption-text">Netzwerk zur Schaltungsanalyse.</span><a class="headerlink" href="#fig-hw1p3" title="Link zu diesem Bild">#</a></p>
 </figcaption>
 </figure>
 <p>Gegeben sei die in <a class="reference internal" href="#fig-hw1p3"><span class="std std-numref">Abb. 8</span></a> skizzierte Schaltung mit einer Wechselstromquelle <span class="math notranslate nohighlight">\(i_0(t)=\hat{I}_0
 \sin(\omega t)\)</span>.</p>
 <section id="amplitude-und-phase">
-<h3>Amplitude und Phase<a class="headerlink" href="#amplitude-und-phase" title="Link to this heading">#</a></h3>
+<h3>Amplitude und Phase<a class="headerlink" href="#amplitude-und-phase" title="Permalink to this heading">#</a></h3>
 <p>Berechnen Sie Amplitude und Phasenwinkel jeweils von <span class="math notranslate nohighlight">\(u(t)\)</span>, <span class="math notranslate nohighlight">\(i_C(t)\)</span> und <span class="math notranslate nohighlight">\(i_R(t)\)</span>!</p>
 <section id="id5">
-<h4>Lösung<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<h4>Lösung<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
 <p>Sei <span class="math notranslate nohighlight">\(u(t)=\hat{U} \sin(\omega t + \varphi_u)\)</span>, dann ergeben sich die Ströme zu:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6e06e7b4-f370-4e03-993f-222eab85fd85">
-<span class="eqno">(46)<a class="headerlink" href="#equation-6e06e7b4-f370-4e03-993f-222eab85fd85" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-dfb5a164-5e45-4101-9608-baadd676ffca">
+<span class="eqno">(46)<a class="headerlink" href="#equation-dfb5a164-5e45-4101-9608-baadd676ffca" title="Permalink to this equation">#</a></span>\[\begin{align}
 i_C(t) &amp;= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2}) = -\omega C \hat{U} \cos(\omega t + \varphi_u) \\
 i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 \end{align}\]</div>
 <p>Knotengleichung: <span class="math notranslate nohighlight">\(i_0(t) = i_C(t) + i_R(t)\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-52c6f79b-267b-43b8-be53-d999911b1037">
-<span class="eqno">(47)<a class="headerlink" href="#equation-52c6f79b-267b-43b8-be53-d999911b1037" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-48d94e89-a17e-46b4-b824-34cb1e18aa59">
+<span class="eqno">(47)<a class="headerlink" href="#equation-48d94e89-a17e-46b4-b824-34cb1e18aa59" title="Permalink to this equation">#</a></span>\[\begin{align}
 \hat{I}_0 \sin(\omega t) &amp;= -\omega C \hat{U} \cos(\omega t + \varphi_u) + \frac{\hat{U}}{R} \sin(\omega t + \varphi_u) \\
 \hat{I}_0 \sin(m - \varphi_u) &amp;= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m), \quad m=\omega t + \varphi_u \\
 \hat{I}_0 \left( \sin(m) \cos(\varphi_u) - \cos(m) \sin(\varphi_u) \right) &amp;= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m) \\
 \end{align}\]</div>
 <p>Koeffizientenvergleich:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-34dedfdc-b777-4162-acc7-f4669c59eb46">
-<span class="eqno">(48)<a class="headerlink" href="#equation-34dedfdc-b777-4162-acc7-f4669c59eb46" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bde6930a-c93b-4a6f-a990-2606d00508a9">
+<span class="eqno">(48)<a class="headerlink" href="#equation-bde6930a-c93b-4a6f-a990-2606d00508a9" title="Permalink to this equation">#</a></span>\[\begin{align}
 \hat{I}_0 \cos(\varphi_u) &amp;= \frac{\hat{U}}{R} \\
 \hat{I}_0 \sin(\varphi_u) &amp;= -\omega C \hat{U} \\
 \tan{\varphi_u} = \frac{\sin(\varphi_u)}{\cos(\varphi_u)} &amp;= \frac{-\omega C \hat{U}}{\frac{\hat{U}}{R}} = -\omega R C \\
 \varphi_u &amp;= \arctan(-\omega R C)
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-62200abc-18f7-4667-a562-16af3528d708">
-<span class="eqno">(49)<a class="headerlink" href="#equation-62200abc-18f7-4667-a562-16af3528d708" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-946347a9-f4c2-4661-ac52-8face6ab2ac4">
+<span class="eqno">(49)<a class="headerlink" href="#equation-946347a9-f4c2-4661-ac52-8face6ab2ac4" title="Permalink to this equation">#</a></span>\[\begin{align}
 \hat{I}_0 \cos(\varphi_u) &amp;= \frac{\hat{U}}{R} \\
 \hat{U} &amp;= R \hat{I} \cos{\varphi_u} = R \hat{I} \frac{1}{\sqrt{1+\tan^2(\varphi)}} \\
 &amp;= \frac{R \hat{I}}{\sqrt{1+(\omega R C)^2}} \\
@@ -771,7 +765,7 @@ i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 </section>
 </section>
 <section id="spannungsverlaufe">
-<h3>Spannungsverläufe<a class="headerlink" href="#spannungsverlaufe" title="Link to this heading">#</a></h3>
+<h3>Spannungsverläufe<a class="headerlink" href="#spannungsverlaufe" title="Permalink to this heading">#</a></h3>
 <p>Skizzieren Sie mithilfe von Python <span class="math notranslate nohighlight">\(i_0(t)\)</span>, <span class="math notranslate nohighlight">\(u(t)\)</span>, <span class="math notranslate nohighlight">\(i_C(t)\)</span> und <span class="math notranslate nohighlight">\(i_R(t)\)</span> für
 <span class="math notranslate nohighlight">\(\hat{I}_0\)</span> = 14.1 mA, <span class="math notranslate nohighlight">\(f\)</span> = 3.183 kHz, <span class="math notranslate nohighlight">\(R\)</span> = 50 <span class="math notranslate nohighlight">\(\Omega\)</span> und <span class="math notranslate nohighlight">\(C\)</span> = 1 <span class="math notranslate nohighlight">\(\mu\)</span> F!</p>
 <div class="cell docutils container">
@@ -807,11 +801,11 @@ i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fccfdc78cfedbc5720f2b4aa9d64c6b0e8e6ec7e54c4aaf86f2ea2e3a2732402.png" src="../_images/fccfdc78cfedbc5720f2b4aa9d64c6b0e8e6ec7e54c4aaf86f2ea2e3a2732402.png" />
+<img alt="../_images/4961e61bb5ce618a412ca0d03386f24438808c13a7f006923ff85585989b4d5c.png" src="../_images/4961e61bb5ce618a412ca0d03386f24438808c13a7f006923ff85585989b4d5c.png" />
 </div>
 </div>
 <section id="id6">
-<h4>Lösung<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<h4>Lösung<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
 <p>Mit den Werten ergeben sich folgende Spannungs- und Stromverläufe:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(i_0(t)\)</span> = 14.1 mA <span class="math notranslate nohighlight">\(\sin(\omega t)\)</span></p></li>
@@ -823,17 +817,17 @@ i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 </section>
 </section>
 <section id="phasenanschnittsteuerung">
-<h2>Phasenanschnittsteuerung<a class="headerlink" href="#phasenanschnittsteuerung" title="Link to this heading">#</a></h2>
+<h2>Phasenanschnittsteuerung<a class="headerlink" href="#phasenanschnittsteuerung" title="Permalink to this heading">#</a></h2>
 <figure class="align-default" id="fig-hw1p4a">
 <a class="reference internal image-reference" href="../_images/hw1p4a.png"><img alt="../_images/hw1p4a.png" src="../_images/hw1p4a.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Abb. 9 </span><span class="caption-text">Halbwelle.</span><a class="headerlink" href="#fig-hw1p4a" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 9 </span><span class="caption-text">Halbwelle.</span><a class="headerlink" href="#fig-hw1p4a" title="Link zu diesem Bild">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="fig-hw1p4b">
 <a class="reference internal image-reference" href="../_images/hw1p4b.png"><img alt="../_images/hw1p4b.png" src="../_images/hw1p4b.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Abb. 10 </span><span class="caption-text">Vollwelle.</span><a class="headerlink" href="#fig-hw1p4b" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 10 </span><span class="caption-text">Vollwelle.</span><a class="headerlink" href="#fig-hw1p4b" title="Link zu diesem Bild">#</a></p>
 </figcaption>
 </figure>
 <p>Das Prinzip der Phasenanschnittsteuerung, bei dem gem. <a class="reference internal" href="#fig-hw1p4a"><span class="std std-numref">Abb. 9</span></a> oder <a class="reference internal" href="#fig-hw1p4b"><span class="std std-numref">Abb. 10</span></a> der
@@ -843,16 +837,16 @@ elektronisch mit Thyristoren im Bereich <span class="math notranslate nohighligh
 <p>In den hier zu untersuchenden Fällen (a) und (b) wird ein ohmscher Verbraucher mit <span class="math notranslate nohighlight">\(R\)</span> = 100 <span class="math notranslate nohighlight">\(\Omega\)</span> mit Netzspannung
 (<span class="math notranslate nohighlight">\(U_{0,eff}\)</span> = 230 V, <span class="math notranslate nohighlight">\(\omega\)</span> = 2 <span class="math notranslate nohighlight">\(\pi\)</span> 50 Hz) und Phasenanschnittsteuerung betrieben.</p>
 <section id="aufgabe">
-<h3>Aufgabe<a class="headerlink" href="#aufgabe" title="Link to this heading">#</a></h3>
+<h3>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this heading">#</a></h3>
 <p>Berechnen und skizzieren Sie für den durch den Verbraucherwiderstand <span class="math notranslate nohighlight">\(R\)</span> fließenden Strom <span class="math notranslate nohighlight">\(i(t)\)</span> jeweils Mittelwert,
 Gleichrichtmittelwert und Effektivwert als Funktion vom Phasenanschnittwinkel <span class="math notranslate nohighlight">\(\alpha\)</span>!</p>
 <section id="id7">
-<h4>Lösung<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
+<h4>Lösung<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p>Halbwelle</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-c772083e-3902-455a-bad2-bda2602f78d8">
-<span class="eqno">(50)<a class="headerlink" href="#equation-c772083e-3902-455a-bad2-bda2602f78d8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-03691374-d4fb-4ffe-8d2e-6242b241372a">
+<span class="eqno">(50)<a class="headerlink" href="#equation-03691374-d4fb-4ffe-8d2e-6242b241372a" title="Permalink to this equation">#</a></span>\[\begin{align}
 \overline{i(t)} &amp;= \frac{1}{T} \int_0^{T} i(t) d t &amp; &amp;= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{I}\sin(\varphi) d \varphi \\
 &amp;= \frac{\hat{I}}{2\pi} \left[ -\cos(\varphi) \right]_{\alpha}^{\pi} &amp; &amp;= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
 \overline{\lvert i(t) \lvert} &amp;= \frac{1}{T} \int_0^{T} \lvert i(t) \lvert d t &amp; &amp;= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
@@ -864,8 +858,8 @@ I_{eff} &amp;= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{4\pi}} 
 <ol class="arabic simple" start="2">
 <li><p>Vollwelle</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-2031503b-ce8a-4205-b880-515a3b74f15a">
-<span class="eqno">(51)<a class="headerlink" href="#equation-2031503b-ce8a-4205-b880-515a3b74f15a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6edb30df-a10e-40a4-94e9-47fc303e7ba9">
+<span class="eqno">(51)<a class="headerlink" href="#equation-6edb30df-a10e-40a4-94e9-47fc303e7ba9" title="Permalink to this equation">#</a></span>\[\begin{align}
 \overline{i(t)} &amp;= 0 \\
 \overline{\lvert i(t) \lvert} &amp;=  2 \cdot \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] = \frac{\hat{I}}{\pi} \left[ 1+\cos(\varphi) \right] \\
 I^2_{eff} &amp;= 2 \cdot \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\

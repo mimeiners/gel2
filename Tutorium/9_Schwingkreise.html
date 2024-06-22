@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="de" data-content_root="../" >
+<html lang="de" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>8. Schwingkreise &#8212; M 2.3 Grundlagen der Elektrotechnik (GEL2)</title>
   
@@ -28,30 +29,32 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../_static/documentation_options.js?v=91fba89f"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -87,27 +90,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/translations.js?v=70a09b52"></script>
+    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorium/9_Schwingkreise';</script>
     <link rel="canonical" href="https://mimeiners.github.io/gel2/Tutorium/9_Schwingkreise.html" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="9. Transformator" href="10_Transformatoren.html" />
     <link rel="prev" title="7. Filterschaltungen, Bode-Diagramme und Ortskurven" href="8_Filterschaltungen.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="de"/>
@@ -255,6 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="7_KWR.html">Komplexe Wechselstromrechnung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8_Filterschaltungen.html">Bode-Diagramme, Ortskurven, Filterschaltungen</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Schwingkreise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Transformatoren.html">Transformator</a></li>
 </ul>
 
     </div>
@@ -497,7 +492,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="schwingkreise">
-<h1>8. Schwingkreise<a class="headerlink" href="#schwingkreise" title="Link to this heading">#</a></h1>
+<h1>8. Schwingkreise<a class="headerlink" href="#schwingkreise" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Reihenschwingkreis</p>
 <ul>
@@ -513,7 +508,7 @@ document.write(`
 </li>
 </ul>
 <section id="schwingkreis">
-<h2>Schwingkreis<a class="headerlink" href="#schwingkreis" title="Link to this heading">#</a></h2>
+<h2>Schwingkreis<a class="headerlink" href="#schwingkreis" title="Permalink to this heading">#</a></h2>
 <p>Wenn man in der Elektrotechnik von „Schwingen“ redet, dann versteht man darunter den wiederholten, wechselseitigen
 Energieaustausch, der zwischen zwei oder mehr Speichern passieren kann. Die Speicher sind für verschiedene Energieformen
 und wenn man in Form von Schaltelementen denkt, dann entsteht diese Speicherung durch elektrische und magnetische
@@ -524,17 +519,17 @@ Wirkwiderstand R hinzu. Diese Bauteile können in Form eines Reihenschwingkreise
 sein.</p>
 </section>
 <section id="reihenschwingkreis">
-<h2>Reihenschwingkreis<a class="headerlink" href="#reihenschwingkreis" title="Link to this heading">#</a></h2>
+<h2>Reihenschwingkreis<a class="headerlink" href="#reihenschwingkreis" title="Permalink to this heading">#</a></h2>
 <figure class="align-default" id="fig-tutchap9-reihenschwingkreis">
 <img alt="../_images/chap9_reihenschwingkreis.png" src="../_images/chap9_reihenschwingkreis.png" />
 </figure>
-<p><span id="id1">[<a class="reference internal" href="#id40">Schenke, 2023</a>]</span></p>
+<p><span id="id1">[<a class="reference internal" href="#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>Es muss eine Kreisfrequenz geben, bei der diese Schaltung den maximalen Strom leitet. Aus dem Ohmschen Gesetzt weiß man,
 dass der Strom maximal ist, wenn der Widerstand (in diesem Fall die Impedanz) minimal ist.</p>
 <div class="math notranslate nohighlight">
 \[\underline{Z} = R + j\omega L + \frac{1}{j\omega C} = R + j\left(\omega L - \frac{1}{\omega C}\right)\]</div>
 <section id="resonanzfrequenz">
-<h3>Resonanzfrequenz<a class="headerlink" href="#resonanzfrequenz" title="Link to this heading">#</a></h3>
+<h3>Resonanzfrequenz<a class="headerlink" href="#resonanzfrequenz" title="Permalink to this heading">#</a></h3>
 <p>Gibt es eine Frequenz, die dafür sorgt, dass der Imaginärteil der Impedanz zu null wird?</p>
 <div class="math notranslate nohighlight">
 \[Im(\underline{Z}) = 0\]</div>
@@ -547,7 +542,7 @@ dass der Strom maximal ist, wenn der Widerstand (in diesem Fall die Impedanz) mi
 \[P_{max} = I_{max}^2 \cdot R\]</div>
 </section>
 <section id="bandbreite-und-gute">
-<h3>Bandbreite und Güte<a class="headerlink" href="#bandbreite-und-gute" title="Link to this heading">#</a></h3>
+<h3>Bandbreite und Güte<a class="headerlink" href="#bandbreite-und-gute" title="Permalink to this heading">#</a></h3>
 <p>Bei den „Grenzfrequenzen“ des Schwingkreises wird die Hälfte der Leistung aufgenommen, also:</p>
 <div class="math notranslate nohighlight">
 \[P_{1,2} = \frac{I_{max}^2 \cdot R}{2}\]</div>
@@ -562,22 +557,22 @@ dass der Strom maximal ist, wenn der Widerstand (in diesem Fall die Impedanz) mi
 <figure class="align-default" id="fig-tutchap9-reihenschwingkreis-bandbreite">
 <img alt="../_images/chap9_reihenschwingkreis-bandbreite.png" src="../_images/chap9_reihenschwingkreis-bandbreite.png" />
 </figure>
-<p><span id="id2">[<a class="reference internal" href="#id40">Schenke, 2023</a>]</span></p>
+<p><span id="id2">[<a class="reference internal" href="#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 </section>
 </section>
 <section id="parallelschwingkreis">
-<h2>Parallelschwingkreis<a class="headerlink" href="#parallelschwingkreis" title="Link to this heading">#</a></h2>
+<h2>Parallelschwingkreis<a class="headerlink" href="#parallelschwingkreis" title="Permalink to this heading">#</a></h2>
 <figure class="align-default" id="fig-tutchap9-parallelschwingkreis">
 <img alt="../_images/chap9_parallelschwingkreis.png" src="../_images/chap9_parallelschwingkreis.png" />
 </figure>
-<p><span id="id3">[<a class="reference internal" href="#id40">Schenke, 2023</a>]</span></p>
+<p><span id="id3">[<a class="reference internal" href="#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>Es muss eine Kreisfrequenz geben, bei der diese Schaltung die maximale Spannung hat. Aus dem Ohmschen Gesetzt weiß man,
 dass die Spannung maximal ist, wenn der Widerstand (in diesem Fall die Impedanz) maximal ist. Alternativ kann man sich
 auch die Admittanz ansehen, die müsste jedoch dann minimal werden.</p>
 <div class="math notranslate nohighlight">
 \[\underline{Y} = \frac{1}{R} + j\omega C + \frac{1}{j\omega L} = \frac{1}{R} + j\left(\omega C - \frac{1}{\omega L}\right)\]</div>
 <section id="id4">
-<h3>Resonanzfrequenz<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h3>Resonanzfrequenz<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <p>Gibt es eine Frequenz, die dafür sorgt, dass der Imaginärteil der Admittanz zu null wird?</p>
 <div class="math notranslate nohighlight">
 \[Im(\underline{Y}) = 0\]</div>
@@ -590,7 +585,7 @@ auch die Admittanz ansehen, die müsste jedoch dann minimal werden.</p>
 \[P_{max} = \frac{U_{max}^2}{R}\]</div>
 </section>
 <section id="id5">
-<h3>Bandbreite und Güte<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<h3>Bandbreite und Güte<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <p>Bei den „Grenzfrequenzen“ des Schwingkreises wird die Hälfte der Leistung aufgenommen, also:</p>
 <div class="math notranslate nohighlight">
 \[P_{1,2} = \frac{U_{max}^2}{2R}\]</div>
@@ -605,9 +600,9 @@ auch die Admittanz ansehen, die müsste jedoch dann minimal werden.</p>
 </section>
 </section>
 <section id="ubungen">
-<h2>Übungen<a class="headerlink" href="#ubungen" title="Link to this heading">#</a></h2>
+<h2>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this heading">#</a></h2>
 <section id="ubung-9-1">
-<h3>Übung 9.1<a class="headerlink" href="#ubung-9-1" title="Link to this heading">#</a></h3>
+<h3>Übung 9.1<a class="headerlink" href="#ubung-9-1" title="Permalink to this heading">#</a></h3>
 <p>(Hagmann Aufgabe 10.1)</p>
 <p>Der im Bild dargestellte Reihenschwingkreis enthält die Wirkwiderstände <span class="math notranslate nohighlight">\(R_1 = 400\,\Omega\)</span> und <span class="math notranslate nohighlight">\(R_2 = 100\,\Omega\)</span> sowie eine Spule mit der Induktivität <span class="math notranslate nohighlight">\(L = 32\,mH\)</span> und einen Kondensator mit der Kapazität <span class="math notranslate nohighlight">\(C = 1\,\mu F\)</span>.</p>
 <p>a) Wie groß ist die Resonanzfrequenz <span class="math notranslate nohighlight">\(f_r\)</span> der Schaltung?</p>
@@ -645,7 +640,7 @@ Z_r = Re(\underline{Z}) = R_2 + \frac{\frac{1}{R_1}}{\left( \frac{1}{R_1} \right
 </div>
 </section>
 <section id="ubung-9-2">
-<h3>Übung 9.2<a class="headerlink" href="#ubung-9-2" title="Link to this heading">#</a></h3>
+<h3>Übung 9.2<a class="headerlink" href="#ubung-9-2" title="Permalink to this heading">#</a></h3>
 <p>(Hagmann Augabe 10.2)</p>
 <p>Der im Bild dargestellte Parallelschwingkreis enthält den Wirkwiderstand <span class="math notranslate nohighlight">\(R = 20\,\Omega\)</span> und eine Spule mit der Induktivität <span class="math notranslate nohighlight">\(L = 10\,mH\)</span>. Die Kapazität <span class="math notranslate nohighlight">\(C\)</span> des vorhandenen Kondensators soll so gewählt werden, das sich die Schaltung im Resonanzzustand befindet. Die Versorgungsspannung beträgt <span class="math notranslate nohighlight">\(U = 20\,V\)</span>. Sie hat die Frequenz <span class="math notranslate nohighlight">\(f = 800\,Hz\)</span>.</p>
 <p>a) Welche Kapazität <span class="math notranslate nohighlight">\(C\)</span> muss der Kondensator haben?</p>
@@ -677,7 +672,7 @@ Z_r = Re(\underline{Z}) = R_2 + \frac{\frac{1}{R_1}}{\left( \frac{1}{R_1} \right
 </div>
 </section>
 <section id="ubung-9-3">
-<h3>Übung 9.3<a class="headerlink" href="#ubung-9-3" title="Link to this heading">#</a></h3>
+<h3>Übung 9.3<a class="headerlink" href="#ubung-9-3" title="Permalink to this heading">#</a></h3>
 <p>(Hagmann Aufgabe 10.5)</p>
 <p>Der im Bild (a) dargestellte Reihenschwingkreis liegt an einer Wechselspannung von <span class="math notranslate nohighlight">\(U = 60\,V\)</span> mit veränderbarer Frequenz. Von der Schaltung ist die in Bild (b) angegebene Resonanzkurve bekannt. Hierbei stellen <span class="math notranslate nohighlight">\(I\)</span> den im Kreis fließenden Strom und <span class="math notranslate nohighlight">\(\omega\)</span> die Kreisfrequenz der Wechselspannung dar.</p>
 <p>Welche Werte haben der Wirkwiderstand <span class="math notranslate nohighlight">\(R\)</span>, die Induktivität <span class="math notranslate nohighlight">\(L\)</span> und die Kapazität <span class="math notranslate nohighlight">\(C\)</span> der Schaltung?</p>
@@ -716,20 +711,16 @@ Z_r = Re(\underline{Z}) = R_2 + \frac{\frac{1}{R_1}}{\left( \frac{1}{R_1} \right
 </section>
 </section>
 <section id="quellen">
-<h2>Quellen<a class="headerlink" href="#quellen" title="Link to this heading">#</a></h2>
+<h2>Quellen<a class="headerlink" href="#quellen" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id9">
-<div role="list" class="citation-list">
-<div class="citation" id="id27" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Hag19<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id6">1</a>,<a role="doc-backlink" href="#id7">2</a>,<a role="doc-backlink" href="#id8">3</a>)</span>
-<p>Gert Hagmann. <em>Aufgabensammlung zu den Grundlagen der Elektrotechnik</em>. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.</p>
-</div>
-<div class="citation" id="id40" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Sch23<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id3">3</a>)</span>
-<p><strong>missing institution in schenke2023</strong></p>
-</div>
-</div>
+<dl class="citation">
+<dt class="label" id="id27"><span class="brackets">Hag19</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id7">2</a>,<a href="#id8">3</a>)</span></dt>
+<dd><p>Gert Hagmann. <em>Aufgabensammlung zu den Grundlagen der Elektrotechnik</em>. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.</p>
+</dd>
+<dt class="label" id="id40"><span class="brackets">Sch23</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>)</span></dt>
+<dd><p>Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: <a class="reference external" href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a>.</p>
+</dd>
+</dl>
 </div>
 </section>
 </section>
@@ -772,6 +763,15 @@ Z_r = Re(\underline{Z}) = R_2 + \frac{\frac{1}{R_1}}{\left( \frac{1}{R_1} \right
         <p class="prev-next-subtitle">zurück</p>
         <p class="prev-next-title">7. Filterschaltungen, Bode-Diagramme und Ortskurven</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="10_Transformatoren.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">weiter</p>
+        <p class="prev-next-title">9. Transformator</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

@@ -1,0 +1,11 @@
+* UEBUNGSZETTEL 1, AUFG 1
+
+* Netzliste
+V1 vr1 0 SINE(0 10 1e3)
+R1 vr1 vl1 30
+L1 vl1 0 3e-3
+
+* ANALYSE
+.tran 0 5m 0 0.1m
+
+.end

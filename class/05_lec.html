@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="de" data-content_root="../" >
+<html lang="de" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Grafische Analysemethoden / Darstellungen im Frequenzbereich &#8212; M 2.3 Grundlagen der Elektrotechnik (GEL2)</title>
   
@@ -28,30 +29,32 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../_static/documentation_options.js?v=91fba89f"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -87,21 +90,11 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/translations.js?v=70a09b52"></script>
+    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'class/05_lec';</script>
@@ -256,6 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/7_KWR.html">Komplexe Wechselstromrechnung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/8_Filterschaltungen.html">Bode-Diagramme, Ortskurven, Filterschaltungen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/9_Schwingkreise.html">Schwingkreise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/10_Transformatoren.html">Transformator</a></li>
 </ul>
 
     </div>
@@ -506,16 +500,16 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="grafische-analysemethoden-darstellungen-im-frequenzbereich">
-<h1>Grafische Analysemethoden / Darstellungen im Frequenzbereich<a class="headerlink" href="#grafische-analysemethoden-darstellungen-im-frequenzbereich" title="Link to this heading">#</a></h1>
+<h1>Grafische Analysemethoden / Darstellungen im Frequenzbereich<a class="headerlink" href="#grafische-analysemethoden-darstellungen-im-frequenzbereich" title="Permalink to this heading">#</a></h1>
 <section id="bode-diagramm">
-<h2>Bode-Diagramm<a class="headerlink" href="#bode-diagramm" title="Link to this heading">#</a></h2>
+<h2>Bode-Diagramm<a class="headerlink" href="#bode-diagramm" title="Permalink to this heading">#</a></h2>
 <p>„Unter Bode-Diagramm (engl. Bode plot) versteht man eine Darstellung von zwei Funktionsgraphen: Ein Graph zeigt den
 Betrag (Amplitudenverstärkung), der andere das Argument (die Phasenverschiebung) einer komplexwertigen Funktion in
 Abhängigkeit von der Frequenz. Diese Art der Darstellung ist nach Hendrik Wade Bode benannt, welcher diese Diagramme bei
 seinen Arbeiten in den Bell Laboratories in den 1930er Jahren benutzte.“ <span id="id1">[<a class="reference internal" href="#id24" title="Wikipedia. Bode-diagramm — wikipedia, die freie enzyklopädie. 2021. [Online; Stand 25. Mai 2024]. URL: https://de.wikipedia.org/w/index.php?title=Bode-Diagramm&amp;oldid=215892781.">Wikipedia, 2021</a>]</span></p>
 </section>
 <section id="ubertragungsfaktor">
-<h2>Übertragungsfaktor<a class="headerlink" href="#ubertragungsfaktor" title="Link to this heading">#</a></h2>
+<h2>Übertragungsfaktor<a class="headerlink" href="#ubertragungsfaktor" title="Permalink to this heading">#</a></h2>
 <p>Ist die Eingangsgröße <span class="math notranslate nohighlight">\(x(t)\)</span> eines linearen Netzwerks eine sinusförmige Wechselgröße der Kreisfrequenz <span class="math notranslate nohighlight">\(\omega\)</span>, in
 komplexer Schreibweise</p>
 <div class="math notranslate nohighlight">
@@ -565,7 +559,7 @@ t_g(\omega) = \frac{d\varphi}{d\omega}
 <p>verzögert.</p>
 </section>
 <section id="angaben-in-db">
-<h2>Angaben in dB<a class="headerlink" href="#angaben-in-db" title="Link to this heading">#</a></h2>
+<h2>Angaben in dB<a class="headerlink" href="#angaben-in-db" title="Permalink to this heading">#</a></h2>
 <p>Der Wert von Spannungs-, Strom- und Leistungsverstärkungen wird häufig als sog. Verstärkungsmaß <span class="math notranslate nohighlight">\(a\)</span> in (deziBel) dB
 angegeben. Bei Spannungs- und Stromverstärkungen wird hierzu der (Zehner-)Logarithmus von <span class="math notranslate nohighlight">\(A(f)\)</span> mit 20 dB
 multipliziert. Dies führt im Fall der <em>Spannungsverstärkung</em> auf</p>
@@ -593,7 +587,7 @@ aber auch absolute Pegelangaben in dB vorgenommen, wobei eine feste Bezugsgröß
 hier die gebräuchliche „Einheit“ dBm, die für Leistungsangaben verwendet wird und den Effektivwert <span class="math notranslate nohighlight">\(P\)</span> der Leistung
 bezogen auf 1 mW angibt <span class="math notranslate nohighlight">\(P\)</span> in dBm = <span class="math notranslate nohighlight">\(10\,dB \log(P/1\,mW)\)</span>.</p>
 <section id="bode-diagramm-einer-rc-schaltung-hochpass">
-<h3>Bode-Diagramm einer RC-Schaltung (Hochpass)<a class="headerlink" href="#bode-diagramm-einer-rc-schaltung-hochpass" title="Link to this heading">#</a></h3>
+<h3>Bode-Diagramm einer RC-Schaltung (Hochpass)<a class="headerlink" href="#bode-diagramm-einer-rc-schaltung-hochpass" title="Permalink to this heading">#</a></h3>
 <p>Ermitteln Sie den Betrags- und Phasengang der einfachen RC-Schaltung mit Hilfe der komplexen Wechselstromrechnung (KWR).
 Nutzen Sie Python und SPICE zur Darstellung des Bode-Diagramms.</p>
 <div class="cell docutils container">
@@ -634,13 +628,13 @@ Nutzen Sie Python und SPICE zur Darstellung des Bode-Diagramms.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/94102431d2382304022393de1728db467ed54bd5e40d18e728f18af836ff7ff8.png" src="../_images/94102431d2382304022393de1728db467ed54bd5e40d18e728f18af836ff7ff8.png" />
+<img alt="../_images/d635336776e782b2b33b05c00815829aa4ab386bba45aee42573a775df78cebe.png" src="../_images/d635336776e782b2b33b05c00815829aa4ab386bba45aee42573a775df78cebe.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="nyquist-diagramm">
-<h2>Nyquist-Diagramm<a class="headerlink" href="#nyquist-diagramm" title="Link to this heading">#</a></h2>
+<h2>Nyquist-Diagramm<a class="headerlink" href="#nyquist-diagramm" title="Permalink to this heading">#</a></h2>
 <p>„Ein Nyquist-Diagramm, auch als Nyquist-Graph oder Nyquist-Plot bezeichnet, stellt die Ortskurve der Ausgangsgröße eines
 Regelkreises mit der Frequenz als Parameter dar. Es wird in der Regelungstechnik, Verstärkerkonstruktion und
 Signalaufbereitung verwendet, um die Stabilität eines Systems mit Rückkopplung zu beschreiben. Benannt ist es nach dem
@@ -663,7 +657,7 @@ Parameter. Die Zeigerlänge vom Nullpunkt zum Kurvenpunkt auf der Ortskurve ents
 aktuellen Frequenz. Der Phasenwinkel bezogen auf die Re-Achse zählt linksdrehend positiv und rechtsdrehend negativ. Die
 Lote vom Zeigerendpunkt auf die Koordinatenachsen ergeben für die jeweilige Frequenz als Achsenabschnitte die Wirk- und
 Blindkomponente des Systems.“</p>
-<p>Entnommen aus Elektrophysik – Spezielle Grundlagen, <a class="reference external" href="https://elektroniktutor.de/elektrophysik/ortskurv.html">Ortskurve</a> <span id="id3">[<a class="reference internal" href="#id36">Mietke, 2024</a>]</span>.</p>
+<p>Entnommen aus Elektrophysik – Spezielle Grundlagen, <a class="reference external" href="https://elektroniktutor.de/elektrophysik/ortskurv.html">Ortskurve</a> <span id="id3">[<a class="reference internal" href="#id36" title="Detlef Mietke. Elektroniktutor. Technical Report, Oberstufenzentrum für Kommunikations-, Informations- und Medientechnik (OSZ-KIM), Berlin, 2024. URL: https://www.elektroniktutor.de.">Mietke, 2024</a>]</span>.</p>
 <div class="admonition-vergleich-zum-zeigerdiagramm admonition">
 <p class="admonition-title">Vergleich zum Zeigerdiagramm</p>
 <ul class="simple">
@@ -674,7 +668,7 @@ Blindkomponente des Systems.“</p>
 </ul>
 </div>
 <section id="ortskurve-einer-rc-schaltung">
-<h3>Ortskurve einer RC-Schaltung<a class="headerlink" href="#ortskurve-einer-rc-schaltung" title="Link to this heading">#</a></h3>
+<h3>Ortskurve einer RC-Schaltung<a class="headerlink" href="#ortskurve-einer-rc-schaltung" title="Permalink to this heading">#</a></h3>
 <p>Mit den Bauteilen <span class="math notranslate nohighlight">\(R\)</span> = 2 k<span class="math notranslate nohighlight">\(\Omega\)</span> und <span class="math notranslate nohighlight">\(C\)</span> = 159 nF kann eine Reihen- oder Parallelschaltung gebildet werden. Die
 komplexe Impedanz der Reihenschaltung ist von der Frequenz abhängig und grafisch in der komplexen Ebene als Ortskurve
 mit der Frequenz als Parameter dargestellt. Die Blindwiderstandswerte wurden für einen bestimmten Frequenzbereich
@@ -685,7 +679,7 @@ angegebenen gerundeten Rechenwerten des Blindwiderstands, der Impedanz und des P
 <figure class="align-default" id="fig-lec5s2">
 <a class="reference internal image-reference" href="../_images/lec5s2.png"><img alt="../_images/lec5s2.png" src="../_images/lec5s2.png" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Abb. 2 </span><span class="caption-text">RC-Schaltung für eine Ortskurve.</span><a class="headerlink" href="#fig-lec5s2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 2 </span><span class="caption-text">RC-Schaltung für eine Ortskurve.</span><a class="headerlink" href="#fig-lec5s2" title="Link zu diesem Bild">#</a></p>
 </figcaption>
 </figure>
 <div class="math notranslate nohighlight">
@@ -717,16 +711,16 @@ angegebenen gerundeten Rechenwerten des Blindwiderstands, der Impedanz und des P
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/51b692e3010c2a085f6e90974f01afd887c5b4867f81cd518b5ce3194d3f763d.png" src="../_images/51b692e3010c2a085f6e90974f01afd887c5b4867f81cd518b5ce3194d3f763d.png" />
+<img alt="../_images/b96032b3a466d3094602baa92799052d1f0bc1a07ea7ebd839c8fdb5afb70589.png" src="../_images/b96032b3a466d3094602baa92799052d1f0bc1a07ea7ebd839c8fdb5afb70589.png" />
 </div>
 </div>
 <p>„Die Ortskurve kann auch für die Parallelschaltung von R und C mit der Frequenz als Parameter gezeichnet werden. Im
 Polardiagramm wird sie durch die Zeiger aller Gesamtleitwerte oder Admittanzen gebildet und verläuft im 1. Quadranten
 parallel zur imaginären Achse. Die Achsenbezeichnungen der Leitwerte werden in Siemens (S) angeben. Die Phasenwinkel
-sind auf die reelle (Re) Achse bezogen positiv.“ <span id="id4">[<a class="reference internal" href="#id36">Mietke, 2024</a>]</span></p>
+sind auf die reelle (Re) Achse bezogen positiv.“ <span id="id4">[<a class="reference internal" href="#id36" title="Detlef Mietke. Elektroniktutor. Technical Report, Oberstufenzentrum für Kommunikations-, Informations- und Medientechnik (OSZ-KIM), Berlin, 2024. URL: https://www.elektroniktutor.de.">Mietke, 2024</a>]</span></p>
 </section>
 <section id="inversion-von-ortskurven">
-<h3>Inversion von Ortskurven<a class="headerlink" href="#inversion-von-ortskurven" title="Link to this heading">#</a></h3>
+<h3>Inversion von Ortskurven<a class="headerlink" href="#inversion-von-ortskurven" title="Permalink to this heading">#</a></h3>
 <p>„Bei der Konstruktion einer Ortskurve ist es oft notwendig von der Widerstandsform <span class="math notranslate nohighlight">\(\underline{Z}(\omega)\)</span> auf die
 Leitwertsform <span class="math notranslate nohighlight">\(\underline{Y}(\omega)\)</span> überzugehen und umgekehrt. Beide Funktionen gehen jeweils aus der Kehrwertbildung
 der anderen hervor, man nennt sie zueinander inverse Funktionen und die Kehrwertbildung selbst Inversion.“
@@ -773,19 +767,19 @@ Länge des Zeigers <span class="math notranslate nohighlight">\(Z\)</span> mit <
 </section>
 </section>
 <section id="rc-filter">
-<h2>RC-Filter<a class="headerlink" href="#rc-filter" title="Link to this heading">#</a></h2>
+<h2>RC-Filter<a class="headerlink" href="#rc-filter" title="Permalink to this heading">#</a></h2>
 <section id="rc-tiefpasz">
-<h3>RC-Tiefpaß<a class="headerlink" href="#rc-tiefpasz" title="Link to this heading">#</a></h3>
+<h3>RC-Tiefpaß<a class="headerlink" href="#rc-tiefpasz" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="rc-hochpasz">
-<h3>RC-Hochpaß<a class="headerlink" href="#rc-hochpasz" title="Link to this heading">#</a></h3>
+<h3>RC-Hochpaß<a class="headerlink" href="#rc-hochpasz" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="rc-bandpasz">
-<h3>RC-Bandpaß<a class="headerlink" href="#rc-bandpasz" title="Link to this heading">#</a></h3>
+<h3>RC-Bandpaß<a class="headerlink" href="#rc-bandpasz" title="Permalink to this heading">#</a></h3>
 <figure class="align-default" id="fig-lec5bp">
 <a class="reference internal image-reference" href="../_images/lec5bp.pdf"><img alt="../_images/lec5bp.pdf" src="../_images/lec5bp.pdf" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Abb. 3 </span><span class="caption-text">Bode-Diagramm eines Bandpasses</span><a class="headerlink" href="#fig-lec5bp" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 3 </span><span class="caption-text">Bode-Diagramm eines Bandpasses</span><a class="headerlink" href="#fig-lec5bp" title="Link zu diesem Bild">#</a></p>
 </figcaption>
 </figure>
 <p>„Besitzt ein Netzwerk sowohl bei hohen als auch bei tiefen Frequenzen einen Sperrbereich und bei mittleren Frequenzen
@@ -804,23 +798,23 @@ Einfügungsdämpfung bezeichnet.“ <span id="id6">[<a class="reference internal
 <p>„Die als <a class="reference external" href="https://www.elektroniktutor.de/analogtechnik/wien.html">Wien-Glied</a> bezeichnete Schaltung ist ein spezieller
 RC-Bandpass. Im Wien-Robinson-Generator bestimmt dieses Filter die Ausgangsfrequenz. Er generiert Sinusfrequenzen mit
 sehr geringem Klirrfaktor. Im durchstimmbaren Sinusgenerator sind die beiden Widerstände durch gemeinsam einstellbare
-Potentiometer ersetzt. Diese Anordnung gibt es auch in Wechselstrom-Brückenschaltungen.“ <span id="id7">[<a class="reference internal" href="#id36">Mietke, 2024</a>]</span></p>
+Potentiometer ersetzt. Diese Anordnung gibt es auch in Wechselstrom-Brückenschaltungen.“ <span id="id7">[<a class="reference internal" href="#id36" title="Detlef Mietke. Elektroniktutor. Technical Report, Oberstufenzentrum für Kommunikations-, Informations- und Medientechnik (OSZ-KIM), Berlin, 2024. URL: https://www.elektroniktutor.de.">Mietke, 2024</a>]</span></p>
 </section>
 </section>
 <section id="elementtransformation">
-<h2>Elementtransformation<a class="headerlink" href="#elementtransformation" title="Link to this heading">#</a></h2>
+<h2>Elementtransformation<a class="headerlink" href="#elementtransformation" title="Permalink to this heading">#</a></h2>
 <figure class="align-default" id="fig-lec5elemtransf">
 <img alt="../_images/lec5ElemTransf.pdf" src="../_images/lec5ElemTransf.pdf" />
 <figcaption>
-<p><span class="caption-number">Abb. 4 </span><span class="caption-text">Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS</span><a class="headerlink" href="#fig-lec5elemtransf" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 4 </span><span class="caption-text">Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS</span><a class="headerlink" href="#fig-lec5elemtransf" title="Link zu diesem Bild">#</a></p>
 </figcaption>
 </figure>
-<p>Entn. aus <span id="id8">[<a class="reference internal" href="#id51" title="T. Deliyannis, Yichuang Sun, and J.K. Fidler. Continuous-Time Active Filter Design. CRC Press, 1998. ISBN 978-0-8493-2573-1. arXiv:978-1-4398-2187-9, doi:10.1201/9781439821879.">Deliyannis <em>et al.</em>, 1998</a>]</span></p>
+<p>Entn. aus <span id="id8">[<a class="reference internal" href="#id52" title="T. Deliyannis, Yichuang Sun, and J.K. Fidler. Continuous-Time Active Filter Design. CRC Press, 1998. ISBN 978-0-8493-2573-1. arXiv:978-1-4398-2187-9, doi:10.1201/9781439821879.">Deliyannis <em>et al.</em>, 1998</a>]</span></p>
 </section>
 <section id="messbrucken">
-<h2>Messbrücken<a class="headerlink" href="#messbrucken" title="Link to this heading">#</a></h2>
+<h2>Messbrücken<a class="headerlink" href="#messbrucken" title="Permalink to this heading">#</a></h2>
 <section id="wheatstone-messbrucke-gleichstrommessbrucke">
-<h3>Wheatstone-Messbrücke – Gleichstrommessbrücke<a class="headerlink" href="#wheatstone-messbrucke-gleichstrommessbrucke" title="Link to this heading">#</a></h3>
+<h3>Wheatstone-Messbrücke – Gleichstrommessbrücke<a class="headerlink" href="#wheatstone-messbrucke-gleichstrommessbrucke" title="Permalink to this heading">#</a></h3>
 <p>Zwei mögliche Messverfahren:</p>
 <ol class="arabic simple">
 <li><p>Ausschlagverfahren
@@ -830,7 +824,7 @@ Brückenspannung <span class="math notranslate nohighlight">\(U_D\)</span> wird 
 </ol>
 </section>
 <section id="wechselstrommessbrucke">
-<h3>Wechselstrommessbrücke<a class="headerlink" href="#wechselstrommessbrucke" title="Link to this heading">#</a></h3>
+<h3>Wechselstrommessbrücke<a class="headerlink" href="#wechselstrommessbrucke" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Abgleichbedingung</p></li>
 </ul>
@@ -859,57 +853,47 @@ X_1 R_4 + R_1 X_4 = X_2 R_3 + R_2 X_3
 </ul>
 </section>
 <section id="kapazitatsmessbrucke-nach-wien-wien-brucke">
-<h3>Kapazitätsmessbrücke nach Wien – Wien-Brücke<a class="headerlink" href="#kapazitatsmessbrucke-nach-wien-wien-brucke" title="Link to this heading">#</a></h3>
+<h3>Kapazitätsmessbrücke nach Wien – Wien-Brücke<a class="headerlink" href="#kapazitatsmessbrucke-nach-wien-wien-brucke" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="wien-robinson-brucke-einfaches-frequenzmessgerat">
-<h3>Wien-Robinson-Brücke – einfaches Frequenzmessgerät<a class="headerlink" href="#wien-robinson-brucke-einfaches-frequenzmessgerat" title="Link to this heading">#</a></h3>
+<h3>Wien-Robinson-Brücke – einfaches Frequenzmessgerät<a class="headerlink" href="#wien-robinson-brucke-einfaches-frequenzmessgerat" title="Permalink to this heading">#</a></h3>
 <p><span id="id9">[<a class="reference internal" href="../exercise/hw5.html#id23" title="Wikipedia. Wechselspannungsbrücke — wikipedia, die freie enzyklopädie. 2021. [Online; Stand 13. Juli 2021]. URL: https://de.wikipedia.org/w/index.php?title=Wechselspannungsbr%C3%BCcke&amp;oldid=208364385.">Wikipedia, 2021</a>]</span>
 <span id="id10">[<a class="reference internal" href="#id22" title="Wikipedia. Wien-robinson-brücke — wikipedia, die freie enzyklopädie. 2019. [Online; Stand 3. Juni 2024]. URL: https://de.wikipedia.org/w/index.php?title=Wien-Robinson-Br%C3%BCcke&amp;oldid=194933790.">Wikipedia, 2019</a>]</span>
 <span id="id11">[<a class="reference internal" href="#id33" title="W. R. Hewlett. Variable frequency oscillation generator. U.S. Patent Office No. 2,268,872, January 1942. URL: https://de.wikipedia.org/wiki/Wien-Robinson-Brücke.">Hewlett, 1942</a>]</span></p>
 </section>
 </section>
 <section id="literaturverzeichnis">
-<h2>Literaturverzeichnis<a class="headerlink" href="#literaturverzeichnis" title="Link to this heading">#</a></h2>
+<h2>Literaturverzeichnis<a class="headerlink" href="#literaturverzeichnis" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id12">
-<div role="list" class="citation-list">
-<div class="citation" id="id21" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">Buttner14</a><span class="fn-bracket">]</span></span>
-<p>Wolf-Ewald Büttner. <em>Grundlagen der Elektrotechnik 2</em>. OLDENBOURG WISSENSCHAFTSVERLAG, January 2014. <a class="reference external" href="https://doi.org/10.1524/9783110371796">doi:10.1524/9783110371796</a>.</p>
-</div>
-<div class="citation" id="id51" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">DSF98</a><span class="fn-bracket">]</span></span>
-<p>T. Deliyannis, Yichuang Sun, and J.K. Fidler. <em>Continuous-Time Active Filter Design</em>. CRC Press, 1998. ISBN 978-0-8493-2573-1. <a class="reference external" href="https://arxiv.org/abs/978-1-4398-2187-9">arXiv:978-1-4398-2187-9</a>, <a class="reference external" href="https://doi.org/10.1201/9781439821879">doi:10.1201/9781439821879</a>.</p>
-</div>
-<div class="citation" id="id33" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">Hew42</a><span class="fn-bracket">]</span></span>
-<p>W. R. Hewlett. Variable frequency oscillation generator. U.S. Patent Office No. 2,268,872, January 1942. URL: <a class="reference external" href="https://de.wikipedia.org/wiki/Wien-Robinson-Brücke">https://de.wikipedia.org/wiki/Wien-Robinson-Brücke</a>.</p>
-</div>
-<div class="citation" id="id36" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Mie24<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id4">2</a>,<a role="doc-backlink" href="#id7">3</a>)</span>
-<p><strong>missing institution in mietke2024</strong></p>
-</div>
-<div class="citation" id="id41" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">Rei07</a><span class="fn-bracket">]</span></span>
-<p>Michael Reisch. <em>Elektronische Bauelemente</em>. Springer, 2 edition, 2007. ISBN 978-3-540-34014-0. <a class="reference external" href="https://arxiv.org/abs/978-3-540-34015-7">arXiv:978-3-540-34015-7</a>, <a class="reference external" href="https://doi.org/10.1007/978-3-540-34015-7">doi:10.1007/978-3-540-34015-7</a>.</p>
-</div>
-<div class="citation" id="id22" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">Wik19</a><span class="fn-bracket">]</span></span>
-<p>Wikipedia. Wien-robinson-brücke — wikipedia, die freie enzyklopädie. 2019. [Online; Stand 3. Juni 2024]. URL: <a class="reference external" href="https://de.wikipedia.org/w/index.php?title=Wien-Robinson-Br%C3%BCcke&amp;oldid=194933790">https://de.wikipedia.org/w/index.php?title=Wien-Robinson-Br%C3%BCcke&amp;oldid=194933790</a>.</p>
-</div>
-<div class="citation" id="id24" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Wik21a</a><span class="fn-bracket">]</span></span>
-<p>Wikipedia. Bode-diagramm — wikipedia, die freie enzyklopädie. 2021. [Online; Stand 25. Mai 2024]. URL: <a class="reference external" href="https://de.wikipedia.org/w/index.php?title=Bode-Diagramm&amp;oldid=215892781">https://de.wikipedia.org/w/index.php?title=Bode-Diagramm&amp;oldid=215892781</a>.</p>
-</div>
-<div class="citation" id="id23" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">Wik21b</a><span class="fn-bracket">]</span></span>
-<p>Wikipedia. Wechselspannungsbrücke — wikipedia, die freie enzyklopädie. 2021. [Online; Stand 13. Juli 2021]. URL: <a class="reference external" href="https://de.wikipedia.org/w/index.php?title=Wechselspannungsbr%C3%BCcke&amp;oldid=208364385">https://de.wikipedia.org/w/index.php?title=Wechselspannungsbr%C3%BCcke&amp;oldid=208364385</a>.</p>
-</div>
-<div class="citation" id="id26" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Wik23</a><span class="fn-bracket">]</span></span>
-<p>Wikipedia. Nyquist-diagramm — wikipedia, die freie enzyklopädie. 2023. [Online; Stand 25. Mai 2024]. URL: <a class="reference external" href="https://de.wikipedia.org/w/index.php?title=Nyquist-Diagramm&amp;oldid=234792586">https://de.wikipedia.org/w/index.php?title=Nyquist-Diagramm&amp;oldid=234792586</a>.</p>
-</div>
-</div>
+<dl class="citation">
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id5">Buttner14</a></span></dt>
+<dd><p>Wolf-Ewald Büttner. <em>Grundlagen der Elektrotechnik 2</em>. OLDENBOURG WISSENSCHAFTSVERLAG, January 2014. <a class="reference external" href="https://doi.org/10.1524/9783110371796">doi:10.1524/9783110371796</a>.</p>
+</dd>
+<dt class="label" id="id52"><span class="brackets"><a class="fn-backref" href="#id8">DSF98</a></span></dt>
+<dd><p>T. Deliyannis, Yichuang Sun, and J.K. Fidler. <em>Continuous-Time Active Filter Design</em>. CRC Press, 1998. ISBN 978-0-8493-2573-1. <a class="reference external" href="https://arxiv.org/abs/978-1-4398-2187-9">arXiv:978-1-4398-2187-9</a>, <a class="reference external" href="https://doi.org/10.1201/9781439821879">doi:10.1201/9781439821879</a>.</p>
+</dd>
+<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id11">Hew42</a></span></dt>
+<dd><p>W. R. Hewlett. Variable frequency oscillation generator. U.S. Patent Office No. 2,268,872, January 1942. URL: <a class="reference external" href="https://de.wikipedia.org/wiki/Wien-Robinson-Brücke">https://de.wikipedia.org/wiki/Wien-Robinson-Brücke</a>.</p>
+</dd>
+<dt class="label" id="id36"><span class="brackets">Mie24</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>,<a href="#id7">3</a>)</span></dt>
+<dd><p>Detlef Mietke. Elektroniktutor. Technical Report, Oberstufenzentrum für Kommunikations-, Informations- und Medientechnik (OSZ-KIM), Berlin, 2024. URL: <a class="reference external" href="https://www.elektroniktutor.de">https://www.elektroniktutor.de</a>.</p>
+</dd>
+<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id6">Rei07</a></span></dt>
+<dd><p>Michael Reisch. <em>Elektronische Bauelemente</em>. Springer, 2 edition, 2007. ISBN 978-3-540-34014-0. <a class="reference external" href="https://arxiv.org/abs/978-3-540-34015-7">arXiv:978-3-540-34015-7</a>, <a class="reference external" href="https://doi.org/10.1007/978-3-540-34015-7">doi:10.1007/978-3-540-34015-7</a>.</p>
+</dd>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id10">Wik19</a></span></dt>
+<dd><p>Wikipedia. Wien-robinson-brücke — wikipedia, die freie enzyklopädie. 2019. [Online; Stand 3. Juni 2024]. URL: <a class="reference external" href="https://de.wikipedia.org/w/index.php?title=Wien-Robinson-Br%C3%BCcke&amp;oldid=194933790">https://de.wikipedia.org/w/index.php?title=Wien-Robinson-Br%C3%BCcke&amp;oldid=194933790</a>.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id1">Wik21a</a></span></dt>
+<dd><p>Wikipedia. Bode-diagramm — wikipedia, die freie enzyklopädie. 2021. [Online; Stand 25. Mai 2024]. URL: <a class="reference external" href="https://de.wikipedia.org/w/index.php?title=Bode-Diagramm&amp;oldid=215892781">https://de.wikipedia.org/w/index.php?title=Bode-Diagramm&amp;oldid=215892781</a>.</p>
+</dd>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id9">Wik21b</a></span></dt>
+<dd><p>Wikipedia. Wechselspannungsbrücke — wikipedia, die freie enzyklopädie. 2021. [Online; Stand 13. Juli 2021]. URL: <a class="reference external" href="https://de.wikipedia.org/w/index.php?title=Wechselspannungsbr%C3%BCcke&amp;oldid=208364385">https://de.wikipedia.org/w/index.php?title=Wechselspannungsbr%C3%BCcke&amp;oldid=208364385</a>.</p>
+</dd>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id2">Wik23</a></span></dt>
+<dd><p>Wikipedia. Nyquist-diagramm — wikipedia, die freie enzyklopädie. 2023. [Online; Stand 25. Mai 2024]. URL: <a class="reference external" href="https://de.wikipedia.org/w/index.php?title=Nyquist-Diagramm&amp;oldid=234792586">https://de.wikipedia.org/w/index.php?title=Nyquist-Diagramm&amp;oldid=234792586</a>.</p>
+</dd>
+</dl>
 </div>
 </section>
 </section>
