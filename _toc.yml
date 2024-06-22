@@ -58,3 +58,5 @@ parts:
         title: Bode-Diagramme, Ortskurven, Filterschaltungen
       - file: Tutorium/9_Schwingkreise
         title: Schwingkreise
+      - file: Tutorium/10_Transformatoren
+        title: Transformator
