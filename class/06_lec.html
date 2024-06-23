@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="de" data-content_root="" >
+<html lang="de" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Schwingkreise &#8212; M 2.3 Grundlagen der Elektrotechnik (GEL2)</title>
   
@@ -29,32 +28,30 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../_static/documentation_options.js?v=91fba89f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -90,11 +87,21 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/translations.js?v=70a09b52"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'class/06_lec';</script>
@@ -480,7 +487,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="schwingkreise">
-<h1>Schwingkreise<a class="headerlink" href="#schwingkreise" title="Permalink to this heading">#</a></h1>
+<h1>Schwingkreise<a class="headerlink" href="#schwingkreise" title="Link to this heading">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>Schwingungen (phys.)
@@ -509,7 +516,7 @@ sich zwei Aspekte besonders an: Wir können die Effekte der linearen Schwingung
 hörbar machen, um damit ein intuitiveres Verständnis dieser Phänomene zu gewinnen. Darüber hinaus bieten uns die in
 diesem Buch bereits besprochenen Verfahren die Möglichkeit, auch nichtlineare Schwingungen zu untersuchen.“</p>
 </div>
-<p>Entn. <span id="id1">[<a class="reference internal" href="#id46" title="Oliver Natt. Physik mit Python. Springer Berlin Heidelberg, 2020. doi:10.1007/978-3-662-61274-3.">Natt, 2020</a>]</span></p>
+<p>Entn. <span id="id1">[<a class="reference internal" href="#id32" title="Oliver Natt. Physik mit Python. Springer Berlin Heidelberg, 2020. doi:10.1007/978-3-662-61274-3.">Natt, 2020</a>]</span></p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>Schwingkreise (elek.)
@@ -530,9 +537,9 @@ ansteigenden Verluste benötigt, der Rest pendelt zwischen den Energiespeichern
 Energiezufuhr nicht, so stellt sich nach einem Einschwingvorgang in der Anordnung eine stationäre Schwingung
 (eingeschwungener Zustand) ein.“</p>
 </div>
-<p>Entn. <span id="id2">[<a class="reference internal" href="#id25" title="Thomas Harriehausen and Dieter Schwarzenau. Moeller Grundlagen der Elektrotechnik. Springer Fachmedien Wiesbaden, 2020. doi:10.1007/978-3-658-27840-3.">Harriehausen and Schwarzenau, 2020</a>]</span></p>
+<p>Entn. <span id="id2">[<a class="reference internal" href="#id26" title="Thomas Harriehausen and Dieter Schwarzenau. Moeller Grundlagen der Elektrotechnik. Springer Fachmedien Wiesbaden, 2020. doi:10.1007/978-3-658-27840-3.">Harriehausen and Schwarzenau, 2020</a>]</span></p>
 <section id="zusammenfassung-der-physikalische-grundlagen">
-<h2>Zusammenfassung der physikalische Grundlagen<a class="headerlink" href="#zusammenfassung-der-physikalische-grundlagen" title="Permalink to this heading">#</a></h2>
+<h2>Zusammenfassung der physikalische Grundlagen<a class="headerlink" href="#zusammenfassung-der-physikalische-grundlagen" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>periodische Zustandsänderung in einem physikalischen System</p></li>
 <li><p>periodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder
@@ -543,8 +550,8 @@ Differenzialgleichung (DGL) <span class="math notranslate nohighlight">\(\ddot{x
 Eigenfrequenz und <span class="math notranslate nohighlight">\(f_0\)</span> Resonanzfrequenz</p></li>
 <li><p>DGL gehorcht dem Energieerhaltungssatz</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-5cee2875-0bcb-412b-ae6e-299b571217f9">
-<span class="eqno">(27)<a class="headerlink" href="#equation-5cee2875-0bcb-412b-ae6e-299b571217f9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-036e062f-a895-46d6-8ae5-36ee84cd8408">
+<span class="eqno">(27)<a class="headerlink" href="#equation-036e062f-a895-46d6-8ae5-36ee84cd8408" title="Permalink to this equation">#</a></span>\[\begin{align}
 W_{ges}(x) &amp;= W_{pot}(x) + W_{kin}(x) = const. \\
 \frac{d W_{ges}}{dt} &amp;= \frac{dW_{pot}}{dx} \frac{dx}{dt} + \frac{d W_{kin}}{dx} \frac{d x}{dt} = 0 \\
 x(t) &amp;= x_{max} \cos(\omega_0 t + \varphi_0)
@@ -552,8 +559,8 @@ x(t) &amp;= x_{max} \cos(\omega_0 t + \varphi_0)
 <ul class="simple">
 <li><p>Zusammenschaltung von Induktivität <span class="math notranslate nohighlight">\(L\)</span> und Kapazität <span class="math notranslate nohighlight">\(C\)</span> heißt (idealer) Schwing- oder Resonanzkreis</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-eb7cd213-c054-48a3-b0db-461993d75114">
-<span class="eqno">(28)<a class="headerlink" href="#equation-eb7cd213-c054-48a3-b0db-461993d75114" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3ecdd7ff-0b7b-40ec-8d18-5177510cdb50">
+<span class="eqno">(28)<a class="headerlink" href="#equation-3ecdd7ff-0b7b-40ec-8d18-5177510cdb50" title="Permalink to this equation">#</a></span>\[\begin{align}
 W_{pot} &amp;:= \mbox{Kondensator} \\
 W_{kin} &amp;:= \mbox{Induktivität}
 \end{align}\]</div>
@@ -563,14 +570,14 @@ W_{kin} &amp;:= \mbox{Induktivität}
 </ul>
 </section>
 <section id="rlc-reihenschwingkreis-aktiver-zweipol">
-<h2>RLC-Reihenschwingkreis (aktiver Zweipol)<a class="headerlink" href="#rlc-reihenschwingkreis-aktiver-zweipol" title="Permalink to this heading">#</a></h2>
+<h2>RLC-Reihenschwingkreis (aktiver Zweipol)<a class="headerlink" href="#rlc-reihenschwingkreis-aktiver-zweipol" title="Link to this heading">#</a></h2>
 <figure class="align-default" id="fig-lec6rlc">
 <a class="reference internal image-reference" href="../_images/lec6rlc.pdf"><img alt="../_images/lec6rlc.pdf" src="../_images/lec6rlc.pdf" style="width: 400px;" /></a>
 </figure>
 <div class="admonition-maschengleichung-zeitbereich admonition">
 <p class="admonition-title">Maschengleichung (Zeitbereich)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-89ff969d-6d20-47aa-8b4d-31fa8cd3bfad">
-<span class="eqno">(29)<a class="headerlink" href="#equation-89ff969d-6d20-47aa-8b4d-31fa8cd3bfad" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8834dd72-e163-46e3-a3e1-db017797f601">
+<span class="eqno">(29)<a class="headerlink" href="#equation-8834dd72-e163-46e3-a3e1-db017797f601" title="Permalink to this equation">#</a></span>\[\begin{align}
 u_1(0) &amp;= L \frac{di}{dt} + i\, R + \frac{1}{C} \int i dt  \\
 0 &amp;= \frac{di}{dt^2} + \frac{R}{L} \frac{di}{dt} + \frac{1}{LC} i
 \end{align}\]</div>
@@ -584,8 +591,9 @@ i(t) = \underbrace{I_0 e^{-d \omega_0 t}}_{Dämpfung} \underbrace{\sin\left(\sqr
 </div>
 <div class="admonition-spannungsubertragungsfaktor admonition">
 <p class="admonition-title">Spannungsübertragungsfaktor</p>
-<div class="amsmath math notranslate nohighlight" id="equation-811cbb2b-fe1b-4013-b721-585c9f988e99">
-<span class="eqno">(30)<a class="headerlink" href="#equation-811cbb2b-fe1b-4013-b721-585c9f988e99" title="Permalink to this equation">#</a></span>\[\begin{align}
+<p>Entn. <span id="id3">[<a class="reference internal" href="08_lec.html#id39" title="Michael Reisch. Elektronische Bauelemente. Springer, 2 edition, 2007. ISBN 978-3-540-34014-0. arXiv:978-3-540-34015-7, doi:10.1007/978-3-540-34015-7.">Reisch, 2007</a>]</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-cf11d7ee-e97c-432c-8267-d6ad05d2f346">
+<span class="eqno">(30)<a class="headerlink" href="#equation-cf11d7ee-e97c-432c-8267-d6ad05d2f346" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{H}_u(j \omega) = \frac{\underline{U}_2}{\underline{U}_1} &amp;= \frac{1}{1 + j \omega R C + \omega^2 LC} \\
 &amp;= \frac{1}{1 + j \frac{\omega}{\omega_0 Q} + \left(\frac{\omega}{\omega_0}\right)^2}
 \end{align}\]</div>
@@ -603,6 +611,9 @@ i(t) = \underbrace{I_0 e^{-d \omega_0 t}}_{Dämpfung} \underbrace{\sin\left(\sqr
 Installation mit Anaconda-Shell oder Windows-Shell (CMD/PowerShell)</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>ltspice
 </pre></div>
+</div>
+</li>
+</ul>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ltspice</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -636,25 +647,21 @@ Installation mit Anaconda-Shell oder Windows-Shell (CMD/PowerShell)</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</li>
-</ul>
-</div>
-<p>Entn. <span id="id3">[<a class="reference internal" href="#id34" title="Michael Reisch. Elektronische Bauelemente. Springer, 2 edition, 2007. ISBN 978-3-540-34014-0. arXiv:978-3-540-34015-7, doi:10.1007/978-3-540-34015-7.">Reisch, 2007</a>]</span></p>
 </section>
 <section id="grundeigenschaften-von-reihen-und-parallelschwingkreis-passiver-zweipol">
-<h2>Grundeigenschaften von Reihen- und Parallelschwingkreis (passiver Zweipol)<a class="headerlink" href="#grundeigenschaften-von-reihen-und-parallelschwingkreis-passiver-zweipol" title="Permalink to this heading">#</a></h2>
+<h2>Grundeigenschaften von Reihen- und Parallelschwingkreis (passiver Zweipol)<a class="headerlink" href="#grundeigenschaften-von-reihen-und-parallelschwingkreis-passiver-zweipol" title="Link to this heading">#</a></h2>
 <div class="admonition-resonanzfrequenz admonition">
 <p class="admonition-title">Resonanzfrequenz</p>
 <ul class="simple">
 <li><p>Thomsonsche Formel <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{L_r C_r} = \frac{1}{L_p C_p}\)</span></p></li>
 <li><p>bei Resonanz erreichen Impedanz und Admittanz ein Minimum</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-dcd2aadb-4281-4633-a381-2d2147524dd1">
-<span class="eqno">(31)<a class="headerlink" href="#equation-dcd2aadb-4281-4633-a381-2d2147524dd1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fc26bf10-f4fd-4696-931b-85618e465c79">
+<span class="eqno">(31)<a class="headerlink" href="#equation-fc26bf10-f4fd-4696-931b-85618e465c79" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left . \underline{Z} \right\lvert_{\omega_0} &amp;\Rightarrow \lvert\underline{Z}\lvert = R_r \\
 \left . \underline{Y} \right\lvert_{\omega_0} &amp;\Rightarrow \lvert\underline{Y}\lvert = G_p
 \end{align}\]</div>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(X(\omega)\)</span></p></th>
@@ -675,8 +682,8 @@ Installation mit Anaconda-Shell oder Windows-Shell (CMD/PowerShell)</p>
 </div>
 <div class="admonition-reihenkreis-impedanz admonition">
 <p class="admonition-title">Reihenkreis (Impedanz)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-473886f8-70b6-46a2-b8d5-11892ea86941">
-<span class="eqno">(32)<a class="headerlink" href="#equation-473886f8-70b6-46a2-b8d5-11892ea86941" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-08e7d0e0-38a7-4c72-bcd0-91149cf23dae">
+<span class="eqno">(32)<a class="headerlink" href="#equation-08e7d0e0-38a7-4c72-bcd0-91149cf23dae" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{Z} &amp;= R_r + j\left(\omega L_r - \frac{1}{\omega C_r}\right) \\
 &amp;= R_r + j X(\omega) \\
 \lvert\underline{Z}\lvert &amp;= \sqrt{R_r^2 + X^2(\omega)} \\
@@ -686,8 +693,8 @@ Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}
 </div>
 <div class="admonition-parallelkreis-admittanz admonition">
 <p class="admonition-title">Parallelkreis (Admittanz)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5ffc58c3-7906-4f1c-bdf1-d64c904f5a08">
-<span class="eqno">(33)<a class="headerlink" href="#equation-5ffc58c3-7906-4f1c-bdf1-d64c904f5a08" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-80ae975d-3069-4435-9761-f5c8ac10be6f">
+<span class="eqno">(33)<a class="headerlink" href="#equation-80ae975d-3069-4435-9761-f5c8ac10be6f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{Y} &amp;= G_p + j\left(\omega C_p- \frac{1}{\omega L_p}\right) \\
 &amp;= G_r + j B(\omega) \\
 \lvert\underline{Y}\lvert &amp;= \sqrt{G_p^2 + B^2(\omega)} \\
@@ -697,18 +704,18 @@ Q &amp;= \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}
 </div>
 </section>
 <section id="vereinheitlichte-kennzeichnung">
-<h2>Vereinheitlichte Kennzeichnung<a class="headerlink" href="#vereinheitlichte-kennzeichnung" title="Permalink to this heading">#</a></h2>
+<h2>Vereinheitlichte Kennzeichnung<a class="headerlink" href="#vereinheitlichte-kennzeichnung" title="Link to this heading">#</a></h2>
 <div class="admonition-verstimmung-v-relative-frequenzabweichung admonition">
 <p class="admonition-title">Verstimmung <span class="math notranslate nohighlight">\(v\)</span>, relative Frequenzabweichung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0093429b-4e31-4a4c-8516-3c36ea158274">
-<span class="eqno">(34)<a class="headerlink" href="#equation-0093429b-4e31-4a4c-8516-3c36ea158274" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-44256e69-90e7-4f41-8406-10704ede68e5">
+<span class="eqno">(34)<a class="headerlink" href="#equation-44256e69-90e7-4f41-8406-10704ede68e5" title="Permalink to this equation">#</a></span>\[\begin{align}
 v &amp;= \frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}
 \end{align}\]</div>
 </div>
 <div class="admonition-normierte-darstellung admonition">
 <p class="admonition-title">Normierte Darstellung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-71bb2200-7f73-4905-910a-581096b32536">
-<span class="eqno">(35)<a class="headerlink" href="#equation-71bb2200-7f73-4905-910a-581096b32536" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8fb72131-71ec-45d7-98cf-87fb46ce9332">
+<span class="eqno">(35)<a class="headerlink" href="#equation-8fb72131-71ec-45d7-98cf-87fb46ce9332" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{Z} &amp;= R \left( 1 + j \frac{1}{R} \left( \frac{\omega \omega_0 \omega L}{\omega_0}
 - \frac{\omega_0}{\omega_0 \omega C}\right)\right) \\
 &amp;= R (1 + Q v) \\
@@ -717,8 +724,8 @@ v &amp;= \frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}
 </div>
 <div class="admonition-betrag-und-phase admonition">
 <p class="admonition-title">Betrag und Phase</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5d6062c7-85f4-4dbf-ab75-7b3a53559ea0">
-<span class="eqno">(36)<a class="headerlink" href="#equation-5d6062c7-85f4-4dbf-ab75-7b3a53559ea0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-15edf6b2-eafc-42c1-8c75-5b4d14bb2f3e">
+<span class="eqno">(36)<a class="headerlink" href="#equation-15edf6b2-eafc-42c1-8c75-5b4d14bb2f3e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\lvert\underline{Z}\lvert}{R} = \frac{\lvert \underline{Y}\lvert}{G} &amp;= \sqrt{1 + \left( Q v \right)} \\
 \varphi_Z = \varphi_Y &amp;= \arctan\left( Q v \right)
 \end{align}\]</div>
@@ -726,50 +733,54 @@ v &amp;= \frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}
 <div class="admonition-circ-frac-pi-4-oder-3db-frequenz admonition">
 <p class="admonition-title">45<span class="math notranslate nohighlight">\(^{\circ}\)</span>-, <span class="math notranslate nohighlight">\(\frac{\pi}{4}\)</span>- oder 3dB-Frequenz</p>
 <p>Der Phasenwinkel <span class="math notranslate nohighlight">\(\varphi\)</span> ist gleich 45<span class="math notranslate nohighlight">\(^{\circ}\)</span> und Betrag der Blindkomponente ist gleich der Wirkkomponente.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fa2fb724-5ef4-4a3a-a88a-74cf6a25d02d">
-<span class="eqno">(37)<a class="headerlink" href="#equation-fa2fb724-5ef4-4a3a-a88a-74cf6a25d02d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ab500da3-3e15-4074-b8dd-190a9438eb6d">
+<span class="eqno">(37)<a class="headerlink" href="#equation-ab500da3-3e15-4074-b8dd-190a9438eb6d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lvert X(\omega_{\pm 45}) \lvert &amp;= \pm R &amp;  \lvert B(\omega_{\pm 45}) \lvert &amp;= \pm G \\
 \omega_{\pm 45} L - \frac{1}{\omega_{\pm 45} C} &amp;= \pm R &amp;  \omega_{\pm 45} C - \frac{1}{\omega_{\pm 45} L} &amp;= \pm G
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-6d987f94-563e-4210-b33f-2e50d115dbde">
-<span class="eqno">(38)<a class="headerlink" href="#equation-6d987f94-563e-4210-b33f-2e50d115dbde" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6764e3ac-a0c4-4acf-af2b-b9f3c53a5636">
+<span class="eqno">(38)<a class="headerlink" href="#equation-6764e3ac-a0c4-4acf-af2b-b9f3c53a5636" title="Permalink to this equation">#</a></span>\[\begin{align}
 \omega_{\pm 45} &amp;= \omega_0 \left( \sqrt{1 + \left(\frac{1}{2Q}\right)^2} \pm \frac{1}{2Q}\right) \approx \omega_0 \left( 1 \pm \frac{1}{2Q}\right)
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-b8326679-1065-4d37-b150-56a2d740c8e0">
-<span class="eqno">(39)<a class="headerlink" href="#equation-b8326679-1065-4d37-b150-56a2d740c8e0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5c3a8820-22a9-4038-82bf-78431ba508de">
+<span class="eqno">(39)<a class="headerlink" href="#equation-5c3a8820-22a9-4038-82bf-78431ba508de" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lvert \underline{Z(\omega_{\pm 45})} \lvert &amp;= \sqrt{2} R &amp;  \lvert \underline{Y(\omega_{\pm 45})} \lvert &amp;= \sqrt{2} G
 \end{align}\]</div>
 </div>
 <div class="admonition-bandbreite-bw-bandwidth admonition">
 <p class="admonition-title">Bandbreite BW (bandwidth)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f96e0566-829e-435a-bf2d-9a7472b824d4">
-<span class="eqno">(40)<a class="headerlink" href="#equation-f96e0566-829e-435a-bf2d-9a7472b824d4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4dd95eda-d41e-4366-8371-7d6d53fbdfe4">
+<span class="eqno">(40)<a class="headerlink" href="#equation-4dd95eda-d41e-4366-8371-7d6d53fbdfe4" title="Permalink to this equation">#</a></span>\[\begin{align}
 BW &amp;= \omega_{45} - \omega_{-45} = \frac{\omega_0}{Q} \\
 &amp;= f_{45} - f_{-45} = \frac{f_0}{Q} \\
 \end{align}\]</div>
 </div>
 </section>
 <section id="gegenuberstellung-der-eigenschaften-der-elementaren-schwingkreise">
-<h2>Gegenüberstellung der Eigenschaften der elementaren Schwingkreise<a class="headerlink" href="#gegenuberstellung-der-eigenschaften-der-elementaren-schwingkreise" title="Permalink to this heading">#</a></h2>
+<h2>Gegenüberstellung der Eigenschaften der elementaren Schwingkreise<a class="headerlink" href="#gegenuberstellung-der-eigenschaften-der-elementaren-schwingkreise" title="Link to this heading">#</a></h2>
 <figure class="align-default" id="fig-lec6elemschwing">
 <img alt="../_images/lec6elemSchwing.pdf" src="../_images/lec6elemSchwing.pdf" />
 </figure>
-<p>Entn. aus <span id="id4">[<a class="reference internal" href="#id25" title="Thomas Harriehausen and Dieter Schwarzenau. Moeller Grundlagen der Elektrotechnik. Springer Fachmedien Wiesbaden, 2020. doi:10.1007/978-3-658-27840-3.">Harriehausen and Schwarzenau, 2020</a>]</span></p>
+<p>Entn. aus <span id="id4">[<a class="reference internal" href="#id26" title="Thomas Harriehausen and Dieter Schwarzenau. Moeller Grundlagen der Elektrotechnik. Springer Fachmedien Wiesbaden, 2020. doi:10.1007/978-3-658-27840-3.">Harriehausen and Schwarzenau, 2020</a>]</span></p>
 </section>
 <section id="literaturverzeichnis">
-<h2>Literaturverzeichnis<a class="headerlink" href="#literaturverzeichnis" title="Permalink to this heading">#</a></h2>
+<h2>Literaturverzeichnis<a class="headerlink" href="#literaturverzeichnis" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id5">
-<dl class="citation">
-<dt class="label" id="id25"><span class="brackets">HS20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id4">2</a>)</span></dt>
-<dd><p>Thomas Harriehausen and Dieter Schwarzenau. <em>Moeller Grundlagen der Elektrotechnik</em>. Springer Fachmedien Wiesbaden, 2020. <a class="reference external" href="https://doi.org/10.1007/978-3-658-27840-3">doi:10.1007/978-3-658-27840-3</a>.</p>
-</dd>
-<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id1">Nat20</a></span></dt>
-<dd><p>Oliver Natt. <em>Physik mit Python</em>. Springer Berlin Heidelberg, 2020. <a class="reference external" href="https://doi.org/10.1007/978-3-662-61274-3">doi:10.1007/978-3-662-61274-3</a>.</p>
-</dd>
-<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id3">Rei07</a></span></dt>
-<dd><p>Michael Reisch. <em>Elektronische Bauelemente</em>. Springer, 2 edition, 2007. ISBN 978-3-540-34014-0. <a class="reference external" href="https://arxiv.org/abs/978-3-540-34015-7">arXiv:978-3-540-34015-7</a>, <a class="reference external" href="https://doi.org/10.1007/978-3-540-34015-7">doi:10.1007/978-3-540-34015-7</a>.</p>
-</dd>
-</dl>
+<div role="list" class="citation-list">
+<div class="citation" id="id26" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HS20<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id4">2</a>)</span>
+<p>Thomas Harriehausen and Dieter Schwarzenau. <em>Moeller Grundlagen der Elektrotechnik</em>. Springer Fachmedien Wiesbaden, 2020. <a class="reference external" href="https://doi.org/10.1007/978-3-658-27840-3">doi:10.1007/978-3-658-27840-3</a>.</p>
+</div>
+<div class="citation" id="id32" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Nat20</a><span class="fn-bracket">]</span></span>
+<p>Oliver Natt. <em>Physik mit Python</em>. Springer Berlin Heidelberg, 2020. <a class="reference external" href="https://doi.org/10.1007/978-3-662-61274-3">doi:10.1007/978-3-662-61274-3</a>.</p>
+</div>
+<div class="citation" id="id38" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Rei07</a><span class="fn-bracket">]</span></span>
+<p>Michael Reisch. <em>Elektronische Bauelemente</em>. Springer, 2 edition, 2007. ISBN 978-3-540-34014-0. <a class="reference external" href="https://arxiv.org/abs/978-3-540-34015-7">arXiv:978-3-540-34015-7</a>, <a class="reference external" href="https://doi.org/10.1007/978-3-540-34015-7">doi:10.1007/978-3-540-34015-7</a>.</p>
+</div>
+</div>
 </div>
 </section>
 </section>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="de" data-content_root="" >
+<html lang="de" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>9. Transformator &#8212; M 2.3 Grundlagen der Elektrotechnik (GEL2)</title>
   
@@ -29,32 +28,30 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../_static/documentation_options.js?v=91fba89f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -90,11 +87,21 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/translations.js?v=70a09b52"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorium/10_Transformatoren';</script>
@@ -489,7 +496,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="transformator">
-<h1>9. Transformator<a class="headerlink" href="#transformator" title="Permalink to this heading">#</a></h1>
+<h1>9. Transformator<a class="headerlink" href="#transformator" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>idealer Transformator</p></li>
 <li><p>T-Ersatzschaltbild</p></li>
@@ -497,18 +504,18 @@ document.write(`
 </ul>
 <p>In den meisten Fällen besteht ein Transformator, oder auch kurz Trafo, aus mehreren magnetisch gekoppelten Spulen, die meistens auf einen Eisenkern gewickelt werden. Von Interesse ist zunächst nur der 1-phasige Transformator.</p>
 <figure class="align-default" id="fig-tutchap10-trafo-uebersicht">
-<img alt="../_images/chap10_trafo_uebersicht.png" src="../_images/chap10_trafo_uebersicht.png" />
+<a class="reference internal image-reference" href="../_images/chap10_trafo_uebersicht.png"><img alt="../_images/chap10_trafo_uebersicht.png" src="../_images/chap10_trafo_uebersicht.png" style="width: 400px;" /></a>
 </figure>
-<p><span id="id1">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id1">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>Die Wicklung, die an die Spannungsversorgung angeschlossen ist, ist die Eingangsseite und wird Primärwicklung genannt, mit <span class="math notranslate nohighlight">\(N_1\)</span> Windungen. Die Sekundärwicklung ist dagegenen an der Ausgangsseite angeschlossen, mit der Anzahl <span class="math notranslate nohighlight">\(N_2\)</span> Windungen, und ihr wird die Energie entnommen.</p>
 <p>Der Zusammenhang der Spannungen und Ströme auf der Primär- und Sekundärseite kann mithilfe des magnetischen Kreises betrachtet werden. Diese Zusammenhänge sollten bereits Elektrodynamik bekannt sein.</p>
 <section id="idealer-transformator">
-<h2>Idealer Transformator<a class="headerlink" href="#idealer-transformator" title="Permalink to this heading">#</a></h2>
+<h2>Idealer Transformator<a class="headerlink" href="#idealer-transformator" title="Link to this heading">#</a></h2>
 <p>Als erstes wird der ideale Transformator betrachtet. Dieser Transformator hat keine Verluste und kann über das folgende einfache Ersatzschaltbild dargestellt werden.</p>
 <figure class="align-default" id="fig-tutchap10-trafo-einfach">
-<img alt="../_images/chap10_trafo_einfach.png" src="../_images/chap10_trafo_einfach.png" />
+<a class="reference internal image-reference" href="../_images/chap10_trafo_einfach.png"><img alt="../_images/chap10_trafo_einfach.png" src="../_images/chap10_trafo_einfach.png" style="width: 400px;" /></a>
 </figure>
-<p><span id="id2">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id2">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>Von Interesse ist hier das Übersetzungsverhältnis <span class="math notranslate nohighlight">\(ü\)</span>, da hiermit das Verhältnis der Spannungen <span class="math notranslate nohighlight">\(U_1\)</span> und <span class="math notranslate nohighlight">\(U_2\)</span> beschrieben werden kann. Unter Anwendung des Induktionsgesetzes</p>
 <div class="math notranslate nohighlight">
 \[u_q = N \cdot \frac{d \Phi_t}{dt}\]</div>
@@ -517,9 +524,9 @@ document.write(`
 \[\frac{U_1}{U_2} = \frac{N_1}{N_2} = ü\]</div>
 <p>Eine häufige Anwendung von Transformatoren ist die Änderung einer Spannung, zum Beispiel könnte die Netzspannung für den Betrieb eines Gerätes herunter transformiert werden. Dazu wird einmal beispielsweise ein Lastwiderstand <span class="math notranslate nohighlight">\(R_L\)</span> an die Ausgangsseite des Transformators angeschlossen:</p>
 <figure class="align-default" id="fig-tutchap10-trafo-einfachrl">
-<img alt="../_images/chap10_trafo_einfachRl.png" src="../_images/chap10_trafo_einfachRl.png" />
+<a class="reference internal image-reference" href="../_images/chap10_trafo_einfachRl.png"><img alt="../_images/chap10_trafo_einfachRl.png" src="../_images/chap10_trafo_einfachRl.png" style="width: 400px;" /></a>
 </figure>
-<p><span id="id3">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id3">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>Dadurch ergeben sich für Strom und Widerstand:</p>
 <div class="math notranslate nohighlight">
 \[I_2 = ü \cdot I_1\]</div>
@@ -527,24 +534,24 @@ document.write(`
 \[ü^2 \cdot R_L = \frac{U_1}{I_1}\]</div>
 <p>Durch die zweite Gleichung entsteht nun direkter Vergleich mit der Eingangsseite, für diese „fühlt“ es sich so an, als wäre sie direkt mit dem Widerstand <span class="math notranslate nohighlight">\(R^{`}_L = ü^2 \cdot R_L\)</span> verbunden.</p>
 <figure class="align-default" id="fig-tutchap10-trafo-einfachrlstrich">
-<img alt="../_images/chap10_trafo_einfachRlstrich.png" src="../_images/chap10_trafo_einfachRlstrich.png" />
+<a class="reference internal image-reference" href="../_images/chap10_trafo_einfachRlstrich.png"><img alt="../_images/chap10_trafo_einfachRlstrich.png" src="../_images/chap10_trafo_einfachRlstrich.png" style="width: 400px;" /></a>
 </figure>
-<p><span id="id4">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id4">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 </section>
 <section id="t-ersatzschaltbild">
-<h2>T-Ersatzschaltbild<a class="headerlink" href="#t-ersatzschaltbild" title="Permalink to this heading">#</a></h2>
+<h2>T-Ersatzschaltbild<a class="headerlink" href="#t-ersatzschaltbild" title="Link to this heading">#</a></h2>
 <p>Da es jedoch keine idealen Transformatoren gibt, müssen die Verluste berücksichtigt werden.</p>
 <p>In den Leitungen gibt es ohmsche Verluste, es gibt Verluste im Eisenkern, dort werden Hysterese- und Wirbelstromverluste zusammengefasst, und auch durch die Ausbreitung des magnetischen Flusses in der Luft trägt zu den Verlusten bei.</p>
 <p>Das T-Ersatzschaltbild berücksichtigt all diese Verluste:</p>
 <figure class="align-default" id="fig-tutchap10-t-ersatzschaltbild">
-<img alt="../_images/chap10_t-ersatzschaltbild.png" src="../_images/chap10_t-ersatzschaltbild.png" />
+<a class="reference internal image-reference" href="../_images/chap10_t-ersatzschaltbild.png"><img alt="../_images/chap10_t-ersatzschaltbild.png" src="../_images/chap10_t-ersatzschaltbild.png" style="width: 400px;" /></a>
 </figure>
-<p><span id="id5">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id5">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>Da die Ersatzgrößen auf der fiktiven Sekundärseite den idealen Transformator schon enthalten, wird dieser oft nicht mitgezeichnet.</p>
 <figure class="align-default" id="fig-tutchap10-t-ersatzschaltbild-einfach">
-<img alt="../_images/chap10_t-ersatzschaltbild_einfach.png" src="../_images/chap10_t-ersatzschaltbild_einfach.png" />
+<a class="reference internal image-reference" href="../_images/chap10_t-ersatzschaltbild_einfach.png"><img alt="../_images/chap10_t-ersatzschaltbild_einfach.png" src="../_images/chap10_t-ersatzschaltbild_einfach.png" style="width: 400px;" /></a>
 </figure>
-<p><span id="id6">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id6">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>Die Zusammenhänge der realen und fiktiven Größen der Sekundärseite sind hier zusammengefasst:</p>
 <div class="math notranslate nohighlight">
 \[R^{`}_2 = ü^2 \cdot R_2\]</div>
@@ -557,7 +564,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\underline{I}^{`}_2 = \frac{1}{ü} \cdot \underline{I}_2\]</div>
 <section id="t-symmetrie">
-<h3>T-Symmetrie<a class="headerlink" href="#t-symmetrie" title="Permalink to this heading">#</a></h3>
+<h3>T-Symmetrie<a class="headerlink" href="#t-symmetrie" title="Link to this heading">#</a></h3>
 <p>Bei einem sinnvoll dimensioniertem Transformator liegt eine sogenannte T-Symmetrie vor:</p>
 <div class="math notranslate nohighlight">
 \[R_1 = R^{`}_2\]</div>
@@ -566,46 +573,46 @@ document.write(`
 </section>
 </section>
 <section id="vermessung-eines-transformators">
-<h2>Vermessung eines Transformators<a class="headerlink" href="#vermessung-eines-transformators" title="Permalink to this heading">#</a></h2>
+<h2>Vermessung eines Transformators<a class="headerlink" href="#vermessung-eines-transformators" title="Link to this heading">#</a></h2>
 <p>Um die Größen des Ersatzschaltbildes zu bestimmen, kann man zwei einfache Messungen anwenden.</p>
 </section>
 <section id="leerlaufversuch">
-<h2>Leerlaufversuch<a class="headerlink" href="#leerlaufversuch" title="Permalink to this heading">#</a></h2>
+<h2>Leerlaufversuch<a class="headerlink" href="#leerlaufversuch" title="Link to this heading">#</a></h2>
 <p>An der Primärseite wird die Nennspannung <span class="math notranslate nohighlight">\(\underline{U}_{1N}\)</span> angeschlossen und die Sekundärseite im Leerlauf betrieben.</p>
 <figure class="align-default" id="fig-tutchap10-trafo-leerlauf">
-<img alt="../_images/chap10_trafo_leerlauf.png" src="../_images/chap10_trafo_leerlauf.png" />
+<a class="reference internal image-reference" href="../_images/chap10_trafo_leerlauf.png"><img alt="../_images/chap10_trafo_leerlauf.png" src="../_images/chap10_trafo_leerlauf.png" style="width: 400px;" /></a>
 </figure>
-<p><span id="id7">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id7">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>Zur Ermittlung der Werte muss bekannt sein, dass die Wicklungsverluste in Vergleich zu den Eisenverlusten und die Streuinduktivität der Hauptinduktivität vernachlässigbar klein sind. Dadurch vereinfacht sich das Ersatzschaltbild weiter:</p>
 <figure class="align-default" id="fig-tutchap10-trafo-leerlauf-einfach">
-<img alt="../_images/chap10_trafo_leerlauf_einfach.png" src="../_images/chap10_trafo_leerlauf_einfach.png" />
+<a class="reference internal image-reference" href="../_images/chap10_trafo_leerlauf_einfach.png"><img alt="../_images/chap10_trafo_leerlauf_einfach.png" src="../_images/chap10_trafo_leerlauf_einfach.png" style="width: 400px;" /></a>
 </figure>
-<p><span id="id8">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id8">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>In der Praxis misst man nun die Nenneingangsspannung, den Nennleerlaufstrom und entweder die umgesetzte Wirkleistung <span class="math notranslate nohighlight">\(P_L\)</span> oder den Phasenverschiebungswinkel <span class="math notranslate nohighlight">\(\varphi_L\)</span> (zwischen <span class="math notranslate nohighlight">\(U_{1N}\)</span> und <span class="math notranslate nohighlight">\(I_{1L}\)</span>).</p>
 </section>
 <section id="kurzschlussversuch">
-<h2>Kurzschlussversuch<a class="headerlink" href="#kurzschlussversuch" title="Permalink to this heading">#</a></h2>
+<h2>Kurzschlussversuch<a class="headerlink" href="#kurzschlussversuch" title="Link to this heading">#</a></h2>
 <p>Bei dem Kurzschlussversuch wird die Sekundärseite kurzgeschlossen. Hier muss beachtet werden, dass nun auch der Primärseite keine Nennspannung angelegt werden darf, dies würde wegen des Kurzschlusses den Transformator beschädigen!</p>
 <p>Man erhöht daher langsam die primärseitige Spannung, bis der Nennstrom fließt. Dieser Strom fließt nun fast ausschließlich durch die Längsimpedanzen.</p>
 <figure class="align-default" id="fig-tutchap10-kurzschluss">
-<img alt="../_images/chap10_kurzschluss.png" src="../_images/chap10_kurzschluss.png" />
+<a class="reference internal image-reference" href="../_images/chap10_kurzschluss.png"><img alt="../_images/chap10_kurzschluss.png" src="../_images/chap10_kurzschluss.png" style="width: 400px;" /></a>
 </figure>
-<p><span id="id9">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id9">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>Wenn man die T-Symmetrie in Betracht zieht vereinfacht sich das Ersatzschaltbild erheblich.</p>
 <figure class="align-default" id="fig-tutchap10-kurzschluss-einfach">
-<img alt="../_images/chap10_kurzschluss_einfach.png" src="../_images/chap10_kurzschluss_einfach.png" />
+<a class="reference internal image-reference" href="../_images/chap10_kurzschluss_einfach.png"><img alt="../_images/chap10_kurzschluss_einfach.png" src="../_images/chap10_kurzschluss_einfach.png" style="width: 400px;" /></a>
 </figure>
-<p><span id="id10">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id10">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>Dabei gilt:</p>
 <div class="math notranslate nohighlight">
-\[R_k = R_1 + R^{`}_2 = 2 R_1\]</div>
+\[R_k = R_1 + R^{'}_2 = 2 R_1\]</div>
 <div class="math notranslate nohighlight">
-\[L_k = L_{1\sigma} + L^{`}_{2\sigma} = 2 L_{1\sigma}\]</div>
+\[L_k = L_{1\sigma} + L^{'}_{2\sigma} = 2 L_{1\sigma}\]</div>
 </section>
 <section id="ubungen">
-<h2>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this heading">#</a></h2>
+<h2>Übungen<a class="headerlink" href="#ubungen" title="Link to this heading">#</a></h2>
 <section id="ubung-10-1">
-<h3>Übung 10.1<a class="headerlink" href="#ubung-10-1" title="Permalink to this heading">#</a></h3>
+<h3>Übung 10.1<a class="headerlink" href="#ubung-10-1" title="Link to this heading">#</a></h3>
 <p>(Schenke Trainingsaufgabe 35.1)</p>
 <p>Beginnen Sie bei der folgenden Aufgabe mit dem vollständigen T-Ersatzschaltbild. Der Aufgabentext gibt Ihnen Hinweise, ob Sie Elemente des Ersatzschaltbildes weglassen können.</p>
 <p>An einem T-Symmetrischen Transformator führen Sie den Leerlauf- und den Kurzschlussversuch durch. Die im Leerlauf gemessene Wirkleistungsaufnahme kann vernachlässigt werden.</p>
@@ -613,13 +620,13 @@ document.write(`
 <div class="dropdown admonition">
 <p class="admonition-title">Lösung 10.1</p>
 <figure class="align-default" id="fig-tutchap10aufgabe10-1">
-<img alt="../_images/chap10_aufgabe10.1.png" src="../_images/chap10_aufgabe10.1.png" />
+<a class="reference internal image-reference" href="../_images/chap10_aufgabe10.1.png"><img alt="../_images/chap10_aufgabe10.1.png" src="../_images/chap10_aufgabe10.1.png" style="width: 400px;" /></a>
 </figure>
-<p><span id="id11">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id11">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 </div>
 </section>
 <section id="ubung-10-2">
-<h3>Übung 10.2<a class="headerlink" href="#ubung-10-2" title="Permalink to this heading">#</a></h3>
+<h3>Übung 10.2<a class="headerlink" href="#ubung-10-2" title="Link to this heading">#</a></h3>
 <p>(Schenke Trainingsaufgabe 35.4)</p>
 <p>Beginnen Sie bei der folgenden Aufgabe mit dem vollständigen T-Ersatzschaltbild. Überlegen anhand der Messwerte, ob Sie Elemente des Ersatzschaltbildes weglassen können.</p>
 <p>An einem T-Symmetrischen Transformator führen Sie bei der Frequenz <span class="math notranslate nohighlight">\(f = 50\,Hz\)</span> den Leerlauf- und Kurzschlussversuch durch.</p>
@@ -641,13 +648,13 @@ document.write(`
 <div class="dropdown admonition">
 <p class="admonition-title">Lösung 10.2</p>
 <figure class="align-default" id="fig-tutchap10aufgabe10-2">
-<img alt="../_images/chap10_aufgabe10.2.png" src="../_images/chap10_aufgabe10.2.png" />
+<a class="reference internal image-reference" href="../_images/chap10_aufgabe10.2.png"><img alt="../_images/chap10_aufgabe10.2.png" src="../_images/chap10_aufgabe10.2.png" style="width: 400px;" /></a>
 </figure>
-<p><span id="id12">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id12">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 </div>
 </section>
 <section id="ubung-10-3">
-<h3>Übung 10.3<a class="headerlink" href="#ubung-10-3" title="Permalink to this heading">#</a></h3>
+<h3>Übung 10.3<a class="headerlink" href="#ubung-10-3" title="Link to this heading">#</a></h3>
 <p>(Schenke Trainingsaufgabe 35.7)</p>
 <p>In der folgenden Aufgabe betrachten Sie nur das Leerlauf-Ersatzschaltbild des Transformators. Berechnen Sie dessen Bauelemente anhand der Messwerte.</p>
 <p>An einem T-Symmetrischen Transformator führen Sie bei der Frequenz <span class="math notranslate nohighlight">\(f = 50\,Hz\)</span> den Leerlaufversuch durch.</p>
@@ -670,7 +677,7 @@ document.write(`
 </div>
 </section>
 <section id="ubung-10-4">
-<h3>Übung 10.4<a class="headerlink" href="#ubung-10-4" title="Permalink to this heading">#</a></h3>
+<h3>Übung 10.4<a class="headerlink" href="#ubung-10-4" title="Link to this heading">#</a></h3>
 <p>(Schenke Trainingsaufgabe 35.14)</p>
 <p>In der folgenden Aufgabe betrachten Sie nur das Kurzschluss-Ersatzschaltbild des Transformators. Berechnen Sie dessen Bauelemente anhand der Messwerte.</p>
 <p>An einem T-Symmetrischen Transformator mit dem Übersetzungsverhältnis <span class="math notranslate nohighlight">\(ü = 10\)</span> führen Sie bei der Frequenz <span class="math notranslate nohighlight">\(f = 50\,Hz\)</span> den Kurzschlussversuch durch.</p>
@@ -700,13 +707,15 @@ document.write(`
 </section>
 </section>
 <section id="quellen">
-<h2>Quellen<a class="headerlink" href="#quellen" title="Permalink to this heading">#</a></h2>
+<h2>Quellen<a class="headerlink" href="#quellen" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id13">
-<dl class="citation">
-<dt class="label" id="id44"><span class="brackets">Sch23</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>,<a href="#id4">4</a>,<a href="#id5">5</a>,<a href="#id6">6</a>,<a href="#id7">7</a>,<a href="#id8">8</a>,<a href="#id9">9</a>,<a href="#id10">10</a>,<a href="#id11">11</a>,<a href="#id12">12</a>)</span></dt>
-<dd><p>Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: <a class="reference external" href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a>.</p>
-</dd>
-</dl>
+<div role="list" class="citation-list">
+<div class="citation" id="id48" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Sch23<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id3">3</a>,<a role="doc-backlink" href="#id4">4</a>,<a role="doc-backlink" href="#id5">5</a>,<a role="doc-backlink" href="#id6">6</a>,<a role="doc-backlink" href="#id7">7</a>,<a role="doc-backlink" href="#id8">8</a>,<a role="doc-backlink" href="#id9">9</a>,<a role="doc-backlink" href="#id10">10</a>,<a role="doc-backlink" href="#id11">11</a>,<a role="doc-backlink" href="#id12">12</a>)</span>
+<p>Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: <a class="reference external" href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a>.</p>
+</div>
+</div>
 </div>
 </section>
 </section>

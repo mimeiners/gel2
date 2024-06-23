@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="de" data-content_root="" >
+<html lang="de" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>7. Filterschaltungen, Bode-Diagramme und Ortskurven &#8212; M 2.3 Grundlagen der Elektrotechnik (GEL2)</title>
   
@@ -29,32 +28,30 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../_static/documentation_options.js?v=91fba89f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -90,11 +87,21 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/translations.js?v=70a09b52"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorium/8_Filterschaltungen';</script>
@@ -498,17 +505,17 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="filterschaltungen-bode-diagramme-und-ortskurven">
-<h1>7. Filterschaltungen, Bode-Diagramme und Ortskurven<a class="headerlink" href="#filterschaltungen-bode-diagramme-und-ortskurven" title="Permalink to this heading">#</a></h1>
+<h1>7. Filterschaltungen, Bode-Diagramme und Ortskurven<a class="headerlink" href="#filterschaltungen-bode-diagramme-und-ortskurven" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Bode-Diagramm</p></li>
 <li><p>Ortskurven</p></li>
 <li><p>Tief- und Hochpass</p></li>
 </ul>
 <section id="frequenzgang">
-<h2>Frequenzgang<a class="headerlink" href="#frequenzgang" title="Permalink to this heading">#</a></h2>
+<h2>Frequenzgang<a class="headerlink" href="#frequenzgang" title="Link to this heading">#</a></h2>
 <p>In Netzwerken mit den Bauteilen Wirkwiderstand R, Induktivität L und Kapazität C ist das Verhalten bei verschiedenen Frequenzen interessant. Zwei Varianten sich den Frequenzgang eines Netzwerks anzuschauen, ist das Bode-Diagramm und die Ortskurve.</p>
 <section id="bode-diagramm">
-<h3>Bode-Diagramm<a class="headerlink" href="#bode-diagramm" title="Permalink to this heading">#</a></h3>
+<h3>Bode-Diagramm<a class="headerlink" href="#bode-diagramm" title="Link to this heading">#</a></h3>
 <p>In dem Bode-Diagramm werden die Amplitude und die Phase des Frequenzganges getrennt voneinander dargestellt. Ein Bode-Diagramm wird von der Übertragungsfunktion gezeichnet.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
@@ -549,7 +556,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1c82049a2b9356e9d06ccf0af53bf69a3d35eb48df5ba8fc480b9ab6ea76d6c4.png" src="../_images/1c82049a2b9356e9d06ccf0af53bf69a3d35eb48df5ba8fc480b9ab6ea76d6c4.png" />
+<img alt="../_images/b3a12c79ad45e4d1a4010d7dc18aec08b489e55f578b6a48fa1fe7217f64fe72.png" src="../_images/b3a12c79ad45e4d1a4010d7dc18aec08b489e55f578b6a48fa1fe7217f64fe72.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -579,12 +586,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a780d69dd469a526fa852d64c20f77c329d2de9dceb6f5caef3c84254661c3a7.png" src="../_images/a780d69dd469a526fa852d64c20f77c329d2de9dceb6f5caef3c84254661c3a7.png" />
+<img alt="../_images/72c2002e3e6b1b7a202059f69db692ecc146ba09b8bc3df13778b3157d9dce0f.png" src="../_images/72c2002e3e6b1b7a202059f69db692ecc146ba09b8bc3df13778b3157d9dce0f.png" />
 </div>
 </div>
 </section>
 <section id="db">
-<h3>dB<a class="headerlink" href="#db" title="Permalink to this heading">#</a></h3>
+<h3>dB<a class="headerlink" href="#db" title="Link to this heading">#</a></h3>
 <p>Wenn man eine Größe in dB ausdrücken möchte, dann kann man bei Strömen oder Spannungen folgende Formel anwenden.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
@@ -592,12 +599,12 @@ document.write(`
 \[x_{dB} = 20 \cdot log_{10}(x)\]</div>
 </div>
 <p>Wichtige Größen in dB:</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-center head"><p>x</p></th>
-<th class="text-center head"><p><span class="math notranslate nohighlight">\(20 \cdot log_{10}(x)\)</span></p></th>
-<th class="text-center head"><p>x</p></th>
-<th class="text-center head"><p><span class="math notranslate nohighlight">\(20 \cdot log_{10}(x)\)</span></p></th>
+<tr class="row-odd"><th class="head text-center"><p>x</p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(20 \cdot log_{10}(x)\)</span></p></th>
+<th class="head text-center"><p>x</p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(20 \cdot log_{10}(x)\)</span></p></th>
 </tr>
 </thead>
 <tbody>
@@ -636,7 +643,7 @@ document.write(`
 </section>
 </section>
 <section id="ortskurven">
-<h2>Ortskurven<a class="headerlink" href="#ortskurven" title="Permalink to this heading">#</a></h2>
+<h2>Ortskurven<a class="headerlink" href="#ortskurven" title="Link to this heading">#</a></h2>
 <p>Die Ortskurve stellt die Veränderung einer komplexen Größe, die von einem reellen Parameter abhängt, in der komplexen Ebene dar. Man kann zum Beispiel die Impedanz in Abhängigkeit der Frequenz darstellen.</p>
 <p>Am Beispiel einer Reihenschaltung aus Wirkwiderstand und Induktivität</p>
 <div class="math notranslate nohighlight">
@@ -645,7 +652,7 @@ document.write(`
 <figure class="align-default" id="fig-tutchap8-ortkurve-reihe">
 <img alt="../_images/chap8_ortskurve-reihe.png" src="../_images/chap8_ortskurve-reihe.png" />
 </figure>
-<p><span id="id1">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id1">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>Man kann auch die Ortskurve der Admittanz aufstellen. In diesem Fall lässt sie sich aus der Ortskurve der Impedanz
 ableiten. Dazu muss nur der Kehrwert der Impedanz an allen Frequenzstellen genommen werden.</p>
 <div class="math notranslate nohighlight">
@@ -655,9 +662,9 @@ Kehrwert einer komplexen Zahl erhält man indem man den Kehrwert des Betrages bi
 <figure class="align-default" id="fig-tutchap8-ortkurve-invertiert">
 <img alt="../_images/chap8_ortskurve-invertiert.png" src="../_images/chap8_ortskurve-invertiert.png" />
 </figure>
-<p><span id="id2">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id2">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <section id="inversionsregeln">
-<h3>Inversionsregeln<a class="headerlink" href="#inversionsregeln" title="Permalink to this heading">#</a></h3>
+<h3>Inversionsregeln<a class="headerlink" href="#inversionsregeln" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <ol class="arabic simple">
@@ -668,7 +675,7 @@ Kehrwert einer komplexen Zahl erhält man indem man den Kehrwert des Betrages bi
 <figure class="align-default" id="fig-tutchap8-inversionsregel1">
 <img alt="../_images/chap8_inversionsregel1.png" src="../_images/chap8_inversionsregel1.png" />
 </figure>
-<p><span id="id3">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id3">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <ol class="arabic simple" start="2">
@@ -679,7 +686,7 @@ Kehrwert einer komplexen Zahl erhält man indem man den Kehrwert des Betrages bi
 <figure class="align-default" id="fig-tutchap8-inversionsregel2">
 <img alt="../_images/chap8_inversionsregel2.png" src="../_images/chap8_inversionsregel2.png" />
 </figure>
-<p><span id="id4">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id4">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <ol class="arabic simple" start="3">
@@ -690,15 +697,15 @@ Kehrwert einer komplexen Zahl erhält man indem man den Kehrwert des Betrages bi
 <figure class="align-default" id="fig-tutchap8-inversionsregel3">
 <img alt="../_images/chap8_inversionsregel3.png" src="../_images/chap8_inversionsregel3.png" />
 </figure>
-<p><span id="id5">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id5">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 </section>
 </section>
 <section id="filterschaltungen">
-<h2>Filterschaltungen<a class="headerlink" href="#filterschaltungen" title="Permalink to this heading">#</a></h2>
+<h2>Filterschaltungen<a class="headerlink" href="#filterschaltungen" title="Link to this heading">#</a></h2>
 <p>Aus zwei der Grundzweipole der Induktivität L und der Kapazität C, kann man in Kombination mit dem Wirkwiderstand R zwei
 Filterschaltungen bauen.</p>
 <section id="tiefpass">
-<h3>Tiefpass<a class="headerlink" href="#tiefpass" title="Permalink to this heading">#</a></h3>
+<h3>Tiefpass<a class="headerlink" href="#tiefpass" title="Link to this heading">#</a></h3>
 <p>Das Kennzeichen des Tiefpasses ist es, dass kleine Frequenzen so gut wie vollständig übertragen werden, während große
 Frequenzen zunehmend gedämpft werden. Ein Amplitudengang eines Tiefpasses kann zum Beispiel so aussehen:</p>
 <div class="cell docutils container">
@@ -728,12 +735,12 @@ Frequenzen zunehmend gedämpft werden. Ein Amplitudengang eines Tiefpasses kann 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1c82049a2b9356e9d06ccf0af53bf69a3d35eb48df5ba8fc480b9ab6ea76d6c4.png" src="../_images/1c82049a2b9356e9d06ccf0af53bf69a3d35eb48df5ba8fc480b9ab6ea76d6c4.png" />
+<img alt="../_images/b3a12c79ad45e4d1a4010d7dc18aec08b489e55f578b6a48fa1fe7217f64fe72.png" src="../_images/b3a12c79ad45e4d1a4010d7dc18aec08b489e55f578b6a48fa1fe7217f64fe72.png" />
 </div>
 </div>
 </section>
 <section id="hochpass">
-<h3>Hochpass<a class="headerlink" href="#hochpass" title="Permalink to this heading">#</a></h3>
+<h3>Hochpass<a class="headerlink" href="#hochpass" title="Link to this heading">#</a></h3>
 <p>Bei einem Hochpass können hohe Frequenzen ungestört durch die Schaltung gehen, während kleinere Freqeunzen gedämpft werden. Der Amplitudengang eines Tiefpasses könnte zum Beispiel so aussehen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -763,15 +770,15 @@ Frequenzen zunehmend gedämpft werden. Ein Amplitudengang eines Tiefpasses kann 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/045b803f1f0ea330ba944e9131c1526f2d311e877c3df73a4570e35b11108f1f.png" src="../_images/045b803f1f0ea330ba944e9131c1526f2d311e877c3df73a4570e35b11108f1f.png" />
+<img alt="../_images/152e41494bd9d730d268c68e49e6ba9211d3f80c10a4c4c864c7e72de62698c3.png" src="../_images/152e41494bd9d730d268c68e49e6ba9211d3f80c10a4c4c864c7e72de62698c3.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="ubungen">
-<h2>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this heading">#</a></h2>
+<h2>Übungen<a class="headerlink" href="#ubungen" title="Link to this heading">#</a></h2>
 <section id="ubung-8-1-tief-und-hochpass">
-<h3>Übung 8.1 (Tief- und Hochpass)<a class="headerlink" href="#ubung-8-1-tief-und-hochpass" title="Permalink to this heading">#</a></h3>
+<h3>Übung 8.1 (Tief- und Hochpass)<a class="headerlink" href="#ubung-8-1-tief-und-hochpass" title="Link to this heading">#</a></h3>
 <p>Ordne die folgenden Schaltungen entweder dem Tiefpass oder Hochpass zu. Stelle zusätzlich für jede Schaltung die
 Übertragungsfunktion auf (keine Brüche im Nenner oder Zähler).</p>
 <p>a)</p>
@@ -807,14 +814,14 @@ Frequenzen zunehmend gedämpft werden. Ein Amplitudengang eines Tiefpasses kann 
 </div>
 </section>
 <section id="ubung-8-2-tiefpass">
-<h3>Übung 8.2 (Tiefpass)<a class="headerlink" href="#ubung-8-2-tiefpass" title="Permalink to this heading">#</a></h3>
+<h3>Übung 8.2 (Tiefpass)<a class="headerlink" href="#ubung-8-2-tiefpass" title="Link to this heading">#</a></h3>
 <p>(Hagmann Aufgabe 9.1)</p>
 <p>Der in dem Bild dargestellte Tiefpass enthält den Wirkwiderstand <span class="math notranslate nohighlight">\(R = 10\,k\Omega\)</span> und einen Kondensator mit der Kapazität <span class="math notranslate nohighlight">\(C = 120\,nF\)</span>.</p>
 <p>Bei welcher Frequenz <span class="math notranslate nohighlight">\(f\)</span> ist die Ausgangsspannung <span class="math notranslate nohighlight">\(U_2\)</span> um den Faktor 10 kleiner als die Eingangsspannung <span class="math notranslate nohighlight">\(U_1\)</span>?</p>
 <figure class="align-default" id="fig-tutchap8-aufgabe8-2">
 <img alt="../_images/chap8_aufgabe8.2.jpg" src="../_images/chap8_aufgabe8.2.jpg" />
 </figure>
-<p><span id="id6">[<a class="reference internal" href="9_Schwingkreise.html#id27" title="Gert Hagmann. Aufgabensammlung zu den Grundlagen der Elektrotechnik. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.">Hagmann, 2019</a>]</span></p>
+<p><span id="id6">[<a class="reference internal" href="9_Schwingkreise.html#id28" title="Gert Hagmann. Aufgabensammlung zu den Grundlagen der Elektrotechnik. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.">Hagmann, 2019</a>]</span></p>
 <div class="toggle docutils container">
 <h4 class="rubric" id="losung-8-2">Lösung 8.2</h4>
 <p>nach der Spannungsteilerregeln:</p>
@@ -831,7 +838,7 @@ Frequenzen zunehmend gedämpft werden. Ein Amplitudengang eines Tiefpasses kann 
 </div>
 </section>
 <section id="ubung-8-3-tiefpass-grenzfrequenz">
-<h3>Übung 8.3 (Tiefpass Grenzfrequenz)<a class="headerlink" href="#ubung-8-3-tiefpass-grenzfrequenz" title="Permalink to this heading">#</a></h3>
+<h3>Übung 8.3 (Tiefpass Grenzfrequenz)<a class="headerlink" href="#ubung-8-3-tiefpass-grenzfrequenz" title="Link to this heading">#</a></h3>
 <p>(Hagmann Aufgabe 9.2)</p>
 <p>Der in dem Bild dargestellte Tiefpass enthält den Wirkwiderstand <span class="math notranslate nohighlight">\(R = 1,5\,k\Omega\)</span>. Die Kapazität C des vorhandenen
 Kondensators soll so gewählt werden, dass die Grenzfreqeunz der Schaltung <span class="math notranslate nohighlight">\(f_g = 1,2\,kHz\)</span> wird.</p>
@@ -839,7 +846,7 @@ Kondensators soll so gewählt werden, dass die Grenzfreqeunz der Schaltung <span
 <figure class="align-default" id="fig-tutchap8-aufgabe8-3">
 <img alt="../_images/chap8_aufgabe8.3.jpg" src="../_images/chap8_aufgabe8.3.jpg" />
 </figure>
-<p><span id="id7">[<a class="reference internal" href="9_Schwingkreise.html#id27" title="Gert Hagmann. Aufgabensammlung zu den Grundlagen der Elektrotechnik. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.">Hagmann, 2019</a>]</span></p>
+<p><span id="id7">[<a class="reference internal" href="9_Schwingkreise.html#id28" title="Gert Hagmann. Aufgabensammlung zu den Grundlagen der Elektrotechnik. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.">Hagmann, 2019</a>]</span></p>
 <div class="toggle docutils container">
 <h4 class="rubric" id="losung-8-3">Lösung 8.3</h4>
 <p>nach der Spannungsteilerregel:</p>
@@ -857,14 +864,14 @@ Kondensators soll so gewählt werden, dass die Grenzfreqeunz der Schaltung <span
 </div>
 </section>
 <section id="ubung-8-4-hochpass">
-<h3>Übung 8.4 (Hochpass)<a class="headerlink" href="#ubung-8-4-hochpass" title="Permalink to this heading">#</a></h3>
+<h3>Übung 8.4 (Hochpass)<a class="headerlink" href="#ubung-8-4-hochpass" title="Link to this heading">#</a></h3>
 <p>(Hagmann Aufgabe 9.8)</p>
 <p>Der in dem Bild dargestellte Hochpass enthält eine Spule mit der Induktivität <span class="math notranslate nohighlight">\(L = 85\,mH\)</span>. Die Schaltung soll so ausgelegt werden, dass die Grenzfrequenz des Hochpasses <span class="math notranslate nohighlight">\(f_g = 2,5\,kHz\)</span> wird.</p>
 <p>Welchen Wert muss der Wirkwiderstand R haben?</p>
 <figure class="align-default" id="fig-tutchap8-aufgabe8-4">
 <img alt="../_images/chap8_aufgabe8.4.jpg" src="../_images/chap8_aufgabe8.4.jpg" />
 </figure>
-<p><span id="id8">[<a class="reference internal" href="9_Schwingkreise.html#id27" title="Gert Hagmann. Aufgabensammlung zu den Grundlagen der Elektrotechnik. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.">Hagmann, 2019</a>]</span></p>
+<p><span id="id8">[<a class="reference internal" href="9_Schwingkreise.html#id28" title="Gert Hagmann. Aufgabensammlung zu den Grundlagen der Elektrotechnik. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.">Hagmann, 2019</a>]</span></p>
 <div class="toggle docutils container">
 <h4 class="rubric" id="losung-8-4">Lösung 8.4</h4>
 <p>nach der Spannungsteilerregel:</p>
@@ -882,7 +889,7 @@ Kondensators soll so gewählt werden, dass die Grenzfreqeunz der Schaltung <span
 </div>
 </section>
 <section id="ubung-8-6-ortskurve">
-<h3>Übung 8.6 (Ortskurve)<a class="headerlink" href="#ubung-8-6-ortskurve" title="Permalink to this heading">#</a></h3>
+<h3>Übung 8.6 (Ortskurve)<a class="headerlink" href="#ubung-8-6-ortskurve" title="Link to this heading">#</a></h3>
 <p>(Schenke 28.10)</p>
 <p>Gegeben ist die folgende Schaltung:</p>
 <figure class="align-default" id="fig-tutchap8-aufgabe8-6">
@@ -895,11 +902,11 @@ Kondensators soll so gewählt werden, dass die Grenzfreqeunz der Schaltung <span
 <figure class="align-default" id="fig-tutchap8-aufgabe8-6a">
 <img alt="../_images/chap8_aufgabe8.6a.png" src="../_images/chap8_aufgabe8.6a.png" />
 </figure>
-<p><span id="id9">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id9">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 </div>
 </section>
 <section id="ubung-8-7-ortskurve">
-<h3>Übung 8.7 (Ortskurve)<a class="headerlink" href="#ubung-8-7-ortskurve" title="Permalink to this heading">#</a></h3>
+<h3>Übung 8.7 (Ortskurve)<a class="headerlink" href="#ubung-8-7-ortskurve" title="Link to this heading">#</a></h3>
 <p>(Schenke 28.16)</p>
 <p>Gegeben ist die folgende Schaltung:</p>
 <figure class="align-default" id="fig-tutchap8-aufgabe8-7">
@@ -911,21 +918,25 @@ Kondensators soll so gewählt werden, dass die Grenzfreqeunz der Schaltung <span
 <figure class="align-default" id="fig-tutchap8-aufgabe8-7a">
 <img alt="../_images/chap8_aufgabe8.7a.png" src="../_images/chap8_aufgabe8.7a.png" />
 </figure>
-<p><span id="id10">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p><span id="id10">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 </div>
 </section>
 </section>
 <section id="quellen">
-<h2>Quellen<a class="headerlink" href="#quellen" title="Permalink to this heading">#</a></h2>
+<h2>Quellen<a class="headerlink" href="#quellen" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id11">
-<dl class="citation">
-<dt class="label" id="id29"><span class="brackets">Hag19</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id7">2</a>,<a href="#id8">3</a>)</span></dt>
-<dd><p>Gert Hagmann. <em>Aufgabensammlung zu den Grundlagen der Elektrotechnik</em>. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.</p>
-</dd>
-<dt class="label" id="id42"><span class="brackets">Sch23</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>,<a href="#id4">4</a>,<a href="#id5">5</a>,<a href="#id9">6</a>,<a href="#id10">7</a>)</span></dt>
-<dd><p>Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: <a class="reference external" href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a>.</p>
-</dd>
-</dl>
+<div role="list" class="citation-list">
+<div class="citation" id="id30" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Hag19<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id6">1</a>,<a role="doc-backlink" href="#id7">2</a>,<a role="doc-backlink" href="#id8">3</a>)</span>
+<p>Gert Hagmann. <em>Aufgabensammlung zu den Grundlagen der Elektrotechnik</em>. AULA-Verlag, Wiebelsheim, 18., durchgesehene auflage edition, 2019. ISBN 978-3-89104-828-3. Literaturverzeichnis: Seite 389.</p>
+</div>
+<div class="citation" id="id46" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Sch23<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id3">3</a>,<a role="doc-backlink" href="#id4">4</a>,<a role="doc-backlink" href="#id5">5</a>,<a role="doc-backlink" href="#id9">6</a>,<a role="doc-backlink" href="#id10">7</a>)</span>
+<p>Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: <a class="reference external" href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a>.</p>
+</div>
+</div>
 </div>
 </section>
 </section>

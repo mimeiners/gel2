@@ -1,5 +1,0 @@
-# Literaturverzeichnis
-
-```{bibliography}
-
-```

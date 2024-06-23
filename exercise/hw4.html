@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="de" data-content_root="" >
+<html lang="de" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Bode-Diagramm und Nyquist-Ortskurve &#8212; M 2.3 Grundlagen der Elektrotechnik (GEL2)</title>
   
@@ -29,32 +28,30 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../_static/documentation_options.js?v=91fba89f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -90,11 +87,21 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/translations.js?v=70a09b52"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercise/hw4';</script>
@@ -513,46 +520,46 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="bode-diagramm-und-nyquist-ortskurve">
-<h1>Bode-Diagramm und Nyquist-Ortskurve<a class="headerlink" href="#bode-diagramm-und-nyquist-ortskurve" title="Permalink to this heading">#</a></h1>
+<h1>Bode-Diagramm und Nyquist-Ortskurve<a class="headerlink" href="#bode-diagramm-und-nyquist-ortskurve" title="Link to this heading">#</a></h1>
 <section id="schaltungsanalyse-mit-dem-bode-diagramm">
-<h2>Schaltungsanalyse mit dem Bode-Diagramm<a class="headerlink" href="#schaltungsanalyse-mit-dem-bode-diagramm" title="Permalink to this heading">#</a></h2>
+<h2>Schaltungsanalyse mit dem Bode-Diagramm<a class="headerlink" href="#schaltungsanalyse-mit-dem-bode-diagramm" title="Link to this heading">#</a></h2>
 <p>Im Labor ist mit einem Vektornetzwerkanalysator das Bode-Diagramm eines Zweitors aufgenommen worden.
-In <a class="reference internal" href="#fig-hw4p1a"><span class="std std-numref">Abb. 21</span></a> sind Betrag <span class="math notranslate nohighlight">\(\vert H_u \vert\)</span> und Phase <span class="math notranslate nohighlight">\(\arg(H_u)\)</span> der Spannungsübertragungsfunktion
+In <a class="reference internal" href="#fig-hw4p1a"><span class="std std-numref">Abb. 35</span></a> sind Betrag <span class="math notranslate nohighlight">\(\vert H_u \vert\)</span> und Phase <span class="math notranslate nohighlight">\(\arg(H_u)\)</span> der Spannungsübertragungsfunktion
 von Tor 1 auf Tor 2, <span class="math notranslate nohighlight">\(\underline{H}_u=\underline{U}_2/\underline{U}_1\)</span>, abgebildet.</p>
 <figure class="align-default" id="fig-hw4p1a">
 <a class="reference internal image-reference" href="../_images/hw4p1a.png"><img alt="../_images/hw4p1a.png" src="../_images/hw4p1a.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Abb. 21 </span><span class="caption-text">Bode-Diagramm des Zweitors</span><a class="headerlink" href="#fig-hw4p1a" title="Link zu diesem Bild">#</a></p>
+<p><span class="caption-number">Abb. 35 </span><span class="caption-text">Bode-Diagramm des Zweitors</span><a class="headerlink" href="#fig-hw4p1a" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="funktion">
-<h3>Funktion<a class="headerlink" href="#funktion" title="Permalink to this heading">#</a></h3>
+<h3>Funktion<a class="headerlink" href="#funktion" title="Link to this heading">#</a></h3>
 <p>Welche Funktion erfüllt das gemessene Zweitor?</p>
 <section id="losung">
-<h4>Lösung<a class="headerlink" href="#losung" title="Permalink to this heading">#</a></h4>
+<h4>Lösung<a class="headerlink" href="#losung" title="Link to this heading">#</a></h4>
 <p>Das gemessene Zweitor hat die Funktion eines Hochpassfilters.</p>
 </section>
 </section>
 <section id="bauteilanordnung">
-<h3>Bauteilanordnung<a class="headerlink" href="#bauteilanordnung" title="Permalink to this heading">#</a></h3>
+<h3>Bauteilanordnung<a class="headerlink" href="#bauteilanordnung" title="Link to this heading">#</a></h3>
 <p>Welche Bauteilanordnung vermuten Sie zwischen den zwei Toren? Zeichnen Sie ein Ersatzschaltbild des Zweitors mit
 Eingangsspannung <span class="math notranslate nohighlight">\(\underline{U}_1\)</span> und Ausgangsspannung <span class="math notranslate nohighlight">\(\underline{U}_2\)</span>.</p>
 <section id="id1">
-<h4>Lösung<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<h4>Lösung<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <p>In einfachster Ausführung kann man einen Hochpass durch einen Spannungsteiler mit Kapazität <span class="math notranslate nohighlight">\(C\)</span> und Widerstand <span class="math notranslate nohighlight">\(R\)</span> realisieren.</p>
 <figure class="align-default" id="id8">
 <a class="reference internal image-reference" href="../_images/hw4p1b.png"><img alt="../_images/hw4p1b.png" src="../_images/hw4p1b.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Abb. 22 </span><span class="caption-text">Einfacher RC-Hochpass, Zweitor-Ersatzschaltbild</span><a class="headerlink" href="#id8" title="Link zu diesem Bild">#</a></p>
+<p><span class="caption-number">Abb. 36 </span><span class="caption-text">Einfacher RC-Hochpass, Zweitor-Ersatzschaltbild</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="spannungsubertragungsfunktion">
-<h3>Spannungsübertragungsfunktion<a class="headerlink" href="#spannungsubertragungsfunktion" title="Permalink to this heading">#</a></h3>
+<h3>Spannungsübertragungsfunktion<a class="headerlink" href="#spannungsubertragungsfunktion" title="Link to this heading">#</a></h3>
 <p>Leiten Sie die Spannungsübertragungsfunktion, <span class="math notranslate nohighlight">\(\underline{H}_u=\underline{U}_2/\underline{U}_1\)</span>, Ihres Ersatzschaltbildes her.</p>
 <section id="id2">
-<h4>Lösung<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<h4>Lösung<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[
 \underline{H}_u=\frac{\underline{U}_2}{\underline{U}_1} = \frac{j \omega R C}{1+j \omega R C}
@@ -560,10 +567,10 @@ Eingangsspannung <span class="math notranslate nohighlight">\(\underline{U}_1\)<
 </section>
 </section>
 <section id="betrag-und-phase">
-<h3>Betrag und Phase<a class="headerlink" href="#betrag-und-phase" title="Permalink to this heading">#</a></h3>
+<h3>Betrag und Phase<a class="headerlink" href="#betrag-und-phase" title="Link to this heading">#</a></h3>
 <p>Bestimmen Sie Betrag und Phase der Spannungsübertragungsfunktion <span class="math notranslate nohighlight">\(\underline{H}_u\)</span>.</p>
 <section id="id3">
-<h4>Lösung<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<h4>Lösung<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[
 \vert\underline{H}_u\vert =\frac{\omega R C}{\sqrt{1 + (\omega R C)^2}} 
@@ -581,14 +588,14 @@ Eingangsspannung <span class="math notranslate nohighlight">\(\underline{U}_1\)<
 </section>
 </section>
 <section id="db-grenzfrequenz">
-<h3>3 dB-Grenzfrequenz<a class="headerlink" href="#db-grenzfrequenz" title="Permalink to this heading">#</a></h3>
+<h3>3 dB-Grenzfrequenz<a class="headerlink" href="#db-grenzfrequenz" title="Link to this heading">#</a></h3>
 <p>Leiten Sie eine Bestimmungsgleichung für die 3 dB-Grenzfrequenz <span class="math notranslate nohighlight">\(f_g\)</span> der Spannungsübertragungsfunktion her.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>Die Grenzfrequenz kennzeichnet die Frequenz, bei der der Betrag auf -3 dB abfällt und die Phase 45 Grad beträgt.</p>
 </div>
 <section id="id4">
-<h4>Lösung<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<h4>Lösung<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <p>Es gibt zwei Lösungswege:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -619,10 +626,10 @@ R = \frac{1}{2 \pi f_g C}
 </section>
 </section>
 <section id="grenzfrequenz">
-<h3>Grenzfrequenz<a class="headerlink" href="#grenzfrequenz" title="Permalink to this heading">#</a></h3>
+<h3>Grenzfrequenz<a class="headerlink" href="#grenzfrequenz" title="Link to this heading">#</a></h3>
 <p>Wie groß ist die Grenzfrequenz für <span class="math notranslate nohighlight">\(R=1\,k\Omega\)</span> und <span class="math notranslate nohighlight">\(C=100\,nF\)</span>?</p>
 <section id="id5">
-<h4>Lösung<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<h4>Lösung<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[
 \omega_g = \frac{1}{R C} = 10\,kHz 
@@ -635,33 +642,33 @@ f_g = \frac{1}{2 \pi R C} \approx 1.6\,kHz
 </section>
 </section>
 <section id="ortskurve-einer-zweipol-admittanz">
-<h2>Ortskurve einer Zweipol-Admittanz<a class="headerlink" href="#ortskurve-einer-zweipol-admittanz" title="Permalink to this heading">#</a></h2>
-<p>Konstruieren Sie eine Ortskurve der Admittanz <span class="math notranslate nohighlight">\(Y(\omega)\)</span> für den skizzierten Zweipol in <a class="reference internal" href="#fig-hw4p2"><span class="std std-numref">Abb. 23</span></a>.
+<h2>Ortskurve einer Zweipol-Admittanz<a class="headerlink" href="#ortskurve-einer-zweipol-admittanz" title="Link to this heading">#</a></h2>
+<p>Konstruieren Sie eine Ortskurve der Admittanz <span class="math notranslate nohighlight">\(Y(\omega)\)</span> für den skizzierten Zweipol in <a class="reference internal" href="#fig-hw4p2"><span class="std std-numref">Abb. 37</span></a>.
 Überprüfen Sie das Ergebnis, indem Sie ausgezeichnete Frequenzwerte betrachten. Die Werte der Bauteile lauten
 <span class="math notranslate nohighlight">\(R_s = 50\,\Omega\)</span>, <span class="math notranslate nohighlight">\(R_p = 200\,\Omega\)</span> und <span class="math notranslate nohighlight">\(C = 2\,\mu F\)</span>.</p>
 <figure class="align-default" id="fig-hw4p2">
 <a class="reference internal image-reference" href="../_images/hw4p2.png"><img alt="../_images/hw4p2.png" src="../_images/hw4p2.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Abb. 23 </span><span class="caption-text">Zweipol-Admittanz</span><a class="headerlink" href="#fig-hw4p2" title="Link zu diesem Bild">#</a></p>
+<p><span class="caption-number">Abb. 37 </span><span class="caption-text">Zweipol-Admittanz</span><a class="headerlink" href="#fig-hw4p2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="ortskurve-mit-verschiedenen-parametern">
-<h2>Ortskurve mit verschiedenen Parametern<a class="headerlink" href="#ortskurve-mit-verschiedenen-parametern" title="Permalink to this heading">#</a></h2>
-<p>Gegeben sei nachfolgende RLC-Schaltung in <a class="reference internal" href="#fig-hw4p3"><span class="std std-numref">Abb. 24</span></a>.
+<h2>Ortskurve mit verschiedenen Parametern<a class="headerlink" href="#ortskurve-mit-verschiedenen-parametern" title="Link to this heading">#</a></h2>
+<p>Gegeben sei nachfolgende RLC-Schaltung in <a class="reference internal" href="#fig-hw4p3"><span class="std std-numref">Abb. 38</span></a>.
 Die Werte der Bauteile lauten <span class="math notranslate nohighlight">\(R_1 = 60\,\Omega\)</span>, <span class="math notranslate nohighlight">\(R_2 = 200\,\Omega\)</span>, <span class="math notranslate nohighlight">\(L = 200\,\mu H\)</span> und <span class="math notranslate nohighlight">\(C = 5\,nF\)</span>.</p>
 <figure class="align-default" id="fig-hw4p3">
 <a class="reference internal image-reference" href="../_images/hw4p3.png"><img alt="../_images/hw4p3.png" src="../_images/hw4p3.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Abb. 24 </span><span class="caption-text">RLC-Schaltung</span><a class="headerlink" href="#fig-hw4p3" title="Link zu diesem Bild">#</a></p>
+<p><span class="caption-number">Abb. 38 </span><span class="caption-text">RLC-Schaltung</span><a class="headerlink" href="#fig-hw4p3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="ortskurve-mit-omega-als-parameter">
-<h3>Ortskurve mit <span class="math notranslate nohighlight">\(\omega\)</span> als Parameter<a class="headerlink" href="#ortskurve-mit-omega-als-parameter" title="Permalink to this heading">#</a></h3>
+<h3>Ortskurve mit <span class="math notranslate nohighlight">\(\omega\)</span> als Parameter<a class="headerlink" href="#ortskurve-mit-omega-als-parameter" title="Link to this heading">#</a></h3>
 <p><span class="math notranslate nohighlight">\(f(\omega)\)</span> Konstruieren Sie die Ortskurve der Eingangsimpedanz <span class="math notranslate nohighlight">\(\underline{Z}_e\)</span> mit der Kreisfrequenz <span class="math notranslate nohighlight">\(\omega\)</span> als Parameter,
 <span class="math notranslate nohighlight">\(0 \leq \omega \leq \infty\)</span>. Dabei sei der Widerstand <span class="math notranslate nohighlight">\(R = 200\,\Omega\)</span>.</p>
 <section id="id6">
-<h4>Lösung<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<h4>Lösung<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[
 \underline{Y}_p = \frac{1}{\underline{Z}_p} = \underbrace{\frac{1}{R}
@@ -719,18 +726,18 @@ Kreis. <span class="math notranslate nohighlight">\(\underline{Z}_p(\omega_0)=R_
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c865e872f15bd60cbc9cfd029d6068fe526ef5acf91d91ef8dd9e9a8228e344b.png" src="../_images/c865e872f15bd60cbc9cfd029d6068fe526ef5acf91d91ef8dd9e9a8228e344b.png" />
-<img alt="../_images/f549ddc1f2d921f03cae89c2fd519437449c986c9127b9c756f71ffcc520c8b9.png" src="../_images/f549ddc1f2d921f03cae89c2fd519437449c986c9127b9c756f71ffcc520c8b9.png" />
+<img alt="../_images/7f62833d40faa808aedfa169d61eda45d9e155eac8043d638430d1d9e5ff5d28.png" src="../_images/7f62833d40faa808aedfa169d61eda45d9e155eac8043d638430d1d9e5ff5d28.png" />
+<img alt="../_images/88a9eddf1d0d0d148a89f8d9ecc12f3bd47f9aa599610c7a5a3e173c7e0fba24.png" src="../_images/88a9eddf1d0d0d148a89f8d9ecc12f3bd47f9aa599610c7a5a3e173c7e0fba24.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="ortskurve-mit-r-als-parameter">
-<h3>Ortskurve mit R als Parameter<a class="headerlink" href="#ortskurve-mit-r-als-parameter" title="Permalink to this heading">#</a></h3>
+<h3>Ortskurve mit R als Parameter<a class="headerlink" href="#ortskurve-mit-r-als-parameter" title="Link to this heading">#</a></h3>
 <p>Konstruieren Sie die Ortskurve der Eingangsimpedanz <span class="math notranslate nohighlight">\(\underline{Z}_e\)</span> mit dem Widerstand R als Parameter,
 <span class="math notranslate nohighlight">\(0 \leq R \leq \infty\)</span>. Dabei sei die Kreisfrequenz <span class="math notranslate nohighlight">\(\omega = 1.5e6 1/s\)</span>.</p>
 <section id="id7">
-<h4>Lösung<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<h4>Lösung<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[
 \underline{Y}_p = \frac{1}{R_3} + j 4.17\,mS 
@@ -790,8 +797,8 @@ Kreis. <span class="math notranslate nohighlight">\(\underline{Z}_p(\omega_0)=R_
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c95fdf9ab536536909c1f531113643cabae7f093e9de8d3f9e175d4af30fcc8a.png" src="../_images/c95fdf9ab536536909c1f531113643cabae7f093e9de8d3f9e175d4af30fcc8a.png" />
-<img alt="../_images/2ba6b3d55b5c7d06b7dc97338654b9d22b5e5853b784e5266fa536fd6ad13607.png" src="../_images/2ba6b3d55b5c7d06b7dc97338654b9d22b5e5853b784e5266fa536fd6ad13607.png" />
+<img alt="../_images/31df1c5ed00a25541c948784c9e84e474cbccbe8394b5828ff32fddfb1323412.png" src="../_images/31df1c5ed00a25541c948784c9e84e474cbccbe8394b5828ff32fddfb1323412.png" />
+<img alt="../_images/53f8e595cc15b763c865421002212efccc810a71b92b7a48038f8835dda65228.png" src="../_images/53f8e595cc15b763c865421002212efccc810a71b92b7a48038f8835dda65228.png" />
 </div>
 </div>
 </section>

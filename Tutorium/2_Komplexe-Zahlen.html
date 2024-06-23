@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="de" data-content_root="" >
+<html lang="de" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>2. Komplexe Zahlen &#8212; M 2.3 Grundlagen der Elektrotechnik (GEL2)</title>
   
@@ -29,32 +28,30 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../_static/documentation_options.js?v=91fba89f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -90,11 +87,21 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/translations.js?v=70a09b52"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorium/2_Komplexe-Zahlen';</script>
@@ -506,7 +513,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="komplexe-zahlen">
-<h1>2. Komplexe Zahlen<a class="headerlink" href="#komplexe-zahlen" title="Permalink to this heading">#</a></h1>
+<h1>2. Komplexe Zahlen<a class="headerlink" href="#komplexe-zahlen" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>imaginäre Einheit</p></li>
 <li><p>Aufbau komplexer Zahlen</p></li>
@@ -520,7 +527,7 @@ document.write(`
 <li><p>Konjugiert-Komplex</p></li>
 </ul>
 <section id="die-imaginare-einheit">
-<h2>Die imaginäre Einheit<a class="headerlink" href="#die-imaginare-einheit" title="Permalink to this heading">#</a></h2>
+<h2>Die imaginäre Einheit<a class="headerlink" href="#die-imaginare-einheit" title="Link to this heading">#</a></h2>
 <p>Die imaginäre Einheit j ist definiert als:</p>
 <div class="math notranslate nohighlight">
 \[j^2 = -1\]</div>
@@ -538,45 +545,45 @@ document.write(`
 <p>usw.</p>
 </section>
 <section id="aufbau-komplexer-zahlen">
-<h2>Aufbau komplexer Zahlen<a class="headerlink" href="#aufbau-komplexer-zahlen" title="Permalink to this heading">#</a></h2>
+<h2>Aufbau komplexer Zahlen<a class="headerlink" href="#aufbau-komplexer-zahlen" title="Link to this heading">#</a></h2>
 <p>Komplexe Zahlen bestehen aus einem Real- und einem Imaginärteil. Sie werden durch einen Unterstrich gekennzeichnet. Ist der Buchstabe nicht unterstrichen, wird von dem Betrag der Komplexen Zahl geredet.</p>
 <div class="math notranslate nohighlight">
 \[\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\}\]</div>
 <p>In der Elektrotechnik wird zur Kennzeichnung des Imaginärteils oft der Buchstabe j anstelle des i verwendet, da das i für die Bezeichnung des Stromes vorhergesehen ist.</p>
 </section>
 <section id="rechenoperationen">
-<h2>Rechenoperationen<a class="headerlink" href="#rechenoperationen" title="Permalink to this heading">#</a></h2>
+<h2>Rechenoperationen<a class="headerlink" href="#rechenoperationen" title="Link to this heading">#</a></h2>
 <section id="addition-von-komplexen-zahlen">
-<h3>Addition von komplexen Zahlen<a class="headerlink" href="#addition-von-komplexen-zahlen" title="Permalink to this heading">#</a></h3>
+<h3>Addition von komplexen Zahlen<a class="headerlink" href="#addition-von-komplexen-zahlen" title="Link to this heading">#</a></h3>
 <p>Zwei Komplexe Zahlen <span class="math notranslate nohighlight">\(\underline{A}\)</span> und <span class="math notranslate nohighlight">\(\underline{B}\)</span> werden addiert, indem ihre Real- und Imaginärteile getrennt voneinander addiert werden.</p>
 <div class="math notranslate nohighlight">
 \[\underline{A} + \underline{B} = Re\{\underline{A}\} + Re\{\underline{B}\} + j(Im\{\underline{A}\} + Im\{\underline{B}\})\]</div>
 </section>
 <section id="subtraktion-von-komplexen-zahlen">
-<h3>Subtraktion von komplexen Zahlen<a class="headerlink" href="#subtraktion-von-komplexen-zahlen" title="Permalink to this heading">#</a></h3>
+<h3>Subtraktion von komplexen Zahlen<a class="headerlink" href="#subtraktion-von-komplexen-zahlen" title="Link to this heading">#</a></h3>
 <p>Zwei Komplexe Zahlen <span class="math notranslate nohighlight">\(\underline{A}\)</span> und <span class="math notranslate nohighlight">\(\underline{B}\)</span> werden subtrahiert, indem ihre Real- und Imaginärteile getrennt voneinander abgezogen werden.</p>
 <div class="math notranslate nohighlight">
 \[\underline{A} - \underline{B} = Re\{\underline{A}\} - Re\{\underline{B}\} + j(Im\{\underline{A}\} - Im\{\underline{B}\})\]</div>
 </section>
 <section id="betrag-einer-komplexen-zahl">
-<h3>Betrag einer komplexen Zahl<a class="headerlink" href="#betrag-einer-komplexen-zahl" title="Permalink to this heading">#</a></h3>
+<h3>Betrag einer komplexen Zahl<a class="headerlink" href="#betrag-einer-komplexen-zahl" title="Link to this heading">#</a></h3>
 <p>Der Betrag einer komplexen Zahl <span class="math notranslate nohighlight">\(\underline{A}\)</span> ist die Euklidische Länge des Vektors, wenn dieser zum Beispiel in einem Koordinatensystem gezeichnet ist. Der Betrag wird als <span class="math notranslate nohighlight">\(|\underline{A}|\)</span> oder vereinfacht als A geschrieben.</p>
 <div class="math notranslate nohighlight">
 \[A = |\underline{A}| = \sqrt{Re\{\underline{A}\}^2 + Im\{\underline{A}\}^2}\]</div>
 </section>
 <section id="phasenwinkel-einer-komplexen-zahl">
-<h3>Phasenwinkel einer komplexen Zahl<a class="headerlink" href="#phasenwinkel-einer-komplexen-zahl" title="Permalink to this heading">#</a></h3>
+<h3>Phasenwinkel einer komplexen Zahl<a class="headerlink" href="#phasenwinkel-einer-komplexen-zahl" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\varphi = arctan\left(\frac{Im\{\underline{A}\}}{Re\{\underline{A}\}}\right)\]</div>
 <p>Der Phasenwinkel wird überlicherweise von 0° bis 180° positiv (Zählweise CCW) und von 180° bis 360° negativ (Zählweise CW) angegeben.</p>
 </section>
 <section id="eulersche-identitat-und-polarkoordinaten">
-<h3>Eulersche Identität und Polarkoordinaten<a class="headerlink" href="#eulersche-identitat-und-polarkoordinaten" title="Permalink to this heading">#</a></h3>
+<h3>Eulersche Identität und Polarkoordinaten<a class="headerlink" href="#eulersche-identitat-und-polarkoordinaten" title="Link to this heading">#</a></h3>
 <p>Komplexe Zahlen können auch als Polarkoordinaten über die Eulersche Identität beschrieben werden. Dabei setzt sich das aus Betrag und Phasenwinkel zusammen.</p>
 <div class="math notranslate nohighlight">
 \[\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\} = A \cdot e^{j\varphi}\]</div>
 <section id="eulersche-identitat">
-<h4>Eulersche Identität<a class="headerlink" href="#eulersche-identitat" title="Permalink to this heading">#</a></h4>
+<h4>Eulersche Identität<a class="headerlink" href="#eulersche-identitat" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[e^{j\varphi} = cos(\varphi) + j \cdot sin(\varphi)\]</div>
 <p><img alt="zeigerbild_euler" src="../_images/eulersche_identitaet.png" /></p>
@@ -584,26 +591,26 @@ document.write(`
 </section>
 </section>
 <section id="multiplikation-komplexer-zahlen">
-<h3>Multiplikation komplexer Zahlen<a class="headerlink" href="#multiplikation-komplexer-zahlen" title="Permalink to this heading">#</a></h3>
+<h3>Multiplikation komplexer Zahlen<a class="headerlink" href="#multiplikation-komplexer-zahlen" title="Link to this heading">#</a></h3>
 <p>Die Multiplikation ist über die Polarkoordinaten einfacher.<br />
 Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel addiert.</p>
 <div class="math notranslate nohighlight">
 \[\underline{A} \cdot \underline{B} = A \cdot B \cdot e^{j(\varphi_A + \varphi_B)}\]</div>
 </section>
 <section id="division-komplexer-zahlen">
-<h3>Division komplexer Zahlen<a class="headerlink" href="#division-komplexer-zahlen" title="Permalink to this heading">#</a></h3>
+<h3>Division komplexer Zahlen<a class="headerlink" href="#division-komplexer-zahlen" title="Link to this heading">#</a></h3>
 <p>Ähnlich zur Multiplikation wird bei der Division die Beträge dividiert und die Phasenwinkel subtrahiert.</p>
 <div class="math notranslate nohighlight">
 \[\frac{\underline{A}}{\underline{B}} = \frac{A}{B} \cdot e^{j(\varphi_A - \varphi_B)}\]</div>
 </section>
 <section id="kehrwert-einer-komplexen-zahl">
-<h3>Kehrwert einer komplexen Zahl<a class="headerlink" href="#kehrwert-einer-komplexen-zahl" title="Permalink to this heading">#</a></h3>
+<h3>Kehrwert einer komplexen Zahl<a class="headerlink" href="#kehrwert-einer-komplexen-zahl" title="Link to this heading">#</a></h3>
 <p>Beim Kehrwert einer komplexen Zahl wird der Kehrwert des Betrages genommen und das Vorzeichen des Phasenwinkels invertiert.</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{\underline{A}} = \frac{1}{A} \cdot e^{-j\varphi}\]</div>
 </section>
 <section id="konjugiert-komplex">
-<h3>Konjugiert-Komplex<a class="headerlink" href="#konjugiert-komplex" title="Permalink to this heading">#</a></h3>
+<h3>Konjugiert-Komplex<a class="headerlink" href="#konjugiert-komplex" title="Link to this heading">#</a></h3>
 <p>Bei dem konjugiert-komplexen einer Zahl wird das Vorzeichen des Imaginärteils invertiert. Dadurch verändert sich der Betrag nicht, der Phasenwinkel wird allerdings auch invertiert.</p>
 <div class="math notranslate nohighlight">
 \[\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\}\]</div>
@@ -612,9 +619,9 @@ Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel ad
 </section>
 </section>
 <section id="ubungen">
-<h2>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this heading">#</a></h2>
+<h2>Übungen<a class="headerlink" href="#ubungen" title="Link to this heading">#</a></h2>
 <section id="aufgabe-2-1">
-<h3>Aufgabe 2.1<a class="headerlink" href="#aufgabe-2-1" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 2.1<a class="headerlink" href="#aufgabe-2-1" title="Link to this heading">#</a></h3>
 <p><span class="math notranslate nohighlight">\(\sqrt{-9} + \sqrt{-x^2} - \sqrt{-y^2} + \sqrt{-25}\)</span></p>
 <div class="toggle docutils container">
 <h4 class="rubric" id="losung-2-1">Lösung 2.1</h4>
@@ -623,7 +630,7 @@ Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel ad
 </div>
 </section>
 <section id="aufgabe-2-2">
-<h3>Aufgabe 2.2<a class="headerlink" href="#aufgabe-2-2" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 2.2<a class="headerlink" href="#aufgabe-2-2" title="Link to this heading">#</a></h3>
 <p>a) <span class="math notranslate nohighlight">\(\frac{3 j^3 \cdot 5 j^4}{6 j^{20}}\)</span></p>
 <p>b) <span class="math notranslate nohighlight">\(\frac{1}{j^5} + \frac{1}{j^7}\)</span></p>
 <div class="toggle docutils container">
@@ -633,7 +640,7 @@ Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel ad
 </div>
 </section>
 <section id="aufgabe-2-3">
-<h3>Aufgabe 2.3<a class="headerlink" href="#aufgabe-2-3" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 2.3<a class="headerlink" href="#aufgabe-2-3" title="Link to this heading">#</a></h3>
 <p>a) <span class="math notranslate nohighlight">\((1 + 2j) - (-2 + 3j) + (-3 + j) - (5 + 4j) - (-1 + 9j) + (5 - 8j)\)</span></p>
 <p>b) <span class="math notranslate nohighlight">\((-2a + 3j) - (u - uj) + (-2a -3j) - (-u - vj)\)</span></p>
 <div class="toggle docutils container">
@@ -643,7 +650,7 @@ Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel ad
 </div>
 </section>
 <section id="aufgabe-2-4">
-<h3>Aufgabe 2.4<a class="headerlink" href="#aufgabe-2-4" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 2.4<a class="headerlink" href="#aufgabe-2-4" title="Link to this heading">#</a></h3>
 <p>a) <span class="math notranslate nohighlight">\((5 - 2j)(-3 + j)\)</span> (Ergebnis in kartesischer Form)</p>
 <p>b) <span class="math notranslate nohighlight">\(\left(3\sqrt{2} + 5\sqrt{3}j\right)\left(3\sqrt{2} - 5\sqrt{3}j\right)\)</span> (Ergebnis in kartesischer Form)</p>
 <div class="toggle docutils container">
@@ -653,7 +660,7 @@ Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel ad
 </div>
 </section>
 <section id="aufgabe-2-5">
-<h3>Aufgabe 2.5<a class="headerlink" href="#aufgabe-2-5" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 2.5<a class="headerlink" href="#aufgabe-2-5" title="Link to this heading">#</a></h3>
 <p>a) <span class="math notranslate nohighlight">\(\frac{3 + 4j}{2 + j}\)</span></p>
 <p>b) <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{5} - j}\)</span></p>
 <p>c) <span class="math notranslate nohighlight">\(\frac{3j}{1 - j}\)</span></p>
@@ -665,7 +672,7 @@ Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel ad
 </div>
 </section>
 <section id="aufgabe-2-6">
-<h3>Aufgabe 2.6<a class="headerlink" href="#aufgabe-2-6" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 2.6<a class="headerlink" href="#aufgabe-2-6" title="Link to this heading">#</a></h3>
 <p>a) <span class="math notranslate nohighlight">\(\frac{1 + j}{1 - j} + \frac{1 - j}{1 + j}\)</span></p>
 <p>b) <span class="math notranslate nohighlight">\(\frac{1 - j}{1 + j} - \frac{1 + j}{1 - j}\)</span></p>
 <div class="toggle docutils container">
@@ -675,7 +682,7 @@ Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel ad
 </div>
 </section>
 <section id="aufgabe-2-7">
-<h3>Aufgabe 2.7<a class="headerlink" href="#aufgabe-2-7" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 2.7<a class="headerlink" href="#aufgabe-2-7" title="Link to this heading">#</a></h3>
 <p>In die Exponentialform umwandeln:</p>
 <p>a) <span class="math notranslate nohighlight">\(0,5 - \sqrt{6}j\)</span></p>
 <p>b) <span class="math notranslate nohighlight">\(\sqrt{3} + \sqrt{3}j\)</span></p>
@@ -688,7 +695,7 @@ Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel ad
 </div>
 </section>
 <section id="aufgabe-2-8">
-<h3>Aufgabe 2.8<a class="headerlink" href="#aufgabe-2-8" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 2.8<a class="headerlink" href="#aufgabe-2-8" title="Link to this heading">#</a></h3>
 <p>In die arithmetische Form umwandeln:</p>
 <p>a) <span class="math notranslate nohighlight">\(83 e^{j \cdot 1,1083}\)</span></p>
 <p>b) <span class="math notranslate nohighlight">\(3,8 e^{-j \cdot 5,524}\)</span></p>
@@ -701,7 +708,7 @@ Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel ad
 </div>
 </section>
 <section id="aufgabe-2-9">
-<h3>Aufgabe 2.9<a class="headerlink" href="#aufgabe-2-9" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 2.9<a class="headerlink" href="#aufgabe-2-9" title="Link to this heading">#</a></h3>
 <p>Für <span class="math notranslate nohighlight">\(z_1 = 1,5 - 0,5j\)</span> und <span class="math notranslate nohighlight">\(z_2 = 3 + 0,5j\)</span> die Exponentialform berechnen und die folgende Gleichung in der arithmetischen Form angeben:</p>
 <div class="math notranslate nohighlight">
 \[z = \frac{z_1 \cdot z_2}{z_1 + z_2}\]</div>
@@ -718,7 +725,7 @@ Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel ad
 </div>
 </section>
 <section id="aufgabe-2-10">
-<h3>Aufgabe 2.10<a class="headerlink" href="#aufgabe-2-10" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 2.10<a class="headerlink" href="#aufgabe-2-10" title="Link to this heading">#</a></h3>
 <p>Bringe den folgenden Term in die Darstellung <span class="math notranslate nohighlight">\(\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\frac{1}{j\omega C}}{R + \frac{1}{j\omega C}}\]</div>
@@ -732,7 +739,7 @@ j\frac{\omega RC}{1 + (\omega RC)^2}
 </div>
 </section>
 <section id="aufgabe-2-11">
-<h3>Aufgabe 2.11<a class="headerlink" href="#aufgabe-2-11" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 2.11<a class="headerlink" href="#aufgabe-2-11" title="Link to this heading">#</a></h3>
 <p>Bringe den folgenden Term in die Darstellung <span class="math notranslate nohighlight">\(\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\frac{1}{j\omega C}}{j\omega L + R + \frac{1}{j\omega C}}\]</div>
@@ -747,16 +754,18 @@ j\frac{\omega RC}{1 + (\omega RC)^2}
 </section>
 </section>
 <section id="quellen">
-<h2>Quellen<a class="headerlink" href="#quellen" title="Permalink to this heading">#</a></h2>
+<h2>Quellen<a class="headerlink" href="#quellen" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id1">
-<dl class="citation">
-<dt class="label" id="id4"><span class="brackets">ALAGrosseN04</span></dt>
-<dd><p>W. Leupold, M. Andrie, G. Große, and H. Nickel. <em>Mathematik 1 ein Studienbuch für Ingenieure Algebra - Geometrie - Analysis für eine Variable</em>. Carl Hanser Verlag, Munich, Germany, 2 edition, 2004.</p>
-</dd>
-<dt class="label" id="id32"><span class="brackets">ASch23</span></dt>
-<dd><p>Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: <a class="reference external" href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a>.</p>
-</dd>
-</dl>
+<div role="list" class="citation-list">
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ALAGrosseN04<span class="fn-bracket">]</span></span>
+<p>W. Leupold, M. Andrie, G. Große, and H. Nickel. <em>Mathematik 1 ein Studienbuch für Ingenieure Algebra - Geometrie - Analysis für eine Variable</em>. Carl Hanser Verlag, Munich, Germany, 2 edition, 2004.</p>
+</div>
+<div class="citation" id="id36" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ASch23<span class="fn-bracket">]</span></span>
+<p>Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: <a class="reference external" href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a>.</p>
+</div>
+</div>
 </div>
 </section>
 </section>

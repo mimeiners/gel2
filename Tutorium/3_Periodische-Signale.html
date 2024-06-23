@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="de" data-content_root="" >
+<html lang="de" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>3. Periodische Signale &#8212; M 2.3 Grundlagen der Elektrotechnik (GEL2)</title>
   
@@ -29,32 +28,30 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../_static/documentation_options.js?v=91fba89f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -90,11 +87,21 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/translations.js?v=70a09b52"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorium/3_Periodische-Signale';</script>
@@ -499,13 +506,13 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="periodische-signale">
-<h1>3. Periodische Signale<a class="headerlink" href="#periodische-signale" title="Permalink to this heading">#</a></h1>
+<h1>3. Periodische Signale<a class="headerlink" href="#periodische-signale" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Stromarten</p></li>
 <li><p>Kennwerte von Wechselgrößen</p></li>
 </ul>
 <section id="stromarten">
-<h2>Stromarten<a class="headerlink" href="#stromarten" title="Permalink to this heading">#</a></h2>
+<h2>Stromarten<a class="headerlink" href="#stromarten" title="Link to this heading">#</a></h2>
 <p>Neben dem Gleichstrom, der ausführlich in GEL1 behandelt wurde, gibt es weitere Stromarten.</p>
 <p>Der Wechselstrom kennzeichnet sich durch sein beliebig periodisches Verhalten. Die Richtung und Größe variiert dabei mit
 der Zeit t. Eine Sonderform, die große Bedeutung hat ist der Sinusstrom.</p>
@@ -536,7 +543,7 @@ Informationstechnik liegt.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/092bcd9c669c823fc79d8068c24ce354c573efbf691abdd939b10fe667a1eea9.png" src="../_images/092bcd9c669c823fc79d8068c24ce354c573efbf691abdd939b10fe667a1eea9.png" />
+<img alt="../_images/f8faea17e0044c865400b0dc779a7e66a6a4397aaf10a2c55884ca56439bf189.png" src="../_images/f8faea17e0044c865400b0dc779a7e66a6a4397aaf10a2c55884ca56439bf189.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -569,7 +576,7 @@ Informationstechnik liegt.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/fad45bd2d27f647154fb17dad948257416c4a15e1a178919cd5f43c5e5a1f8b1.png" src="../_images/fad45bd2d27f647154fb17dad948257416c4a15e1a178919cd5f43c5e5a1f8b1.png" />
+<img alt="../_images/0488dbbc867f37054ad94821ee385b9a993b3ef3541a3bb5dd4b2779e92616b6.png" src="../_images/0488dbbc867f37054ad94821ee385b9a993b3ef3541a3bb5dd4b2779e92616b6.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -601,7 +608,7 @@ Informationstechnik liegt.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/382125669f0b4d57359cfd077d3eced63840200522513624517290eb42e12640.png" src="../_images/382125669f0b4d57359cfd077d3eced63840200522513624517290eb42e12640.png" />
+<img alt="../_images/ba2163377131fb04e4dfe466b29e3f1ac8ed843a0b58efe6804838b63d861da7.png" src="../_images/ba2163377131fb04e4dfe466b29e3f1ac8ed843a0b58efe6804838b63d861da7.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -633,7 +640,7 @@ Informationstechnik liegt.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/fa2a6a6c1fe3e2cd95f7cebc87179665fa15050208a9ea2ee9b9d92fde6ad769.png" src="../_images/fa2a6a6c1fe3e2cd95f7cebc87179665fa15050208a9ea2ee9b9d92fde6ad769.png" />
+<img alt="../_images/daecd2ba327d65d6816492cb2b7be1a7f6ea125699e5bcc4b242f5d92e50af1c.png" src="../_images/daecd2ba327d65d6816492cb2b7be1a7f6ea125699e5bcc4b242f5d92e50af1c.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -667,7 +674,7 @@ Informationstechnik liegt.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/e390fedf8f6c917bd5efafe2cb0391c6cc4526f2f23ae43298aa251f7ae82d0d.png" src="../_images/e390fedf8f6c917bd5efafe2cb0391c6cc4526f2f23ae43298aa251f7ae82d0d.png" />
+<img alt="../_images/6ad6f83612a32dc08c18fd91448131c7433aae0975c4ec9c6098c2c9e96d9bab.png" src="../_images/6ad6f83612a32dc08c18fd91448131c7433aae0975c4ec9c6098c2c9e96d9bab.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -701,18 +708,18 @@ Informationstechnik liegt.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/67536acc204c3e3aa6b74b86a203413c263e78f55bc4e92d76cca449bad824a8.png" src="../_images/67536acc204c3e3aa6b74b86a203413c263e78f55bc4e92d76cca449bad824a8.png" />
+<img alt="../_images/0e407f4ce5cea239a957c73d15e905a897eb2f3db3a588d6390310a2060497ed.png" src="../_images/0e407f4ce5cea239a957c73d15e905a897eb2f3db3a588d6390310a2060497ed.png" />
 </div>
 </div>
 </section>
 <section id="kennwerte-von-wechselgroszen">
-<h2>Kennwerte von Wechselgrößen<a class="headerlink" href="#kennwerte-von-wechselgroszen" title="Permalink to this heading">#</a></h2>
+<h2>Kennwerte von Wechselgrößen<a class="headerlink" href="#kennwerte-von-wechselgroszen" title="Link to this heading">#</a></h2>
 <p>Allgemein kann man eine sich zeitlich ändernde sinusförmige Wechselgröße mit der folgenden Funktion beschreiben.</p>
 <div class="math notranslate nohighlight">
 \[x = \hat{x} sin(\omega t + \varphi)\]</div>
 <p>Dabei wird der Zeitwert x als auch der Scheitelwert <span class="math notranslate nohighlight">\(\hat{x}\)</span> mit einem kleinen Formelbuchstaben bezeichnet.</p>
 <section id="periodendauer-und-frequenz">
-<h3>Periodendauer und Frequenz<a class="headerlink" href="#periodendauer-und-frequenz" title="Permalink to this heading">#</a></h3>
+<h3>Periodendauer und Frequenz<a class="headerlink" href="#periodendauer-und-frequenz" title="Link to this heading">#</a></h3>
 <p>Da sich eine sinusförmige Wechselgröße wiederholt sich nach Ablauf des Winkels <span class="math notranslate nohighlight">\(2\pi = 360^° = \omega T\)</span>. Damit kann man die Periodendauer T über die Kreisfrequenz <span class="math notranslate nohighlight">\(\omega\)</span> darstellen.</p>
 <div class="math notranslate nohighlight">
 \[T = \frac{2 \pi}{\omega}\]</div>
@@ -724,19 +731,19 @@ Informationstechnik liegt.</p>
 \[\omega = 2 \pi f = \frac{2\pi}{T}\]</div>
 </section>
 <section id="phasenlage">
-<h3>Phasenlage<a class="headerlink" href="#phasenlage" title="Permalink to this heading">#</a></h3>
+<h3>Phasenlage<a class="headerlink" href="#phasenlage" title="Link to this heading">#</a></h3>
 <p>Sinusgrößen können zu verschiedenen Zeitpunkten ihre Scheitelwerte und Nulldurchgänge erreichen. Man sagt, dass diese Größen unterschiedliche Phasenlagen haben; sie sind gegeneinander phasenverschoben.</p>
 <figure class="align-default" id="fig-tutchapphasenlage">
 <img alt="../_images/Phasenlage.pdf" src="../_images/Phasenlage.pdf" />
 </figure>
 <p>Entnommen aus <span id="id1">[<a class="reference internal" href="7_KWR.html#id15" title="H. Fricke and P. Vaske. Elektrische Netzwerke Grundlagen der Elektrotechnik 1. B.G. Teubner, Stuttgart, Germany, 17 edition, 1982.">Fricke and Vaske, 1982</a>]</span></p>
 <section id="nullphasenwinkel">
-<h4>Nullphasenwinkel<a class="headerlink" href="#nullphasenwinkel" title="Permalink to this heading">#</a></h4>
+<h4>Nullphasenwinkel<a class="headerlink" href="#nullphasenwinkel" title="Link to this heading">#</a></h4>
 <p>Allgemein gesprochen beginnt eine Sinusfunktion bei t=0 und geht um den Nullphasenwinkel <span class="math notranslate nohighlight">\(\varphi_x\)</span> früher als die normale Sinusfunktion <span class="math notranslate nohighlight">\(sin(\omega t)\)</span> durch Null. Das Vorzeichen des Winkel ist sehr wichtig!</p>
 <p>Beim positiven Nulldurchgang der Sinusgröße wird ein Pfeil zum Nullpunkt gezeichnet. Ist der Pfeil in Zählrichtung der Zeitachse ist der Nullphasenwinkel positiv, ist der Pfeil entgegen der Zählrichtung der Zeitachse, dann ist er negativ (siehe Bild unter Phasenlage).</p>
 </section>
 <section id="phasenwinkel">
-<h4>Phasenwinkel<a class="headerlink" href="#phasenwinkel" title="Permalink to this heading">#</a></h4>
+<h4>Phasenwinkel<a class="headerlink" href="#phasenwinkel" title="Link to this heading">#</a></h4>
 <p>Zusätzlich zum Nullphasewinkel gibt es den Phasenwinkel. Dieser gibt die Phasenverschiebung zwischen zwei Sinussignalen an. Es ist festgelegt, dass der Strom in solchen Fällen als Bezugsgröße genommen wird.</p>
 <div class="math notranslate nohighlight">
 \[\varphi = \varphi_U - \varphi_I\]</div>
@@ -751,21 +758,21 @@ Informationstechnik liegt.</p>
 </section>
 </section>
 <section id="mittelwert">
-<h3>Mittelwert<a class="headerlink" href="#mittelwert" title="Permalink to this heading">#</a></h3>
+<h3>Mittelwert<a class="headerlink" href="#mittelwert" title="Link to this heading">#</a></h3>
 <p>Der Mittelwert ist der zeitlich durchschnittliche Wert einer Funktion.</p>
 <div class="math notranslate nohighlight">
 \[\overline{x(t)} = \frac{1}{T} \int\limits_{t_0}^{t_o + T} x(t) dt\]</div>
 <p>Bei reinem Wechselstrom ist der Mittelwert 0.</p>
 </section>
 <section id="gleichrichtwert">
-<h3>Gleichrichtwert<a class="headerlink" href="#gleichrichtwert" title="Permalink to this heading">#</a></h3>
+<h3>Gleichrichtwert<a class="headerlink" href="#gleichrichtwert" title="Link to this heading">#</a></h3>
 <p>Der Gleichrichtwert ist der Mittelwert einer gleichgericheten Größe.</p>
 <div class="math notranslate nohighlight">
 \[\overline{|x(t)|} = \frac{1}{T} \int\limits_{t_0}^{t_0 + T} |x(t)| dt\]</div>
 <p>Verhältnis von Gleichricht- zu Scheitelwert (bei Sinusgrößen): <span class="math notranslate nohighlight">\(\frac{\overline{|i|}}{\hat{i}} = 0.6366\)</span></p>
 </section>
 <section id="effektivwert">
-<h3>Effektivwert<a class="headerlink" href="#effektivwert" title="Permalink to this heading">#</a></h3>
+<h3>Effektivwert<a class="headerlink" href="#effektivwert" title="Link to this heading">#</a></h3>
 <p>Der Effektivwert einer periodischen Spannung (oder eines periodischen Stroms) entspricht dem Wert einer Gleichspannung (eines Gleichstroms), der in einer ohmschen Last dieselbe Leistung umsetzt.</p>
 <div class="math notranslate nohighlight">
 \[X = X_{eff} = \sqrt{\frac{1}{T} \int\limits_{t_0}^{t_0 + T} x^2(t) dt}\]</div>
@@ -785,19 +792,19 @@ Informationstechnik liegt.</p>
 <p>Der Formfaktor für Rechtecksignale beträgt <span class="math notranslate nohighlight">\(F = 1.11\)</span>.</p>
 </section>
 <section id="effektivwert-mit-gleichstromanteil">
-<h3>Effektivwert mit Gleichstromanteil<a class="headerlink" href="#effektivwert-mit-gleichstromanteil" title="Permalink to this heading">#</a></h3>
+<h3>Effektivwert mit Gleichstromanteil<a class="headerlink" href="#effektivwert-mit-gleichstromanteil" title="Link to this heading">#</a></h3>
 <figure class="align-default" id="fig-tutchapmischspannung">
 <img alt="../_images/Mischspannung.pdf" src="../_images/Mischspannung.pdf" />
 </figure>
-<p>Entn. aus <span id="id2">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p>Entn. aus <span id="id2">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <div class="math notranslate nohighlight">
 \[X_{eff} = \sqrt{X_o^2 + X_{eff\sim}^2}\]</div>
 </section>
 </section>
 <section id="ubungen">
-<h2>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this heading">#</a></h2>
+<h2>Übungen<a class="headerlink" href="#ubungen" title="Link to this heading">#</a></h2>
 <section id="aufgabe-3-1-gleichrichtwert">
-<h3>Aufgabe 3.1 Gleichrichtwert<a class="headerlink" href="#aufgabe-3-1-gleichrichtwert" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 3.1 Gleichrichtwert<a class="headerlink" href="#aufgabe-3-1-gleichrichtwert" title="Link to this heading">#</a></h3>
 <p>Ein Sinusstrom mit dem Scheitelwert <span class="math notranslate nohighlight">\(\hat{i} = 10 A\)</span> fließt durch die Gleichrichterschaltung-Brückenschaltung von Bild 3.4.</p>
 <figure class="align-default" id="fig-tutchapaufg3-1">
 <img alt="../_images/Brueckengleichrichter.pdf" src="../_images/Brueckengleichrichter.pdf" />
@@ -814,7 +821,7 @@ Tipp: <span class="math notranslate nohighlight">\(Q = i \cdot t\)</span></p>
 </div>
 </section>
 <section id="aufgabe-3-2-zeitfunktion-berechnen">
-<h3>Aufgabe 3.2 Zeitfunktion berechnen<a class="headerlink" href="#aufgabe-3-2-zeitfunktion-berechnen" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 3.2 Zeitfunktion berechnen<a class="headerlink" href="#aufgabe-3-2-zeitfunktion-berechnen" title="Link to this heading">#</a></h3>
 <p>Die übliche Netzspannung 1982 betrug <span class="math notranslate nohighlight">\(U = 220 V\)</span> bei der Netzfrequenz <span class="math notranslate nohighlight">\(f = 50 Hz\)</span>. Es sind der Gleichrichtwert <span class="math notranslate nohighlight">\(\overline{|u|}\)</span> und die Zeitfunktion u dieser Spannung zu bestimmen.</p>
 <div class="toggle docutils container">
 <h4 class="rubric" id="losung-3-2">Lösung 3.2</h4>
@@ -831,7 +838,7 @@ Kreisfrequenz:
 </div>
 </section>
 <section id="aufgabe-3-3-mittelwerte-aus-zeitverlauf-bestimmen">
-<h3>Aufgabe 3.3 Mittelwerte aus Zeitverlauf bestimmen<a class="headerlink" href="#aufgabe-3-3-mittelwerte-aus-zeitverlauf-bestimmen" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 3.3 Mittelwerte aus Zeitverlauf bestimmen<a class="headerlink" href="#aufgabe-3-3-mittelwerte-aus-zeitverlauf-bestimmen" title="Link to this heading">#</a></h3>
 <figure class="align-default" id="fig-tutchap3aufg3-3">
 <img alt="../_images/Aufgabe2.3.pdf" src="../_images/Aufgabe2.3.pdf" />
 </figure>
@@ -881,7 +888,7 @@ Mittelwert:</p>
 </div>
 </section>
 <section id="aufgabe-3-4">
-<h3>Aufgabe 3.4<a class="headerlink" href="#aufgabe-3-4" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 3.4<a class="headerlink" href="#aufgabe-3-4" title="Link to this heading">#</a></h3>
 <p>Ein Wechselstrom besteht nach der Abbildung aus „angeschnittenen“ Sinushalbschwingungen. In den Bereichen <span class="math notranslate nohighlight">\(0 &lt; \omega t &lt; \alpha\)</span> und <span class="math notranslate nohighlight">\(\pi &lt; \omega t &lt; (\pi + \alpha)\)</span> fließt kein Strom (i = 0), wobei <span class="math notranslate nohighlight">\(\alpha = \pi/4 = 45°\)</span> sei. In der übrigen Zeit (innerhalb des Bereiches <span class="math notranslate nohighlight">\(0 &lt; \omega t &lt; 2\pi)\)</span> wird der Stromverlauf durch die Gleichung <span class="math notranslate nohighlight">\(i = \hat{i} sin(\omega t)\)</span> wiedergegeben. Hierbei betrage der Scheitelwert des Stromes <span class="math notranslate nohighlight">\(\hat{i} = 10 A\)</span>.</p>
 <p>Wie groß ist der Effektivwert I des Stromes?</p>
 <div class="cell tag_hide-input docutils container">
@@ -920,7 +927,7 @@ Mittelwert:</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/92bedee9e72a725c28857f542d14fa6cf111577eb50a672717026fa77dce6782.png" src="../_images/92bedee9e72a725c28857f542d14fa6cf111577eb50a672717026fa77dce6782.png" />
+<img alt="../_images/23214d1d9437222eef6f2db34d4818fea78daf3b4c4003688d08fce2716a6b0c.png" src="../_images/23214d1d9437222eef6f2db34d4818fea78daf3b4c4003688d08fce2716a6b0c.png" />
 </div>
 </div>
 <div class="toggle docutils container">
@@ -936,7 +943,7 @@ Mittelwert:</p>
 </div>
 </section>
 <section id="aufgabe-3-5">
-<h3>Aufgabe 3.5<a class="headerlink" href="#aufgabe-3-5" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 3.5<a class="headerlink" href="#aufgabe-3-5" title="Link to this heading">#</a></h3>
 <p>An einem ohmschen Widerstand <span class="math notranslate nohighlight">\(R = 30 \Omega\)</span> liegt eine mittelwertfreie Dreieckspannung mit der Amplitude <span class="math notranslate nohighlight">\(\hat{u} = 9 V\)</span> und der Frequenz <span class="math notranslate nohighlight">\(f = 100 Hz\)</span> an.</p>
 <p>Welche Wirkleistung P wird im zeitlichen Mittel im Widerstand R umgesetzt?</p>
 <div class="toggle docutils container">
@@ -949,12 +956,12 @@ Mittelwert:</p>
 </div>
 </section>
 <section id="aufgabe-3-6">
-<h3>Aufgabe 3.6<a class="headerlink" href="#aufgabe-3-6" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 3.6<a class="headerlink" href="#aufgabe-3-6" title="Link to this heading">#</a></h3>
 <p>An einem ohmschen Widerstand R liegt eine Zägezahnspannung, die von einer Gleichspannung überlagert ist, an:</p>
 <figure class="align-default" id="fig-tutchap3aufg3-6">
 <img alt="../_images/Aufgabe2.6.pdf" src="../_images/Aufgabe2.6.pdf" />
 </figure>
-<p>Entn. aus <span id="id5">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p>Entn. aus <span id="id5">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>a) Bestimmen Sie den Mittelwert <span class="math notranslate nohighlight">\(\overline{u(t)}\)</span> des periodischen Spannungsverlaufes u(t).</p>
 <p>b) Berechnen Sie den Effektivwert U des periodischen Spannungsverlaufes u(t).</p>
 <p>c) Welche Wirkleistung P wird im zeitlichen Mittel im Widerstand R umgesetzt? (23.4)</p>
@@ -972,12 +979,12 @@ Mittelwert:</p>
 </div>
 </section>
 <section id="aufgabe-3-7">
-<h3>Aufgabe 3.7<a class="headerlink" href="#aufgabe-3-7" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabe 3.7<a class="headerlink" href="#aufgabe-3-7" title="Link to this heading">#</a></h3>
 <p>Durch den ohmschen Widerstand R fließt ein Sinusstrom, der mit einem Gleichstrom überlagert ist:</p>
 <figure class="align-default" id="fig-tutchap3aufg3-7">
 <img alt="../_images/Aufgabe2.7.pdf" src="../_images/Aufgabe2.7.pdf" />
 </figure>
-<p>Entn. aus <span id="id6">[<a class="reference internal" href="9_Schwingkreise.html#id40" title="Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
+<p>Entn. aus <span id="id6">[<a class="reference internal" href="9_Schwingkreise.html#id44" title="Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: http://www.stefan-schenke.de/get/.">Schenke, 2023</a>]</span></p>
 <p>a) Bestimmen Sie den Mittelwert <span class="math notranslate nohighlight">\(\overline{i(t)}\)</span> des periodischen Stromverlaufes i(t).</p>
 <p>b) Berechnen Sie den Effektivwert I des periodischen Stromverlaufes i(t).</p>
 <p>c) Welche Wirkleistung P wird im zeitlichen Mittel im Widerstand R umgesetzt? (23.6)</p>
@@ -996,19 +1003,24 @@ Mittelwert:</p>
 </section>
 </section>
 <section id="quellen">
-<h2>Quellen<a class="headerlink" href="#quellen" title="Permalink to this heading">#</a></h2>
+<h2>Quellen<a class="headerlink" href="#quellen" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id7">
-<dl class="citation">
-<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id4">AF20</a></span></dt>
-<dd><p>Manfred Albach and Janina Fischer. <em>Elektrotechnik Aufgabensammlung</em>. Pearson, 2020. ISBN 978-3-86326-893-0. URL: <a class="reference external" href="https://elibrary.pearson.de/book/99.150005/9783863268930">https://elibrary.pearson.de/book/99.150005/9783863268930</a>.</p>
-</dd>
-<dt class="label" id="id9"><span class="brackets">FV82</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
-<dd><p>H. Fricke and P. Vaske. <em>Elektrische Netzwerke Grundlagen der Elektrotechnik 1</em>. B.G. Teubner, Stuttgart, Germany, 17 edition, 1982.</p>
-</dd>
-<dt class="label" id="id38"><span class="brackets">Sch23</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id5">2</a>,<a href="#id6">3</a>)</span></dt>
-<dd><p>Stefan Schenke. Grundlagen der elektrotechnik - jetzt schaffst du die prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: <a class="reference external" href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a>.</p>
-</dd>
-</dl>
+<div role="list" class="citation-list">
+<div class="citation" id="id14" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">AF20</a><span class="fn-bracket">]</span></span>
+<p>Manfred Albach and Janina Fischer. <em>Elektrotechnik Aufgabensammlung</em>. Pearson, 2020. ISBN 978-3-86326-893-0. URL: <a class="reference external" href="https://elibrary.pearson.de/book/99.150005/9783863268930">https://elibrary.pearson.de/book/99.150005/9783863268930</a>.</p>
+</div>
+<div class="citation" id="id9" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>FV82<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>)</span>
+<p>H. Fricke and P. Vaske. <em>Elektrische Netzwerke Grundlagen der Elektrotechnik 1</em>. B.G. Teubner, Stuttgart, Germany, 17 edition, 1982.</p>
+</div>
+<div class="citation" id="id42" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Sch23<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id5">2</a>,<a role="doc-backlink" href="#id6">3</a>)</span>
+<p>Stefan Schenke. Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung! Technical Report, Helmut-Schmidt Universität Hamburg, Germany, 2023. URL: <a class="reference external" href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a>.</p>
+</div>
+</div>
 </div>
 </section>
 </section>
