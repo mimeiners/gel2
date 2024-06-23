@@ -25,9 +25,9 @@ verknüpft über $\mathbf{B} = \mu_0 \mathbf{H}$ wobei $\mu_0$ = $4 \pi 10^{-7}$
 Feldkonstante (Induktionskonstante) bezeichnet. Die Einheit der magnetischen Flußdichte ist Tesla (1T = 1Vs/m2).1 Durch
 Kernmaterialien mit ferromagnetischen oder ferrimagnetischen Eigenschaften wird in technischen Spulen und Übertragern
 häufig die magnetischen Flußdichte $\mathbf{B}$ erhöht. Durch die magnetische Polarisation dieser Materialien im Feld 
-$\mathBF{H}$ ist die magnetische Flußdichte im Kern um die Permeabilitätszahl $\mu_r$ erhöht 
+$\mathbf{H}$ ist die magnetische Flußdichte im Kern um die Permeabilitätszahl $\mu_r$ erhöht 
 $\mathbf{B} = \mu_0 \mu_r \mathbf{H} = \mu \mathbf{H}$. Der Wert von $\mu_r$ ist aussteuerungsabhängig; bei geringer
-Aussteuerung liegt $\mu_r$ für typische Spulenkerne im Bereich $10^2$ -− $10^4$.
+Aussteuerung liegt $\mu_r$ für typische Spulenkerne im Bereich $10^2$ bis $10^4$.
 
 ```{figure} ../images/class/lec8s1.pdf
 :width: 400px
@@ -65,7 +65,7 @@ und vom Hub $\Delta H$ abhängig. Häufig genügt es, den Grenzfall sehr kleiner
 Fall geht $\mu_{\Delta}$ über in die *reversible Permeabilität*
 
 $$
-\mu_{rev} = \frac{1}{\mu_0} \limes_{\Delta H \rightarrow 0} \frac{\Delta B}{\Delta H}
+\mu_{rev} = \frac{1}{\mu_0} \lim_{\Delta H \to 0} \frac{\Delta B}{\Delta H}
 $$
 ```
 
@@ -82,14 +82,14 @@ Gleichung) beschrieben. Dieses besagt, daß das Linienintegral über der magneti
 beliebigen geschlossenen Kurve $C$ gleich dem diese Schleife durchsetzenden Strom $i$ ist,
 
 $$
-\oint_C \mathBF{H} \cdot d\mathbf{s} = i.
+\oint_C \mathbf{H} \cdot d\mathbf{s} = i.
 $$
 
 Ändert sich der eine geschlossene Schleife $C$ durchsetzende magnetische Fluß $\phi$, so wird in der Schleife eine
 Spannung $v$ induziert; induzierte Spannung und Flußänderung sind durch das *Induktionsgesetz* (2. Maxwellsche Gleichung)
 
 $$
-v = \oint_C \mathbf{E} \cdot d\mathbf{s} = -\frac{d\phi}{dt} (9.12)
+v = \oint_C \mathbf{E} \cdot d\mathbf{s} = -\frac{d\phi}{dt}
 $$
 
 verknüpft. Der durch die induzierte Spannung hervorgerufene Strom ist nach der *Lenzschen Regel* so gerichtet, daß er
@@ -107,7 +107,7 @@ $$
 W = \frac{1}{2} \int \mathbf{H} \cdot \mathbf{B} d^3 x = \frac{1}{2} L i^2
 $$
 
-berechnen. Mit $\mathbf{B} = μ\mathfb{H}$ folgt
+berechnen. Mit $\mathbf{B} = \mu\mathbf{H}$ folgt
 
 $$
 L = \frac{\mu}{i^2} \int \vert \mathbf{H}\vert^2 d^3 x .
@@ -118,11 +118,11 @@ $$
 :width: 400px
 :name: fig:lec8s3
 
-(a) Zylinderspule, (b) Ringkernspule und (c) Drahtring
+(a) Zylinderspule, (b) Ringkernspule und \(c\) Drahtring
 ```
 
 ```{figure} ../images/class/lec8s4.pdf
-:width: 400px
+:width: 200px
 :name: fig:lec8s4
 
 Gedruckte Spule (PCB)
@@ -151,7 +151,7 @@ in Serie zu einer reinen Induktivität $l_s$ erfassen. Zusätzlich zu $r_{ks}$ i
 zu berücksichtigen, so daß
 
 $$
-r_s = r_{Cu} + r_{ks}. (9.24)
+r_s = r_{Cu} + r_{ks}.
 $$
 
 Parallel hierzu liegt die Wicklungskapazität $c_p$; dielektrische Verluste in der Isolation werden durch den zusa ̈tzlich
@@ -165,11 +165,11 @@ Die Impedanz \underline{Z} der Spule errechnet sich aus der Ersatzschaltung {num
 \frac{1}{\underline{Z}} &= \frac{1}{r_p} + j\omega c_p + \frac{1}{j \omega l_s+r_s} \\ 
 &= \frac{−j\omega l_s (1−c_p r_s^2/l_s − \omega^2 l_s c_p) 
 + r_s + (r_s^2 + \omega^2 l_s^2) \omega c_p \tan \delta}
-{r_s^2 + \omega^2 l_s^2}. (9.25)
+{r_s^2 + \omega^2 l_s^2}.
 \end{align}
 ```
 
-Der prinzipielle Verlauf des Scheinwiderstands $\underline{Z}$ als Funktion der Frequenz ist in Abb. {numref}`lec8s2`
+Der prinzipielle Verlauf des Scheinwiderstands $\underline{Z}$ als Funktion der Frequenz ist in Abb. {numref}`fig:lec8s2`
 in doppeltlogarithmischer Auftragung dargestellt. Bei sehr kleinen Frequenzen ist $\underline{Z}$ durch den ohmschen
 Widerstand der Wicklung bestimmt. Mit zunehmender Frequenz dominiert dann der induktive Anteil: $\underline{Z}$ steigt
 proportional zu $f$ an. Für Frequenzen $f > f_r$ dominiert der kapazitive Parallelleitwert: Hier fällt $\underline{Z}$
@@ -218,7 +218,7 @@ $R_0 + j\omega L_0$ gegeben, so folgt mit der komplexen Permeabilität $\mu_r = 
 Materials überschlagsmäßig für die Impedanz $\underline{Z}$ des Anschlußdrahts bei der Kreisfrequenz $\omega$
 
 $$
-\underline{Z} \apporx R +j \omega L (\mu_s' −j\mu_s'') = R_0 + \omega \mu_s'' L_0 + j \omega \mu_s' L_0.
+\underline{Z} \approx R +j \omega L (\mu_s' −j\mu_s'') = R_0 + \omega \mu_s'' L_0 + j \omega \mu_s' L_0.
 $$
 
 Dämpfungsperlen verringern auf kostengünstige Weise hochfrequente Stromanteile ohne störende Serienwiderstände im
@@ -233,7 +233,7 @@ nennenswerten Serienimpedanz hervorrufen. [...]
 Drosselspulen sollen den Gleichanteil $I_L$ des sie durchfließenden Stroms möglichst wenig, den Wechselanteil möglichst
 stark dämpfen (drosseln). Der Kern einer Drosselspule ist deshalb in der Regel mit einem starken Gleichfeld belastet,
 dem ein schwaches Wechselfeld überlagert ist. Die Verluste in der Drosselspule sind somit vorwiegend Kupferverluste, da
-der dominierende Gleichanteil keine Kernverluste verursacht.
+der dominierende Gleichanteil keine Kernverluste verursacht; vgl. auch {cite}`schlienz2020` Kap. 2 - Abwärtswandler.
 
 ```{figure} ../images/class/lec8s6.pdf
 :width: 400px
@@ -242,13 +242,52 @@ der dominierende Gleichanteil keine Kernverluste verursacht.
 Schaltnetzteil mit Drossel-Abwärtswandler
 ```
 
+#### Power Management Integrated Circuits (PMICs)
+
+```{figure} ../images/class/lec8sPMICs.pdf
+:width: 400px
+:name: fig:lec8sPMICs
+
+```
+
+"Power management integrated circuits (PMICs) are essential in today's electronic devices. They manage power delivery
+and consumption, provide efficient power supplies, and drive power switches that control actuators and motors, as
+illustrated in Fig. {nameref}`fig:lec8sPMICs` PMICs can be integrated into complex integrated circuits (ICs) or
+implemented as dedicated ICs. In this book, the term PMIC will refer to any type of power integrated circuit. 
+
+The importance of PMICs has grown significantly in recent years, driving innovation and progress in various industries,
+from consumer electronics to automotive and industrial applications. With the progress of machine learning and
+artificial intelligence (AI), intelligent power management is critical to supplying complex processors and sensors. 
+
+PMICs have enabled the development of smaller, more energy-efficient, and reliable electronic solutions. They also play
+an essential role in environmental aspects and sustainability. By regulating the power supply of electronic devices,
+PMICs can reduce energy consumption and carbon emissions. Moreover, PMICs are crucial for the development of renewable
+energies, such as solar and wind power, by enabling efficient power conversion and management." {cite}`wicht2024`
+
+* IoT Nodes and Energy Harvesting
+
+* Portable Devices, Smartphones, and Wearables
+
+* Universal Serial Bus (USB)
+
+* Drones
+
+* Telecommunication Infrastructures
+
+* E-Bikes
+
+* Automotive
+
+* Data-Centers
+
+
 ## Transformatoren und Übertrager
 
-Durch magnetische Verkopplung zweier galvanisch getrennter Stromkrei- se kann zwischen diesen Leistung u ̈bertragen
-werden. Dies wird angewen- det in Transformatoren (Trafos), die der Umsetzung von Spannungs- bzw. Stromwerten dienen
-sowie in U ̈bertragern und Trenntrafos zur galvanischen Trennung von Wechselstromkreisen, Impedanzanpassung, Unterdru
-̈ckung von Gleichanteilen und zum Unterbrechen von Erdschleifen. Die Verkopplung der Induktivita ̈ten wird gewo ̈hnlich
-durch einen gemeinsamen Kern erho ̈ht, der – zur Verbesserung der Linearita ̈t – meist einen Luftspalt entha ̈lt.
+Durch magnetische Verkopplung zweier galvanisch getrennter Stromkreise kann zwischen diesen Leistung übertragen
+werden. Dies wird angewendet in *Transformatoren* (Trafos), die der Umsetzung von Spannungs- bzw. Stromwerten dienen
+sowie in *Übertragern* und *Trenntrafos* zur galvanischen Trennung von Wechselstromkreisen, Impedanzanpassung, Unterdrückung
+von Gleichanteilen und zum Unterbrechen von Erdschleifen. Die Verkopplung der Induktivitäten wird gewöhnlich 
+durch einen gemeinsamen Kern erhöht, der – zur Verbesserung der Linearität – meist einen Luftspalt enthält.
 
 ```{figure} ../images/class/lec8s7.pdf
 :width: 400px
@@ -257,58 +296,59 @@ durch einen gemeinsamen Kern erho ̈ht, der – zur Verbesserung der Linearita �
 Haupt- und Streuflüsse im Transformator
 ```
 
-Entn. {cite}`reisch2007`
 
-
-Abbildung 9.24 zeigt den prinzipiellen Aufbau eines Transformators bzw. U ̈bertragers mit einer prima ̈rseitigen Wicklung
-der Windungszahl n1 und ei- ner sekunda ̈rseitigen Wicklung der Windungszahl n2. Wird die prima ̈rseitige Spule von einem
-Strom i1 durchflossen, so setzt sich der erzeugte Fluß
+Abbildung {nameref}`fig:lec8s4` zeigt den prinzipiellen Aufbau eines Transformators bzw. Übertragers mit einer 
+primärseitigen Wicklung der Windungszahl $n_1$ und einer sekundärseitigen Wicklung der Windungszahl $n_2$.
+Wird die primärseitige Spule von einem Strom $i_1$ durchflossen, so setzt sich der erzeugte Fluß
 
 $$
-φ11 =φ1σ+φ12
+\phi_{11} = \phi_{1\sigma} + \phi_{12}
 $$
 
-aus dem prim ̈aren Streufluß φ1σ und dem die Sekunda ̈rwicklung durch- setzenden Fluß φ12 zusammen. Entsprechend la ̈ßt
-sich der von der Se- kunda ̈rwicklung erzeugte Fluß φ22 in den sekund ̈aren Streuf luß φ2σ und den die Prima ̈rwicklung
-durchsetzenden Fluß φ21 zerlegen 
+aus dem primären Streufluß $\phi_{1\sigma}$ und dem die Sekundärwicklung durchsetzenden Fluß $\phi_{12}$ zusammen.
+Entsprechend läßt sich der von der Sekundärwicklung erzeugte Fluß $\phi_{22}$ in den sekundären Streufluß
+$\phi_{2\sigma}$ und den die Primärwicklung durchsetzenden Fluß $\phi_{21}$ zerlegen 
 
 $$
-φ22 =φ2σ+φ21.
+\phi_{22} = \phi_{2\sigma} + \phi_{21}.
 $$
 
-Der die Prima ̈rwicklung durchsetzende Fluß φ1 und der die Sekunda ̈rwicklung durchsetzende Fluß φ2 sind damit
+Der die Primärwicklung durchsetzende Fluß $\phi_1$ und der die Sekundärwicklung durchsetzende Fluß $\phi_2$ sind damit
 
 $$
-φ1 =φ11+φ21 und φ2 =φ22+φ12.
+\phi_1 = \phi_{11} + \phi_{21}  \quad\text{und}\quad  \phi_2 = \phi_{22} + \phi_{12}.
 $$
 
-Unter Beru ̈cksichtigung der Spannungsabfa ̈lle an den Wicklungen folgt aus dem Induktionsgesetz fu ̈r die Spannungsabfa
-̈lle in Prima ̈r- und Sekunda ̈rkreis
+Unter Berücksichtigung der Spannungsabfälle an den Wicklungen folgt aus dem Induktionsgesetz für die 
+Spannungsabfälle in Primär- und Sekundärkreis
+
+\begin{align}
+\underline{v}_1 &= R_{Cu1} i_1 + n_1 \frac{d\phi_1}{dt} \\
+\underline{v}_2 &= R_{Cu2} i_2 + n_2 \frac{d\phi_2}{dt}. 
+\end{align}
+
+Die Beziehungen (45) gelten allgemein und sind auch bei Aussteuerung des Kernmaterials in den Sättigungsbereich
+anwendbar. Bei Aussteuerung mit geringer Amplitude besteht annähernd ein linearer Zusammenhang zwischen den Flüssen und
+den Spulenströmen
 
 $$
-v1 = RCu1i1 + n1 dφ1/dt (9.68)
-v2 = RCu2i2 + n2 dφ2/dt . (9.69)
+\phi_{11} = L_1 i_1,\quad \phi_{12} = M i_1,\quad \phi_21 = M i_2\quad\text{und}\quad \phi_{22} = L_2 i_2. 
 $$
 
-Die Beziehungen (9.68) und (9.69) gelten allgemein und sind auch bei Aus- steuerung des Kernmaterials in den Sa
-̈ttigungsbereich anwendbar. Bei Aus- steuerung mit geringer Amplitude besteht anna ̈hernd ein linearer Zusammen- hang
-zwischen den Flu ̈ssen und den Spulenstro ̈men 
+Dabei bezeichnet $L_1 = L_{11}$ den (Selbst-)Induktionskoeffizienten der Primärwicklung, $M = L_{12}$ den
+Gegeninduktionskoeffizienten von Primär- und Sekundärwicklung und $L_2 = L_{22}$ den
+(Selbst-)Induktionskoeffizienten der Sekundärwicklung. Durch Einsetzen in die Gln. (9.68) und (9.69) 
+ergeben sich die sog. 
 
-$$
-φ11=L1i1, φ12=Mi1, φ21=Mi2 und φ22=L2i2. n1 n2 n1 n2
-$$
+```{admonition} Transformatorgleichungen
+\begin{align}
+\underline{v}_1 &= R_{Cu1} i_1 + L_1 \frac{di_1}{dt} + M \frac{di_2}{dt} \\
+\underline{v}_2 &= R_{Cu2} i_2 + L_2 \frac{di_2}{dt} + M \frac{di_1}{dt} 
+\end{align}
+```
 
-Dabei bezeichnet L1 = L11 den (Selbst-)Induktionskoeffizienten der Prima ̈r- wicklung, M = L12 den
-Gegeninduktionskoeffizienten von Prima ̈r- und Se- kunda ̈rwicklung und L2 = L22 den (Selbst-)Induktionskoeffizienten der
-Sekunda ̈rwicklung. Durch Einsetzen in die Gln. (9.68) und (9.69) ergeben sich die sog. Transformatorgleichungen
-
-$$
-v =R i+Ldi1+Mdi2 (9.70) 1 Cu1 1 1 dt dt
-v =R i+Ldi2+Mdi1 (9.71) 2 Cu2 2 2 dt dt
-$$
-
-Diese Beziehungen gelten nur bei Kleinsignalaussteuerung ohne Vormagne- tisierung im Bereich niederer Frequenzen. Bei ho
-̈heren Frequenzen tritt ei- ne Phasenverschiebung zwischen magnetischem Feld (bzw. Spulenstrom) und magnetischer
+Diese Beziehungen gelten nur bei Kleinsignalaussteuerung ohne Vormagnetisierung im Bereich niederer Frequenzen.
+Bei höheren Frequenzen tritt eine Phasenverschiebung zwischen magnetischem Feld (bzw. Spulenstrom) und magnetischer 
 Polarisation auf.
 
 ```{figure} ../images/class/lec8s8.pdf
@@ -321,44 +361,52 @@ Schaltsymbol zweier gekoppelter Induktivitäten
 
 ### Der verlustlose Übertrager
 
-Bei sinusfo ̈rmiger Erregung folgt unter Vernachla ̈ssigung der Drahtwidersta ̈nde (RCu1 = RCu2 = 0) aus (9.70) und (9.71)
-fu ̈r die komplexen Zeiger der Wech- selspannungsanteile an Prima ̈r- und Sekunda ̈rwicklung (Abb. 9.25)
+Bei sinusförmiger Erregung folgt unter Vernachlässigung der Drahtwiderstände ($R_{Cu1} = R_{Cu2} = 0$) aus den
+*Transformatorgleichungen* für die komplexen Zeiger der Wechselspannungsanteile an Primär- und Sekundärwicklung
+(Abb. {nameref}`fig:lec8s8`) 
+
+\begin{align}
+\underline{v}_1 &= j\omega L_1 i_1 + j\omega M i_2 \\
+\underline{v}_2 &= j\omega M i_1 + j\omega L_2 i_2
+\end{align}
+
+Mit dem *Kopplungsfaktor* $k = M/L_1 L_2$ läßt sich dies umformen zu ­
+
+\begin{align}
+\underline{v}_1 &= \frac{1}{k} \sqrt{\frac{L_1}{L_2}} \cdot \underline{v}_2 − j\omega \frac{1 −k^2}{k} \sqrt{L_1 L_2} \cdot i_2  \\
+i_1 &= \frac{1}{j\omega k \sqrt{L_1 L_2}} \cdot \underline{v}_2 = \frac{1}{k} \sqrt{\frac{L_1}{L_2}} \cdot i_2
+\end{align}
+
+Bei belastetem Ausgang gilt $i_2 = −\underline{v}_2/Z_L$; für den *Spannungsübertragungsfaktor* folgt damit aus Gl. (48)
+
+\begin{equation}
+\frac{\underline{v}_1}{\underline{v}_2} = \frac{1}{k} \sqrt{\frac{L_1}{L_2}} + j\omega \frac{1 - k^2}{k} \sqrt{L_1 L_2}
+\frac{1}{\underline{Z}_L}.
+\end{equation}
+
+
+```{admonition} Vollständige Kopplung 
+Im Fall idealer Kopplung ($\vert k \vert = 1$) verschwindet der zweite Term auf der rechten Seite von
+Gl. (49); das Spannungsverhältnis ist dann
 
 $$
-v1 = jωL1 i1 + jωM i2 (9.72)
-v2 = jωM i1 + jωL2 i2
+\underline{v}_1/\underline{v}_2 = L_1/L_2 = ü.
 $$
 
-Mit dem Kopplungsfaktor k = M/ L1L2 la ̈ßt sich dies umformen zu ­
+Die Größe ü wird dabei als *Übertragungsverhältnis* bezeichnet.
+Zwischen den Zeigern der Ströme besteht nach Gl. (9.75) der Zusammenhang 
 
-v1 = 1 L1 ·v2 − jω1−k2 ­L1L2 ·i2 kL2 k
+$$­
+\underline{i}_1 = -\sqrt{\frac{L_2}{L_1}} \cdot \underline{i}_1 + \frac{1}{j\omega \sqrt{L_1 L_2}} \cdot \underline{v}_2
+$$
+
+Im Grenzfall des *idealen Übertragers* mit $L_1 = ü^2 L_2 \to \infty$ führt dies auf
 ­
-(9.74) (9.75)
+$$
+\underline{i}_1/\underline{i}_2 = −1/ü.
+$$
+```
 
-Bei belastetem Ausgang gilt i2 = −v2/ZL; fu ̈r den Spannungsu ̈bertragungs- faktor folgt damit aus Gl. (9.74)
-
-1 1L2
-i1 = √ ·v2 − ·i2.
-jωk L1L2 k L1
-­
-v1=1 L1+jω1−k2­LL1. (9.76)
-v2kL2 k12ZL
-
-Vollst ̈andige Kopplung. Im Fall idealer Kopplung (|k| = 1) verschwindet der zweite Term auf der rechten Seite von
-Gl. (9.76); das Spannungsverha ̈ltnis ist dann
-
-v1/v2 = L1/L2 = u ̈ . (9.77)
-
-Die Gro ̈ße u ̈ wird dabei als U ̈bertragungsverh ̈altnis bezeichnet. Zwischen den Zeigern der Stro ̈me besteht nach
-Gl. (9.75) der Zusammenhang 
-­
-L2 1
-i1=− L·i2+jω√LL·v2.
-112
-
-Im Grenzfall des idealen U ̈bertragers mit L1 = u ̈ 2 L2 → ∞ fu ̈hrt dies auf
-­
-i1/i2 = −1/u ̈ . 
 
 ```{figure} ../images/class/lec8s9.pdf
 :width: 400px
@@ -367,96 +415,219 @@ i1/i2 = −1/u ̈ .
 Idealer Übertrager. (a) Schaltsymbol und (b) Impedanztransformation mit idealem Übertrager
 ```
 
-Abbildung 9.26a zeigt des Netzwerksymbol eines idealen U ̈bertragers. Fu ̈r diesen gelten die folgenden Beziehungen
-zwischen den Zeigern von Strom und Spannung an Ein- und Ausgang 
+Abbildung {numref}`fig:lec8s9`(a) zeigt des Netzwerksymbol eines idealen Übertragers. Für diesen gelten die folgenden
+Beziehungen zwischen den Zeigern von Strom und Spannung an Ein- und Ausgang 
 
-v1 = u ̈ 0 v2 . (9.79) i1 0−1/u ̈i29.8. 
+$$
+\begin{pmatrix}
+\underline{v}_1 \\
+\underline{i}_1
+\end{pmatrix}
+= 
+\begin{pmatrix}
+ü & 0 \\
+0 & -1/ü
+\end{pmatrix}
+\begin{pmatrix}
+\underline{v}_2 \\
+\underline{i}_2
+\end{pmatrix}
+$$
 
-Transformatoren und U ̈bertrager 401 Besitzen die beiden Wicklungen des U ̈bertragers denselben AL-Wert, so ist L1 = ALn21
-und L2 = ALn2, wobei n1 und n2 die Windungszahlen der jewei- ligen Wicklung bezeichnen. In Gl. (9.76) eingesetzt folgt 
+Besitzen die beiden Wicklungen des Übertragers denselben $A_L$-Wert, so ist $L_1 = A_L n^2_1$ und $L_2 = A_L n^2_2$,
+wobei $n_1$ und $n_2$ die Windungszahlen der jeweiligen Wicklung bezeichnen. In Gl. (9.76) des
+Spannungsübertragungsfaktors eingesetzt folgt
 
-u ̈ = n1/n2 , (9.80) 
+$$
+ü = n_1/n_2,
+$$
 
-d.h. im idealen U ̈bertrager ist das U ̈bertragungsverha ̈ltnis u ̈ gleich dem Verha ̈ltnis der jeweiligen Windungszahlen. 
+d.h. im idealen Übertrager ist das Übertragungsverhältnis ü gleich dem Verhältnis der jeweiligen Windungszahlen. 
+
 
 ```{admonition} Impedanztransformation
-Wird der Ausgang eines idealen U ̈bertragers mit der Impedanz ZL beschaltet (Abb. 9.26 b), so gilt v2/i2 = −ZL. Fu ̈r die
-Ein- gangsimpedanz Zi des U ̈bertragers folgt damit
+Wird der Ausgang eines idealen Übertragers mit der Impedanz $\underline{Z}_L$ beschaltet
+(Abb. {nameref}`fig:lec8s9`(b)), so gilt $\underline{v}_2/i_2 = −\underline{Z}_L$. Für die Eingangsimpedanz
+$\underline{Z}_i$ des Übertragers folgt damit 
 
 $$
-Zi=v1 =v1·v2·i2 =u ̈2ZL, (9.81) i1 v2i2i1
+\underline{Z}_i = \frac{\underline{v}_1}{\underline{i}_1} 
+= \frac{\underline{v}_1}{\underline{v}_2} 
+\cdot \frac{\underline{v}_2}{\underline{i}_2}
+\cdot \frac{\underline{i}_2}{\underline{i}_1}
+= ü^2 \underline{Z}_L,
 $$
 
-d.h. der ideale U ̈bertrager mit vollsta ̈ndiger Kopplung ”transformiert“ Im- pedanzen im Verha ̈ltnis u ̈2 von der 
+d.h. der ideale Übertrager mit vollständiger Kopplung "transformiert" Impedanzen im Verhältnis ü$^2$ von der 
 Sekundärseite auf die Primärseite.
 ```
 
 
 ### Realer (verlustbehafteter) Übertrager
 
+In realen Übertragern ist der Kopplungsfaktor von eins verschieden, da aufgrund von Streufeldern der die eine Spule
+durchsetzende Fluß die andere nicht vollständig durchsetzt.
+
+```{figure} ../images/class/lec8s10.pdf
+:width: 400px
+:name: fig:lec8s10
+
+T-Ersatzschaltung
+```
+
+Die Transformatorgleichungen lassen sich in die in Abb. {nameref}`fig:lec8s10` dargestellte T-Ersatzschaltung
+überführen. Durch Anwenden des Maschensatzes folgt sofort
+
+\begin{align}
+\underline{v}_1 &= j\omega (L_1−M) \underline{i}_1 + j\omega M(\underline{i}_1+\underline{i}_2) = j\omega L_1
+\underline{i}_1 + j\omega M \underline{i}_2 \\
+\underline{v}_2 &= j\omega (L_2−M) \underline{i}_2 + j\omega M(\underline{i}_1+\underline{i}_2) = j\omega L_2
+\underline{i}_2 + j\omega M \underline{i}_1
+\end{align}
+
+Das Verhalten des Übertragers kann demnach durch drei verschaltete Induktivitäten, die beiden Längsinduktivitäten
+$L_1 − M$ und $L_2 − M$ sowie die Gegeninduktivität $M$ beschrieben werden. Für Kopplungsfaktoren von annähernd 
+eins gilt $M \approx \sqrt{L_1 L_1}$; d.h. zumindest eine der Längsinduktivitäten ist negativ. Die T-Ersatzschaltung ist
+aus diesem Grund als rein formales Netzwerk anzusehen, das die Transformatorgleichungen korrekt erfaßt – eine 
+physikalisch anschauliche Interpretation der Netzwerkelemente besteht jedoch nicht. 
+
+```{figure} ../images/class/lec8s11.pdf
+:width: 400px
+:name: fig:lec8s11
+
+Ersatzschaltung eines unvollständig gekoppelten Übertragers
+```
+
+Abbildung 9.28 zeigt die Ersatzschaltung eines unvollständig gekoppelten $(k < 1)$, ansonsten verlustfreien 
+Übertragers. Dabei wird von der Induktivität $L_1$ ein Streuanteil $\sigma L_1$ abgespalten; der 
+
+```{admonition} Streugrad $\sigma$
+des Übertragers ist definiert als 
+
+$$
+\sigma = 1 − k^2.
+$$
+
+```
+
+Lediglich der an $k^2 L_1$ auftretende Spannungsabfall wirkt als Eingangsspannung des idealen Übertragers mit 
+Übertragungsverältnis $k$ü. Die Netzwerkgleichungen für diese Ersatzschaltung lauten 
+
+$$
+\underline{v}'_1 = \underline{v}_1 − j\omega \sigma L_1 \underline{i}_1 
+= k ü \underline{v}_2, \quad \underline{i}_1 
+= \underline{v}_1 + \underline{i}_1 j\omega k^2 L_1
+$$
+
+und $\underline{i}_1 = −\underline{i}_2/k ü$. Durch Eliminieren von $\underline{v}_1$ und $\underline{i}_1$
+lassen sich diese in die Gln. (48) überführen, wobei die Details der Rechnung dem Leser als Übungsaufgabe
+überlassen werden.
+
+```{figure} ../images/class/lec8s12.pdf
+:width: 400px
+:name: fig:lec8s12
+
+(a) Parallel- und (b) Serienersatzschaltung eines verlustbehafteten Übertragers
+```
+
+
 ### Übertragungsfaktor
 
-U ̈bertrager sollen eine formtreue Signalu ̈bertragung aufweisen, was erho ̈hte Anfor- derungen an die Linearita ̈t bedingt
-und eine hohe Bandbreite voraussetzt. Fu ̈r eine Untersuchung des Frequenzgangs von U ̈bertragern wird die in Abb.9.30
-gezeigte Ersatzschaltung herangezogen, wobei die durch C3 und C4 beschriebene kapazitive Kopplung zwischen Prima ̈r- und
-Sekunda ̈rwicklung vernachla ̈ssigt wird.
+```{figure} ../images/class/lec8s13.pdf
+:width: 400px
+:name: fig:lec8s13
 
-Der Ausgang des idealen U ̈bertragers in der Ersatzschaltung Abb.9.30 ist mit der Impedanz
+Parallelersatzschaltung eines verlustbehafteten Übertragers mit beschaltetem Ausgang
+```
+
+Übertrager sollen eine formtreue Signalübertragung aufweisen, was erhöhte Anforderungen an die Linearität bedingt
+und eine hohe Bandbreite voraussetzt. Für eine Untersuchung des Frequenzgangs von Übertragern wird die in
+Abb. {nameref}`fig:lec8s13` gezeigte Ersatzschaltung herangezogen, wobei die durch $C_3$ und $C_4$ beschriebene
+kapazitive Kopplung zwischen Primär- und Sekundärwicklung (vgl. Abb. {nameref}`fig:lec8s12` (a)) vernachlässigt wird.
+
+Der Ausgang des idealen Übertragers in der Ersatzschaltung Abb. {nameref}`fig:lec8s13` ist mit der Impedanz
 
 $$
-Zx = rCu2 + ZL 1 + jωC2ZL
+\underline{Z}_x = r_{Cu2} + \frac{\underline{Z}_L}{1 + j\omega C_2 \underline{Z}_L}
 $$
 
-beschaltet, die eingangseitig wie eine Impedanz k2u ̈2 Zx wirkt. Zur Berechnung der Amplitude von v1 kann demnach die in
-Abb.9.31 dargestellte Ersatzschaltung her- angezogen werden.
+beschaltet, die eingangseitig wie eine Impedanz $k^2 ü^2 \underline{Z}_x$ wirkt. Zur Berechnung der Amplitude von 
+$\underline{v}'_1 kann demnach die in Abb. {nameref}`fig:lec8s14` dargestellte Ersatzschaltung herangezogen werden.
+
+```{figure} ../images/class/lec8s14.pdf
+:width: 400px
+:name: fig:lec8s14
+
+Zusammenfassung und Transformation der Sekundärseite
+```
 
 Nach der Spannungsteilerregel folgt sofort
 
+\begin{align}
+\frac{\underline{v}'_1}{\underline{v}_1} &= \frac{j \omega k^2L_1 || r_{kp} || k^2 ü^2 \underline{Z}_x}{r_{Cu1} +
+j\omega \sigma L_1 + j\omega k^2 L_1 || r_{kp} || k^2 ü^2 \underline{Z}_x} \\ 
+&= \frac{1}{1 + (r_{Cu1} + j\omega \sigma L_1) 
+\left( \frac{1}{j\omega k^2 L_1} + \frac{1}{r_{kp}} + \frac{1}{k^2 ü^2 \underline{Z}_L} \right)}
+\end{align}
+
+
+Ebenfalls durch Anwenden der Spannungsteilerregel erhält man
+
+\begin{align}
+\frac{\underline{v}_2}{\underline{v}'_2} &= \frac{\underline{Z}_L || (j \omega C_2)^{-1}}{\underline{Z}_x} \\
+&= \frac{\underline{Z}_L}{\underline{Z}_L + r_{Cu2}(1 + j \omega C_2 \underline{Z}_L)}.
+\end{align}
+
+
+Mit dem Übertragungsverhältnis $k ü$ des idealen Übertragers folgt für den Spannungsübertragungsfaktor
+
 $$
-v 1 = j ω k 2 L 1 r k p k 2 u ̈ 2 Z x
-v1 rCu1 + jωσL1 + jωk2L1 rkp k2u ̈2 Zx
-= 1 . (9.83) 1+(rCu1 +jωσL1) 1 + 1 + 1
+\underline{H}_v = \frac{\underline{v}_2}{\underline{v}_1} = \frac{1}{k ü} \cdot \frac{\underline{v}_2}{\underline{v}'_2}
+\cdot \frac{\underline{v}'_1}{\underline{v}_1}
 $$
 
-jωk2L1 rkp k2u ̈2 Zx Ebenfalls durch Anwenden der Spannungsteilerregel erha ̈lt man
+Im Folgenden wird der Fall einer rein ohmschen Last $\underline{Z}_L = R_L$ betrachtet; unter diesen Umständen gilt
 
 $$
-v2 ZL (jωC2)−1 ZL
-v = Z =Z+r (1+jωCZ). (9.84)
-2 x LCu2 2L
+\underline{Z}_x = r_{Cu2} + \frac{R_L}{1 = j\omega C_2 R_L} \quad\text{und}\quad 
+\frac{\underline{v}_2}{\underline{v}'_2} = \frac{R_L}{R_L + r_{Cu2}(1 + j\omega C_2 R_L)}.
 $$
 
-Mit dem U ̈bertragungsverha ̈ltnis ku ̈ des idealen U ̈bertragers folgt fu ̈r den Span- nungsu ̈bertragungsfaktor
+Der Spannungsübertragungsfaktor ergibt sich hiermit und durch Ausmultiplizieren in der Form
 
 $$
-H =v2 = 1·v2·v1. (9.85) v v1 ku ̈v2v1
+\underline{H}_v = \frac{A_{v0}}{1 − j f_u/f + jf/f_o − f^2/f^2_r}
 $$
+
+was ein Bandpaßverhalten beschreibt.
+
 
 ### Leistungsübertrager, Transformatoren
 
-Beim Tansformator steht die maximal u ̈bertragbare Leistung im Vordergrund – Signalverformungen sind zula ̈ssig. Aufgrund
-der Proportionalita ̈t der in die Sekunda ̈rwicklung induzierten Spannung zur Frequenz f (bei konstantem In- duktionshub
-∆B) steigt die in einem Transformator von der Prima ̈rseite auf die Sekunda ̈rseite u ̈bertragbare Leistung anna ̈hernd
-proportional zu f an. Un- ter Vernachla ̈ssigung der Spannungsabfa ̈lle an den Wicklungswidersta ̈nden, Streuinduktivita
-̈ten und der Vormagnetisierung gilt die folgende Na ̈herung fu ̈r die u ̈bertragene Leistung [17]
+_Beim Transformator steht die maximal übertragbare Leistung im Vordergrund – Signalverformungen sind zulässig._ 
+Aufgrund der Proportionalität der in die Sekundärwicklung induzierten Spannung zur Frequenz $f$ (bei konstantem
+Induktionshub $\Delta B$) steigt die in einem Transformator von der Primärseite auf die Sekundärseite übertragbare
+Leistung annähernd proportional zu $f$ an. Unter Vernachlässigung der Spannungsabfälle an den Wicklungswiderständen,
+Streuinduktivitäten und der Vormagnetisierung gilt die folgende Näherung für die übertragene Leistung 
 
 $$
-P = C·∆B·J·AW·Ae·FCu·f∼f. (9.90)
+P = C \cdot \Delta B \cdot J \cdot A_W A_e \cdot F_{Cu} \cdot f.
 $$
 
-Dabei bezeichnet C einen von der Betriebsart abha ̈ngigen Faktor, der ty- pischerweise im Bereich 0.6 < C < 1 liegt und J
-die Stromdichte in der Wicklung. Der Induktionshub ∆B ist bei niedrigen Frequenzen durch Sa ̈tti- gungseffekte17 und bei
-hohen Frequenzen durch die Erwa ̈rmung des Kerns aufgrund von Kernverlusten beschra ̈nkt. Die Stromdichte J wird durch die
-Erwa ̈rmung der Wicklung aufgrund von Kupferverlusten begrenzt. Der wirk- same Kernquerschnitt sollte im Sinne geringer
-Kosten und geringen Gewichts mo ̈glichst klein sein. Ein Steigerung der u ̈bertragbaren Leistung ist demnach nur durch
-eine Anhebung der Frequenz mo ̈glich.
+Dabei bezeichnet $C$ einen von der Betriebsart abhängigen Faktor, der typischerweise im Bereich $0.6 < C < 1$ liegt und
+$J$ die Stromdichte in der Wicklung. Der Induktionshub $\Delta B$ ist bei niedrigen Frequenzen durch Sättigungseffekte
+und bei hohen Frequenzen durch die Erwärmung des Kerns aufgrund von Kernverlusten beschränkt. Die Stromdichte $J$ wird
+durch die Erwärmung der Wicklung aufgrund von Kupferverlusten begrenzt. 
 
-Mit zunehmender Schaltfrequenz kann das Gewicht – und damit auch der Preis – von Stromversorgungen und DC-DC-Wandlern
-gesenkt werden. Ein 100W-Netzteil, realisiert mit einem bei Netzfrequenz (50Hz) arbeitenden Transformator, hat eine
-Masse in der Gro ̈ßenordnung von 10kg; durch Erho ̈hen der Schaltfrequenz auf 50kHz kann diese auf unter 1 kg gesenkt
-werden, bei 500kHz sind weniger als 400g erreichbar. Wesentlich fu ̈r diese Anhebung der Schaltfrequenz war die
-Entwicklung spezieller, verlustarmer Ferritwerkstoffe. Tabelle 9.2 gibt einen U ̈berblick u ̈ber typische Daten unter-
-schiedlicher, fu ̈r U ̈bertrager gebra ̈uchlicher Kernmaterialien.
+_Der wirksame Kernquerschnitt sollte im Sinne geringer Kosten und geringen Gewichts möglichst klein sein. Eine
+Steigerung der übertragbaren Leistung ist demnach nur durch eine Anhebung der Frequenz möglich. Mit zunehmender
+Schaltfrequenz kann das Gewicht – und damit auch der Preis – von Stromversorgungen und DC-DC-Wandlern gesenkt werden._ 
+
+Ein 100 W-Netzteil, realisiert mit einem bei Netzfrequenz (50 Hz) arbeitenden Transformator, hat eine Masse in der
+Größenordnung von 10 kg; durch Erhöhen der Schaltfrequenz auf 50 kHz kann diese auf unter 1 kg gesenkt werden, bei 
+500 kHz sind weniger als 400 g erreichbar. Wesentlich für diese Anhebung der Schaltfrequenz war die Entwicklung 
+spezieller, verlustarmer Ferritwerkstoffe; vgl. mit {cite}`zach2022`, Kap. 15.
+
 
 ## Literaturverzeichnis
 
