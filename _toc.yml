@@ -60,3 +60,5 @@ parts:
         title: Schwingkreise
       - file: Tutorium/10_Transformatoren
         title: Transformator
+      - file: Tutorium/11_Klausurvorbereitung
+        title: Klausurvorbereitung
