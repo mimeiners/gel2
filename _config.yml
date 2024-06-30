@@ -31,8 +31,10 @@ html:
       dokieli: true
   extra_footer : |
     <div>
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
-    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+      <img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+      All content on this site (unless otherwise specified) is licensed under the 
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
     </div>
 
 
@@ -55,7 +57,7 @@ sphinx:
   extra_extensions:
     - sphinx_proof
   config:
-    html_show_copyright: false
+    html_show_copyright: true
     html_extra_path: ['files']
     language: de
     bibtex_reference_style: author_year
@@ -73,30 +75,13 @@ sphinx:
 
     myst_substitutions:
       INSTRUCTOR: "Prof. Dr.-Ing. Mirco Meiners (he/his/him)"
-      PRONOUNCE: ""
       OFFICE: "E 508"
-      PHONE: "N/A"
       COURSE_CODE: "M 2.3"
-      SECTION: ""
       CREDITS: "6"
       TITLE: "Grundlagen der Elektrotechnik 2 (GEL2)"
       PREREQS: "GEL1"
-      COREQS: ""
-      TERM: "2024 Sommer"
+      TERM: "SoSe2024"
       ROOM: "E 509"
       MEETING_TIMES: "Mo. 8:00 Uhr - 9:30 Uhr (Tutorium), 13:30 Uhr - 15:00 Uhr (Seminar)"
-      GRACE_PERIOD: ""
-      W_DATE_1: ""
-      W_DATE_2: ""
-      W_DATE_3: ""
-      EXAM_PERIOD: ""
-      CANVAS_ID: ""
-      CANVAS_LINK: ""
-      ZOOM_LINK: ""
-      ANNOUNCEMENTS_LINK: ""
-      COURSE_LINK: ""
-      FORUM_LINK: ""
-      ANALYTICS_OPTOUT: ""
       FORMAT: "Seminar und Übungen"
       ASSOCIATE_HEAD: "Alicia von Ahlen [avahlen@stud.hs-bremen.de](mailto:avahlen@stud.hs-bremen.de)"
-      ANON_FEEDBACK: ""
