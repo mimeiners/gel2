@@ -14,39 +14,39 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=f78ba3b0" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=91fba89f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/clipboard.min.js?v=e637711f"></script>
+    <script src="../_static/copybutton.js?v=56c01ce6"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
@@ -119,27 +119,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -161,8 +157,13 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -186,6 +187,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../about/unsyllabus.html">
   
@@ -207,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Suche</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -257,6 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/8_Filterschaltungen.html">Bode-Diagramme, Ortskurven, Filterschaltungen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/9_Schwingkreise.html">Schwingkreise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/10_Transformatoren.html">Transformator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/11_Klausurvorbereitung.html">Klausurvorbereitung</a></li>
 </ul>
 
     </div>
@@ -272,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -281,7 +285,7 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -430,10 +434,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -441,7 +445,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -499,8 +503,8 @@ document.write(`
 </div>
 <div class="admonition-impedanz admonition">
 <p class="admonition-title">Impedanz</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6829a063-19c9-4ece-93a5-826933847ad6">
-<span class="eqno">(17)<a class="headerlink" href="#equation-6829a063-19c9-4ece-93a5-826933847ad6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d1274d30-3725-46dc-9663-19a7c2c42da6">
+<span class="eqno">(17)<a class="headerlink" href="#equation-d1274d30-3725-46dc-9663-19a7c2c42da6" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{Z} &amp;= \frac{\underline{u}(t)}{\underline{i}(t)} =
 \frac{\underline{\hat{U}}e^{j \omega t}}{\underline{\hat{I}}e^{j \omega t}} =
 \frac{\hat{U}}{\hat{I}}e^{\varphi_u-\varphi_i} \\
@@ -511,8 +515,8 @@ document.write(`
 </div>
 <div class="admonition-eigenschaften admonition">
 <p class="admonition-title">Eigenschaften</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2ce30f1e-f667-4281-ac8f-9f95a4de386f">
-<span class="eqno">(18)<a class="headerlink" href="#equation-2ce30f1e-f667-4281-ac8f-9f95a4de386f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8ec6176e-d8f1-46de-89be-8ac2493b0002">
+<span class="eqno">(18)<a class="headerlink" href="#equation-8ec6176e-d8f1-46de-89be-8ac2493b0002" title="Permalink to this equation">#</a></span>\[\begin{align}
 Z &amp;= \lvert\underline{Z}\lvert = \sqrt{R^2 + X^2} &amp; &amp;\mbox{Scheinwiderstand} \\
 R &amp;= \operatorname{Re}{\underline{Z}} &amp; &amp;\mbox{Wirkwiderstand (Resistanz)} \\
 X &amp;= \operatorname{Im}{\underline{Z}} &amp; &amp;\mbox{Blindwiderstand (Reaktanz)} \\
@@ -525,16 +529,16 @@ X &amp;= \operatorname{Im}{\underline{Z}} &amp; &amp;\mbox{Blindwiderstand (Reak
 <h2>Leitwertoperator<a class="headerlink" href="#leitwertoperator" title="Link to this heading">#</a></h2>
 <div class="admonition-harmonische-anregung admonition">
 <p class="admonition-title">Harmonische Anregung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ef9bf7cf-f9ff-41c8-950d-053214ab45ec">
-<span class="eqno">(19)<a class="headerlink" href="#equation-ef9bf7cf-f9ff-41c8-950d-053214ab45ec" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8b14520b-97eb-436f-8917-b33808c1b7cb">
+<span class="eqno">(19)<a class="headerlink" href="#equation-8b14520b-97eb-436f-8917-b33808c1b7cb" title="Permalink to this equation">#</a></span>\[\begin{align}
 u(t) &amp;= \hat{U} \cos(\omega t + \varphi_u) &amp; \underline{u}(t) &amp;= \underline{\hat{U}} e^{j \omega t} \\
 i(t) &amp;= \hat{I} \cos(\omega t + \varphi_i) &amp; \underline{i}(t) &amp;= \underline{\hat{I}} e^{j \omega t}
 \end{align}\]</div>
 </div>
 <div class="admonition-admittanz admonition">
 <p class="admonition-title">Admittanz</p>
-<div class="amsmath math notranslate nohighlight" id="equation-792d3d31-84a6-4b29-9245-8b270c4ab7d5">
-<span class="eqno">(20)<a class="headerlink" href="#equation-792d3d31-84a6-4b29-9245-8b270c4ab7d5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c7f5e034-f2e3-49ae-959a-d9049e26a649">
+<span class="eqno">(20)<a class="headerlink" href="#equation-c7f5e034-f2e3-49ae-959a-d9049e26a649" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{Y} &amp;= \frac{\underline{i}(t)}{\underline{u}(t)} =
 \frac{\underline{\hat{I}}e^{j \omega t}}{\underline{\hat{U}}e^{j \omega t}} =
 \frac{\hat{I}}{\hat{U}}e^{\varphi_i-\varphi_u} \\
@@ -545,8 +549,8 @@ i(t) &amp;= \hat{I} \cos(\omega t + \varphi_i) &amp; \underline{i}(t) &amp;= \un
 </div>
 <div class="admonition-eigenschaften admonition">
 <p class="admonition-title">Eigenschaften</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1e85cb6b-d39b-4832-95c1-7e80dd6190ed">
-<span class="eqno">(21)<a class="headerlink" href="#equation-1e85cb6b-d39b-4832-95c1-7e80dd6190ed" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-27d0163c-2f1c-4f13-b3e9-2d3c4fb2ad9d">
+<span class="eqno">(21)<a class="headerlink" href="#equation-27d0163c-2f1c-4f13-b3e9-2d3c4fb2ad9d" title="Permalink to this equation">#</a></span>\[\begin{align}
 Y &amp;= \lvert\underline{Y}\lvert = \sqrt{G^2 + B^2} &amp; &amp;\mbox{Scheinleitwert} \\
 G &amp;= \operatorname{Re}{\underline{Y}} &amp; &amp;\mbox{Wirkleitwert (Konduktanz)} \\
 B &amp;= \operatorname{Im}{\underline{Y}} &amp; &amp;\mbox{Blindleitwert (Suszeptanz)} \\
@@ -557,8 +561,8 @@ B &amp;= \operatorname{Im}{\underline{Y}} &amp; &amp;\mbox{Blindleitwert (Suszep
 </section>
 <section id="vergleich-von-rlc-netzwerken">
 <h2>Vergleich von RLC-Netzwerken<a class="headerlink" href="#vergleich-von-rlc-netzwerken" title="Link to this heading">#</a></h2>
-<div class="amsmath math notranslate nohighlight" id="equation-ce2445e2-38b1-4856-9b2c-403267e34c3f">
-<span class="eqno">(22)<a class="headerlink" href="#equation-ce2445e2-38b1-4856-9b2c-403267e34c3f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a28a662f-e7c2-4311-ac33-08e892b9fcf2">
+<span class="eqno">(22)<a class="headerlink" href="#equation-a28a662f-e7c2-4311-ac33-08e892b9fcf2" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mbox{Zeitbereich} &amp;: &amp; u &amp;= i R &amp;  u &amp;= \frac{1}{C} \int i\, dt &amp; u &amp;= L \frac{di}{dt} \\
 \mbox{Frequenzbereich} &amp;: &amp; \underline{u} &amp;= \underline{i} R &amp;
 \underline{u} &amp;= \frac{1}{j \omega C} \underline{i} &amp;
@@ -573,8 +577,8 @@ B &amp;= \operatorname{Im}{\underline{Y}} &amp; &amp;\mbox{Blindleitwert (Suszep
 <h2>Leistung von Wechselsignalen<a class="headerlink" href="#leistung-von-wechselsignalen" title="Link to this heading">#</a></h2>
 <div class="admonition-harmonische-anregung admonition">
 <p class="admonition-title">Harmonische Anregung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fe2ad81f-d5f5-4032-99b1-b0c39519f4f3">
-<span class="eqno">(23)<a class="headerlink" href="#equation-fe2ad81f-d5f5-4032-99b1-b0c39519f4f3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-db2bc29b-3d2e-4688-bd87-c472c0d59bc3">
+<span class="eqno">(23)<a class="headerlink" href="#equation-db2bc29b-3d2e-4688-bd87-c472c0d59bc3" title="Permalink to this equation">#</a></span>\[\begin{align}
 u(t) &amp;= \hat{U} \cos(\omega t + \varphi_u) &amp; i(t) &amp;= \hat{I} \cos(\omega t + \varphi_i) \\
 &amp;= \frac{1}{2} \left( \underline{\hat{U}} e^{j \omega t} + \underline{\hat{U}}^* e^{-j \omega t}\right) &amp; 
 &amp;= \frac{1}{2} \left( \underline{\hat{I}} e^{j \omega t} +  \underline{\hat{I}}^* e^{-j \omega t}\right) \\
@@ -583,8 +587,8 @@ u(t) &amp;= \hat{U} \cos(\omega t + \varphi_u) &amp; i(t) &amp;= \hat{I} \cos(\o
 </div>
 <div class="admonition-komplexe-leistung admonition">
 <p class="admonition-title">Komplexe Leistung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-48ea4c71-70a6-4c7b-a84b-f61d677e2d9d">
-<span class="eqno">(24)<a class="headerlink" href="#equation-48ea4c71-70a6-4c7b-a84b-f61d677e2d9d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7f1c7b68-8ee6-40ab-9511-1637f7d7c452">
+<span class="eqno">(24)<a class="headerlink" href="#equation-7f1c7b68-8ee6-40ab-9511-1637f7d7c452" title="Permalink to this equation">#</a></span>\[\begin{align}
 p(t) &amp;= u(t) \cdot i(t) \\
 &amp;= \frac{1}{4} \left( \underline{\hat{U}} e^{j \omega t} +
 \underline{\hat{U}}^* e^{-j \omega t}\right)  
@@ -598,8 +602,8 @@ p(t) &amp;= u(t) \cdot i(t) \\
 </div>
 <div class="admonition-definitionen admonition">
 <p class="admonition-title">Definitionen</p>
-<div class="amsmath math notranslate nohighlight" id="equation-977943db-4686-4410-aa84-d3426226df9e">
-<span class="eqno">(25)<a class="headerlink" href="#equation-977943db-4686-4410-aa84-d3426226df9e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-07e80761-d05c-4a6f-a36f-259e223410c5">
+<span class="eqno">(25)<a class="headerlink" href="#equation-07e80761-d05c-4a6f-a36f-259e223410c5" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{P} &amp;= \frac{1}{4} \left(\underline{\hat{U}} \underline{\hat{I}}^* +
 \underline{\hat{U}}^* \underline{\hat{I}} \right), \quad
 \mbox{Momentanwert, konstanter Anteil bzw. linearer Mittelwert, Momentanleistung} \\
@@ -610,8 +614,8 @@ p(t) &amp;= \frac{1}{2} \operatorname{Re}{\underline{\hat{U}}\underline{\hat{I}}
 </div>
 <div class="admonition-eigenschaften admonition">
 <p class="admonition-title">Eigenschaften</p>
-<div class="amsmath math notranslate nohighlight" id="equation-250b93d9-d11c-4c00-a4f9-2487b42b99e7">
-<span class="eqno">(26)<a class="headerlink" href="#equation-250b93d9-d11c-4c00-a4f9-2487b42b99e7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6c882068-fd41-466a-acc0-85658e307acc">
+<span class="eqno">(26)<a class="headerlink" href="#equation-6c882068-fd41-466a-acc0-85658e307acc" title="Permalink to this equation">#</a></span>\[\begin{align}
 S &amp;= \lvert\underline{P}\lvert = \sqrt{P^2 + Q^2} &amp; &amp;\mbox{Scheinleistung} \\
 P &amp;= \operatorname{Re}{\underline{P}} &amp; &amp;\mbox{Wirkleistung} \\
 Q &amp;= \operatorname{Im}{\underline{P}} &amp; &amp;\mbox{Blindleistung}
@@ -650,7 +654,7 @@ Q &amp;= \operatorname{Im}{\underline{P}} &amp; &amp;\mbox{Blindleistung}
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -714,6 +718,13 @@ Durch A. von Ahlen, M. Meiners
   <div class="footer-item">
     
 
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
   </div>
   
   <div class="footer-item">
@@ -724,8 +735,10 @@ Durch A. von Ahlen, M. Meiners
     
 <div class="extra_footer">
   <div>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
-All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+  <img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
 </div>
 
 </div>
@@ -740,8 +753,8 @@ All content on this site (unless otherwise specified) is licensed under the <a h
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

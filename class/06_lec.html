@@ -14,39 +14,39 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=f78ba3b0" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=91fba89f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/clipboard.min.js?v=e637711f"></script>
+    <script src="../_static/copybutton.js?v=56c01ce6"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
@@ -119,27 +119,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -161,8 +157,13 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -186,6 +187,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../about/unsyllabus.html">
   
@@ -207,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Suche</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -257,6 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/8_Filterschaltungen.html">Bode-Diagramme, Ortskurven, Filterschaltungen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/9_Schwingkreise.html">Schwingkreise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/10_Transformatoren.html">Transformator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/11_Klausurvorbereitung.html">Klausurvorbereitung</a></li>
 </ul>
 
     </div>
@@ -272,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -281,7 +285,7 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -430,10 +434,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -441,7 +445,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -550,8 +554,8 @@ Differenzialgleichung (DGL) <span class="math notranslate nohighlight">\(\ddot{x
 Eigenfrequenz und <span class="math notranslate nohighlight">\(f_0\)</span> Resonanzfrequenz</p></li>
 <li><p>DGL gehorcht dem Energieerhaltungssatz</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-036e062f-a895-46d6-8ae5-36ee84cd8408">
-<span class="eqno">(27)<a class="headerlink" href="#equation-036e062f-a895-46d6-8ae5-36ee84cd8408" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b18fe663-3aaf-493b-b960-fb8fb92454b1">
+<span class="eqno">(27)<a class="headerlink" href="#equation-b18fe663-3aaf-493b-b960-fb8fb92454b1" title="Permalink to this equation">#</a></span>\[\begin{align}
 W_{ges}(x) &amp;= W_{pot}(x) + W_{kin}(x) = const. \\
 \frac{d W_{ges}}{dt} &amp;= \frac{dW_{pot}}{dx} \frac{dx}{dt} + \frac{d W_{kin}}{dx} \frac{d x}{dt} = 0 \\
 x(t) &amp;= x_{max} \cos(\omega_0 t + \varphi_0)
@@ -559,8 +563,8 @@ x(t) &amp;= x_{max} \cos(\omega_0 t + \varphi_0)
 <ul class="simple">
 <li><p>Zusammenschaltung von Induktivität <span class="math notranslate nohighlight">\(L\)</span> und Kapazität <span class="math notranslate nohighlight">\(C\)</span> heißt (idealer) Schwing- oder Resonanzkreis</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-3ecdd7ff-0b7b-40ec-8d18-5177510cdb50">
-<span class="eqno">(28)<a class="headerlink" href="#equation-3ecdd7ff-0b7b-40ec-8d18-5177510cdb50" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2bb154ec-6227-4b6c-a195-01e2438241e6">
+<span class="eqno">(28)<a class="headerlink" href="#equation-2bb154ec-6227-4b6c-a195-01e2438241e6" title="Permalink to this equation">#</a></span>\[\begin{align}
 W_{pot} &amp;:= \mbox{Kondensator} \\
 W_{kin} &amp;:= \mbox{Induktivität}
 \end{align}\]</div>
@@ -576,8 +580,8 @@ W_{kin} &amp;:= \mbox{Induktivität}
 </figure>
 <div class="admonition-maschengleichung-zeitbereich admonition">
 <p class="admonition-title">Maschengleichung (Zeitbereich)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8834dd72-e163-46e3-a3e1-db017797f601">
-<span class="eqno">(29)<a class="headerlink" href="#equation-8834dd72-e163-46e3-a3e1-db017797f601" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-956aa0ba-424d-4094-9a7b-8c226c193c97">
+<span class="eqno">(29)<a class="headerlink" href="#equation-956aa0ba-424d-4094-9a7b-8c226c193c97" title="Permalink to this equation">#</a></span>\[\begin{align}
 u_1(0) &amp;= L \frac{di}{dt} + i\, R + \frac{1}{C} \int i dt  \\
 0 &amp;= \frac{di}{dt^2} + \frac{R}{L} \frac{di}{dt} + \frac{1}{LC} i
 \end{align}\]</div>
@@ -592,8 +596,8 @@ i(t) = \underbrace{I_0 e^{-d \omega_0 t}}_{Dämpfung} \underbrace{\sin\left(\sqr
 <div class="admonition-spannungsubertragungsfaktor admonition">
 <p class="admonition-title">Spannungsübertragungsfaktor</p>
 <p>Entn. <span id="id3">[<a class="reference internal" href="08_lec.html#id39" title="Michael Reisch. Elektronische Bauelemente. Springer, 2 edition, 2007. ISBN 978-3-540-34014-0. arXiv:978-3-540-34015-7, doi:10.1007/978-3-540-34015-7.">Reisch, 2007</a>]</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-cf11d7ee-e97c-432c-8267-d6ad05d2f346">
-<span class="eqno">(30)<a class="headerlink" href="#equation-cf11d7ee-e97c-432c-8267-d6ad05d2f346" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-22bb2ffe-c13b-48c6-a2d6-3596bcb99165">
+<span class="eqno">(30)<a class="headerlink" href="#equation-22bb2ffe-c13b-48c6-a2d6-3596bcb99165" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{H}_u(j \omega) = \frac{\underline{U}_2}{\underline{U}_1} &amp;= \frac{1}{1 + j \omega R C + \omega^2 LC} \\
 &amp;= \frac{1}{1 + j \frac{\omega}{\omega_0 Q} + \left(\frac{\omega}{\omega_0}\right)^2}
 \end{align}\]</div>
@@ -656,12 +660,12 @@ Installation mit Anaconda-Shell oder Windows-Shell (CMD/PowerShell)</p>
 <li><p>Thomsonsche Formel <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{L_r C_r} = \frac{1}{L_p C_p}\)</span></p></li>
 <li><p>bei Resonanz erreichen Impedanz und Admittanz ein Minimum</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-fc26bf10-f4fd-4696-931b-85618e465c79">
-<span class="eqno">(31)<a class="headerlink" href="#equation-fc26bf10-f4fd-4696-931b-85618e465c79" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-60b288fa-2edd-44f8-b915-7f38ad72e98f">
+<span class="eqno">(31)<a class="headerlink" href="#equation-60b288fa-2edd-44f8-b915-7f38ad72e98f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left . \underline{Z} \right\lvert_{\omega_0} &amp;\Rightarrow \lvert\underline{Z}\lvert = R_r \\
 \left . \underline{Y} \right\lvert_{\omega_0} &amp;\Rightarrow \lvert\underline{Y}\lvert = G_p
 \end{align}\]</div>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(X(\omega)\)</span></p></th>
@@ -680,10 +684,11 @@ Installation mit Anaconda-Shell oder Windows-Shell (CMD/PowerShell)</p>
 </tbody>
 </table>
 </div>
+</div>
 <div class="admonition-reihenkreis-impedanz admonition">
 <p class="admonition-title">Reihenkreis (Impedanz)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-08e7d0e0-38a7-4c72-bcd0-91149cf23dae">
-<span class="eqno">(32)<a class="headerlink" href="#equation-08e7d0e0-38a7-4c72-bcd0-91149cf23dae" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3828e437-53e0-4445-80d7-643553258b95">
+<span class="eqno">(32)<a class="headerlink" href="#equation-3828e437-53e0-4445-80d7-643553258b95" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{Z} &amp;= R_r + j\left(\omega L_r - \frac{1}{\omega C_r}\right) \\
 &amp;= R_r + j X(\omega) \\
 \lvert\underline{Z}\lvert &amp;= \sqrt{R_r^2 + X^2(\omega)} \\
@@ -693,8 +698,8 @@ Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}
 </div>
 <div class="admonition-parallelkreis-admittanz admonition">
 <p class="admonition-title">Parallelkreis (Admittanz)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-80ae975d-3069-4435-9761-f5c8ac10be6f">
-<span class="eqno">(33)<a class="headerlink" href="#equation-80ae975d-3069-4435-9761-f5c8ac10be6f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-11a9e168-8352-4d55-9fc4-43ba45175106">
+<span class="eqno">(33)<a class="headerlink" href="#equation-11a9e168-8352-4d55-9fc4-43ba45175106" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{Y} &amp;= G_p + j\left(\omega C_p- \frac{1}{\omega L_p}\right) \\
 &amp;= G_r + j B(\omega) \\
 \lvert\underline{Y}\lvert &amp;= \sqrt{G_p^2 + B^2(\omega)} \\
@@ -707,15 +712,15 @@ Q &amp;= \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}
 <h2>Vereinheitlichte Kennzeichnung<a class="headerlink" href="#vereinheitlichte-kennzeichnung" title="Link to this heading">#</a></h2>
 <div class="admonition-verstimmung-v-relative-frequenzabweichung admonition">
 <p class="admonition-title">Verstimmung <span class="math notranslate nohighlight">\(v\)</span>, relative Frequenzabweichung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-44256e69-90e7-4f41-8406-10704ede68e5">
-<span class="eqno">(34)<a class="headerlink" href="#equation-44256e69-90e7-4f41-8406-10704ede68e5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a57b0d1b-7734-4e8a-be5d-3f4ef52cc6c2">
+<span class="eqno">(34)<a class="headerlink" href="#equation-a57b0d1b-7734-4e8a-be5d-3f4ef52cc6c2" title="Permalink to this equation">#</a></span>\[\begin{align}
 v &amp;= \frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}
 \end{align}\]</div>
 </div>
 <div class="admonition-normierte-darstellung admonition">
 <p class="admonition-title">Normierte Darstellung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8fb72131-71ec-45d7-98cf-87fb46ce9332">
-<span class="eqno">(35)<a class="headerlink" href="#equation-8fb72131-71ec-45d7-98cf-87fb46ce9332" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d5e45401-67ab-4cd1-9ac8-010dec814dfc">
+<span class="eqno">(35)<a class="headerlink" href="#equation-d5e45401-67ab-4cd1-9ac8-010dec814dfc" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{Z} &amp;= R \left( 1 + j \frac{1}{R} \left( \frac{\omega \omega_0 \omega L}{\omega_0}
 - \frac{\omega_0}{\omega_0 \omega C}\right)\right) \\
 &amp;= R (1 + Q v) \\
@@ -724,8 +729,8 @@ v &amp;= \frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}
 </div>
 <div class="admonition-betrag-und-phase admonition">
 <p class="admonition-title">Betrag und Phase</p>
-<div class="amsmath math notranslate nohighlight" id="equation-15edf6b2-eafc-42c1-8c75-5b4d14bb2f3e">
-<span class="eqno">(36)<a class="headerlink" href="#equation-15edf6b2-eafc-42c1-8c75-5b4d14bb2f3e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-87822877-e63e-4f1f-8316-a72db09a2643">
+<span class="eqno">(36)<a class="headerlink" href="#equation-87822877-e63e-4f1f-8316-a72db09a2643" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\lvert\underline{Z}\lvert}{R} = \frac{\lvert \underline{Y}\lvert}{G} &amp;= \sqrt{1 + \left( Q v \right)} \\
 \varphi_Z = \varphi_Y &amp;= \arctan\left( Q v \right)
 \end{align}\]</div>
@@ -733,24 +738,24 @@ v &amp;= \frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}
 <div class="admonition-circ-frac-pi-4-oder-3db-frequenz admonition">
 <p class="admonition-title">45<span class="math notranslate nohighlight">\(^{\circ}\)</span>-, <span class="math notranslate nohighlight">\(\frac{\pi}{4}\)</span>- oder 3dB-Frequenz</p>
 <p>Der Phasenwinkel <span class="math notranslate nohighlight">\(\varphi\)</span> ist gleich 45<span class="math notranslate nohighlight">\(^{\circ}\)</span> und Betrag der Blindkomponente ist gleich der Wirkkomponente.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ab500da3-3e15-4074-b8dd-190a9438eb6d">
-<span class="eqno">(37)<a class="headerlink" href="#equation-ab500da3-3e15-4074-b8dd-190a9438eb6d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-426f644b-7889-475f-98a0-7a4b57c084f3">
+<span class="eqno">(37)<a class="headerlink" href="#equation-426f644b-7889-475f-98a0-7a4b57c084f3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lvert X(\omega_{\pm 45}) \lvert &amp;= \pm R &amp;  \lvert B(\omega_{\pm 45}) \lvert &amp;= \pm G \\
 \omega_{\pm 45} L - \frac{1}{\omega_{\pm 45} C} &amp;= \pm R &amp;  \omega_{\pm 45} C - \frac{1}{\omega_{\pm 45} L} &amp;= \pm G
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-6764e3ac-a0c4-4acf-af2b-b9f3c53a5636">
-<span class="eqno">(38)<a class="headerlink" href="#equation-6764e3ac-a0c4-4acf-af2b-b9f3c53a5636" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1c6a732e-da60-4e80-a04a-aa776dd03f49">
+<span class="eqno">(38)<a class="headerlink" href="#equation-1c6a732e-da60-4e80-a04a-aa776dd03f49" title="Permalink to this equation">#</a></span>\[\begin{align}
 \omega_{\pm 45} &amp;= \omega_0 \left( \sqrt{1 + \left(\frac{1}{2Q}\right)^2} \pm \frac{1}{2Q}\right) \approx \omega_0 \left( 1 \pm \frac{1}{2Q}\right)
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-5c3a8820-22a9-4038-82bf-78431ba508de">
-<span class="eqno">(39)<a class="headerlink" href="#equation-5c3a8820-22a9-4038-82bf-78431ba508de" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2b50a8f6-3eec-410f-847f-5ef5b0133716">
+<span class="eqno">(39)<a class="headerlink" href="#equation-2b50a8f6-3eec-410f-847f-5ef5b0133716" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lvert \underline{Z(\omega_{\pm 45})} \lvert &amp;= \sqrt{2} R &amp;  \lvert \underline{Y(\omega_{\pm 45})} \lvert &amp;= \sqrt{2} G
 \end{align}\]</div>
 </div>
 <div class="admonition-bandbreite-bw-bandwidth admonition">
 <p class="admonition-title">Bandbreite BW (bandwidth)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4dd95eda-d41e-4366-8371-7d6d53fbdfe4">
-<span class="eqno">(40)<a class="headerlink" href="#equation-4dd95eda-d41e-4366-8371-7d6d53fbdfe4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-adbbb953-7301-4a39-b15d-ca1e37bd195b">
+<span class="eqno">(40)<a class="headerlink" href="#equation-adbbb953-7301-4a39-b15d-ca1e37bd195b" title="Permalink to this equation">#</a></span>\[\begin{align}
 BW &amp;= \omega_{45} - \omega_{-45} = \frac{\omega_0}{Q} \\
 &amp;= f_{45} - f_{-45} = \frac{f_0}{Q} \\
 \end{align}\]</div>
@@ -812,7 +817,7 @@ BW &amp;= \omega_{45} - \omega_{-45} = \frac{\omega_0}{Q} \\
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -877,6 +882,13 @@ Durch A. von Ahlen, M. Meiners
   <div class="footer-item">
     
 
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
   </div>
   
   <div class="footer-item">
@@ -887,8 +899,10 @@ Durch A. von Ahlen, M. Meiners
     
 <div class="extra_footer">
   <div>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
-All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+  <img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
 </div>
 
 </div>
@@ -903,8 +917,8 @@ All content on this site (unless otherwise specified) is licensed under the <a h
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

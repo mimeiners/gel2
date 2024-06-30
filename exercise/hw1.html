@@ -14,39 +14,39 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=f78ba3b0" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=91fba89f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/clipboard.min.js?v=e637711f"></script>
+    <script src="../_static/copybutton.js?v=56c01ce6"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
@@ -119,27 +119,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -161,8 +157,13 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -186,6 +187,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../about/unsyllabus.html">
   
@@ -207,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Suche</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -257,6 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/8_Filterschaltungen.html">Bode-Diagramme, Ortskurven, Filterschaltungen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/9_Schwingkreise.html">Schwingkreise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/10_Transformatoren.html">Transformator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/11_Klausurvorbereitung.html">Klausurvorbereitung</a></li>
 </ul>
 
     </div>
@@ -272,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -281,7 +285,7 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -430,10 +434,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -441,7 +445,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -621,8 +625,8 @@ drei Einzelspannungen berechnen?</p>
 </div>
 <section id="id3">
 <h4>Lösung<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
-<div class="amsmath math notranslate nohighlight" id="equation-50882a41-e38f-436b-9dbe-630ff3e872f2">
-<span class="eqno">(53)<a class="headerlink" href="#equation-50882a41-e38f-436b-9dbe-630ff3e872f2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e8d54542-ab4c-419b-a40b-1e30d6f818ca">
+<span class="eqno">(53)<a class="headerlink" href="#equation-e8d54542-ab4c-419b-a40b-1e30d6f818ca" title="Permalink to this equation">#</a></span>\[\begin{align}
 U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 &amp;= \frac{1}{T} \int_0^{T} ( U_0 + \hat{U}_1 \cos(\omega_1 t) + \hat{U}_2 \cos(\omega_2 t + \varphi) )^2 \\
 &amp;= \frac{1}{T} \int_0^{T} (  U^2_0 + 2U_0\hat{U}_1\cos(\omega_1t) + 2U_0\hat{U}_2\cos(\omega_2 t + \varphi) \\
@@ -706,8 +710,8 @@ Der Scheitelfaktor: -0.31462061084367027
 </div>
 <section id="id4">
 <h4>Lösung<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
-<div class="amsmath math notranslate nohighlight" id="equation-aa0632e9-e02d-4fd8-93e9-aa87bf4cc8b4">
-<span class="eqno">(54)<a class="headerlink" href="#equation-aa0632e9-e02d-4fd8-93e9-aa87bf4cc8b4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f82f3282-f96c-4efc-a906-1199a6e33ae6">
+<span class="eqno">(54)<a class="headerlink" href="#equation-f82f3282-f96c-4efc-a906-1199a6e33ae6" title="Permalink to this equation">#</a></span>\[\begin{align}
 U_{max} &amp;= u(t_{max}); \quad \left. \frac{du(t)}{dt} \right\lvert_{t=t_{max}} = 0 \\
 \frac{du(t)}{dt} &amp;= -\hat{U}_1\omega_1\sin(\omega_1 t) - \hat{U}_2 \omega_2\sin(\omega_2 t + \varphi) \\
 \sin(3\omega_1 t_{max} + \varphi) &amp;= -\frac{\hat{U}_1}{2\hat{U}_2}\sin(\omega_1 t_{max}) \\
@@ -741,28 +745,28 @@ Daraus ergeben sich <span class="math notranslate nohighlight">\(U_{max}\)</span
 <section id="id5">
 <h4>Lösung<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <p>Sei <span class="math notranslate nohighlight">\(u(t)=\hat{U} \sin(\omega t + \varphi_u)\)</span>, dann ergeben sich die Ströme zu:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a9d6b1d0-d041-425a-b558-d42c5c3b0c37">
-<span class="eqno">(55)<a class="headerlink" href="#equation-a9d6b1d0-d041-425a-b558-d42c5c3b0c37" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3d4ed8dd-5bf5-4d11-b5fe-e0a386988ccd">
+<span class="eqno">(55)<a class="headerlink" href="#equation-3d4ed8dd-5bf5-4d11-b5fe-e0a386988ccd" title="Permalink to this equation">#</a></span>\[\begin{align}
 i_C(t) &amp;= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2}) = -\omega C \hat{U} \cos(\omega t + \varphi_u) \\
 i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 \end{align}\]</div>
 <p>Knotengleichung: <span class="math notranslate nohighlight">\(i_0(t) = i_C(t) + i_R(t)\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-3f8b0f98-70bd-464e-9e1e-ebc98817b055">
-<span class="eqno">(56)<a class="headerlink" href="#equation-3f8b0f98-70bd-464e-9e1e-ebc98817b055" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-121c6105-dff9-4f1c-91e1-c8db66ce09bc">
+<span class="eqno">(56)<a class="headerlink" href="#equation-121c6105-dff9-4f1c-91e1-c8db66ce09bc" title="Permalink to this equation">#</a></span>\[\begin{align}
 \hat{I}_0 \sin(\omega t) &amp;= -\omega C \hat{U} \cos(\omega t + \varphi_u) + \frac{\hat{U}}{R} \sin(\omega t + \varphi_u) \\
 \hat{I}_0 \sin(m - \varphi_u) &amp;= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m), \quad m=\omega t + \varphi_u \\
 \hat{I}_0 \left( \sin(m) \cos(\varphi_u) - \cos(m) \sin(\varphi_u) \right) &amp;= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m) \\
 \end{align}\]</div>
 <p>Koeffizientenvergleich:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ac9d1524-8697-40d6-b522-5ec12ab7defb">
-<span class="eqno">(57)<a class="headerlink" href="#equation-ac9d1524-8697-40d6-b522-5ec12ab7defb" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2604be77-617e-4f83-bc6d-5078446d2a15">
+<span class="eqno">(57)<a class="headerlink" href="#equation-2604be77-617e-4f83-bc6d-5078446d2a15" title="Permalink to this equation">#</a></span>\[\begin{align}
 \hat{I}_0 \cos(\varphi_u) &amp;= \frac{\hat{U}}{R} \\
 \hat{I}_0 \sin(\varphi_u) &amp;= -\omega C \hat{U} \\
 \tan{\varphi_u} = \frac{\sin(\varphi_u)}{\cos(\varphi_u)} &amp;= \frac{-\omega C \hat{U}}{\frac{\hat{U}}{R}} = -\omega R C \\
 \varphi_u &amp;= \arctan(-\omega R C)
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-e03141aa-27d3-4c69-8bed-a782ab044f16">
-<span class="eqno">(58)<a class="headerlink" href="#equation-e03141aa-27d3-4c69-8bed-a782ab044f16" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-34e8d260-5727-4d61-8395-0b53a27f9a62">
+<span class="eqno">(58)<a class="headerlink" href="#equation-34e8d260-5727-4d61-8395-0b53a27f9a62" title="Permalink to this equation">#</a></span>\[\begin{align}
 \hat{I}_0 \cos(\varphi_u) &amp;= \frac{\hat{U}}{R} \\
 \hat{U} &amp;= R \hat{I} \cos{\varphi_u} = R \hat{I} \frac{1}{\sqrt{1+\tan^2(\varphi)}} \\
 &amp;= \frac{R \hat{I}}{\sqrt{1+(\omega R C)^2}} \\
@@ -852,8 +856,8 @@ Gleichrichtmittelwert und Effektivwert als Funktion vom Phasenanschnittwinkel <s
 <ol class="arabic simple">
 <li><p>Halbwelle</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-b8d606de-25b3-4a17-a2cc-d06896dfde7a">
-<span class="eqno">(59)<a class="headerlink" href="#equation-b8d606de-25b3-4a17-a2cc-d06896dfde7a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d8b18aff-ca2a-40aa-b404-f2a880b59116">
+<span class="eqno">(59)<a class="headerlink" href="#equation-d8b18aff-ca2a-40aa-b404-f2a880b59116" title="Permalink to this equation">#</a></span>\[\begin{align}
 \overline{i(t)} &amp;= \frac{1}{T} \int_0^{T} i(t) d t &amp; &amp;= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{I}\sin(\varphi) d \varphi \\
 &amp;= \frac{\hat{I}}{2\pi} \left[ -\cos(\varphi) \right]_{\alpha}^{\pi} &amp; &amp;= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
 \overline{\lvert i(t) \lvert} &amp;= \frac{1}{T} \int_0^{T} \lvert i(t) \lvert d t &amp; &amp;= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
@@ -865,8 +869,8 @@ I_{eff} &amp;= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{4\pi}} 
 <ol class="arabic simple" start="2">
 <li><p>Vollwelle</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-90212705-d4ec-4ad4-99ba-b16581017a71">
-<span class="eqno">(60)<a class="headerlink" href="#equation-90212705-d4ec-4ad4-99ba-b16581017a71" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2a075e38-1bea-4da8-9e28-4b5433a4e9ec">
+<span class="eqno">(60)<a class="headerlink" href="#equation-2a075e38-1bea-4da8-9e28-4b5433a4e9ec" title="Permalink to this equation">#</a></span>\[\begin{align}
 \overline{i(t)} &amp;= 0 \\
 \overline{\lvert i(t) \lvert} &amp;=  2 \cdot \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] = \frac{\hat{I}}{\pi} \left[ 1+\cos(\varphi) \right] \\
 I^2_{eff} &amp;= 2 \cdot \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
@@ -904,7 +908,7 @@ I^2_{eff} &amp;= 2 \cdot \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1004,6 +1008,13 @@ Durch A. von Ahlen, M. Meiners
   <div class="footer-item">
     
 
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
   </div>
   
   <div class="footer-item">
@@ -1014,8 +1025,10 @@ Durch A. von Ahlen, M. Meiners
     
 <div class="extra_footer">
   <div>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
-All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+  <img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
 </div>
 
 </div>
@@ -1030,8 +1043,8 @@ All content on this site (unless otherwise specified) is licensed under the <a h
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

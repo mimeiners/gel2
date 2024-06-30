@@ -14,39 +14,39 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=f78ba3b0" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=91fba89f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/clipboard.min.js?v=e637711f"></script>
+    <script src="../_static/copybutton.js?v=56c01ce6"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
@@ -119,27 +119,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -161,8 +157,13 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -186,6 +187,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../about/unsyllabus.html">
   
@@ -207,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Suche</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -257,6 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/8_Filterschaltungen.html">Bode-Diagramme, Ortskurven, Filterschaltungen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/9_Schwingkreise.html">Schwingkreise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/10_Transformatoren.html">Transformator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorium/11_Klausurvorbereitung.html">Klausurvorbereitung</a></li>
 </ul>
 
     </div>
@@ -272,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -281,7 +285,7 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -430,10 +434,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -441,7 +445,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -640,8 +644,8 @@ demnach <span class="math notranslate nohighlight">\(1/r_p \approx \omega c_p \t
 <div class="admonition-impedanz-eigenresonanz admonition">
 <p class="admonition-title">Impedanz, Eigenresonanz</p>
 <p>Die Impedanz \underline{Z} der Spule errechnet sich aus der Ersatzschaltung <a class="reference internal" href="#fig-lec8s2"><span class="std std-numref">Abb. 10</span></a> zu</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e4692aed-7fae-4047-bbbc-f39a8e89daca">
-<span class="eqno">(44)<a class="headerlink" href="#equation-e4692aed-7fae-4047-bbbc-f39a8e89daca" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7abd7b0d-dd18-4930-a3e1-7d3682e76161">
+<span class="eqno">(44)<a class="headerlink" href="#equation-7abd7b0d-dd18-4930-a3e1-7d3682e76161" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{1}{\underline{Z}} &amp;= \frac{1}{r_p} + j\omega c_p + \frac{1}{j \omega l_s+r_s} \\ 
 &amp;= \frac{−j\omega l_s (1−c_p r_s^2/l_s − \omega^2 l_s c_p) 
 + r_s + (r_s^2 + \omega^2 l_s^2) \omega c_p \tan \delta}
@@ -774,8 +778,8 @@ Entsprechend läßt sich der von der Sekundärwicklung erzeugte Fluß <span clas
 \]</div>
 <p>Unter Berücksichtigung der Spannungsabfälle an den Wicklungen folgt aus dem Induktionsgesetz für die
 Spannungsabfälle in Primär- und Sekundärkreis</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ae2a650c-3bd6-451b-959e-96c6cb885e07">
-<span class="eqno">(45)<a class="headerlink" href="#equation-ae2a650c-3bd6-451b-959e-96c6cb885e07" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8d521883-b2a2-415f-bda7-dc7296a6e1d7">
+<span class="eqno">(45)<a class="headerlink" href="#equation-8d521883-b2a2-415f-bda7-dc7296a6e1d7" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= R_{Cu1} i_1 + n_1 \frac{d\phi_1}{dt} \\
 \underline{v}_2 &amp;= R_{Cu2} i_2 + n_2 \frac{d\phi_2}{dt}. 
 \end{align}\]</div>
@@ -792,8 +796,8 @@ Gegeninduktionskoeffizienten von Primär- und Sekundärwicklung und <span class=
 ergeben sich die sog.</p>
 <div class="admonition-transformatorgleichungen admonition">
 <p class="admonition-title">Transformatorgleichungen</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3a578a16-8199-4b07-bb77-0f81c392e362">
-<span class="eqno">(46)<a class="headerlink" href="#equation-3a578a16-8199-4b07-bb77-0f81c392e362" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-196d9b82-6c85-458b-a147-ec91f057b5ed">
+<span class="eqno">(46)<a class="headerlink" href="#equation-196d9b82-6c85-458b-a147-ec91f057b5ed" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= R_{Cu1} i_1 + L_1 \frac{di_1}{dt} + M \frac{di_2}{dt} \\
 \underline{v}_2 &amp;= R_{Cu2} i_2 + L_2 \frac{di_2}{dt} + M \frac{di_1}{dt} 
 \end{align}\]</div>
@@ -812,20 +816,20 @@ Polarisation auf.</p>
 <p>Bei sinusförmiger Erregung folgt unter Vernachlässigung der Drahtwiderstände (<span class="math notranslate nohighlight">\(R_{Cu1} = R_{Cu2} = 0\)</span>) aus den
 <em>Transformatorgleichungen</em> für die komplexen Zeiger der Wechselspannungsanteile an Primär- und Sekundärwicklung
 (Abb. )</p>
-<div class="amsmath math notranslate nohighlight" id="equation-904fa531-7279-4b1a-934f-d4f148d72c2a">
-<span class="eqno">(47)<a class="headerlink" href="#equation-904fa531-7279-4b1a-934f-d4f148d72c2a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7eebd441-2837-4582-8aa5-5c8358959447">
+<span class="eqno">(47)<a class="headerlink" href="#equation-7eebd441-2837-4582-8aa5-5c8358959447" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= j\omega L_1 i_1 + j\omega M i_2 \\
 \underline{v}_2 &amp;= j\omega M i_1 + j\omega L_2 i_2
 \end{align}\]</div>
 <p>Mit dem <em>Kopplungsfaktor</em> <span class="math notranslate nohighlight">\(k = M/L_1 L_2\)</span> läßt sich dies umformen zu ­</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fcff11e9-b94b-48a8-9894-9c4a3fa4a110">
-<span class="eqno">(48)<a class="headerlink" href="#equation-fcff11e9-b94b-48a8-9894-9c4a3fa4a110" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-766a0171-5401-4ee9-8cf0-bcebd837dfcd">
+<span class="eqno">(48)<a class="headerlink" href="#equation-766a0171-5401-4ee9-8cf0-bcebd837dfcd" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= \frac{1}{k} \sqrt{\frac{L_1}{L_2}} \cdot \underline{v}_2 − j\omega \frac{1 −k^2}{k} \sqrt{L_1 L_2} \cdot i_2  \\
 i_1 &amp;= \frac{1}{j\omega k \sqrt{L_1 L_2}} \cdot \underline{v}_2 = \frac{1}{k} \sqrt{\frac{L_1}{L_2}} \cdot i_2
 \end{align}\]</div>
 <p>Bei belastetem Ausgang gilt <span class="math notranslate nohighlight">\(i_2 = −\underline{v}_2/Z_L\)</span>; für den <em>Spannungsübertragungsfaktor</em> folgt damit aus Gl. (48)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-436cfb7e-5419-436e-acf1-dd85509a0dd3">
-<span class="eqno">(49)<a class="headerlink" href="#equation-436cfb7e-5419-436e-acf1-dd85509a0dd3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-507f70d4-c5d0-439e-ae14-723e71754596">
+<span class="eqno">(49)<a class="headerlink" href="#equation-507f70d4-c5d0-439e-ae14-723e71754596" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\underline{v}_1}{\underline{v}_2} = \frac{1}{k} \sqrt{\frac{L_1}{L_2}} + j\omega \frac{1 - k^2}{k} \sqrt{L_1 L_2}
 \frac{1}{\underline{Z}_L}.
 \end{equation}\]</div>
@@ -910,8 +914,8 @@ durchsetzende Fluß die andere nicht vollständig durchsetzt.</p>
 </figure>
 <p>Die Transformatorgleichungen lassen sich in die in Abb.  dargestellte T-Ersatzschaltung
 überführen. Durch Anwenden des Maschensatzes folgt sofort</p>
-<div class="amsmath math notranslate nohighlight" id="equation-20137dc7-22b6-465d-8927-584fbf55fa3d">
-<span class="eqno">(50)<a class="headerlink" href="#equation-20137dc7-22b6-465d-8927-584fbf55fa3d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7ac1060c-326c-4323-855f-980ec0bf0e1e">
+<span class="eqno">(50)<a class="headerlink" href="#equation-7ac1060c-326c-4323-855f-980ec0bf0e1e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= j\omega (L_1−M) \underline{i}_1 + j\omega M(\underline{i}_1+\underline{i}_2) = j\omega L_1
 \underline{i}_1 + j\omega M \underline{i}_2 \\
 \underline{v}_2 &amp;= j\omega (L_2−M) \underline{i}_2 + j\omega M(\underline{i}_1+\underline{i}_2) = j\omega L_2
@@ -982,16 +986,16 @@ $\underline{v}‘_1 kann demnach die in Abb.  dargestellte Ersatzschaltung heran
 </figcaption>
 </figure>
 <p>Nach der Spannungsteilerregel folgt sofort</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9cd11f23-c35c-4efd-a277-101297740292">
-<span class="eqno">(51)<a class="headerlink" href="#equation-9cd11f23-c35c-4efd-a277-101297740292" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a11d8d74-91c3-4e32-a775-ca1849bce027">
+<span class="eqno">(51)<a class="headerlink" href="#equation-a11d8d74-91c3-4e32-a775-ca1849bce027" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\underline{v}'_1}{\underline{v}_1} &amp;= \frac{j \omega k^2L_1 || r_{kp} || k^2 ü^2 \underline{Z}_x}{r_{Cu1} +
 j\omega \sigma L_1 + j\omega k^2 L_1 || r_{kp} || k^2 ü^2 \underline{Z}_x} \\ 
 &amp;= \frac{1}{1 + (r_{Cu1} + j\omega \sigma L_1) 
 \left( \frac{1}{j\omega k^2 L_1} + \frac{1}{r_{kp}} + \frac{1}{k^2 ü^2 \underline{Z}_L} \right)}
 \end{align}\]</div>
 <p>Ebenfalls durch Anwenden der Spannungsteilerregel erhält man</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b5c675fd-a282-422e-a28a-9331ec2d5828">
-<span class="eqno">(52)<a class="headerlink" href="#equation-b5c675fd-a282-422e-a28a-9331ec2d5828" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-33ef26f7-56a6-4ad4-a00a-1d6d100ef030">
+<span class="eqno">(52)<a class="headerlink" href="#equation-33ef26f7-56a6-4ad4-a00a-1d6d100ef030" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\underline{v}_2}{\underline{v}'_2} &amp;= \frac{\underline{Z}_L || (j \omega C_2)^{-1}}{\underline{Z}_x} \\
 &amp;= \frac{\underline{Z}_L}{\underline{Z}_L + r_{Cu2}(1 + j \omega C_2 \underline{Z}_L)}.
 \end{align}\]</div>
@@ -1090,7 +1094,7 @@ spezieller, verlustarmer Ferritwerkstoffe; vgl. mit <span id="id5">[<a class="re
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1167,6 +1171,13 @@ Durch A. von Ahlen, M. Meiners
   <div class="footer-item">
     
 
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
   </div>
   
   <div class="footer-item">
@@ -1177,8 +1188,10 @@ Durch A. von Ahlen, M. Meiners
     
 <div class="extra_footer">
   <div>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
-All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+  <img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
 </div>
 
 </div>
@@ -1193,8 +1206,8 @@ All content on this site (unless otherwise specified) is licensed under the <a h
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
