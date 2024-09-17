@@ -87,7 +87,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/translations.js?v=70a09b52"></script>
+    <script src="../_static/translations.js?v=79cc9f76"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -585,8 +585,8 @@ gelegt. Wie groß ist nun der Leistungsfaktor <span class="math notranslate nohi
 \underline{I}_{ges} = \underline{I}_Z + \underline{I}_C = \frac{\underline{U}}{\underline{Z}} + j \omega C \underline{U}
 \]</div>
 <p>Die Leistung an der Kondensatorbatterie:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-190772a4-0ab5-4db1-9755-e0497d5c6fc0">
-<span class="eqno">(73)<a class="headerlink" href="#equation-190772a4-0ab5-4db1-9755-e0497d5c6fc0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9db14c8c-be1f-487a-be5c-e22b6d4c02df">
+<span class="eqno">(75)<a class="headerlink" href="#equation-9db14c8c-be1f-487a-be5c-e22b6d4c02df" title="Permalink to this equation">#</a></span>\[\begin{align}
 P_C &amp;= \frac{1}{2} \underline{U}\underline{I}_{ges}^{*} \\
 &amp;= \frac{1}{2} \frac{\vert\underline{U}\vert^2}{\underline{Z}^{*}} - \frac{1}{2} j \omega C \vert\underline{U}\vert^2
 \end{align}\]</div>
@@ -643,14 +643,14 @@ R_V = 74,1\,k\Omega  f = 91,9\,kHz
 <p>Wie groß ist diese Leistung?</p>
 <section id="id6">
 <h4>Lösung<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
-<div class="amsmath math notranslate nohighlight" id="equation-c73bbd23-987c-4b15-b556-c0ec6239d2f6">
-<span class="eqno">(74)<a class="headerlink" href="#equation-c73bbd23-987c-4b15-b556-c0ec6239d2f6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0494590e-0b7e-42fe-8e2a-0138139c51aa">
+<span class="eqno">(76)<a class="headerlink" href="#equation-0494590e-0b7e-42fe-8e2a-0138139c51aa" title="Permalink to this equation">#</a></span>\[\begin{align}
 P_{total} &amp;= \frac{U_{eff}^2}{R_G + \underbrace{\operatorname{Re}(Z_V)}_{=R_G}} = \frac{U_{eff}^2}{2 R_G} \\
 P_V &amp;= \frac{1}{2} P_{total} = \frac{U_{eff}^2}{4 R_G} = 1,25\,kW
 \end{align}\]</div>
 <p>Alternativ auch Lösung über den Spannungsteiler</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b22729bf-e973-4554-9cef-1b857b774c69">
-<span class="eqno">(75)<a class="headerlink" href="#equation-b22729bf-e973-4554-9cef-1b857b774c69" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-13ab3281-317d-4928-9d20-510daec3a5b2">
+<span class="eqno">(77)<a class="headerlink" href="#equation-13ab3281-317d-4928-9d20-510daec3a5b2" title="Permalink to this equation">#</a></span>\[\begin{align}
 U_{eff,V} &amp;= \frac{\operatorname{Re}(Z_V)}{R_G + \operatorname{Re}(Z_V)} U_{eff} = \frac{1}{2} U_{eff} \\
 P_V &amp;= \frac{U_{eff,V}^2}{\operatorname{Re}(Z_V)} = \frac{1}{4} \frac{U_{eff}^2}{R_G} = 1,25\,kW
 \end{align}\]</div>
@@ -765,8 +765,8 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
 <section id="id11">
 <h4>Lösung<a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
 <p>Maschenumlauf: <span class="math notranslate nohighlight">\(\underline{U}_2 - \underline{U}_4 - \underline{U}_D = 0\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-729a4a49-eb19-41dc-a191-12d9d330bb80">
-<span class="eqno">(76)<a class="headerlink" href="#equation-729a4a49-eb19-41dc-a191-12d9d330bb80" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5b7d6579-0e51-4b2f-86d9-0dd0ff16d0c9">
+<span class="eqno">(78)<a class="headerlink" href="#equation-5b7d6579-0e51-4b2f-86d9-0dd0ff16d0c9" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{U}_2 &amp;= \frac{\underline{Z}_2}{\underline{Z}_1+\underline{Z}_2} \underline{U}_E \\
 \underline{U}_4 &amp;= \frac{R_4}{R_3+R_4} \underline{U}_E \\
 \underline{U}_D &amp;= \underline{U}_4 - \underline{U}_2 \\
@@ -774,8 +774,8 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
 &amp;= \left( \frac{1}{1+\frac{R_3}{R_4}} - \frac{1}{1 + \frac{\underline{Z}_1}{\underline{Z}_2}} \right) \underline{U}_E
 \end{align}\]</div>
 <p>Hieraus folgt das Spannungsübertragungsverhältnis:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d08614df-0799-4086-8889-4818932259e0">
-<span class="eqno">(77)<a class="headerlink" href="#equation-d08614df-0799-4086-8889-4818932259e0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f98d6c1a-b6c3-4bdd-8bf7-75e20a378c18">
+<span class="eqno">(79)<a class="headerlink" href="#equation-f98d6c1a-b6c3-4bdd-8bf7-75e20a378c18" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{H}_u &amp;= \frac{\underline{U}_D}{\underline{U}_E} \\
 &amp;= \frac{1}{1 + 2} - \frac{1}{1 + (2 + j \omega RC + \frac{1}{j \omega RC})} \\
 &amp;= \frac{1}{3} \left( 1 - \frac{1}{1 + j \frac{1}{3}(\omega RC - \frac{1}{\omega RC})}\right) \\
@@ -784,8 +784,8 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
 &amp;= \frac{1}{3} \frac{1}{1 - j \frac{3}{\omega / \omega_A - \omega_A / \omega}} 
 \end{align}\]</div>
 <p>Betrag und Phase des Spannungsübertragungsverhältnisses:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ad9af224-41f0-447b-826d-559a824b86f8">
-<span class="eqno">(78)<a class="headerlink" href="#equation-ad9af224-41f0-447b-826d-559a824b86f8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-41516bef-acf5-4f60-ad23-d118823ae068">
+<span class="eqno">(80)<a class="headerlink" href="#equation-41516bef-acf5-4f60-ad23-d118823ae068" title="Permalink to this equation">#</a></span>\[\begin{align}
 \vert\underline{H}_u\vert &amp;= \frac{1}{3 \sqrt{1 + \left(\frac{3}{\omega/\omega_A - \omega_A/\omega}\right)^2}} \\
 \arg(\underline{H}_u) &amp;= \arctan(\frac{3}{\omega/\omega_A - \omega_A/\omega})
 \end{align}\]</div>

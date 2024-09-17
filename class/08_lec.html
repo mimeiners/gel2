@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=f78ba3b0" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -87,7 +87,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/translations.js?v=70a09b52"></script>
+    <script src="../_static/translations.js?v=79cc9f76"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -644,8 +644,8 @@ demnach <span class="math notranslate nohighlight">\(1/r_p \approx \omega c_p \t
 <div class="admonition-impedanz-eigenresonanz admonition">
 <p class="admonition-title">Impedanz, Eigenresonanz</p>
 <p>Die Impedanz \underline{Z} der Spule errechnet sich aus der Ersatzschaltung <a class="reference internal" href="#fig-lec8s2"><span class="std std-numref">Abb. 10</span></a> zu</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7abd7b0d-dd18-4930-a3e1-7d3682e76161">
-<span class="eqno">(44)<a class="headerlink" href="#equation-7abd7b0d-dd18-4930-a3e1-7d3682e76161" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c0a5978d-03e7-41ac-9a15-bbdf7ebbd51d">
+<span class="eqno">(44)<a class="headerlink" href="#equation-c0a5978d-03e7-41ac-9a15-bbdf7ebbd51d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{1}{\underline{Z}} &amp;= \frac{1}{r_p} + j\omega c_p + \frac{1}{j \omega l_s+r_s} \\ 
 &amp;= \frac{−j\omega l_s (1−c_p r_s^2/l_s − \omega^2 l_s c_p) 
 + r_s + (r_s^2 + \omega^2 l_s^2) \omega c_p \tan \delta}
@@ -778,8 +778,8 @@ Entsprechend läßt sich der von der Sekundärwicklung erzeugte Fluß <span clas
 \]</div>
 <p>Unter Berücksichtigung der Spannungsabfälle an den Wicklungen folgt aus dem Induktionsgesetz für die
 Spannungsabfälle in Primär- und Sekundärkreis</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8d521883-b2a2-415f-bda7-dc7296a6e1d7">
-<span class="eqno">(45)<a class="headerlink" href="#equation-8d521883-b2a2-415f-bda7-dc7296a6e1d7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-477c5b55-fdb8-466b-ba1b-389611c3ade8">
+<span class="eqno">(45)<a class="headerlink" href="#equation-477c5b55-fdb8-466b-ba1b-389611c3ade8" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= R_{Cu1} i_1 + n_1 \frac{d\phi_1}{dt} \\
 \underline{v}_2 &amp;= R_{Cu2} i_2 + n_2 \frac{d\phi_2}{dt}. 
 \end{align}\]</div>
@@ -796,8 +796,8 @@ Gegeninduktionskoeffizienten von Primär- und Sekundärwicklung und <span class=
 ergeben sich die sog.</p>
 <div class="admonition-transformatorgleichungen admonition">
 <p class="admonition-title">Transformatorgleichungen</p>
-<div class="amsmath math notranslate nohighlight" id="equation-196d9b82-6c85-458b-a147-ec91f057b5ed">
-<span class="eqno">(46)<a class="headerlink" href="#equation-196d9b82-6c85-458b-a147-ec91f057b5ed" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-474bc3c8-a384-40b6-a3a7-2085b9828360">
+<span class="eqno">(46)<a class="headerlink" href="#equation-474bc3c8-a384-40b6-a3a7-2085b9828360" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= R_{Cu1} i_1 + L_1 \frac{di_1}{dt} + M \frac{di_2}{dt} \\
 \underline{v}_2 &amp;= R_{Cu2} i_2 + L_2 \frac{di_2}{dt} + M \frac{di_1}{dt} 
 \end{align}\]</div>
@@ -816,20 +816,20 @@ Polarisation auf.</p>
 <p>Bei sinusförmiger Erregung folgt unter Vernachlässigung der Drahtwiderstände (<span class="math notranslate nohighlight">\(R_{Cu1} = R_{Cu2} = 0\)</span>) aus den
 <em>Transformatorgleichungen</em> für die komplexen Zeiger der Wechselspannungsanteile an Primär- und Sekundärwicklung
 (Abb. )</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7eebd441-2837-4582-8aa5-5c8358959447">
-<span class="eqno">(47)<a class="headerlink" href="#equation-7eebd441-2837-4582-8aa5-5c8358959447" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d8b5023d-9745-401f-8475-7f503bb9acb4">
+<span class="eqno">(47)<a class="headerlink" href="#equation-d8b5023d-9745-401f-8475-7f503bb9acb4" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= j\omega L_1 i_1 + j\omega M i_2 \\
 \underline{v}_2 &amp;= j\omega M i_1 + j\omega L_2 i_2
 \end{align}\]</div>
 <p>Mit dem <em>Kopplungsfaktor</em> <span class="math notranslate nohighlight">\(k = M/L_1 L_2\)</span> läßt sich dies umformen zu ­</p>
-<div class="amsmath math notranslate nohighlight" id="equation-766a0171-5401-4ee9-8cf0-bcebd837dfcd">
-<span class="eqno">(48)<a class="headerlink" href="#equation-766a0171-5401-4ee9-8cf0-bcebd837dfcd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ab530e04-96a1-4045-879c-a6a53ce185ef">
+<span class="eqno">(48)<a class="headerlink" href="#equation-ab530e04-96a1-4045-879c-a6a53ce185ef" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= \frac{1}{k} \sqrt{\frac{L_1}{L_2}} \cdot \underline{v}_2 − j\omega \frac{1 −k^2}{k} \sqrt{L_1 L_2} \cdot i_2  \\
 i_1 &amp;= \frac{1}{j\omega k \sqrt{L_1 L_2}} \cdot \underline{v}_2 = \frac{1}{k} \sqrt{\frac{L_1}{L_2}} \cdot i_2
 \end{align}\]</div>
 <p>Bei belastetem Ausgang gilt <span class="math notranslate nohighlight">\(i_2 = −\underline{v}_2/Z_L\)</span>; für den <em>Spannungsübertragungsfaktor</em> folgt damit aus Gl. (48)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-507f70d4-c5d0-439e-ae14-723e71754596">
-<span class="eqno">(49)<a class="headerlink" href="#equation-507f70d4-c5d0-439e-ae14-723e71754596" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-09da7a98-d5b3-44c2-8576-99ee592941da">
+<span class="eqno">(49)<a class="headerlink" href="#equation-09da7a98-d5b3-44c2-8576-99ee592941da" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\underline{v}_1}{\underline{v}_2} = \frac{1}{k} \sqrt{\frac{L_1}{L_2}} + j\omega \frac{1 - k^2}{k} \sqrt{L_1 L_2}
 \frac{1}{\underline{Z}_L}.
 \end{equation}\]</div>
@@ -837,10 +837,10 @@ i_1 &amp;= \frac{1}{j\omega k \sqrt{L_1 L_2}} \cdot \underline{v}_2 = \frac{1}{k
 <p class="admonition-title">Vollständige Kopplung</p>
 <p>Im Fall idealer Kopplung (<span class="math notranslate nohighlight">\(\vert k \vert = 1\)</span>) verschwindet der zweite Term auf der rechten Seite von
 Gl. (49); das Spannungsverhältnis ist dann</p>
-<div class="math notranslate nohighlight">
-\[
-\underline{v}_1/\underline{v}_2 = L_1/L_2 = ü.
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-81bae91b-d9ea-48b4-ab82-4cac49ddf4a4">
+<span class="eqno">(50)<a class="headerlink" href="#equation-81bae91b-d9ea-48b4-ab82-4cac49ddf4a4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{\underline{v}_1}{\underline{v}_2} = \frac{L_1}{L_2} = ü.
+\end{equation}\]</div>
 <p>Die Größe ü wird dabei als <em>Übertragungsverhältnis</em> bezeichnet.
 Zwischen den Zeigern der Ströme besteht nach Gl. (9.75) der Zusammenhang</p>
 <div class="math notranslate nohighlight">
@@ -848,10 +848,11 @@ Zwischen den Zeigern der Ströme besteht nach Gl. (9.75) der Zusammenhang</p>
 \underline{i}_1 = -\sqrt{\frac{L_2}{L_1}} \cdot \underline{i}_1 + \frac{1}{j\omega \sqrt{L_1 L_2}} \cdot \underline{v}_2
 \]</div>
 <p>Im Grenzfall des <em>idealen Übertragers</em> mit <span class="math notranslate nohighlight">\(L_1 = ü^2 L_2 \to \infty\)</span> führt dies auf
-­
-$<span class="math notranslate nohighlight">\(
-\underline{i}_1/\underline{i}_2 = −1/ü.
-\)</span>$</p>
+­</p>
+<div class="amsmath math notranslate nohighlight" id="equation-869a6c0b-37f4-468b-8c8f-9c5ddbc97a6a">
+<span class="eqno">(51)<a class="headerlink" href="#equation-869a6c0b-37f4-468b-8c8f-9c5ddbc97a6a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{\underline{i}_1}{\underline{i}_2} = \frac{−1}{ü}.
+\end{equation}\]</div>
 </div>
 <figure class="align-default" id="fig-lec8s9">
 <a class="reference internal image-reference" href="../_images/lec8s9.pdf"><img alt="../_images/lec8s9.pdf" src="../_images/lec8s9.pdf" style="width: 400px;" /></a>
@@ -914,8 +915,8 @@ durchsetzende Fluß die andere nicht vollständig durchsetzt.</p>
 </figure>
 <p>Die Transformatorgleichungen lassen sich in die in Abb.  dargestellte T-Ersatzschaltung
 überführen. Durch Anwenden des Maschensatzes folgt sofort</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7ac1060c-326c-4323-855f-980ec0bf0e1e">
-<span class="eqno">(50)<a class="headerlink" href="#equation-7ac1060c-326c-4323-855f-980ec0bf0e1e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a7d79c43-232b-4362-849d-d7217836ea3a">
+<span class="eqno">(52)<a class="headerlink" href="#equation-a7d79c43-232b-4362-849d-d7217836ea3a" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= j\omega (L_1−M) \underline{i}_1 + j\omega M(\underline{i}_1+\underline{i}_2) = j\omega L_1
 \underline{i}_1 + j\omega M \underline{i}_2 \\
 \underline{v}_2 &amp;= j\omega (L_2−M) \underline{i}_2 + j\omega M(\underline{i}_1+\underline{i}_2) = j\omega L_2
@@ -923,7 +924,7 @@ durchsetzende Fluß die andere nicht vollständig durchsetzt.</p>
 \end{align}\]</div>
 <p>Das Verhalten des Übertragers kann demnach durch drei verschaltete Induktivitäten, die beiden Längsinduktivitäten
 <span class="math notranslate nohighlight">\(L_1 − M\)</span> und <span class="math notranslate nohighlight">\(L_2 − M\)</span> sowie die Gegeninduktivität <span class="math notranslate nohighlight">\(M\)</span> beschrieben werden. Für Kopplungsfaktoren von annähernd
-eins gilt <span class="math notranslate nohighlight">\(M \approx \sqrt{L_1 L_1}\)</span>; d.h. zumindest eine der Längsinduktivitäten ist negativ. Die T-Ersatzschaltung ist
+eins gilt <span class="math notranslate nohighlight">\(M \approx \sqrt{L_1 L_2}\)</span>; d.h. zumindest eine der Längsinduktivitäten ist negativ. Die T-Ersatzschaltung ist
 aus diesem Grund als rein formales Netzwerk anzusehen, das die Transformatorgleichungen korrekt erfaßt – eine
 physikalisch anschauliche Interpretation der Netzwerkelemente besteht jedoch nicht.</p>
 <figure class="align-default" id="fig-lec8s11">
@@ -932,8 +933,7 @@ physikalisch anschauliche Interpretation der Netzwerkelemente besteht jedoch nic
 <p><span class="caption-number">Abb. 17 </span><span class="caption-text">Ersatzschaltung eines unvollständig gekoppelten Übertragers</span><a class="headerlink" href="#fig-lec8s11" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Abbildung 9.28 zeigt die Ersatzschaltung eines unvollständig gekoppelten <span class="math notranslate nohighlight">\((k &lt; 1)\)</span>, ansonsten verlustfreien
-Übertragers. Dabei wird von der Induktivität <span class="math notranslate nohighlight">\(L_1\)</span> ein Streuanteil <span class="math notranslate nohighlight">\(\sigma L_1\)</span> abgespalten; der</p>
+<p>Abbildung  zeigt die Ersatzschaltung eines unvollständig gekoppelten <span class="math notranslate nohighlight">\((k &lt; 1)\)</span>, ansonsten  verlustfreien Übertragers. Dabei wird von der Induktivität <span class="math notranslate nohighlight">\(L_1\)</span> ein Streuanteil <span class="math notranslate nohighlight">\(\sigma L_1\)</span> abgespalten; der</p>
 <div class="admonition-streugrad-sigma admonition">
 <p class="admonition-title">Streugrad <span class="math notranslate nohighlight">\(\sigma\)</span></p>
 <p>des Übertragers ist definiert als</p>
@@ -978,7 +978,7 @@ kapazitive Kopplung zwischen Primär- und Sekundärwicklung (vgl. Abb.  (a)) ver
 \underline{Z}_x = r_{Cu2} + \frac{\underline{Z}_L}{1 + j\omega C_2 \underline{Z}_L}
 \]</div>
 <p>beschaltet, die eingangseitig wie eine Impedanz <span class="math notranslate nohighlight">\(k^2 ü^2 \underline{Z}_x\)</span> wirkt. Zur Berechnung der Amplitude von
-$\underline{v}‘_1 kann demnach die in Abb.  dargestellte Ersatzschaltung herangezogen werden.</p>
+<span class="math notranslate nohighlight">\(\underline{v}'_1\)</span> kann demnach die in Abb.  dargestellte Ersatzschaltung herangezogen werden.</p>
 <figure class="align-default" id="fig-lec8s14">
 <a class="reference internal image-reference" href="../_images/lec8s14.pdf"><img alt="../_images/lec8s14.pdf" src="../_images/lec8s14.pdf" style="width: 400px;" /></a>
 <figcaption>
@@ -986,16 +986,16 @@ $\underline{v}‘_1 kann demnach die in Abb.  dargestellte Ersatzschaltung heran
 </figcaption>
 </figure>
 <p>Nach der Spannungsteilerregel folgt sofort</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a11d8d74-91c3-4e32-a775-ca1849bce027">
-<span class="eqno">(51)<a class="headerlink" href="#equation-a11d8d74-91c3-4e32-a775-ca1849bce027" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-851225a7-e7fc-4152-a383-97168b249518">
+<span class="eqno">(53)<a class="headerlink" href="#equation-851225a7-e7fc-4152-a383-97168b249518" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\underline{v}'_1}{\underline{v}_1} &amp;= \frac{j \omega k^2L_1 || r_{kp} || k^2 ü^2 \underline{Z}_x}{r_{Cu1} +
 j\omega \sigma L_1 + j\omega k^2 L_1 || r_{kp} || k^2 ü^2 \underline{Z}_x} \\ 
 &amp;= \frac{1}{1 + (r_{Cu1} + j\omega \sigma L_1) 
 \left( \frac{1}{j\omega k^2 L_1} + \frac{1}{r_{kp}} + \frac{1}{k^2 ü^2 \underline{Z}_L} \right)}
 \end{align}\]</div>
 <p>Ebenfalls durch Anwenden der Spannungsteilerregel erhält man</p>
-<div class="amsmath math notranslate nohighlight" id="equation-33ef26f7-56a6-4ad4-a00a-1d6d100ef030">
-<span class="eqno">(52)<a class="headerlink" href="#equation-33ef26f7-56a6-4ad4-a00a-1d6d100ef030" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-52dae3e4-4611-40e9-b36c-f138b8b10c62">
+<span class="eqno">(54)<a class="headerlink" href="#equation-52dae3e4-4611-40e9-b36c-f138b8b10c62" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\underline{v}_2}{\underline{v}'_2} &amp;= \frac{\underline{Z}_L || (j \omega C_2)^{-1}}{\underline{Z}_x} \\
 &amp;= \frac{\underline{Z}_L}{\underline{Z}_L + r_{Cu2}(1 + j \omega C_2 \underline{Z}_L)}.
 \end{align}\]</div>
