@@ -389,9 +389,9 @@ Bei belastetem Ausgang gilt $i_2 = −\underline{v}_2/Z_L$; für den *Spannungs�
 Im Fall idealer Kopplung ($\vert k \vert = 1$) verschwindet der zweite Term auf der rechten Seite von
 Gl. (49); das Spannungsverhältnis ist dann
 
-$$
-\underline{v}_1/\underline{v}_2 = L_1/L_2 = ü.
-$$
+\begin{equation}
+\frac{\underline{v}_1}{\underline{v}_2} = \frac{L_1}{L_2} = ü.
+\end{equation}
 
 Die Größe ü wird dabei als *Übertragungsverhältnis* bezeichnet.
 Zwischen den Zeigern der Ströme besteht nach Gl. (9.75) der Zusammenhang 
@@ -402,9 +402,9 @@ $$
 
 Im Grenzfall des *idealen Übertragers* mit $L_1 = ü^2 L_2 \to \infty$ führt dies auf
 ­
-$$
-\underline{i}_1/\underline{i}_2 = −1/ü.
-$$
+\begin{equation}
+\frac{\underline{i}_1}{\underline{i}_2} = \frac{−1}{ü}.
+\end{equation}
 ```
 
 
@@ -487,7 +487,7 @@ Die Transformatorgleichungen lassen sich in die in Abb. {nameref}`fig:lec8s10` d
 
 Das Verhalten des Übertragers kann demnach durch drei verschaltete Induktivitäten, die beiden Längsinduktivitäten
 $L_1 − M$ und $L_2 − M$ sowie die Gegeninduktivität $M$ beschrieben werden. Für Kopplungsfaktoren von annähernd 
-eins gilt $M \approx \sqrt{L_1 L_1}$; d.h. zumindest eine der Längsinduktivitäten ist negativ. Die T-Ersatzschaltung ist
+eins gilt $M \approx \sqrt{L_1 L_2}$; d.h. zumindest eine der Längsinduktivitäten ist negativ. Die T-Ersatzschaltung ist
 aus diesem Grund als rein formales Netzwerk anzusehen, das die Transformatorgleichungen korrekt erfaßt – eine 
 physikalisch anschauliche Interpretation der Netzwerkelemente besteht jedoch nicht. 
 
@@ -498,8 +498,7 @@ physikalisch anschauliche Interpretation der Netzwerkelemente besteht jedoch nic
 Ersatzschaltung eines unvollständig gekoppelten Übertragers
 ```
 
-Abbildung 9.28 zeigt die Ersatzschaltung eines unvollständig gekoppelten $(k < 1)$, ansonsten verlustfreien 
-Übertragers. Dabei wird von der Induktivität $L_1$ ein Streuanteil $\sigma L_1$ abgespalten; der 
+Abbildung {nameref}`fig:lec8s11` zeigt die Ersatzschaltung eines unvollständig gekoppelten $(k < 1)$, ansonsten  verlustfreien Übertragers. Dabei wird von der Induktivität $L_1$ ein Streuanteil $\sigma L_1$ abgespalten; der 
 
 ```{admonition} Streugrad $\sigma$
 des Übertragers ist definiert als 
@@ -552,7 +551,7 @@ $$
 $$
 
 beschaltet, die eingangseitig wie eine Impedanz $k^2 ü^2 \underline{Z}_x$ wirkt. Zur Berechnung der Amplitude von 
-$\underline{v}'_1 kann demnach die in Abb. {nameref}`fig:lec8s14` dargestellte Ersatzschaltung herangezogen werden.
+$\underline{v}'_1$ kann demnach die in Abb. {nameref}`fig:lec8s14` dargestellte Ersatzschaltung herangezogen werden.
 
 ```{figure} ../images/class/lec8s14.pdf
 :width: 400px
