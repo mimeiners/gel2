@@ -1,0 +1,10 @@
+# Unsyllabus {.unnumbered}
+
+| Name     | Description                                  |
+|----------|----------------------------------------------|
+| Kursus   | M 2.3 Grundlagen der Elektrotechnik 2 (GEL2) |
+| Semester | SoSe25                                       |
+| Dozent   | Prof. Dr.-Ing. M. Meiners                    |
+| Seminar  | Mo., 11:30 Uhr - 13:00 Uhr, E 509            |
+| Tutorium | Mo., 13:30 Uhr - 15:00 Uhr, E 509            |
+

@@ -2,4 +2,9 @@ _build
 .ipynb_checkpoints
 .DS_Store
 *.log
-
+.Rproj.user
+.Rhistory
+*_cache
+*_files
+_book
+/.quarto/

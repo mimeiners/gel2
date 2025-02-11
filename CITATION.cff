@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this material, please cite it as below."
+authors:
+  - family-names: Meiners 
+    given-names: Mirco
+    orcid: https://orcid.org/0000-0002-9709-4191
+  - family-names: von Ahlen
+    given-names: Alicia
+title: "Grundlagen der Elektrotechnik 2 (GEL2)"
+date-released: 2025-02-11
+url: https://mimeiners.github.io/gel2/
+identifiers:
+  - type: doi
+    value: 
