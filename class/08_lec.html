@@ -16,38 +16,41 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=f78ba3b0" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/documentation_options.js?v=91fba89f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=e637711f"></script>
-    <script src="../_static/copybutton.js?v=56c01ce6"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -89,19 +92,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../_static/translations.js?v=79cc9f76"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'class/08_lec';</script>
@@ -112,6 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Netzwerkanalyse" href="07_lec.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="de"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -127,19 +123,8 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -147,7 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -155,8 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -172,7 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -190,39 +175,29 @@ const thebe_selector_output = ".output, .cell_output"
     
   
 
-<a class="navbar-brand logo" href="../about/unsyllabus.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>
-    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>`);</script>
   
+    <p class="title logo__title">M 2.3 Grundlagen der Elektrotechnik (GEL2)</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Suche</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Suche</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../about/unsyllabus.html">
+                <a class="reference internal" href="../index.html">
                     Unsyllabus
                 </a>
             </li>
@@ -262,6 +237,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/10_Transformatoren.html">Transformator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/11_Klausurvorbereitung.html">Klausurvorbereitung</a></li>
 </ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="references.html">Literaturverzeichnis</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -290,9 +268,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -432,27 +410,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -506,7 +476,7 @@ document.write(`
 <h1>Spulen und Übertrager<a class="headerlink" href="#spulen-und-ubertrager" title="Link to this heading">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Die Inhalte sind dem gleichnamigen Kapitel 9 von <span id="id1">[<a class="reference internal" href="#id39" title="Michael Reisch. Elektronische Bauelemente. Springer, 2 edition, 2007. ISBN 978-3-540-34014-0. arXiv:978-3-540-34015-7, doi:10.1007/978-3-540-34015-7.">Reisch, 2007</a>]</span> entnommen worden.</p>
+<p>Die Inhalte sind dem gleichnamigen Kapitel 9 von <span id="id1">[<a class="reference internal" href="references.html#id29" title="Michael Reisch. Elektronische Bauelemente. Springer, 2 edition, 2007. ISBN 978-3-540-34014-0. arXiv:978-3-540-34015-7, doi:10.1007/978-3-540-34015-7.">Reisch, 2007</a>]</span> entnommen worden.</p>
 </div>
 <p>Spulen dienen der Verwirklichung von Induktivitäten. Übertrager und Transformatoren nutzen die induktive Kopplung
 von i. allg. galvanisch getrennten Spulen zur Spannungstransformation und zum Übertragen von elektrischer
@@ -644,8 +614,8 @@ demnach <span class="math notranslate nohighlight">\(1/r_p \approx \omega c_p \t
 <div class="admonition-impedanz-eigenresonanz admonition">
 <p class="admonition-title">Impedanz, Eigenresonanz</p>
 <p>Die Impedanz \underline{Z} der Spule errechnet sich aus der Ersatzschaltung <a class="reference internal" href="#fig-lec8s2"><span class="std std-numref">Abb. 10</span></a> zu</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c0a5978d-03e7-41ac-9a15-bbdf7ebbd51d">
-<span class="eqno">(44)<a class="headerlink" href="#equation-c0a5978d-03e7-41ac-9a15-bbdf7ebbd51d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1136643b-0d3e-434f-8436-4e7768436631">
+<span class="eqno">(44)<a class="headerlink" href="#equation-1136643b-0d3e-434f-8436-4e7768436631" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{1}{\underline{Z}} &amp;= \frac{1}{r_p} + j\omega c_p + \frac{1}{j \omega l_s+r_s} \\ 
 &amp;= \frac{−j\omega l_s (1−c_p r_s^2/l_s − \omega^2 l_s c_p) 
 + r_s + (r_s^2 + \omega^2 l_s^2) \omega c_p \tan \delta}
@@ -707,7 +677,7 @@ nennenswerten Serienimpedanz hervorrufen. […]</p>
 <p>Drosselspulen sollen den Gleichanteil <span class="math notranslate nohighlight">\(I_L\)</span> des sie durchfließenden Stroms möglichst wenig, den Wechselanteil möglichst
 stark dämpfen (drosseln). Der Kern einer Drosselspule ist deshalb in der Regel mit einem starken Gleichfeld belastet,
 dem ein schwaches Wechselfeld überlagert ist. Die Verluste in der Drosselspule sind somit vorwiegend Kupferverluste, da
-der dominierende Gleichanteil keine Kernverluste verursacht; vgl. auch <span id="id2">[<a class="reference internal" href="#id50" title="Ulrich Schlienz. Schaltnetzteile und ihre Peripherie: Dimensionierung, Einsatz, EMV. Springer Fachmedien Wiesbaden, 2020. ISBN 9783658294908. doi:10.1007/978-3-658-29490-8.">Schlienz, 2020</a>]</span> Kap. 2 - Abwärtswandler.</p>
+der dominierende Gleichanteil keine Kernverluste verursacht; vgl. auch <span id="id2">[<a class="reference internal" href="references.html#id44" title="Ulrich Schlienz. Schaltnetzteile und ihre Peripherie: Dimensionierung, Einsatz, EMV. Springer Fachmedien Wiesbaden, 2020. ISBN 9783658294908. doi:10.1007/978-3-658-29490-8.">Schlienz, 2020</a>]</span> Kap. 2 - Abwärtswandler.</p>
 <figure class="align-default" id="fig-lec8s6">
 <a class="reference internal image-reference" href="../_images/lec8s6.pdf"><img alt="../_images/lec8s6.pdf" src="../_images/lec8s6.pdf" style="width: 400px;" /></a>
 <figcaption>
@@ -730,7 +700,7 @@ artificial intelligence (AI), intelligent power management is critical to supply
 <p>PMICs have enabled the development of smaller, more energy-efficient, and reliable electronic solutions. They also play
 an essential role in environmental aspects and sustainability. By regulating the power supply of electronic devices,
 PMICs can reduce energy consumption and carbon emissions. Moreover, PMICs are crucial for the development of renewable
-energies, such as solar and wind power, by enabling efficient power conversion and management.“ <span id="id3">[<a class="reference internal" href="#id51" title="Bernhard Wicht. Design of Power Management Integrated Circuits. Wiley, May 2024. ISBN 9781119123095. doi:10.1002/9781119123095.">Wicht, 2024</a>]</span></p>
+energies, such as solar and wind power, by enabling efficient power conversion and management.“ <span id="id3">[<a class="reference internal" href="references.html#id43" title="Bernhard Wicht. Design of Power Management Integrated Circuits. Wiley, May 2024. ISBN 9781119123095. doi:10.1002/9781119123095.">Wicht, 2024</a>]</span></p>
 <ul class="simple">
 <li><p>IoT Nodes and Energy Harvesting</p></li>
 <li><p>Portable Devices, Smartphones, and Wearables</p></li>
@@ -778,8 +748,8 @@ Entsprechend läßt sich der von der Sekundärwicklung erzeugte Fluß <span clas
 \]</div>
 <p>Unter Berücksichtigung der Spannungsabfälle an den Wicklungen folgt aus dem Induktionsgesetz für die
 Spannungsabfälle in Primär- und Sekundärkreis</p>
-<div class="amsmath math notranslate nohighlight" id="equation-477c5b55-fdb8-466b-ba1b-389611c3ade8">
-<span class="eqno">(45)<a class="headerlink" href="#equation-477c5b55-fdb8-466b-ba1b-389611c3ade8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a0f8e82a-fe6d-46ef-9d3e-045cdde3929f">
+<span class="eqno">(45)<a class="headerlink" href="#equation-a0f8e82a-fe6d-46ef-9d3e-045cdde3929f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= R_{Cu1} i_1 + n_1 \frac{d\phi_1}{dt} \\
 \underline{v}_2 &amp;= R_{Cu2} i_2 + n_2 \frac{d\phi_2}{dt}. 
 \end{align}\]</div>
@@ -796,8 +766,8 @@ Gegeninduktionskoeffizienten von Primär- und Sekundärwicklung und <span class=
 ergeben sich die sog.</p>
 <div class="admonition-transformatorgleichungen admonition">
 <p class="admonition-title">Transformatorgleichungen</p>
-<div class="amsmath math notranslate nohighlight" id="equation-474bc3c8-a384-40b6-a3a7-2085b9828360">
-<span class="eqno">(46)<a class="headerlink" href="#equation-474bc3c8-a384-40b6-a3a7-2085b9828360" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e800811e-6398-4264-b9cf-dacb634eee4b">
+<span class="eqno">(46)<a class="headerlink" href="#equation-e800811e-6398-4264-b9cf-dacb634eee4b" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= R_{Cu1} i_1 + L_1 \frac{di_1}{dt} + M \frac{di_2}{dt} \\
 \underline{v}_2 &amp;= R_{Cu2} i_2 + L_2 \frac{di_2}{dt} + M \frac{di_1}{dt} 
 \end{align}\]</div>
@@ -816,20 +786,20 @@ Polarisation auf.</p>
 <p>Bei sinusförmiger Erregung folgt unter Vernachlässigung der Drahtwiderstände (<span class="math notranslate nohighlight">\(R_{Cu1} = R_{Cu2} = 0\)</span>) aus den
 <em>Transformatorgleichungen</em> für die komplexen Zeiger der Wechselspannungsanteile an Primär- und Sekundärwicklung
 (Abb. )</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d8b5023d-9745-401f-8475-7f503bb9acb4">
-<span class="eqno">(47)<a class="headerlink" href="#equation-d8b5023d-9745-401f-8475-7f503bb9acb4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d79126c2-3a55-4087-8487-490d3ee2d87e">
+<span class="eqno">(47)<a class="headerlink" href="#equation-d79126c2-3a55-4087-8487-490d3ee2d87e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= j\omega L_1 i_1 + j\omega M i_2 \\
 \underline{v}_2 &amp;= j\omega M i_1 + j\omega L_2 i_2
 \end{align}\]</div>
 <p>Mit dem <em>Kopplungsfaktor</em> <span class="math notranslate nohighlight">\(k = M/L_1 L_2\)</span> läßt sich dies umformen zu ­</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ab530e04-96a1-4045-879c-a6a53ce185ef">
-<span class="eqno">(48)<a class="headerlink" href="#equation-ab530e04-96a1-4045-879c-a6a53ce185ef" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f06c3d88-340a-4ab8-b705-1e270778a293">
+<span class="eqno">(48)<a class="headerlink" href="#equation-f06c3d88-340a-4ab8-b705-1e270778a293" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= \frac{1}{k} \sqrt{\frac{L_1}{L_2}} \cdot \underline{v}_2 − j\omega \frac{1 −k^2}{k} \sqrt{L_1 L_2} \cdot i_2  \\
 i_1 &amp;= \frac{1}{j\omega k \sqrt{L_1 L_2}} \cdot \underline{v}_2 = \frac{1}{k} \sqrt{\frac{L_1}{L_2}} \cdot i_2
 \end{align}\]</div>
 <p>Bei belastetem Ausgang gilt <span class="math notranslate nohighlight">\(i_2 = −\underline{v}_2/Z_L\)</span>; für den <em>Spannungsübertragungsfaktor</em> folgt damit aus Gl. (48)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-09da7a98-d5b3-44c2-8576-99ee592941da">
-<span class="eqno">(49)<a class="headerlink" href="#equation-09da7a98-d5b3-44c2-8576-99ee592941da" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d7a33786-bb86-47c1-b711-caaeef5e9a06">
+<span class="eqno">(49)<a class="headerlink" href="#equation-d7a33786-bb86-47c1-b711-caaeef5e9a06" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\underline{v}_1}{\underline{v}_2} = \frac{1}{k} \sqrt{\frac{L_1}{L_2}} + j\omega \frac{1 - k^2}{k} \sqrt{L_1 L_2}
 \frac{1}{\underline{Z}_L}.
 \end{equation}\]</div>
@@ -837,8 +807,8 @@ i_1 &amp;= \frac{1}{j\omega k \sqrt{L_1 L_2}} \cdot \underline{v}_2 = \frac{1}{k
 <p class="admonition-title">Vollständige Kopplung</p>
 <p>Im Fall idealer Kopplung (<span class="math notranslate nohighlight">\(\vert k \vert = 1\)</span>) verschwindet der zweite Term auf der rechten Seite von
 Gl. (49); das Spannungsverhältnis ist dann</p>
-<div class="amsmath math notranslate nohighlight" id="equation-81bae91b-d9ea-48b4-ab82-4cac49ddf4a4">
-<span class="eqno">(50)<a class="headerlink" href="#equation-81bae91b-d9ea-48b4-ab82-4cac49ddf4a4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-69665ceb-3b1b-4e42-89e5-058862ad547d">
+<span class="eqno">(50)<a class="headerlink" href="#equation-69665ceb-3b1b-4e42-89e5-058862ad547d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\underline{v}_1}{\underline{v}_2} = \frac{L_1}{L_2} = ü.
 \end{equation}\]</div>
 <p>Die Größe ü wird dabei als <em>Übertragungsverhältnis</em> bezeichnet.
@@ -849,8 +819,8 @@ Zwischen den Zeigern der Ströme besteht nach Gl. (9.75) der Zusammenhang</p>
 \]</div>
 <p>Im Grenzfall des <em>idealen Übertragers</em> mit <span class="math notranslate nohighlight">\(L_1 = ü^2 L_2 \to \infty\)</span> führt dies auf
 ­</p>
-<div class="amsmath math notranslate nohighlight" id="equation-869a6c0b-37f4-468b-8c8f-9c5ddbc97a6a">
-<span class="eqno">(51)<a class="headerlink" href="#equation-869a6c0b-37f4-468b-8c8f-9c5ddbc97a6a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c0976f30-3775-4db8-98ca-5ca96bbbfe2f">
+<span class="eqno">(51)<a class="headerlink" href="#equation-c0976f30-3775-4db8-98ca-5ca96bbbfe2f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\underline{i}_1}{\underline{i}_2} = \frac{−1}{ü}.
 \end{equation}\]</div>
 </div>
@@ -915,8 +885,8 @@ durchsetzende Fluß die andere nicht vollständig durchsetzt.</p>
 </figure>
 <p>Die Transformatorgleichungen lassen sich in die in Abb.  dargestellte T-Ersatzschaltung
 überführen. Durch Anwenden des Maschensatzes folgt sofort</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a7d79c43-232b-4362-849d-d7217836ea3a">
-<span class="eqno">(52)<a class="headerlink" href="#equation-a7d79c43-232b-4362-849d-d7217836ea3a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-63c088be-72ca-471e-be88-6bbe50baa7e8">
+<span class="eqno">(52)<a class="headerlink" href="#equation-63c088be-72ca-471e-be88-6bbe50baa7e8" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{v}_1 &amp;= j\omega (L_1−M) \underline{i}_1 + j\omega M(\underline{i}_1+\underline{i}_2) = j\omega L_1
 \underline{i}_1 + j\omega M \underline{i}_2 \\
 \underline{v}_2 &amp;= j\omega (L_2−M) \underline{i}_2 + j\omega M(\underline{i}_1+\underline{i}_2) = j\omega L_2
@@ -986,16 +956,16 @@ kapazitive Kopplung zwischen Primär- und Sekundärwicklung (vgl. Abb.  (a)) ver
 </figcaption>
 </figure>
 <p>Nach der Spannungsteilerregel folgt sofort</p>
-<div class="amsmath math notranslate nohighlight" id="equation-851225a7-e7fc-4152-a383-97168b249518">
-<span class="eqno">(53)<a class="headerlink" href="#equation-851225a7-e7fc-4152-a383-97168b249518" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-db75133e-c9f4-4e5d-a817-f8d59b053f88">
+<span class="eqno">(53)<a class="headerlink" href="#equation-db75133e-c9f4-4e5d-a817-f8d59b053f88" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\underline{v}'_1}{\underline{v}_1} &amp;= \frac{j \omega k^2L_1 || r_{kp} || k^2 ü^2 \underline{Z}_x}{r_{Cu1} +
 j\omega \sigma L_1 + j\omega k^2 L_1 || r_{kp} || k^2 ü^2 \underline{Z}_x} \\ 
 &amp;= \frac{1}{1 + (r_{Cu1} + j\omega \sigma L_1) 
 \left( \frac{1}{j\omega k^2 L_1} + \frac{1}{r_{kp}} + \frac{1}{k^2 ü^2 \underline{Z}_L} \right)}
 \end{align}\]</div>
 <p>Ebenfalls durch Anwenden der Spannungsteilerregel erhält man</p>
-<div class="amsmath math notranslate nohighlight" id="equation-52dae3e4-4611-40e9-b36c-f138b8b10c62">
-<span class="eqno">(54)<a class="headerlink" href="#equation-52dae3e4-4611-40e9-b36c-f138b8b10c62" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-207ac2bb-0d4b-4b2a-a697-86e3fd8d1336">
+<span class="eqno">(54)<a class="headerlink" href="#equation-207ac2bb-0d4b-4b2a-a697-86e3fd8d1336" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\underline{v}_2}{\underline{v}'_2} &amp;= \frac{\underline{Z}_L || (j \omega C_2)^{-1}}{\underline{Z}_x} \\
 &amp;= \frac{\underline{Z}_L}{\underline{Z}_L + r_{Cu2}(1 + j \omega C_2 \underline{Z}_L)}.
 \end{align}\]</div>
@@ -1039,26 +1009,26 @@ Schaltfrequenz kann das Gewicht – und damit auch der Preis – von Stromversor
 <p>Ein 100 W-Netzteil, realisiert mit einem bei Netzfrequenz (50 Hz) arbeitenden Transformator, hat eine Masse in der
 Größenordnung von 10 kg; durch Erhöhen der Schaltfrequenz auf 50 kHz kann diese auf unter 1 kg gesenkt werden, bei
 500 kHz sind weniger als 400 g erreichbar. Wesentlich für diese Anhebung der Schaltfrequenz war die Entwicklung
-spezieller, verlustarmer Ferritwerkstoffe; vgl. mit <span id="id5">[<a class="reference internal" href="#id52" title="Franz Zach. Leistungselektronik: Ein Handbuch Band 1 / Band 2. Springer Fachmedien Wiesbaden, 2022. ISBN 9783658314361. doi:10.1007/978-3-658-31436-1.">Zach, 2022</a>]</span>, Kap. 15.</p>
+spezieller, verlustarmer Ferritwerkstoffe; vgl. mit <span id="id5">[<a class="reference internal" href="references.html#id45" title="Franz Zach. Leistungselektronik: Ein Handbuch Band 1 / Band 2. Springer Fachmedien Wiesbaden, 2022. ISBN 9783658314361. doi:10.1007/978-3-658-31436-1.">Zach, 2022</a>]</span>, Kap. 15.</p>
 </section>
 </section>
 <section id="literaturverzeichnis">
 <h2>Literaturverzeichnis<a class="headerlink" href="#literaturverzeichnis" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id6">
 <div role="list" class="citation-list">
-<div class="citation" id="id39" role="doc-biblioentry">
+<div class="citation" id="id34" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Rei07</a><span class="fn-bracket">]</span></span>
 <p>Michael Reisch. <em>Elektronische Bauelemente</em>. Springer, 2 edition, 2007. ISBN 978-3-540-34014-0. <a class="reference external" href="https://arxiv.org/abs/978-3-540-34015-7">arXiv:978-3-540-34015-7</a>, <a class="reference external" href="https://doi.org/10.1007/978-3-540-34015-7">doi:10.1007/978-3-540-34015-7</a>.</p>
 </div>
-<div class="citation" id="id50" role="doc-biblioentry">
+<div class="citation" id="id49" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Sch20</a><span class="fn-bracket">]</span></span>
 <p>Ulrich Schlienz. <em>Schaltnetzteile und ihre Peripherie: Dimensionierung, Einsatz, EMV</em>. Springer Fachmedien Wiesbaden, 2020. ISBN 9783658294908. <a class="reference external" href="https://doi.org/10.1007/978-3-658-29490-8">doi:10.1007/978-3-658-29490-8</a>.</p>
 </div>
-<div class="citation" id="id51" role="doc-biblioentry">
+<div class="citation" id="id48" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Wic24</a><span class="fn-bracket">]</span></span>
 <p>Bernhard Wicht. <em>Design of Power Management Integrated Circuits</em>. Wiley, May 2024. ISBN 9781119123095. <a class="reference external" href="https://doi.org/10.1002/9781119123095">doi:10.1002/9781119123095</a>.</p>
 </div>
-<div class="citation" id="id52" role="doc-biblioentry">
+<div class="citation" id="id50" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">Zac22</a><span class="fn-bracket">]</span></span>
 <p>Franz Zach. <em>Leistungselektronik: Ein Handbuch Band 1 / Band 2</em>. Springer Fachmedien Wiesbaden, 2022. ISBN 9783658314361. <a class="reference external" href="https://doi.org/10.1007/978-3-658-31436-1">doi:10.1007/978-3-658-31436-1</a>.</p>
 </div>
@@ -1122,7 +1092,8 @@ spezieller, verlustarmer Ferritwerkstoffe; vgl. mit <span id="id5">[<a class="re
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1206,8 +1177,8 @@ Durch A. von Ahlen, M. Meiners
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

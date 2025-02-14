@@ -16,38 +16,41 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=f78ba3b0" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/documentation_options.js?v=91fba89f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=e637711f"></script>
-    <script src="../_static/copybutton.js?v=56c01ce6"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -89,19 +92,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../_static/translations.js?v=79cc9f76"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercise/hw1';</script>
@@ -112,6 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Spulen und Übertrager" href="../class/08_lec.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="de"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -127,19 +123,8 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -147,7 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -155,8 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -172,7 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -190,39 +175,29 @@ const thebe_selector_output = ".output, .cell_output"
     
   
 
-<a class="navbar-brand logo" href="../about/unsyllabus.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>
-    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>`);</script>
   
+    <p class="title logo__title">M 2.3 Grundlagen der Elektrotechnik (GEL2)</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Suche</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Suche</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../about/unsyllabus.html">
+                <a class="reference internal" href="../index.html">
                     Unsyllabus
                 </a>
             </li>
@@ -262,6 +237,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/10_Transformatoren.html">Transformator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/11_Klausurvorbereitung.html">Klausurvorbereitung</a></li>
 </ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../class/references.html">Literaturverzeichnis</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -290,9 +268,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -432,27 +410,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -543,8 +513,8 @@ des wissenschaflichten Rechnens, z.B. Matlab oder Gnu Octave) dar.</p>
 <h3>Lösung<a class="headerlink" href="#losung" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">f</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">3</span>  <span class="c1"># Grundfrequenz 1 kHz wird auch als 10e3 geschrieben</span>
 <span class="n">w</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">f</span>  <span class="c1"># Kreisfrequenz</span>
@@ -625,8 +595,8 @@ drei Einzelspannungen berechnen?</p>
 </div>
 <section id="id3">
 <h4>Lösung<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
-<div class="amsmath math notranslate nohighlight" id="equation-5b0ef400-02b6-46ff-8211-b5b84f33d663">
-<span class="eqno">(55)<a class="headerlink" href="#equation-5b0ef400-02b6-46ff-8211-b5b84f33d663" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-67378816-b54c-4c42-bc49-e7da6a3f99bd">
+<span class="eqno">(55)<a class="headerlink" href="#equation-67378816-b54c-4c42-bc49-e7da6a3f99bd" title="Permalink to this equation">#</a></span>\[\begin{align}
 U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 &amp;= \frac{1}{T} \int_0^{T} ( U_0 + \hat{U}_1 \cos(\omega_1 t) + \hat{U}_2 \cos(\omega_2 t + \varphi) )^2 \\
 &amp;= \frac{1}{T} \int_0^{T} (  U^2_0 + 2U_0\hat{U}_1\cos(\omega_1t) + 2U_0\hat{U}_2\cos(\omega_2 t + \varphi) \\
@@ -643,10 +613,10 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 <span class="math notranslate nohighlight">\(\varphi\)</span> = 60 Grad?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">scipy.integrate</span> <span class="k">as</span> <span class="nn">si</span>
-<span class="kn">import</span> <span class="nn">scipy.optimize</span> <span class="k">as</span> <span class="nn">so</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">si</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">so</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pylab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">U0</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">U1p</span> <span class="o">=</span> <span class="mf">100e-3</span>
@@ -659,11 +629,11 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 
 
 <span class="c1"># Definition der Spannungen als Funktion</span>
-<span class="k">def</span> <span class="nf">u</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">u</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">U0</span> <span class="o">+</span> <span class="n">U1p</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w1</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">U2p</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w2</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">u2</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">u2</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">U0</span> <span class="o">+</span> <span class="n">U1p</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w1</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">U2p</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w2</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span>
 
 
@@ -690,7 +660,7 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 
 
 <span class="c1"># Berechnung des Scheitelfaktors, Fixpunkt-Iteration</span>
-<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">):</span>
     <span class="k">return</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="o">-</span><span class="n">c1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">c2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">-</span> <span class="n">c3</span><span class="p">)</span>
 
 
@@ -710,8 +680,8 @@ Der Scheitelfaktor: -0.31462061084367027
 </div>
 <section id="id4">
 <h4>Lösung<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
-<div class="amsmath math notranslate nohighlight" id="equation-36606c0a-6351-4639-b0d1-d8b1f2112c3e">
-<span class="eqno">(56)<a class="headerlink" href="#equation-36606c0a-6351-4639-b0d1-d8b1f2112c3e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-93fe44f6-ba26-4dfc-882e-5dd2c076893b">
+<span class="eqno">(56)<a class="headerlink" href="#equation-93fe44f6-ba26-4dfc-882e-5dd2c076893b" title="Permalink to this equation">#</a></span>\[\begin{align}
 U_{max} &amp;= u(t_{max}); \quad \left. \frac{du(t)}{dt} \right\lvert_{t=t_{max}} = 0 \\
 \frac{du(t)}{dt} &amp;= -\hat{U}_1\omega_1\sin(\omega_1 t) - \hat{U}_2 \omega_2\sin(\omega_2 t + \varphi) \\
 \sin(3\omega_1 t_{max} + \varphi) &amp;= -\frac{\hat{U}_1}{2\hat{U}_2}\sin(\omega_1 t_{max}) \\
@@ -745,28 +715,28 @@ Daraus ergeben sich <span class="math notranslate nohighlight">\(U_{max}\)</span
 <section id="id5">
 <h4>Lösung<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <p>Sei <span class="math notranslate nohighlight">\(u(t)=\hat{U} \sin(\omega t + \varphi_u)\)</span>, dann ergeben sich die Ströme zu:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d4d23cca-21a8-4b6a-b8f6-fd4e24a72636">
-<span class="eqno">(57)<a class="headerlink" href="#equation-d4d23cca-21a8-4b6a-b8f6-fd4e24a72636" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-989d0d26-9873-4416-b621-144287bbdfed">
+<span class="eqno">(57)<a class="headerlink" href="#equation-989d0d26-9873-4416-b621-144287bbdfed" title="Permalink to this equation">#</a></span>\[\begin{align}
 i_C(t) &amp;= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2}) = -\omega C \hat{U} \cos(\omega t + \varphi_u) \\
 i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 \end{align}\]</div>
 <p>Knotengleichung: <span class="math notranslate nohighlight">\(i_0(t) = i_C(t) + i_R(t)\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-bdf0a4c6-166e-4d44-aae3-5c6246097b26">
-<span class="eqno">(58)<a class="headerlink" href="#equation-bdf0a4c6-166e-4d44-aae3-5c6246097b26" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-793fde49-59bc-4ae3-b958-8072c4d5e00e">
+<span class="eqno">(58)<a class="headerlink" href="#equation-793fde49-59bc-4ae3-b958-8072c4d5e00e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \hat{I}_0 \sin(\omega t) &amp;= -\omega C \hat{U} \cos(\omega t + \varphi_u) + \frac{\hat{U}}{R} \sin(\omega t + \varphi_u) \\
 \hat{I}_0 \sin(m - \varphi_u) &amp;= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m), \quad m=\omega t + \varphi_u \\
 \hat{I}_0 \left( \sin(m) \cos(\varphi_u) - \cos(m) \sin(\varphi_u) \right) &amp;= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m) \\
 \end{align}\]</div>
 <p>Koeffizientenvergleich:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9be33cd9-767f-4150-a1bc-4a96977e6290">
-<span class="eqno">(59)<a class="headerlink" href="#equation-9be33cd9-767f-4150-a1bc-4a96977e6290" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-889e843f-8d15-46a1-9748-ad023cb94d46">
+<span class="eqno">(59)<a class="headerlink" href="#equation-889e843f-8d15-46a1-9748-ad023cb94d46" title="Permalink to this equation">#</a></span>\[\begin{align}
 \hat{I}_0 \cos(\varphi_u) &amp;= \frac{\hat{U}}{R} \\
 \hat{I}_0 \sin(\varphi_u) &amp;= -\omega C \hat{U} \\
 \tan{\varphi_u} = \frac{\sin(\varphi_u)}{\cos(\varphi_u)} &amp;= \frac{-\omega C \hat{U}}{\frac{\hat{U}}{R}} = -\omega R C \\
 \varphi_u &amp;= \arctan(-\omega R C)
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-2c94b737-3e97-4431-950d-3178dad9eb3d">
-<span class="eqno">(60)<a class="headerlink" href="#equation-2c94b737-3e97-4431-950d-3178dad9eb3d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-026fbd30-584e-4773-a6a9-67ece041e89e">
+<span class="eqno">(60)<a class="headerlink" href="#equation-026fbd30-584e-4773-a6a9-67ece041e89e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \hat{I}_0 \cos(\varphi_u) &amp;= \frac{\hat{U}}{R} \\
 \hat{U} &amp;= R \hat{I} \cos{\varphi_u} = R \hat{I} \frac{1}{\sqrt{1+\tan^2(\varphi)}} \\
 &amp;= \frac{R \hat{I}}{\sqrt{1+(\omega R C)^2}} \\
@@ -781,8 +751,8 @@ i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 <span class="math notranslate nohighlight">\(\hat{I}_0\)</span> = 14.1 mA, <span class="math notranslate nohighlight">\(f\)</span> = 3.183 kHz, <span class="math notranslate nohighlight">\(R\)</span> = 50 <span class="math notranslate nohighlight">\(\Omega\)</span> und <span class="math notranslate nohighlight">\(C\)</span> = 1 <span class="math notranslate nohighlight">\(\mu\)</span> F!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">linspace</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">linspace</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pylab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">f</span> <span class="o">=</span> <span class="mf">3.183e3</span>  <span class="c1"># Frequenz kHz</span>
 <span class="n">w</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">f</span>  <span class="c1"># Kreisfrequenz</span>
@@ -856,8 +826,8 @@ Gleichrichtmittelwert und Effektivwert als Funktion vom Phasenanschnittwinkel <s
 <ol class="arabic simple">
 <li><p>Halbwelle</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-d8ad2844-3558-4fb0-a5af-4d57ccdd52b3">
-<span class="eqno">(61)<a class="headerlink" href="#equation-d8ad2844-3558-4fb0-a5af-4d57ccdd52b3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3781015f-2c91-4fbc-a797-087d8cf125fe">
+<span class="eqno">(61)<a class="headerlink" href="#equation-3781015f-2c91-4fbc-a797-087d8cf125fe" title="Permalink to this equation">#</a></span>\[\begin{align}
 \overline{i(t)} &amp;= \frac{1}{T} \int_0^{T} i(t) d t &amp; &amp;= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{I}\sin(\varphi) d \varphi \\
 &amp;= \frac{\hat{I}}{2\pi} \left[ -\cos(\varphi) \right]_{\alpha}^{\pi} &amp; &amp;= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
 \overline{\lvert i(t) \lvert} &amp;= \frac{1}{T} \int_0^{T} \lvert i(t) \lvert d t &amp; &amp;= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
@@ -869,8 +839,8 @@ I_{eff} &amp;= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{4\pi}} 
 <ol class="arabic simple" start="2">
 <li><p>Vollwelle</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-b25e1824-fee0-4cf8-8962-59ffdf8db0c1">
-<span class="eqno">(62)<a class="headerlink" href="#equation-b25e1824-fee0-4cf8-8962-59ffdf8db0c1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e26e6d0e-b278-413d-8af7-df46fc519f9b">
+<span class="eqno">(62)<a class="headerlink" href="#equation-e26e6d0e-b278-413d-8af7-df46fc519f9b" title="Permalink to this equation">#</a></span>\[\begin{align}
 \overline{i(t)} &amp;= 0 \\
 \overline{\lvert i(t) \lvert} &amp;=  2 \cdot \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] = \frac{\hat{I}}{\pi} \left[ 1+\cos(\varphi) \right] \\
 I^2_{eff} &amp;= 2 \cdot \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
@@ -936,7 +906,8 @@ I^2_{eff} &amp;= 2 \cdot \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1043,8 +1014,8 @@ Durch A. von Ahlen, M. Meiners
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

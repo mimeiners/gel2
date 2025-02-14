@@ -16,38 +16,41 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=f78ba3b0" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/documentation_options.js?v=91fba89f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=e637711f"></script>
-    <script src="../_static/copybutton.js?v=56c01ce6"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -89,19 +92,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../_static/translations.js?v=79cc9f76"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercise/hw6';</script>
@@ -112,6 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Anpassung und Wechselstrommessbrücke" href="hw5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="de"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -127,19 +123,8 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -147,7 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -155,8 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -172,7 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -190,39 +175,29 @@ const thebe_selector_output = ".output, .cell_output"
     
   
 
-<a class="navbar-brand logo" href="../about/unsyllabus.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>
-    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>`);</script>
   
+    <p class="title logo__title">M 2.3 Grundlagen der Elektrotechnik (GEL2)</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Suche</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Suche</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../about/unsyllabus.html">
+                <a class="reference internal" href="../index.html">
                     Unsyllabus
                 </a>
             </li>
@@ -262,6 +237,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/10_Transformatoren.html">Transformator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/11_Klausurvorbereitung.html">Klausurvorbereitung</a></li>
 </ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../class/references.html">Literaturverzeichnis</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -290,9 +268,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -432,27 +410,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -516,8 +486,8 @@ Darstellungsform, so dass die Kapazität <span class="math notranslate nohighlig
 <span class="math notranslate nohighlight">\(R_2\)</span> aufgenommene mittlere Leistung möglichst groß wird.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Lösung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-825ec31c-66b7-4745-85b4-b720246cea3b">
-<span class="eqno">(81)<a class="headerlink" href="#equation-825ec31c-66b7-4745-85b4-b720246cea3b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8d927250-42d7-4535-ba61-3a3aa11619be">
+<span class="eqno">(81)<a class="headerlink" href="#equation-8d927250-42d7-4535-ba61-3a3aa11619be" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{S} &amp;= \underline{U} \cdot \underline{I}^* \\
 P &amp;= \operatorname{Re}(\underline{S}) = \operatorname{Re}(\underline{U}_{R_2} \cdot \underline{I}^*) \\
 &amp;= \operatorname{Re}(R_2 \cdot \underline{I} \cdot  \underline{I}^*) = R_2 \vert{\underline{I}}^2\vert \\
@@ -579,8 +549,8 @@ Parallelschaltung eines Widerstandes <span class="math notranslate nohighlight">
 </figcaption>
 </figure>
 <p>Impedanztransformation mit einem idealen Übertrager:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b813df8-78a9-47e3-a54c-de35a2e174ad">
-<span class="eqno">(82)<a class="headerlink" href="#equation-5b813df8-78a9-47e3-a54c-de35a2e174ad" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f83a39ca-4c93-4904-a266-a51631218e31">
+<span class="eqno">(82)<a class="headerlink" href="#equation-f83a39ca-4c93-4904-a266-a51631218e31" title="Permalink to this equation">#</a></span>\[\begin{align}
 Z_{2t} &amp;= \mbox{ü}^2 Z_2 \\
 Y_{2t} &amp;= \frac{1}{R_{2t}} + j\omega C_{2t} = \frac{1}{\mbox{ü}^2}Y_2 \\
 &amp;= \frac{1}{\mbox{ü}^2}\left(\frac{1}{R_2} + j\omega C_2 \right) = \frac{1}{\mbox{ü}^2 R_2} + j \omega \frac{C_2}{\mbox{ü}^2} \\
@@ -600,8 +570,8 @@ C_{2t} &amp;= \frac{C_2}{\mbox{ü}^2} = \frac{C_2}{4}
 <p><span class="caption-number">Abb. 46 </span><span class="caption-text">Ersatzschaltbild mit zusammengefassten Zweipolen.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="amsmath math notranslate nohighlight" id="equation-ab379a64-101f-45f3-880a-e4c051c8af8e">
-<span class="eqno">(83)<a class="headerlink" href="#equation-ab379a64-101f-45f3-880a-e4c051c8af8e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e94c904c-4666-42d6-989d-1f196977d099">
+<span class="eqno">(83)<a class="headerlink" href="#equation-e94c904c-4666-42d6-989d-1f196977d099" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{1}{R_{ges}} &amp;= \frac{1}{R_1} + \frac{1}{R_{2t}} = \frac{5}{4 R} \\
 R_{ges} &amp;= \frac{4}{5} R \\
 C_{ges} &amp;= C_1 + C_{2t} = \frac{5}{4} C
@@ -614,8 +584,8 @@ C_{ges} &amp;= C_1 + C_{2t} = \frac{5}{4} C
 die Güte <span class="math notranslate nohighlight">\(Q_t\)</span>.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Lösung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6c0d6b80-7f6f-4352-8971-e327949f6340">
-<span class="eqno">(84)<a class="headerlink" href="#equation-6c0d6b80-7f6f-4352-8971-e327949f6340" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-16e6ffac-e433-4802-bf2f-9606003c33cc">
+<span class="eqno">(84)<a class="headerlink" href="#equation-16e6ffac-e433-4802-bf2f-9606003c33cc" title="Permalink to this equation">#</a></span>\[\begin{align}
 \omega_0 &amp;= \frac{1}{\sqrt{L_1 C_1}} = 100\,MHz \\
 \omega_{0t} &amp;= \frac{1}{\sqrt{L_1 C_{ges}}} = \sqrt{\frac{4}{5}} \omega_0 = 89.44\,MHz \\
 Q &amp;= \frac{R_p}{\omega_0 L_p} = \frac{1}{G_p}\sqrt{\frac{C_p}{L_p}} = 20 \\
@@ -682,7 +652,8 @@ Q_t &amp;= \frac{1}{G_{ges}}\sqrt{\frac{C_{ges}}{L_1}} = R_{ges}\sqrt{\frac{C_{g
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -760,8 +731,8 @@ Durch A. von Ahlen, M. Meiners
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -16,38 +16,41 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=f78ba3b0" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/documentation_options.js?v=91fba89f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=e637711f"></script>
-    <script src="../_static/copybutton.js?v=56c01ce6"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -89,19 +92,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../_static/translations.js?v=79cc9f76"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercise/hw3';</script>
@@ -112,6 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Signale" href="hw2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="de"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -127,19 +123,8 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -147,7 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -155,8 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -172,7 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -190,39 +175,29 @@ const thebe_selector_output = ".output, .cell_output"
     
   
 
-<a class="navbar-brand logo" href="../about/unsyllabus.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>
-    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>`);</script>
   
+    <p class="title logo__title">M 2.3 Grundlagen der Elektrotechnik (GEL2)</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Suche</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Suche</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../about/unsyllabus.html">
+                <a class="reference internal" href="../index.html">
                     Unsyllabus
                 </a>
             </li>
@@ -262,6 +237,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/10_Transformatoren.html">Transformator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/11_Klausurvorbereitung.html">Klausurvorbereitung</a></li>
 </ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../class/references.html">Literaturverzeichnis</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -290,9 +268,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -432,27 +410,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -584,7 +554,7 @@ Oszilloskopeingangs. <span class="math notranslate nohighlight">\(R_1 = 9\,M\Ome
 <p><span class="caption-number">Abb. 31 </span><span class="caption-text">Ersatzschaltbild eines Oszilloskop-Tastkopfes.</span><a class="headerlink" href="#fig-hw3p2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>vgl. <a class="reference external" href="https://www.elektroniktutor.de/analogtechnik/c_teiler.html">Kapazitiver Spannungsteiler</a> <span id="id1">[<a class="reference internal" href="../class/05_lec.html#id37" title="Detlef Mietke. Elektroniktutor. Technical Report, Oberstufenzentrum für Kommunikations-, Informations- und Medientechnik (OSZ-KIM), Berlin, 2024. URL: https://www.elektroniktutor.de.">Mietke, 2024</a>]</span></p>
+<p>vgl. <a class="reference external" href="https://www.elektroniktutor.de/analogtechnik/c_teiler.html">Kapazitiver Spannungsteiler</a> <span id="id1">[<a class="reference internal" href="../class/references.html#id24">Mietke, 2024</a>]</span></p>
 <section id="sec-hw3p1">
 <span id="id2"></span><h3>Spannungsteiler<a class="headerlink" href="#sec-hw3p1" title="Link to this heading">#</a></h3>
 <p>Leiten Sie den Spannungsübertagungsfaktor <span class="math notranslate nohighlight">\(\underline{H}_u=\underline{U}_{osz}/\underline{U}\)</span> allgemein für die angegebenen
@@ -598,17 +568,17 @@ Bauteile her?</p>
 <p><span class="caption-number">Abb. 32 </span><span class="caption-text">Ersatzschaltbild des Tastkopfes zusammengefasst.</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="amsmath math notranslate nohighlight" id="equation-e95c3720-3c21-47eb-b1c7-3622eeece1c9">
-<span class="eqno">(63)<a class="headerlink" href="#equation-e95c3720-3c21-47eb-b1c7-3622eeece1c9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a9587c27-ac18-4b32-8b03-2feceef6d40f">
+<span class="eqno">(63)<a class="headerlink" href="#equation-a9587c27-ac18-4b32-8b03-2feceef6d40f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 Z_1 = \frac{\frac{R_1}{j\omega C_1}}{\frac{1}{j \omega C_1} + R_1} = \frac{R_1}{1 + j \omega R_1 C_1} 
 \end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-20469d9a-15bd-4f38-aa1d-d94af50dbd48">
-<span class="eqno">(64)<a class="headerlink" href="#equation-20469d9a-15bd-4f38-aa1d-d94af50dbd48" title="Permalink to this equation">#</a></span>\[\begin{equation} 
+<div class="amsmath math notranslate nohighlight" id="equation-72d816e8-389a-4d38-805f-623ebc9f32e4">
+<span class="eqno">(64)<a class="headerlink" href="#equation-72d816e8-389a-4d38-805f-623ebc9f32e4" title="Permalink to this equation">#</a></span>\[\begin{equation} 
 Z_2 = \frac{R_{2g}}{1+ j \omega R_{2g} C}, \quad \mbox{wobei} \quad  R_{2g}=\frac{R_2 R}{R_2+R}
 \end{equation}\]</div>
 <p>Mit diesen Definitionen bestimmt man das Spannungsverhältnis:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1bb7d281-b552-4d2e-b526-18b8982f008e">
-<span class="eqno">(65)<a class="headerlink" href="#equation-1bb7d281-b552-4d2e-b526-18b8982f008e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f3f2d7b9-c7c9-4001-9601-e987c8d54466">
+<span class="eqno">(65)<a class="headerlink" href="#equation-f3f2d7b9-c7c9-4001-9601-e987c8d54466" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \underline{H}_u = \frac{\underline{U_{osz}}}{\underline{U}}= \frac{\underline{Z}_2}{\underline{Z}_1 + \underline{Z}_2}.
 \end{equation}\]</div>
 </section>
@@ -620,8 +590,8 @@ Z_2 = \frac{R_{2g}}{1+ j \omega R_{2g} C}, \quad \mbox{wobei} \quad  R_{2g}=\fra
 <h4>Lösung<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
 <p>Mit den Vorarbeiten aus <a class="reference internal" href="#sec-hw3p1"><span class="std std-ref">Spannungsteiler</span></a> kann man an dieser Stelle die Eingangsimpedanz des Tastkopfes als Reihenschaltung der
 Impedanzen <span class="math notranslate nohighlight">\(Z_1\)</span> und <span class="math notranslate nohighlight">\(Z_2\)</span> notieren.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-61a1710f-707d-45bd-8e94-777f6dc9e40e">
-<span class="eqno">(66)<a class="headerlink" href="#equation-61a1710f-707d-45bd-8e94-777f6dc9e40e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-46174c00-cbef-4499-88e3-03d2b2663ed9">
+<span class="eqno">(66)<a class="headerlink" href="#equation-46174c00-cbef-4499-88e3-03d2b2663ed9" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \underline{Z} = \underline{Z}_1 + \underline{Z}_2 = \frac{R_1}{1 + j \omega R_1 C_1} + \frac{R_{2g}}{1+ j \omega R_{2g} C}
 \end{equation}\]</div>
 </section>
@@ -635,23 +605,23 @@ alle Frequenzen gleich groß ist?</p>
 <p>Ähnlich einer Abgleichbedingung für eine Wechselstrommessbrücke kann man an dieser Stelle argumentieren, dass das
 Spannungsverhältnis <span class="math notranslate nohighlight">\(\underline{H}\)</span> für alle Frequenzen gleich groß ist, sofern <span class="math notranslate nohighlight">\(R_1C_1 = R_{2g}C\)</span> gilt.</p>
 <p>Die mathematische/ingenieurische Begründung ist wie folgt:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-db820c07-ec29-44a3-8826-e14b9a513019">
-<span class="eqno">(67)<a class="headerlink" href="#equation-db820c07-ec29-44a3-8826-e14b9a513019" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-76d57888-b945-464b-a109-b88164b75f14">
+<span class="eqno">(67)<a class="headerlink" href="#equation-76d57888-b945-464b-a109-b88164b75f14" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{1}{Z_1} = \frac{1}{R_1} + j \omega C_1 
 \end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-2ec16ecb-a211-46b6-ad47-98c6fee7e8c8">
-<span class="eqno">(68)<a class="headerlink" href="#equation-2ec16ecb-a211-46b6-ad47-98c6fee7e8c8" title="Permalink to this equation">#</a></span>\[\begin{equation} 
+<div class="amsmath math notranslate nohighlight" id="equation-ccdf8254-c397-46ce-81d8-ab7a49f6c586">
+<span class="eqno">(68)<a class="headerlink" href="#equation-ccdf8254-c397-46ce-81d8-ab7a49f6c586" title="Permalink to this equation">#</a></span>\[\begin{equation} 
 \frac{1}{Z_2} = \frac{1}{R_{2g}} + j \omega C 
 \end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-995b4299-1181-400f-86fe-f5482b19c025">
-<span class="eqno">(69)<a class="headerlink" href="#equation-995b4299-1181-400f-86fe-f5482b19c025" title="Permalink to this equation">#</a></span>\[\begin{equation} 
+<div class="amsmath math notranslate nohighlight" id="equation-3f6eb90b-6657-4632-8979-1cff24477b90">
+<span class="eqno">(69)<a class="headerlink" href="#equation-3f6eb90b-6657-4632-8979-1cff24477b90" title="Permalink to this equation">#</a></span>\[\begin{equation} 
 \underline{H} = \frac{U_{osz}}{U} = \frac{Z_2}{Z_1 + Z_2} = \frac{1}{1+\frac{Z_1}{Z_2}}
 = \frac{1}{1+\frac{\frac{1}{R_{2g}}+j \omega C}{\frac{1}{R_1}+j \omega C_1}}
 = \frac{1}{1+\frac{R_1}{R_{2g}}\frac{1+j \omega R_{2g} C}{1+ j \omega R_1 C_1}}
 \end{equation}\]</div>
 <p>Hieraus folgt dann die Bestimmungsgleichung für den Kondensator <span class="math notranslate nohighlight">\(C_1\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b5f0ccaa-8285-4bc5-8681-df05e2ae47b7">
-<span class="eqno">(70)<a class="headerlink" href="#equation-b5f0ccaa-8285-4bc5-8681-df05e2ae47b7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6e54640f-b3a0-49d8-8ab0-9418af30613f">
+<span class="eqno">(70)<a class="headerlink" href="#equation-6e54640f-b3a0-49d8-8ab0-9418af30613f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_1 = \frac{R_{2g}}{R_1} C = \frac{0.5}{9} 10\,pF = 0.55\,pF.
 \end{equation}\]</div>
 </section>
@@ -679,12 +649,12 @@ Spannungsteilerregel.</p>
 <p><span class="caption-number">Abb. 34 </span><span class="caption-text">RC-Spannungsteiler zusammengefasst.</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="amsmath math notranslate nohighlight" id="equation-1b06d564-e178-4759-a5ef-4ba876e2cd24">
-<span class="eqno">(71)<a class="headerlink" href="#equation-1b06d564-e178-4759-a5ef-4ba876e2cd24" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f85377d0-6470-4c76-abfe-f65e243e2d50">
+<span class="eqno">(71)<a class="headerlink" href="#equation-f85377d0-6470-4c76-abfe-f65e243e2d50" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \underline{Z}_1 = R_1  \underline{Z}_2 = R_2 + \frac{1}{j \omega C} 
 \end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-76e4422f-9239-4977-9483-28597d5c03f1">
-<span class="eqno">(72)<a class="headerlink" href="#equation-76e4422f-9239-4977-9483-28597d5c03f1" title="Permalink to this equation">#</a></span>\[\begin{equation} 
+<div class="amsmath math notranslate nohighlight" id="equation-2f377346-9646-4772-861f-5d38e8688b33">
+<span class="eqno">(72)<a class="headerlink" href="#equation-2f377346-9646-4772-861f-5d38e8688b33" title="Permalink to this equation">#</a></span>\[\begin{equation} 
 \underline{H} = \frac{\underline{U}_2}{\underline{U}_1} = \frac{\underline{Z}_2}{\underline{Z}_1+\underline{Z}_2} 
 = \frac{R_2+\frac{1}{j \omega C}}{R_1+R_2+\frac{1}{j \omega C}} 
 = \frac{1+j \omega R_2C}{1 + j \omega (R_1+R_2)C}
@@ -699,24 +669,24 @@ Spannungsteilerregel.</p>
 <h4>Lösung<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <p>Mit der Vorarbeit aus <a class="reference internal" href="#sec-hw3p1"><span class="std std-ref">Spannungsteiler</span></a> können Sie die Ausdrücke für Betrag und Phase der Spannungsübertragungsfunktion
 <span class="math notranslate nohighlight">\(\underline{H}\)</span> direkt ablesen. Der Betrag ist der Quotient der Beträge von Zähler und Nenner.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dade7a53-ca51-4fdf-ab78-936f2db94f63">
-<span class="eqno">(73)<a class="headerlink" href="#equation-dade7a53-ca51-4fdf-ab78-936f2db94f63" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-079ffb74-7f80-4bf3-902a-33f9a38759d9">
+<span class="eqno">(73)<a class="headerlink" href="#equation-079ffb74-7f80-4bf3-902a-33f9a38759d9" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \vert \underline{H} \vert =  \frac{\vert 1 + j \omega R_2 C \vert}{\vert 1 + j \omega (R_1+R_2) C \vert} 
 = \frac{\sqrt{1 + (\omega R_2 C)^2}}{\sqrt{1+(\omega (R_1+R_2) C)^2}} 
 = \sqrt{\frac{1 + (\omega R_2 C)^2}{1 + (\omega (R_1+R_2) C)^2}}
 \end{equation}\]</div>
 <p>Für die Phase, das Argument von <span class="math notranslate nohighlight">\(\underline{H}\)</span>, kann auch der Quotient der Argumente von Zähler und Nenner gebildet
 werden.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8cd4eb94-42f7-442f-af40-4ee623fb8be8">
-<span class="eqno">(74)<a class="headerlink" href="#equation-8cd4eb94-42f7-442f-af40-4ee623fb8be8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-060126b1-d6e3-4d13-8862-a29b1e8ae591">
+<span class="eqno">(74)<a class="headerlink" href="#equation-060126b1-d6e3-4d13-8862-a29b1e8ae591" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \arg(\underline{H}) = \frac{\arg(1 + j \omega R_2 C)}{\arg(1 + j \omega (R_1+R_2) C)} 
 = \frac{\arctan(\omega R_2 C)}{\arctan(\omega (R_1+R_2) C)} 
 = \arctan(\omega R_2 C) - \arctan(\omega (R_1+R_2) C)
 \end{equation}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># Definitionen</span>
 
@@ -837,7 +807,8 @@ werden.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -936,8 +907,8 @@ Durch A. von Ahlen, M. Meiners
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

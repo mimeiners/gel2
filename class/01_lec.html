@@ -16,38 +16,41 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=f78ba3b0" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/documentation_options.js?v=91fba89f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=e637711f"></script>
-    <script src="../_static/copybutton.js?v=56c01ce6"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -89,19 +92,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../_static/translations.js?v=79cc9f76"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'class/01_lec';</script>
@@ -109,9 +104,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="Netzwerkerregung" href="02_lec.html" />
-    <link rel="prev" title="Unsyllabus" href="../about/unsyllabus.html" />
+    <link rel="prev" title="Unsyllabus" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="de"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -127,19 +123,8 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -147,7 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -155,8 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -172,7 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -190,39 +175,29 @@ const thebe_selector_output = ".output, .cell_output"
     
   
 
-<a class="navbar-brand logo" href="../about/unsyllabus.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>
-    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>`);</script>
   
+    <p class="title logo__title">M 2.3 Grundlagen der Elektrotechnik (GEL2)</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Suche</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Suche</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../about/unsyllabus.html">
+                <a class="reference internal" href="../index.html">
                     Unsyllabus
                 </a>
             </li>
@@ -262,6 +237,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/10_Transformatoren.html">Transformator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/11_Klausurvorbereitung.html">Klausurvorbereitung</a></li>
 </ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="references.html">Literaturverzeichnis</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -290,9 +268,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -432,27 +410,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -589,7 +559,7 @@ document.write(`
 </section>
 <section id="schone-neue-welt">
 <h2>Schöne neue Welt<a class="headerlink" href="#schone-neue-welt" title="Link to this heading">#</a></h2>
-<p><img alt="AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016 " src="../_images/lec_AMD%4016nm%40Jaguar.jpg" /></p>
+<p><img alt="AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016 " src="images/class/lec_AMD&#64;16nm&#64;Jaguar.jpg" /></p>
 </section>
 <section id="halbleiterherstellung-infineon-dresden">
 <h2>Halbleiterherstellung (Infineon, Dresden)<a class="headerlink" href="#halbleiterherstellung-infineon-dresden" title="Link to this heading">#</a></h2>
@@ -605,17 +575,17 @@ document.write(`
 </section>
 <section id="es-war-einmal">
 <h2>Es war einmal …<a class="headerlink" href="#es-war-einmal" title="Link to this heading">#</a></h2>
-<p><img alt="1906 die Elektronenröhre" src="../_images/lec_vacuum_tube.png" /></p>
-<p><img alt="1947 der erste Transistor, Bell Labs Foto" src="../_images/lec_1st_transistor.png" /></p>
+<p><img alt="1906 die Elektronenröhre" src="images/class/lec_vacuum_tube.png" /></p>
+<p><img alt="1947 der erste Transistor, Bell Labs Foto" src="images/class/lec_1st_transistor.png" /></p>
 </section>
 <section id="damals-und-heute">
 <h2>Damals und heute<a class="headerlink" href="#damals-und-heute" title="Link to this heading">#</a></h2>
-<p><img alt="1958 Jack Kilby's erster IC " src="../_images/lec_1st_ic_kilby.png" /></p>
-<p><img alt="Moderner IC " src="../_images/lec_modern_ic.png" /></p>
+<p><img alt="1958 Jack Kilby's erster IC " src="images/class/lec_1st_ic_kilby.png" /></p>
+<p><img alt="Moderner IC " src="images/class/lec_modern_ic.png" /></p>
 </section>
 <section id="systemhierarchie">
 <h2>Systemhierarchie<a class="headerlink" href="#systemhierarchie" title="Link to this heading">#</a></h2>
-<p><img alt="Funktionsblöcke eines elektronischen Systems. " src="../_images/lec_system_hierarchy.png" /></p>
+<p><img alt="Funktionsblöcke eines elektronischen Systems. " src="images/class/lec_system_hierarchy.png" /></p>
 <ul class="simple">
 <li><p>Nutzen Sie Hierarchien zur Beschreibung komplexer Systeme</p></li>
 <li><p>Teile und herrsche</p></li>
@@ -623,15 +593,15 @@ document.write(`
 </section>
 <section id="schnittstellen-zur-aussenwelt">
 <h2>Schnittstellen zur Aussenwelt<a class="headerlink" href="#schnittstellen-zur-aussenwelt" title="Link to this heading">#</a></h2>
-<p><img alt="Interfacing. " src="../_images/lec_real_world_interface.png" /></p>
+<p><img alt="Interfacing. " src="images/class/lec_real_world_interface.png" /></p>
 </section>
 <section id="meeting-mit-einem-system">
 <h2>Meeting mit einem System<a class="headerlink" href="#meeting-mit-einem-system" title="Link to this heading">#</a></h2>
-<p><img alt="Drahtloses Kommunikationssystem. " src="../_images/lec_smartphone.png" /></p>
+<p><img alt="Drahtloses Kommunikationssystem. " src="images/class/lec_smartphone.png" /></p>
 </section>
 <section id="system-in-a-package-sip">
 <h2>System in a Package (SiP)<a class="headerlink" href="#system-in-a-package-sip" title="Link to this heading">#</a></h2>
-<p><img alt="Beschleunigungssensor. " src="../_images/lec_system_in_package.png" /></p>
+<p><img alt="Beschleunigungssensor. " src="images/class/lec_system_in_package.png" /></p>
 </section>
 <section id="sie-werden-unsere-experten">
 <h2>Sie werden unsere Experten<a class="headerlink" href="#sie-werden-unsere-experten" title="Link to this heading">#</a></h2>
@@ -690,11 +660,11 @@ document.write(`
 <li><p>Felder / Wellen / Optik / HF-Technik</p>
 <ul>
 <li><p>Maxwell-Gleichungen</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ddaddfaa-0885-4a82-86bb-42ee4364fef0">
-<span class="eqno">(1)<a class="headerlink" href="#equation-ddaddfaa-0885-4a82-86bb-42ee4364fef0" title="Permalink to this equation">#</a></span>\[\begin{align}
-	\oint \mathbf{H} d\mathbf{s} &amp;= \iint \mathbf{J} + \dot{D} d\mathbf{A} \\
-	\oint \mathbf{E} d\mathbf{s} &amp;= - \iint \dot{B} d\mathbf{A}
-	\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-f29d9aeb-f790-4e02-bab3-dcade44f03dd">
+<span class="eqno">(1)<a class="headerlink" href="#equation-f29d9aeb-f790-4e02-bab3-dcade44f03dd" title="Permalink to this equation">#</a></span>\[\begin{align}
+\oint \mathbf{H} d\mathbf{s} &amp;= \iint \mathbf{J} + \dot{D} d\mathbf{A} \\
+\oint \mathbf{E} d\mathbf{s} &amp;= - \iint \dot{B} d\mathbf{A}
+\end{align}\]</div>
 </li>
 </ul>
 </li>
@@ -736,22 +706,22 @@ document.write(`
 <h2>Konzentrierte Schaltelemente<a class="headerlink" href="#konzentrierte-schaltelemente" title="Link to this heading">#</a></h2>
 <div class="admonition-stromdichte admonition">
 <p class="admonition-title">Stromdichte</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e4fc4d2a-e83d-400e-9d9b-e57014e46cd2">
-<span class="eqno">(2)<a class="headerlink" href="#equation-e4fc4d2a-e83d-400e-9d9b-e57014e46cd2" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-909792ad-ac94-4d81-b7ee-e2757facdf22">
+<span class="eqno">(2)<a class="headerlink" href="#equation-909792ad-ac94-4d81-b7ee-e2757facdf22" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\int E(r,t) ds}{\iint J(r,t) dA} = \frac{u(t)}{i(t)} \Rightarrow R
 \end{equation}\]</div>
 </div>
 <div class="admonition-verschiebungsdichte admonition">
 <p class="admonition-title">Verschiebungsdichte</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d32c07a3-f80a-4b1f-8455-8016b0346914">
-<span class="eqno">(3)<a class="headerlink" href="#equation-d32c07a3-f80a-4b1f-8455-8016b0346914" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-28b71728-af9a-4961-abd9-f598d39dcc15">
+<span class="eqno">(3)<a class="headerlink" href="#equation-28b71728-af9a-4961-abd9-f598d39dcc15" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\iint D(r,t) dA}{\int E(r,t) ds} = \frac{q(t)}{u(t)} \Rightarrow C
 \end{equation}\]</div>
 </div>
 <div class="admonition-fluszdichte admonition">
 <p class="admonition-title">Flußdichte</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9f17fdce-0668-4a21-a721-d4ebf79db378">
-<span class="eqno">(4)<a class="headerlink" href="#equation-9f17fdce-0668-4a21-a721-d4ebf79db378" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0156e423-d73d-4dca-b0da-e342ac4cf41d">
+<span class="eqno">(4)<a class="headerlink" href="#equation-0156e423-d73d-4dca-b0da-e342ac4cf41d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\iint B(r,t) dA}{\oint H(r,t) ds} = \frac{u(t)}{i(t)} \Rightarrow L
 \end{equation}\]</div>
 </div>
@@ -760,15 +730,15 @@ document.write(`
 <h2>Harmonische Signale<a class="headerlink" href="#harmonische-signale" title="Link to this heading">#</a></h2>
 <div class="admonition-als-zeitfunktion admonition">
 <p class="admonition-title">als Zeitfunktion</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b79a97bd-4a03-4df1-b8a8-b97b87102d27">
-<span class="eqno">(5)<a class="headerlink" href="#equation-b79a97bd-4a03-4df1-b8a8-b97b87102d27" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1520c8a6-c723-4921-bbc5-611105d31ce9">
+<span class="eqno">(5)<a class="headerlink" href="#equation-1520c8a6-c723-4921-bbc5-611105d31ce9" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(t) = \hat{U} \cos(\omega t + \phi)
 \end{equation}\]</div>
 </div>
 <div class="admonition-als-zeiger-komplexe-grosse-phasor admonition">
 <p class="admonition-title">als Zeiger / komplexe Grösse (Phasor)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e8014e40-11fc-41c0-9216-3cc9af3fd1bb">
-<span class="eqno">(6)<a class="headerlink" href="#equation-e8014e40-11fc-41c0-9216-3cc9af3fd1bb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d9ccce26-4fb2-4930-aaeb-45ca52d94ca6">
+<span class="eqno">(6)<a class="headerlink" href="#equation-d9ccce26-4fb2-4930-aaeb-45ca52d94ca6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 U = \lvert \hat{U} \lvert e^{j \phi}
 \end{equation}\]</div>
 </div>
@@ -809,7 +779,7 @@ U = \lvert \hat{U} \lvert e^{j \phi}
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../about/unsyllabus.html"
+       href="../index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -833,7 +803,8 @@ U = \lvert \hat{U} \lvert e^{j \phi}
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -922,8 +893,8 @@ Durch A. von Ahlen, M. Meiners
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

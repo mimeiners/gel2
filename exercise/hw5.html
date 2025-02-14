@@ -16,38 +16,41 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=f78ba3b0" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/documentation_options.js?v=91fba89f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=e637711f"></script>
-    <script src="../_static/copybutton.js?v=56c01ce6"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -89,19 +92,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../_static/translations.js?v=79cc9f76"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercise/hw5';</script>
@@ -112,6 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Bode-Diagramm und Nyquist-Ortskurve" href="hw4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="de"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -127,19 +123,8 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -147,7 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -155,8 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -172,7 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -190,39 +175,29 @@ const thebe_selector_output = ".output, .cell_output"
     
   
 
-<a class="navbar-brand logo" href="../about/unsyllabus.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>
-    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>`);</script>
   
+    <p class="title logo__title">M 2.3 Grundlagen der Elektrotechnik (GEL2)</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Suche</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Suche</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../about/unsyllabus.html">
+                <a class="reference internal" href="../index.html">
                     Unsyllabus
                 </a>
             </li>
@@ -262,6 +237,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/10_Transformatoren.html">Transformator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorium/11_Klausurvorbereitung.html">Klausurvorbereitung</a></li>
 </ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../class/references.html">Literaturverzeichnis</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -290,9 +268,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -432,27 +410,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Suche" aria-label="Suche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -585,8 +555,8 @@ gelegt. Wie groß ist nun der Leistungsfaktor <span class="math notranslate nohi
 \underline{I}_{ges} = \underline{I}_Z + \underline{I}_C = \frac{\underline{U}}{\underline{Z}} + j \omega C \underline{U}
 \]</div>
 <p>Die Leistung an der Kondensatorbatterie:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9db14c8c-be1f-487a-be5c-e22b6d4c02df">
-<span class="eqno">(75)<a class="headerlink" href="#equation-9db14c8c-be1f-487a-be5c-e22b6d4c02df" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-df6bdf7f-30bb-48c3-84b4-747840cb47e0">
+<span class="eqno">(75)<a class="headerlink" href="#equation-df6bdf7f-30bb-48c3-84b4-747840cb47e0" title="Permalink to this equation">#</a></span>\[\begin{align}
 P_C &amp;= \frac{1}{2} \underline{U}\underline{I}_{ges}^{*} \\
 &amp;= \frac{1}{2} \frac{\vert\underline{U}\vert^2}{\underline{Z}^{*}} - \frac{1}{2} j \omega C \vert\underline{U}\vert^2
 \end{align}\]</div>
@@ -643,14 +613,14 @@ R_V = 74,1\,k\Omega  f = 91,9\,kHz
 <p>Wie groß ist diese Leistung?</p>
 <section id="id6">
 <h4>Lösung<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
-<div class="amsmath math notranslate nohighlight" id="equation-0494590e-0b7e-42fe-8e2a-0138139c51aa">
-<span class="eqno">(76)<a class="headerlink" href="#equation-0494590e-0b7e-42fe-8e2a-0138139c51aa" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-78201b6e-089d-4c01-a7bb-0d4f4189e08f">
+<span class="eqno">(76)<a class="headerlink" href="#equation-78201b6e-089d-4c01-a7bb-0d4f4189e08f" title="Permalink to this equation">#</a></span>\[\begin{align}
 P_{total} &amp;= \frac{U_{eff}^2}{R_G + \underbrace{\operatorname{Re}(Z_V)}_{=R_G}} = \frac{U_{eff}^2}{2 R_G} \\
 P_V &amp;= \frac{1}{2} P_{total} = \frac{U_{eff}^2}{4 R_G} = 1,25\,kW
 \end{align}\]</div>
 <p>Alternativ auch Lösung über den Spannungsteiler</p>
-<div class="amsmath math notranslate nohighlight" id="equation-13ab3281-317d-4928-9d20-510daec3a5b2">
-<span class="eqno">(77)<a class="headerlink" href="#equation-13ab3281-317d-4928-9d20-510daec3a5b2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f66d45e8-c570-4eb7-a97d-5959b63c2c68">
+<span class="eqno">(77)<a class="headerlink" href="#equation-f66d45e8-c570-4eb7-a97d-5959b63c2c68" title="Permalink to this equation">#</a></span>\[\begin{align}
 U_{eff,V} &amp;= \frac{\operatorname{Re}(Z_V)}{R_G + \operatorname{Re}(Z_V)} U_{eff} = \frac{1}{2} U_{eff} \\
 P_V &amp;= \frac{U_{eff,V}^2}{\operatorname{Re}(Z_V)} = \frac{1}{4} \frac{U_{eff}^2}{R_G} = 1,25\,kW
 \end{align}\]</div>
@@ -660,7 +630,7 @@ P_V &amp;= \frac{U_{eff,V}^2}{\operatorname{Re}(Z_V)} = \frac{1}{4} \frac{U_{eff
 <section id="wien-robinson-brucke">
 <h2>Wien-Robinson-Brücke<a class="headerlink" href="#wien-robinson-brucke" title="Link to this heading">#</a></h2>
 <p>Die abgebildete Wechselstrommessbrücke kann als Sperrfilter eingesetzt werden. Sie bildet auch den passiven
-Teil eines Wien-Robinson-Oszillators <span id="id7">[<a class="reference internal" href="#id24" title="Wikipedia. Wechselspannungsbrücke — wikipedia, die freie enzyklopädie. 2021. [Online; Stand 13. Juli 2021]. URL: https://de.wikipedia.org/w/index.php?title=Wechselspannungsbr%C3%BCcke&amp;oldid=208364385.">Wikipedia, 2021</a>]</span>.</p>
+Teil eines Wien-Robinson-Oszillators <span id="id7">[]</span>.</p>
 <figure class="align-default" id="fig-hw5p3">
 <a class="reference internal image-reference" href="../_images/hw5p3.png"><img alt="../_images/hw5p3.png" src="../_images/hw5p3.png" style="width: 400px;" /></a>
 <figcaption>
@@ -710,8 +680,8 @@ auf der Ortskurve von <span class="math notranslate nohighlight">\(\underline{Z}
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %% Bibliotheken</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pylab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># %% Def. der Variablen</span>
 <span class="n">R</span> <span class="o">=</span> <span class="mf">1e3</span>
@@ -765,8 +735,8 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
 <section id="id11">
 <h4>Lösung<a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
 <p>Maschenumlauf: <span class="math notranslate nohighlight">\(\underline{U}_2 - \underline{U}_4 - \underline{U}_D = 0\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b7d6579-0e51-4b2f-86d9-0dd0ff16d0c9">
-<span class="eqno">(78)<a class="headerlink" href="#equation-5b7d6579-0e51-4b2f-86d9-0dd0ff16d0c9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5d049bc5-843a-4f33-bf06-9876c4245ab7">
+<span class="eqno">(78)<a class="headerlink" href="#equation-5d049bc5-843a-4f33-bf06-9876c4245ab7" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{U}_2 &amp;= \frac{\underline{Z}_2}{\underline{Z}_1+\underline{Z}_2} \underline{U}_E \\
 \underline{U}_4 &amp;= \frac{R_4}{R_3+R_4} \underline{U}_E \\
 \underline{U}_D &amp;= \underline{U}_4 - \underline{U}_2 \\
@@ -774,8 +744,8 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
 &amp;= \left( \frac{1}{1+\frac{R_3}{R_4}} - \frac{1}{1 + \frac{\underline{Z}_1}{\underline{Z}_2}} \right) \underline{U}_E
 \end{align}\]</div>
 <p>Hieraus folgt das Spannungsübertragungsverhältnis:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f98d6c1a-b6c3-4bdd-8bf7-75e20a378c18">
-<span class="eqno">(79)<a class="headerlink" href="#equation-f98d6c1a-b6c3-4bdd-8bf7-75e20a378c18" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4f63f0cd-f895-4307-b01d-c6cb76fa2888">
+<span class="eqno">(79)<a class="headerlink" href="#equation-4f63f0cd-f895-4307-b01d-c6cb76fa2888" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{H}_u &amp;= \frac{\underline{U}_D}{\underline{U}_E} \\
 &amp;= \frac{1}{1 + 2} - \frac{1}{1 + (2 + j \omega RC + \frac{1}{j \omega RC})} \\
 &amp;= \frac{1}{3} \left( 1 - \frac{1}{1 + j \frac{1}{3}(\omega RC - \frac{1}{\omega RC})}\right) \\
@@ -784,8 +754,8 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
 &amp;= \frac{1}{3} \frac{1}{1 - j \frac{3}{\omega / \omega_A - \omega_A / \omega}} 
 \end{align}\]</div>
 <p>Betrag und Phase des Spannungsübertragungsverhältnisses:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-41516bef-acf5-4f60-ad23-d118823ae068">
-<span class="eqno">(80)<a class="headerlink" href="#equation-41516bef-acf5-4f60-ad23-d118823ae068" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f58c26bb-6e63-4219-9f89-e5a504db6f78">
+<span class="eqno">(80)<a class="headerlink" href="#equation-f58c26bb-6e63-4219-9f89-e5a504db6f78" title="Permalink to this equation">#</a></span>\[\begin{align}
 \vert\underline{H}_u\vert &amp;= \frac{1}{3 \sqrt{1 + \left(\frac{3}{\omega/\omega_A - \omega_A/\omega}\right)^2}} \\
 \arg(\underline{H}_u) &amp;= \arctan(\frac{3}{\omega/\omega_A - \omega_A/\omega})
 \end{align}\]</div>
@@ -794,15 +764,7 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
 </section>
 <section id="literaturverzeichnis">
 <h2>Literaturverzeichnis<a class="headerlink" href="#literaturverzeichnis" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id12">
-<div role="list" class="citation-list">
-<div class="citation" id="id24" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">Wik21</a><span class="fn-bracket">]</span></span>
-<p>Wikipedia. Wechselspannungsbrücke — wikipedia, die freie enzyklopädie. 2021. [Online; Stand 13. Juli 2021]. URL: <a class="reference external" href="https://de.wikipedia.org/w/index.php?title=Wechselspannungsbr%C3%BCcke&amp;oldid=208364385">https://de.wikipedia.org/w/index.php?title=Wechselspannungsbr%C3%BCcke&amp;oldid=208364385</a>.</p>
-</div>
-</div>
-</div>
-</section>
+<span class="target" id="id12"></span></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -860,7 +822,8 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -972,8 +935,8 @@ Durch A. von Ahlen, M. Meiners
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
