@@ -128,6 +128,8 @@ $$
 Gedruckte Spule (PCB)
 ```
 
+
+
 ## Spulen
 
 Spulen werden gewöhnlich als Drahtwicklung auf einem Spulenkörper aus Isoliermaterial ausgeführt. Häufig dient ein
@@ -200,7 +202,6 @@ $\omega r_s c_p \tan \delta_{\epsilon} << 1$ sowie $c_p r_s^2/l_s << 1$ angenomm
 ### Anwendungsbeispiele
 
 #### Dämpfungsperlen
-
 Dämpfungsperlen sind kleine zylindrische Ferritkörper mit einer Bohrung, durch die ein Draht geführt werden kann. Sie
 weisen einen Durchmesser von wenigen Millimetern auf und werden gewöhnlich über einen Anschlußdraht eines bedrahteten
 Bauteils – z.B. Basisanschluß eines Transistors – gesteckt.
@@ -625,3 +626,10 @@ Ein 100 W-Netzteil, realisiert mit einem bei Netzfrequenz (50 Hz) arbeitenden Tr
 Größenordnung von 10 kg; durch Erhöhen der Schaltfrequenz auf 50 kHz kann diese auf unter 1 kg gesenkt werden, bei 
 500 kHz sind weniger als 400 g erreichbar. Wesentlich für diese Anhebung der Schaltfrequenz war die Entwicklung 
 spezieller, verlustarmer Ferritwerkstoffe; vgl. mit {cite}`zach2022`, Kap. 15.
+
+
+## Literaturverzeichnis
+
+```{bibliography}
+:filter: docname in docnames
+```

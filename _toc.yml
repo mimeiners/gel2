@@ -1,6 +1,6 @@
 # Table of contents
 format: jb-book
-root: about/unsyllabus
+root: index
 options:
   numbered: True
 parts:
@@ -62,3 +62,7 @@ parts:
         title: Transformator
       - file: Tutorium/11_Klausurvorbereitung
         title: Klausurvorbereitung
+  - caption:
+    chapters:
+    - file: class/references
+      title: Literaturverzeichnis

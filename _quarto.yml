@@ -18,6 +18,7 @@ book:
           state: Germany
           url: https://www.hs-bremen.de/person/mimeiners/ 
     - name: Alicia von Ahlen
+      orcid: 0009-0007-3049-2455
       email: avahlen@stud.hs-bremen.de
       roles: "Supporting author"
   date: last-modified
@@ -62,7 +63,7 @@ book:
         - exercise/hw7.ipynb
     - part: Tutorium
       chapters:
-        - Tutorium/1_Einfuehrung.qmd
+#        - Tutorium/1_Einfuehrung.qmd
         - Tutorium/2_Komplexe-Zahlen.ipynb
         - Tutorium/3_Periodische-Signale.ipynb
         - Tutorium/4_Komplexe-Groessen.ipynb
@@ -74,8 +75,13 @@ book:
         - Tutorium/10_Transformatoren.ipynb
         - Tutorium/11_Klausurvorbereitung.ipynb
 
+    - class/references.qmd
+    
 bibliography: _bibliography/references.bib
 
+filters:
+  - admonitions
+  
 format:
   html:
     theme: flatly

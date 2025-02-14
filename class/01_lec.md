@@ -15,14 +15,14 @@
 
 
 ## Betriebssystem (OS) - Werkzeuge (Tools)
-* [SSH (Secure Shell)](https://de.wikipedia.org/wiki/Secure_Shell)
-* [Microsoft-Terminal](https://github.com/microsoft/terminal)
-* [Microsoft-PowerShell](https://learn.microsoft.com/de-de/powershell/scripting/learn/ps101/01-getting-started?view=powershell-7.4)
-* [MacOS-Terminal](https://iterm2.com)
-* [Linux/MacOS zsh-tools](https://ohmyz.sh)
-* [Linux/MacOS bash-it](https://bash-it.readthedocs.io/en/latest/)
-* [Git (Versionskontrolle)](https://git-scm.com)
-* [TortoiseGit – Windows Shell Interface to Git](https://tortoisegit.org/)
+* [Shell](https://en.wikipedia.org/wiki/Shell_%28computing%29)
+  * [oh-my-zsh](https://ohmyz.sh),
+  * [bash-it](https://bash-it.readthedocs.io/en/latest/)
+  * [SSH (Secure Shell)](https://de.wikipedia.org/wiki/Secure_Shell)
+
+* [GIT (Versionskontrolle)](https://git-scm.com)
+* [Cygwin](https://cygwin.com)
+
 
 ## Code Editoren
 * [Visual Studio Code](https://code.visualstudio.com)
@@ -30,42 +30,12 @@
 * [Emacs](https://www.gnu.org/software/emacs/)	
 * [Vim](https://www.vim.org)
 
-## Datenverarbeitung / Data Sciences
-### Dateisystem / Journaled File System
-*   Ordner / Directories
-*   Dateien / Files
-
-### Tabellenformate / Rectangular Data
-*   Comma-Separated-Values (CSV), Tab-Separated-Values (TSV)
-*   [wireservice/csvkit: A suite of utilities for converting to and working with CSV, the king of tabular file formats.](https://github.com/wireservice/csvkit)
-*   [johnkerl/miller: Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON](https://github.com/johnkerl/miller)
-*   Spreadsheet (.xlsx, .ods)
-*   [apache/iceberg: Apache Iceberg](https://github.com/apache/iceberg?tab=readme-ov-file)
-*   [apache/iceberg-python: Apache PyIceberg](https://github.com/apache/iceberg-python)
-
-### [Serialisation](https://en.wikipedia.org/wiki/Serialization)
-*   [Data Serialization — The Hitchhiker's Guide to Python](https://docs.python-guide.org/scenarios/serialization/)
-*   [JSON](https://www.json.org/json-en.html)
-*   [MessagePack: It's like JSON. but fast and small.](https://msgpack.org/)
-
-### Spezielle Formate / Data Frames
-*   [Mastering Python Dictionaries: Efficient Data Storage and Retrieval - Adventures in Machine Learning](https://www.adventuresinmachinelearning.com/mastering-python-dictionaries-efficient-data-storage-and-retrieval/)
-*   [MAT-File Versions - MATLAB & Simulink - MathWorks Deutschland](https://de.mathworks.com/help/matlab/import_export/mat-file-versions.html)
-*   [HDF5 Or How I Learned To Love Data Compression And Partial I/O](https://www.hdfgroup.org/2018/06/15/hdf5-or-how-i-learned-to-love-data-compression-and-partial-i-o/)
-*   [Was ist Apache Parquet?](https://www.databricks.com/de/glossary/what-is-parquet)
-*   [Feather File Format](https://arrow.apache.org/docs/python/feather.html)
-*   [pola-rs/polars: Dataframes powered by a multithreaded, vectorized query engine](https://github.com/pola-rs/polars)
-*   [ibis-project/ibis: Portable Python dataframe library](https://github.com/ibis-project/ibis)
-
-### Embedded [DB-Engines](https://db-engines.com)
-* [SQL](https://en.wikipedia.org/wiki/SQL), z.B. [SQLite](https://en.wikipedia.org/wiki/SQLite)
-* [OLAP](https://en.wikipedia.org/wiki/Online_analytical_processing), z.B. [DuckDB](https://duckdb.org/why_duckdb)
-
 
 ## Schreibst Du noch oder TeXst Du schon?
 * [MikTeX (Windows, MacOS, Linux)](https://miktex.org/)
 * [MacTeX (MacOS)](https://www.tug.org/mactex/)
 * [TeXLive (Linux)](http://tug.org/texlive/)
+
 
 ## LaTeX Editoren
 * IDE's
@@ -78,6 +48,7 @@
   * [CoCalc - Online LaTeX](https://cocalc.com/doc/latex-editor.html)
 
 
+
 ## Literaturverwaltung und LaTeX
 * [Citavi im Detail > Titel exportieren > Export nach BibTeX](https://www1.citavi.com/sub/manual5/de/exporting_to_bibtex.html)
 * [RefWorks - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3912294)
@@ -88,41 +59,42 @@
 
 ## Schöne neue Welt
 
-![AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016](../images/class/lec_AMD@16nm@Jaguar.jpg) 
+![<p><em>AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016 <div
+id="fig:jaguar"></div></em></p>](../images/class/lec_AMD@16nm@Jaguar.jpg) 
 
 
 ## Halbleiterherstellung (Infineon, Dresden)
 
-{{< video "https://www.youtube.com/embed/_Kj58yQ67KI" width="854" height="480">}}
+<iframe width="854" height="480" src="https://www.youtube.com/embed/_Kj58yQ67KI" frameborder="0" allowfullscreen></iframe>
 
 
 ## FinFET (Intel)
 
-{{< video "https://www.youtube.com/embed/_VMYPLXnd7E" width="854" height="480">}}
+<iframe width="854" height="480" src="https://www.youtube.com/embed/_VMYPLXnd7E" frameborder="0" allowfullscreen></iframe>
 
 
 ## TSMC Fab (Next Gen 7/5 nm)
 
-{{< video "https://www.youtube.com/embed/Hb1WDxSoSec" width="854" height="480" >}}
+<iframe width="854" height="480" src="https://www.youtube.com/embed/Hb1WDxSoSec" frameborder="0" allowfullscreen></iframe>
 
 
 ## Es war einmal ...
 
-![1906 die Elektronenröhre](../images/class/lec_vacuum_tube.png)
+![<p><em>1906 die Elektronenröhre</em></p>](../images/class/lec_vacuum_tube.png)
 
-![1947 der erste Transistor, Bell Labs Foto](../images/class/lec_1st_transistor.png)
+![<p><em>1947 der erste Transistor, Bell Labs Foto</em></p>](../images/class/lec_1st_transistor.png)
 
 
 ## Damals und heute
 
-![1958 Jack Kilby's erster IC](../images/class/lec_1st_ic_kilby.png)
+![<p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p>](../images/class/lec_1st_ic_kilby.png)
 
-![Moderner IC](../images/class/lec_modern_ic.png)
+![<p><em>Moderner IC <div id="fig:modernic"></div></em></p>](../images/class/lec_modern_ic.png)
 
 
 ## Systemhierarchie
 
-![Funktionsblöcke eines elektronischen Systems](../images/class/lec_system_hierarchy.png)
+![<p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p>](../images/class/lec_system_hierarchy.png)
 
 * Nutzen Sie Hierarchien zur Beschreibung komplexer Systeme
 
@@ -131,20 +103,22 @@
 
 ## Schnittstellen zur Aussenwelt
 
-![Interfacing](../images/class/lec_real_world_interface.png)
+![<p><em>Interfacing. <div id="fig:interfaces"></div></em></p>](../images/class/lec_real_world_interface.png)
 
 
 ## Meeting mit einem System
 
-![Drahtloses Kommunikationssystem](../images/class/lec_smartphone.png)
+![<p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p>](../images/class/lec_smartphone.png)
 
 
 ## System in a Package (SiP)
 
-![Beschleunigungssensor](../images/class/lec_system_in_package.png)
+![<p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p>](../images/class/lec_system_in_package.png)
 
 
 ## Sie werden unsere Experten
+
+```{admonition} Leistungsmerkmale
 
 * Hintergrundwissen
   * Systemverständnis, Architektur, Herstellungsverfahren, Implementation
@@ -161,18 +135,21 @@
 * Kreativität
 
 * Tool-Kenntnisse
+```
 
 
 ## Lernziele des Moduls
+```{admonition} Studierende können nach Abschluss des Moduls:
 
 * Elektrische Systeme mathematisch und graphisch im Zeit- und Frequenzbereich beschreiben
 
 * Netzwerkanalyse mit RLC-Gliedern
 
 * Spezielle Netzwerke, wie Messbrücken, Schwingkreise und ideale Transformatoren, dimensionieren.
+```
 
 
-## Seminaristischer Unterricht
+```{admonition} Seminaristischer Unterricht:
 
 * Komplexe Wechselstromrechnung
 
@@ -181,6 +158,7 @@
 * Methodik der Netzwerkanalyse
 
 * Anwendungsbeispiele mit EDA-Werkzeugen und wissenschaftliches Rechnen (Scientific Computing)
+```
 
 
 ## Beschreibung elektrotechnischer Systeme
@@ -189,12 +167,12 @@
 
 * Felder / Wellen / Optik / HF-Technik
   * Maxwell-Gleichungen
-	$$
+
 	\begin{align}
 	\oint \mathbf{H} d\mathbf{s} &= \iint \mathbf{J} + \dot{D} d\mathbf{A} \\
 	\oint \mathbf{E} d\mathbf{s} &= - \iint \dot{B} d\mathbf{A}
 	\end{align}
-	$$
+
 
 * bei lokaler Konzentration der Feldenergie $\Rightarrow$ quasi-statische Näherung
 
@@ -226,44 +204,40 @@
 
 ## Konzentrierte Schaltelemente
 
-::: {.callout-note title="Stromdichte"}
-$$
+```{admonition} Stromdichte
 \begin{equation}
 \frac{\int E(r,t) ds}{\iint J(r,t) dA} = \frac{u(t)}{i(t)} \Rightarrow R
 \end{equation}
-$$
-:::
+```
 
-::: {.callout-note title="Verschiebungsdichte"}
-$$
+```{admonition} Verschiebungsdichte
 \begin{equation}
 \frac{\iint D(r,t) dA}{\int E(r,t) ds} = \frac{q(t)}{u(t)} \Rightarrow C
 \end{equation}
-$$
-:::
+```
 
-::: {.callout-note title="Flußdichte"}
-$$
+```{admonition} Flußdichte
 \begin{equation}
 \frac{\iint B(r,t) dA}{\oint H(r,t) ds} = \frac{u(t)}{i(t)} \Rightarrow L
 \end{equation}
-$$
-:::
+```
 
-## Harmonische Signale ...
+## Harmonische Signale
 
-::: {.callout-note title="als Zeitfunktion"}
-$$
+```{admonition} als Zeitfunktion
 \begin{equation}
 u(t) = \hat{U} \cos(\omega t + \phi)
 \end{equation}
-$$
-:::
+```
 
-::: {.callout-note title="als Zeiger / komplexe Grösse (Phasor)"}
-$$
+```{admonition} als Zeiger / komplexe Grösse (Phasor)
 \begin{equation}
 U = \lvert \hat{U} \lvert e^{j \phi}
 \end{equation}
-$$
-:::
+```
+
+## Literaturverzeichnis
+
+```{bibliography}
+:filter: docname in docnames
+```

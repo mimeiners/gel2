@@ -26,10 +26,7 @@
 
 ## Sinusförmige Erregung, periodische Vorgänge
 
-::: {.callout-note}
-
-### Definitionen
-
+```{admonition} Definitionen
 * $f(t)=f(t+nT)$ mit $n=0, 1 ...$
 
 * Frequenz $f=1/T$
@@ -47,7 +44,7 @@
 * Erregergröße wird aufgetragen mit $\omega t$ und nicht $t$; $\psi(t) = \omega t + \varphi = \omega t + \omega t_0$
 
 * Bogenmaß $\psi/\mbox{Bogenmaß} = \frac{2 \pi}{360} \psi/\mbox{Grad}$
-:::
+```
 
 
 ## Eigenschaften harmonischer Funktionen
@@ -56,89 +53,61 @@
 
 * Aufspaltung einer harmonischen Schwingung und Koeffizientenvergleich
 
-::: {.callout-note} 
-
-### Zusammengefasst
-
+```{admonition} Zusammengefasst 
 Bei Addition, Differentiation und Integration von harmonischen Funktionen der Kreisfrequenz $\omega$
 entstehen wieder harmonische Funktionen der gleichen Frequenz, aber veränderter Amplitude und Phase. Bei der
 Überlagerung zweier harmonischer Größen mit verschiedener Frequenz entsteht zwar eine periodische Schwingung, aber
 keine Sinusschwingung (harmonische).
-:::
+```
 
 ## Mittelwerte periodischer Zeitfunktionen
 
-::: {.callout-note} 
-
-### Arithmetischer Mittelwert - linearer Mittelwert - Gleichwert
-
-$$
+```{admonition} Arithmetischer Mittelwert - linearer Mittelwert - Gleichwert
 \begin{align}
 \overline{u(t)} &= \frac{1}{T} \int_t^{t+T} u(\tau) \mathrm{d} \tau
 \end{align}
-$$
-:::
+```
 
-::: {.callout-note} 
-
-### Gleichrichtmittelwert
-
-$$
+```{admonition} Gleichrichtmittelwert
 \begin{align}
 \overline{\lvert u(t) \lvert} &= \frac{1}{T} \int_t^{t+T} \lvert u(\tau) \lvert \mathrm{d} \tau
 \end{align}
-$$
-:::
+```
 
-::: {.callout-note} 
-
-### Quadratischer Mittelwert - Effektivwert
-
-$$
+```{admonition} Quadratischer Mittelwert - Effektivwert
 \begin{align}
 U_{eff} = \sqrt{\overline{u^2(t)}} &= \sqrt{\frac{1}{T} \int_t^{t+T} u^2(\tau) \mathrm{d} \tau}
 \end{align}
-$$
-:::
+```
 
 ## $u/i$-Verhalten
 
-::: {.callout-note} 
-
-### Widerstand $R$ - Einheit: 1 $\Omega$
-
-$$
+```{admonition} Widerstand $R$ - Einheit: 1 $\Omega$
 \begin{align}
 u(t) &= R \cdot i(t) \\
 &= R \cdot \hat{I} \sin(\omega t + \varphi_i) \\
 &= \hat{U} \sin(\omega t + \varphi_u)
 \end{align}
-$$
-:::
+```
 
-::: {.callout-note}
-
-### Induktivität $L$ - Einheit: 1 H = 1 Vs/A
-
-$$
+```{admonition} Induktivität $L$ - Einheit: 1 H = 1 Vs/A
 \begin{align}
 u(t) &= L \cdot \frac{di_L(t)}{dt} \\
 &= \omega L \cdot \hat{I} \cos(\omega t + \varphi_i) \\
 &= \omega L \hat{I} \sin(\omega t + \varphi_i + \frac{\pi}{2})
 \end{align}
-$$
-:::
+```
 
-::: {.callout-note} 
-
-### Kapazität $C$ - Einheit: 1 F = 1 C/V = 1 As/V
-
-$$
+```{admonition} Kapazität $C$ - Einheit: 1 F = 1 C/V = 1 As/V
 \begin{align}
 i(t) &= C \cdot \frac{du_C(t)}{dt} \\
 &= \omega C \cdot \hat{U} \cos(\omega t + \varphi_u) \\
 &= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2})
 \end{align}
-$$
-:::
+```
 
+## Literaturverzeichnis
+
+```{bibliography}
+:filter: docname in docnames
+```

@@ -328,3 +328,9 @@ Das Verfahren umfasst dann:
 
 * weil die Knotenspannungen unabhängige Variablen sind, dürfen Spannungsquellen nicht auftreten, denn eine ideale
   Spannungsquelle zwischen zwei Knoten macht den Strom durch die Quelle unbestimmt.
+
+## Literaturverzeichnis
+
+```{bibliography}
+:filter: docname in docnames
+```
