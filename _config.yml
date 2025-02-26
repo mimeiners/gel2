@@ -2,9 +2,24 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: M 2.3 Grundlagen der Elektrotechnik (GEL2)
-author: A. von Ahlen, M. Meiners
+authors:
+  - name: Mirco Meiners
+    orcid: 0000-0002-9709-4191
+    email: Mirco.Meiners@hs-bremen.de
+    affiliations:
+      - id: hsb
+        institution: Hochschule Bremen - City University of Applied Sciences (HSB)
+        department: Electrical Engineering and Computer Sciences
+        city: Bremen
+        country: Germany
+        url: https://www.hs-bremen.de/person/mimeiners/
+  - name: Alicia von Ahlen
+    orcid: 0009-0007-3049-2455
+    email: avahlen@stud.hs-bremen.de
+    affiliation: hsb
+license: "Apache-2.0"
 copyright: "2024"
-logo: hsb-logo.png
+logo: ./images/hsb-logo.png
 
 exclude_patterns: ["LICENSE.md", "README.md"]
 
