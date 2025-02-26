@@ -17,8 +17,8 @@ authors:
     orcid: 0009-0007-3049-2455
     email: avahlen@stud.hs-bremen.de
     affiliation: hsb
-license: "Apache-2.0"
-copyright: "2024"
+license: "CC-BY-4.0"
+copyright: "2024-2025"
 logo: ./images/hsb-logo.png
 
 exclude_patterns: ["LICENSE.md", "README.md"]
