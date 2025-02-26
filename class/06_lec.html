@@ -34,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -530,8 +530,8 @@ Differenzialgleichung (DGL) <span class="math notranslate nohighlight">\(\ddot{x
 Eigenfrequenz und <span class="math notranslate nohighlight">\(f_0\)</span> Resonanzfrequenz</p></li>
 <li><p>DGL gehorcht dem Energieerhaltungssatz</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-ad5bf95d-4d05-4c5b-b19d-e913e9ed2a7a">
-<span class="eqno">(27)<a class="headerlink" href="#equation-ad5bf95d-4d05-4c5b-b19d-e913e9ed2a7a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1c39419b-abcb-46f5-bce7-19694da44dcd">
+<span class="eqno">(27)<a class="headerlink" href="#equation-1c39419b-abcb-46f5-bce7-19694da44dcd" title="Permalink to this equation">#</a></span>\[\begin{align}
 W_{ges}(x) &amp;= W_{pot}(x) + W_{kin}(x) = const. \\
 \frac{d W_{ges}}{dt} &amp;= \frac{dW_{pot}}{dx} \frac{dx}{dt} + \frac{d W_{kin}}{dx} \frac{d x}{dt} = 0 \\
 x(t) &amp;= x_{max} \cos(\omega_0 t + \varphi_0)
@@ -539,8 +539,8 @@ x(t) &amp;= x_{max} \cos(\omega_0 t + \varphi_0)
 <ul class="simple">
 <li><p>Zusammenschaltung von Induktivität <span class="math notranslate nohighlight">\(L\)</span> und Kapazität <span class="math notranslate nohighlight">\(C\)</span> heißt (idealer) Schwing- oder Resonanzkreis</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-873431ab-d190-4f5d-b1ed-f7de0976a2a7">
-<span class="eqno">(28)<a class="headerlink" href="#equation-873431ab-d190-4f5d-b1ed-f7de0976a2a7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cc327a99-1efe-4cbb-9c93-9102051c8d6b">
+<span class="eqno">(28)<a class="headerlink" href="#equation-cc327a99-1efe-4cbb-9c93-9102051c8d6b" title="Permalink to this equation">#</a></span>\[\begin{align}
 W_{pot} &amp;:= \mbox{Kondensator} \\
 W_{kin} &amp;:= \mbox{Induktivität}
 \end{align}\]</div>
@@ -556,8 +556,8 @@ W_{kin} &amp;:= \mbox{Induktivität}
 </figure>
 <div class="admonition-maschengleichung-zeitbereich admonition">
 <p class="admonition-title">Maschengleichung (Zeitbereich)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-047f9aea-fa59-47f5-888f-0a1065c73bb8">
-<span class="eqno">(29)<a class="headerlink" href="#equation-047f9aea-fa59-47f5-888f-0a1065c73bb8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1bc3654e-577c-41ed-9317-58c466085ab4">
+<span class="eqno">(29)<a class="headerlink" href="#equation-1bc3654e-577c-41ed-9317-58c466085ab4" title="Permalink to this equation">#</a></span>\[\begin{align}
 u_1(0) &amp;= L \frac{di}{dt} + i\, R + \frac{1}{C} \int i dt  \\
 0 &amp;= \frac{di}{dt^2} + \frac{R}{L} \frac{di}{dt} + \frac{1}{LC} i
 \end{align}\]</div>
@@ -572,8 +572,8 @@ i(t) = \underbrace{I_0 e^{-d \omega_0 t}}_{Dämpfung} \underbrace{\sin\left(\sqr
 <div class="admonition-spannungsubertragungsfaktor admonition">
 <p class="admonition-title">Spannungsübertragungsfaktor</p>
 <p>Entn. <span id="id3">[<a class="reference internal" href="references.html#id29" title="Michael Reisch. Elektronische Bauelemente. Springer, 2 edition, 2007. ISBN 978-3-540-34014-0. arXiv:978-3-540-34015-7, doi:10.1007/978-3-540-34015-7.">Reisch, 2007</a>]</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-22c8412d-129f-424b-870f-5119f3db87d6">
-<span class="eqno">(30)<a class="headerlink" href="#equation-22c8412d-129f-424b-870f-5119f3db87d6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cd06be1b-cebb-44a4-a19b-20be462873bc">
+<span class="eqno">(30)<a class="headerlink" href="#equation-cd06be1b-cebb-44a4-a19b-20be462873bc" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{H}_u(j \omega) = \frac{\underline{U}_2}{\underline{U}_1} &amp;= \frac{1}{1 + j \omega R C + \omega^2 LC} \\
 &amp;= \frac{1}{1 + j \frac{\omega}{\omega_0 Q} + \left(\frac{\omega}{\omega_0}\right)^2}
 \end{align}\]</div>
@@ -636,8 +636,8 @@ Installation mit Anaconda-Shell oder Windows-Shell (CMD/PowerShell)</p>
 <li><p>Thomsonsche Formel <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{L_r C_r} = \frac{1}{L_p C_p}\)</span></p></li>
 <li><p>bei Resonanz erreichen Impedanz und Admittanz ein Minimum</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-07ba5bc8-b977-4b51-9280-b561fe28490b">
-<span class="eqno">(31)<a class="headerlink" href="#equation-07ba5bc8-b977-4b51-9280-b561fe28490b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-17487851-36ee-4367-a99b-5df10a5bd3e5">
+<span class="eqno">(31)<a class="headerlink" href="#equation-17487851-36ee-4367-a99b-5df10a5bd3e5" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left . \underline{Z} \right\lvert_{\omega_0} &amp;\Rightarrow \lvert\underline{Z}\lvert = R_r \\
 \left . \underline{Y} \right\lvert_{\omega_0} &amp;\Rightarrow \lvert\underline{Y}\lvert = G_p
 \end{align}\]</div>
@@ -663,8 +663,8 @@ Installation mit Anaconda-Shell oder Windows-Shell (CMD/PowerShell)</p>
 </div>
 <div class="admonition-reihenkreis-impedanz admonition">
 <p class="admonition-title">Reihenkreis (Impedanz)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c300ec48-311f-4b01-b32b-83fac20835a0">
-<span class="eqno">(32)<a class="headerlink" href="#equation-c300ec48-311f-4b01-b32b-83fac20835a0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4cb40248-933e-4abd-a599-4e78e812ba60">
+<span class="eqno">(32)<a class="headerlink" href="#equation-4cb40248-933e-4abd-a599-4e78e812ba60" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{Z} &amp;= R_r + j\left(\omega L_r - \frac{1}{\omega C_r}\right) \\
 &amp;= R_r + j X(\omega) \\
 \lvert\underline{Z}\lvert &amp;= \sqrt{R_r^2 + X^2(\omega)} \\
@@ -674,8 +674,8 @@ Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}
 </div>
 <div class="admonition-parallelkreis-admittanz admonition">
 <p class="admonition-title">Parallelkreis (Admittanz)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-08aa713d-a25c-4cf2-94a0-9e660dfbacc3">
-<span class="eqno">(33)<a class="headerlink" href="#equation-08aa713d-a25c-4cf2-94a0-9e660dfbacc3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-89d67886-e493-47e4-bf09-18aa4e0ca53f">
+<span class="eqno">(33)<a class="headerlink" href="#equation-89d67886-e493-47e4-bf09-18aa4e0ca53f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{Y} &amp;= G_p + j\left(\omega C_p- \frac{1}{\omega L_p}\right) \\
 &amp;= G_r + j B(\omega) \\
 \lvert\underline{Y}\lvert &amp;= \sqrt{G_p^2 + B^2(\omega)} \\
@@ -688,15 +688,15 @@ Q &amp;= \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}
 <h2>Vereinheitlichte Kennzeichnung<a class="headerlink" href="#vereinheitlichte-kennzeichnung" title="Link to this heading">#</a></h2>
 <div class="admonition-verstimmung-v-relative-frequenzabweichung admonition">
 <p class="admonition-title">Verstimmung <span class="math notranslate nohighlight">\(v\)</span>, relative Frequenzabweichung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-61bd3440-884d-4fce-b6e7-16729a87ff0a">
-<span class="eqno">(34)<a class="headerlink" href="#equation-61bd3440-884d-4fce-b6e7-16729a87ff0a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6f1a90e3-3120-4e70-8443-bb703eac23b5">
+<span class="eqno">(34)<a class="headerlink" href="#equation-6f1a90e3-3120-4e70-8443-bb703eac23b5" title="Permalink to this equation">#</a></span>\[\begin{align}
 v &amp;= \frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}
 \end{align}\]</div>
 </div>
 <div class="admonition-normierte-darstellung admonition">
 <p class="admonition-title">Normierte Darstellung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f4ca808f-3553-4115-95e9-5ab6cdde1ede">
-<span class="eqno">(35)<a class="headerlink" href="#equation-f4ca808f-3553-4115-95e9-5ab6cdde1ede" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f0b35156-eeb2-4e4a-b334-d2af90ef8348">
+<span class="eqno">(35)<a class="headerlink" href="#equation-f0b35156-eeb2-4e4a-b334-d2af90ef8348" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{Z} &amp;= R \left( 1 + j \frac{1}{R} \left( \frac{\omega \omega_0 \omega L}{\omega_0}
 - \frac{\omega_0}{\omega_0 \omega C}\right)\right) \\
 &amp;= R (1 + Q v) \\
@@ -705,8 +705,8 @@ v &amp;= \frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}
 </div>
 <div class="admonition-betrag-und-phase admonition">
 <p class="admonition-title">Betrag und Phase</p>
-<div class="amsmath math notranslate nohighlight" id="equation-edb22ba7-3d04-4ae8-9127-653186ac2d30">
-<span class="eqno">(36)<a class="headerlink" href="#equation-edb22ba7-3d04-4ae8-9127-653186ac2d30" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-05b4c283-1a8c-47f0-9708-722159fa1677">
+<span class="eqno">(36)<a class="headerlink" href="#equation-05b4c283-1a8c-47f0-9708-722159fa1677" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\lvert\underline{Z}\lvert}{R} = \frac{\lvert \underline{Y}\lvert}{G} &amp;= \sqrt{1 + \left( Q v \right)} \\
 \varphi_Z = \varphi_Y &amp;= \arctan\left( Q v \right)
 \end{align}\]</div>
@@ -714,24 +714,24 @@ v &amp;= \frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}
 <div class="admonition-circ-frac-pi-4-oder-3db-frequenz admonition">
 <p class="admonition-title">45<span class="math notranslate nohighlight">\(^{\circ}\)</span>-, <span class="math notranslate nohighlight">\(\frac{\pi}{4}\)</span>- oder 3dB-Frequenz</p>
 <p>Der Phasenwinkel <span class="math notranslate nohighlight">\(\varphi\)</span> ist gleich 45<span class="math notranslate nohighlight">\(^{\circ}\)</span> und Betrag der Blindkomponente ist gleich der Wirkkomponente.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0bea5f68-7e49-4443-b155-4b0d9e365d3f">
-<span class="eqno">(37)<a class="headerlink" href="#equation-0bea5f68-7e49-4443-b155-4b0d9e365d3f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-972bc128-6111-431d-9580-f4e567696db9">
+<span class="eqno">(37)<a class="headerlink" href="#equation-972bc128-6111-431d-9580-f4e567696db9" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lvert X(\omega_{\pm 45}) \lvert &amp;= \pm R &amp;  \lvert B(\omega_{\pm 45}) \lvert &amp;= \pm G \\
 \omega_{\pm 45} L - \frac{1}{\omega_{\pm 45} C} &amp;= \pm R &amp;  \omega_{\pm 45} C - \frac{1}{\omega_{\pm 45} L} &amp;= \pm G
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-f0cfafa4-d41a-42e7-b765-94d6a4f8517f">
-<span class="eqno">(38)<a class="headerlink" href="#equation-f0cfafa4-d41a-42e7-b765-94d6a4f8517f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-292dc408-dee2-4a77-b60f-5013caff9c08">
+<span class="eqno">(38)<a class="headerlink" href="#equation-292dc408-dee2-4a77-b60f-5013caff9c08" title="Permalink to this equation">#</a></span>\[\begin{align}
 \omega_{\pm 45} &amp;= \omega_0 \left( \sqrt{1 + \left(\frac{1}{2Q}\right)^2} \pm \frac{1}{2Q}\right) \approx \omega_0 \left( 1 \pm \frac{1}{2Q}\right)
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-6a9a8409-8335-455a-a35b-2e18d62c0e4d">
-<span class="eqno">(39)<a class="headerlink" href="#equation-6a9a8409-8335-455a-a35b-2e18d62c0e4d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-91ecfee6-4bac-49c2-930e-cf6b2b52a04b">
+<span class="eqno">(39)<a class="headerlink" href="#equation-91ecfee6-4bac-49c2-930e-cf6b2b52a04b" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lvert \underline{Z(\omega_{\pm 45})} \lvert &amp;= \sqrt{2} R &amp;  \lvert \underline{Y(\omega_{\pm 45})} \lvert &amp;= \sqrt{2} G
 \end{align}\]</div>
 </div>
 <div class="admonition-bandbreite-bw-bandwidth admonition">
 <p class="admonition-title">Bandbreite BW (bandwidth)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6fd6eac3-f0e4-48f1-a921-360bb6836903">
-<span class="eqno">(40)<a class="headerlink" href="#equation-6fd6eac3-f0e4-48f1-a921-360bb6836903" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-73a3ef89-69df-4bc5-bae3-8faae5543b56">
+<span class="eqno">(40)<a class="headerlink" href="#equation-73a3ef89-69df-4bc5-bae3-8faae5543b56" title="Permalink to this equation">#</a></span>\[\begin{align}
 BW &amp;= \omega_{45} - \omega_{-45} = \frac{\omega_0}{Q} \\
 &amp;= f_{45} - f_{-45} = \frac{f_0}{Q} \\
 \end{align}\]</div>
