@@ -181,8 +181,14 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   
+    
+    
+      
+    
+    
+    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>
+    <img src="../_static/hsb-logo.png" class="logo__image only-dark pst-js-only" alt="M 2.3 Grundlagen der Elektrotechnik (GEL2) - Home"/>
   
-    <p class="title logo__title">M 2.3 Grundlagen der Elektrotechnik (GEL2)</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -555,8 +561,8 @@ gelegt. Wie groß ist nun der Leistungsfaktor <span class="math notranslate nohi
 \underline{I}_{ges} = \underline{I}_Z + \underline{I}_C = \frac{\underline{U}}{\underline{Z}} + j \omega C \underline{U}
 \]</div>
 <p>Die Leistung an der Kondensatorbatterie:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-df6bdf7f-30bb-48c3-84b4-747840cb47e0">
-<span class="eqno">(75)<a class="headerlink" href="#equation-df6bdf7f-30bb-48c3-84b4-747840cb47e0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fe4b8911-f9ca-40e2-bc5f-01d72c621616">
+<span class="eqno">(75)<a class="headerlink" href="#equation-fe4b8911-f9ca-40e2-bc5f-01d72c621616" title="Permalink to this equation">#</a></span>\[\begin{align}
 P_C &amp;= \frac{1}{2} \underline{U}\underline{I}_{ges}^{*} \\
 &amp;= \frac{1}{2} \frac{\vert\underline{U}\vert^2}{\underline{Z}^{*}} - \frac{1}{2} j \omega C \vert\underline{U}\vert^2
 \end{align}\]</div>
@@ -613,14 +619,14 @@ R_V = 74,1\,k\Omega  f = 91,9\,kHz
 <p>Wie groß ist diese Leistung?</p>
 <section id="id6">
 <h4>Lösung<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
-<div class="amsmath math notranslate nohighlight" id="equation-78201b6e-089d-4c01-a7bb-0d4f4189e08f">
-<span class="eqno">(76)<a class="headerlink" href="#equation-78201b6e-089d-4c01-a7bb-0d4f4189e08f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-46a81682-ba99-44e8-b7b4-ba5d9fb29df1">
+<span class="eqno">(76)<a class="headerlink" href="#equation-46a81682-ba99-44e8-b7b4-ba5d9fb29df1" title="Permalink to this equation">#</a></span>\[\begin{align}
 P_{total} &amp;= \frac{U_{eff}^2}{R_G + \underbrace{\operatorname{Re}(Z_V)}_{=R_G}} = \frac{U_{eff}^2}{2 R_G} \\
 P_V &amp;= \frac{1}{2} P_{total} = \frac{U_{eff}^2}{4 R_G} = 1,25\,kW
 \end{align}\]</div>
 <p>Alternativ auch Lösung über den Spannungsteiler</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f66d45e8-c570-4eb7-a97d-5959b63c2c68">
-<span class="eqno">(77)<a class="headerlink" href="#equation-f66d45e8-c570-4eb7-a97d-5959b63c2c68" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3621fa41-58a4-4bf0-a472-a7771ed0a588">
+<span class="eqno">(77)<a class="headerlink" href="#equation-3621fa41-58a4-4bf0-a472-a7771ed0a588" title="Permalink to this equation">#</a></span>\[\begin{align}
 U_{eff,V} &amp;= \frac{\operatorname{Re}(Z_V)}{R_G + \operatorname{Re}(Z_V)} U_{eff} = \frac{1}{2} U_{eff} \\
 P_V &amp;= \frac{U_{eff,V}^2}{\operatorname{Re}(Z_V)} = \frac{1}{4} \frac{U_{eff}^2}{R_G} = 1,25\,kW
 \end{align}\]</div>
@@ -735,8 +741,8 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
 <section id="id11">
 <h4>Lösung<a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
 <p>Maschenumlauf: <span class="math notranslate nohighlight">\(\underline{U}_2 - \underline{U}_4 - \underline{U}_D = 0\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-5d049bc5-843a-4f33-bf06-9876c4245ab7">
-<span class="eqno">(78)<a class="headerlink" href="#equation-5d049bc5-843a-4f33-bf06-9876c4245ab7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-21905f5d-3712-4e33-8ad4-562253ce8dd1">
+<span class="eqno">(78)<a class="headerlink" href="#equation-21905f5d-3712-4e33-8ad4-562253ce8dd1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{U}_2 &amp;= \frac{\underline{Z}_2}{\underline{Z}_1+\underline{Z}_2} \underline{U}_E \\
 \underline{U}_4 &amp;= \frac{R_4}{R_3+R_4} \underline{U}_E \\
 \underline{U}_D &amp;= \underline{U}_4 - \underline{U}_2 \\
@@ -744,8 +750,8 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
 &amp;= \left( \frac{1}{1+\frac{R_3}{R_4}} - \frac{1}{1 + \frac{\underline{Z}_1}{\underline{Z}_2}} \right) \underline{U}_E
 \end{align}\]</div>
 <p>Hieraus folgt das Spannungsübertragungsverhältnis:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4f63f0cd-f895-4307-b01d-c6cb76fa2888">
-<span class="eqno">(79)<a class="headerlink" href="#equation-4f63f0cd-f895-4307-b01d-c6cb76fa2888" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8f87496b-7129-4a60-a080-1822ec5ede35">
+<span class="eqno">(79)<a class="headerlink" href="#equation-8f87496b-7129-4a60-a080-1822ec5ede35" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{H}_u &amp;= \frac{\underline{U}_D}{\underline{U}_E} \\
 &amp;= \frac{1}{1 + 2} - \frac{1}{1 + (2 + j \omega RC + \frac{1}{j \omega RC})} \\
 &amp;= \frac{1}{3} \left( 1 - \frac{1}{1 + j \frac{1}{3}(\omega RC - \frac{1}{\omega RC})}\right) \\
@@ -754,8 +760,8 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
 &amp;= \frac{1}{3} \frac{1}{1 - j \frac{3}{\omega / \omega_A - \omega_A / \omega}} 
 \end{align}\]</div>
 <p>Betrag und Phase des Spannungsübertragungsverhältnisses:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f58c26bb-6e63-4219-9f89-e5a504db6f78">
-<span class="eqno">(80)<a class="headerlink" href="#equation-f58c26bb-6e63-4219-9f89-e5a504db6f78" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9dc288cd-0d07-4f08-97ec-f0d33b3e7492">
+<span class="eqno">(80)<a class="headerlink" href="#equation-9dc288cd-0d07-4f08-97ec-f0d33b3e7492" title="Permalink to this equation">#</a></span>\[\begin{align}
 \vert\underline{H}_u\vert &amp;= \frac{1}{3 \sqrt{1 + \left(\frac{3}{\omega/\omega_A - \omega_A/\omega}\right)^2}} \\
 \arg(\underline{H}_u) &amp;= \arctan(\frac{3}{\omega/\omega_A - \omega_A/\omega})
 \end{align}\]</div>
@@ -892,7 +898,7 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
   <div class="footer-item">
     
 <p class="component-author">
-Durch A. von Ahlen, M. Meiners
+Durch The Jupyter Book community
 </p>
 
   </div>
