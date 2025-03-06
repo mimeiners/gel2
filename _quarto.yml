@@ -41,41 +41,39 @@ book:
 
   chapters:
     - index.qmd
-
     - part: Seminar
       chapters:
-        - class/01_lec.qmd
-        - class/02_lec.qmd
-        - class/03_lec.ipynb
-        - class/04_lec.qmd
-        - class/05_lec.ipynb
-        - class/06_lec.ipynb
-        - class/07_lec.qmd
-        - class/08_lec.qmd
+        - lec/lec_01.qmd
+        - lec/lec_02.qmd
+        - lec/lec_03.ipynb
+        - lec/lec_04.qmd
+        - lec/lec_05.ipynb
+        - lec/lec_06.ipynb
+        - lec/lec_07.qmd
+        - lec/lec_08.qmd
     - part: Hörsaalübungen 
       chapters:
-        - exercise/hw1.ipynb
-        - exercise/hw2.ipynb
-        - exercise/hw3.ipynb
-        - exercise/hw4.ipynb
-        - exercise/hw5.ipynb
-        - exercise/hw6.ipynb
-        - exercise/hw7.ipynb
+        - hw/hw_01.ipynb
+        - hw/hw_02.ipynb
+        - hw/hw_03.ipynb
+        - hw/hw_04.ipynb
+        - hw/hw_05.ipynb
+        - hw/hw_06.ipynb
+        - hw/hw_07.ipynb
     - part: Tutorium
       chapters:
-#        - Tutorium/1_Einfuehrung.qmd
-        - Tutorium/2_Komplexe-Zahlen.ipynb
-        - Tutorium/3_Periodische-Signale.ipynb
-        - Tutorium/4_Komplexe-Groessen.ipynb
-        - Tutorium/5_Grundzweipole1.ipynb
-        - Tutorium/6_Grundzweipole2.ipynb
-        - Tutorium/7_KWR.ipynb
-        - Tutorium/8_Filterschaltungen.ipynb
-        - Tutorium/9_Schwingkreise.ipynb
-        - Tutorium/10_Transformatoren.ipynb
-        - Tutorium/11_Klausurvorbereitung.ipynb
-
-    - class/references.qmd
+#        - tut/tut_01_Einfuehrung.qmd
+        - tut/tut_02_Komplexe-Zahlen.ipynb
+        - tut/tut_03_Periodische-Signale.ipynb
+        - tut/tut_04_Komplexe-Groessen.ipynb
+        - tut/tut_05_Grundzweipole1.ipynb
+        - tut/tut_06_Grundzweipole2.ipynb
+        - tut/tut_07_KWR.ipynb
+        - tut/tut_08_Filterschaltungen.ipynb
+        - tut/tut_09_Schwingkreise.ipynb
+        - tut/tut_10_Transformatoren.ipynb
+        - tut/tut_11_Klausurvorbereitung.ipynb
+    - references.qmd
     
 bibliography: _bibliography/references.bib
 
@@ -86,7 +84,7 @@ format:
   html:
     theme: flatly
   pdf:
-    documentclass: scrbook # scrreptrt
+    documentlec: scrbook # scrreptrt
 #    lof: true
 #    lot: true
     toc: true    
