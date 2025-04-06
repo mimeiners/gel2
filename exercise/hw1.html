@@ -34,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -601,8 +601,8 @@ drei Einzelspannungen berechnen?</p>
 </div>
 <section id="id3">
 <h4>Lösung<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
-<div class="amsmath math notranslate nohighlight" id="equation-b56804e4-aaac-4140-8c23-8f4c984dc971">
-<span class="eqno">(55)<a class="headerlink" href="#equation-b56804e4-aaac-4140-8c23-8f4c984dc971" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2aaa78d9-0c7c-430f-b3ef-74debf64290b">
+<span class="eqno">(55)<a class="headerlink" href="#equation-2aaa78d9-0c7c-430f-b3ef-74debf64290b" title="Permalink to this equation">#</a></span>\[\begin{align}
 U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 &amp;= \frac{1}{T} \int_0^{T} ( U_0 + \hat{U}_1 \cos(\omega_1 t) + \hat{U}_2 \cos(\omega_2 t + \varphi) )^2 \\
 &amp;= \frac{1}{T} \int_0^{T} (  U^2_0 + 2U_0\hat{U}_1\cos(\omega_1t) + 2U_0\hat{U}_2\cos(\omega_2 t + \varphi) \\
@@ -686,8 +686,8 @@ Der Scheitelfaktor: -0.31462061084367027
 </div>
 <section id="id4">
 <h4>Lösung<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
-<div class="amsmath math notranslate nohighlight" id="equation-6db1f949-86d2-408e-b8a2-7977f47b2130">
-<span class="eqno">(56)<a class="headerlink" href="#equation-6db1f949-86d2-408e-b8a2-7977f47b2130" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1dd48570-56b2-4166-a203-4d605c6119b1">
+<span class="eqno">(56)<a class="headerlink" href="#equation-1dd48570-56b2-4166-a203-4d605c6119b1" title="Permalink to this equation">#</a></span>\[\begin{align}
 U_{max} &amp;= u(t_{max}); \quad \left. \frac{du(t)}{dt} \right\lvert_{t=t_{max}} = 0 \\
 \frac{du(t)}{dt} &amp;= -\hat{U}_1\omega_1\sin(\omega_1 t) - \hat{U}_2 \omega_2\sin(\omega_2 t + \varphi) \\
 \sin(3\omega_1 t_{max} + \varphi) &amp;= -\frac{\hat{U}_1}{2\hat{U}_2}\sin(\omega_1 t_{max}) \\
@@ -721,28 +721,28 @@ Daraus ergeben sich <span class="math notranslate nohighlight">\(U_{max}\)</span
 <section id="id5">
 <h4>Lösung<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <p>Sei <span class="math notranslate nohighlight">\(u(t)=\hat{U} \sin(\omega t + \varphi_u)\)</span>, dann ergeben sich die Ströme zu:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dd3f9a6c-5aee-45be-b2dd-6a5e20231461">
-<span class="eqno">(57)<a class="headerlink" href="#equation-dd3f9a6c-5aee-45be-b2dd-6a5e20231461" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-965cbc21-ffb3-4bdb-a4da-d76f63581614">
+<span class="eqno">(57)<a class="headerlink" href="#equation-965cbc21-ffb3-4bdb-a4da-d76f63581614" title="Permalink to this equation">#</a></span>\[\begin{align}
 i_C(t) &amp;= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2}) = -\omega C \hat{U} \cos(\omega t + \varphi_u) \\
 i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 \end{align}\]</div>
 <p>Knotengleichung: <span class="math notranslate nohighlight">\(i_0(t) = i_C(t) + i_R(t)\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-3abab5d2-11e5-4904-811c-5034c02d872a">
-<span class="eqno">(58)<a class="headerlink" href="#equation-3abab5d2-11e5-4904-811c-5034c02d872a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5abb5fe3-ccce-49c1-806b-261d047a698b">
+<span class="eqno">(58)<a class="headerlink" href="#equation-5abb5fe3-ccce-49c1-806b-261d047a698b" title="Permalink to this equation">#</a></span>\[\begin{align}
 \hat{I}_0 \sin(\omega t) &amp;= -\omega C \hat{U} \cos(\omega t + \varphi_u) + \frac{\hat{U}}{R} \sin(\omega t + \varphi_u) \\
 \hat{I}_0 \sin(m - \varphi_u) &amp;= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m), \quad m=\omega t + \varphi_u \\
 \hat{I}_0 \left( \sin(m) \cos(\varphi_u) - \cos(m) \sin(\varphi_u) \right) &amp;= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m) \\
 \end{align}\]</div>
 <p>Koeffizientenvergleich:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bf27ac3e-7c18-413f-91b5-bb2adeb4b72b">
-<span class="eqno">(59)<a class="headerlink" href="#equation-bf27ac3e-7c18-413f-91b5-bb2adeb4b72b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5d63942c-f8b6-4e52-9b72-d922ccd9d844">
+<span class="eqno">(59)<a class="headerlink" href="#equation-5d63942c-f8b6-4e52-9b72-d922ccd9d844" title="Permalink to this equation">#</a></span>\[\begin{align}
 \hat{I}_0 \cos(\varphi_u) &amp;= \frac{\hat{U}}{R} \\
 \hat{I}_0 \sin(\varphi_u) &amp;= -\omega C \hat{U} \\
 \tan{\varphi_u} = \frac{\sin(\varphi_u)}{\cos(\varphi_u)} &amp;= \frac{-\omega C \hat{U}}{\frac{\hat{U}}{R}} = -\omega R C \\
 \varphi_u &amp;= \arctan(-\omega R C)
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-14fc5d3e-7509-44c8-9db8-52764d73aedb">
-<span class="eqno">(60)<a class="headerlink" href="#equation-14fc5d3e-7509-44c8-9db8-52764d73aedb" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f31158d5-640e-4c72-bee3-69c88eb54c4c">
+<span class="eqno">(60)<a class="headerlink" href="#equation-f31158d5-640e-4c72-bee3-69c88eb54c4c" title="Permalink to this equation">#</a></span>\[\begin{align}
 \hat{I}_0 \cos(\varphi_u) &amp;= \frac{\hat{U}}{R} \\
 \hat{U} &amp;= R \hat{I} \cos{\varphi_u} = R \hat{I} \frac{1}{\sqrt{1+\tan^2(\varphi)}} \\
 &amp;= \frac{R \hat{I}}{\sqrt{1+(\omega R C)^2}} \\
@@ -832,8 +832,8 @@ Gleichrichtmittelwert und Effektivwert als Funktion vom Phasenanschnittwinkel <s
 <ol class="arabic simple">
 <li><p>Halbwelle</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-a25dcaa4-d0d6-4b84-9b1a-fa7974331f84">
-<span class="eqno">(61)<a class="headerlink" href="#equation-a25dcaa4-d0d6-4b84-9b1a-fa7974331f84" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1290f254-afae-4824-b0af-0981c87a26f7">
+<span class="eqno">(61)<a class="headerlink" href="#equation-1290f254-afae-4824-b0af-0981c87a26f7" title="Permalink to this equation">#</a></span>\[\begin{align}
 \overline{i(t)} &amp;= \frac{1}{T} \int_0^{T} i(t) d t &amp; &amp;= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{I}\sin(\varphi) d \varphi \\
 &amp;= \frac{\hat{I}}{2\pi} \left[ -\cos(\varphi) \right]_{\alpha}^{\pi} &amp; &amp;= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
 \overline{\lvert i(t) \lvert} &amp;= \frac{1}{T} \int_0^{T} \lvert i(t) \lvert d t &amp; &amp;= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
@@ -845,8 +845,8 @@ I_{eff} &amp;= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{4\pi}} 
 <ol class="arabic simple" start="2">
 <li><p>Vollwelle</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-f71def2c-66e0-4627-9dab-6892aab992cf">
-<span class="eqno">(62)<a class="headerlink" href="#equation-f71def2c-66e0-4627-9dab-6892aab992cf" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-96c393de-e809-4c2a-8c23-4f2bd1e24cab">
+<span class="eqno">(62)<a class="headerlink" href="#equation-96c393de-e809-4c2a-8c23-4f2bd1e24cab" title="Permalink to this equation">#</a></span>\[\begin{align}
 \overline{i(t)} &amp;= 0 \\
 \overline{\lvert i(t) \lvert} &amp;=  2 \cdot \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] = \frac{\hat{I}}{\pi} \left[ 1+\cos(\varphi) \right] \\
 I^2_{eff} &amp;= 2 \cdot \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\

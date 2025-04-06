@@ -34,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -561,8 +561,8 @@ gelegt. Wie groß ist nun der Leistungsfaktor <span class="math notranslate nohi
 \underline{I}_{ges} = \underline{I}_Z + \underline{I}_C = \frac{\underline{U}}{\underline{Z}} + j \omega C \underline{U}
 \]</div>
 <p>Die Leistung an der Kondensatorbatterie:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3e1c7f5b-d749-4724-be1b-4f774f5145af">
-<span class="eqno">(75)<a class="headerlink" href="#equation-3e1c7f5b-d749-4724-be1b-4f774f5145af" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a5aea836-764b-4b18-944f-02b6348f958c">
+<span class="eqno">(75)<a class="headerlink" href="#equation-a5aea836-764b-4b18-944f-02b6348f958c" title="Permalink to this equation">#</a></span>\[\begin{align}
 P_C &amp;= \frac{1}{2} \underline{U}\underline{I}_{ges}^{*} \\
 &amp;= \frac{1}{2} \frac{\vert\underline{U}\vert^2}{\underline{Z}^{*}} - \frac{1}{2} j \omega C \vert\underline{U}\vert^2
 \end{align}\]</div>
@@ -619,14 +619,14 @@ R_V = 74,1\,k\Omega  f = 91,9\,kHz
 <p>Wie groß ist diese Leistung?</p>
 <section id="id6">
 <h4>Lösung<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
-<div class="amsmath math notranslate nohighlight" id="equation-038db81b-a3d2-49a5-8286-3e6a582d3a57">
-<span class="eqno">(76)<a class="headerlink" href="#equation-038db81b-a3d2-49a5-8286-3e6a582d3a57" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-285d0752-d4c5-4ef5-bc64-b32b2224616f">
+<span class="eqno">(76)<a class="headerlink" href="#equation-285d0752-d4c5-4ef5-bc64-b32b2224616f" title="Permalink to this equation">#</a></span>\[\begin{align}
 P_{total} &amp;= \frac{U_{eff}^2}{R_G + \underbrace{\operatorname{Re}(Z_V)}_{=R_G}} = \frac{U_{eff}^2}{2 R_G} \\
 P_V &amp;= \frac{1}{2} P_{total} = \frac{U_{eff}^2}{4 R_G} = 1,25\,kW
 \end{align}\]</div>
 <p>Alternativ auch Lösung über den Spannungsteiler</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4ebd8ca2-0c9a-4eba-881c-296d230f1dfd">
-<span class="eqno">(77)<a class="headerlink" href="#equation-4ebd8ca2-0c9a-4eba-881c-296d230f1dfd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-32f36497-b1c6-4b81-9f3f-f67970e2c689">
+<span class="eqno">(77)<a class="headerlink" href="#equation-32f36497-b1c6-4b81-9f3f-f67970e2c689" title="Permalink to this equation">#</a></span>\[\begin{align}
 U_{eff,V} &amp;= \frac{\operatorname{Re}(Z_V)}{R_G + \operatorname{Re}(Z_V)} U_{eff} = \frac{1}{2} U_{eff} \\
 P_V &amp;= \frac{U_{eff,V}^2}{\operatorname{Re}(Z_V)} = \frac{1}{4} \frac{U_{eff}^2}{R_G} = 1,25\,kW
 \end{align}\]</div>
@@ -741,8 +741,8 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
 <section id="id11">
 <h4>Lösung<a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
 <p>Maschenumlauf: <span class="math notranslate nohighlight">\(\underline{U}_2 - \underline{U}_4 - \underline{U}_D = 0\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-f440ca11-a578-45ce-8a21-ec94068835f6">
-<span class="eqno">(78)<a class="headerlink" href="#equation-f440ca11-a578-45ce-8a21-ec94068835f6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ef8a3cc8-972c-4c60-ab54-12b06e95a853">
+<span class="eqno">(78)<a class="headerlink" href="#equation-ef8a3cc8-972c-4c60-ab54-12b06e95a853" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{U}_2 &amp;= \frac{\underline{Z}_2}{\underline{Z}_1+\underline{Z}_2} \underline{U}_E \\
 \underline{U}_4 &amp;= \frac{R_4}{R_3+R_4} \underline{U}_E \\
 \underline{U}_D &amp;= \underline{U}_4 - \underline{U}_2 \\
@@ -750,8 +750,8 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
 &amp;= \left( \frac{1}{1+\frac{R_3}{R_4}} - \frac{1}{1 + \frac{\underline{Z}_1}{\underline{Z}_2}} \right) \underline{U}_E
 \end{align}\]</div>
 <p>Hieraus folgt das Spannungsübertragungsverhältnis:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-48c43f7a-2e24-4db0-bc3f-7ae9977bcbda">
-<span class="eqno">(79)<a class="headerlink" href="#equation-48c43f7a-2e24-4db0-bc3f-7ae9977bcbda" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3c1f467a-1747-49eb-8baa-e57f39fbf53d">
+<span class="eqno">(79)<a class="headerlink" href="#equation-3c1f467a-1747-49eb-8baa-e57f39fbf53d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \underline{H}_u &amp;= \frac{\underline{U}_D}{\underline{U}_E} \\
 &amp;= \frac{1}{1 + 2} - \frac{1}{1 + (2 + j \omega RC + \frac{1}{j \omega RC})} \\
 &amp;= \frac{1}{3} \left( 1 - \frac{1}{1 + j \frac{1}{3}(\omega RC - \frac{1}{\omega RC})}\right) \\
@@ -760,8 +760,8 @@ Eingangsspannung. Stellen Sie den Betrag und den Phasenwinkel von <span class="m
 &amp;= \frac{1}{3} \frac{1}{1 - j \frac{3}{\omega / \omega_A - \omega_A / \omega}} 
 \end{align}\]</div>
 <p>Betrag und Phase des Spannungsübertragungsverhältnisses:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-13fcc037-52eb-490b-81a1-7e687572aa87">
-<span class="eqno">(80)<a class="headerlink" href="#equation-13fcc037-52eb-490b-81a1-7e687572aa87" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-db200db8-4287-4ab1-bbc8-a942ded3863c">
+<span class="eqno">(80)<a class="headerlink" href="#equation-db200db8-4287-4ab1-bbc8-a942ded3863c" title="Permalink to this equation">#</a></span>\[\begin{align}
 \vert\underline{H}_u\vert &amp;= \frac{1}{3 \sqrt{1 + \left(\frac{3}{\omega/\omega_A - \omega_A/\omega}\right)^2}} \\
 \arg(\underline{H}_u) &amp;= \arctan(\frac{3}{\omega/\omega_A - \omega_A/\omega})
 \end{align}\]</div>
