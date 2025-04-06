@@ -226,7 +226,10 @@
 
 ## Konzentrierte Schaltelemente
 
-::: {.callout-note title="Stromdichte"}
+::: {.callout-note}
+
+### Stromdichte
+
 $$
 \begin{equation}
 \frac{\int E(r,t) ds}{\iint J(r,t) dA} = \frac{u(t)}{i(t)} \Rightarrow R
@@ -234,7 +237,10 @@ $$
 $$
 :::
 
-::: {.callout-note title="Verschiebungsdichte"}
+::: {.callout-note}
+
+### Verschiebungsdichte
+
 $$
 \begin{equation}
 \frac{\iint D(r,t) dA}{\int E(r,t) ds} = \frac{q(t)}{u(t)} \Rightarrow C
@@ -242,7 +248,10 @@ $$
 $$
 :::
 
-::: {.callout-note title="Flußdichte"}
+::: {.callout-note}
+
+### Flußdichte
+
 $$
 \begin{equation}
 \frac{\iint B(r,t) dA}{\oint H(r,t) ds} = \frac{u(t)}{i(t)} \Rightarrow L
@@ -252,7 +261,10 @@ $$
 
 ## Harmonische Signale ...
 
-::: {.callout-note title="als Zeitfunktion"}
+::: {.callout-note}
+
+### als Zeitfunktion
+
 $$
 \begin{equation}
 u(t) = \hat{U} \cos(\omega t + \phi)
@@ -260,7 +272,10 @@ u(t) = \hat{U} \cos(\omega t + \phi)
 $$
 :::
 
-::: {.callout-note title="als Zeiger / komplexe Grösse (Phasor)"}
+::: {.callout-note}
+
+### als Zeiger / komplexe Grösse (Phasor)
+
 $$
 \begin{equation}
 U = \lvert \hat{U} \lvert e^{j \phi}

@@ -141,4 +141,3 @@ i(t) &= C \cdot \frac{du_C(t)}{dt} \\
 \end{align}
 $$
 :::
-
