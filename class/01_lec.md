@@ -19,7 +19,6 @@
   * [oh-my-zsh](https://ohmyz.sh),
   * [bash-it](https://bash-it.readthedocs.io/en/latest/)
   * [SSH (Secure Shell)](https://de.wikipedia.org/wiki/Secure_Shell)
-
 * [GIT (Versionskontrolle)](https://git-scm.com)
 * [Cygwin](https://cygwin.com)
 
@@ -60,7 +59,7 @@
 ## Schöne neue Welt
 
 ![<p><em>AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016 <div
-id="fig:jaguar"></div></em></p>](../images/class/lec_AMD@16nm@Jaguar.jpg) 
+id="fig:jaguar"></div></em></p>](../images/class/lec-01-AMD@16nm@Jaguar.jpg) 
 
 
 ## Halbleiterherstellung (Infineon, Dresden)
@@ -80,21 +79,21 @@ id="fig:jaguar"></div></em></p>](../images/class/lec_AMD@16nm@Jaguar.jpg)
 
 ## Es war einmal ...
 
-![<p><em>1906 die Elektronenröhre</em></p>](../images/class/lec_vacuum_tube.png)
+![<p><em>1906 die Elektronenröhre</em></p>](../images/class/lec-01-vacuum_tube.png)
 
-![<p><em>1947 der erste Transistor, Bell Labs Foto</em></p>](../images/class/lec_1st_transistor.png)
+![<p><em>1947 der erste Transistor, Bell Labs Foto</em></p>](../images/class/lec-01-1st_transistor.png)
 
 
 ## Damals und heute
 
-![<p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p>](../images/class/lec_1st_ic_kilby.png)
+![<p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p>](../images/class/lec-01-1st_ic_kilby.png)
 
-![<p><em>Moderner IC <div id="fig:modernic"></div></em></p>](../images/class/lec_modern_ic.png)
+![<p><em>Moderner IC <div id="fig:modernic"></div></em></p>](../images/class/lec-01-modern_ic.png)
 
 
 ## Systemhierarchie
 
-![<p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p>](../images/class/lec_system_hierarchy.png)
+![<p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p>](../images/class/lec-01-system_hierarchy.png)
 
 * Nutzen Sie Hierarchien zur Beschreibung komplexer Systeme
 
@@ -103,17 +102,17 @@ id="fig:jaguar"></div></em></p>](../images/class/lec_AMD@16nm@Jaguar.jpg)
 
 ## Schnittstellen zur Aussenwelt
 
-![<p><em>Interfacing. <div id="fig:interfaces"></div></em></p>](../images/class/lec_real_world_interface.png)
+![<p><em>Interfacing. <div id="fig:interfaces"></div></em></p>](../images/class/lec-01-real_world_interface.png)
 
 
 ## Meeting mit einem System
 
-![<p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p>](../images/class/lec_smartphone.png)
+![<p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p>](../images/class/lec-01-smartphone.png)
 
 
 ## System in a Package (SiP)
 
-![<p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p>](../images/class/lec_system_in_package.png)
+![<p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p>](../images/class/lec-01-system_in_package.png)
 
 
 ## Sie werden unsere Experten
