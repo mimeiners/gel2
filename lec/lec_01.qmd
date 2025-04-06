@@ -88,7 +88,7 @@
 
 ## Schöne neue Welt
 
-![AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016](../images/class/lec_AMD@16nm@Jaguar.jpg) 
+![AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016](../images/lec/lec-01-AMD@16nm@Jaguar.jpg) 
 
 
 ## Halbleiterherstellung (Infineon, Dresden)
@@ -108,21 +108,21 @@
 
 ## Es war einmal ...
 
-![1906 die Elektronenröhre](../images/class/lec_vacuum_tube.png)
+![1906 die Elektronenröhre](../images/lec/lec-01-vacuum_tube.png)
 
-![1947 der erste Transistor, Bell Labs Foto](../images/class/lec_1st_transistor.png)
+![1947 der erste Transistor, Bell Labs Foto](../images/lec/lec-01-1st_transistor.png)
 
 
 ## Damals und heute
 
-![1958 Jack Kilby's erster IC](../images/class/lec_1st_ic_kilby.png)
+![1958 Jack Kilby's erster IC](../images/lec/lec-01-1st_ic_kilby.png)
 
-![Moderner IC](../images/class/lec_modern_ic.png)
+![Moderner IC](../images/lec/lec-01-modern_ic.png)
 
 
 ## Systemhierarchie
 
-![Funktionsblöcke eines elektronischen Systems](../images/class/lec_system_hierarchy.png)
+![Funktionsblöcke eines elektronischen Systems](../images/lec/lec-01-system_hierarchy.png)
 
 * Nutzen Sie Hierarchien zur Beschreibung komplexer Systeme
 
@@ -131,17 +131,17 @@
 
 ## Schnittstellen zur Aussenwelt
 
-![Interfacing](../images/class/lec_real_world_interface.png)
+![Interfacing](../images/lec/lec-01-real_world_interface.png)
 
 
 ## Meeting mit einem System
 
-![Drahtloses Kommunikationssystem](../images/class/lec_smartphone.png)
+![Drahtloses Kommunikationssystem](../images/lec/lec-01-smartphone.png)
 
 
 ## System in a Package (SiP)
 
-![Beschleunigungssensor](../images/class/lec_system_in_package.png)
+![Beschleunigungssensor](../images/lec/lec-01-system_in_package.png)
 
 
 ## Sie werden unsere Experten

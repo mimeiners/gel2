@@ -62,7 +62,7 @@ book:
         - hw/hw_07.ipynb
     - part: Tutorium
       chapters:
-#        - tut/tut_01_Einfuehrung.qmd
+        - tut/tut_01_Einfuehrung.qmd
         - tut/tut_02_Komplexe-Zahlen.ipynb
         - tut/tut_03_Periodische-Signale.ipynb
         - tut/tut_04_Komplexe-Groessen.ipynb
