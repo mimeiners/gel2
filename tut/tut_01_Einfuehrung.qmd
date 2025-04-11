@@ -2,14 +2,13 @@
 
 ## Organisatorisches
 
-Tutor: **Alicia von Ahlen**
+Tutor: **B.Eng. Alicia von Ahlen**
 
 Zu meiner Person:
-Ich studiere Elektrotechnik mit der Vertiefungsrichtung Informationstechnik und bin zur Zeit im 6. Semester. Ich hatte
-im vorherigen Semester bereits das Tutorium _Grundlagen der Elektrotechnik 1_ durchgeführt und werde dies nun mit _GEL2_
-weiterführen. 
+Ich habe Elektrotechnik mit der Vertiefungsrichtung Informationstechnik studiert und bin zur Zeit im 1. Semester des
+Masterprogramms MScEE an der HSB. Ich habe bereits die Tutorien _Grundlagen der Elektrotechnik 1 und 2_ durchgeführt.
 
-Das Tutorium ist als Unterstützung zur Vorlesung gedacht und legt den Fokus auf eine Wiederholung der Unterrichtsinhalte
+Das tut ist als Unterstützung zur Vorlesung gedacht und legt den Fokus auf eine Wiederholung der Unterrichtsinhalte
 und Übungsaufgaben. Es besteht auch die Möglichkeit Fragen zu den Vorlesungsinhalten zu stellen und Wünsche zu äußern,
 zum Beispiel auf welche Themen besonders Wert gelegt oder speziell wiederholt werden sollen.
 Zur besseren Vorbereitung meinerseits, bitte ich darum, dass Themenwünsche und wenn möglich auch Fragen, mir im Vorfeld
@@ -17,9 +16,12 @@ per Email geschickt werden, damit ich genug Zeit habe, diese zu bearbeiten.
 
 ## Termine
 
-Das GEL2-Tutorium findet montags im ersten Block (08:00 - 09:30 Uhr) statt.
+**t.b.d.**
 
-Eine grobe Zeit- und Themenplanung ist in der folgenden Tabelle zu sehen. Dabei kann es durchaus sein, dass sich diese Planung noch etwas ändert.
+Das GEL2-tut findet montags im ersten Block (08:00 - 09:30 Uhr) statt.
+
+Eine grobe Zeit- und Themenplanung ist in der folgenden Tabelle zu sehen. Dabei kann es durchaus sein, dass sich diese
+Planung noch etwas ändert.
 
 | Datum    | Thema                                          |
 |:--------:|:-----------------------------------------------|

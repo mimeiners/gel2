@@ -2,14 +2,19 @@
 
 ## Widerstandsoperator
 
-::: {.callout-note} u/i-Verhalten
+::: {.callout-note} 
+
+### u/i-Verhalten
+
 $$
 \frac{\underline{u}(t)}{\underline{i}(t)} = \frac{\underline{\hat{U}}e^{j \omega t}}{\underline{\hat{I}}e^{j \omega t}}
 = \frac{\hat{U}}{\hat{I}} e^{j(\varphi_u \varphi_i)} = \underline{Z} 
 $$
 :::
 
-::: {.callout-note} Impedanz
+::: {.callout-note} 
+
+### Impedanz
 
 \begin{align}
 \underline{Z} &= \frac{\underline{u}(t)}{\underline{i}(t)} =
@@ -19,10 +24,11 @@ $$
 &= \operatorname{Re}{\underline{Z}} + j \operatorname{Im}{\underline{Z}} \\
 &= R + j X
 \end{align}
-
 :::
 
-::: {.callout-note} Eigenschaften
+::: {.callout-note} 
+
+### Eigenschaften
 
 \begin{align}
 Z &= \lvert\underline{Z}\lvert = \sqrt{R^2 + X^2} & &\mbox{Scheinwiderstand} \\
@@ -31,18 +37,18 @@ X &= \operatorname{Im}{\underline{Z}} & &\mbox{Blindwiderstand (Reaktanz)} \\
 \tan(\varphi_z) &= \frac{\operatorname{Im}{\underline{Z}}}{\operatorname{Re}{\underline{Z}}} = \frac{X_r}{R_r}  & & \\
 \varphi_z &= \varphi_u - \varphi_i = \arctan\left(\frac{X_r}{R_r}\right) & &
 \end{align}
-
 :::
 
 ## Leitwertoperator
 
-::: {.callout-note} Harmonische Anregung
+::: {.callout-note} 
+
+### Harmonische Anregung
 
 \begin{align}
 u(t) &= \hat{U} \cos(\omega t + \varphi_u) & \underline{u}(t) &= \underline{\hat{U}} e^{j \omega t} \\
 i(t) &= \hat{I} \cos(\omega t + \varphi_i) & \underline{i}(t) &= \underline{\hat{I}} e^{j \omega t}
 \end{align}
-
 :::
 
 ::: {.callout-note} 
@@ -51,12 +57,12 @@ i(t) &= \hat{I} \cos(\omega t + \varphi_i) & \underline{i}(t) &= \underline{\hat
 
 $$
 \begin{align}
-	\underline{Y} &= \frac{\underline{i}(t)}{\underline{u}(t)} =
-	\frac{\underline{\hat{I}}e^{j \omega t}}{\underline{\hat{U}}e^{j \omega t}} =
-	\frac{\hat{I}}{\hat{U}}e^{\varphi_i-\varphi_u} \\
-	&= Y e^{j \varphi_y} = Y \left( \cos(\varphi_y) + j \sin(\varphi_y) \right) \\
-	&= \operatorname{Re}{\underline{Y}} + j \operatorname{Im}{\underline{Y}} \\
-	&= G + j B
+\underline{Y} &= \frac{\underline{i}(t)}{\underline{u}(t)} =
+\frac{\underline{\hat{I}}e^{j \omega t}}{\underline{\hat{U}}e^{j \omega t}} =
+\frac{\hat{I}}{\hat{U}}e^{\varphi_i-\varphi_u} \\
+&= Y e^{j \varphi_y} = Y \left( \cos(\varphi_y) + j \sin(\varphi_y) \right) \\
+&= \operatorname{Re}{\underline{Y}} + j \operatorname{Im}{\underline{Y}} \\
+&= G + j B
 \end{align}
 $$
 :::
@@ -100,10 +106,10 @@ $$
 
 $$
 \begin{align}
-	u(t) &= \hat{U} \cos(\omega t + \varphi_u) & i(t) &= \hat{I} \cos(\omega t + \varphi_i) \\
-	&= \frac{1}{2} \left( \underline{\hat{U}} e^{j \omega t} + \underline{\hat{U}}^* e^{-j \omega t}\right) & 
-	&= \frac{1}{2} \left( \underline{\hat{I}} e^{j \omega t} +  \underline{\hat{I}}^* e^{-j \omega t}\right) \\
-	&= \operatorname{Re}{\underline{\hat{U}}e^{j \omega t}} & &= \operatorname{Re}{\underline{\hat{U}}e^{j \omega t}}
+u(t) &= \hat{U} \cos(\omega t + \varphi_u) & i(t) &= \hat{I} \cos(\omega t + \varphi_i) \\
+&= \frac{1}{2} \left( \underline{\hat{U}} e^{j \omega t} + \underline{\hat{U}}^* e^{-j \omega t}\right) & 
+&= \frac{1}{2} \left( \underline{\hat{I}} e^{j \omega t} +  \underline{\hat{I}}^* e^{-j \omega t}\right) \\
+&= \operatorname{Re}{\underline{\hat{U}}e^{j \omega t}} & &= \operatorname{Re}{\underline{\hat{U}}e^{j \omega t}}
 \end{align}
 $$
 :::
@@ -114,15 +120,15 @@ $$
 
 $$
 \begin{align}
-	p(t) &= u(t) \cdot i(t) \\
-	&= \frac{1}{4} \left( \underline{\hat{U}} e^{j \omega t} +
-	\underline{\hat{U}}^* e^{-j \omega t}\right)  
-	\left(\underline{\hat{I}} e^{j \omega t} + \underline{\hat{I}}^* e^{-j \omega t}\right) \\
-	&= \underbrace{\frac{1}{4} \left(\underline{\hat{U}} \underline{\hat{I}}^* +
-	\underline{\hat{U}}^* \underline{\hat{I}} \right)}_{\mbox{zeitunabh. Anteil}} +
-	\underbrace{\frac{1}{4} \left( \underline{\hat{U}}
-	\underline{\hat{I}} e^{2j \omega t} + \underline{\hat{U}}^*
-	\underline{\hat{I}}^* e^{-2j \omega t}\right)}_{\mbox{zeitabh. Anteil}}
+p(t) &= u(t) \cdot i(t) \\
+&= \frac{1}{4} \left( \underline{\hat{U}} e^{j \omega t} +
+\underline{\hat{U}}^* e^{-j \omega t}\right)  
+\left(\underline{\hat{I}} e^{j \omega t} + \underline{\hat{I}}^* e^{-j \omega t}\right) \\
+&= \underbrace{\frac{1}{4} \left(\underline{\hat{U}} \underline{\hat{I}}^* +
+\underline{\hat{U}}^* \underline{\hat{I}} \right)}_{\mbox{zeitunabh. Anteil}} +
+\underbrace{\frac{1}{4} \left( \underline{\hat{U}}
+\underline{\hat{I}} e^{2j \omega t} + \underline{\hat{U}}^*
+\underline{\hat{I}}^* e^{-2j \omega t}\right)}_{\mbox{zeitabh. Anteil}}
 \end{align}
 $$
 :::
@@ -130,14 +136,15 @@ $$
 ::: {.callout-note} 
 
 ### Definitionen
+
 $$
 \begin{align}
-	\underline{P} &= \frac{1}{4} \left(\underline{\hat{U}} \underline{\hat{I}}^* +
-	\underline{\hat{U}}^* \underline{\hat{I}} \right), \quad
-	\mbox{Momentanwert, konstanter Anteil bzw. linearer Mittelwert, Momentanleistung} \\
-	p(t) &= \frac{1}{2} \operatorname{Re}{\underline{\hat{U}}\underline{\hat{I}}^*} \\
-	&= \frac{1}{2} \operatorname{Re}{\hat{U}\hat{I} e^{j(\varphi_u-\varphi_i)}} \\
-	&= \frac{1}{2} \hat{U} \hat{I} \cos(\varphi_u-\varphi_i)
+\underline{P} &= \frac{1}{4} \left(\underline{\hat{U}} \underline{\hat{I}}^* +
+\underline{\hat{U}}^* \underline{\hat{I}} \right), \quad
+\mbox{Momentanwert, konstanter Anteil bzw. linearer Mittelwert, Momentanleistung} \\
+p(t) &= \frac{1}{2} \operatorname{Re}{\underline{\hat{U}}\underline{\hat{I}}^*} \\
+&= \frac{1}{2} \operatorname{Re}{\hat{U}\hat{I} e^{j(\varphi_u-\varphi_i)}} \\
+&= \frac{1}{2} \hat{U} \hat{I} \cos(\varphi_u-\varphi_i)
 \end{align}
 $$
 :::
@@ -145,11 +152,12 @@ $$
 ::: {.callout-note}
 
 ### Eigenschaften
+
 $$
 \begin{align}
-	S &= \lvert\underline{P}\lvert = \sqrt{P^2 + Q^2} & &\mbox{Scheinleistung} \\
-	P &= \operatorname{Re}{\underline{P}} & &\mbox{Wirkleistung} \\
-	Q &= \operatorname{Im}{\underline{P}} & &\mbox{Blindleistung}
+S &= \lvert\underline{P}\lvert = \sqrt{P^2 + Q^2} & &\mbox{Scheinleistung} \\
+P &= \operatorname{Re}{\underline{P}} & &\mbox{Wirkleistung} \\
+Q &= \operatorname{Im}{\underline{P}} & &\mbox{Blindleistung}
 \end{align}
 $$
 :::

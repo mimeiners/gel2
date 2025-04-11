@@ -22,7 +22,7 @@ book:
       email: avahlen@stud.hs-bremen.de
       roles: "Supporting author"
   date: last-modified
-  license: "Apache-2.0 license"
+#  license: "Apache-2.0 license"
 
   reader-mode: true
 
@@ -54,32 +54,29 @@ book:
     - part: Hörsaalübungen 
       chapters:
         - hw/hw_01.ipynb
-        - hw/hw_02.ipynb
-        - hw/hw_03.ipynb
-        - hw/hw_04.ipynb
-        - hw/hw_05.ipynb
-        - hw/hw_06.ipynb
-        - hw/hw_07.ipynb
+#        - hw/hw_02.ipynb
+#        - hw/hw_03.ipynb
+#        - hw/hw_04.ipynb
+#        - hw/hw_05.ipynb
+#        - hw/hw_06.ipynb
+#        - hw/hw_07.ipynb
     - part: Tutorium
       chapters:
         - tut/tut_01_Einfuehrung.qmd
         - tut/tut_02_Komplexe-Zahlen.ipynb
         - tut/tut_03_Periodische-Signale.ipynb
-        - tut/tut_04_Komplexe-Groessen.ipynb
-        - tut/tut_05_Grundzweipole1.ipynb
-        - tut/tut_06_Grundzweipole2.ipynb
-        - tut/tut_07_KWR.ipynb
-        - tut/tut_08_Filterschaltungen.ipynb
-        - tut/tut_09_Schwingkreise.ipynb
-        - tut/tut_10_Transformatoren.ipynb
-        - tut/tut_11_Klausurvorbereitung.ipynb
+#        - tut/tut_04_Komplexe-Groessen.ipynb
+#        - tut/tut_05_Grundzweipole1.ipynb
+#        - tut/tut_06_Grundzweipole2.ipynb
+#        - tut/tut_07_KWR.ipynb
+#        - tut/tut_08_Filterschaltungen.ipynb
+#        - tut/tut_09_Schwingkreise.ipynb
+#        - tut/tut_10_Transformatoren.ipynb
+#        - tut/tut_11_Klausurvorbereitung.ipynb
     - references.qmd
     
 bibliography: _bibliography/references.bib
 
-filters:
-  - admonitions
-  
 format:
   html:
     theme: flatly
