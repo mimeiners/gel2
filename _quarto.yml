@@ -37,7 +37,7 @@ book:
   repo-url: https://github.com/mimeiners/gel2/
   repo-branch: main
   repo-actions: [edit, issue]
-  downloads: [pdf,epub]
+  downloads: [epub]
 
   chapters:
     - index.qmd
@@ -80,22 +80,22 @@ bibliography: _bibliography/references.bib
 format:
   html:
     theme: flatly
-  pdf:
-    documentlec: scrbook # scrreptrt
-#    lof: true
-#    lot: true
-    toc: true    
-    geometry:
-      - top=30mm
-      - left=20mm
-      - heightrounded
-    hyperrefoptions:
-      - linktoc=all
-    colorlinks: true
-    linkcolor: "blue"
-    biblio-style: ieee
-    #    keep-tex: true
-    output-file: elk
+#   pdf:
+#     documentlec: scrbook 
+#     lof: true
+#     lot: true
+#     toc: true    
+#     geometry:
+#       - top=30mm
+#       - left=20mm
+#       - heightrounded
+#     hyperrefoptions:
+#       - linktoc=all
+#     colorlinks: true
+#     linkcolor: "blue"
+#     biblio-style: ieee
+#     keep-tex: true
+#     output-file: elk
   epub:
     theme: flatly
     output-file: elk

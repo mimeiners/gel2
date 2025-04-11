@@ -158,14 +158,12 @@ demnach $1/r_p \approx \omega c_p \tan \delta$.
 
 Die Impedanz \underline{Z} der Spule errechnet sich aus der Ersatzschaltung @fig-lec8s2 zu
 
-$$
 \begin{align}
 \frac{1}{\underline{Z}} &= \frac{1}{r_p} + j\omega c_p + \frac{1}{j \omega l_s+r_s} \\ 
 &= \frac{−j\omega l_s (1−c_p r_s^2/l_s − \omega^2 l_s c_p) 
 + r_s + (r_s^2 + \omega^2 l_s^2) \omega c_p \tan \delta}
 {r_s^2 + \omega^2 l_s^2}.
 \end{align}
-$$
 :::
 
 Der prinzipielle Verlauf des Scheinwiderstands $\underline{Z}$ als Funktion der Frequenz ist in Abb. @fig-lec8s2
@@ -330,12 +328,10 @@ ergeben sich die sog.
 
 ### Transformatorgleichungen
 
-$$
 \begin{align}
 \underline{v}_1 &= R_{Cu1} i_1 + L_1 \frac{di_1}{dt} + M \frac{di_2}{dt} \\
 \underline{v}_2 &= R_{Cu2} i_2 + L_2 \frac{di_2}{dt} + M \frac{di_1}{dt} 
 \end{align}
-$$
 :::
 
 Diese Beziehungen gelten nur bei Kleinsignalaussteuerung ohne Vormagnetisierung im Bereich niederer Frequenzen.
@@ -365,10 +361,10 @@ i_1 &= \frac{1}{j\omega k \sqrt{L_1 L_2}} \cdot \underline{v}_2 = \frac{1}{k} \s
 
 Bei belastetem Ausgang gilt $i_2 = −\underline{v}_2/Z_L$; für den *Spannungsübertragungsfaktor* folgt damit aus Gl. (48)
 
-\begin{equation}
+$$
 \frac{\underline{v}_1}{\underline{v}_2} = \frac{1}{k} \sqrt{\frac{L_1}{L_2}} + j\omega \frac{1 - k^2}{k} \sqrt{L_1 L_2}
 \frac{1}{\underline{Z}_L}.
-\end{equation}
+$$
 
 
 ::: {.callout-note} 
@@ -379,9 +375,7 @@ Im Fall idealer Kopplung ($\vert k \vert = 1$) verschwindet der zweite Term auf 
 Spannungsverhältnis ist dann 
 
 $$
-\begin{equation}
 \frac{\underline{v}_1}{\underline{v}_2} = \frac{L_1}{L_2} = ü.
-\end{equation}
 $$
 
 Die Größe ü wird dabei als *Übertragungsverhältnis* bezeichnet. Zwischen den Zeigern der Ströme besteht nach Gl. (9.75)
@@ -393,9 +387,9 @@ $$
 
 Im Grenzfall des *idealen Übertragers* mit $L_1 = ü^2 L_2 \to \infty$ führt dies auf
 ­
-\begin{equation}
+$$
 \frac{\underline{i}_1}{\underline{i}_2} = \frac{−1}{ü}.
-\end{equation}
+$$
 :::
 
 
@@ -531,24 +525,19 @@ $\underline{v}'_1$ kann demnach die in Abb. @fig-lec8s14 dargestellte Ersatzscha
 
 Nach der Spannungsteilerregel folgt sofort
 
-$$
 \begin{align}
 \frac{\underline{v}'_1}{\underline{v}_1} &= \frac{j \omega k^2L_1 || r_{kp} || k^2 ü^2 \underline{Z}_x}{r_{Cu1} +
 j\omega \sigma L_1 + j\omega k^2 L_1 || r_{kp} || k^2 ü^2 \underline{Z}_x} \\ 
 &= \frac{1}{1 + (r_{Cu1} + j\omega \sigma L_1) 
 \left( \frac{1}{j\omega k^2 L_1} + \frac{1}{r_{kp}} + \frac{1}{k^2 ü^2 \underline{Z}_L} \right)}
 \end{align}
-$$
 
 Ebenfalls durch Anwenden der Spannungsteilerregel erhält man
 
-$$
 \begin{align}
 \frac{\underline{v}_2}{\underline{v}'_2} &= \frac{\underline{Z}_L || (j \omega C_2)^{-1}}{\underline{Z}_x} \\
 &= \frac{\underline{Z}_L}{\underline{Z}_L + r_{Cu2}(1 + j \omega C_2 \underline{Z}_L)}.
 \end{align}
-$$
-
 
 Mit dem Übertragungsverhältnis $k ü$ des idealen Übertragers folgt für den Spannungsübertragungsfaktor
 
