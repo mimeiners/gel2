@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; Einleitung – Grundlagen der Elektrotechnik 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../lec/lec_02.html" rel="next">
+<link href="../index.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b7c2d8834e08b04a63bb76a724ffbcac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lec/lec_01.html">Seminar</a></li><li class="breadcrumb-item"><a href="../lec/lec_01.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Grundlagen der Elektrotechnik 2</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/mimeiners/gel2/" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="../Grundlagen-der-Elektrotechnik-2.epub" title="Download ePub" class="quarto-navigation-tool px-1" aria-label="Download ePub"><i class="bi bi-journal"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unsyllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Seminar</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_01.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Netzwerkerregung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Impedanz, Admittanz und Leistung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Grafische Analysemethoden / Darstellungen im Frequenzbereich</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Schwingkreise</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Netzwerkanalyse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spulen und Übertrager</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Hörsaalübungen</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tutorium</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_01_Einfuehrung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_02_Komplexe-Zahlen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_03_Periodische-Signale.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliography</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#wissenschaftliches-rechnen-datenwissenschaft" id="toc-wissenschaftliches-rechnen-datenwissenschaft" class="nav-link active" data-scroll-target="#wissenschaftliches-rechnen-datenwissenschaft"><span class="header-section-number">1.1</span> Wissenschaftliches Rechnen / Datenwissenschaft</a></li>
+  <li><a href="#schaltungssimulation-spice" id="toc-schaltungssimulation-spice" class="nav-link" data-scroll-target="#schaltungssimulation-spice"><span class="header-section-number">1.2</span> Schaltungssimulation (SPICE)</a></li>
+  <li><a href="#betriebssystem-os---werkzeuge-tools" id="toc-betriebssystem-os---werkzeuge-tools" class="nav-link" data-scroll-target="#betriebssystem-os---werkzeuge-tools"><span class="header-section-number">1.3</span> Betriebssystem (OS) - Werkzeuge (Tools)</a></li>
+  <li><a href="#code-editoren" id="toc-code-editoren" class="nav-link" data-scroll-target="#code-editoren"><span class="header-section-number">1.4</span> Code Editoren</a></li>
+  <li><a href="#datenverarbeitung-data-sciences" id="toc-datenverarbeitung-data-sciences" class="nav-link" data-scroll-target="#datenverarbeitung-data-sciences"><span class="header-section-number">1.5</span> Datenverarbeitung / Data Sciences</a>
+  <ul class="collapse">
+  <li><a href="#dateisystem-journaled-file-system" id="toc-dateisystem-journaled-file-system" class="nav-link" data-scroll-target="#dateisystem-journaled-file-system"><span class="header-section-number">1.5.1</span> Dateisystem / Journaled File System</a></li>
+  <li><a href="#tabellenformate-rectangular-data" id="toc-tabellenformate-rectangular-data" class="nav-link" data-scroll-target="#tabellenformate-rectangular-data"><span class="header-section-number">1.5.2</span> Tabellenformate / Rectangular Data</a></li>
+  <li><a href="#serialisation" id="toc-serialisation" class="nav-link" data-scroll-target="#serialisation"><span class="header-section-number">1.5.3</span> Serialisation</a></li>
+  <li><a href="#spezielle-formate-data-frames" id="toc-spezielle-formate-data-frames" class="nav-link" data-scroll-target="#spezielle-formate-data-frames"><span class="header-section-number">1.5.4</span> Spezielle Formate / Data Frames</a></li>
+  <li><a href="#embedded-db-engines" id="toc-embedded-db-engines" class="nav-link" data-scroll-target="#embedded-db-engines"><span class="header-section-number">1.5.5</span> Embedded DB-Engines</a></li>
+  </ul></li>
+  <li><a href="#schreibst-du-noch-oder-texst-du-schon" id="toc-schreibst-du-noch-oder-texst-du-schon" class="nav-link" data-scroll-target="#schreibst-du-noch-oder-texst-du-schon"><span class="header-section-number">1.6</span> Schreibst Du noch oder TeXst Du schon?</a></li>
+  <li><a href="#latex-editoren" id="toc-latex-editoren" class="nav-link" data-scroll-target="#latex-editoren"><span class="header-section-number">1.7</span> LaTeX Editoren</a></li>
+  <li><a href="#literaturverwaltung-und-latex" id="toc-literaturverwaltung-und-latex" class="nav-link" data-scroll-target="#literaturverwaltung-und-latex"><span class="header-section-number">1.8</span> Literaturverwaltung und LaTeX</a></li>
+  <li><a href="#schöne-neue-welt" id="toc-schöne-neue-welt" class="nav-link" data-scroll-target="#schöne-neue-welt"><span class="header-section-number">1.9</span> Schöne neue Welt</a></li>
+  <li><a href="#halbleiterherstellung-infineon-dresden" id="toc-halbleiterherstellung-infineon-dresden" class="nav-link" data-scroll-target="#halbleiterherstellung-infineon-dresden"><span class="header-section-number">1.10</span> Halbleiterherstellung (Infineon, Dresden)</a></li>
+  <li><a href="#finfet-intel" id="toc-finfet-intel" class="nav-link" data-scroll-target="#finfet-intel"><span class="header-section-number">1.11</span> FinFET (Intel)</a></li>
+  <li><a href="#tsmc-fab-next-gen-75-nm" id="toc-tsmc-fab-next-gen-75-nm" class="nav-link" data-scroll-target="#tsmc-fab-next-gen-75-nm"><span class="header-section-number">1.12</span> TSMC Fab (Next Gen 7/5 nm)</a></li>
+  <li><a href="#es-war-einmal" id="toc-es-war-einmal" class="nav-link" data-scroll-target="#es-war-einmal"><span class="header-section-number">1.13</span> Es war einmal …</a></li>
+  <li><a href="#damals-und-heute" id="toc-damals-und-heute" class="nav-link" data-scroll-target="#damals-und-heute"><span class="header-section-number">1.14</span> Damals und heute</a></li>
+  <li><a href="#systemhierarchie" id="toc-systemhierarchie" class="nav-link" data-scroll-target="#systemhierarchie"><span class="header-section-number">1.15</span> Systemhierarchie</a></li>
+  <li><a href="#schnittstellen-zur-aussenwelt" id="toc-schnittstellen-zur-aussenwelt" class="nav-link" data-scroll-target="#schnittstellen-zur-aussenwelt"><span class="header-section-number">1.16</span> Schnittstellen zur Aussenwelt</a></li>
+  <li><a href="#meeting-mit-einem-system" id="toc-meeting-mit-einem-system" class="nav-link" data-scroll-target="#meeting-mit-einem-system"><span class="header-section-number">1.17</span> Meeting mit einem System</a></li>
+  <li><a href="#system-in-a-package-sip" id="toc-system-in-a-package-sip" class="nav-link" data-scroll-target="#system-in-a-package-sip"><span class="header-section-number">1.18</span> System in a Package (SiP)</a></li>
+  <li><a href="#sie-werden-unsere-experten" id="toc-sie-werden-unsere-experten" class="nav-link" data-scroll-target="#sie-werden-unsere-experten"><span class="header-section-number">1.19</span> Sie werden unsere Experten</a></li>
+  <li><a href="#lernziele-des-moduls" id="toc-lernziele-des-moduls" class="nav-link" data-scroll-target="#lernziele-des-moduls"><span class="header-section-number">1.20</span> Lernziele des Moduls</a></li>
+  <li><a href="#seminaristischer-unterricht" id="toc-seminaristischer-unterricht" class="nav-link" data-scroll-target="#seminaristischer-unterricht"><span class="header-section-number">1.21</span> Seminaristischer Unterricht</a></li>
+  <li><a href="#beschreibung-elektrotechnischer-systeme" id="toc-beschreibung-elektrotechnischer-systeme" class="nav-link" data-scroll-target="#beschreibung-elektrotechnischer-systeme"><span class="header-section-number">1.22</span> Beschreibung elektrotechnischer Systeme</a></li>
+  <li><a href="#konzentrierte-schaltelemente" id="toc-konzentrierte-schaltelemente" class="nav-link" data-scroll-target="#konzentrierte-schaltelemente"><span class="header-section-number">1.23</span> Konzentrierte Schaltelemente</a></li>
+  <li><a href="#harmonische-signale" id="toc-harmonische-signale" class="nav-link" data-scroll-target="#harmonische-signale"><span class="header-section-number">1.24</span> Harmonische Signale …</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/gel2/edit/main/lec/lec_01.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lec/lec_01.html">Seminar</a></li><li class="breadcrumb-item"><a href="../lec/lec_01.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="wissenschaftliches-rechnen-datenwissenschaft" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="wissenschaftliches-rechnen-datenwissenschaft"><span class="header-section-number">1.1</span> Wissenschaftliches Rechnen / Datenwissenschaft</h2>
+<ul>
+<li><a href="https://www.anaconda.com/download/">Python</a></li>
+<li><a href="https://de.mathworks.com">Matlab</a></li>
+<li><a href="https://www.gnu.org/software/octave/">Gnu Octave</a></li>
+<li><a href="http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html">Command-line tools</a></li>
+</ul>
+</section>
+<section id="schaltungssimulation-spice" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="schaltungssimulation-spice"><span class="header-section-number">1.2</span> Schaltungssimulation (SPICE)</h2>
+<ul>
+<li><a href="http://www.linear.com/designtools/software/">LTspice Linear Technology</a></li>
+<li><a href="http://ngspice.sourceforge.net">ngspice (open-source)</a></li>
+<li><a href="https://eda.sw.siemens.com/en-US/eldo/">ELDO (Siemens EDA)</a></li>
+<li><a href="https://www.cadence.com/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation/spectre-simulation-platform.html">Spectre (cadence)</a></li>
+<li><a href="https://www.synopsys.com/implementation-and-signoff/ams-simulation/primesim-hspice.html">PrimeSim HSPICE (SYNOPSIS)</a></li>
+</ul>
+</section>
+<section id="betriebssystem-os---werkzeuge-tools" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="betriebssystem-os---werkzeuge-tools"><span class="header-section-number">1.3</span> Betriebssystem (OS) - Werkzeuge (Tools)</h2>
+<ul>
+<li><a href="https://de.wikipedia.org/wiki/Secure_Shell">SSH (Secure Shell)</a></li>
+<li><a href="https://github.com/microsoft/terminal">Microsoft-Terminal</a></li>
+<li><a href="https://learn.microsoft.com/de-de/powershell/scripting/learn/ps101/01-getting-started?view=powershell-7.4">Microsoft-PowerShell</a></li>
+<li><a href="https://iterm2.com">MacOS-Terminal</a></li>
+<li><a href="https://ohmyz.sh">Linux/MacOS zsh-tools</a></li>
+<li><a href="https://bash-it.readthedocs.io/en/latest/">Linux/MacOS bash-it</a></li>
+<li><a href="https://git-scm.com">Git (Versionskontrolle)</a></li>
+<li><a href="https://tortoisegit.org/">TortoiseGit – Windows Shell Interface to Git</a></li>
+</ul>
+</section>
+<section id="code-editoren" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="code-editoren"><span class="header-section-number">1.4</span> Code Editoren</h2>
+<ul>
+<li><a href="https://code.visualstudio.com">Visual Studio Code</a></li>
+<li><a href="https://notepad-plus-plus.org">Notepad++</a> (Windows)</li>
+<li><a href="https://www.gnu.org/software/emacs/">Emacs</a><br>
+</li>
+<li><a href="https://www.vim.org">Vim</a></li>
+</ul>
+</section>
+<section id="datenverarbeitung-data-sciences" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="datenverarbeitung-data-sciences"><span class="header-section-number">1.5</span> Datenverarbeitung / Data Sciences</h2>
+<section id="dateisystem-journaled-file-system" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="dateisystem-journaled-file-system"><span class="header-section-number">1.5.1</span> Dateisystem / Journaled File System</h3>
+<ul>
+<li>Ordner / Directories</li>
+<li>Dateien / Files</li>
+</ul>
+</section>
+<section id="tabellenformate-rectangular-data" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="tabellenformate-rectangular-data"><span class="header-section-number">1.5.2</span> Tabellenformate / Rectangular Data</h3>
+<ul>
+<li>Comma-Separated-Values (CSV), Tab-Separated-Values (TSV)</li>
+<li><a href="https://github.com/wireservice/csvkit">wireservice/csvkit: A suite of utilities for converting to and working with CSV, the king of tabular file formats.</a></li>
+<li><a href="https://github.com/johnkerl/miller">johnkerl/miller: Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON</a></li>
+<li>Spreadsheet (.xlsx, .ods)</li>
+<li><a href="https://github.com/apache/iceberg?tab=readme-ov-file">apache/iceberg: Apache Iceberg</a></li>
+<li><a href="https://github.com/apache/iceberg-python">apache/iceberg-python: Apache PyIceberg</a></li>
+</ul>
+</section>
+<section id="serialisation" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="serialisation"><span class="header-section-number">1.5.3</span> <a href="https://en.wikipedia.org/wiki/Serialization">Serialisation</a></h3>
+<ul>
+<li><a href="https://docs.python-guide.org/scenarios/serialization/">Data Serialization — The Hitchhiker’s Guide to Python</a></li>
+<li><a href="https://www.json.org/json-en.html">JSON</a></li>
+<li><a href="https://msgpack.org/">MessagePack: It’s like JSON. but fast and small.</a></li>
+</ul>
+</section>
+<section id="spezielle-formate-data-frames" class="level3" data-number="1.5.4">
+<h3 data-number="1.5.4" class="anchored" data-anchor-id="spezielle-formate-data-frames"><span class="header-section-number">1.5.4</span> Spezielle Formate / Data Frames</h3>
+<ul>
+<li><a href="https://www.adventuresinmachinelearning.com/mastering-python-dictionaries-efficient-data-storage-and-retrieval/">Mastering Python Dictionaries: Efficient Data Storage and Retrieval - Adventures in Machine Learning</a></li>
+<li><a href="https://de.mathworks.com/help/matlab/import_export/mat-file-versions.html">MAT-File Versions - MATLAB &amp; Simulink - MathWorks Deutschland</a></li>
+<li><a href="https://www.hdfgroup.org/2018/06/15/hdf5-or-how-i-learned-to-love-data-compression-and-partial-i-o/">HDF5 Or How I Learned To Love Data Compression And Partial I/O</a></li>
+<li><a href="https://www.databricks.com/de/glossary/what-is-parquet">Was ist Apache Parquet?</a></li>
+<li><a href="https://arrow.apache.org/docs/python/feather.html">Feather File Format</a></li>
+<li><a href="https://github.com/pola-rs/polars">pola-rs/polars: Dataframes powered by a multithreaded, vectorized query engine</a></li>
+<li><a href="https://github.com/ibis-project/ibis">ibis-project/ibis: Portable Python dataframe library</a></li>
+</ul>
+</section>
+<section id="embedded-db-engines" class="level3" data-number="1.5.5">
+<h3 data-number="1.5.5" class="anchored" data-anchor-id="embedded-db-engines"><span class="header-section-number">1.5.5</span> Embedded <a href="https://db-engines.com">DB-Engines</a></h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/SQL">SQL</a>, z.B. <a href="https://en.wikipedia.org/wiki/SQLite">SQLite</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Online_analytical_processing">OLAP</a>, z.B. <a href="https://duckdb.org/why_duckdb">DuckDB</a></li>
+</ul>
+</section>
+</section>
+<section id="schreibst-du-noch-oder-texst-du-schon" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="schreibst-du-noch-oder-texst-du-schon"><span class="header-section-number">1.6</span> Schreibst Du noch oder TeXst Du schon?</h2>
+<ul>
+<li><a href="https://miktex.org/">MikTeX (Windows, MacOS, Linux)</a></li>
+<li><a href="https://www.tug.org/mactex/">MacTeX (MacOS)</a></li>
+<li><a href="http://tug.org/texlive/">TeXLive (Linux)</a></li>
+</ul>
+</section>
+<section id="latex-editoren" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="latex-editoren"><span class="header-section-number">1.7</span> LaTeX Editoren</h2>
+<ul>
+<li>IDE’s
+<ul>
+<li><a href="http://www.texstudio.org">TeXStudio</a></li>
+<li><a href="http://www.xm1math.net/texmaker/">TeXMaker</a></li>
+<li><a href="http://www.tug.org/texworks/">TeXWorks</a></li>
+</ul></li>
+<li>Kollaborative Frameworks
+<ul>
+<li><a href="https://www.sharelatex.com/">ShareLaTeX, Online LaTeX</a></li>
+<li><a href="https://cocalc.com/doc/latex-editor.html">CoCalc - Online LaTeX</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="literaturverwaltung-und-latex" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="literaturverwaltung-und-latex"><span class="header-section-number">1.8</span> Literaturverwaltung und LaTeX</h2>
+<ul>
+<li><a href="https://www1.citavi.com/sub/manual5/de/exporting_to_bibtex.html">Citavi im Detail &gt; Titel exportieren &gt; Export nach BibTeX</a></li>
+<li><a href="https://unimelb.libguides.com/c.php?g=565734&amp;p=3912294">RefWorks - Library Guide Univ. Melbourne</a></li>
+<li><a href="https://nerdpause.de/benutzerdefinierte-bibtex-keys-mit-zotero/">Benutzerdefinierte BibTex-Keys mit Zotero | nerdpause</a></li>
+<li><a href="https://unimelb.libguides.com/c.php?g=565734&amp;p=3897117">JabRef - Library Guide Univ. Melbourne</a></li>
+<li><a href="https://unimelb.libguides.com/latexbibtex/endnote">EndNote - Library Guide Univ. Melbourne</a></li>
+</ul>
+</section>
+<section id="schöne-neue-welt" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="schöne-neue-welt"><span class="header-section-number">1.9</span> Schöne neue Welt</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/lec/lec-01-AMD@16nm@Jaguar.jpg" class="img-fluid figure-img"></p>
+<figcaption>AMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016</figcaption>
+</figure>
+</div>
+</section>
+<section id="halbleiterherstellung-infineon-dresden" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="halbleiterherstellung-infineon-dresden"><span class="header-section-number">1.10</span> Halbleiterherstellung (Infineon, Dresden)</h2>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/_Kj58yQ67KI" width="854" height="480" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="finfet-intel" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="finfet-intel"><span class="header-section-number">1.11</span> FinFET (Intel)</h2>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/_VMYPLXnd7E" width="854" height="480" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="tsmc-fab-next-gen-75-nm" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="tsmc-fab-next-gen-75-nm"><span class="header-section-number">1.12</span> TSMC Fab (Next Gen 7/5 nm)</h2>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/Hb1WDxSoSec" width="854" height="480" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="es-war-einmal" class="level2" data-number="1.13">
+<h2 data-number="1.13" class="anchored" data-anchor-id="es-war-einmal"><span class="header-section-number">1.13</span> Es war einmal …</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/lec/lec-01-vacuum_tube.png" class="img-fluid figure-img"></p>
+<figcaption>1906 die Elektronenröhre</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/lec/lec-01-1st_transistor.png" class="img-fluid figure-img"></p>
+<figcaption>1947 der erste Transistor, Bell Labs Foto</figcaption>
+</figure>
+</div>
+</section>
+<section id="damals-und-heute" class="level2" data-number="1.14">
+<h2 data-number="1.14" class="anchored" data-anchor-id="damals-und-heute"><span class="header-section-number">1.14</span> Damals und heute</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/lec/lec-01-1st_ic_kilby.png" class="img-fluid figure-img"></p>
+<figcaption>1958 Jack Kilby’s erster IC</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/lec/lec-01-modern_ic.png" class="img-fluid figure-img"></p>
+<figcaption>Moderner IC</figcaption>
+</figure>
+</div>
+</section>
+<section id="systemhierarchie" class="level2" data-number="1.15">
+<h2 data-number="1.15" class="anchored" data-anchor-id="systemhierarchie"><span class="header-section-number">1.15</span> Systemhierarchie</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/lec/lec-01-system_hierarchy.png" class="img-fluid figure-img"></p>
+<figcaption>Funktionsblöcke eines elektronischen Systems</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Nutzen Sie Hierarchien zur Beschreibung komplexer Systeme</p></li>
+<li><p>Teile und herrsche</p></li>
+</ul>
+</section>
+<section id="schnittstellen-zur-aussenwelt" class="level2" data-number="1.16">
+<h2 data-number="1.16" class="anchored" data-anchor-id="schnittstellen-zur-aussenwelt"><span class="header-section-number">1.16</span> Schnittstellen zur Aussenwelt</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/lec/lec-01-real_world_interface.png" class="img-fluid figure-img"></p>
+<figcaption>Interfacing</figcaption>
+</figure>
+</div>
+</section>
+<section id="meeting-mit-einem-system" class="level2" data-number="1.17">
+<h2 data-number="1.17" class="anchored" data-anchor-id="meeting-mit-einem-system"><span class="header-section-number">1.17</span> Meeting mit einem System</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/lec/lec-01-smartphone.png" class="img-fluid figure-img"></p>
+<figcaption>Drahtloses Kommunikationssystem</figcaption>
+</figure>
+</div>
+</section>
+<section id="system-in-a-package-sip" class="level2" data-number="1.18">
+<h2 data-number="1.18" class="anchored" data-anchor-id="system-in-a-package-sip"><span class="header-section-number">1.18</span> System in a Package (SiP)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/lec/lec-01-system_in_package.png" class="img-fluid figure-img"></p>
+<figcaption>Beschleunigungssensor</figcaption>
+</figure>
+</div>
+</section>
+<section id="sie-werden-unsere-experten" class="level2" data-number="1.19">
+<h2 data-number="1.19" class="anchored" data-anchor-id="sie-werden-unsere-experten"><span class="header-section-number">1.19</span> Sie werden unsere Experten</h2>
+<ul>
+<li><p>Hintergrundwissen</p>
+<ul>
+<li>Systemverständnis, Architektur, Herstellungsverfahren, Implementation</li>
+</ul></li>
+<li><p>Unterbewusste Kompetenz</p>
+<ul>
+<li>Abgespeicherte Erfahrungen aus Erfolgsgeschichten und Misserfolgen</li>
+</ul></li>
+<li><p>Spezialwissen</p>
+<ul>
+<li>Berufsspezifisches Wissen</li>
+</ul></li>
+<li><p>Teamwork Haltung</p>
+<ul>
+<li>Kommunikationsfähigkeit, Berichtswesen und technische Präsentation</li>
+</ul></li>
+<li><p>Kreativität</p></li>
+<li><p>Tool-Kenntnisse</p></li>
+</ul>
+</section>
+<section id="lernziele-des-moduls" class="level2" data-number="1.20">
+<h2 data-number="1.20" class="anchored" data-anchor-id="lernziele-des-moduls"><span class="header-section-number">1.20</span> Lernziele des Moduls</h2>
+<ul>
+<li><p>Elektrische Systeme mathematisch und graphisch im Zeit- und Frequenzbereich beschreiben</p></li>
+<li><p>Netzwerkanalyse mit RLC-Gliedern</p></li>
+<li><p>Spezielle Netzwerke, wie Messbrücken, Schwingkreise und ideale Transformatoren, dimensionieren.</p></li>
+</ul>
+</section>
+<section id="seminaristischer-unterricht" class="level2" data-number="1.21">
+<h2 data-number="1.21" class="anchored" data-anchor-id="seminaristischer-unterricht"><span class="header-section-number">1.21</span> Seminaristischer Unterricht</h2>
+<ul>
+<li><p>Komplexe Wechselstromrechnung</p></li>
+<li><p>Diskrete Bauelemente und ihre Modellierung (RLC)</p></li>
+<li><p>Methodik der Netzwerkanalyse</p></li>
+<li><p>Anwendungsbeispiele mit EDA-Werkzeugen und wissenschaftliches Rechnen (Scientific Computing)</p></li>
+</ul>
+</section>
+<section id="beschreibung-elektrotechnischer-systeme" class="level2" data-number="1.22">
+<h2 data-number="1.22" class="anchored" data-anchor-id="beschreibung-elektrotechnischer-systeme"><span class="header-section-number">1.22</span> Beschreibung elektrotechnischer Systeme</h2>
+<ul>
+<li><p>verschiedene Stufen der Vereinfachung</p></li>
+<li><p>Felder / Wellen / Optik / HF-Technik</p>
+<ul>
+<li>Maxwell-Gleichungen <span class="math display">\[
+\begin{align}
+\oint \mathbf{H} d\mathbf{s} &amp;= \iint \mathbf{J} + \dot{D} d\mathbf{A} \\
+\oint \mathbf{E} d\mathbf{s} &amp;= - \iint \dot{B} d\mathbf{A}
+\end{align}
+\]</span></li>
+</ul></li>
+<li><p>bei lokaler Konzentration der Feldenergie <span class="math inline">\(\Rightarrow\)</span> quasi-statische Näherung</p></li>
+<li><p>Mikrowellentechnik / Leitungstechnik</p>
+<ul>
+<li>verteilte Schaltungen <span class="math inline">\(l\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(\rho\)</span></li>
+<li>Kopplung, Laufzeit <span class="math inline">\(\tau = a/v\)</span></li>
+</ul></li>
+<li><p><em>kleine</em> Systeme mit <span class="math inline">\(a &lt;&lt; \lambda\)</span> bzw. <em>kurze</em> Laufzeiten mit <span class="math inline">\(\tau &lt;&lt; T\)</span></p></li>
+<li><p>Regelungstechnik / Impulstechnik</p>
+<ul>
+<li>Ersatzschaltungen</li>
+<li>(Block-)Schaltbilder</li>
+</ul></li>
+<li><p>eingeschwungener Zustand</p></li>
+<li><p>NF-Technik</p>
+<ul>
+<li>stationär-periodische Signale</li>
+</ul></li>
+<li><p>Sinussignale</p></li>
+<li><p>Energietechnik</p>
+<ul>
+<li>monofrequente Signale <span class="math inline">\(U = Z \cdot I\)</span></li>
+</ul></li>
+<li><p>Frequenz <span class="math inline">\(f \rightarrow 0\)</span></p></li>
+<li><p>Gleichstromtechnik</p>
+<ul>
+<li>Ohmsches Gesetz <span class="math inline">\(U = R \cdot I\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="konzentrierte-schaltelemente" class="level2" data-number="1.23">
+<h2 data-number="1.23" class="anchored" data-anchor-id="konzentrierte-schaltelemente"><span class="header-section-number">1.23</span> Konzentrierte Schaltelemente</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Stromdichte
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{equation}
+\frac{\int E(r,t) ds}{\iint J(r,t) dA} = \frac{u(t)}{i(t)} \Rightarrow R
+\end{equation}
+\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Verschiebungsdichte
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{equation}
+\frac{\iint D(r,t) dA}{\int E(r,t) ds} = \frac{q(t)}{u(t)} \Rightarrow C
+\end{equation}
+\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Flußdichte
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{equation}
+\frac{\iint B(r,t) dA}{\oint H(r,t) ds} = \frac{u(t)}{i(t)} \Rightarrow L
+\end{equation}
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="harmonische-signale" class="level2" data-number="1.24">
+<h2 data-number="1.24" class="anchored" data-anchor-id="harmonische-signale"><span class="header-section-number">1.24</span> Harmonische Signale …</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+als Zeitfunktion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{equation}
+u(t) = \hat{U} \cos(\omega t + \phi)
+\end{equation}
+\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+als Zeiger / komplexe Grösse (Phasor)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{equation}
+U = \lvert \hat{U} \lvert e^{j \phi}
+\end{equation}
+\]</span></p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/mimeiners\.github\.io\/gel2\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link" aria-label="Unsyllabus">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Unsyllabus</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../lec/lec_02.html" class="pagination-link" aria-label="Netzwerkerregung">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Netzwerkerregung</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Grundlagen der Elektrotechnik 2 (GEL2), M. Meiners, HSB.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/gel2/edit/main/lec/lec_01.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

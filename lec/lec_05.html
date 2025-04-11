@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; Grafische Analysemethoden / Darstellungen im Frequenzbereich – Grundlagen der Elektrotechnik 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../lec/lec_06.html" rel="next">
+<link href="../lec/lec_04.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b7c2d8834e08b04a63bb76a724ffbcac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lec/lec_01.html">Seminar</a></li><li class="breadcrumb-item"><a href="../lec/lec_05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Grafische Analysemethoden / Darstellungen im Frequenzbereich</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Grundlagen der Elektrotechnik 2</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/mimeiners/gel2/" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="../Grundlagen-der-Elektrotechnik-2.epub" title="Download ePub" class="quarto-navigation-tool px-1" aria-label="Download ePub"><i class="bi bi-journal"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unsyllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Seminar</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Netzwerkerregung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Impedanz, Admittanz und Leistung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_05.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Grafische Analysemethoden / Darstellungen im Frequenzbereich</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Schwingkreise</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Netzwerkanalyse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spulen und Übertrager</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Hörsaalübungen</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tutorium</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_01_Einfuehrung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_02_Komplexe-Zahlen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_03_Periodische-Signale.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliography</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#bode-diagramm" id="toc-bode-diagramm" class="nav-link active" data-scroll-target="#bode-diagramm"><span class="header-section-number">5.1</span> Bode-Diagramm</a></li>
+  <li><a href="#übertragungsfaktor" id="toc-übertragungsfaktor" class="nav-link" data-scroll-target="#übertragungsfaktor"><span class="header-section-number">5.2</span> Übertragungsfaktor</a></li>
+  <li><a href="#angaben-in-db" id="toc-angaben-in-db" class="nav-link" data-scroll-target="#angaben-in-db"><span class="header-section-number">5.3</span> Angaben in dB</a>
+  <ul class="collapse">
+  <li><a href="#bode-diagramm-einer-rc-schaltung-hochpass" id="toc-bode-diagramm-einer-rc-schaltung-hochpass" class="nav-link" data-scroll-target="#bode-diagramm-einer-rc-schaltung-hochpass"><span class="header-section-number">5.3.1</span> Bode-Diagramm einer RC-Schaltung (Hochpass)</a></li>
+  </ul></li>
+  <li><a href="#nyquist-diagramm" id="toc-nyquist-diagramm" class="nav-link" data-scroll-target="#nyquist-diagramm"><span class="header-section-number">5.4</span> Nyquist-Diagramm</a>
+  <ul class="collapse">
+  <li><a href="#ortskurve-einer-rc-schaltung" id="toc-ortskurve-einer-rc-schaltung" class="nav-link" data-scroll-target="#ortskurve-einer-rc-schaltung"><span class="header-section-number">5.4.1</span> Ortskurve einer RC-Schaltung</a></li>
+  <li><a href="#inversion-von-ortskurven" id="toc-inversion-von-ortskurven" class="nav-link" data-scroll-target="#inversion-von-ortskurven"><span class="header-section-number">5.4.2</span> Inversion von Ortskurven</a></li>
+  </ul></li>
+  <li><a href="#rc-filter" id="toc-rc-filter" class="nav-link" data-scroll-target="#rc-filter"><span class="header-section-number">5.5</span> RC-Filter</a>
+  <ul class="collapse">
+  <li><a href="#rc-tiefpaß" id="toc-rc-tiefpaß" class="nav-link" data-scroll-target="#rc-tiefpaß"><span class="header-section-number">5.5.1</span> RC-Tiefpaß</a></li>
+  <li><a href="#rc-hochpaß" id="toc-rc-hochpaß" class="nav-link" data-scroll-target="#rc-hochpaß"><span class="header-section-number">5.5.2</span> RC-Hochpaß</a></li>
+  <li><a href="#rc-bandpaß" id="toc-rc-bandpaß" class="nav-link" data-scroll-target="#rc-bandpaß"><span class="header-section-number">5.5.3</span> RC-Bandpaß</a></li>
+  </ul></li>
+  <li><a href="#elementtransformation" id="toc-elementtransformation" class="nav-link" data-scroll-target="#elementtransformation"><span class="header-section-number">5.6</span> Elementtransformation</a></li>
+  <li><a href="#messbrücken" id="toc-messbrücken" class="nav-link" data-scroll-target="#messbrücken"><span class="header-section-number">5.7</span> Messbrücken</a>
+  <ul class="collapse">
+  <li><a href="#wheatstone-messbrücke-gleichstrommessbrücke" id="toc-wheatstone-messbrücke-gleichstrommessbrücke" class="nav-link" data-scroll-target="#wheatstone-messbrücke-gleichstrommessbrücke"><span class="header-section-number">5.7.1</span> Wheatstone-Messbrücke – Gleichstrommessbrücke</a></li>
+  <li><a href="#wechselstrommessbrücke" id="toc-wechselstrommessbrücke" class="nav-link" data-scroll-target="#wechselstrommessbrücke"><span class="header-section-number">5.7.2</span> Wechselstrommessbrücke</a></li>
+  <li><a href="#kapazitätsmessbrücke-nach-wien-wien-brücke" id="toc-kapazitätsmessbrücke-nach-wien-wien-brücke" class="nav-link" data-scroll-target="#kapazitätsmessbrücke-nach-wien-wien-brücke"><span class="header-section-number">5.7.3</span> Kapazitätsmessbrücke nach Wien – Wien-Brücke</a></li>
+  <li><a href="#wien-robinson-brücke-einfaches-frequenzmessgerät" id="toc-wien-robinson-brücke-einfaches-frequenzmessgerät" class="nav-link" data-scroll-target="#wien-robinson-brücke-einfaches-frequenzmessgerät"><span class="header-section-number">5.7.4</span> Wien-Robinson-Brücke – einfaches Frequenzmessgerät</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/main/lec/lec_05.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lec/lec_01.html">Seminar</a></li><li class="breadcrumb-item"><a href="../lec/lec_05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Grafische Analysemethoden / Darstellungen im Frequenzbereich</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Grafische Analysemethoden / Darstellungen im Frequenzbereich</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="bode-diagramm" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="bode-diagramm"><span class="header-section-number">5.1</span> Bode-Diagramm</h2>
+<p>“Unter Bode-Diagramm (engl. Bode plot) versteht man eine Darstellung von zwei Funktionsgraphen: Ein Graph zeigt den Betrag (Amplitudenverstärkung), der andere das Argument (die Phasenverschiebung) einer komplexwertigen Funktion in Abhängigkeit von der Frequenz. Diese Art der Darstellung ist nach Hendrik Wade Bode benannt, welcher diese Diagramme bei seinen Arbeiten in den Bell Laboratories in den 1930er Jahren benutzte.” <span class="citation" data-cites="wikipedia2021a">(<a href="../references.html#ref-wikipedia2021a" role="doc-biblioref"><strong>wikipedia2021a?</strong></a>)</span></p>
+</section>
+<section id="übertragungsfaktor" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="übertragungsfaktor"><span class="header-section-number">5.2</span> Übertragungsfaktor</h2>
+<p>Ist die Eingangsgröße <span class="math inline">\(x(t)\)</span> eines linearen Netzwerks eine sinusförmige Wechselgröße der Kreisfrequenz <span class="math inline">\(\omega\)</span>, in komplexer Schreibweise</p>
+<p><span class="math display">\[
+x(t) = \operatorname{Re}(\underline{\hat{X}} e^{j\omega t}) = \operatorname{Re}(\underline{X}),
+\]</span></p>
+<p>so gilt dies auch für die Ausgangsgröße</p>
+<p><span class="math display">\[
+y(t) = \operatorname{Re}(\underline{\hat{Y}} e^{j \omega t}) = \operatorname{Re}(\underline{Y}).
+\]</span></p>
+<p>Das Verhältnis</p>
+<p><span class="math display">\[
+\underline{H}(j\omega) = \frac{\underline{Y}}{\underline{X}}
+\]</span></p>
+<p>der komplexen Zeiger <span class="math inline">\(\underline{Y}\)</span> und <span class="math inline">\(\underline{X}\)</span> wird als <em>Übertragungsfaktor</em> des Netzwerks bezeichnet.</p>
+<p>Bezeichnet <span class="math inline">\(\underline{H}(j\omega)\)</span> ein Spannungsverhältnis, so spricht man auch von einem Spannungsübertragungsfaktor; dieser wird durch den Index <em>v</em> bzw. <em>u</em> kenntlich gemacht. Der Betrag von <span class="math inline">\(\underline{H}_v(j \omega)\)</span> bei der Frequenz <span class="math inline">\(f = \omega/2 \pi\)</span></p>
+<p><span class="math display">\[
+A_v(f) = \vert \underline{H}_v(j2 \pi f) \vert
+\]</span></p>
+<p>wird als Spannungsverstärkung bezeichnet.</p>
+<p>Ein Stromübertragungsfaktor – kenntlich gemacht durch den Index <em>i</em> – bezeichnet entsprechend ein Verhältnis (komplexer) Stromamplituden, während ein Leistungsübertragungsfaktor (Index <em>p</em>) ein Verhältnis zweier (komplexer) Leistungsamplituden bestimmt.</p>
+<p>Die Phase <span class="math inline">\(\varphi\)</span> des Übertragungsfaktors ist frequenzabhängig und errechnet sich aus Real- und Imaginärteil von <span class="math inline">\(\underline{H}\)</span> gemäß</p>
+<p><span class="math display">\[
+\varphi(\omega) = \arctan\left( \frac{\operatorname{Im}(\underline{H}(j \omega))}{\operatorname{Re}(\underline{H}(j \omega))} \right).
+\]</span></p>
+<p>Aus der Phasenverschiebung folgt die <em>Phasenlaufzeit</em></p>
+<p><span class="math display">\[
+t_{\varphi(\omega)} = \frac{\varphi(\omega)}{\omega};
+\]</span></p>
+<p>diese bestimmt die <em>Verzögerung</em>, die ein unendlich ausgedehntes sinusförmiges Signal der Kreisfrequenz <span class="math inline">\(\omega\)</span> beim Durchgang durch das lineare System erfährt. Die Einhüllende eines endlichen Wellenzugs wird dagegen um die <em>Gruppenlaufzeit</em></p>
+<p><span class="math display">\[
+t_g(\omega) = \frac{d\varphi}{d\omega}
+\]</span></p>
+<p>verzögert.</p>
+</section>
+<section id="angaben-in-db" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="angaben-in-db"><span class="header-section-number">5.3</span> Angaben in dB</h2>
+<p>Der Wert von Spannungs-, Strom- und Leistungsverstärkungen wird häufig als sog. Verstärkungsmaß <span class="math inline">\(a\)</span> in (deziBel) dB angegeben. Bei Spannungs- und Stromverstärkungen wird hierzu der (Zehner-)Logarithmus von <span class="math inline">\(A(f)\)</span> mit 20 dB multipliziert. Dies führt im Fall der <em>Spannungsverstärkung</em> auf</p>
+<p><span class="math display">\[
+a_v(f) = 20\,dB \cdot \log(A_v(f))
+\]</span></p>
+<p>bzw. im Fall der <em>Stromverstärkung</em> <span class="math inline">\(A_i(f) = \vert H_i(j2 \pi f)\vert\)</span> auf</p>
+<p><span class="math display">\[
+a_i(f) = 20\,dB \cdot \log(A_i(f)).
+\]</span></p>
+<p>Da <span class="math inline">\(\log(1) = 0\)</span> gilt, liegt allgemein für <span class="math inline">\(a(f) &gt; 0\,dB\)</span> Verstärkung vor, für <span class="math inline">\(a(f) &lt; 0\,dB\)</span> Abschwächung.</p>
+<p>Soll eine Leistungsverstärkung in dB ausgedrückt werden, so ist der Logarithmus der Leistungsverstärkung <span class="math inline">\(G_p(f) = P_2/P_1\)</span> mit 10 dB zu multiplizieren.</p>
+<p><span class="math display">\[
+a_p(f) = 10\,dB \cdot \log(G_p(f)).
+\]</span></p>
+<p>Dabei bezeichnen <span class="math inline">\(P_1\)</span> und <span class="math inline">\(P_2\)</span> die Effektivwerte der vom System aufgenommenen bzw. abgegebenen Wirkleistung. Der Hintergrund für den gegenüber <span class="math inline">\(a_v\)</span> und <span class="math inline">\(a_i\)</span> halbierten “Vorfaktor” von 10 dB ist, daß die Leistung proportional zum Quadrat von Spannungs- bzw. Stromamplitude ist.</p>
+<p>Die “Einheit” dB wird für relative Pegelangaben verwendet, d.h. für die Angabe von Verhältnissen. Daneben werden aber auch absolute Pegelangaben in dB vorgenommen, wobei eine feste Bezugsgröße vorgegeben wird. Erwähnt werden soll hier die gebräuchliche “Einheit” dBm, die für Leistungsangaben verwendet wird und den Effektivwert <span class="math inline">\(P\)</span> der Leistung bezogen auf 1 mW angibt <span class="math inline">\(P\)</span> in dBm = <span class="math inline">\(10\,dB \log(P/1\,mW)\)</span>.</p>
+<section id="bode-diagramm-einer-rc-schaltung-hochpass" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="bode-diagramm-einer-rc-schaltung-hochpass"><span class="header-section-number">5.3.1</span> Bode-Diagramm einer RC-Schaltung (Hochpass)</h3>
+<p>Ermitteln Sie den Betrags- und Phasengang der einfachen RC-Schaltung mit Hilfe der komplexen Wechselstromrechnung (KWR). Nutzen Sie Python und SPICE zur Darstellung des Bode-Diagramms.</p>
+<div id="5fe455e9" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Spezifikation der Impedanz/Admittanz</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">2e3</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="fl">156e-9</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Frequenzvektor</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> np.logspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>f</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Bestimmung der Impedaanzen</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Z1 <span class="op">=</span> R</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Z2 <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(<span class="ot">1j</span><span class="op">*</span>w<span class="op">*</span>C)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Spannungsuebertrangungsfunktion</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>H_u <span class="op">=</span> Z1 <span class="op">/</span> (Z1 <span class="op">+</span> Z2)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Bode-Diagramm</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, <span class="dv">20</span><span class="op">*</span>np.log10(np.<span class="bu">abs</span>(H_u)))</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'$\vert H_u \vert$/dB'</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Bode-Diagramm einer RC-Schaltung'</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, np.angle(H_u))</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'Frequenz f/Hz'</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'arg($H_u$)/rad'</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="nyquist-diagramm" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="nyquist-diagramm"><span class="header-section-number">5.4</span> Nyquist-Diagramm</h2>
+<p>“Ein Nyquist-Diagramm, auch als Nyquist-Graph oder Nyquist-Plot bezeichnet, stellt die Ortskurve der Ausgangsgröße eines Regelkreises mit der Frequenz als Parameter dar. Es wird in der Regelungstechnik, Verstärkerkonstruktion und Signalaufbereitung verwendet, um die Stabilität eines Systems mit Rückkopplung zu beschreiben. Benannt ist es nach dem schwedisch-amerikanischen Physiker Harry Nyquist.” <span class="citation" data-cites="wikipedia2023">(<a href="../references.html#ref-wikipedia2023" role="doc-biblioref">Wikipedia 2023</a>)</span></p>
+<p>“Passive lineare Schaltungen mit R, L und C an sinusförmigen Signalen sind durch ihre Impedanz, dem Wechselstromwiderstand oder seinem Leitwert, der Admittanz charakterisierbar. Die Schaltungen bilden von der Frequenz abhängige Spannungsteiler, deren Spannungsverlauf im Amplitudenfrequenzgang grafisch darstellbar ist. Die Phasenlage des Ausgangssignals bezogen auf das Eingangssignal kann grafisch im Phasenfrequenzgang gezeigt werden. Beide Darstellungen bilden das komplette Bodediagramm.</p>
+<p>Bei gegebenen Bauteilwerten kann für jede Frequenz die Impedanz Z berechnet und als Zeiger in ein Polarkoordinatensystem mit reeller und imaginärer Achse gezeichnet werden. Entsprechend den Achsenparametern gibt die Zeigerlänge dann die Impedanz, Admittanz, Ausgangsspannung oder den Ausgangsstrom an. Die Phasenlage ist durch den Winkel des Zeigers mit der reellen Achse bestimmt.</p>
+<p>In der Elektronik beschreibt die Systemtheorie unter anderem das Übertragungsverhalten von Signalen. Eine hilfreiche Voraussetzung ist das Rechnen mit komplexen Größen sowie deren Darstellungen im Polarkoordinatensystem oder der [Einführung in die komplexe Gaußschen Zahlenebene. Die oben genannten komplexen Größen sind von den Bauteilwerten abhängig. Die Impedanz Z einer dimensionierten RC- oder RL-Reihenschaltung ist frequenzabhängig. Die Ortskurve ist die Verbindung der errechneten Impedanzwerte in der komplexen Ebene durch einen Kurvenzug mit der Frequenz als Parameter. Die Zeigerlänge vom Nullpunkt zum Kurvenpunkt auf der Ortskurve entspricht dem skalaren Impedanzwert der aktuellen Frequenz. Der Phasenwinkel bezogen auf die Re-Achse zählt linksdrehend positiv und rechtsdrehend negativ. Die Lote vom Zeigerendpunkt auf die Koordinatenachsen ergeben für die jeweilige Frequenz als Achsenabschnitte die Wirk- und Blindkomponente des Systems.”</p>
+<p>Entnommen aus Elektrophysik – Spezielle Grundlagen, <a href="https://elektroniktutor.de/elektrophysik/ortskurv.html">Ortskurve</a> <span class="citation" data-cites="mietke2024">(<a href="../references.html#ref-mietke2024" role="doc-biblioref">Mietke 2024</a>)</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Vergleich zum Zeigerdiagramm
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Zeigerdiagramm nur für konstante Parameter</p></li>
+<li><p>Im Zeigerdiagramm keine Aussagen über Auswirkungen von Änderungen der Frequenz oder Schaltelemente</p></li>
+<li><p>“Für jeden Wert der Zweipole <span class="math inline">\(R\)</span>, <span class="math inline">\(L\)</span>, und <span class="math inline">\(C\)</span> oder jede Frequenz müssten gesonderte Zeigerdiagramme erstellt werden.”</p></li>
+<li><p>“Man verzichtet auf die Darstellung der Zeiger und trägt in der komplexen Zahlenebene nur die Kurve auf.”</p></li>
+</ul>
+</div>
+</div>
+<section id="ortskurve-einer-rc-schaltung" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="ortskurve-einer-rc-schaltung"><span class="header-section-number">5.4.1</span> Ortskurve einer RC-Schaltung</h3>
+<p>Mit den Bauteilen <span class="math inline">\(R\)</span> = 2 k<span class="math inline">\(\Omega\)</span> und <span class="math inline">\(C\)</span> = 159 nF kann eine Reihen- oder Parallelschaltung gebildet werden. Die komplexe Impedanz der Reihenschaltung ist von der Frequenz abhängig und grafisch in der komplexen Ebene als Ortskurve mit der Frequenz als Parameter dargestellt. Die Blindwiderstandswerte wurden für einen bestimmten Frequenzbereich errechnet und im Polarkoordinatensystem eingetragen. Alle Werte liegen im 4. Quadranten auf einer Geraden. Da der ohmsche Widerstand ist von der Frequenz unabhängig ist, verläuft sie parallel zur imaginären Achse im Abstand von 2 k<span class="math inline">\(\Omega\)</span>. Auf die reelle (Re) Achse bezogen ist der Phasenwinkel der Impedanz negativ. Das Diagramm ist mit den angegebenen gerundeten Rechenwerten des Blindwiderstands, der Impedanz und des Phasenwinkels erstellt.</p>
+<div id="fig-lec5s2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec5s2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/lec/lec5s2.png" class="img-fluid figure-img" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5s2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5.1: RC-Schaltung für eine Ortskurve
+</figcaption>
+</figure>
+</div>
+<p><span class="math display">\[
+\underline{Z} = R_1 + \frac{1}{j \omega C_1}
+\]</span></p>
+<div id="11da78a2" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Spezifikation der Impedanz/Admittanz</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">2e3</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="fl">156e-9</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> np.linspace(<span class="fl">0.2e3</span>, <span class="fl">5e3</span>, <span class="dv">5</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>f</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> R <span class="op">+</span> <span class="dv">1</span><span class="op">/</span>(<span class="ot">1j</span><span class="op">*</span>w<span class="op">*</span>C)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Ortskurve der Impedanz</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>plt.plot(Z.real, Z.imag, <span class="st">'-x'</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'Re</span><span class="sc">{Z}</span><span class="vs">'</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'Im</span><span class="sc">{Z}</span><span class="vs">'</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>“Die Ortskurve kann auch für die Parallelschaltung von R und C mit der Frequenz als Parameter gezeichnet werden. Im Polardiagramm wird sie durch die Zeiger aller Gesamtleitwerte oder Admittanzen gebildet und verläuft im 1. Quadranten parallel zur imaginären Achse. Die Achsenbezeichnungen der Leitwerte werden in Siemens (S) angeben. Die Phasenwinkel sind auf die reelle (Re) Achse bezogen positiv.” <span class="citation" data-cites="mietke2024">(<a href="../references.html#ref-mietke2024" role="doc-biblioref">Mietke 2024</a>)</span></p>
+</section>
+<section id="inversion-von-ortskurven" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="inversion-von-ortskurven"><span class="header-section-number">5.4.2</span> Inversion von Ortskurven</h3>
+<p>“Bei der Konstruktion einer Ortskurve ist es oft notwendig von der Widerstandsform <span class="math inline">\(\underline{Z}(\omega)\)</span> auf die Leitwertsform <span class="math inline">\(\underline{Y}(\omega)\)</span> überzugehen und umgekehrt. Beide Funktionen gehen jeweils aus der Kehrwertbildung der anderen hervor, man nennt sie zueinander inverse Funktionen und die Kehrwertbildung selbst Inversion.” Kap. 5, <span class="citation" data-cites="buettner2014">(<a href="../references.html#ref-buettner2014" role="doc-biblioref">Büttner 2014</a>)</span></p>
+<p>Die Inversion der Ortskurve hat als Ergebnis die zur Ausgangsschaltung äquivalente Schaltung. Diese Umrechnung ist immer dann notwendig, wenn es sich um gemischte Reihen- und Parallelschaltungen wie bei T- und <span class="math inline">\(\Pi\)</span>-Filtern, belasteten Filtern und Schwingkreisen handelt.</p>
+<p>Die Ortskurven einfacher RC- und RL-Schaltungen verhalten sich wie folgt:</p>
+<ul>
+<li><p>Verläuft die Ortskurve der Impedanz oder Admittanz im 1. Quadranten, so befindet sich die dazu invertierte Ortskurve im 4. Quadranten.</p></li>
+<li><p>Die Ortskurve der Impedanz einer Reihenschaltung ist eine Parallele zur imaginären Achse im Abstand des ohmschen Widerstandswerts. Die invertierte Ortskurve der Admittanz ist ein im Nullpunkt endender Halbkreis mit dem Durchmesser des reellen Leitwerts.</p></li>
+<li><p>Die Ortskurve der Admittanz einer Parallelschaltung ist eine Parallele zur imaginären Achse im Abstand des reellen Leitwerts. Die invertierte Ortskurve der Impedanz ist ein im Nullpunkt endender Halbkreis mit dem Durchmesser des ohmschen Widerstandswerts.</p></li>
+<li><p>Inversion eines Punktes (Widerstandsform/Impedanz): <span class="math inline">\(\underline{Z} (5 + 5j) \Omega\)</span></p></li>
+<li><p>Ma{}stäbe <span class="math inline">\(M_Z = 2 \Omega/cm\)</span> und <span class="math inline">\(M_Y = 0.1 S/cm\)</span></p></li>
+<li><p>Leitwertform/Admittanz: <span class="math inline">\(\underline{Y} = 1 / \underline{Z}\)</span></p></li>
+</ul>
+<p><span class="math display">\[
+\underline{Y} = \frac{1}{(5 + 5j) \Omega} = \frac{(5 - 5j)S}{50} = (0.1 - 0.1j) S
+\]</span></p>
+<ul>
+<li>Inversion von Ortskuven durch Inversion einzelner Punkte:</li>
+</ul>
+<ol type="1">
+<li><p>In die komplexe Zahlenebene wird der Zeiger <span class="math inline">\(Z\)</span> eingetragen, dessen Spitze invertiert werden soll.</p></li>
+<li><p>Um den Ursprung des Koordinatensystems wird ein Inversionskreis mit beliebigem Radius <span class="math inline">\(r\)</span> geschlagen.</p></li>
+<li><p>Von der Spitze des Zeigers <span class="math inline">\(Z\)</span> aus werden Tangenten an den Kreis gelegt, sie ergeben die Berührungspunkte <span class="math inline">\(T_1\)</span> und <span class="math inline">\(T_2\)</span>. Die Tangentenpunkte kann man auch finden, wenn man um die Mitte des Zeigers einen Kreis mit dem Radius <span class="math inline">\(Z / 2\)</span>, d.h. einen Thaleskreis, schlägt (siehe <a href="https://de.wikipedia.org/wiki/Höhensatz">Höhensatz</a>).</p></li>
+<li><p>Die beiden Punkte <span class="math inline">\(T_1\)</span> und <span class="math inline">\(T_2\)</span> werden miteinander verbunden.</p></li>
+<li><p>Wo die Verbindungslinie den Zeiger <span class="math inline">\(Z\)</span> schneidet, liegt die Spitze des konjugiert komplexen Zeigers <span class="math inline">\(Y^*\)</span>.</p></li>
+<li><p>Spiegelt man den Zeiger <span class="math inline">\(Y^*\)</span> an der reellen Achse, so erhält man <span class="math inline">\(Y\)</span>. Die Spitze dieses Zeigers entspricht also der invertierten Spitze von <span class="math inline">\(Z\)</span>.</p></li>
+<li><p>Bezeichnet man die Maßstäbe für den komplexen Scheinwiderstand mit <span class="math inline">\(M_Z\)</span> und den Scheinleitwert mit <span class="math inline">\(M_Y\)</span> sowie die Länge des Zeigers <span class="math inline">\(Z\)</span> mit <span class="math inline">\(L_Z\)</span> und die der Zeiger <span class="math inline">\(Y\)</span> bzw. <span class="math inline">\(Y^*\)</span> mit <span class="math inline">\(L_Y^*\)</span> bzw. <span class="math inline">\(L_Y\)</span>, so ist – da das Dreieck 0T1P rechtwinklig ist – nach dem <a href="https://de.wikipedia.org/wiki/Satzgruppe_des_Pythagoras#Kathetensatz_des_Euklid">Kathetensatz</a></p></li>
+</ol>
+</section>
+</section>
+<section id="rc-filter" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="rc-filter"><span class="header-section-number">5.5</span> RC-Filter</h2>
+<section id="rc-tiefpaß" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="rc-tiefpaß"><span class="header-section-number">5.5.1</span> RC-Tiefpaß</h3>
+</section>
+<section id="rc-hochpaß" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="rc-hochpaß"><span class="header-section-number">5.5.2</span> RC-Hochpaß</h3>
+</section>
+<section id="rc-bandpaß" class="level3" data-number="5.5.3">
+<h3 data-number="5.5.3" class="anchored" data-anchor-id="rc-bandpaß"><span class="header-section-number">5.5.3</span> RC-Bandpaß</h3>
+<div id="fig-lec5bp" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec5bp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec5bp.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5bp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5.2: Bode-Diagramm eines Bandpasses
+</figcaption>
+</figure>
+</div>
+<p>“Besitzt ein Netzwerk sowohl bei hohen als auch bei tiefen Frequenzen einen Sperrbereich und bei mittleren Frequenzen einen Durchlaßbereich, so liegt ein Bandpaß vor. Der prinzipielle Verlauf der Spannungsverstärkung <span class="math inline">\(a_v\)</span> ist im Bode-Diagramm {numref}<code>fig:lec5bp</code> skizziert. Die Grenzen des Durchlaßbereichs werden nach unten durch die untere Grenzfrequenz <span class="math inline">\(f_{gu}\)</span> und nach oben durch die obere Grenzfrequenz <span class="math inline">\(f_{go}\)</span> bestimmt. Die Differenz <span class="math inline">\(B = f_{go} − f_{gu}\)</span> heißt Bandbreite (engl. bandwidth) des Bandpasses; das geometrische Mittel</p>
+<p><span class="math display">\[
+f_m = \sqrt{f_{gu} f_{go}}
+\]</span></p>
+<p>der beiden Grenzfrequenzen wird als Bandmittenfrequenz bezeichnet. Bei logarithmisch unterteilter Frequenzskala liegt <span class="math inline">\(f_m\)</span> genau in der Mitte zwischen <span class="math inline">\(f_{gu}\)</span> und <span class="math inline">\(f_{go}\)</span>. Ein Bandpaß heißt schmalbandig, falls <span class="math inline">\(B &lt;&lt; f_m\)</span> gilt; als Maß gilt die relative Bandbreite <span class="math inline">\(B/f_m\)</span>. Die Abschwächung des Signals bei der Bandmittenfrequenz wird als Einfügungsdämpfung bezeichnet.” <span class="citation" data-cites="reisch2007">(<a href="../references.html#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span></p>
+<p>“Die als <a href="https://www.elektroniktutor.de/analogtechnik/wien.html">Wien-Glied</a> bezeichnete Schaltung ist ein spezieller RC-Bandpass. Im Wien-Robinson-Generator bestimmt dieses Filter die Ausgangsfrequenz. Er generiert Sinusfrequenzen mit sehr geringem Klirrfaktor. Im durchstimmbaren Sinusgenerator sind die beiden Widerstände durch gemeinsam einstellbare Potentiometer ersetzt. Diese Anordnung gibt es auch in Wechselstrom-Brückenschaltungen.” {cite}<code>mietke2024</code></p>
+</section>
+</section>
+<section id="elementtransformation" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="elementtransformation"><span class="header-section-number">5.6</span> Elementtransformation</h2>
+<div id="fig-lec5ElemTransf" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec5ElemTransf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec5ElemTransf.pdf" class="img-fluid">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5ElemTransf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5.3: Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="deliyannis1998">(<a href="../references.html#ref-deliyannis1998" role="doc-biblioref">Deliyannis, Sun, und Fidler 1998</a>)</span></p>
+</section>
+<section id="messbrücken" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="messbrücken"><span class="header-section-number">5.7</span> Messbrücken</h2>
+<section id="wheatstone-messbrücke-gleichstrommessbrücke" class="level3" data-number="5.7.1">
+<h3 data-number="5.7.1" class="anchored" data-anchor-id="wheatstone-messbrücke-gleichstrommessbrücke"><span class="header-section-number">5.7.1</span> Wheatstone-Messbrücke – Gleichstrommessbrücke</h3>
+<p>Zwei mögliche Messverfahren:</p>
+<ol type="1">
+<li><p>Ausschlagverfahren Brückenspannung <span class="math inline">\(U_D\)</span> wird mit hochohmigem Messinstrument gemessen.</p></li>
+<li><p>Abgleich- oder Nullverfahren Brückenspannung <span class="math inline">\(U_D\)</span> wird zu Null abgeglichen.</p></li>
+</ol>
+</section>
+<section id="wechselstrommessbrücke" class="level3" data-number="5.7.2">
+<h3 data-number="5.7.2" class="anchored" data-anchor-id="wechselstrommessbrücke"><span class="header-section-number">5.7.2</span> Wechselstrommessbrücke</h3>
+<ul>
+<li>Abgleichbedingung</li>
+</ul>
+<p><span class="math display">\[
+\underline{Z}_1 \underline{Z}_4 = \underline{Z}_2 \underline{Z}_3
+\]</span></p>
+<ul>
+<li>Zerlegung in Betrag und Phase</li>
+</ul>
+<p><span class="math display">\[
+\vert\underline{Z}_1\vert \vert\underline{Z}_4\vert = \vert\underline{Z}_2\vert \vert\underline{Z}_3\vert \\
+\varphi_1 + \varphi_4 = \varphi_2 + \varphi_3
+\]</span></p>
+<ul>
+<li>Zerlegung in Real- und Imaginärteil</li>
+</ul>
+<p><span class="math display">\[
+R_1 R_4 - X_1 X_4 = R_2 R_3 - X_2 X_3 \\
+X_1 R_4 + R_1 X_4 = X_2 R_3 + R_2 X_3
+\]</span></p>
+<ul>
+<li>zwei Bedingungen <span class="math inline">\(\Rightarrow\)</span> zwei abgleichbare Elemente</li>
+</ul>
+</section>
+<section id="kapazitätsmessbrücke-nach-wien-wien-brücke" class="level3" data-number="5.7.3">
+<h3 data-number="5.7.3" class="anchored" data-anchor-id="kapazitätsmessbrücke-nach-wien-wien-brücke"><span class="header-section-number">5.7.3</span> Kapazitätsmessbrücke nach Wien – Wien-Brücke</h3>
+</section>
+<section id="wien-robinson-brücke-einfaches-frequenzmessgerät" class="level3" data-number="5.7.4">
+<h3 data-number="5.7.4" class="anchored" data-anchor-id="wien-robinson-brücke-einfaches-frequenzmessgerät"><span class="header-section-number">5.7.4</span> Wien-Robinson-Brücke – einfaches Frequenzmessgerät</h3>
+<p><span class="citation" data-cites="wikipedia2019a">(<a href="../references.html#ref-wikipedia2019a" role="doc-biblioref"><strong>wikipedia2019a?</strong></a>)</span> <span class="citation" data-cites="hewlett1942">(<a href="../references.html#ref-hewlett1942" role="doc-biblioref">Hewlett 1942</a>)</span></p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-buettner2014" class="csl-entry" role="listitem">
+Büttner, Wolf-Ewald. 2014. <em>Grundlagen der Elektrotechnik 2</em>. <span>OLDENBOURG</span> <span>WISSENSCHAFTSVERLAG</span>. <a href="https://doi.org/10.1524/9783110371796">https://doi.org/10.1524/9783110371796</a>.
+</div>
+<div id="ref-deliyannis1998" class="csl-entry" role="listitem">
+Deliyannis, T., Yichuang Sun, und J. K. Fidler. 1998. <em>Continuous-Time Active Filter Design</em>. CRC Press. <a href="https://doi.org/10.1201/9781439821879">https://doi.org/10.1201/9781439821879</a>.
+</div>
+<div id="ref-hewlett1942" class="csl-entry" role="listitem">
+Hewlett, W. R. 1942. <span>„Variable Frequency Oscillation Generator“</span>. U.S. Patent Office No. 2,268,872. <a href="https://de.wikipedia.org/wiki/Wien-Robinson-Brücke">https://de.wikipedia.org/wiki/Wien-Robinson-Brücke</a>.
+</div>
+<div id="ref-mietke2024" class="csl-entry" role="listitem">
+Mietke, Detlef. 2024. <span>„Elektroniktutor“</span>. Techreport. Oberstufenzentrum f<span>ü</span>r Kommunikations-, Informations- und Medientechnik (OSZ-KIM), Berlin; online. <a href="https://www.elektroniktutor.de">https://www.elektroniktutor.de</a>.
+</div>
+<div id="ref-reisch2007" class="csl-entry" role="listitem">
+Reisch, Michael. 2007. <em>Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE</em>. 2. Aufl. Springer. <a href="https://doi.org/10.1007/978-3-540-34015-7">https://doi.org/10.1007/978-3-540-34015-7</a>.
+</div>
+<div id="ref-wikipedia2023" class="csl-entry" role="listitem">
+Wikipedia. 2023. <span>„Ortskurve (Systemtheorie) — Wikipedia<span>,</span> die freie Enzyklopädie“</span>. <a href="https://de.wikipedia.org/w/index.php?title=Ortskurve_(Systemtheorie)&amp;oldid=237346128">https://de.wikipedia.org/w/index.php?title=Ortskurve_(Systemtheorie)&amp;oldid=237346128</a>.
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/mimeiners\.github\.io\/gel2\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../lec/lec_04.html" class="pagination-link" aria-label="Impedanz, Admittanz und Leistung">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Impedanz, Admittanz und Leistung</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../lec/lec_06.html" class="pagination-link" aria-label="Schwingkreise">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Schwingkreise</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Grundlagen der Elektrotechnik 2 (GEL2), M. Meiners, HSB.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/main/lec/lec_05.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

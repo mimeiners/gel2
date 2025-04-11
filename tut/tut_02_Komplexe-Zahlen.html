@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>11&nbsp; Komplexe Zahlen – Grundlagen der Elektrotechnik 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../tut/tut_03_Periodische-Signale.html" rel="next">
+<link href="../tut/tut_01_Einfuehrung.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b7c2d8834e08b04a63bb76a724ffbcac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_02_Komplexe-Zahlen.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Grundlagen der Elektrotechnik 2</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/mimeiners/gel2/" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="../Grundlagen-der-Elektrotechnik-2.epub" title="Download ePub" class="quarto-navigation-tool px-1" aria-label="Download ePub"><i class="bi bi-journal"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unsyllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Seminar</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Netzwerkerregung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Impedanz, Admittanz und Leistung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Grafische Analysemethoden / Darstellungen im Frequenzbereich</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Schwingkreise</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Netzwerkanalyse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spulen und Übertrager</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Hörsaalübungen</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tutorium</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_01_Einfuehrung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_02_Komplexe-Zahlen.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_03_Periodische-Signale.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliography</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#die-imaginäre-einheit" id="toc-die-imaginäre-einheit" class="nav-link active" data-scroll-target="#die-imaginäre-einheit"><span class="header-section-number">11.1</span> Die imaginäre Einheit</a></li>
+  <li><a href="#aufbau-komplexer-zahlen" id="toc-aufbau-komplexer-zahlen" class="nav-link" data-scroll-target="#aufbau-komplexer-zahlen"><span class="header-section-number">11.2</span> Aufbau komplexer Zahlen</a></li>
+  <li><a href="#rechenoperationen" id="toc-rechenoperationen" class="nav-link" data-scroll-target="#rechenoperationen"><span class="header-section-number">11.3</span> Rechenoperationen</a>
+  <ul class="collapse">
+  <li><a href="#addition-von-komplexen-zahlen" id="toc-addition-von-komplexen-zahlen" class="nav-link" data-scroll-target="#addition-von-komplexen-zahlen"><span class="header-section-number">11.3.1</span> Addition von komplexen Zahlen</a></li>
+  <li><a href="#subtraktion-von-komplexen-zahlen" id="toc-subtraktion-von-komplexen-zahlen" class="nav-link" data-scroll-target="#subtraktion-von-komplexen-zahlen"><span class="header-section-number">11.3.2</span> Subtraktion von komplexen Zahlen</a></li>
+  <li><a href="#betrag-einer-komplexen-zahl" id="toc-betrag-einer-komplexen-zahl" class="nav-link" data-scroll-target="#betrag-einer-komplexen-zahl"><span class="header-section-number">11.3.3</span> Betrag einer komplexen Zahl</a></li>
+  <li><a href="#phasenwinkel-einer-komplexen-zahl" id="toc-phasenwinkel-einer-komplexen-zahl" class="nav-link" data-scroll-target="#phasenwinkel-einer-komplexen-zahl"><span class="header-section-number">11.3.4</span> Phasenwinkel einer komplexen Zahl</a></li>
+  <li><a href="#eulersche-identität-und-polarkoordinaten" id="toc-eulersche-identität-und-polarkoordinaten" class="nav-link" data-scroll-target="#eulersche-identität-und-polarkoordinaten"><span class="header-section-number">11.3.5</span> Eulersche Identität und Polarkoordinaten</a></li>
+  <li><a href="#multiplikation-komplexer-zahlen" id="toc-multiplikation-komplexer-zahlen" class="nav-link" data-scroll-target="#multiplikation-komplexer-zahlen"><span class="header-section-number">11.3.6</span> Multiplikation komplexer Zahlen</a></li>
+  <li><a href="#division-komplexer-zahlen" id="toc-division-komplexer-zahlen" class="nav-link" data-scroll-target="#division-komplexer-zahlen"><span class="header-section-number">11.3.7</span> Division komplexer Zahlen</a></li>
+  <li><a href="#kehrwert-einer-komplexen-zahl" id="toc-kehrwert-einer-komplexen-zahl" class="nav-link" data-scroll-target="#kehrwert-einer-komplexen-zahl"><span class="header-section-number">11.3.8</span> Kehrwert einer komplexen Zahl</a></li>
+  <li><a href="#konjugiert-komplex" id="toc-konjugiert-komplex" class="nav-link" data-scroll-target="#konjugiert-komplex"><span class="header-section-number">11.3.9</span> Konjugiert-Komplex</a></li>
+  </ul></li>
+  <li><a href="#übungen" id="toc-übungen" class="nav-link" data-scroll-target="#übungen"><span class="header-section-number">11.4</span> Übungen</a>
+  <ul class="collapse">
+  <li><a href="#aufgabe-2.1" id="toc-aufgabe-2.1" class="nav-link" data-scroll-target="#aufgabe-2.1"><span class="header-section-number">11.4.1</span> Aufgabe 2.1</a></li>
+  <li><a href="#aufgabe-2.2" id="toc-aufgabe-2.2" class="nav-link" data-scroll-target="#aufgabe-2.2"><span class="header-section-number">11.4.2</span> Aufgabe 2.2</a></li>
+  <li><a href="#aufgabe-2.3" id="toc-aufgabe-2.3" class="nav-link" data-scroll-target="#aufgabe-2.3"><span class="header-section-number">11.4.3</span> Aufgabe 2.3</a></li>
+  <li><a href="#aufgabe-2.4" id="toc-aufgabe-2.4" class="nav-link" data-scroll-target="#aufgabe-2.4"><span class="header-section-number">11.4.4</span> Aufgabe 2.4</a></li>
+  <li><a href="#aufgabe-2.5" id="toc-aufgabe-2.5" class="nav-link" data-scroll-target="#aufgabe-2.5"><span class="header-section-number">11.4.5</span> Aufgabe 2.5</a></li>
+  <li><a href="#aufgabe-2.6" id="toc-aufgabe-2.6" class="nav-link" data-scroll-target="#aufgabe-2.6"><span class="header-section-number">11.4.6</span> Aufgabe 2.6</a></li>
+  <li><a href="#aufgabe-2.7" id="toc-aufgabe-2.7" class="nav-link" data-scroll-target="#aufgabe-2.7"><span class="header-section-number">11.4.7</span> Aufgabe 2.7</a></li>
+  <li><a href="#aufgabe-2.8" id="toc-aufgabe-2.8" class="nav-link" data-scroll-target="#aufgabe-2.8"><span class="header-section-number">11.4.8</span> Aufgabe 2.8</a></li>
+  <li><a href="#aufgabe-2.9" id="toc-aufgabe-2.9" class="nav-link" data-scroll-target="#aufgabe-2.9"><span class="header-section-number">11.4.9</span> Aufgabe 2.9</a></li>
+  <li><a href="#aufgabe-2.10" id="toc-aufgabe-2.10" class="nav-link" data-scroll-target="#aufgabe-2.10"><span class="header-section-number">11.4.10</span> Aufgabe 2.10</a></li>
+  <li><a href="#aufgabe-2.11" id="toc-aufgabe-2.11" class="nav-link" data-scroll-target="#aufgabe-2.11"><span class="header-section-number">11.4.11</span> Aufgabe 2.11</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/main/tut/tut_02_Komplexe-Zahlen.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_02_Komplexe-Zahlen.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<ul>
+<li>imaginäre Einheit</li>
+<li>Aufbau komplexer Zahlen</li>
+<li>Addition</li>
+<li>Subtraktion</li>
+<li>Betrag einer komplexen Zahl</li>
+<li>Polarkoordinaten</li>
+<li>Multiplikation</li>
+<li>Division</li>
+<li>Kehrwert</li>
+<li>Konjugiert-Komplex</li>
+</ul>
+<section id="die-imaginäre-einheit" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="die-imaginäre-einheit"><span class="header-section-number">11.1</span> Die imaginäre Einheit</h2>
+<p>Die imaginäre Einheit j ist definiert als:</p>
+<p><span class="math display">\[j^2 = -1\]</span></p>
+<p>Für höhere Potenzen von j erhält man:</p>
+<p><span class="math display">\[j^2 = -1\]</span></p>
+<p><span class="math display">\[j^3 = -j\]</span></p>
+<p><span class="math display">\[j^4 = 1\]</span></p>
+<p><span class="math display">\[j^5 = j\]</span></p>
+<p><span class="math display">\[j^6 = -1\]</span> usw.</p>
+</section>
+<section id="aufbau-komplexer-zahlen" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="aufbau-komplexer-zahlen"><span class="header-section-number">11.2</span> Aufbau komplexer Zahlen</h2>
+<p>Komplexe Zahlen bestehen aus einem Real- und einem Imaginärteil. Sie werden durch einen Unterstrich gekennzeichnet. Ist der Buchstabe nicht unterstrichen, wird von dem Betrag der Komplexen Zahl geredet.</p>
+<p><span class="math display">\[\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\}\]</span></p>
+<p>In der Elektrotechnik wird zur Kennzeichnung des Imaginärteils oft der Buchstabe j anstelle des i verwendet, da das i für die Bezeichnung des Stromes vorhergesehen ist.</p>
+</section>
+<section id="rechenoperationen" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="rechenoperationen"><span class="header-section-number">11.3</span> Rechenoperationen</h2>
+<section id="addition-von-komplexen-zahlen" class="level3" data-number="11.3.1">
+<h3 data-number="11.3.1" class="anchored" data-anchor-id="addition-von-komplexen-zahlen"><span class="header-section-number">11.3.1</span> Addition von komplexen Zahlen</h3>
+<p>Zwei Komplexe Zahlen <span class="math inline">\(\underline{A}\)</span> und <span class="math inline">\(\underline{B}\)</span> werden addiert, indem ihre Real- und Imaginärteile getrennt voneinander addiert werden.</p>
+<p><span class="math display">\[
+\underline{A} + \underline{B} = Re\{\underline{A}\} + Re\{\underline{B}\} + j(Im\{\underline{A}\} + Im\{\underline{B}\})
+\]</span></p>
+</section>
+<section id="subtraktion-von-komplexen-zahlen" class="level3" data-number="11.3.2">
+<h3 data-number="11.3.2" class="anchored" data-anchor-id="subtraktion-von-komplexen-zahlen"><span class="header-section-number">11.3.2</span> Subtraktion von komplexen Zahlen</h3>
+<p>Zwei Komplexe Zahlen <span class="math inline">\(\underline{A}\)</span> und <span class="math inline">\(\underline{B}\)</span> werden subtrahiert, indem ihre Real- und Imaginärteile getrennt voneinander abgezogen werden.</p>
+<p><span class="math display">\[
+\underline{A} - \underline{B} = Re\{\underline{A}\} - Re\{\underline{B}\} + j(Im\{\underline{A}\} - Im\{\underline{B}\})
+\]</span></p>
+</section>
+<section id="betrag-einer-komplexen-zahl" class="level3" data-number="11.3.3">
+<h3 data-number="11.3.3" class="anchored" data-anchor-id="betrag-einer-komplexen-zahl"><span class="header-section-number">11.3.3</span> Betrag einer komplexen Zahl</h3>
+<p>Der Betrag einer komplexen Zahl <span class="math inline">\(\underline{A}\)</span> ist die Euklidische Länge des Vektors, wenn dieser zum Beispiel in einem Koordinatensystem gezeichnet ist. Der Betrag wird als <span class="math inline">\(|\underline{A}|\)</span> oder vereinfacht als A geschrieben.</p>
+<p><span class="math display">\[
+A = |\underline{A}| = \sqrt{Re\{\underline{A}\}^2 + Im\{\underline{A}\}^2}
+\]</span></p>
+</section>
+<section id="phasenwinkel-einer-komplexen-zahl" class="level3" data-number="11.3.4">
+<h3 data-number="11.3.4" class="anchored" data-anchor-id="phasenwinkel-einer-komplexen-zahl"><span class="header-section-number">11.3.4</span> Phasenwinkel einer komplexen Zahl</h3>
+<p><span class="math display">\[
+\varphi = arctan\left(\frac{Im\{\underline{A}\}}{Re\{\underline{A}\}}\right)
+\]</span></p>
+<p>Der Phasenwinkel wird überlicherweise von 0° bis 180° positiv (Zählweise CCW) und von 180° bis 360° negativ (Zählweise CW) angegeben.</p>
+</section>
+<section id="eulersche-identität-und-polarkoordinaten" class="level3" data-number="11.3.5">
+<h3 data-number="11.3.5" class="anchored" data-anchor-id="eulersche-identität-und-polarkoordinaten"><span class="header-section-number">11.3.5</span> Eulersche Identität und Polarkoordinaten</h3>
+<p>Komplexe Zahlen können auch als Polarkoordinaten über die Eulersche Identität beschrieben werden. Dabei setzt sich das aus Betrag und Phasenwinkel zusammen.</p>
+<p><span class="math display">\[
+\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\} = A \cdot e^{j\varphi}
+\]</span></p>
+<section id="eulersche-identität" class="level4" data-number="11.3.5.1">
+<h4 data-number="11.3.5.1" class="anchored" data-anchor-id="eulersche-identität"><span class="header-section-number">11.3.5.1</span> Eulersche Identität</h4>
+<p><span class="math display">\[
+e^{j\varphi} = cos(\varphi) + j \cdot sin(\varphi)
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tut/chap2/eulersche_identitaet.png" class="img-fluid figure-img"></p>
+<figcaption>zeigerbild_euler</figcaption>
+</figure>
+</div>
+<p>Die komplexe Zahl <span class="math inline">\(e^{j\varphi}\)</span> hat immer den Betrag 1 und den Phasenwinkel <span class="math inline">\(\varphi\)</span>.</p>
+</section>
+</section>
+<section id="multiplikation-komplexer-zahlen" class="level3" data-number="11.3.6">
+<h3 data-number="11.3.6" class="anchored" data-anchor-id="multiplikation-komplexer-zahlen"><span class="header-section-number">11.3.6</span> Multiplikation komplexer Zahlen</h3>
+<p>Die Multiplikation ist über die Polarkoordinaten einfacher. Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel addiert.</p>
+<p><span class="math display">\[
+\underline{A} \cdot \underline{B} = A \cdot B \cdot e^{j(\varphi_A + \varphi_B)}
+\]</span></p>
+</section>
+<section id="division-komplexer-zahlen" class="level3" data-number="11.3.7">
+<h3 data-number="11.3.7" class="anchored" data-anchor-id="division-komplexer-zahlen"><span class="header-section-number">11.3.7</span> Division komplexer Zahlen</h3>
+<p>Ähnlich zur Multiplikation wird bei der Division die Beträge dividiert und die Phasenwinkel subtrahiert.</p>
+<p><span class="math display">\[
+\frac{\underline{A}}{\underline{B}} = \frac{A}{B} \cdot e^{j(\varphi_A - \varphi_B)}
+\]</span></p>
+</section>
+<section id="kehrwert-einer-komplexen-zahl" class="level3" data-number="11.3.8">
+<h3 data-number="11.3.8" class="anchored" data-anchor-id="kehrwert-einer-komplexen-zahl"><span class="header-section-number">11.3.8</span> Kehrwert einer komplexen Zahl</h3>
+<p>Beim Kehrwert einer komplexen Zahl wird der Kehrwert des Betrages genommen und das Vorzeichen des Phasenwinkels invertiert.</p>
+<p><span class="math display">\[
+\frac{1}{\underline{A}} = \frac{1}{A} \cdot e^{-j\varphi}
+\]</span></p>
+</section>
+<section id="konjugiert-komplex" class="level3" data-number="11.3.9">
+<h3 data-number="11.3.9" class="anchored" data-anchor-id="konjugiert-komplex"><span class="header-section-number">11.3.9</span> Konjugiert-Komplex</h3>
+<p>Bei dem konjugiert-komplexen einer Zahl wird das Vorzeichen des Imaginärteils invertiert. Dadurch verändert sich der Betrag nicht, der Phasenwinkel wird allerdings auch invertiert.</p>
+<p><span class="math display">\[\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\}\]</span></p>
+<p><span class="math display">\[\underline{A}^* = Re\{\underline{A}\} - j \cdot Im\{\underline{A}\}\]</span></p>
+</section>
+</section>
+<section id="übungen" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="übungen"><span class="header-section-number">11.4</span> Übungen</h2>
+<section id="aufgabe-2.1" class="level3" data-number="11.4.1">
+<h3 data-number="11.4.1" class="anchored" data-anchor-id="aufgabe-2.1"><span class="header-section-number">11.4.1</span> Aufgabe 2.1</h3>
+<p><span class="math inline">\(\sqrt{-9} + \sqrt{-x^2} - \sqrt{-y^2} + \sqrt{-25}\)</span></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 2.1
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[3\sqrt{-1} + x\sqrt{-1} - y\sqrt{-1} + 5\sqrt{-1} = j3 + jx - jy + j5 = j(8 +x -y)\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2.2" class="level3" data-number="11.4.2">
+<h3 data-number="11.4.2" class="anchored" data-anchor-id="aufgabe-2.2"><span class="header-section-number">11.4.2</span> Aufgabe 2.2</h3>
+<ol type="a">
+<li><p><span class="math inline">\(\frac{3 j^3 \cdot 5 j^4}{6 j^{20}}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{1}{j^5} + \frac{1}{j^7}\)</span></p></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 2.2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math display">\[\frac{-j3 \cdot 5}{6 i^4} = \frac{-j15}{6} = -j2,5\]</span></p></li>
+<li><p><span class="math display">\[\frac{1}{j} + \frac{1}{-j} = -j + j = 0\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2.3" class="level3" data-number="11.4.3">
+<h3 data-number="11.4.3" class="anchored" data-anchor-id="aufgabe-2.3"><span class="header-section-number">11.4.3</span> Aufgabe 2.3</h3>
+<ol type="a">
+<li><p><span class="math inline">\((1 + 2j) - (-2 + 3j) + (-3 + j) - (5 + 4j) - (-1 + 9j) + (5 - 8j)\)</span></p></li>
+<li><p><span class="math inline">\((-2a + 3j) - (u - uj) + (-2a -3j) - (-u - vj)\)</span></p></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 2.3
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>1 - j21</p></li>
+<li><p>-4a + j(u + v)</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2.4" class="level3" data-number="11.4.4">
+<h3 data-number="11.4.4" class="anchored" data-anchor-id="aufgabe-2.4"><span class="header-section-number">11.4.4</span> Aufgabe 2.4</h3>
+<ol type="a">
+<li><p><span class="math inline">\((5 - 2j)(-3 + j)\)</span> (Ergebnis in kartesischer Form)</p></li>
+<li><p><span class="math inline">\(\left(3\sqrt{2} + 5\sqrt{3}j\right)\left(3\sqrt{2} - 5\sqrt{3}j\right)\)</span> (Ergebnis in kartesischer Form)</p></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 2.4
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>-13 + j11</p></li>
+<li><p>93</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2.5" class="level3" data-number="11.4.5">
+<h3 data-number="11.4.5" class="anchored" data-anchor-id="aufgabe-2.5"><span class="header-section-number">11.4.5</span> Aufgabe 2.5</h3>
+<ol type="a">
+<li><p><span class="math inline">\(\frac{3 + 4j}{2 + j}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{1}{\sqrt{5} - j}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{3j}{1 - j}\)</span></p></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 2.5
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(\frac{(3 + 4j)(2 - j)}{(2 + j)(2 - j)} = \frac{6 + 8j - 3j + 4}{4 + 1} = 2 + j\)</span></p></li>
+<li><p><span class="math inline">\(\frac{1(\sqrt{5} + j)}{(\sqrt{5} - j)(\sqrt{5} + j)} = \frac{\sqrt{5} + j}{5 + 1} = \frac{\sqrt{5}}{6} + j\frac{1}{6}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{3j(1 + j)}{(1 - j)(1 + j)} = \frac{-3 + 3j}{1 + 1}= -\frac{3}{2} + j\frac{3}{2}\)</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2.6" class="level3" data-number="11.4.6">
+<h3 data-number="11.4.6" class="anchored" data-anchor-id="aufgabe-2.6"><span class="header-section-number">11.4.6</span> Aufgabe 2.6</h3>
+<ol type="a">
+<li><p><span class="math inline">\(\frac{1 + j}{1 - j} + \frac{1 - j}{1 + j}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{1 - j}{1 + j} - \frac{1 + j}{1 - j}\)</span></p></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 2.6
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(\frac{1 + j}{1 - j} + \frac{1 - j}{1 + j} = \frac{(1 + j)^2 + (1 - j)^2}{(1 - j)(1  + j)} = \frac{1 + 2j - 1 + 1 -2j - 1}{1 + 1} = 0\)</span></p></li>
+<li><p><span class="math inline">\(\frac{(1 - j)^2 - (1 + j)^2}{(1 + j)(1 - j)} = \frac{1 - 2j - 1 - (1 + 2j - 1)}{1 + 1} = \frac{-4j}{2} = -2j\)</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2.7" class="level3" data-number="11.4.7">
+<h3 data-number="11.4.7" class="anchored" data-anchor-id="aufgabe-2.7"><span class="header-section-number">11.4.7</span> Aufgabe 2.7</h3>
+<p>In die Exponentialform umwandeln:</p>
+<ol type="a">
+<li><p><span class="math inline">\(0,5 - \sqrt{6}j\)</span></p></li>
+<li><p><span class="math inline">\(\sqrt{3} + \sqrt{3}j\)</span></p></li>
+<li><p>3 - 2j</p></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 2.7
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(2,5 \cdot e^{j \cdot 4,914}\)</span></p></li>
+<li><p><span class="math inline">\(2,45 \cdot e^{j \cdot \frac{\pi}{4}}\)</span></p></li>
+<li><p><span class="math inline">\(3,61 \cdot e^{j \cdot 5,695}\)</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2.8" class="level3" data-number="11.4.8">
+<h3 data-number="11.4.8" class="anchored" data-anchor-id="aufgabe-2.8"><span class="header-section-number">11.4.8</span> Aufgabe 2.8</h3>
+<p>In die arithmetische Form umwandeln:</p>
+<ol type="a">
+<li><p><span class="math inline">\(83 e^{j \cdot 1,1083}\)</span></p></li>
+<li><p><span class="math inline">\(3,8 e^{-j \cdot 5,524}\)</span></p></li>
+<li><p><span class="math inline">\(e^{0,2 + 1,2j}\)</span></p></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 2.8
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(83(cos(1,1083) + j sin(1,1083)) = 37,03 + j74,28\)</span></p></li>
+<li><p><span class="math inline">\(3,8(cos(-5,524) + j sin(-5,524)) = 2,757 + j2,616\)</span></p></li>
+<li><p><span class="math inline">\(e^{0,2}(cos(1,2) + j sin(1,2)) = 0,443 + j1,138\)</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2.9" class="level3" data-number="11.4.9">
+<h3 data-number="11.4.9" class="anchored" data-anchor-id="aufgabe-2.9"><span class="header-section-number">11.4.9</span> Aufgabe 2.9</h3>
+<p>Für <span class="math inline">\(z_1 = 1,5 - 0,5j\)</span> und <span class="math inline">\(z_2 = 3 + 0,5j\)</span> die Exponentialform berechnen und die folgende Gleichung in der arithmetischen Form angeben:</p>
+<p><span class="math display">\[z = \frac{z_1 \cdot z_2}{z_1 + z_2}\]</span></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 2.9
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[z_1 = \frac{\sqrt{10}}{2} \cdot e^{-j \cdot 0,322}\]</span></p>
+<p><span class="math display">\[z_2 = \frac{\sqrt{37}}{2} \cdot e^{j \cdot 0,165}\]</span></p>
+<p><span class="math display">\[z_1 + z_2 = 4,5\]</span></p>
+<p><span class="math display">\[\frac{\frac{\sqrt{370}}{4} \cdot e^{j(-0,322 + 0,165)}}{4,5} = 1,069 \cdot e^{-j 0,157} = 1,056 - j0,167\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2.10" class="level3" data-number="11.4.10">
+<h3 data-number="11.4.10" class="anchored" data-anchor-id="aufgabe-2.10"><span class="header-section-number">11.4.10</span> Aufgabe 2.10</h3>
+<p>Bringe den folgenden Term in die Darstellung <span class="math inline">\(\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\}\)</span>:</p>
+<p><span class="math display">\[\frac{\frac{1}{j\omega C}}{R + \frac{1}{j\omega C}}\]</span></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 2.10
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\frac{1}{j\omega RC} = \frac{1 - j\omega RC}{(1 + j\omega RC)(1- j\omega RC)} = \frac{1}{1 + (\omega RC)^2} -
+j\frac{\omega RC}{1 + (\omega RC)^2}
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2.11" class="level3" data-number="11.4.11">
+<h3 data-number="11.4.11" class="anchored" data-anchor-id="aufgabe-2.11"><span class="header-section-number">11.4.11</span> Aufgabe 2.11</h3>
+<p>Bringe den folgenden Term in die Darstellung <span class="math inline">\(\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\}\)</span>:</p>
+<p><span class="math display">\[\frac{\frac{1}{j\omega C}}{j\omega L + R + \frac{1}{j\omega C}}\]</span></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 2.11
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\frac{1}{- \omega^2 LC + j\omega RC + 1} = \frac{1 - \omega^2 LC - j\omega RC}{(1 - \omega^2 LC)^2 + (\omega RC)^2} =
+\frac{1 - \omega^2 LC}{(1 - \omega^2 LC)^2 + (\omega RC)^2} - j\frac{\omega RC}{(1 - \omega^2 LC)^2 + (\omega RC)^2}
+\]</span></p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/mimeiners\.github\.io\/gel2\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../tut/tut_01_Einfuehrung.html" class="pagination-link" aria-label="Einführung">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Einführung</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../tut/tut_03_Periodische-Signale.html" class="pagination-link" aria-label="Periodische Signale">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Grundlagen der Elektrotechnik 2 (GEL2), M. Meiners, HSB.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/main/tut/tut_02_Komplexe-Zahlen.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

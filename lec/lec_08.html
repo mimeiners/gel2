@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8&nbsp; Spulen und Übertrager – Grundlagen der Elektrotechnik 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../hw/hw_01.html" rel="next">
+<link href="../lec/lec_07.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b7c2d8834e08b04a63bb76a724ffbcac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lec/lec_01.html">Seminar</a></li><li class="breadcrumb-item"><a href="../lec/lec_08.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spulen und Übertrager</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Grundlagen der Elektrotechnik 2</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/mimeiners/gel2/" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="../Grundlagen-der-Elektrotechnik-2.epub" title="Download ePub" class="quarto-navigation-tool px-1" aria-label="Download ePub"><i class="bi bi-journal"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unsyllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Seminar</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Netzwerkerregung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Impedanz, Admittanz und Leistung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Grafische Analysemethoden / Darstellungen im Frequenzbereich</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Schwingkreise</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Netzwerkanalyse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_08.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spulen und Übertrager</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Hörsaalübungen</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tutorium</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_01_Einfuehrung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_02_Komplexe-Zahlen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_03_Periodische-Signale.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliography</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#physikalische-grundlagen" id="toc-physikalische-grundlagen" class="nav-link active" data-scroll-target="#physikalische-grundlagen"><span class="header-section-number">8.1</span> Physikalische Grundlagen</a></li>
+  <li><a href="#spulen" id="toc-spulen" class="nav-link" data-scroll-target="#spulen"><span class="header-section-number">8.2</span> Spulen</a>
+  <ul class="collapse">
+  <li><a href="#anwendungsbeispiele" id="toc-anwendungsbeispiele" class="nav-link" data-scroll-target="#anwendungsbeispiele"><span class="header-section-number">8.2.1</span> Anwendungsbeispiele</a></li>
+  </ul></li>
+  <li><a href="#transformatoren-und-übertrager" id="toc-transformatoren-und-übertrager" class="nav-link" data-scroll-target="#transformatoren-und-übertrager"><span class="header-section-number">8.3</span> Transformatoren und Übertrager</a>
+  <ul class="collapse">
+  <li><a href="#der-verlustlose-übertrager" id="toc-der-verlustlose-übertrager" class="nav-link" data-scroll-target="#der-verlustlose-übertrager"><span class="header-section-number">8.3.1</span> Der verlustlose Übertrager</a></li>
+  <li><a href="#realer-verlustbehafteter-übertrager" id="toc-realer-verlustbehafteter-übertrager" class="nav-link" data-scroll-target="#realer-verlustbehafteter-übertrager"><span class="header-section-number">8.3.2</span> Realer (verlustbehafteter) Übertrager</a></li>
+  <li><a href="#übertragungsfaktor" id="toc-übertragungsfaktor" class="nav-link" data-scroll-target="#übertragungsfaktor"><span class="header-section-number">8.3.3</span> Übertragungsfaktor</a></li>
+  <li><a href="#leistungsübertrager-transformatoren" id="toc-leistungsübertrager-transformatoren" class="nav-link" data-scroll-target="#leistungsübertrager-transformatoren"><span class="header-section-number">8.3.4</span> Leistungsübertrager, Transformatoren</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/gel2/edit/main/lec/lec_08.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lec/lec_01.html">Seminar</a></li><li class="breadcrumb-item"><a href="../lec/lec_08.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spulen und Übertrager</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spulen und Übertrager</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die Inhalte sind dem gleichnamigen Kapitel 9 von <span class="citation" data-cites="reisch2007">(<a href="../references.html#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span> entnommen worden.</p>
+</div>
+</div>
+<p>Spulen dienen der Verwirklichung von Induktivitäten. Übertrager und Transformatoren nutzen die induktive Kopplung von i. allg. galvanisch getrennten Spulen zur Spannungstransformation und zum Übertragen von elektrischer Leistung. Spulen und Übertrager werden in der Elektronik hauptsa ̈chlich zum Aufbau von Stromversorgungen, galvanischen Trennungen (z.B. Trennverstärker) und bei der Verwirklichung von Übertragern (z.B. Filter) mit definiertem Frequenzgang verwendet.</p>
+<p>Im Gegensatz zu Kondensatoren und Widerständen stehen Spulen häufig nicht als fertige Bauelemente zur Verfügung. Der Anwender hat die Auswahl unter einer großen Fülle magnetischer Werkstoffe, Kernformen und Spulenaufbauten. Der Entwurf von Spulen und Übertragern – insbesondere für den Bereich hoher Frequenzen – erfordert deshalb eine Vielzahl von material- und damit herstellerspezifischen Angaben, deren Wiedergabe den Rahmen […] dieser Veranstaltung sprengen würde.</p>
+<section id="physikalische-grundlagen" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="physikalische-grundlagen"><span class="header-section-number">8.1</span> Physikalische Grundlagen</h2>
+<p>Jeder von einem Strom durchflossene Leiter erzeugt ein magnetisches Feld der Feldstärke <span class="math inline">\(\mathbf{H}\)</span>. Die Einheit der magnetischen Feldstärke im SI-System ist A/m. Im Vakuum ist <span class="math inline">\(\mathbf{H}\)</span> mit der magnetischen Flußdichte <span class="math inline">\(\mathbf{B}\)</span> verknüpft über <span class="math inline">\(\mathbf{B} = \mu_0 \mathbf{H}\)</span> wobei <span class="math inline">\(\mu_0\)</span> = <span class="math inline">\(4 \pi 10^{-7}\)</span> Vs/Am = <span class="math inline">\(4 \pi\)</span> nH/cm die magnetische Feldkonstante (Induktionskonstante) bezeichnet. Die Einheit der magnetischen Flußdichte ist Tesla (1T = 1Vs/m2).1 Durch Kernmaterialien mit ferromagnetischen oder ferrimagnetischen Eigenschaften wird in technischen Spulen und Übertragern häufig die magnetischen Flußdichte <span class="math inline">\(\mathbf{B}\)</span> erhöht. Durch die magnetische Polarisation dieser Materialien im Feld <span class="math inline">\(\mathbf{H}\)</span> ist die magnetische Flußdichte im Kern um die Permeabilitätszahl <span class="math inline">\(\mu_r\)</span> erhöht <span class="math inline">\(\mathbf{B} = \mu_0 \mu_r \mathbf{H} = \mu \mathbf{H}\)</span>. Der Wert von <span class="math inline">\(\mu_r\)</span> ist aussteuerungsabhängig; bei geringer Aussteuerung liegt <span class="math inline">\(\mu_r\)</span> für typische Spulenkerne im Bereich <span class="math inline">\(10^2\)</span> bis <span class="math inline">\(10^4\)</span>.</p>
+<div id="fig-lec8s1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s1.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.1: <span class="math inline">\(B(H)\)</span>-Hysteresekurve, Rayleigh-Schleife
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Magnetisierung
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Wird ein Stoff in ein Magnetfeld gebracht, so erfolgt eine Magnetisierung (magnetische Polarisation); diese kann durch die Bildung bzw. Ausrichtung magnetischer Dipole im atomaren Bereich erklärt werden und bewirkt eine Erhöhung der magnetischen Flußdichte</p>
+<p><span class="math display">\[
+\mathbf{B} = \mu_0 (\mathbf{H} + \mathbf{M}) = \mu_0 \mathbf{H} + \mathbf{J}.
+\]</span></p>
+<p>Die Größe <span class="math inline">\(\mathbf{M}\)</span> wird dabei als <em>Magnetisierung</em> und die Größe <span class="math inline">\(\mathbf{J}\)</span> als <em>magnetische Polarisation</em> des Stoffs bezeichnet.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Permeabilität
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die durch (9.3) definierte relative Permeabilität <span class="math inline">\(\mu_r = B/\mu_0 H\)</span> ferro- oder ferrimagnetischer Materialien ist nichtlinear von der magnetischen Feldstärke abhängig. Bei kleinen Aussteuerungen um den Arbeitspunkt durchläuft <em>B</em> als Funktion von <em>H</em> eine kleine linsenförmige Hystereseschleife. Der Zusammenhang zwischen der Änderung <span class="math inline">\(\Delta B\)</span> der magnetischen Induktion und der Änderung <span class="math inline">\(\Delta H\)</span> der magnetischen Feldstärke wird durch die <em>Überlagerungspermeabilität</em> <span class="math inline">\(\mu_{\Delta}\)</span> beschrieben. Diese ist definiert als</p>
+<p><span class="math display">\[
+\mu_{\Delta} = \frac{1}{\mu_0} \frac{\Delta B}{\Delta H}
+\]</span></p>
+<p>und vom Hub <span class="math inline">\(\Delta H\)</span> abhängig. Häufig genügt es, den Grenzfall sehr kleiner Hübe <span class="math inline">\(\Delta H\)</span> zu betrachten. In diesem Fall geht <span class="math inline">\(\mu_{\Delta}\)</span> über in die <em>reversible Permeabilität</em></p>
+<p><span class="math display">\[
+\mu_{rev} = \frac{1}{\mu_0} \lim_{\Delta H \to 0} \frac{\Delta B}{\Delta H}
+\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Durchflutungs- und Induktionsgesetz
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Durch Integration der magnetischen Flußdichte über eine Fläche <span class="math inline">\(A\)</span> folgt der diese Fläche durchsetzende magnetische Fluß</p>
+<p><span class="math display">\[
+\phi = \iint \mathbf{B} \cdot d\mathbf{A}.
+\]</span></p>
+<p>Der Zusammenhang zwischen Stromfluß und magnetischer Feldstärke wird durch das <em>Durchflutungsgesetz</em> (1. Maxwellsche Gleichung) beschrieben. Dieses besagt, daß das Linienintegral über der magnetischen Feldstärke längs einer beliebigen geschlossenen Kurve <span class="math inline">\(C\)</span> gleich dem diese Schleife durchsetzenden Strom <span class="math inline">\(i\)</span> ist,</p>
+<p><span class="math display">\[
+\oint_C \mathbf{H} \cdot d\mathbf{s} = i.
+\]</span></p>
+<p>Ändert sich der eine geschlossene Schleife <span class="math inline">\(C\)</span> durchsetzende magnetische Fluß <span class="math inline">\(\phi\)</span>, so wird in der Schleife eine Spannung <span class="math inline">\(v\)</span> induziert; induzierte Spannung und Flußänderung sind durch das <em>Induktionsgesetz</em> (2. Maxwellsche Gleichung)</p>
+<p><span class="math display">\[
+v = \oint_C \mathbf{E} \cdot d\mathbf{s} = -\frac{d\phi}{dt}
+\]</span></p>
+<p>verknüpft. Der durch die induzierte Spannung hervorgerufene Strom ist nach der <em>Lenzschen Regel</em> so gerichtet, daß er seiner Ursache – der Flußänderung – entgegenwirkt. Gleichung (9.12) gilt auch fürr nichtlineare Induktivitäten, wie Spulen mit Eisenkern, die bis in den Sättigungsbereich hinein ausgesteuert werden. Bei schwacher Aussteuerung kann häufig ein linearer Zusammenhang zwischen Fluß und Strom angenommen werden. Sofern nur eine Leiterschleife vorliegt gilt dann <span class="math inline">\(v = L di/dt\)</span>, wobei <span class="math inline">\(L\)</span> den Induktivitätswert – genauer den <em>Selbstinduktionskoeffizienten</em> – des Leiters bezeichnet.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Induktionskoeffizienten ausgewählter Leiterformen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die Induktionskoeffizienten für nur einen Leiter, bspw. <em>Zylinderpulen</em>, <em>Ringkernspulen</em>, <em>Drahtringe</em> und <em>gedruckte Spiulen</em> lassen sich aus der Energie des magnetischen Feldes</p>
+<p><span class="math display">\[
+W = \frac{1}{2} \int \mathbf{H} \cdot \mathbf{B} d^3 x = \frac{1}{2} L i^2
+\]</span></p>
+<p>berechnen. Mit <span class="math inline">\(\mathbf{B} = \mu\mathbf{H}\)</span> folgt</p>
+<p><span class="math display">\[
+L = \frac{\mu}{i^2} \int \vert \mathbf{H}\vert^2 d^3 x .
+\]</span></p>
+</div>
+</div>
+<div id="fig-lec8s3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s3.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.2: (a) Zylinderspule, (b) Ringkernspule und (c) Drahtring
+</figcaption>
+</figure>
+</div>
+<div id="fig-lec8s4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s4.pdf" class="img-fluid" width="200">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.3: Gedruckte Spule (PCB)
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="spulen" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="spulen"><span class="header-section-number">8.2</span> Spulen</h2>
+<p>Spulen werden gewöhnlich als Drahtwicklung auf einem Spulenkörper aus Isoliermaterial ausgeführt. Häufig dient ein Kern aus einem hochpermeablen Material (Eisen, Ferrit) der Erhöhung des Induktivitätswerts – Spulen ohne derartigen Kern werden als <em>Luftspulen</em> bezeichnet.</p>
+<div id="fig-lec8s2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s2.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.4: Ersatzschaltung einer Spule.
+</figcaption>
+</figure>
+</div>
+<p>Abbildung <a href="#fig-lec8s2" class="quarto-xref">Abbildung&nbsp;<span>8.4</span></a> zeigt eine Ersatzschaltung für eine Spule, die bei Kleinsignalaussteuerung verwendet werden kann. Da die Netzwerkelemente arbeitspunktabhängig sind, wurden kleine Buchstaben verwendet. Wie in Gl. (9.33) gezeigt wird, lassen sich Ummagnetisierungsverluste einer Spule mit Kern durch den <em>Kernverlustwiderstand</em> <span class="math inline">\(r_{ks}\)</span> in Serie zu einer reinen Induktivität <span class="math inline">\(l_s\)</span> erfassen. Zusätzlich zu <span class="math inline">\(r_{ks}\)</span> ist der <em>Drahtwiderstand</em> <span class="math inline">\(r_{Cu}\)</span> zu berücksichtigen, so daß</p>
+<p><span class="math display">\[
+r_s = r_{Cu} + r_{ks}.
+\]</span></p>
+<p>Parallel hierzu liegt die Wicklungskapazität <span class="math inline">\(c_p\)</span>; dielektrische Verluste in der Isolation werden durch den zusätzlich parallel geschalteten Widerstand <span class="math inline">\(r_p\)</span> beschrieben. Mit dem Verlustfaktor <span class="math inline">\(\tan \delta\)</span> der Isolierschichten gilt demnach <span class="math inline">\(1/r_p \approx \omega c_p \tan \delta\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Impedanz, Eigenresonanz
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die Impedanz der Spule errechnet sich aus der Ersatzschaltung <a href="#fig-lec8s2" class="quarto-xref">Abbildung&nbsp;<span>8.4</span></a> zu</p>
+<p><span class="math display">\[\begin{align}
+\frac{1}{\underline{Z}} &amp;= \frac{1}{r_p} + j\omega c_p + \frac{1}{j \omega l_s+r_s} \\
+&amp;= \frac{−j\omega l_s (1−c_p r_s^2/l_s − \omega^2 l_s c_p)
++ r_s + (r_s^2 + \omega^2 l_s^2) \omega c_p \tan \delta}
+{r_s^2 + \omega^2 l_s^2}.
+\end{align}\]</span></p>
+</div>
+</div>
+<p>Der prinzipielle Verlauf des Scheinwiderstands <span class="math inline">\(\underline{Z}\)</span> als Funktion der Frequenz ist in Abb. <a href="#fig-lec8s2" class="quarto-xref">Abbildung&nbsp;<span>8.4</span></a> in doppeltlogarithmischer Auftragung dargestellt. Bei sehr kleinen Frequenzen ist <span class="math inline">\(\underline{Z}\)</span> durch den ohmschen Widerstand der Wicklung bestimmt. Mit zunehmender Frequenz dominiert dann der induktive Anteil: <span class="math inline">\(\underline{Z}\)</span> steigt proportional zu <span class="math inline">\(f\)</span> an. Für Frequenzen <span class="math inline">\(f &gt; f_r\)</span> dominiert der kapazitive Parallelleitwert: Hier fällt <span class="math inline">\(\underline{Z}\)</span> proportional zu <span class="math inline">\(1/f\)</span> ab.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Verlustfaktor, Spulengüte
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Der Verlustfaktor <span class="math inline">\(\tan \delta_L\)</span> der Spule ist defniert als das Verhältnis von Real- zu Imaginärteil der Impedanz</p>
+<p><span class="math display">\[
+\tan \delta_L = \frac{\operatorname{Re}(\underline{Z})}{\operatorname{Im}(\underline{Z})} = \frac{1}{Q_L};
+\]</span></p>
+<p>sein Kehrwert <span class="math inline">\(Q_L\)</span> wird als <em>Spulengüte</em> bezeichnet.</p>
+</div>
+</div>
+<p>Mit Luftspulen lassen sich Güten größer als 1000 verwirklichen; bei Spulen mit Kern liegen die Werte niedriger – bei sorgfältiger Dimensionierung sind jedoch Güten von mehr als 500 erreichbar. Trennung von Gl. (9.25) in Real- und Imaginärteil liefert für den Verlustfaktor</p>
+<p><span class="math display">\[
+\tan \delta_L \approx \frac{r_s}{2 \pi f l_s} \frac{1}{1−(f/f_r)^2} + \frac{(f/f_r)}{1−(f/f_r)^2} \tan
+\delta_{\epsilon},
+\]</span></p>
+<p>wobei <span class="math inline">\(f_r \approx 1 / 2 \pi l_s c_p\)</span> die (Eigen-)<em>Resonanzfrequenz</em> der Spule bezeichnet und <span class="math inline">\(\omega r_s c_p \tan \delta_{\epsilon} &lt;&lt; 1\)</span> sowie <span class="math inline">\(c_p r_s^2/l_s &lt;&lt; 1\)</span> angenommen wurde.</p>
+<section id="anwendungsbeispiele" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="anwendungsbeispiele"><span class="header-section-number">8.2.1</span> Anwendungsbeispiele</h3>
+<section id="dämpfungsperlen" class="level4" data-number="8.2.1.1">
+<h4 data-number="8.2.1.1" class="anchored" data-anchor-id="dämpfungsperlen"><span class="header-section-number">8.2.1.1</span> Dämpfungsperlen</h4>
+<p>Dämpfungsperlen sind kleine zylindrische Ferritkörper mit einer Bohrung, durch die ein Draht geführt werden kann. Sie weisen einen Durchmesser von wenigen Millimetern auf und werden gewöhnlich über einen Anschlußdraht eines bedrahteten Bauteils – z.B. Basisanschluß eines Transistors – gesteckt.</p>
+<div id="fig-lec8s5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s5.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.5: Dämpfungsperle
+</figcaption>
+</figure>
+</div>
+<p>Durch die Dämpfungsperle wird die Impedanz des Anschlußdrahts erhöht. Ist diese ohne Dämpfungsperle durch <span class="math inline">\(R_0 + j\omega L_0\)</span> gegeben, so folgt mit der komplexen Permeabilität <span class="math inline">\(\mu_r = \mu_s' − j\mu_s''\)</span> des Materials überschlagsmäßig für die Impedanz <span class="math inline">\(\underline{Z}\)</span> des Anschlußdrahts bei der Kreisfrequenz <span class="math inline">\(\omega\)</span></p>
+<p><span class="math display">\[
+\underline{Z} \approx R +j \omega L (\mu_s' −j\mu_s'') = R_0 + \omega \mu_s'' L_0 + j \omega \mu_s' L_0.
+\]</span></p>
+<p>Dämpfungsperlen verringern auf kostengünstige Weise hochfrequente Stromanteile ohne störende Serienwiderstände im NF-Bereich zu verursachen. Sie werden zur Unterdrückung von Überschwingern bei Schaltvorgängen, zur Dämpfung selbsterregter Schwingungen aufgrund parasitärer Rückkopplungen in Verstärkerschaltungen sowie zur Unterdrückung hochfrequenter Rauschanteile eingesetzt. Ihre Wirksamkeit beruht darauf, daß sie im relevanten Frequenzbereich eine nennenswerten Serienimpedanz hervorrufen. […]</p>
+</section>
+<section id="drosselspulen" class="level4" data-number="8.2.1.2">
+<h4 data-number="8.2.1.2" class="anchored" data-anchor-id="drosselspulen"><span class="header-section-number">8.2.1.2</span> Drosselspulen</h4>
+<p>Drosselspulen sollen den Gleichanteil <span class="math inline">\(I_L\)</span> des sie durchfließenden Stroms möglichst wenig, den Wechselanteil möglichst stark dämpfen (drosseln). Der Kern einer Drosselspule ist deshalb in der Regel mit einem starken Gleichfeld belastet, dem ein schwaches Wechselfeld überlagert ist. Die Verluste in der Drosselspule sind somit vorwiegend Kupferverluste, da der dominierende Gleichanteil keine Kernverluste verursacht; vgl. auch {cite}<code>schlienz2020</code> Kap. 2 - Abwärtswandler.</p>
+<div id="fig-lec8s6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s6.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.6: Schaltnetzteil mit Drossel-Abwärtswandler
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="power-management-integrated-circuits-pmics" class="level4" data-number="8.2.1.3">
+<h4 data-number="8.2.1.3" class="anchored" data-anchor-id="power-management-integrated-circuits-pmics"><span class="header-section-number">8.2.1.3</span> Power Management Integrated Circuits (PMICs)</h4>
+<div id="fig-lec8sPMICs" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8sPMICs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8sPMICs.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8sPMICs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.7: PMICs
+</figcaption>
+</figure>
+</div>
+<p>“Power management integrated circuits (PMICs) are essential in today’s electronic devices. They manage power delivery and consumption, provide efficient power supplies, and drive power switches that control actuators and motors, as illustrated in <a href="#fig-lec8sPMICs" class="quarto-xref">Abbildung&nbsp;<span>8.7</span></a> PMICs can be integrated into complex integrated circuits (ICs) or implemented as dedicated ICs. In this book, the term PMIC will refer to any type of power integrated circuit.</p>
+<p>The importance of PMICs has grown significantly in recent years, driving innovation and progress in various industries, from consumer electronics to automotive and industrial applications. With the progress of machine learning and artificial intelligence (AI), intelligent power management is critical to supplying complex processors and sensors.</p>
+<p>PMICs have enabled the development of smaller, more energy-efficient, and reliable electronic solutions. They also play an essential role in environmental aspects and sustainability. By regulating the power supply of electronic devices, PMICs can reduce energy consumption and carbon emissions. Moreover, PMICs are crucial for the development of renewable energies, such as solar and wind power, by enabling efficient power conversion and management.” <span class="citation" data-cites="wicht2024">(<a href="../references.html#ref-wicht2024" role="doc-biblioref">Wicht 2024</a>)</span></p>
+<ul>
+<li><p>IoT Nodes and Energy Harvesting</p></li>
+<li><p>Portable Devices, Smartphones, and Wearables</p></li>
+<li><p>Universal Serial Bus (USB)</p></li>
+<li><p>Drones</p></li>
+<li><p>Telecommunication Infrastructures</p></li>
+<li><p>E-Bikes</p></li>
+<li><p>Automotive</p></li>
+<li><p>Data-Centers</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="transformatoren-und-übertrager" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="transformatoren-und-übertrager"><span class="header-section-number">8.3</span> Transformatoren und Übertrager</h2>
+<p>Durch magnetische Verkopplung zweier galvanisch getrennter Stromkreise kann zwischen diesen Leistung übertragen werden. Dies wird angewendet in <em>Transformatoren</em> (Trafos), die der Umsetzung von Spannungs- bzw. Stromwerten dienen sowie in <em>Übertragern</em> und <em>Trenntrafos</em> zur galvanischen Trennung von Wechselstromkreisen, Impedanzanpassung, Unterdrückung von Gleichanteilen und zum Unterbrechen von Erdschleifen. Die Verkopplung der Induktivitäten wird gewöhnlich durch einen gemeinsamen Kern erhöht, der – zur Verbesserung der Linearität – meist einen Luftspalt enthält.</p>
+<div id="fig-lec8s4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s7.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.8: Haupt- und Streuflüsse im Transformator
+</figcaption>
+</figure>
+</div>
+<p>Abbildung <a href="#fig-lec8s4" class="quarto-xref">Abbildung&nbsp;<span>8.8</span></a> zeigt den prinzipiellen Aufbau eines Transformators bzw. Übertragers mit einer primärseitigen Wicklung der Windungszahl <span class="math inline">\(n_1\)</span> und einer sekundärseitigen Wicklung der Windungszahl <span class="math inline">\(n_2\)</span>. Wird die primärseitige Spule von einem Strom <span class="math inline">\(i_1\)</span> durchflossen, so setzt sich der erzeugte Fluß</p>
+<p><span class="math display">\[
+\phi_{11} = \phi_{1\sigma} + \phi_{12}
+\]</span></p>
+<p>aus dem primären Streufluß <span class="math inline">\(\phi_{1\sigma}\)</span> und dem die Sekundärwicklung durchsetzenden Fluß <span class="math inline">\(\phi_{12}\)</span> zusammen. Entsprechend läßt sich der von der Sekundärwicklung erzeugte Fluß <span class="math inline">\(\phi_{22}\)</span> in den sekundären Streufluß <span class="math inline">\(\phi_{2\sigma}\)</span> und den die Primärwicklung durchsetzenden Fluß <span class="math inline">\(\phi_{21}\)</span> zerlegen</p>
+<p><span class="math display">\[
+\phi_{22} = \phi_{2\sigma} + \phi_{21}.
+\]</span></p>
+<p>Der die Primärwicklung durchsetzende Fluß <span class="math inline">\(\phi_1\)</span> und der die Sekundärwicklung durchsetzende Fluß <span class="math inline">\(\phi_2\)</span> sind damit</p>
+<p><span class="math display">\[
+\phi_1 = \phi_{11} + \phi_{21}  \quad\text{und}\quad  \phi_2 = \phi_{22} + \phi_{12}.
+\]</span></p>
+<p>Unter Berücksichtigung der Spannungsabfälle an den Wicklungen folgt aus dem Induktionsgesetz für die Spannungsabfälle in Primär- und Sekundärkreis</p>
+<p><span class="math display">\[
+\begin{align}
+\underline{v}_1 &amp;= R_{Cu1} i_1 + n_1 \frac{d\phi_1}{dt} \\
+\underline{v}_2 &amp;= R_{Cu2} i_2 + n_2 \frac{d\phi_2}{dt}.
+\end{align}
+\]</span></p>
+<p>Die Beziehungen (45) gelten allgemein und sind auch bei Aussteuerung des Kernmaterials in den Sättigungsbereich anwendbar. Bei Aussteuerung mit geringer Amplitude besteht annähernd ein linearer Zusammenhang zwischen den Flüssen und den Spulenströmen</p>
+<p><span class="math display">\[
+\phi_{11} = L_1 i_1,\quad \phi_{12} = M i_1,\quad \phi_21 = M i_2\quad\text{und}\quad \phi_{22} = L_2 i_2.
+\]</span></p>
+<p>Dabei bezeichnet <span class="math inline">\(L_1 = L_{11}\)</span> den (Selbst-)Induktionskoeffizienten der Primärwicklung, <span class="math inline">\(M = L_{12}\)</span> den Gegeninduktionskoeffizienten von Primär- und Sekundärwicklung und <span class="math inline">\(L_2 = L_{22}\)</span> den (Selbst-)Induktionskoeffizienten der Sekundärwicklung. Durch Einsetzen in die Gln. (9.68) und (9.69) ergeben sich die sog.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Transformatorgleichungen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\begin{align}
+\underline{v}_1 &amp;= R_{Cu1} i_1 + L_1 \frac{di_1}{dt} + M \frac{di_2}{dt} \\
+\underline{v}_2 &amp;= R_{Cu2} i_2 + L_2 \frac{di_2}{dt} + M \frac{di_1}{dt}
+\end{align}\]</span></p>
+</div>
+</div>
+<p>Diese Beziehungen gelten nur bei Kleinsignalaussteuerung ohne Vormagnetisierung im Bereich niederer Frequenzen. Bei höheren Frequenzen tritt eine Phasenverschiebung zwischen magnetischem Feld (bzw. Spulenstrom) und magnetischer Polarisation auf.</p>
+<div id="fig-lec8s8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s8.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.9: Schaltsymbol zweier gekoppelter Induktivitäten
+</figcaption>
+</figure>
+</div>
+<section id="der-verlustlose-übertrager" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="der-verlustlose-übertrager"><span class="header-section-number">8.3.1</span> Der verlustlose Übertrager</h3>
+<p>Bei sinusförmiger Erregung folgt unter Vernachlässigung der Drahtwiderstände (<span class="math inline">\(R_{Cu1} = R_{Cu2} = 0\)</span>) aus den <em>Transformatorgleichungen</em> für die komplexen Zeiger der Wechselspannungsanteile an Primär- und Sekundärwicklung (Abb. <a href="#fig-lec8s8" class="quarto-xref">Abbildung&nbsp;<span>8.9</span></a>)</p>
+<p><span class="math display">\[\begin{align}
+\underline{v}_1 &amp;= j\omega L_1 i_1 + j\omega M i_2 \\
+\underline{v}_2 &amp;= j\omega M i_1 + j\omega L_2 i_2
+\end{align}\]</span></p>
+<p>Mit dem <em>Kopplungsfaktor</em> <span class="math inline">\(k = M/L_1 L_2\)</span> läßt sich dies umformen zu ­</p>
+<p><span class="math display">\[\begin{align}
+\underline{v}_1 &amp;= \frac{1}{k} \sqrt{\frac{L_1}{L_2}} \cdot \underline{v}_2 − j\omega \frac{1 −k^2}{k} \sqrt{L_1 L_2} \cdot i_2  \\
+i_1 &amp;= \frac{1}{j\omega k \sqrt{L_1 L_2}} \cdot \underline{v}_2 = \frac{1}{k} \sqrt{\frac{L_1}{L_2}} \cdot i_2
+\end{align}\]</span></p>
+<p>Bei belastetem Ausgang gilt <span class="math inline">\(i_2 = −\underline{v}_2/Z_L\)</span>; für den <em>Spannungsübertragungsfaktor</em> folgt damit aus Gl. (48)</p>
+<p><span class="math display">\[
+\frac{\underline{v}_1}{\underline{v}_2} = \frac{1}{k} \sqrt{\frac{L_1}{L_2}} + j\omega \frac{1 - k^2}{k} \sqrt{L_1 L_2}
+\frac{1}{\underline{Z}_L}.
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Vollständige Kopplung
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Im Fall idealer Kopplung (<span class="math inline">\(\vert k \vert = 1\)</span>) verschwindet der zweite Term auf der rechten Seite von Gl. (49); das Spannungsverhältnis ist dann</p>
+<p><span class="math display">\[
+\frac{\underline{v}_1}{\underline{v}_2} = \frac{L_1}{L_2} = ü.
+\]</span></p>
+<p>Die Größe ü wird dabei als <em>Übertragungsverhältnis</em> bezeichnet. Zwischen den Zeigern der Ströme besteht nach Gl. (9.75) der Zusammenhang</p>
+<p><span class="math display">\[­
+\underline{i}_1 = -\sqrt{\frac{L_2}{L_1}} \cdot \underline{i}_1 + \frac{1}{j\omega \sqrt{L_1 L_2}} \cdot \underline{v}_2
+\]</span></p>
+<p>Im Grenzfall des <em>idealen Übertragers</em> mit <span class="math inline">\(L_1 = ü^2 L_2 \to \infty\)</span> führt dies auf ­ <span class="math display">\[
+\frac{\underline{i}_1}{\underline{i}_2} = \frac{−1}{ü}.
+\]</span></p>
+</div>
+</div>
+<div id="fig-lec8s9" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s9.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.10: Idealer Übertrager. (a) Schaltsymbol und (b) Impedanztransformation mit idealem Übertrager
+</figcaption>
+</figure>
+</div>
+<p>Abbildung <a href="#fig-lec8s9" class="quarto-xref">Abbildung&nbsp;<span>8.10</span></a> (a) zeigt des Netzwerksymbol eines idealen Übertragers. Für diesen gelten die folgenden Beziehungen zwischen den Zeigern von Strom und Spannung an Ein- und Ausgang</p>
+<p><span class="math display">\[
+\begin{pmatrix}
+\underline{v}_1 \\
+\underline{i}_1
+\end{pmatrix}
+=
+\begin{pmatrix}
+ü &amp; 0 \\
+0 &amp; -1/ü
+\end{pmatrix}
+\begin{pmatrix}
+\underline{v}_2 \\
+\underline{i}_2
+\end{pmatrix}
+\]</span></p>
+<p>Besitzen die beiden Wicklungen des Übertragers denselben <span class="math inline">\(A_L\)</span>-Wert, so ist <span class="math inline">\(L_1 = A_L n^2_1\)</span> und <span class="math inline">\(L_2 = A_L n^2_2\)</span>, wobei <span class="math inline">\(n_1\)</span> und <span class="math inline">\(n_2\)</span> die Windungszahlen der jeweiligen Wicklung bezeichnen. In Gl. (9.76) des Spannungsübertragungsfaktors eingesetzt folgt</p>
+<p><span class="math display">\[
+ü = n_1/n_2,
+\]</span></p>
+<p>d.h. im idealen Übertrager ist das Übertragungsverhältnis ü gleich dem Verhältnis der jeweiligen Windungszahlen.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Impedanztransformation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Wird der Ausgang eines idealen Übertragers mit der Impedanz <span class="math inline">\(\underline{Z}_L\)</span> beschaltet (Abb. <a href="#fig-lec8s9" class="quarto-xref">Abbildung&nbsp;<span>8.10</span></a> (b)), so gilt <span class="math inline">\(\underline{v}_2/i_2 = −\underline{Z}_L\)</span>. Für die Eingangsimpedanz <span class="math inline">\(\underline{Z}_i\)</span> des Übertragers folgt damit</p>
+<p><span class="math display">\[
+\underline{Z}_i = \frac{\underline{v}_1}{\underline{i}_1}
+= \frac{\underline{v}_1}{\underline{v}_2}
+\cdot \frac{\underline{v}_2}{\underline{i}_2}
+\cdot \frac{\underline{i}_2}{\underline{i}_1}
+= ü^2 \underline{Z}_L,
+\]</span></p>
+<p>d.h. der ideale Übertrager mit vollständiger Kopplung “transformiert” Impedanzen im Verhältnis ü<span class="math inline">\(^2\)</span> von der Sekundärseite auf die Primärseite.</p>
+</div>
+</div>
+</section>
+<section id="realer-verlustbehafteter-übertrager" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="realer-verlustbehafteter-übertrager"><span class="header-section-number">8.3.2</span> Realer (verlustbehafteter) Übertrager</h3>
+<p>In realen Übertragern ist der Kopplungsfaktor von eins verschieden, da aufgrund von Streufeldern der die eine Spule durchsetzende Fluß die andere nicht vollständig durchsetzt.</p>
+<div id="fig-lec8s10" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s10.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.11: T-Ersatzschaltung
+</figcaption>
+</figure>
+</div>
+<p>Die Transformatorgleichungen lassen sich in die in Abb. <a href="#fig-lec8s10" class="quarto-xref">Abbildung&nbsp;<span>8.11</span></a> dargestellte T-Ersatzschaltung überführen. Durch Anwenden des Maschensatzes folgt sofort</p>
+<p><span class="math display">\[\begin{align}
+\underline{v}_1 &amp;= j\omega (L_1−M) \underline{i}_1 + j\omega M(\underline{i}_1+\underline{i}_2) = j\omega L_1
+\underline{i}_1 + j\omega M \underline{i}_2 \\
+\underline{v}_2 &amp;= j\omega (L_2−M) \underline{i}_2 + j\omega M(\underline{i}_1+\underline{i}_2) = j\omega L_2
+\underline{i}_2 + j\omega M \underline{i}_1
+\end{align}\]</span></p>
+<p>Das Verhalten des Übertragers kann demnach durch drei verschaltete Induktivitäten, die beiden Längsinduktivitäten <span class="math inline">\(L_1 − M\)</span> und <span class="math inline">\(L_2 − M\)</span> sowie die Gegeninduktivität <span class="math inline">\(M\)</span> beschrieben werden. Für Kopplungsfaktoren von annähernd eins gilt <span class="math inline">\(M \approx \sqrt{L_1 L_2}\)</span>; d.h. zumindest eine der Längsinduktivitäten ist negativ. Die T-Ersatzschaltung ist aus diesem Grund als rein formales Netzwerk anzusehen, das die Transformatorgleichungen korrekt erfaßt – eine physikalisch anschauliche Interpretation der Netzwerkelemente besteht jedoch nicht.</p>
+<div id="fig-lec8s11" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s11.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.12: Ersatzschaltung eines unvollständig gekoppelten Übertragers
+</figcaption>
+</figure>
+</div>
+<p>Abbildung <a href="#fig-lec8s11" class="quarto-xref">Abbildung&nbsp;<span>8.12</span></a> zeigt die Ersatzschaltung eines unvollständig gekoppelten <span class="math inline">\((k &lt; 1)\)</span>, ansonsten verlustfreien Übertragers. Dabei wird von der Induktivität <span class="math inline">\(L_1\)</span> ein Streuanteil <span class="math inline">\(\sigma L_1\)</span> abgespalten; der</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Streugrad <span class="math inline">\(\sigma\)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>des Übertragers ist definiert als</p>
+<p><span class="math display">\[
+\sigma = 1 − k^2.
+\]</span></p>
+</div>
+</div>
+<p>Lediglich der an <span class="math inline">\(k^2 L_1\)</span> auftretende Spannungsabfall wirkt als Eingangsspannung des idealen Übertragers mit Übertragungsverältnis <span class="math inline">\(k\)</span>ü. Die Netzwerkgleichungen für diese Ersatzschaltung lauten</p>
+<p><span class="math display">\[
+\underline{v}'_1 = \underline{v}_1 − j\omega \sigma L_1 \underline{i}_1
+= k ü \underline{v}_2, \quad \underline{i}_1
+= \underline{v}_1 + \underline{i}_1 j\omega k^2 L_1
+\]</span></p>
+<p>und <span class="math inline">\(\underline{i}_1 = −\underline{i}_2/k ü\)</span>. Durch Eliminieren von <span class="math inline">\(\underline{v}_1\)</span> und <span class="math inline">\(\underline{i}_1\)</span> lassen sich diese in die Gln. (48) überführen, wobei die Details der Rechnung dem Leser als Übungsaufgabe überlassen werden.</p>
+<div id="fig-lec8s12" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s12.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.13: (a) Parallel- und (b) Serienersatzschaltung eines verlustbehafteten Übertragers
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="übertragungsfaktor" class="level3" data-number="8.3.3">
+<h3 data-number="8.3.3" class="anchored" data-anchor-id="übertragungsfaktor"><span class="header-section-number">8.3.3</span> Übertragungsfaktor</h3>
+<div id="fig-lec8s13" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s13.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.14: Parallelersatzschaltung eines verlustbehafteten Übertragers mit beschaltetem Ausgang
+</figcaption>
+</figure>
+</div>
+<p>Übertrager sollen eine formtreue Signalübertragung aufweisen, was erhöhte Anforderungen an die Linearität bedingt und eine hohe Bandbreite voraussetzt. Für eine Untersuchung des Frequenzgangs von Übertragern wird die in Abb. <a href="#fig-lec8s13" class="quarto-xref">Abbildung&nbsp;<span>8.14</span></a> gezeigte Ersatzschaltung herangezogen, wobei die durch <span class="math inline">\(C_3\)</span> und <span class="math inline">\(C_4\)</span> beschriebene kapazitive Kopplung zwischen Primär- und Sekundärwicklung (vgl. Abb. <a href="#fig-lec8s12" class="quarto-xref">Abbildung&nbsp;<span>8.13</span></a> (a)) vernachlässigt wird.</p>
+<p>Der Ausgang des idealen Übertragers in der Ersatzschaltung Abb. <a href="#fig-lec8s13" class="quarto-xref">Abbildung&nbsp;<span>8.14</span></a> ist mit der Impedanz</p>
+<p><span class="math display">\[
+\underline{Z}_x = r_{Cu2} + \frac{\underline{Z}_L}{1 + j\omega C_2 \underline{Z}_L}
+\]</span></p>
+<p>beschaltet, die eingangseitig wie eine Impedanz <span class="math inline">\(k^2 ü^2 \underline{Z}_x\)</span> wirkt. Zur Berechnung der Amplitude von <span class="math inline">\(\underline{v}'_1\)</span> kann demnach die in Abb. <a href="#fig-lec8s14" class="quarto-xref">Abbildung&nbsp;<span>8.15</span></a> dargestellte Ersatzschaltung herangezogen werden.</p>
+<div id="fig-lec8s14" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec8s14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec8s14.pdf" class="img-fluid" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec8s14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8.15: Zusammenfassung und Transformation der Sekundärseite
+</figcaption>
+</figure>
+</div>
+<p>Nach der Spannungsteilerregel folgt sofort</p>
+<p><span class="math display">\[\begin{align}
+\frac{\underline{v}'_1}{\underline{v}_1} &amp;= \frac{j \omega k^2L_1 || r_{kp} || k^2 ü^2 \underline{Z}_x}{r_{Cu1} +
+j\omega \sigma L_1 + j\omega k^2 L_1 || r_{kp} || k^2 ü^2 \underline{Z}_x} \\
+&amp;= \frac{1}{1 + (r_{Cu1} + j\omega \sigma L_1)
+\left( \frac{1}{j\omega k^2 L_1} + \frac{1}{r_{kp}} + \frac{1}{k^2 ü^2 \underline{Z}_L} \right)}
+\end{align}\]</span></p>
+<p>Ebenfalls durch Anwenden der Spannungsteilerregel erhält man</p>
+<p><span class="math display">\[\begin{align}
+\frac{\underline{v}_2}{\underline{v}'_2} &amp;= \frac{\underline{Z}_L || (j \omega C_2)^{-1}}{\underline{Z}_x} \\
+&amp;= \frac{\underline{Z}_L}{\underline{Z}_L + r_{Cu2}(1 + j \omega C_2 \underline{Z}_L)}.
+\end{align}\]</span></p>
+<p>Mit dem Übertragungsverhältnis <span class="math inline">\(k ü\)</span> des idealen Übertragers folgt für den Spannungsübertragungsfaktor</p>
+<p><span class="math display">\[
+\underline{H}_v = \frac{\underline{v}_2}{\underline{v}_1} = \frac{1}{k ü} \cdot \frac{\underline{v}_2}{\underline{v}'_2}
+\cdot \frac{\underline{v}'_1}{\underline{v}_1}
+\]</span></p>
+<p>Im Folgenden wird der Fall einer rein ohmschen Last <span class="math inline">\(\underline{Z}_L = R_L\)</span> betrachtet; unter diesen Umständen gilt</p>
+<p><span class="math display">\[
+\underline{Z}_x = r_{Cu2} + \frac{R_L}{1 = j\omega C_2 R_L} \quad\text{und}\quad
+\frac{\underline{v}_2}{\underline{v}'_2} = \frac{R_L}{R_L + r_{Cu2}(1 + j\omega C_2 R_L)}.
+\]</span></p>
+<p>Der Spannungsübertragungsfaktor ergibt sich hiermit und durch Ausmultiplizieren in der Form</p>
+<p><span class="math display">\[
+\underline{H}_v = \frac{A_{v0}}{1 − j f_u/f + jf/f_o − f^2/f^2_r}
+\]</span></p>
+<p>was ein Bandpaßverhalten beschreibt.</p>
+</section>
+<section id="leistungsübertrager-transformatoren" class="level3" data-number="8.3.4">
+<h3 data-number="8.3.4" class="anchored" data-anchor-id="leistungsübertrager-transformatoren"><span class="header-section-number">8.3.4</span> Leistungsübertrager, Transformatoren</h3>
+<p><em>Beim Transformator steht die maximal übertragbare Leistung im Vordergrund – Signalverformungen sind zulässig.</em> Aufgrund der Proportionalität der in die Sekundärwicklung induzierten Spannung zur Frequenz <span class="math inline">\(f\)</span> (bei konstantem Induktionshub <span class="math inline">\(\Delta B\)</span>) steigt die in einem Transformator von der Primärseite auf die Sekundärseite übertragbare Leistung annähernd proportional zu <span class="math inline">\(f\)</span> an. Unter Vernachlässigung der Spannungsabfälle an den Wicklungswiderständen, Streuinduktivitäten und der Vormagnetisierung gilt die folgende Näherung für die übertragene Leistung</p>
+<p><span class="math display">\[
+P = C \cdot \Delta B \cdot J \cdot A_W A_e \cdot F_{Cu} \cdot f.
+\]</span></p>
+<p>Dabei bezeichnet <span class="math inline">\(C\)</span> einen von der Betriebsart abhängigen Faktor, der typischerweise im Bereich <span class="math inline">\(0.6 &lt; C &lt; 1\)</span> liegt und <span class="math inline">\(J\)</span> die Stromdichte in der Wicklung. Der Induktionshub <span class="math inline">\(\Delta B\)</span> ist bei niedrigen Frequenzen durch Sättigungseffekte und bei hohen Frequenzen durch die Erwärmung des Kerns aufgrund von Kernverlusten beschränkt. Die Stromdichte <span class="math inline">\(J\)</span> wird durch die Erwärmung der Wicklung aufgrund von Kupferverlusten begrenzt.</p>
+<p><em>Der wirksame Kernquerschnitt sollte im Sinne geringer Kosten und geringen Gewichts möglichst klein sein. Eine Steigerung der übertragbaren Leistung ist demnach nur durch eine Anhebung der Frequenz möglich. Mit zunehmender Schaltfrequenz kann das Gewicht – und damit auch der Preis – von Stromversorgungen und DC-DC-Wandlern gesenkt werden.</em></p>
+<p>Ein 100 W-Netzteil, realisiert mit einem bei Netzfrequenz (50 Hz) arbeitenden Transformator, hat eine Masse in der Größenordnung von 10 kg; durch Erhöhen der Schaltfrequenz auf 50 kHz kann diese auf unter 1 kg gesenkt werden, bei 500 kHz sind weniger als 400 g erreichbar. Wesentlich für diese Anhebung der Schaltfrequenz war die Entwicklung spezieller, verlustarmer Ferritwerkstoffe; vgl. mit <span class="citation" data-cites="zach2022">(<a href="../references.html#ref-zach2022" role="doc-biblioref">Zach 2022</a>)</span>, Kap. 15.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-reisch2007" class="csl-entry" role="listitem">
+Reisch, Michael. 2007. <em>Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE</em>. 2. Aufl. Springer. <a href="https://doi.org/10.1007/978-3-540-34015-7">https://doi.org/10.1007/978-3-540-34015-7</a>.
+</div>
+<div id="ref-wicht2024" class="csl-entry" role="listitem">
+Wicht, Bernhard. 2024. <em>Design of Power Management Integrated Circuits</em>. Wiley. <a href="https://doi.org/10.1002/9781119123095">https://doi.org/10.1002/9781119123095</a>.
+</div>
+<div id="ref-zach2022" class="csl-entry" role="listitem">
+Zach, Franz. 2022. <em>Leistungselektronik: Ein Handbuch Band 1 / Band 2</em>. Springer Fachmedien Wiesbaden. <a href="https://doi.org/10.1007/978-3-658-31436-1">https://doi.org/10.1007/978-3-658-31436-1</a>.
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/mimeiners\.github\.io\/gel2\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../lec/lec_07.html" class="pagination-link" aria-label="Netzwerkanalyse">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Netzwerkanalyse</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../hw/hw_01.html" class="pagination-link" aria-label="Periodische Signale">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Grundlagen der Elektrotechnik 2 (GEL2), M. Meiners, HSB.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/gel2/edit/main/lec/lec_08.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

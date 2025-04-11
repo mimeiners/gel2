@@ -1,0 +1,1023 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Grundlagen der Elektrotechnik 2",
+    "section": "",
+    "text": "Unsyllabus\n\n\n\nName\nDescription\n\n\n\n\nKursus\nM 2.3 Grundlagen der Elektrotechnik 2 (GEL2)\n\n\nSemester\nSoSe25\n\n\nDozent\nProf. Dr.-Ing. M. Meiners\n\n\nSeminar\nMo., 11:30 Uhr - 13:00 Uhr, E 509\n\n\nTutorium\nMo., 13:30 Uhr - 15:00 Uhr, E 509",
+    "crumbs": [
+      "Unsyllabus"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html",
+    "href": "lec/lec_01.html",
+    "title": "1  Einleitung",
+    "section": "",
+    "text": "1.1 Wissenschaftliches Rechnen / Datenwissenschaft",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#wissenschaftliches-rechnen-datenwissenschaft",
+    "href": "lec/lec_01.html#wissenschaftliches-rechnen-datenwissenschaft",
+    "title": "1  Einleitung",
+    "section": "",
+    "text": "Python\nMatlab\nGnu Octave\nCommand-line tools",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#schaltungssimulation-spice",
+    "href": "lec/lec_01.html#schaltungssimulation-spice",
+    "title": "1  Einleitung",
+    "section": "1.2 Schaltungssimulation (SPICE)",
+    "text": "1.2 Schaltungssimulation (SPICE)\n\nLTspice Linear Technology\nngspice (open-source)\nELDO (Siemens EDA)\nSpectre (cadence)\nPrimeSim HSPICE (SYNOPSIS)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#betriebssystem-os---werkzeuge-tools",
+    "href": "lec/lec_01.html#betriebssystem-os---werkzeuge-tools",
+    "title": "1  Einleitung",
+    "section": "1.3 Betriebssystem (OS) - Werkzeuge (Tools)",
+    "text": "1.3 Betriebssystem (OS) - Werkzeuge (Tools)\n\nSSH (Secure Shell)\nMicrosoft-Terminal\nMicrosoft-PowerShell\nMacOS-Terminal\nLinux/MacOS zsh-tools\nLinux/MacOS bash-it\nGit (Versionskontrolle)\nTortoiseGit – Windows Shell Interface to Git",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#code-editoren",
+    "href": "lec/lec_01.html#code-editoren",
+    "title": "1  Einleitung",
+    "section": "1.4 Code Editoren",
+    "text": "1.4 Code Editoren\n\nVisual Studio Code\nNotepad++ (Windows)\nEmacs\n\nVim",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#datenverarbeitung-data-sciences",
+    "href": "lec/lec_01.html#datenverarbeitung-data-sciences",
+    "title": "1  Einleitung",
+    "section": "1.5 Datenverarbeitung / Data Sciences",
+    "text": "1.5 Datenverarbeitung / Data Sciences\n\n1.5.1 Dateisystem / Journaled File System\n\nOrdner / Directories\nDateien / Files\n\n\n\n1.5.2 Tabellenformate / Rectangular Data\n\nComma-Separated-Values (CSV), Tab-Separated-Values (TSV)\nwireservice/csvkit: A suite of utilities for converting to and working with CSV, the king of tabular file formats.\njohnkerl/miller: Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON\nSpreadsheet (.xlsx, .ods)\napache/iceberg: Apache Iceberg\napache/iceberg-python: Apache PyIceberg\n\n\n\n1.5.3 Serialisation\n\nData Serialization — The Hitchhiker’s Guide to Python\nJSON\nMessagePack: It’s like JSON. but fast and small.\n\n\n\n1.5.4 Spezielle Formate / Data Frames\n\nMastering Python Dictionaries: Efficient Data Storage and Retrieval - Adventures in Machine Learning\nMAT-File Versions - MATLAB & Simulink - MathWorks Deutschland\nHDF5 Or How I Learned To Love Data Compression And Partial I/O\nWas ist Apache Parquet?\nFeather File Format\npola-rs/polars: Dataframes powered by a multithreaded, vectorized query engine\nibis-project/ibis: Portable Python dataframe library\n\n\n\n1.5.5 Embedded DB-Engines\n\nSQL, z.B. SQLite\nOLAP, z.B. DuckDB",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#schreibst-du-noch-oder-texst-du-schon",
+    "href": "lec/lec_01.html#schreibst-du-noch-oder-texst-du-schon",
+    "title": "1  Einleitung",
+    "section": "1.6 Schreibst Du noch oder TeXst Du schon?",
+    "text": "1.6 Schreibst Du noch oder TeXst Du schon?\n\nMikTeX (Windows, MacOS, Linux)\nMacTeX (MacOS)\nTeXLive (Linux)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#latex-editoren",
+    "href": "lec/lec_01.html#latex-editoren",
+    "title": "1  Einleitung",
+    "section": "1.7 LaTeX Editoren",
+    "text": "1.7 LaTeX Editoren\n\nIDE’s\n\nTeXStudio\nTeXMaker\nTeXWorks\n\nKollaborative Frameworks\n\nShareLaTeX, Online LaTeX\nCoCalc - Online LaTeX",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#literaturverwaltung-und-latex",
+    "href": "lec/lec_01.html#literaturverwaltung-und-latex",
+    "title": "1  Einleitung",
+    "section": "1.8 Literaturverwaltung und LaTeX",
+    "text": "1.8 Literaturverwaltung und LaTeX\n\nCitavi im Detail &gt; Titel exportieren &gt; Export nach BibTeX\nRefWorks - Library Guide Univ. Melbourne\nBenutzerdefinierte BibTex-Keys mit Zotero | nerdpause\nJabRef - Library Guide Univ. Melbourne\nEndNote - Library Guide Univ. Melbourne",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#schöne-neue-welt",
+    "href": "lec/lec_01.html#schöne-neue-welt",
+    "title": "1  Einleitung",
+    "section": "1.9 Schöne neue Welt",
+    "text": "1.9 Schöne neue Welt\n\n\n\nAMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#halbleiterherstellung-infineon-dresden",
+    "href": "lec/lec_01.html#halbleiterherstellung-infineon-dresden",
+    "title": "1  Einleitung",
+    "section": "1.10 Halbleiterherstellung (Infineon, Dresden)",
+    "text": "1.10 Halbleiterherstellung (Infineon, Dresden)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#finfet-intel",
+    "href": "lec/lec_01.html#finfet-intel",
+    "title": "1  Einleitung",
+    "section": "1.11 FinFET (Intel)",
+    "text": "1.11 FinFET (Intel)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#tsmc-fab-next-gen-75-nm",
+    "href": "lec/lec_01.html#tsmc-fab-next-gen-75-nm",
+    "title": "1  Einleitung",
+    "section": "1.12 TSMC Fab (Next Gen 7/5 nm)",
+    "text": "1.12 TSMC Fab (Next Gen 7/5 nm)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#es-war-einmal",
+    "href": "lec/lec_01.html#es-war-einmal",
+    "title": "1  Einleitung",
+    "section": "1.13 Es war einmal …",
+    "text": "1.13 Es war einmal …\n\n\n\n1906 die Elektronenröhre\n\n\n\n\n\n1947 der erste Transistor, Bell Labs Foto",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#damals-und-heute",
+    "href": "lec/lec_01.html#damals-und-heute",
+    "title": "1  Einleitung",
+    "section": "1.14 Damals und heute",
+    "text": "1.14 Damals und heute\n\n\n\n1958 Jack Kilby’s erster IC\n\n\n\n\n\nModerner IC",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#systemhierarchie",
+    "href": "lec/lec_01.html#systemhierarchie",
+    "title": "1  Einleitung",
+    "section": "1.15 Systemhierarchie",
+    "text": "1.15 Systemhierarchie\n\n\n\nFunktionsblöcke eines elektronischen Systems\n\n\n\nNutzen Sie Hierarchien zur Beschreibung komplexer Systeme\nTeile und herrsche",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#schnittstellen-zur-aussenwelt",
+    "href": "lec/lec_01.html#schnittstellen-zur-aussenwelt",
+    "title": "1  Einleitung",
+    "section": "1.16 Schnittstellen zur Aussenwelt",
+    "text": "1.16 Schnittstellen zur Aussenwelt\n\n\n\nInterfacing",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#meeting-mit-einem-system",
+    "href": "lec/lec_01.html#meeting-mit-einem-system",
+    "title": "1  Einleitung",
+    "section": "1.17 Meeting mit einem System",
+    "text": "1.17 Meeting mit einem System\n\n\n\nDrahtloses Kommunikationssystem",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#system-in-a-package-sip",
+    "href": "lec/lec_01.html#system-in-a-package-sip",
+    "title": "1  Einleitung",
+    "section": "1.18 System in a Package (SiP)",
+    "text": "1.18 System in a Package (SiP)\n\n\n\nBeschleunigungssensor",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#sie-werden-unsere-experten",
+    "href": "lec/lec_01.html#sie-werden-unsere-experten",
+    "title": "1  Einleitung",
+    "section": "1.19 Sie werden unsere Experten",
+    "text": "1.19 Sie werden unsere Experten\n\nHintergrundwissen\n\nSystemverständnis, Architektur, Herstellungsverfahren, Implementation\n\nUnterbewusste Kompetenz\n\nAbgespeicherte Erfahrungen aus Erfolgsgeschichten und Misserfolgen\n\nSpezialwissen\n\nBerufsspezifisches Wissen\n\nTeamwork Haltung\n\nKommunikationsfähigkeit, Berichtswesen und technische Präsentation\n\nKreativität\nTool-Kenntnisse",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#lernziele-des-moduls",
+    "href": "lec/lec_01.html#lernziele-des-moduls",
+    "title": "1  Einleitung",
+    "section": "1.20 Lernziele des Moduls",
+    "text": "1.20 Lernziele des Moduls\n\nElektrische Systeme mathematisch und graphisch im Zeit- und Frequenzbereich beschreiben\nNetzwerkanalyse mit RLC-Gliedern\nSpezielle Netzwerke, wie Messbrücken, Schwingkreise und ideale Transformatoren, dimensionieren.",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#seminaristischer-unterricht",
+    "href": "lec/lec_01.html#seminaristischer-unterricht",
+    "title": "1  Einleitung",
+    "section": "1.21 Seminaristischer Unterricht",
+    "text": "1.21 Seminaristischer Unterricht\n\nKomplexe Wechselstromrechnung\nDiskrete Bauelemente und ihre Modellierung (RLC)\nMethodik der Netzwerkanalyse\nAnwendungsbeispiele mit EDA-Werkzeugen und wissenschaftliches Rechnen (Scientific Computing)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#beschreibung-elektrotechnischer-systeme",
+    "href": "lec/lec_01.html#beschreibung-elektrotechnischer-systeme",
+    "title": "1  Einleitung",
+    "section": "1.22 Beschreibung elektrotechnischer Systeme",
+    "text": "1.22 Beschreibung elektrotechnischer Systeme\n\nverschiedene Stufen der Vereinfachung\nFelder / Wellen / Optik / HF-Technik\n\nMaxwell-Gleichungen \\[\n\\begin{align}\n\\oint \\mathbf{H} d\\mathbf{s} &= \\iint \\mathbf{J} + \\dot{D} d\\mathbf{A} \\\\\n\\oint \\mathbf{E} d\\mathbf{s} &= - \\iint \\dot{B} d\\mathbf{A}\n\\end{align}\n\\]\n\nbei lokaler Konzentration der Feldenergie \\(\\Rightarrow\\) quasi-statische Näherung\nMikrowellentechnik / Leitungstechnik\n\nverteilte Schaltungen \\(l\\), \\(c\\), \\(\\rho\\)\nKopplung, Laufzeit \\(\\tau = a/v\\)\n\nkleine Systeme mit \\(a &lt;&lt; \\lambda\\) bzw. kurze Laufzeiten mit \\(\\tau &lt;&lt; T\\)\nRegelungstechnik / Impulstechnik\n\nErsatzschaltungen\n(Block-)Schaltbilder\n\neingeschwungener Zustand\nNF-Technik\n\nstationär-periodische Signale\n\nSinussignale\nEnergietechnik\n\nmonofrequente Signale \\(U = Z \\cdot I\\)\n\nFrequenz \\(f \\rightarrow 0\\)\nGleichstromtechnik\n\nOhmsches Gesetz \\(U = R \\cdot I\\)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#konzentrierte-schaltelemente",
+    "href": "lec/lec_01.html#konzentrierte-schaltelemente",
+    "title": "1  Einleitung",
+    "section": "1.23 Konzentrierte Schaltelemente",
+    "text": "1.23 Konzentrierte Schaltelemente\n\n\n\n\n\n\nStromdichte\n\n\n\n\\[\n\\begin{equation}\n\\frac{\\int E(r,t) ds}{\\iint J(r,t) dA} = \\frac{u(t)}{i(t)} \\Rightarrow R\n\\end{equation}\n\\]\n\n\n\n\n\n\n\n\nVerschiebungsdichte\n\n\n\n\\[\n\\begin{equation}\n\\frac{\\iint D(r,t) dA}{\\int E(r,t) ds} = \\frac{q(t)}{u(t)} \\Rightarrow C\n\\end{equation}\n\\]\n\n\n\n\n\n\n\n\nFlußdichte\n\n\n\n\\[\n\\begin{equation}\n\\frac{\\iint B(r,t) dA}{\\oint H(r,t) ds} = \\frac{u(t)}{i(t)} \\Rightarrow L\n\\end{equation}\n\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_01.html#harmonische-signale",
+    "href": "lec/lec_01.html#harmonische-signale",
+    "title": "1  Einleitung",
+    "section": "1.24 Harmonische Signale …",
+    "text": "1.24 Harmonische Signale …\n\n\n\n\n\n\nals Zeitfunktion\n\n\n\n\\[\n\\begin{equation}\nu(t) = \\hat{U} \\cos(\\omega t + \\phi)\n\\end{equation}\n\\]\n\n\n\n\n\n\n\n\nals Zeiger / komplexe Grösse (Phasor)\n\n\n\n\\[\n\\begin{equation}\nU = \\lvert \\hat{U} \\lvert e^{j \\phi}\n\\end{equation}\n\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_02.html",
+    "href": "lec/lec_02.html",
+    "title": "2  Netzwerkerregung",
+    "section": "",
+    "text": "2.1 Schaltzeichen\n“In Deutschland sind elektrische Schaltzeichen durch DIN EN 60617 Graphische Symbole für Schaltpläne bzw. IEC 60617 genormt. Sie ersetzen seit 1996–1998 die DIN 40700 / DIN 40900.”\nSchaltzeichen nach DIN EN 60617",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Netzwerkerregung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_02.html#erregungsarten",
+    "href": "lec/lec_02.html#erregungsarten",
+    "title": "2  Netzwerkerregung",
+    "section": "2.2 Erregungsarten",
+    "text": "2.2 Erregungsarten\n\nGleichvorgänge\nNichtperiodische Vorgänge\nPeriodische Vorgänge, Spezialfall sind harmonische (sinus-, cosinusförmige) Vorgänge mit der Periodendauer \\(T\\)\nGleichgrößen mit \\(f(t)\\) = const. werden mit großen lateinischen Buchstaben gekennzeichnet, Gleichspannung \\(U\\) und Gleichstrom \\(I\\)\nZeitveränderliche Größen, hierbei ändert die Erregergröße \\(f(t)\\) ihre Amplitude und/oder ihre Richtung zeitlich. Der Wert von \\(f(t)\\) zum momentanen Zeitpunkt heißt Augenblicks- oder Momentanwert \\(f(t)\\) der physikalischen Größe. Momentanwerte erhalten kleine lateinische Buchstaben, Spannung \\(u\\) und Strom \\(i\\).",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Netzwerkerregung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_02.html#sinusförmige-erregung-periodische-vorgänge",
+    "href": "lec/lec_02.html#sinusförmige-erregung-periodische-vorgänge",
+    "title": "2  Netzwerkerregung",
+    "section": "2.3 Sinusförmige Erregung, periodische Vorgänge",
+    "text": "2.3 Sinusförmige Erregung, periodische Vorgänge\n\n\n\n\n\n\nDefinitionen\n\n\n\n\n\\(f(t)=f(t+nT)\\) mit \\(n=0, 1 ...\\)\nFrequenz \\(f=1/T\\)\nKreisfrequenz \\(\\omega=2\\pi f = 2\\pi/T\\)\nPeriodendauer \\(T\\)\nWechselgröße allgem. \\(a(t)=\\hat{A} \\sin (\\omega t +\\varphi) = \\hat{A} \\sin(\\omega t + \\omega t_0)\\)\nScheitelwert, Maximalwert der Amplitude \\(\\hat{A}=\\max{A}=A_{max}\\)\nNullphasenwinkel bzw. Nullzeitpunkt \\(\\varphi=\\omega t_0\\)\nErregergröße wird aufgetragen mit \\(\\omega t\\) und nicht \\(t\\); \\(\\psi(t) = \\omega t + \\varphi = \\omega t + \\omega t_0\\)\nBogenmaß \\(\\psi/\\mbox{Bogenmaß} = \\frac{2 \\pi}{360} \\psi/\\mbox{Grad}\\)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Netzwerkerregung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_02.html#eigenschaften-harmonischer-funktionen",
+    "href": "lec/lec_02.html#eigenschaften-harmonischer-funktionen",
+    "title": "2  Netzwerkerregung",
+    "section": "2.4 Eigenschaften harmonischer Funktionen",
+    "text": "2.4 Eigenschaften harmonischer Funktionen\n\nDifferentiation, Integration und Addition, Subtraktion mithilfe von Additionstheoremen\nAufspaltung einer harmonischen Schwingung und Koeffizientenvergleich\n\n\n\n\n\n\n\nZusammengefasst\n\n\n\nBei Addition, Differentiation und Integration von harmonischen Funktionen der Kreisfrequenz \\(\\omega\\) entstehen wieder harmonische Funktionen der gleichen Frequenz, aber veränderter Amplitude und Phase. Bei der Überlagerung zweier harmonischer Größen mit verschiedener Frequenz entsteht zwar eine periodische Schwingung, aber keine Sinusschwingung (harmonische).",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Netzwerkerregung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_02.html#mittelwerte-periodischer-zeitfunktionen",
+    "href": "lec/lec_02.html#mittelwerte-periodischer-zeitfunktionen",
+    "title": "2  Netzwerkerregung",
+    "section": "2.5 Mittelwerte periodischer Zeitfunktionen",
+    "text": "2.5 Mittelwerte periodischer Zeitfunktionen\n\n\n\n\n\n\nArithmetischer Mittelwert - linearer Mittelwert - Gleichwert\n\n\n\n\\[\n\\begin{align}\n\\overline{u(t)} &= \\frac{1}{T} \\int_t^{t+T} u(\\tau) \\mathrm{d} \\tau\n\\end{align}\n\\]\n\n\n\n\n\n\n\n\nGleichrichtmittelwert\n\n\n\n\\[\\begin{align}\n\\overline{\\lvert u(t) \\lvert} &= \\frac{1}{T} \\int_t^{t+T} \\lvert u(\\tau) \\lvert \\mathrm{d} \\tau\n\\end{align}\\]\n\n\n\n\n\n\n\n\nQuadratischer Mittelwert - Effektivwert\n\n\n\n\\[\\begin{align}\nU_{eff} = \\sqrt{\\overline{u^2(t)}} &= \\sqrt{\\frac{1}{T} \\int_t^{t+T} u^2(\\tau) \\mathrm{d} \\tau}\n\\end{align}\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Netzwerkerregung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_02.html#ui-verhalten",
+    "href": "lec/lec_02.html#ui-verhalten",
+    "title": "2  Netzwerkerregung",
+    "section": "2.6 \\(u/i\\)-Verhalten",
+    "text": "2.6 \\(u/i\\)-Verhalten\n\n\n\n\n\n\nWiderstand \\(R\\) - Einheit: 1 \\(\\Omega\\)\n\n\n\n\\[\\begin{align}\nu(t) &= R \\cdot i(t) \\\\\n&= R \\cdot \\hat{I} \\sin(\\omega t + \\varphi_i) \\\\\n&= \\hat{U} \\sin(\\omega t + \\varphi_u)\n\\end{align}\\]\n\n\n\n\n\n\n\n\nInduktivität \\(L\\) - Einheit: 1 H = 1 Vs/A\n\n\n\n\\[\\begin{align}\nu(t) &= L \\cdot \\frac{di_L(t)}{dt} \\\\\n&= \\omega L \\cdot \\hat{I} \\cos(\\omega t + \\varphi_i) \\\\\n&= \\omega L \\hat{I} \\sin(\\omega t + \\varphi_i + \\frac{\\pi}{2})\n\\end{align}\\]\n\n\n\n\n\n\n\n\nKapazität \\(C\\) - Einheit: 1 F = 1 C/V = 1 As/V\n\n\n\n\\[\\begin{align}\ni(t) &= C \\cdot \\frac{du_C(t)}{dt} \\\\\n&= \\omega C \\cdot \\hat{U} \\cos(\\omega t + \\varphi_u) \\\\\n&= \\omega C \\hat{U} \\sin(\\omega t + \\varphi_u + \\frac{\\pi}{2})\n\\end{align}\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Netzwerkerregung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_03.html",
+    "href": "lec/lec_03.html",
+    "title": "3  Komplexe Wechselstromrechnung",
+    "section": "",
+    "text": "3.1 Beschreibung und Analyse im Frequenzbereich",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Komplexe Wechselstromrechnung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_03.html#beschreibung-und-analyse-im-frequenzbereich",
+    "href": "lec/lec_03.html#beschreibung-und-analyse-im-frequenzbereich",
+    "title": "3  Komplexe Wechselstromrechnung",
+    "section": "",
+    "text": "Problemstellung\n\n\n\nBei zukünftigen Schaltungen ist es nicht mehr möglich, direkt mit den Zeitfunktionen für Spannungen und Ströme zu arbeiten.\nDie von den Gleichstromnetzen bekannten Lösungsverfahren aus dem ersten Semester, die von linearen algebraischen Gleichungssystemen ausgehen (Maschen-, Knoten- und andere Verfahren) können nicht übernommen werden.\n\n\n\n\n\n\n\n\nSymbolische Verfahren/Methoden\n\n\n\n\nkomplexe Darstellung (analytisches Verfahren)\nZeigerdarstellung (graphisches Verfahren)\nWechselstromanalyse\nBetrachtungen beruhen auf der Verwendung sinusförmiger Eingangsgrößen\nZeitbereich ist physikalische Realität mit gew. und partiellen Differentialgleichung (ODE, PDE)\nFrequenzbereich hat mathematisch-formale Bedeutung",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Komplexe Wechselstromrechnung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_03.html#symbolisches-verfahren",
+    "href": "lec/lec_03.html#symbolisches-verfahren",
+    "title": "3  Komplexe Wechselstromrechnung",
+    "section": "3.2 Symbolisches Verfahren",
+    "text": "3.2 Symbolisches Verfahren\n\nMan ordnet nach einer gewissen Regel jeder Sinusgröße eine symbolische Größe zu (z.B. einen Vektor oder eine komplexe Zahl);\nMan schreibt die Differentialgleichungen des Netzwerkes mit den symbolischen Größen;\nStatt die Differentialgleichungen zu lösen, löst man die Gleichungen für die Symbole und bestimmt die unbekannten Größen.\nMan transformiert die gefundenen Symbolgrößen zurück in die gesuchten Sinusgrößen.\nentn. (Marinescu und Marinescu 2016)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Komplexe Wechselstromrechnung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_03.html#vorteile-des-frequenzbereichs",
+    "href": "lec/lec_03.html#vorteile-des-frequenzbereichs",
+    "title": "3  Komplexe Wechselstromrechnung",
+    "section": "3.3 Vorteile des Frequenzbereichs",
+    "text": "3.3 Vorteile des Frequenzbereichs\n\nzeitl. Differentiation und Integration geht über in Multiplikation und Division mit dem Differentialoperator \\(s=\\sigma+j\\omega\\) (komplexe Frequenz); häufig genügt es sich auf die imaginäre Frequenz \\(s=j \\omega\\) zu beschränken.\nu-i-Zusammenhänge des Zeitbereichs \\(\\rightarrow\\) ohmsche Form im Frequenzbereich durch komplexen Widerstands-/Leitwertbegriff\nODE’s gehen über in algebraische Gleichungen\ngleichwertige Darstellung harmonischer Funktionen durch komplexe Größen \\(\\rightarrow\\) Zeiger",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Komplexe Wechselstromrechnung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_03.html#funktionaltransformation",
+    "href": "lec/lec_03.html#funktionaltransformation",
+    "title": "3  Komplexe Wechselstromrechnung",
+    "section": "3.4 Funktionaltransformation",
+    "text": "3.4 Funktionaltransformation\n\n\n\n\n\n\nEuler’sche Formel\n\n\n\n\\[\n\\sigma + j \\omega = a e^{j \\varphi} = a \\left( \\cos(\\varphi) + j \\sin(\\varphi) \\right)\n\\]\n\\[\na = \\sqrt{\\sigma^2 + \\omega^2} \\quad \\mbox{und} \\quad \\varphi = \\arctan\\left(\\frac{\\omega}{\\sigma}\\right)\n\\]\n\n\n\n\n\n\n\n\nExponentialdarstellung\n\n\n\n\\[\\begin{align}\n\\cos(n\\omega t) &= \\frac{1}{2}\\left( e^{j n \\omega t} + e^{-jn\\omega t}\\right), \\quad n=0, 1, \\ldots \\\\\n\\sin(n\\omega t) &= \\frac{1}{j2}\\left( e^{j n \\omega t} - e^{-jn\\omega t}\\right), \\quad n=0, 1, \\ldots\n\\end{align}\\]\n\n\n\n\n\n\n\n\nTransformation\n\n\n\n\\[\\begin{align}\nf(t) &= \\hat{A}\\cos(\\omega t + \\varphi_a) \\\\\n&= \\frac{1}{2} \\underbrace{\\hat{A} e^{j \\varphi_a}}_{Phasor} e^{j \\omega t}\n+ \\frac{1}{2} \\underbrace{\\hat{A} e^{-j\\varphi_a}}_{Phasor} e^{-j \\omega t} \\\\\n&= \\frac{1}{2}\\underline{\\hat{A}} e^{j \\omega t} + \\frac{1}{2}\\underline{\\hat{A}}^{*} e^{-j \\omega t} \\\\\n&= \\mathfrak{Re}\\left\\{\\underline{\\hat{A}}e^{j\\omega t}\\right\\} \\\\\n&= \\mathfrak{Re}\\left\\{\\hat{A}e^{j \\varphi_a}e^{j \\omega t}\\right\\} \\\\\n&= \\mathfrak{Re}\\left\\{\\hat{A}\\left( \\cos(\\omega t + \\varphi_a) + j \\sin(\\omega t + \\varphi_a)\\right)\\right\\}\n\\end{align}\\]\n\n\n\n3.4.1 Definitionen\n\n\n\n\n\n\nrotierender Zeiger, komplexer Momentanwert\n\n\n\n\\[\n\\underline{f}(t) = \\underline{\\hat{A}} e^{j\\omega t} = \\hat{A} e^{j \\varphi_a} e^{j \\omega t}\n\\]\n\n\n\n\n\n\n\n\nruhender Zeiger, komplexer Scheitelwert, Phasor\n\n\n\n\\[\n\\underline{f}(0) = \\underline{\\hat{A}} = \\hat{A} e^{j\\varphi_a}\n\\]\n\n\n\n\n\n\n\n\nkomplexer Effektivwert\n\n\n\n\\[\n\\underline{A} = \\frac{1}{\\sqrt{2}} \\hat{A} e^{j \\varphi_a}\n\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Komplexe Wechselstromrechnung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_03.html#zeigerdarstellung",
+    "href": "lec/lec_03.html#zeigerdarstellung",
+    "title": "3  Komplexe Wechselstromrechnung",
+    "section": "3.5 Zeigerdarstellung",
+    "text": "3.5 Zeigerdarstellung\n\n\n\n\n\n\nAbbildung 3.1: Phasor-Diagramm\n\n\n\n\n3.5.1 Grundschaltelemente\n\nSinusgröße \\(i(t) = I \\sqrt{2} \\sin(\\omega t + \\varphi)\\)\nda alle in einer Schaltung vorkommenen Sinusgrößen (meist) dieselbe Kreisfrequenz \\(\\omega\\) aufweisen, kann man diese außer Acht lassen und die Zeiger als stehend betrachten;\nDer Faktor 2 in den Scheitelwerten aller Sinusgrößen wird nicht berücksichtigt und man arbeitet mit Effektivwerten, […], vor allem zur Bestimmung von Leistungen. Man reduziert also die Zeigerlängen im Maßstab \\(\\frac{1}{\\sqrt{2}}\\).\n\n\n\n3.5.2 Komplexe Zahlen\n\nEingabe als Literal\n\n\nz = 3 + 2j\n\n\nEingabe als Funktion\n\n\nz = complex(3, 2)\n\n\nFür mathematische Operationen benötigt man eine Bibliothek:\n\n\nimport cmath, math, numpy\n\nz = 4 + 4j\n\n\n\n3.5.3 Berechnung von Betrag und Phase\n\nz_abs = abs(z) \nz_ph = cmath.phase(z)\nprint('Betrag =', z_abs)\nprint('Phase in rad =', z_ph)\nprint('Phase in Grad =', numpy.degrees(z_ph))\n\n\n\n3.5.4 Darstellung in der komplexen Ebene\n\nimport matplotlib.pyplot as plt\n\nplt.plot(z.real, z.imag, 'x')\n\n\n\n3.5.5 Kartesische Form\n\n\n3.5.6 Polare Form\n\n\n3.5.7 Kartesisch &lt;-&gt; Polar\n\n\n3.5.8 Euler’s Formel\n\n\n3.5.9 Euler’s inverse Formel\n\n\n3.5.10 Algebraische Regeln\n\n\n\n\nMarinescu, Marlene, und Nicolae Marinescu. 2016. Elektrotechnik für Studium und Praxis. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-14159-2.",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Komplexe Wechselstromrechnung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_04.html",
+    "href": "lec/lec_04.html",
+    "title": "4  Impedanz, Admittanz und Leistung",
+    "section": "",
+    "text": "4.1 Widerstandsoperator",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Impedanz, Admittanz und Leistung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_04.html#widerstandsoperator",
+    "href": "lec/lec_04.html#widerstandsoperator",
+    "title": "4  Impedanz, Admittanz und Leistung",
+    "section": "",
+    "text": "u/i-Verhalten\n\n\n\n\\[\n\\frac{\\underline{u}(t)}{\\underline{i}(t)} = \\frac{\\underline{\\hat{U}}e^{j \\omega t}}{\\underline{\\hat{I}}e^{j \\omega t}}\n= \\frac{\\hat{U}}{\\hat{I}} e^{j(\\varphi_u \\varphi_i)} = \\underline{Z}\n\\]\n\n\n\n\n\n\n\n\nImpedanz\n\n\n\n\\[\\begin{align}\n\\underline{Z} &= \\frac{\\underline{u}(t)}{\\underline{i}(t)} =\n\\frac{\\underline{\\hat{U}}e^{j \\omega t}}{\\underline{\\hat{I}}e^{j \\omega t}} =\n\\frac{\\hat{U}}{\\hat{I}}e^{\\varphi_u-\\varphi_i} \\\\\n&= Z e^{j \\varphi_z} = Z \\left( \\cos(\\varphi_z) + j \\sin(\\varphi_z) \\right) \\\\\n&= \\operatorname{Re}{\\underline{Z}} + j \\operatorname{Im}{\\underline{Z}} \\\\\n&= R + j X\n\\end{align}\\]\n\n\n\n\n\n\n\n\nEigenschaften\n\n\n\n\\[\\begin{align}\nZ &= \\lvert\\underline{Z}\\lvert = \\sqrt{R^2 + X^2} & &\\mbox{Scheinwiderstand} \\\\\nR &= \\operatorname{Re}{\\underline{Z}} & &\\mbox{Wirkwiderstand (Resistanz)} \\\\\nX &= \\operatorname{Im}{\\underline{Z}} & &\\mbox{Blindwiderstand (Reaktanz)} \\\\\n\\tan(\\varphi_z) &= \\frac{\\operatorname{Im}{\\underline{Z}}}{\\operatorname{Re}{\\underline{Z}}} = \\frac{X_r}{R_r}  & & \\\\\n\\varphi_z &= \\varphi_u - \\varphi_i = \\arctan\\left(\\frac{X_r}{R_r}\\right) & &\n\\end{align}\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Impedanz, Admittanz und Leistung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_04.html#leitwertoperator",
+    "href": "lec/lec_04.html#leitwertoperator",
+    "title": "4  Impedanz, Admittanz und Leistung",
+    "section": "4.2 Leitwertoperator",
+    "text": "4.2 Leitwertoperator\n\n\n\n\n\n\nHarmonische Anregung\n\n\n\n\\[\\begin{align}\nu(t) &= \\hat{U} \\cos(\\omega t + \\varphi_u) & \\underline{u}(t) &= \\underline{\\hat{U}} e^{j \\omega t} \\\\\ni(t) &= \\hat{I} \\cos(\\omega t + \\varphi_i) & \\underline{i}(t) &= \\underline{\\hat{I}} e^{j \\omega t}\n\\end{align}\\]\n\n\n\n\n\n\n\n\nAdmittanz\n\n\n\n\\[\\begin{align}\n\\underline{Y} &= \\frac{\\underline{i}(t)}{\\underline{u}(t)} =\n\\frac{\\underline{\\hat{I}}e^{j \\omega t}}{\\underline{\\hat{U}}e^{j \\omega t}} =\n\\frac{\\hat{I}}{\\hat{U}}e^{\\varphi_i-\\varphi_u} \\\\\n&= Y e^{j \\varphi_y} = Y \\left( \\cos(\\varphi_y) + j \\sin(\\varphi_y) \\right) \\\\\n&= \\operatorname{Re}{\\underline{Y}} + j \\operatorname{Im}{\\underline{Y}} \\\\\n&= G + j B\n\\end{align}\\]\n\n\n\n\n\n\n\n\nEigenschaften\n\n\n\n\\[\\begin{align}\nY &= \\lvert\\underline{Y}\\lvert = \\sqrt{G^2 + B^2} & &\\mbox{Scheinleitwert} \\\\\nG &= \\operatorname{Re}{\\underline{Y}} & &\\mbox{Wirkleitwert (Konduktanz)} \\\\\nB &= \\operatorname{Im}{\\underline{Y}} & &\\mbox{Blindleitwert (Suszeptanz)} \\\\\n\\tan(\\varphi_y) &= \\frac{\\operatorname{Im}{\\underline{Y}}}{\\operatorname{Re}{\\underline{Y}}} = \\frac{B}{G}  & & \\\\\n\\varphi_y &= \\varphi_i - \\varphi_u = \\arctan\\left(\\frac{B}{G}\\right) & &\n\\end{align}\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Impedanz, Admittanz und Leistung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_04.html#vergleich-von-rlc-netzwerken",
+    "href": "lec/lec_04.html#vergleich-von-rlc-netzwerken",
+    "title": "4  Impedanz, Admittanz und Leistung",
+    "section": "4.3 Vergleich von RLC-Netzwerken",
+    "text": "4.3 Vergleich von RLC-Netzwerken\n\\[\\begin{align}\n\\mbox{Zeitbereich} &: & u &= i R &  u &= \\frac{1}{C} \\int i\\, dt & u &= L \\frac{di}{dt} \\\\\n\\mbox{Frequenzbereich} &: & \\underline{u} &= \\underline{i} R &\n\\underline{u} &= \\frac{1}{j \\omega C} \\underline{i} &\n\\underline{u} &= j \\omega L \\underline{i} \\\\\n\\mbox{Impedanz} &: & \\underline{Z} &= R &\n\\underline{Z} &= j X_C = -\\frac{j}{\\omega C} &\n\\underline{Z} &= j X_L = j \\omega L \\\\\n\\mbox{Phase} &: & \\varphi_Z&= 0 & \\varphi_Z &= -\\frac{\\pi}{2} & \\varphi_Z &= \\frac{\\pi}{2}\n\\end{align}\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Impedanz, Admittanz und Leistung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_04.html#leistung-von-wechselsignalen",
+    "href": "lec/lec_04.html#leistung-von-wechselsignalen",
+    "title": "4  Impedanz, Admittanz und Leistung",
+    "section": "4.4 Leistung von Wechselsignalen",
+    "text": "4.4 Leistung von Wechselsignalen\n\n\n\n\n\n\nHarmonische Anregung\n\n\n\n\\[\\begin{align}\nu(t) &= \\hat{U} \\cos(\\omega t + \\varphi_u) & i(t) &= \\hat{I} \\cos(\\omega t + \\varphi_i) \\\\\n&= \\frac{1}{2} \\left( \\underline{\\hat{U}} e^{j \\omega t} + \\underline{\\hat{U}}^* e^{-j \\omega t}\\right) &\n&= \\frac{1}{2} \\left( \\underline{\\hat{I}} e^{j \\omega t} +  \\underline{\\hat{I}}^* e^{-j \\omega t}\\right) \\\\\n&= \\operatorname{Re}{\\underline{\\hat{U}}e^{j \\omega t}} & &= \\operatorname{Re}{\\underline{\\hat{U}}e^{j \\omega t}}\n\\end{align}\\]\n\n\n\n\n\n\n\n\nKomplexe Leistung\n\n\n\n\\[\\begin{align}\np(t) &= u(t) \\cdot i(t) \\\\\n&= \\frac{1}{4} \\left( \\underline{\\hat{U}} e^{j \\omega t} +\n\\underline{\\hat{U}}^* e^{-j \\omega t}\\right)  \n\\left(\\underline{\\hat{I}} e^{j \\omega t} + \\underline{\\hat{I}}^* e^{-j \\omega t}\\right) \\\\\n&= \\underbrace{\\frac{1}{4} \\left(\\underline{\\hat{U}} \\underline{\\hat{I}}^* +\n\\underline{\\hat{U}}^* \\underline{\\hat{I}} \\right)}_{\\mbox{zeitunabh. Anteil}} +\n\\underbrace{\\frac{1}{4} \\left( \\underline{\\hat{U}}\n\\underline{\\hat{I}} e^{2j \\omega t} + \\underline{\\hat{U}}^*\n\\underline{\\hat{I}}^* e^{-2j \\omega t}\\right)}_{\\mbox{zeitabh. Anteil}}\n\\end{align}\\]\n\n\n\n\n\n\n\n\nDefinitionen\n\n\n\n\\[\\begin{align}\n\\underline{P} &= \\frac{1}{4} \\left(\\underline{\\hat{U}} \\underline{\\hat{I}}^* +\n\\underline{\\hat{U}}^* \\underline{\\hat{I}} \\right), \\quad\n\\mbox{Momentanwert, konstanter Anteil bzw. linearer Mittelwert, Momentanleistung} \\\\\np(t) &= \\frac{1}{2} \\operatorname{Re}{\\underline{\\hat{U}}\\underline{\\hat{I}}^*} \\\\\n&= \\frac{1}{2} \\operatorname{Re}{\\hat{U}\\hat{I} e^{j(\\varphi_u-\\varphi_i)}} \\\\\n&= \\frac{1}{2} \\hat{U} \\hat{I} \\cos(\\varphi_u-\\varphi_i)\n\\end{align}\\]\n\n\n\n\n\n\n\n\nEigenschaften\n\n\n\n\\[\\begin{align}\nS &= \\lvert\\underline{P}\\lvert = \\sqrt{P^2 + Q^2} & &\\mbox{Scheinleistung} \\\\\nP &= \\operatorname{Re}{\\underline{P}} & &\\mbox{Wirkleistung} \\\\\nQ &= \\operatorname{Im}{\\underline{P}} & &\\mbox{Blindleistung}\n\\end{align}\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Impedanz, Admittanz und Leistung</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_05.html",
+    "href": "lec/lec_05.html",
+    "title": "5  Grafische Analysemethoden / Darstellungen im Frequenzbereich",
+    "section": "",
+    "text": "5.1 Bode-Diagramm\n“Unter Bode-Diagramm (engl. Bode plot) versteht man eine Darstellung von zwei Funktionsgraphen: Ein Graph zeigt den Betrag (Amplitudenverstärkung), der andere das Argument (die Phasenverschiebung) einer komplexwertigen Funktion in Abhängigkeit von der Frequenz. Diese Art der Darstellung ist nach Hendrik Wade Bode benannt, welcher diese Diagramme bei seinen Arbeiten in den Bell Laboratories in den 1930er Jahren benutzte.” (wikipedia2021a?)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grafische Analysemethoden / Darstellungen im Frequenzbereich</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_05.html#übertragungsfaktor",
+    "href": "lec/lec_05.html#übertragungsfaktor",
+    "title": "5  Grafische Analysemethoden / Darstellungen im Frequenzbereich",
+    "section": "5.2 Übertragungsfaktor",
+    "text": "5.2 Übertragungsfaktor\nIst die Eingangsgröße \\(x(t)\\) eines linearen Netzwerks eine sinusförmige Wechselgröße der Kreisfrequenz \\(\\omega\\), in komplexer Schreibweise\n\\[\nx(t) = \\operatorname{Re}(\\underline{\\hat{X}} e^{j\\omega t}) = \\operatorname{Re}(\\underline{X}),\n\\]\nso gilt dies auch für die Ausgangsgröße\n\\[\ny(t) = \\operatorname{Re}(\\underline{\\hat{Y}} e^{j \\omega t}) = \\operatorname{Re}(\\underline{Y}).\n\\]\nDas Verhältnis\n\\[\n\\underline{H}(j\\omega) = \\frac{\\underline{Y}}{\\underline{X}}\n\\]\nder komplexen Zeiger \\(\\underline{Y}\\) und \\(\\underline{X}\\) wird als Übertragungsfaktor des Netzwerks bezeichnet.\nBezeichnet \\(\\underline{H}(j\\omega)\\) ein Spannungsverhältnis, so spricht man auch von einem Spannungsübertragungsfaktor; dieser wird durch den Index v bzw. u kenntlich gemacht. Der Betrag von \\(\\underline{H}_v(j \\omega)\\) bei der Frequenz \\(f = \\omega/2 \\pi\\)\n\\[\nA_v(f) = \\vert \\underline{H}_v(j2 \\pi f) \\vert\n\\]\nwird als Spannungsverstärkung bezeichnet.\nEin Stromübertragungsfaktor – kenntlich gemacht durch den Index i – bezeichnet entsprechend ein Verhältnis (komplexer) Stromamplituden, während ein Leistungsübertragungsfaktor (Index p) ein Verhältnis zweier (komplexer) Leistungsamplituden bestimmt.\nDie Phase \\(\\varphi\\) des Übertragungsfaktors ist frequenzabhängig und errechnet sich aus Real- und Imaginärteil von \\(\\underline{H}\\) gemäß\n\\[\n\\varphi(\\omega) = \\arctan\\left( \\frac{\\operatorname{Im}(\\underline{H}(j \\omega))}{\\operatorname{Re}(\\underline{H}(j \\omega))} \\right).\n\\]\nAus der Phasenverschiebung folgt die Phasenlaufzeit\n\\[\nt_{\\varphi(\\omega)} = \\frac{\\varphi(\\omega)}{\\omega};\n\\]\ndiese bestimmt die Verzögerung, die ein unendlich ausgedehntes sinusförmiges Signal der Kreisfrequenz \\(\\omega\\) beim Durchgang durch das lineare System erfährt. Die Einhüllende eines endlichen Wellenzugs wird dagegen um die Gruppenlaufzeit\n\\[\nt_g(\\omega) = \\frac{d\\varphi}{d\\omega}\n\\]\nverzögert.",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grafische Analysemethoden / Darstellungen im Frequenzbereich</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_05.html#angaben-in-db",
+    "href": "lec/lec_05.html#angaben-in-db",
+    "title": "5  Grafische Analysemethoden / Darstellungen im Frequenzbereich",
+    "section": "5.3 Angaben in dB",
+    "text": "5.3 Angaben in dB\nDer Wert von Spannungs-, Strom- und Leistungsverstärkungen wird häufig als sog. Verstärkungsmaß \\(a\\) in (deziBel) dB angegeben. Bei Spannungs- und Stromverstärkungen wird hierzu der (Zehner-)Logarithmus von \\(A(f)\\) mit 20 dB multipliziert. Dies führt im Fall der Spannungsverstärkung auf\n\\[\na_v(f) = 20\\,dB \\cdot \\log(A_v(f))\n\\]\nbzw. im Fall der Stromverstärkung \\(A_i(f) = \\vert H_i(j2 \\pi f)\\vert\\) auf\n\\[\na_i(f) = 20\\,dB \\cdot \\log(A_i(f)).\n\\]\nDa \\(\\log(1) = 0\\) gilt, liegt allgemein für \\(a(f) &gt; 0\\,dB\\) Verstärkung vor, für \\(a(f) &lt; 0\\,dB\\) Abschwächung.\nSoll eine Leistungsverstärkung in dB ausgedrückt werden, so ist der Logarithmus der Leistungsverstärkung \\(G_p(f) = P_2/P_1\\) mit 10 dB zu multiplizieren.\n\\[\na_p(f) = 10\\,dB \\cdot \\log(G_p(f)).\n\\]\nDabei bezeichnen \\(P_1\\) und \\(P_2\\) die Effektivwerte der vom System aufgenommenen bzw. abgegebenen Wirkleistung. Der Hintergrund für den gegenüber \\(a_v\\) und \\(a_i\\) halbierten “Vorfaktor” von 10 dB ist, daß die Leistung proportional zum Quadrat von Spannungs- bzw. Stromamplitude ist.\nDie “Einheit” dB wird für relative Pegelangaben verwendet, d.h. für die Angabe von Verhältnissen. Daneben werden aber auch absolute Pegelangaben in dB vorgenommen, wobei eine feste Bezugsgröße vorgegeben wird. Erwähnt werden soll hier die gebräuchliche “Einheit” dBm, die für Leistungsangaben verwendet wird und den Effektivwert \\(P\\) der Leistung bezogen auf 1 mW angibt \\(P\\) in dBm = \\(10\\,dB \\log(P/1\\,mW)\\).\n\n5.3.1 Bode-Diagramm einer RC-Schaltung (Hochpass)\nErmitteln Sie den Betrags- und Phasengang der einfachen RC-Schaltung mit Hilfe der komplexen Wechselstromrechnung (KWR). Nutzen Sie Python und SPICE zur Darstellung des Bode-Diagramms.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Spezifikation der Impedanz/Admittanz\nR = 2e3\nC = 156e-9\n\n# Frequenzvektor\nf = np.logspace(0, 5, 100)\nw = 2*np.pi*f\n\n# Bestimmung der Impedaanzen\nZ1 = R\nZ2 = 1/(1j*w*C)\n\n# Spannungsuebertrangungsfunktion\nH_u = Z1 / (Z1 + Z2)\n\n# Bode-Diagramm\nplt.subplot(2, 1, 1)\nplt.semilogx(f, 20*np.log10(np.abs(H_u)))\nplt.ylabel(r'$\\vert H_u \\vert$/dB')\nplt.grid()\nplt.title('Bode-Diagramm einer RC-Schaltung')\n\nplt.subplot(2, 1, 2)\nplt.semilogx(f, np.angle(H_u))\nplt.xlabel(r'Frequenz f/Hz')\nplt.ylabel(r'arg($H_u$)/rad')\nplt.grid()\n\nplt.show()",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grafische Analysemethoden / Darstellungen im Frequenzbereich</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_05.html#nyquist-diagramm",
+    "href": "lec/lec_05.html#nyquist-diagramm",
+    "title": "5  Grafische Analysemethoden / Darstellungen im Frequenzbereich",
+    "section": "5.4 Nyquist-Diagramm",
+    "text": "5.4 Nyquist-Diagramm\n“Ein Nyquist-Diagramm, auch als Nyquist-Graph oder Nyquist-Plot bezeichnet, stellt die Ortskurve der Ausgangsgröße eines Regelkreises mit der Frequenz als Parameter dar. Es wird in der Regelungstechnik, Verstärkerkonstruktion und Signalaufbereitung verwendet, um die Stabilität eines Systems mit Rückkopplung zu beschreiben. Benannt ist es nach dem schwedisch-amerikanischen Physiker Harry Nyquist.” (Wikipedia 2023)\n“Passive lineare Schaltungen mit R, L und C an sinusförmigen Signalen sind durch ihre Impedanz, dem Wechselstromwiderstand oder seinem Leitwert, der Admittanz charakterisierbar. Die Schaltungen bilden von der Frequenz abhängige Spannungsteiler, deren Spannungsverlauf im Amplitudenfrequenzgang grafisch darstellbar ist. Die Phasenlage des Ausgangssignals bezogen auf das Eingangssignal kann grafisch im Phasenfrequenzgang gezeigt werden. Beide Darstellungen bilden das komplette Bodediagramm.\nBei gegebenen Bauteilwerten kann für jede Frequenz die Impedanz Z berechnet und als Zeiger in ein Polarkoordinatensystem mit reeller und imaginärer Achse gezeichnet werden. Entsprechend den Achsenparametern gibt die Zeigerlänge dann die Impedanz, Admittanz, Ausgangsspannung oder den Ausgangsstrom an. Die Phasenlage ist durch den Winkel des Zeigers mit der reellen Achse bestimmt.\nIn der Elektronik beschreibt die Systemtheorie unter anderem das Übertragungsverhalten von Signalen. Eine hilfreiche Voraussetzung ist das Rechnen mit komplexen Größen sowie deren Darstellungen im Polarkoordinatensystem oder der [Einführung in die komplexe Gaußschen Zahlenebene. Die oben genannten komplexen Größen sind von den Bauteilwerten abhängig. Die Impedanz Z einer dimensionierten RC- oder RL-Reihenschaltung ist frequenzabhängig. Die Ortskurve ist die Verbindung der errechneten Impedanzwerte in der komplexen Ebene durch einen Kurvenzug mit der Frequenz als Parameter. Die Zeigerlänge vom Nullpunkt zum Kurvenpunkt auf der Ortskurve entspricht dem skalaren Impedanzwert der aktuellen Frequenz. Der Phasenwinkel bezogen auf die Re-Achse zählt linksdrehend positiv und rechtsdrehend negativ. Die Lote vom Zeigerendpunkt auf die Koordinatenachsen ergeben für die jeweilige Frequenz als Achsenabschnitte die Wirk- und Blindkomponente des Systems.”\nEntnommen aus Elektrophysik – Spezielle Grundlagen, Ortskurve (Mietke 2024)\n\n\n\n\n\n\nVergleich zum Zeigerdiagramm\n\n\n\n\nZeigerdiagramm nur für konstante Parameter\nIm Zeigerdiagramm keine Aussagen über Auswirkungen von Änderungen der Frequenz oder Schaltelemente\n“Für jeden Wert der Zweipole \\(R\\), \\(L\\), und \\(C\\) oder jede Frequenz müssten gesonderte Zeigerdiagramme erstellt werden.”\n“Man verzichtet auf die Darstellung der Zeiger und trägt in der komplexen Zahlenebene nur die Kurve auf.”\n\n\n\n\n5.4.1 Ortskurve einer RC-Schaltung\nMit den Bauteilen \\(R\\) = 2 k\\(\\Omega\\) und \\(C\\) = 159 nF kann eine Reihen- oder Parallelschaltung gebildet werden. Die komplexe Impedanz der Reihenschaltung ist von der Frequenz abhängig und grafisch in der komplexen Ebene als Ortskurve mit der Frequenz als Parameter dargestellt. Die Blindwiderstandswerte wurden für einen bestimmten Frequenzbereich errechnet und im Polarkoordinatensystem eingetragen. Alle Werte liegen im 4. Quadranten auf einer Geraden. Da der ohmsche Widerstand ist von der Frequenz unabhängig ist, verläuft sie parallel zur imaginären Achse im Abstand von 2 k\\(\\Omega\\). Auf die reelle (Re) Achse bezogen ist der Phasenwinkel der Impedanz negativ. Das Diagramm ist mit den angegebenen gerundeten Rechenwerten des Blindwiderstands, der Impedanz und des Phasenwinkels erstellt.\n\n\n\n\n\n\nAbbildung 5.1: RC-Schaltung für eine Ortskurve\n\n\n\n\\[\n\\underline{Z} = R_1 + \\frac{1}{j \\omega C_1}\n\\]\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Spezifikation der Impedanz/Admittanz\nR = 2e3\nC = 156e-9\n\nf = np.linspace(0.2e3, 5e3, 5)\nw = 2*np.pi*f\n\nZ = R + 1/(1j*w*C)\n\n# Ortskurve der Impedanz\nplt.plot(Z.real, Z.imag, '-x')\nplt.grid()\nplt.xlabel(r'Re{Z}')\nplt.ylabel(r'Im{Z}')\n\nplt.show()\n\n“Die Ortskurve kann auch für die Parallelschaltung von R und C mit der Frequenz als Parameter gezeichnet werden. Im Polardiagramm wird sie durch die Zeiger aller Gesamtleitwerte oder Admittanzen gebildet und verläuft im 1. Quadranten parallel zur imaginären Achse. Die Achsenbezeichnungen der Leitwerte werden in Siemens (S) angeben. Die Phasenwinkel sind auf die reelle (Re) Achse bezogen positiv.” (Mietke 2024)\n\n\n5.4.2 Inversion von Ortskurven\n“Bei der Konstruktion einer Ortskurve ist es oft notwendig von der Widerstandsform \\(\\underline{Z}(\\omega)\\) auf die Leitwertsform \\(\\underline{Y}(\\omega)\\) überzugehen und umgekehrt. Beide Funktionen gehen jeweils aus der Kehrwertbildung der anderen hervor, man nennt sie zueinander inverse Funktionen und die Kehrwertbildung selbst Inversion.” Kap. 5, (Büttner 2014)\nDie Inversion der Ortskurve hat als Ergebnis die zur Ausgangsschaltung äquivalente Schaltung. Diese Umrechnung ist immer dann notwendig, wenn es sich um gemischte Reihen- und Parallelschaltungen wie bei T- und \\(\\Pi\\)-Filtern, belasteten Filtern und Schwingkreisen handelt.\nDie Ortskurven einfacher RC- und RL-Schaltungen verhalten sich wie folgt:\n\nVerläuft die Ortskurve der Impedanz oder Admittanz im 1. Quadranten, so befindet sich die dazu invertierte Ortskurve im 4. Quadranten.\nDie Ortskurve der Impedanz einer Reihenschaltung ist eine Parallele zur imaginären Achse im Abstand des ohmschen Widerstandswerts. Die invertierte Ortskurve der Admittanz ist ein im Nullpunkt endender Halbkreis mit dem Durchmesser des reellen Leitwerts.\nDie Ortskurve der Admittanz einer Parallelschaltung ist eine Parallele zur imaginären Achse im Abstand des reellen Leitwerts. Die invertierte Ortskurve der Impedanz ist ein im Nullpunkt endender Halbkreis mit dem Durchmesser des ohmschen Widerstandswerts.\nInversion eines Punktes (Widerstandsform/Impedanz): \\(\\underline{Z} (5 + 5j) \\Omega\\)\nMa{}stäbe \\(M_Z = 2 \\Omega/cm\\) und \\(M_Y = 0.1 S/cm\\)\nLeitwertform/Admittanz: \\(\\underline{Y} = 1 / \\underline{Z}\\)\n\n\\[\n\\underline{Y} = \\frac{1}{(5 + 5j) \\Omega} = \\frac{(5 - 5j)S}{50} = (0.1 - 0.1j) S\n\\]\n\nInversion von Ortskuven durch Inversion einzelner Punkte:\n\n\nIn die komplexe Zahlenebene wird der Zeiger \\(Z\\) eingetragen, dessen Spitze invertiert werden soll.\nUm den Ursprung des Koordinatensystems wird ein Inversionskreis mit beliebigem Radius \\(r\\) geschlagen.\nVon der Spitze des Zeigers \\(Z\\) aus werden Tangenten an den Kreis gelegt, sie ergeben die Berührungspunkte \\(T_1\\) und \\(T_2\\). Die Tangentenpunkte kann man auch finden, wenn man um die Mitte des Zeigers einen Kreis mit dem Radius \\(Z / 2\\), d.h. einen Thaleskreis, schlägt (siehe Höhensatz).\nDie beiden Punkte \\(T_1\\) und \\(T_2\\) werden miteinander verbunden.\nWo die Verbindungslinie den Zeiger \\(Z\\) schneidet, liegt die Spitze des konjugiert komplexen Zeigers \\(Y^*\\).\nSpiegelt man den Zeiger \\(Y^*\\) an der reellen Achse, so erhält man \\(Y\\). Die Spitze dieses Zeigers entspricht also der invertierten Spitze von \\(Z\\).\nBezeichnet man die Maßstäbe für den komplexen Scheinwiderstand mit \\(M_Z\\) und den Scheinleitwert mit \\(M_Y\\) sowie die Länge des Zeigers \\(Z\\) mit \\(L_Z\\) und die der Zeiger \\(Y\\) bzw. \\(Y^*\\) mit \\(L_Y^*\\) bzw. \\(L_Y\\), so ist – da das Dreieck 0T1P rechtwinklig ist – nach dem Kathetensatz",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grafische Analysemethoden / Darstellungen im Frequenzbereich</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_05.html#rc-filter",
+    "href": "lec/lec_05.html#rc-filter",
+    "title": "5  Grafische Analysemethoden / Darstellungen im Frequenzbereich",
+    "section": "5.5 RC-Filter",
+    "text": "5.5 RC-Filter\n\n5.5.1 RC-Tiefpaß\n\n\n5.5.2 RC-Hochpaß\n\n\n5.5.3 RC-Bandpaß\n\n\n\n\n\n\nAbbildung 5.2: Bode-Diagramm eines Bandpasses\n\n\n\n“Besitzt ein Netzwerk sowohl bei hohen als auch bei tiefen Frequenzen einen Sperrbereich und bei mittleren Frequenzen einen Durchlaßbereich, so liegt ein Bandpaß vor. Der prinzipielle Verlauf der Spannungsverstärkung \\(a_v\\) ist im Bode-Diagramm {numref}fig:lec5bp skizziert. Die Grenzen des Durchlaßbereichs werden nach unten durch die untere Grenzfrequenz \\(f_{gu}\\) und nach oben durch die obere Grenzfrequenz \\(f_{go}\\) bestimmt. Die Differenz \\(B = f_{go} − f_{gu}\\) heißt Bandbreite (engl. bandwidth) des Bandpasses; das geometrische Mittel\n\\[\nf_m = \\sqrt{f_{gu} f_{go}}\n\\]\nder beiden Grenzfrequenzen wird als Bandmittenfrequenz bezeichnet. Bei logarithmisch unterteilter Frequenzskala liegt \\(f_m\\) genau in der Mitte zwischen \\(f_{gu}\\) und \\(f_{go}\\). Ein Bandpaß heißt schmalbandig, falls \\(B &lt;&lt; f_m\\) gilt; als Maß gilt die relative Bandbreite \\(B/f_m\\). Die Abschwächung des Signals bei der Bandmittenfrequenz wird als Einfügungsdämpfung bezeichnet.” (Reisch 2007)\n“Die als Wien-Glied bezeichnete Schaltung ist ein spezieller RC-Bandpass. Im Wien-Robinson-Generator bestimmt dieses Filter die Ausgangsfrequenz. Er generiert Sinusfrequenzen mit sehr geringem Klirrfaktor. Im durchstimmbaren Sinusgenerator sind die beiden Widerstände durch gemeinsam einstellbare Potentiometer ersetzt. Diese Anordnung gibt es auch in Wechselstrom-Brückenschaltungen.” {cite}mietke2024",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grafische Analysemethoden / Darstellungen im Frequenzbereich</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_05.html#elementtransformation",
+    "href": "lec/lec_05.html#elementtransformation",
+    "title": "5  Grafische Analysemethoden / Darstellungen im Frequenzbereich",
+    "section": "5.6 Elementtransformation",
+    "text": "5.6 Elementtransformation\n\n\n\n\n\n\nAbbildung 5.3: Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS\n\n\n\nEntn. aus (Deliyannis, Sun, und Fidler 1998)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grafische Analysemethoden / Darstellungen im Frequenzbereich</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_05.html#messbrücken",
+    "href": "lec/lec_05.html#messbrücken",
+    "title": "5  Grafische Analysemethoden / Darstellungen im Frequenzbereich",
+    "section": "5.7 Messbrücken",
+    "text": "5.7 Messbrücken\n\n5.7.1 Wheatstone-Messbrücke – Gleichstrommessbrücke\nZwei mögliche Messverfahren:\n\nAusschlagverfahren Brückenspannung \\(U_D\\) wird mit hochohmigem Messinstrument gemessen.\nAbgleich- oder Nullverfahren Brückenspannung \\(U_D\\) wird zu Null abgeglichen.\n\n\n\n5.7.2 Wechselstrommessbrücke\n\nAbgleichbedingung\n\n\\[\n\\underline{Z}_1 \\underline{Z}_4 = \\underline{Z}_2 \\underline{Z}_3\n\\]\n\nZerlegung in Betrag und Phase\n\n\\[\n\\vert\\underline{Z}_1\\vert \\vert\\underline{Z}_4\\vert = \\vert\\underline{Z}_2\\vert \\vert\\underline{Z}_3\\vert \\\\\n\\varphi_1 + \\varphi_4 = \\varphi_2 + \\varphi_3\n\\]\n\nZerlegung in Real- und Imaginärteil\n\n\\[\nR_1 R_4 - X_1 X_4 = R_2 R_3 - X_2 X_3 \\\\\nX_1 R_4 + R_1 X_4 = X_2 R_3 + R_2 X_3\n\\]\n\nzwei Bedingungen \\(\\Rightarrow\\) zwei abgleichbare Elemente\n\n\n\n5.7.3 Kapazitätsmessbrücke nach Wien – Wien-Brücke\n\n\n5.7.4 Wien-Robinson-Brücke – einfaches Frequenzmessgerät\n(wikipedia2019a?) (Hewlett 1942)\n\n\n\n\nBüttner, Wolf-Ewald. 2014. Grundlagen der Elektrotechnik 2. OLDENBOURG WISSENSCHAFTSVERLAG. https://doi.org/10.1524/9783110371796.\n\n\nDeliyannis, T., Yichuang Sun, und J. K. Fidler. 1998. Continuous-Time Active Filter Design. CRC Press. https://doi.org/10.1201/9781439821879.\n\n\nHewlett, W. R. 1942. „Variable Frequency Oscillation Generator“. U.S. Patent Office No. 2,268,872. https://de.wikipedia.org/wiki/Wien-Robinson-Brücke.\n\n\nMietke, Detlef. 2024. „Elektroniktutor“. Techreport. Oberstufenzentrum für Kommunikations-, Informations- und Medientechnik (OSZ-KIM), Berlin; online. https://www.elektroniktutor.de.\n\n\nReisch, Michael. 2007. Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE. 2. Aufl. Springer. https://doi.org/10.1007/978-3-540-34015-7.\n\n\nWikipedia. 2023. „Ortskurve (Systemtheorie) — Wikipedia, die freie Enzyklopädie“. https://de.wikipedia.org/w/index.php?title=Ortskurve_(Systemtheorie)&oldid=237346128.",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grafische Analysemethoden / Darstellungen im Frequenzbereich</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_06.html",
+    "href": "lec/lec_06.html",
+    "title": "6  Schwingkreise",
+    "section": "",
+    "text": "6.1 Zusammenfassung der physikalische Grundlagen\n\\[\\begin{align}\nW_{ges}(x) &= W_{pot}(x) + W_{kin}(x) = const. \\\\\n\\frac{d W_{ges}}{dt} &= \\frac{dW_{pot}}{dx} \\frac{dx}{dt} + \\frac{d W_{kin}}{dx} \\frac{d x}{dt} = 0 \\\\\nx(t) &= x_{max} \\cos(\\omega_0 t + \\varphi_0)\n\\end{align}\\]\n\\[\\begin{align}\nW_{pot} &:= \\mbox{Kondensator} \\\\\nW_{kin} &:= \\mbox{Induktivität}\n\\end{align}\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Schwingkreise</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_06.html#zusammenfassung-der-physikalische-grundlagen",
+    "href": "lec/lec_06.html#zusammenfassung-der-physikalische-grundlagen",
+    "title": "6  Schwingkreise",
+    "section": "",
+    "text": "periodische Zustandsänderung in einem physikalischen System\nperiodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder und Masse, Induktivität und Kapazität\nmaßgebende Zustandsgröße \\(x(t)\\), z.B. Auslenkung, Spannung oder Ladung, folgen einer gewöhnlichen Differenzialgleichung (DGL) \\(\\ddot{x} + \\omega_0 x = 0\\)\nharmonische Schwingung, \\(x(t+T_0) = x(t)\\), wobei \\(T_0\\) Periode, \\(\\omega_0=2 \\pi f_0 = 2\\pi \\frac{1}{T_0}\\) Eigenfrequenz und \\(f_0\\) Resonanzfrequenz\nDGL gehorcht dem Energieerhaltungssatz\n\n\n\nZusammenschaltung von Induktivität \\(L\\) und Kapazität \\(C\\) heißt (idealer) Schwing- oder Resonanzkreis\n\n\n\nfreie und erzwungene Schwingung\nungedämpfte und gedämpfte Schwingung",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Schwingkreise</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_06.html#rlc-reihenschwingkreis-aktiver-zweipol",
+    "href": "lec/lec_06.html#rlc-reihenschwingkreis-aktiver-zweipol",
+    "title": "6  Schwingkreise",
+    "section": "6.2 RLC-Reihenschwingkreis (aktiver Zweipol)",
+    "text": "6.2 RLC-Reihenschwingkreis (aktiver Zweipol)\n\n\n\n\n\n\nAbbildung 6.1: RLC-Reihenschwingkreis\n\n\n\n\n\n\n\n\n\nMaschengleichung (Zeitbereich)\n\n\n\n\\[\\begin{align}\nu_1(0) &= L \\frac{di}{dt} + i\\, R + \\frac{1}{C} \\int i dt  \\\\\n0 &= \\frac{di}{dt^2} + \\frac{R}{L} \\frac{di}{dt} + \\frac{1}{LC} i\n\\end{align}\\]\n\n\n\n\n\n\n\n\nLösung der Differentialgleichung\n\n\n\n\\[\ni(t) = \\underbrace{I_0 e^{-d \\omega_0 t}}_{Dämpfung} \\underbrace{\\sin\\left(\\sqrt{1 -d^2} \\omega_0 t\\right)}_{harm. Schwingung}\n\\]\n\n\n\n\n\n\n\n\nSpannungsübertragungsfaktor\n\n\n\nEntn. (Reisch 2007)\n\\[\\begin{align}\n\\underline{H}_u(j \\omega) = \\frac{\\underline{U}_2}{\\underline{U}_1} &= \\frac{1}{1 + j \\omega R C + \\omega^2 LC} \\\\\n&= \\frac{1}{1 + j \\frac{\\omega}{\\omega_0 Q} + \\left(\\frac{\\omega}{\\omega_0}\\right)^2}\n\\end{align}\\]\n\nEigenfrequenz / Resonanzfrequenz \\(\\omega_0 = \\frac{1}{\\sqrt{L C}}\\)\nAbklingkonstante \\(\\delta = \\frac{R}{\\omega_0 L}\\)\nDämpfung / Verlustfaktor \\(d = \\frac{1}{Q} = \\frac{R}{\\omega_0 L} = \\frac{2 \\delta}{\\omega_0}\\)\nGüte \\(Q = \\frac{\\vert Q(\\omega_0) \\vert}{P(\\omega_0)} = \\frac{1}{\\omega_0 RC} = \\frac{\\omega_0}{2 \\delta}\\)\n\n\\(\\vert Q(\\omega_0) \\vert\\) ist der Betrag der Blindleistung\n\\(P(\\omega_0)\\) ist die Wirkleistung\n\nAnalyse mit LTspice und Python GitHub Installation mit Anaconda-Shell oder Windows-Shell (CMD/PowerShell)\n\n$ pip install -U ltspice\n\n\n\nimport ltspice\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# %% Laden der RAW LTspice Daten in den Python-Workspace\nfile = \"../files/spice/kap137_reisch.raw\"\ndata = ltspice.Ltspice(file)\ndata.parse()\n\n# %% Zuweisen der Simulationdaten an lokale Variablen\nHu = data.get_data(\"v(vo)\")\nfreq = data.get_data(\"frequency\")\n\n# %% Daten werden als Numpy-Array geladen, Typ complex\nHu_dB = 20*np.log10(np.abs(Hu))\nHu_arg = 180 / np.pi * np.angle(Hu)\nf = freq.real\n\n# %% Erzeugen des Bode-Diagramms (Plot)\nfig1 = plt.figure(1)\nplt.subplot(2, 1, 1)\nplt.semilogx(f, Hu_dB)\nplt.grid()\nplt.ylabel(r'$H_u(f)$/dB')\nplt.subplot(2, 1, 2)\nplt.grid()\nplt.semilogx(f, Hu_arg)\nplt.ylabel(r'arg($H_u(f)$)/deg')\nplt.xlabel('Frequenz f/Hz')\nplt.show()",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Schwingkreise</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_06.html#grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol",
+    "href": "lec/lec_06.html#grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol",
+    "title": "6  Schwingkreise",
+    "section": "6.3 Grundeigenschaften von Reihen- und Parallelschwingkreis (passiver Zweipol)",
+    "text": "6.3 Grundeigenschaften von Reihen- und Parallelschwingkreis (passiver Zweipol)\n\n\n\n\n\n\nResonanzfrequenz\n\n\n\n\nThomsonsche Formel \\(\\omega_0 = \\frac{1}{L_r C_r} = \\frac{1}{L_p C_p}\\)\nbei Resonanz erreichen Impedanz und Admittanz ein Minimum\n\n\\[\\begin{align}\n\\left . \\underline{Z} \\right\\lvert_{\\omega_0} &\\Rightarrow \\lvert\\underline{Z}\\lvert = R_r \\\\\n\\left . \\underline{Y} \\right\\lvert_{\\omega_0} &\\Rightarrow \\lvert\\underline{Y}\\lvert = G_p\n\\end{align}\\]\n\n\n\n\n\\(X(\\omega)\\)\n\\(B(\\omega)\\)\n\n\n\n\n\\(\\omega &lt; \\omega_0\\)\nkapazitiv\ninduktiv\n\n\n\\(\\omega &gt; \\omega_0\\)\ninduktiv\nkapazitiv\n\n\n\n\n\n\n\n\n\n\n\nReihenkreis (Impedanz)\n\n\n\n\\[\\begin{align}\n\\underline{Z} &= R_r + j\\left(\\omega L_r - \\frac{1}{\\omega C_r}\\right) \\\\\n&= R_r + j X(\\omega) \\\\\n\\lvert\\underline{Z}\\lvert &= \\sqrt{R_r^2 + X^2(\\omega)} \\\\\n\\arg{\\underline{Z}} &= \\arctan \\frac{X(\\omega)}{R_r}\nQ = \\frac{\\omega_0 L}{R} = \\frac{1}{R}\\sqrt{\\frac{L}{C}}\n\\end{align}\\]\n\n\n\n\n\n\n\n\nParallelkreis (Admittanz)\n\n\n\n\\[\\begin{align}\n\\underline{Y} &= G_p + j\\left(\\omega C_p- \\frac{1}{\\omega L_p}\\right) \\\\\n&= G_r + j B(\\omega) \\\\\n\\lvert\\underline{Y}\\lvert &= \\sqrt{G_p^2 + B^2(\\omega)} \\\\\n\\arg{\\underline{Y}} &= \\arctan \\frac{B(\\omega)}{G_p}\nQ &= \\frac{\\omega_0 C}{G} = \\frac{1}{G}\\sqrt{\\frac{C}{L}}\n\\end{align}\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Schwingkreise</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_06.html#vereinheitlichte-kennzeichnung",
+    "href": "lec/lec_06.html#vereinheitlichte-kennzeichnung",
+    "title": "6  Schwingkreise",
+    "section": "6.4 Vereinheitlichte Kennzeichnung",
+    "text": "6.4 Vereinheitlichte Kennzeichnung\n\n\n\n\n\n\nVerstimmung \\(v\\), relative Frequenzabweichung\n\n\n\n\\[\\begin{align}\nv &= \\frac{\\omega}{\\omega_0}-\\frac{\\omega_0}{\\omega}\n\\end{align}\\]\n\n\n\n\n\n\n\n\nNormierte Darstellung\n\n\n\n\\[\\begin{align}\n\\underline{Z} &= R \\left( 1 + j \\frac{1}{R} \\left( \\frac{\\omega \\omega_0 \\omega L}{\\omega_0}\n- \\frac{\\omega_0}{\\omega_0 \\omega C}\\right)\\right) \\\\\n&= R (1 + Q v) \\\\\n\\underline{Y} &= G (1 + j Q v)\n\\end{align}\\]\n\n\n\n\n\n\n\n\nBetrag und Phase\n\n\n\n\\[\\begin{align}\n\\frac{\\lvert\\underline{Z}\\lvert}{R} = \\frac{\\lvert \\underline{Y}\\lvert}{G} &= \\sqrt{1 + \\left( Q v \\right)} \\\\\n\\varphi_Z = \\varphi_Y &= \\arctan\\left( Q v \\right)\n\\end{align}\\]\n\n\n\n\n\n\n\n\n45\\(^{\\circ}\\)-, \\(\\frac{\\pi}{4}\\)- oder 3dB-Frequenz\n\n\n\nDer Phasenwinkel \\(\\varphi\\) ist gleich 45\\(^{\\circ}\\) und Betrag der Blindkomponente ist gleich der Wirkkomponente.\n\\[\\begin{align}\n\\lvert X(\\omega_{\\pm 45}) \\lvert &= \\pm R &  \\lvert B(\\omega_{\\pm 45}) \\lvert &= \\pm G \\\\\n\\omega_{\\pm 45} L - \\frac{1}{\\omega_{\\pm 45} C} &= \\pm R &  \\omega_{\\pm 45} C - \\frac{1}{\\omega_{\\pm 45} L} &= \\pm G\n\\end{align}\\]\n\\[\\begin{align}\n\\omega_{\\pm 45} &= \\omega_0 \\left( \\sqrt{1 + \\left(\\frac{1}{2Q}\\right)^2} \\pm \\frac{1}{2Q}\\right) \\approx \\omega_0 \\left( 1 \\pm \\frac{1}{2Q}\\right)\n\\end{align}\\]\n\\[\\begin{align}\n\\lvert \\underline{Z(\\omega_{\\pm 45})} \\lvert &= \\sqrt{2} R &  \\lvert \\underline{Y(\\omega_{\\pm 45})} \\lvert &= \\sqrt{2} G\n\\end{align}\\] $$\n\n\n\n\n\n\n\n\nBandbreite BW (bandwidth)\n\n\n\n\\[\\begin{align}\nBW &= \\omega_{45} - \\omega_{-45} = \\frac{\\omega_0}{Q} \\\\\n&= f_{45} - f_{-45} = \\frac{f_0}{Q} \\\\\n\\end{align}\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Schwingkreise</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_06.html#gegenüberstellung-der-eigenschaften-der-elementaren-schwingkreise",
+    "href": "lec/lec_06.html#gegenüberstellung-der-eigenschaften-der-elementaren-schwingkreise",
+    "title": "6  Schwingkreise",
+    "section": "6.5 Gegenüberstellung der Eigenschaften der elementaren Schwingkreise",
+    "text": "6.5 Gegenüberstellung der Eigenschaften der elementaren Schwingkreise\n\n\n\n\n\n\nAbbildung 6.2: Eingenschaften von Schwingkreisen\n\n\n\nEntn. aus (Harriehausen und Schwarzenau 2020)\n\n\n\n\nHarriehausen, Thomas, und Dieter Schwarzenau. 2020. Moeller Grundlagen der Elektrotechnik. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-27840-3.\n\n\nNatt, Oliver. 2020. Physik mit Python. Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-662-61274-3.\n\n\nReisch, Michael. 2007. Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE. 2. Aufl. Springer. https://doi.org/10.1007/978-3-540-34015-7.",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Schwingkreise</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html",
+    "href": "lec/lec_07.html",
+    "title": "7  Netzwerkanalyse",
+    "section": "",
+    "text": "7.1 Systemsimulation\nEntn. aus (Kasper 2000) (Paul und Paul 2019)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#systemsimulation",
+    "href": "lec/lec_07.html#systemsimulation",
+    "title": "7  Netzwerkanalyse",
+    "section": "",
+    "text": "Ebene\nMaß\nSimulation\n\n\n\n\nAtom\n0.1 nm\n\n\n\nFestkörper/Atomverbund\n1.0 nm\n\n\n\nDevice\n0.1 mm\nFeld\n\n\nTransistor/Subkomponenten\n1.0 mm\n\n\n\nGatter/Komponenten\n10 mm\nVerhaltensmodell",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#makrotheorie",
+    "href": "lec/lec_07.html#makrotheorie",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.2 Makrotheorie",
+    "text": "7.2 Makrotheorie\n\nMittelwerte charakteristischer Größen des Systems\nTemperatur, Wärmekapazität, Leitfähigkeit etc.\nschwache oder homogene Ortsabhängigkeit\npartielle Differentialgleichungen (PDE’s) der Feldtheorie gehen über in gewöhnliche Differentialgleichungen (ODE’s)\nnur noch dt kein dx (nach dem Ort)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#netzwerksimulation",
+    "href": "lec/lec_07.html#netzwerksimulation",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.3 Netzwerksimulation",
+    "text": "7.3 Netzwerksimulation\n\nMaschenwiderstandsmatrix\nKnotenleitwertmatrix\nmathematisch äquivalente Beschreibungen\nfür praktische Berechnungen (Simulation) \\(\\rightarrow\\) Knotenanalyse",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#netzwerk",
+    "href": "lec/lec_07.html#netzwerk",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.4 Netzwerk",
+    "text": "7.4 Netzwerk\n\n\n\n\n\n\nAbbildung 7.1: Netzwerk für die Knotenspannungsanalyse\n\n\n\n\n7.4.1 Transiente Analyse\n\nKnoten 0:\n\n\\[\\begin{align}\n-i_0-i_1-i_5&=0 \\\\\n-G_1(v_3-v_0) - C_5 \\frac{d}{dt}(v_1-v_0) &= i_0\n\\end{align}\\] $$\n\nKnoten 1:\n\n\\[\\begin{align}\n-i_2+i_3+i_5+i_6&=0 \\\\\n-G_2(v_3-v_1)+G_3(v_1-v_3)+C_5 \\frac{d}{dt}(v_1-v_0)+C_6 \\frac{d}{dt}(v_1-v_6)&=0\n\\end{align}\\]\n\nKnoten 2:\n\n\\[\\begin{align}\n-i_3+i_4-i_6 &= 0 \\\\\n-G_3(v_1-v_2)+G_4(v_2-v_4)-C_6 \\frac{d}{t}(v_1-v_2) &= 0\n\\end{align}\\]\n\n\n7.4.2 Differentialgleichungssystem\n\\[\\begin{align}\n\\begin{pmatrix}\nG_2+G_3 & -G_3 & -G_2 & 0 \\\\\n-G_3 & G_3+G_4 & 0 & -G_4 \\\\\n-G_2 & 0 & G_1+G_2 & 0 \\\\\n0 & -G_4 & 0 & G_4\n\\end{pmatrix} &\n\\begin{pmatrix}\nv_1 \\\\\nv_2 \\\\\nv_3 \\\\\nv_4\n\\end{pmatrix}\n+ \\cdots \\\\\n\\begin{pmatrix}\nC_5+C_6 & -C_6 & 0 & 0 \\\\\n-C_6 & C_6 & 0 & 0 \\\\\n0 & 0 & 0 & 0 \\\\\n0 & 0 & 0 & 0\n\\end{pmatrix}\n\\frac{d}{dt} &\n\\begin{pmatrix}\nv_1 \\\\\nv_2 \\\\\nv_3 \\\\\nv_4\n\\end{pmatrix}\n=\n\\begin{pmatrix}\n0 \\\\\n0 \\\\\n0 \\\\\n-i_0\n\\end{pmatrix}\n\\end{align}\\]\n\\[\\begin{align}\n\\mathbf{A} \\mathbf{x} + \\mathbf{B} \\dot{\\mathbf{x}} &= \\mathbf{b} \\\\\n\\dot{\\mathbf{x}} &= -\\mathbf{B}^{-1}\\mathbf{A}\\mathbf{x} +\n\\mathbf{B}^{-1}\\mathbf{b}(t) \\\\\n&= \\mathbf{T}\\mathbf{x} + \\mathbf{g}(t)\n\\end{align}\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#netzwerkanalyse-zeitabhängiger-signale",
+    "href": "lec/lec_07.html#netzwerkanalyse-zeitabhängiger-signale",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.5 Netzwerkanalyse zeitabhängiger Signale",
+    "text": "7.5 Netzwerkanalyse zeitabhängiger Signale\n\nMatrix \\(\\mathbf{B}\\) ist nicht immer invertierbar, ggf. blockweise zerlegen\nAlgebro-Differentialgleichungen\nEuler-Verfahren, explizit (vorwärts), implizit (rückwärts)\nTrapez- oder Mittelpunktregel\n\nAdams-Bashforth-,Adams-Multon- und Gear-Verfahren\nGut für den Rechner \\(\\rightarrow\\) Python, SPICE\nWir machen Transformation und dann Gauss’sches-Eliminationsverfahren",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#lösung-im-frequenzbereich",
+    "href": "lec/lec_07.html#lösung-im-frequenzbereich",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.6 Lösung im Frequenzbereich",
+    "text": "7.6 Lösung im Frequenzbereich\n\n\n\n\n\n\n\n\n\nZeitbereich\nFrequenzbereich\n\n\n\n\n\nUrbildbereich\nBildbereich\n\n\nSpannung\n\\(u_n(t)\\)\n\\(\\underline{u}(t)=\\underline{\\hat{U}}e^{j\\omega t}\\)\n\n\nStrom\n\\(i_n(t)\\)\n\\(\\underline{i}(t)=\\underline{\\hat{U}}e^{j\\omega t}\\)\n\n\nWiderstand\n\\(u_R(t)=Ri_R(t)\\)\n\\(\\underline{u}_R(t)=R \\underline{i}(t)\\)\n\n\nKondensator\n\\(i_C(t)=C \\frac{du_C(t)}{dt}\\)\n\\(\\underline{i}_C(t)= j \\omega C \\underline{u}_C(t)\\)\n\n\nSpule\n\\(u_L(t)=L \\frac{di_L(t)}{dt}\\)\n\\(\\underline{u}_L(t)= j \\omega L \\underline{i}_L(t)\\)\n\n\n\n(wenn für \\(t=0\\) energielos)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#grundaufgabe-der-netzwerkanalyse",
+    "href": "lec/lec_07.html#grundaufgabe-der-netzwerkanalyse",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.7 Grundaufgabe der Netzwerkanalyse",
+    "text": "7.7 Grundaufgabe der Netzwerkanalyse\n\nGewinnung des Netzwerkes\nWahl des Lösungsverfahrens\nDurchführung der Netzwerkanalyse\nDiskussion der Lösung",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#netzwerkgleichungen-kirchhoffsche-gesetze",
+    "href": "lec/lec_07.html#netzwerkgleichungen-kirchhoffsche-gesetze",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.8 Netzwerkgleichungen – Kirchhoff’sche Gesetze",
+    "text": "7.8 Netzwerkgleichungen – Kirchhoff’sche Gesetze\n\nKnotensatz: \\(\\sum i_n(t)=0\\)\nMaschensatz: \\(\\sum u_n(t)=0\\)\nZweigbeziehungen: \\(u_n = f(i_n)\\)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#vollständiges-kirchhoffsches-gleichungssystem",
+    "href": "lec/lec_07.html#vollständiges-kirchhoffsches-gleichungssystem",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.9 Vollständiges Kirchhoff’sches Gleichungssystem",
+    "text": "7.9 Vollständiges Kirchhoff’sches Gleichungssystem\n\n\\(p=k-1\\), unabhängige Knotengleichungen\n\\(m=z-(k-1)\\), unabhängige Maschengleichungen\n\\(z\\), \\(u,i\\)-Beziehungen der Zweigelemente",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#netzwerkstruktur",
+    "href": "lec/lec_07.html#netzwerkstruktur",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.10 Netzwerkstruktur",
+    "text": "7.10 Netzwerkstruktur\n\n7.10.1 Unabhängige Knoten und Maschen\nDie Eigenschaften eines Netzwerkes werden von den Netzwerkelementen und der Netzwerkstruktur oder -topologie bestimmt. Das ist die Art ihrer Zusammenschaltung. Sie wird auch als “Gerüst” bezeichnet und zeichnerisch durch den “Streckenkomplex” (engl. graph) ausgedrückt. Die Beschreibung kann gleichwertig durch eine “topologische Matrix” erfolgen.\n\n\n7.10.2 Netzwerkgraph\nDer Netzwerkgraph beschreibt die Verbindung der Netzwerkelemente durch Abstraktion der Netzwerkgeometrie. Jedem Knoten im Graphen entspricht ein Knoten im Netzwerk und jeder Verbindungslinie ein Zweig zwischen zwei Knoten. Er ist Grundlage der Zahl unabhängiger Knoten- und Maschengleichungen und kann durch “topologische Matrizen” (sog. “Inzidenzmatrizen”) mathematisch beschrieben werden.",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#vollständiger-baum",
+    "href": "lec/lec_07.html#vollständiger-baum",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.11 Vollständiger Baum",
+    "text": "7.11 Vollständiger Baum\nEin vollständiger Baum (engl. tree) ist ein Teilgraph, der keine Umläufe besitzt und alle Knoten des Ausgangsgraphen miteinander verbindet. In einem Netzwerk mit \\(k\\) Knoten hat der vollständige Baum insgesamt \\(k-1\\) Zweige.\n\n7.11.1 Merkmale\n\nalle Knoten sind direkt oder indirekt miteinander verbunden,\nwird ein weiterer Zweig entfernt, so geht Merkmal 1. verloren,\nes treten keine Umläufe auf.",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#baumkomplement",
+    "href": "lec/lec_07.html#baumkomplement",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.12 Baumkomplement",
+    "text": "7.12 Baumkomplement\nDas Baumkomplement bildet als Gesamtheit aller Verbindungszweige das “System unabhängiger Zweige”. Jeder Verbindungszweig gehört genau zu einer Schleife (Masche), die nur aus diesem Verbindungszweig und Zweigen des vollständigen Baumes besteht. Eine solche Schleife heißt “Fundamentalschleife” (“unabhängige Masche”). Davon gibt es \\(m=z-(k-1)\\).",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#maschenstromverfahren",
+    "href": "lec/lec_07.html#maschenstromverfahren",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.13 Maschenstromverfahren",
+    "text": "7.13 Maschenstromverfahren\n\n\n\n\n\n\nAbbildung 7.2: Netzwerk für die Maschenstromanalyse",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#wahl-der-unabhängigen-ströme-i_m",
+    "href": "lec/lec_07.html#wahl-der-unabhängigen-ströme-i_m",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.14 Wahl der unabhängigen Ströme \\(I_M\\)",
+    "text": "7.14 Wahl der unabhängigen Ströme \\(I_M\\)\n\\[\nI_1, I_4, I_7, I_8\n\\]\nAbbildung der abhängigen Ströme durch die unabhängigen Ströme:\n\\[\\begin{align}\n\\begin{pmatrix}\nI_2 \\\\\nI_3 \\\\\nI_5 \\\\\nI_6 \\\\\nI_9 \\\\\nI_{10}\n\\end{pmatrix}\n=\n\\begin{pmatrix}\n-1 & -1 & -1 & 0 \\\\\n-1 & 0 & -1 & 0 \\\\\n0 & -1 & -1 & 0 \\\\\n0 & -1 & -1 & 0 \\\\\n0 & 1 & 1 & -1 \\\\\n0 & 0 & 1 & -1 \\\\\n\\end{pmatrix}\n\\begin{pmatrix}\nI_1 \\\\\nI_4 \\\\\nI_7 \\\\\nI_8\n\\end{pmatrix}\n\\end{align}\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#maschengleichungen",
+    "href": "lec/lec_07.html#maschengleichungen",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.15 4 Maschengleichungen",
+    "text": "7.15 4 Maschengleichungen\n\\[\\begin{align}\nI_1Z_1 - I_2Z_2 - I_3Z_3 &= 0 \\\\\nU_4 + I_4Z_4 + I_9+Z_9 - I_6Z_6 - I_5Z_5 - I_2Z_2 &= 0 \\\\\nI_7Z_7 + I_{10}Z_{10} + I_9Z_9 - I_6Z_6 - I_5Z_5 - I_2Z_2 -\nI_3Z_3 &= 0 \\\\\nU_8 + I_8Z_8 - I_9Z_9 - I_{10}Z_{10} &= 0\n\\end{align}\\]\nSortieren und aufstellen des Gleichungssystems:\n\\[\\begin{align}\n\\underbrace{\\begin{pmatrix}\n\\sum Z_{1,3} & Z_2 & \\sum Z_{2,3} & 0 \\\\\nZ_2 & \\sum Z_{2,4,5,6,9} & \\sum Z_{2,5,6,9,10} & -Z_9 \\\\\n\\sum Z_{2,3} & \\sum Z_{2,5,6,9,10} & \\sum Z_{2,3,5,6,7,9,10} &\n\\sum -Z_{9,10} \\\\\n0 & -Z_9 & \\sum -Z_{9,10} & \\sum Z_{8,9,10}\n\\end{pmatrix}}_{\\mathbf{Z}}\n\\underbrace{\\begin{pmatrix}\nI_1 \\\\\nI_4 \\\\\nI_7 \\\\\nI_8\n\\end{pmatrix}}_{\\mathbf{I_M}}\n&=\n\\underbrace{\\begin{pmatrix}\n0 \\\\\n-U_4 \\\\\n0 \\\\\n-U_8\n\\end{pmatrix}}_{\\mathbf{U}}\n\\end{align}\\]",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#knotenspannungsanalyse",
+    "href": "lec/lec_07.html#knotenspannungsanalyse",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.16 Knotenspannungsanalyse",
+    "text": "7.16 Knotenspannungsanalyse\nBeim Knotenspannungsverfahren, das auf Maxwell (1873) zurückgeht, wird die Hilfsvariable Knotenspannung so eingeführt, dass jede Maschengleichung automatisch erfüllt ist und daher alle wegfallen.\nDas Verfahren umfasst dann:\n\ndie Aufstellung der Knotengleichungen für die Zweigströme,\nihren Ersatz durch die Zweigbeziehungen \\(I=f(U)\\) der Netzwerkelemente ausgedrückt durch Knotenspannungen\n\n(statt der Zweigspannung) und die Lösung der Gleichungen nach den Knotenspannungen.",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_07.html#knotenspannungs--vs-maschenstromanalyse",
+    "href": "lec/lec_07.html#knotenspannungs--vs-maschenstromanalyse",
+    "title": "7  Netzwerkanalyse",
+    "section": "7.17 Knotenspannungs- vs Maschenstromanalyse",
+    "text": "7.17 Knotenspannungs- vs Maschenstromanalyse\n\nWegfall der Baumsuche, auch spielt die Zahl unabhängiger Maschen \\(m = z-(k-1)\\) und damit die Anzahl der Zweige keine Rolle,\nweil die Knotenspannungen unabhängige Variablen sind, dürfen Spannungsquellen nicht auftreten, denn eine ideale Spannungsquelle zwischen zwei Knoten macht den Strom durch die Quelle unbestimmt.\n\n\n\n\n\nKasper, Manfred. 2000. Mikrosystementwurf. Berlin, Germany: Springer.\n\n\nPaul, Steffen, und Reinhold Paul. 2019. Grundlagen der Elektrotechnik und Elektronik 2. Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-662-58221-3.",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Netzwerkanalyse</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_08.html",
+    "href": "lec/lec_08.html",
+    "title": "8  Spulen und Übertrager",
+    "section": "",
+    "text": "8.1 Physikalische Grundlagen\nSpulen dienen der Verwirklichung von Induktivitäten. Übertrager und Transformatoren nutzen die induktive Kopplung von i. allg. galvanisch getrennten Spulen zur Spannungstransformation und zum Übertragen von elektrischer Leistung. Spulen und Übertrager werden in der Elektronik hauptsa ̈chlich zum Aufbau von Stromversorgungen, galvanischen Trennungen (z.B. Trennverstärker) und bei der Verwirklichung von Übertragern (z.B. Filter) mit definiertem Frequenzgang verwendet.\nIm Gegensatz zu Kondensatoren und Widerständen stehen Spulen häufig nicht als fertige Bauelemente zur Verfügung. Der Anwender hat die Auswahl unter einer großen Fülle magnetischer Werkstoffe, Kernformen und Spulenaufbauten. Der Entwurf von Spulen und Übertragern – insbesondere für den Bereich hoher Frequenzen – erfordert deshalb eine Vielzahl von material- und damit herstellerspezifischen Angaben, deren Wiedergabe den Rahmen […] dieser Veranstaltung sprengen würde.\nJeder von einem Strom durchflossene Leiter erzeugt ein magnetisches Feld der Feldstärke \\(\\mathbf{H}\\). Die Einheit der magnetischen Feldstärke im SI-System ist A/m. Im Vakuum ist \\(\\mathbf{H}\\) mit der magnetischen Flußdichte \\(\\mathbf{B}\\) verknüpft über \\(\\mathbf{B} = \\mu_0 \\mathbf{H}\\) wobei \\(\\mu_0\\) = \\(4 \\pi 10^{-7}\\) Vs/Am = \\(4 \\pi\\) nH/cm die magnetische Feldkonstante (Induktionskonstante) bezeichnet. Die Einheit der magnetischen Flußdichte ist Tesla (1T = 1Vs/m2).1 Durch Kernmaterialien mit ferromagnetischen oder ferrimagnetischen Eigenschaften wird in technischen Spulen und Übertragern häufig die magnetischen Flußdichte \\(\\mathbf{B}\\) erhöht. Durch die magnetische Polarisation dieser Materialien im Feld \\(\\mathbf{H}\\) ist die magnetische Flußdichte im Kern um die Permeabilitätszahl \\(\\mu_r\\) erhöht \\(\\mathbf{B} = \\mu_0 \\mu_r \\mathbf{H} = \\mu \\mathbf{H}\\). Der Wert von \\(\\mu_r\\) ist aussteuerungsabhängig; bei geringer Aussteuerung liegt \\(\\mu_r\\) für typische Spulenkerne im Bereich \\(10^2\\) bis \\(10^4\\).",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Spulen und Übertrager</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_08.html#physikalische-grundlagen",
+    "href": "lec/lec_08.html#physikalische-grundlagen",
+    "title": "8  Spulen und Übertrager",
+    "section": "",
+    "text": "Abbildung 8.1: \\(B(H)\\)-Hysteresekurve, Rayleigh-Schleife\n\n\n\n\n\n\n\n\n\nMagnetisierung\n\n\n\nWird ein Stoff in ein Magnetfeld gebracht, so erfolgt eine Magnetisierung (magnetische Polarisation); diese kann durch die Bildung bzw. Ausrichtung magnetischer Dipole im atomaren Bereich erklärt werden und bewirkt eine Erhöhung der magnetischen Flußdichte\n\\[\n\\mathbf{B} = \\mu_0 (\\mathbf{H} + \\mathbf{M}) = \\mu_0 \\mathbf{H} + \\mathbf{J}.\n\\]\nDie Größe \\(\\mathbf{M}\\) wird dabei als Magnetisierung und die Größe \\(\\mathbf{J}\\) als magnetische Polarisation des Stoffs bezeichnet.\n\n\n\n\n\n\n\n\nPermeabilität\n\n\n\nDie durch (9.3) definierte relative Permeabilität \\(\\mu_r = B/\\mu_0 H\\) ferro- oder ferrimagnetischer Materialien ist nichtlinear von der magnetischen Feldstärke abhängig. Bei kleinen Aussteuerungen um den Arbeitspunkt durchläuft B als Funktion von H eine kleine linsenförmige Hystereseschleife. Der Zusammenhang zwischen der Änderung \\(\\Delta B\\) der magnetischen Induktion und der Änderung \\(\\Delta H\\) der magnetischen Feldstärke wird durch die Überlagerungspermeabilität \\(\\mu_{\\Delta}\\) beschrieben. Diese ist definiert als\n\\[\n\\mu_{\\Delta} = \\frac{1}{\\mu_0} \\frac{\\Delta B}{\\Delta H}\n\\]\nund vom Hub \\(\\Delta H\\) abhängig. Häufig genügt es, den Grenzfall sehr kleiner Hübe \\(\\Delta H\\) zu betrachten. In diesem Fall geht \\(\\mu_{\\Delta}\\) über in die reversible Permeabilität\n\\[\n\\mu_{rev} = \\frac{1}{\\mu_0} \\lim_{\\Delta H \\to 0} \\frac{\\Delta B}{\\Delta H}\n\\]\n\n\n\n\n\n\n\n\nDurchflutungs- und Induktionsgesetz\n\n\n\nDurch Integration der magnetischen Flußdichte über eine Fläche \\(A\\) folgt der diese Fläche durchsetzende magnetische Fluß\n\\[\n\\phi = \\iint \\mathbf{B} \\cdot d\\mathbf{A}.\n\\]\nDer Zusammenhang zwischen Stromfluß und magnetischer Feldstärke wird durch das Durchflutungsgesetz (1. Maxwellsche Gleichung) beschrieben. Dieses besagt, daß das Linienintegral über der magnetischen Feldstärke längs einer beliebigen geschlossenen Kurve \\(C\\) gleich dem diese Schleife durchsetzenden Strom \\(i\\) ist,\n\\[\n\\oint_C \\mathbf{H} \\cdot d\\mathbf{s} = i.\n\\]\nÄndert sich der eine geschlossene Schleife \\(C\\) durchsetzende magnetische Fluß \\(\\phi\\), so wird in der Schleife eine Spannung \\(v\\) induziert; induzierte Spannung und Flußänderung sind durch das Induktionsgesetz (2. Maxwellsche Gleichung)\n\\[\nv = \\oint_C \\mathbf{E} \\cdot d\\mathbf{s} = -\\frac{d\\phi}{dt}\n\\]\nverknüpft. Der durch die induzierte Spannung hervorgerufene Strom ist nach der Lenzschen Regel so gerichtet, daß er seiner Ursache – der Flußänderung – entgegenwirkt. Gleichung (9.12) gilt auch fürr nichtlineare Induktivitäten, wie Spulen mit Eisenkern, die bis in den Sättigungsbereich hinein ausgesteuert werden. Bei schwacher Aussteuerung kann häufig ein linearer Zusammenhang zwischen Fluß und Strom angenommen werden. Sofern nur eine Leiterschleife vorliegt gilt dann \\(v = L di/dt\\), wobei \\(L\\) den Induktivitätswert – genauer den Selbstinduktionskoeffizienten – des Leiters bezeichnet.\n\n\n\n\n\n\n\n\nInduktionskoeffizienten ausgewählter Leiterformen\n\n\n\nDie Induktionskoeffizienten für nur einen Leiter, bspw. Zylinderpulen, Ringkernspulen, Drahtringe und gedruckte Spiulen lassen sich aus der Energie des magnetischen Feldes\n\\[\nW = \\frac{1}{2} \\int \\mathbf{H} \\cdot \\mathbf{B} d^3 x = \\frac{1}{2} L i^2\n\\]\nberechnen. Mit \\(\\mathbf{B} = \\mu\\mathbf{H}\\) folgt\n\\[\nL = \\frac{\\mu}{i^2} \\int \\vert \\mathbf{H}\\vert^2 d^3 x .\n\\]\n\n\n\n\n\n\n\n\nAbbildung 8.2: (a) Zylinderspule, (b) Ringkernspule und (c) Drahtring\n\n\n\n\n\n\n\n\n\nAbbildung 8.3: Gedruckte Spule (PCB)",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Spulen und Übertrager</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_08.html#spulen",
+    "href": "lec/lec_08.html#spulen",
+    "title": "8  Spulen und Übertrager",
+    "section": "8.2 Spulen",
+    "text": "8.2 Spulen\nSpulen werden gewöhnlich als Drahtwicklung auf einem Spulenkörper aus Isoliermaterial ausgeführt. Häufig dient ein Kern aus einem hochpermeablen Material (Eisen, Ferrit) der Erhöhung des Induktivitätswerts – Spulen ohne derartigen Kern werden als Luftspulen bezeichnet.\n\n\n\n\n\n\nAbbildung 8.4: Ersatzschaltung einer Spule.\n\n\n\nAbbildung Abbildung 8.4 zeigt eine Ersatzschaltung für eine Spule, die bei Kleinsignalaussteuerung verwendet werden kann. Da die Netzwerkelemente arbeitspunktabhängig sind, wurden kleine Buchstaben verwendet. Wie in Gl. (9.33) gezeigt wird, lassen sich Ummagnetisierungsverluste einer Spule mit Kern durch den Kernverlustwiderstand \\(r_{ks}\\) in Serie zu einer reinen Induktivität \\(l_s\\) erfassen. Zusätzlich zu \\(r_{ks}\\) ist der Drahtwiderstand \\(r_{Cu}\\) zu berücksichtigen, so daß\n\\[\nr_s = r_{Cu} + r_{ks}.\n\\]\nParallel hierzu liegt die Wicklungskapazität \\(c_p\\); dielektrische Verluste in der Isolation werden durch den zusätzlich parallel geschalteten Widerstand \\(r_p\\) beschrieben. Mit dem Verlustfaktor \\(\\tan \\delta\\) der Isolierschichten gilt demnach \\(1/r_p \\approx \\omega c_p \\tan \\delta\\).\n\n\n\n\n\n\nImpedanz, Eigenresonanz\n\n\n\nDie Impedanz der Spule errechnet sich aus der Ersatzschaltung Abbildung 8.4 zu\n\\[\\begin{align}\n\\frac{1}{\\underline{Z}} &= \\frac{1}{r_p} + j\\omega c_p + \\frac{1}{j \\omega l_s+r_s} \\\\\n&= \\frac{−j\\omega l_s (1−c_p r_s^2/l_s − \\omega^2 l_s c_p)\n+ r_s + (r_s^2 + \\omega^2 l_s^2) \\omega c_p \\tan \\delta}\n{r_s^2 + \\omega^2 l_s^2}.\n\\end{align}\\]\n\n\nDer prinzipielle Verlauf des Scheinwiderstands \\(\\underline{Z}\\) als Funktion der Frequenz ist in Abb. Abbildung 8.4 in doppeltlogarithmischer Auftragung dargestellt. Bei sehr kleinen Frequenzen ist \\(\\underline{Z}\\) durch den ohmschen Widerstand der Wicklung bestimmt. Mit zunehmender Frequenz dominiert dann der induktive Anteil: \\(\\underline{Z}\\) steigt proportional zu \\(f\\) an. Für Frequenzen \\(f &gt; f_r\\) dominiert der kapazitive Parallelleitwert: Hier fällt \\(\\underline{Z}\\) proportional zu \\(1/f\\) ab.\n\n\n\n\n\n\nVerlustfaktor, Spulengüte\n\n\n\nDer Verlustfaktor \\(\\tan \\delta_L\\) der Spule ist defniert als das Verhältnis von Real- zu Imaginärteil der Impedanz\n\\[\n\\tan \\delta_L = \\frac{\\operatorname{Re}(\\underline{Z})}{\\operatorname{Im}(\\underline{Z})} = \\frac{1}{Q_L};\n\\]\nsein Kehrwert \\(Q_L\\) wird als Spulengüte bezeichnet.\n\n\nMit Luftspulen lassen sich Güten größer als 1000 verwirklichen; bei Spulen mit Kern liegen die Werte niedriger – bei sorgfältiger Dimensionierung sind jedoch Güten von mehr als 500 erreichbar. Trennung von Gl. (9.25) in Real- und Imaginärteil liefert für den Verlustfaktor\n\\[\n\\tan \\delta_L \\approx \\frac{r_s}{2 \\pi f l_s} \\frac{1}{1−(f/f_r)^2} + \\frac{(f/f_r)}{1−(f/f_r)^2} \\tan\n\\delta_{\\epsilon},\n\\]\nwobei \\(f_r \\approx 1 / 2 \\pi l_s c_p\\) die (Eigen-)Resonanzfrequenz der Spule bezeichnet und \\(\\omega r_s c_p \\tan \\delta_{\\epsilon} &lt;&lt; 1\\) sowie \\(c_p r_s^2/l_s &lt;&lt; 1\\) angenommen wurde.\n\n8.2.1 Anwendungsbeispiele\n\n8.2.1.1 Dämpfungsperlen\nDämpfungsperlen sind kleine zylindrische Ferritkörper mit einer Bohrung, durch die ein Draht geführt werden kann. Sie weisen einen Durchmesser von wenigen Millimetern auf und werden gewöhnlich über einen Anschlußdraht eines bedrahteten Bauteils – z.B. Basisanschluß eines Transistors – gesteckt.\n\n\n\n\n\n\nAbbildung 8.5: Dämpfungsperle\n\n\n\nDurch die Dämpfungsperle wird die Impedanz des Anschlußdrahts erhöht. Ist diese ohne Dämpfungsperle durch \\(R_0 + j\\omega L_0\\) gegeben, so folgt mit der komplexen Permeabilität \\(\\mu_r = \\mu_s' − j\\mu_s''\\) des Materials überschlagsmäßig für die Impedanz \\(\\underline{Z}\\) des Anschlußdrahts bei der Kreisfrequenz \\(\\omega\\)\n\\[\n\\underline{Z} \\approx R +j \\omega L (\\mu_s' −j\\mu_s'') = R_0 + \\omega \\mu_s'' L_0 + j \\omega \\mu_s' L_0.\n\\]\nDämpfungsperlen verringern auf kostengünstige Weise hochfrequente Stromanteile ohne störende Serienwiderstände im NF-Bereich zu verursachen. Sie werden zur Unterdrückung von Überschwingern bei Schaltvorgängen, zur Dämpfung selbsterregter Schwingungen aufgrund parasitärer Rückkopplungen in Verstärkerschaltungen sowie zur Unterdrückung hochfrequenter Rauschanteile eingesetzt. Ihre Wirksamkeit beruht darauf, daß sie im relevanten Frequenzbereich eine nennenswerten Serienimpedanz hervorrufen. […]\n\n\n8.2.1.2 Drosselspulen\nDrosselspulen sollen den Gleichanteil \\(I_L\\) des sie durchfließenden Stroms möglichst wenig, den Wechselanteil möglichst stark dämpfen (drosseln). Der Kern einer Drosselspule ist deshalb in der Regel mit einem starken Gleichfeld belastet, dem ein schwaches Wechselfeld überlagert ist. Die Verluste in der Drosselspule sind somit vorwiegend Kupferverluste, da der dominierende Gleichanteil keine Kernverluste verursacht; vgl. auch {cite}schlienz2020 Kap. 2 - Abwärtswandler.\n\n\n\n\n\n\nAbbildung 8.6: Schaltnetzteil mit Drossel-Abwärtswandler\n\n\n\n\n\n8.2.1.3 Power Management Integrated Circuits (PMICs)\n\n\n\n\n\n\nAbbildung 8.7: PMICs\n\n\n\n“Power management integrated circuits (PMICs) are essential in today’s electronic devices. They manage power delivery and consumption, provide efficient power supplies, and drive power switches that control actuators and motors, as illustrated in Abbildung 8.7 PMICs can be integrated into complex integrated circuits (ICs) or implemented as dedicated ICs. In this book, the term PMIC will refer to any type of power integrated circuit.\nThe importance of PMICs has grown significantly in recent years, driving innovation and progress in various industries, from consumer electronics to automotive and industrial applications. With the progress of machine learning and artificial intelligence (AI), intelligent power management is critical to supplying complex processors and sensors.\nPMICs have enabled the development of smaller, more energy-efficient, and reliable electronic solutions. They also play an essential role in environmental aspects and sustainability. By regulating the power supply of electronic devices, PMICs can reduce energy consumption and carbon emissions. Moreover, PMICs are crucial for the development of renewable energies, such as solar and wind power, by enabling efficient power conversion and management.” (Wicht 2024)\n\nIoT Nodes and Energy Harvesting\nPortable Devices, Smartphones, and Wearables\nUniversal Serial Bus (USB)\nDrones\nTelecommunication Infrastructures\nE-Bikes\nAutomotive\nData-Centers",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Spulen und Übertrager</span>"
+    ]
+  },
+  {
+    "objectID": "lec/lec_08.html#transformatoren-und-übertrager",
+    "href": "lec/lec_08.html#transformatoren-und-übertrager",
+    "title": "8  Spulen und Übertrager",
+    "section": "8.3 Transformatoren und Übertrager",
+    "text": "8.3 Transformatoren und Übertrager\nDurch magnetische Verkopplung zweier galvanisch getrennter Stromkreise kann zwischen diesen Leistung übertragen werden. Dies wird angewendet in Transformatoren (Trafos), die der Umsetzung von Spannungs- bzw. Stromwerten dienen sowie in Übertragern und Trenntrafos zur galvanischen Trennung von Wechselstromkreisen, Impedanzanpassung, Unterdrückung von Gleichanteilen und zum Unterbrechen von Erdschleifen. Die Verkopplung der Induktivitäten wird gewöhnlich durch einen gemeinsamen Kern erhöht, der – zur Verbesserung der Linearität – meist einen Luftspalt enthält.\n\n\n\n\n\n\nAbbildung 8.8: Haupt- und Streuflüsse im Transformator\n\n\n\nAbbildung Abbildung 8.8 zeigt den prinzipiellen Aufbau eines Transformators bzw. Übertragers mit einer primärseitigen Wicklung der Windungszahl \\(n_1\\) und einer sekundärseitigen Wicklung der Windungszahl \\(n_2\\). Wird die primärseitige Spule von einem Strom \\(i_1\\) durchflossen, so setzt sich der erzeugte Fluß\n\\[\n\\phi_{11} = \\phi_{1\\sigma} + \\phi_{12}\n\\]\naus dem primären Streufluß \\(\\phi_{1\\sigma}\\) und dem die Sekundärwicklung durchsetzenden Fluß \\(\\phi_{12}\\) zusammen. Entsprechend läßt sich der von der Sekundärwicklung erzeugte Fluß \\(\\phi_{22}\\) in den sekundären Streufluß \\(\\phi_{2\\sigma}\\) und den die Primärwicklung durchsetzenden Fluß \\(\\phi_{21}\\) zerlegen\n\\[\n\\phi_{22} = \\phi_{2\\sigma} + \\phi_{21}.\n\\]\nDer die Primärwicklung durchsetzende Fluß \\(\\phi_1\\) und der die Sekundärwicklung durchsetzende Fluß \\(\\phi_2\\) sind damit\n\\[\n\\phi_1 = \\phi_{11} + \\phi_{21}  \\quad\\text{und}\\quad  \\phi_2 = \\phi_{22} + \\phi_{12}.\n\\]\nUnter Berücksichtigung der Spannungsabfälle an den Wicklungen folgt aus dem Induktionsgesetz für die Spannungsabfälle in Primär- und Sekundärkreis\n\\[\n\\begin{align}\n\\underline{v}_1 &= R_{Cu1} i_1 + n_1 \\frac{d\\phi_1}{dt} \\\\\n\\underline{v}_2 &= R_{Cu2} i_2 + n_2 \\frac{d\\phi_2}{dt}.\n\\end{align}\n\\]\nDie Beziehungen (45) gelten allgemein und sind auch bei Aussteuerung des Kernmaterials in den Sättigungsbereich anwendbar. Bei Aussteuerung mit geringer Amplitude besteht annähernd ein linearer Zusammenhang zwischen den Flüssen und den Spulenströmen\n\\[\n\\phi_{11} = L_1 i_1,\\quad \\phi_{12} = M i_1,\\quad \\phi_21 = M i_2\\quad\\text{und}\\quad \\phi_{22} = L_2 i_2.\n\\]\nDabei bezeichnet \\(L_1 = L_{11}\\) den (Selbst-)Induktionskoeffizienten der Primärwicklung, \\(M = L_{12}\\) den Gegeninduktionskoeffizienten von Primär- und Sekundärwicklung und \\(L_2 = L_{22}\\) den (Selbst-)Induktionskoeffizienten der Sekundärwicklung. Durch Einsetzen in die Gln. (9.68) und (9.69) ergeben sich die sog.\n\n\n\n\n\n\nTransformatorgleichungen\n\n\n\n\\[\\begin{align}\n\\underline{v}_1 &= R_{Cu1} i_1 + L_1 \\frac{di_1}{dt} + M \\frac{di_2}{dt} \\\\\n\\underline{v}_2 &= R_{Cu2} i_2 + L_2 \\frac{di_2}{dt} + M \\frac{di_1}{dt}\n\\end{align}\\]\n\n\nDiese Beziehungen gelten nur bei Kleinsignalaussteuerung ohne Vormagnetisierung im Bereich niederer Frequenzen. Bei höheren Frequenzen tritt eine Phasenverschiebung zwischen magnetischem Feld (bzw. Spulenstrom) und magnetischer Polarisation auf.\n\n\n\n\n\n\nAbbildung 8.9: Schaltsymbol zweier gekoppelter Induktivitäten\n\n\n\n\n8.3.1 Der verlustlose Übertrager\nBei sinusförmiger Erregung folgt unter Vernachlässigung der Drahtwiderstände (\\(R_{Cu1} = R_{Cu2} = 0\\)) aus den Transformatorgleichungen für die komplexen Zeiger der Wechselspannungsanteile an Primär- und Sekundärwicklung (Abb. Abbildung 8.9)\n\\[\\begin{align}\n\\underline{v}_1 &= j\\omega L_1 i_1 + j\\omega M i_2 \\\\\n\\underline{v}_2 &= j\\omega M i_1 + j\\omega L_2 i_2\n\\end{align}\\]\nMit dem Kopplungsfaktor \\(k = M/L_1 L_2\\) läßt sich dies umformen zu ­\n\\[\\begin{align}\n\\underline{v}_1 &= \\frac{1}{k} \\sqrt{\\frac{L_1}{L_2}} \\cdot \\underline{v}_2 − j\\omega \\frac{1 −k^2}{k} \\sqrt{L_1 L_2} \\cdot i_2  \\\\\ni_1 &= \\frac{1}{j\\omega k \\sqrt{L_1 L_2}} \\cdot \\underline{v}_2 = \\frac{1}{k} \\sqrt{\\frac{L_1}{L_2}} \\cdot i_2\n\\end{align}\\]\nBei belastetem Ausgang gilt \\(i_2 = −\\underline{v}_2/Z_L\\); für den Spannungsübertragungsfaktor folgt damit aus Gl. (48)\n\\[\n\\frac{\\underline{v}_1}{\\underline{v}_2} = \\frac{1}{k} \\sqrt{\\frac{L_1}{L_2}} + j\\omega \\frac{1 - k^2}{k} \\sqrt{L_1 L_2}\n\\frac{1}{\\underline{Z}_L}.\n\\]\n\n\n\n\n\n\nVollständige Kopplung\n\n\n\nIm Fall idealer Kopplung (\\(\\vert k \\vert = 1\\)) verschwindet der zweite Term auf der rechten Seite von Gl. (49); das Spannungsverhältnis ist dann\n\\[\n\\frac{\\underline{v}_1}{\\underline{v}_2} = \\frac{L_1}{L_2} = ü.\n\\]\nDie Größe ü wird dabei als Übertragungsverhältnis bezeichnet. Zwischen den Zeigern der Ströme besteht nach Gl. (9.75) der Zusammenhang\n\\[­\n\\underline{i}_1 = -\\sqrt{\\frac{L_2}{L_1}} \\cdot \\underline{i}_1 + \\frac{1}{j\\omega \\sqrt{L_1 L_2}} \\cdot \\underline{v}_2\n\\]\nIm Grenzfall des idealen Übertragers mit \\(L_1 = ü^2 L_2 \\to \\infty\\) führt dies auf ­ \\[\n\\frac{\\underline{i}_1}{\\underline{i}_2} = \\frac{−1}{ü}.\n\\]\n\n\n\n\n\n\n\n\nAbbildung 8.10: Idealer Übertrager. (a) Schaltsymbol und (b) Impedanztransformation mit idealem Übertrager\n\n\n\nAbbildung Abbildung 8.10 (a) zeigt des Netzwerksymbol eines idealen Übertragers. Für diesen gelten die folgenden Beziehungen zwischen den Zeigern von Strom und Spannung an Ein- und Ausgang\n\\[\n\\begin{pmatrix}\n\\underline{v}_1 \\\\\n\\underline{i}_1\n\\end{pmatrix}\n=\n\\begin{pmatrix}\nü & 0 \\\\\n0 & -1/ü\n\\end{pmatrix}\n\\begin{pmatrix}\n\\underline{v}_2 \\\\\n\\underline{i}_2\n\\end{pmatrix}\n\\]\nBesitzen die beiden Wicklungen des Übertragers denselben \\(A_L\\)-Wert, so ist \\(L_1 = A_L n^2_1\\) und \\(L_2 = A_L n^2_2\\), wobei \\(n_1\\) und \\(n_2\\) die Windungszahlen der jeweiligen Wicklung bezeichnen. In Gl. (9.76) des Spannungsübertragungsfaktors eingesetzt folgt\n\\[\nü = n_1/n_2,\n\\]\nd.h. im idealen Übertrager ist das Übertragungsverhältnis ü gleich dem Verhältnis der jeweiligen Windungszahlen.\n\n\n\n\n\n\nImpedanztransformation\n\n\n\nWird der Ausgang eines idealen Übertragers mit der Impedanz \\(\\underline{Z}_L\\) beschaltet (Abb. Abbildung 8.10 (b)), so gilt \\(\\underline{v}_2/i_2 = −\\underline{Z}_L\\). Für die Eingangsimpedanz \\(\\underline{Z}_i\\) des Übertragers folgt damit\n\\[\n\\underline{Z}_i = \\frac{\\underline{v}_1}{\\underline{i}_1}\n= \\frac{\\underline{v}_1}{\\underline{v}_2}\n\\cdot \\frac{\\underline{v}_2}{\\underline{i}_2}\n\\cdot \\frac{\\underline{i}_2}{\\underline{i}_1}\n= ü^2 \\underline{Z}_L,\n\\]\nd.h. der ideale Übertrager mit vollständiger Kopplung “transformiert” Impedanzen im Verhältnis ü\\(^2\\) von der Sekundärseite auf die Primärseite.\n\n\n\n\n8.3.2 Realer (verlustbehafteter) Übertrager\nIn realen Übertragern ist der Kopplungsfaktor von eins verschieden, da aufgrund von Streufeldern der die eine Spule durchsetzende Fluß die andere nicht vollständig durchsetzt.\n\n\n\n\n\n\nAbbildung 8.11: T-Ersatzschaltung\n\n\n\nDie Transformatorgleichungen lassen sich in die in Abb. Abbildung 8.11 dargestellte T-Ersatzschaltung überführen. Durch Anwenden des Maschensatzes folgt sofort\n\\[\\begin{align}\n\\underline{v}_1 &= j\\omega (L_1−M) \\underline{i}_1 + j\\omega M(\\underline{i}_1+\\underline{i}_2) = j\\omega L_1\n\\underline{i}_1 + j\\omega M \\underline{i}_2 \\\\\n\\underline{v}_2 &= j\\omega (L_2−M) \\underline{i}_2 + j\\omega M(\\underline{i}_1+\\underline{i}_2) = j\\omega L_2\n\\underline{i}_2 + j\\omega M \\underline{i}_1\n\\end{align}\\]\nDas Verhalten des Übertragers kann demnach durch drei verschaltete Induktivitäten, die beiden Längsinduktivitäten \\(L_1 − M\\) und \\(L_2 − M\\) sowie die Gegeninduktivität \\(M\\) beschrieben werden. Für Kopplungsfaktoren von annähernd eins gilt \\(M \\approx \\sqrt{L_1 L_2}\\); d.h. zumindest eine der Längsinduktivitäten ist negativ. Die T-Ersatzschaltung ist aus diesem Grund als rein formales Netzwerk anzusehen, das die Transformatorgleichungen korrekt erfaßt – eine physikalisch anschauliche Interpretation der Netzwerkelemente besteht jedoch nicht.\n\n\n\n\n\n\nAbbildung 8.12: Ersatzschaltung eines unvollständig gekoppelten Übertragers\n\n\n\nAbbildung Abbildung 8.12 zeigt die Ersatzschaltung eines unvollständig gekoppelten \\((k &lt; 1)\\), ansonsten verlustfreien Übertragers. Dabei wird von der Induktivität \\(L_1\\) ein Streuanteil \\(\\sigma L_1\\) abgespalten; der\n\n\n\n\n\n\nStreugrad \\(\\sigma\\)\n\n\n\ndes Übertragers ist definiert als\n\\[\n\\sigma = 1 − k^2.\n\\]\n\n\nLediglich der an \\(k^2 L_1\\) auftretende Spannungsabfall wirkt als Eingangsspannung des idealen Übertragers mit Übertragungsverältnis \\(k\\)ü. Die Netzwerkgleichungen für diese Ersatzschaltung lauten\n\\[\n\\underline{v}'_1 = \\underline{v}_1 − j\\omega \\sigma L_1 \\underline{i}_1\n= k ü \\underline{v}_2, \\quad \\underline{i}_1\n= \\underline{v}_1 + \\underline{i}_1 j\\omega k^2 L_1\n\\]\nund \\(\\underline{i}_1 = −\\underline{i}_2/k ü\\). Durch Eliminieren von \\(\\underline{v}_1\\) und \\(\\underline{i}_1\\) lassen sich diese in die Gln. (48) überführen, wobei die Details der Rechnung dem Leser als Übungsaufgabe überlassen werden.\n\n\n\n\n\n\nAbbildung 8.13: (a) Parallel- und (b) Serienersatzschaltung eines verlustbehafteten Übertragers\n\n\n\n\n\n8.3.3 Übertragungsfaktor\n\n\n\n\n\n\nAbbildung 8.14: Parallelersatzschaltung eines verlustbehafteten Übertragers mit beschaltetem Ausgang\n\n\n\nÜbertrager sollen eine formtreue Signalübertragung aufweisen, was erhöhte Anforderungen an die Linearität bedingt und eine hohe Bandbreite voraussetzt. Für eine Untersuchung des Frequenzgangs von Übertragern wird die in Abb. Abbildung 8.14 gezeigte Ersatzschaltung herangezogen, wobei die durch \\(C_3\\) und \\(C_4\\) beschriebene kapazitive Kopplung zwischen Primär- und Sekundärwicklung (vgl. Abb. Abbildung 8.13 (a)) vernachlässigt wird.\nDer Ausgang des idealen Übertragers in der Ersatzschaltung Abb. Abbildung 8.14 ist mit der Impedanz\n\\[\n\\underline{Z}_x = r_{Cu2} + \\frac{\\underline{Z}_L}{1 + j\\omega C_2 \\underline{Z}_L}\n\\]\nbeschaltet, die eingangseitig wie eine Impedanz \\(k^2 ü^2 \\underline{Z}_x\\) wirkt. Zur Berechnung der Amplitude von \\(\\underline{v}'_1\\) kann demnach die in Abb. Abbildung 8.15 dargestellte Ersatzschaltung herangezogen werden.\n\n\n\n\n\n\nAbbildung 8.15: Zusammenfassung und Transformation der Sekundärseite\n\n\n\nNach der Spannungsteilerregel folgt sofort\n\\[\\begin{align}\n\\frac{\\underline{v}'_1}{\\underline{v}_1} &= \\frac{j \\omega k^2L_1 || r_{kp} || k^2 ü^2 \\underline{Z}_x}{r_{Cu1} +\nj\\omega \\sigma L_1 + j\\omega k^2 L_1 || r_{kp} || k^2 ü^2 \\underline{Z}_x} \\\\\n&= \\frac{1}{1 + (r_{Cu1} + j\\omega \\sigma L_1)\n\\left( \\frac{1}{j\\omega k^2 L_1} + \\frac{1}{r_{kp}} + \\frac{1}{k^2 ü^2 \\underline{Z}_L} \\right)}\n\\end{align}\\]\nEbenfalls durch Anwenden der Spannungsteilerregel erhält man\n\\[\\begin{align}\n\\frac{\\underline{v}_2}{\\underline{v}'_2} &= \\frac{\\underline{Z}_L || (j \\omega C_2)^{-1}}{\\underline{Z}_x} \\\\\n&= \\frac{\\underline{Z}_L}{\\underline{Z}_L + r_{Cu2}(1 + j \\omega C_2 \\underline{Z}_L)}.\n\\end{align}\\]\nMit dem Übertragungsverhältnis \\(k ü\\) des idealen Übertragers folgt für den Spannungsübertragungsfaktor\n\\[\n\\underline{H}_v = \\frac{\\underline{v}_2}{\\underline{v}_1} = \\frac{1}{k ü} \\cdot \\frac{\\underline{v}_2}{\\underline{v}'_2}\n\\cdot \\frac{\\underline{v}'_1}{\\underline{v}_1}\n\\]\nIm Folgenden wird der Fall einer rein ohmschen Last \\(\\underline{Z}_L = R_L\\) betrachtet; unter diesen Umständen gilt\n\\[\n\\underline{Z}_x = r_{Cu2} + \\frac{R_L}{1 = j\\omega C_2 R_L} \\quad\\text{und}\\quad\n\\frac{\\underline{v}_2}{\\underline{v}'_2} = \\frac{R_L}{R_L + r_{Cu2}(1 + j\\omega C_2 R_L)}.\n\\]\nDer Spannungsübertragungsfaktor ergibt sich hiermit und durch Ausmultiplizieren in der Form\n\\[\n\\underline{H}_v = \\frac{A_{v0}}{1 − j f_u/f + jf/f_o − f^2/f^2_r}\n\\]\nwas ein Bandpaßverhalten beschreibt.\n\n\n8.3.4 Leistungsübertrager, Transformatoren\nBeim Transformator steht die maximal übertragbare Leistung im Vordergrund – Signalverformungen sind zulässig. Aufgrund der Proportionalität der in die Sekundärwicklung induzierten Spannung zur Frequenz \\(f\\) (bei konstantem Induktionshub \\(\\Delta B\\)) steigt die in einem Transformator von der Primärseite auf die Sekundärseite übertragbare Leistung annähernd proportional zu \\(f\\) an. Unter Vernachlässigung der Spannungsabfälle an den Wicklungswiderständen, Streuinduktivitäten und der Vormagnetisierung gilt die folgende Näherung für die übertragene Leistung\n\\[\nP = C \\cdot \\Delta B \\cdot J \\cdot A_W A_e \\cdot F_{Cu} \\cdot f.\n\\]\nDabei bezeichnet \\(C\\) einen von der Betriebsart abhängigen Faktor, der typischerweise im Bereich \\(0.6 &lt; C &lt; 1\\) liegt und \\(J\\) die Stromdichte in der Wicklung. Der Induktionshub \\(\\Delta B\\) ist bei niedrigen Frequenzen durch Sättigungseffekte und bei hohen Frequenzen durch die Erwärmung des Kerns aufgrund von Kernverlusten beschränkt. Die Stromdichte \\(J\\) wird durch die Erwärmung der Wicklung aufgrund von Kupferverlusten begrenzt.\nDer wirksame Kernquerschnitt sollte im Sinne geringer Kosten und geringen Gewichts möglichst klein sein. Eine Steigerung der übertragbaren Leistung ist demnach nur durch eine Anhebung der Frequenz möglich. Mit zunehmender Schaltfrequenz kann das Gewicht – und damit auch der Preis – von Stromversorgungen und DC-DC-Wandlern gesenkt werden.\nEin 100 W-Netzteil, realisiert mit einem bei Netzfrequenz (50 Hz) arbeitenden Transformator, hat eine Masse in der Größenordnung von 10 kg; durch Erhöhen der Schaltfrequenz auf 50 kHz kann diese auf unter 1 kg gesenkt werden, bei 500 kHz sind weniger als 400 g erreichbar. Wesentlich für diese Anhebung der Schaltfrequenz war die Entwicklung spezieller, verlustarmer Ferritwerkstoffe; vgl. mit (Zach 2022), Kap. 15.\n\n\n\n\nReisch, Michael. 2007. Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE. 2. Aufl. Springer. https://doi.org/10.1007/978-3-540-34015-7.\n\n\nWicht, Bernhard. 2024. Design of Power Management Integrated Circuits. Wiley. https://doi.org/10.1002/9781119123095.\n\n\nZach, Franz. 2022. Leistungselektronik: Ein Handbuch Band 1 / Band 2. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-31436-1.",
+    "crumbs": [
+      "Seminar",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Spulen und Übertrager</span>"
+    ]
+  },
+  {
+    "objectID": "hw/hw_01.html",
+    "href": "hw/hw_01.html",
+    "title": "9  Periodische Signale",
+    "section": "",
+    "text": "9.1 Darstellung von Signalen\nStellen Sie die Signale des angegebenen Netzwerks mit Python (und/oder von Ihnen gewählten alternativen Softwarepaketen des wissenschaflichten Rechnens, z.B. Matlab oder Gnu Octave) dar.\nDie Komponenten Werte sind: \\(\\omega\\) = \\(2 \\pi\\) 1 kHz, \\(\\hat{U}_0\\) = 10 V, \\(R\\) = 30 \\(\\Omega\\), \\(L\\) = 3 mH, \\(\\hat{I}_0\\) = 0.282 A, \\(\\varphi_I\\) = -32.1 Grad.",
+    "crumbs": [
+      "Hörsaalübungen",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Periodische Signale</span>"
+    ]
+  },
+  {
+    "objectID": "hw/hw_01.html#darstellung-von-signalen",
+    "href": "hw/hw_01.html#darstellung-von-signalen",
+    "title": "9  Periodische Signale",
+    "section": "",
+    "text": "Abbildung 9.1: Wechselstromschaltung\n\n\n\n\n9.1.1 Lösung\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nf = 10**3  # Grundfrequenz 1 kHz wird auch als 10e3 geschrieben\nw = 2 * np.pi * f  # Kreisfrequenz\n\nU0p = 10  # Spannung in Volt\nR = 30  # Widerstand in Ohm\nL = 3e-3  # Induktivität in Henry\nI0p = 0.282  # Strom in  Ampere\nphiI = -32.1 * np.pi / 180  # Winkel in rad\n\nt = np.linspace(0, 5e-3, 1000)  # Zeitachse anlegen\nu0 = U0p * np.sin(w * t)\ni0 = I0p * np.sin(w * t + phiI)\nuL = w * L * I0p * np.sin(w * t + phiI + np.pi / 2)  # Spannung über der Spule\nuR = R * i0  # Spannung über Widerstand\n\nplt.plot(w * t, u0, label=r'$u_0$')\nplt.plot(w * t, uR, label=r'$u_R$')\nplt.plot(w * t, uL, label=r'$u_L$')\nplt.plot(w * t, i0, label=r'$i_0$')\nplt.xlabel(r'$\\omega t$')\nplt.ylabel(r'$u(t)$')\nplt.grid()\nplt.legend()\n\nplt.show()",
+    "crumbs": [
+      "Hörsaalübungen",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Periodische Signale</span>"
+    ]
+  },
+  {
+    "objectID": "hw/hw_01.html#überlagerung-von-sinusförmigen-spannungen-mit-verschiedenen-frequenzen",
+    "href": "hw/hw_01.html#überlagerung-von-sinusförmigen-spannungen-mit-verschiedenen-frequenzen",
+    "title": "9  Periodische Signale",
+    "section": "9.2 Überlagerung von sinusförmigen Spannungen mit verschiedenen Frequenzen",
+    "text": "9.2 Überlagerung von sinusförmigen Spannungen mit verschiedenen Frequenzen\nDer zeitliche Verlauf einer Spannung mit \\(\\omega_2 = 3 \\omega_1\\) sei gegeben durch\n\\[\nu(t) = U_0 + \\hat{U}_1 \\cos(\\omega_1 t) + \\hat{U}_2 \\cos(\\omega_2 t + \\varphi).\n\\]\n\n9.2.1 Periodendauer\nWie groß ist die Periodendauer \\(T\\)?\n\n9.2.1.1 Lösung\nDie Periodendauer \\(T\\) ist der kleinste Zeitabschnitt mit \\(u(t+T)=u(t)\\).\n\\[\nT = \\frac{2 \\pi}{\\omega_1}\n\\]\n\n\n\n9.2.2 Mittelwert\nBerechnen Sie den Mittelwert der Spannung \\(u(t)\\)!\n\n9.2.2.1 Lösung\n\\[\n\\overline{u(t)} = \\frac{1}{T} \\int_0^T u(t) dt = U_0\n\\]\n\n\n\n9.2.3 Effektivwert\nBerechnen Sie den Effektivwert \\(U_{eff}\\) der Spannung \\(u(t)\\)! Wie läßt sich \\(U_{eff}\\) aus den Effektivwerten der drei Einzelspannungen berechnen?\n\n\n\n\n\n\nTipp\n\n\n\n\\[\n\\frac{1}{T}\\int_0^T \\cos^2(\\omega t)\\, dt = \\left[ \\frac{t}{2}\n+ \\frac{\\sin(\\omega t) \\cos(\\omega t)}{2 \\omega} \\right]_0^T\n= \\frac{1}{2}\n\\]\n\n\n\n9.2.3.1 Lösung\n\\[\n\\begin{align}\nU^2_{eff} &= \\frac{1}{T} \\int_0^{T} \\overline{u^2(t)} dt \\\\\n&= \\frac{1}{T} \\int_0^{T} ( U_0 + \\hat{U}_1 \\cos(\\omega_1 t) + \\hat{U}_2 \\cos(\\omega_2 t + \\varphi) )^2 \\\\\n&= \\frac{1}{T} \\int_0^{T} (  U^2_0 + 2U_0\\hat{U}_1\\cos(\\omega_1t) + 2U_0\\hat{U}_2\\cos(\\omega_2 t + \\varphi) \\\\\n&+ \\hat{U}^2_1\\cos^2(\\omega_1 t) + 2\\hat{U}_1\\hat{U}_2\\cos(\\omega_1 t) \\cos(\\omega_2 t + \\varphi) \\\\\n&+ \\hat{U}^2_2 \\cos^2(\\omega_2 t + \\varphi) ) \\\\  \n&= U_0^2 + \\frac{1}{2} \\hat{U}_1^2 +  \\frac{1}{2} \\hat{U}_2^2 \\\\\n&= U^2_0 + U^2_{1,eff} + U^2_{2,eff}\n\\end{align}\n\\]\n\n\n\n9.2.4 Scheitelfaktor\nWie groß ist der Scheitelfaktor \\(U_{max}/U_{eff}\\), wenn \\(U_0\\) = 1 V, \\(\\hat{U}_1\\) = \\(\\hat{U}_2\\) = 100 mV und \\(\\varphi\\) = 60 Grad?\n\nimport numpy as np\nimport scipy.integrate as si\nimport scipy.optimize as so\nimport matplotlib.pylab as plt\n\nU0 = 1\nU1p = 100e-3\nU2p = 100e-3\nphi = 60 * np.pi / 180\nf1 = 1e3\nT = 1 / f1\nw1 = 2 * np.pi * f1\nw2 = 3 * w1\n\n\n# Definition der Spannungen als Funktion\ndef u(t):\n    return U0 + U1p * np.cos(w1 * t) + U2p * np.cos(w2 * t + phi)\n\n\ndef u2(t):\n    return (U0 + U1p * np.cos(w1 * t) + U2p * np.cos(w2 * t + phi))**2\n\n\n# Zeit als Vektor\nt = np.linspace(0, 5e-3, 3000)\n\n# Darstellung der Funktion\nfig1 = plt.figure(1)\nplt.plot(t, u(t))\nplt.xlabel('Zeit t/s')\nplt.ylabel('Spannung u(t)/V')\nplt.grid('on')\nplt.show()\n\n# Mittelwert der Spannung u(t)\ny, err = si.quad(u, 0, T)\nu_bar = 1 / T * y\nprint('Der Mittelwert:', u_bar)\n\n# Effiktivwert der Spannung u(t)\ny2, err2 = si.quad(u2, 0, T)\nU_eff = np.sqrt(1 / T * y2)\nprint('Der Effektivwert:', U_eff)\n\n\n# Berechnung des Scheitelfaktors, Fixpunkt-Iteration\ndef func(x, c1, c2, c3):\n    return 1.0 / 3.0 * (np.arcsin(-c1 / (3 * c2) * np.sin(x)) - c3)\n\n\nSF = so.fixed_point(func, 1, args=(U1p, U2p, phi), xtol=1e-6)\nprint('Der Scheitelfaktor:', SF)\n\n\n9.2.4.1 Lösung\n\\[\n\\begin{align}\nU_{max} &= u(t_{max}); \\quad \\left. \\frac{du(t)}{dt} \\right\\lvert_{t=t_{max}} = 0 \\\\\n\\frac{du(t)}{dt} &= -\\hat{U}_1\\omega_1\\sin(\\omega_1 t) - \\hat{U}_2 \\omega_2\\sin(\\omega_2 t + \\varphi) \\\\\n\\sin(3\\omega_1 t_{max} + \\varphi) &= -\\frac{\\hat{U}_1}{2\\hat{U}_2}\\sin(\\omega_1 t_{max}) \\\\\n\\omega_1 t_{max} &= \\frac{1}{3} \\left( \\arcsin \\left( -\\frac{\\hat{U}_1}{3\\hat{U}_2}\n\\sin(\\omega t_{max} + \\varphi) \\right) \\right)\n\\end{align}\n\\]\nDie letzte Gleichung ist eine sog. Fixpunktiteration, deren numerische Lösung im Programmcode formuliert ist. Nach ein paar Iterationschritten erhält man \\(\\omega_1 t_{max}\\) = -0.315. Daraus ergeben sich \\(U_{max}\\) = 1.195 V und \\(U_{eff}\\) = 1.005 V.\nDer gesuchte Formfaktor berechnet sich zu:\n\\[\n\\frac{U_{max}}{U_{eff}} = 1.189\n\\]",
+    "crumbs": [
+      "Hörsaalübungen",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Periodische Signale</span>"
+    ]
+  },
+  {
+    "objectID": "hw/hw_01.html#schaltungsberechnung-in-reeller-schreibweise",
+    "href": "hw/hw_01.html#schaltungsberechnung-in-reeller-schreibweise",
+    "title": "9  Periodische Signale",
+    "section": "9.3 Schaltungsberechnung in reeller Schreibweise",
+    "text": "9.3 Schaltungsberechnung in reeller Schreibweise\n\n\n\n\n\n\nAbbildung 9.2: Netzwerk zur Schaltungsanalyse\n\n\n\nGegeben sei die in Abbildung 9.2 skizzierte Schaltung mit einer Wechselstromquelle \\(i_0(t)=\\hat{I}_0 \\sin(\\omega t)\\).\n\n9.3.1 Amplitude und Phase\nBerechnen Sie Amplitude und Phasenwinkel jeweils von \\(u(t)\\), \\(i_C(t)\\) und \\(i_R(t)\\)!\n\n9.3.1.1 Lösung\nSei \\(u(t)=\\hat{U} \\sin(\\omega t + \\varphi_u)\\), dann ergeben sich die Ströme zu:\n\\[\n\\begin{align}\ni_C(t) &= \\omega C \\hat{U} \\sin(\\omega t + \\varphi_u + \\frac{\\pi}{2}) = -\\omega C \\hat{U} \\cos(\\omega t + \\varphi_u) \\\\\ni_R(t) &= \\frac{\\hat{U}}{R} \\sin(\\omega t + \\varphi_u).\n\\end{align}\n\\]\nKnotengleichung: \\(i_0(t) = i_C(t) + i_R(t)\\)\n\\[\n\\begin{align}\n\\hat{I}_0 \\sin(\\omega t) &= -\\omega C \\hat{U} \\cos(\\omega t + \\varphi_u) + \\frac{\\hat{U}}{R} \\sin(\\omega t + \\varphi_u) \\\\\n\\hat{I}_0 \\sin(m - \\varphi_u) &= -\\omega C \\hat{U} \\cos(m) + \\frac{\\hat{U}}{R} \\sin(m), \\quad m=\\omega t + \\varphi_u \\\\\n\\hat{I}_0 \\left( \\sin(m) \\cos(\\varphi_u) - \\cos(m) \\sin(\\varphi_u) \\right) &= -\\omega C \\hat{U} \\cos(m) + \\frac{\\hat{U}}{R} \\sin(m) \\\\\n\\end{align}\n\\]\nKoeffizientenvergleich:\n\\[\n\\begin{align}\n\\hat{I}_0 \\cos(\\varphi_u) &= \\frac{\\hat{U}}{R} \\\\\n\\hat{I}_0 \\sin(\\varphi_u) &= -\\omega C \\hat{U} \\\\\n\\tan{\\varphi_u} = \\frac{\\sin(\\varphi_u)}{\\cos(\\varphi_u)} &= \\frac{-\\omega C \\hat{U}}{\\frac{\\hat{U}}{R}} = -\\omega R C \\\\\n\\varphi_u &= \\arctan(-\\omega R C)\n\\end{align}\n\\]\n\\[\n\\begin{align}\n\\hat{I}_0 \\cos(\\varphi_u) &= \\frac{\\hat{U}}{R} \\\\\n\\hat{U} &= R \\hat{I} \\cos{\\varphi_u} = R \\hat{I} \\frac{1}{\\sqrt{1+\\tan^2(\\varphi)}} \\\\\n&= \\frac{R \\hat{I}}{\\sqrt{1+(\\omega R C)^2}} \\\\\n\\hat{I}_C &= \\omega C \\hat{U} \\\\\n\\hat{I}_R &= \\frac{\\hat{U}}{R}\n\\end{align}\n\\]\n\n\n\n9.3.2 Spannungsverläufe\nSkizzieren Sie mithilfe von Python \\(i_0(t)\\), \\(u(t)\\), \\(i_C(t)\\) und \\(i_R(t)\\) für \\(\\hat{I}_0\\) = 14.1 mA, \\(f\\) = 3.183 kHz, \\(R\\) = 50 \\(\\Omega\\) und \\(C\\) = 1 \\(\\mu\\) F!\n\nfrom numpy import pi, sin, linspace\nimport matplotlib.pylab as plt\n\nf = 3.183e3  # Frequenz kHz\nw = 2 * pi * f  # Kreisfrequenz\nR = 50  # Widerstand in Ohm\nC = 1e-6  # Kapazität in Farad\nI0 = 14.1e-3  # Strom\nt = linspace(0, 1e-3, 1000)  # Länge der x-Achse und\n\n# Strom- und Spannungfunktionen\ni_0 = I0 * sin(w * t)  # Stromquelle\nu = 5e-3 * sin(w * t - pi / 4)  # Spannung\ni_C = 10e-3 * sin(w * t + pi / 4)  # Strom am Kondensator\ni_R = 10e-3 * sin(w * t - pi / 4)  # Strom am Widerstand\n\n# Plot der Signale\nplt.figure()\nplt.plot(t, i_0, label='$i_0$')\nplt.plot(t, u, label='$u$')\nplt.plot(t, i_C, label='$i_C$')\nplt.plot(t, i_R, label='$i_R$')\nplt.xlabel('Zeit t in s')\nplt.ylabel('Strom in i(t) mA und Spannung u(t) in 100 mV')\nplt.legend(loc='upper right')\nplt.grid()\nplt.show()\n\n\n9.3.2.1 Lösung\nMit den Werten ergeben sich folgende Spannungs- und Stromverläufe:\n\n\\(i_0(t)\\) = 14.1 mA \\(\\sin(\\omega t)\\)\n\\(u(t)\\) = 0.5 V \\(\\sin(\\omega t - \\frac{\\pi}{4})\\)\n\\(i_C(t)\\) = 10 mA \\(\\sin(\\omega t + \\frac{\\pi}{4})\\)\n\\(i_R(t)\\) = 10 mA \\(\\sin(\\omega t - \\frac{\\pi}{4})\\)",
+    "crumbs": [
+      "Hörsaalübungen",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Periodische Signale</span>"
+    ]
+  },
+  {
+    "objectID": "hw/hw_01.html#phasenanschnittsteuerung",
+    "href": "hw/hw_01.html#phasenanschnittsteuerung",
+    "title": "9  Periodische Signale",
+    "section": "9.4 Phasenanschnittsteuerung",
+    "text": "9.4 Phasenanschnittsteuerung\n\n\n\n\n\n\n\n\n\n\n\n(a) Halbwelle\n\n\n\n\n\n\n\n\n\n\n\n\n\n(b) Vollwelle\n\n\n\n\n\n\n\nAbbildung 9.3: Phasenanschnittsteuerung\n\n\n\nDas Prinzip der Phasenanschnittsteuerung, bei dem gem. Abbildung 9.3 (a) oder Abbildung 9.3 (b) der Stromfluß in einer Halbwelle auf den zeitlichen Bruchteil \\(\\pi-\\alpha\\) begrenzt wird, wird z.B. zum Dimmen von Glühlampen und anderen Kleinverbrauchern im Haushalt verwendet. Der Phasenanschnittwinkel \\(\\alpha\\) kann dabei elektronisch mit Thyristoren im Bereich \\(0 \\leq\n\\alpha \\leq \\pi\\) eingestellt werden.\nIn den hier zu untersuchenden Fällen (a) und (b) wird ein ohmscher Verbraucher mit \\(R\\) = 100 \\(\\Omega\\) mit Netzspannung (\\(U_{0,eff}\\) = 230 V, \\(\\omega\\) = 2 \\(\\pi\\) 50 Hz) und Phasenanschnittsteuerung betrieben.\n\n9.4.1 Aufgabe\nBerechnen und skizzieren Sie für den durch den Verbraucherwiderstand \\(R\\) fließenden Strom \\(i(t)\\) jeweils Mittelwert, Gleichrichtmittelwert und Effektivwert als Funktion vom Phasenanschnittwinkel \\(\\alpha\\)!\n\n9.4.1.1 Lösung\n\nHalbwelle\n\n\\[\n\\begin{align}\n\\overline{i(t)} &= \\frac{1}{T} \\int_0^{T} i(t) d t & &= \\frac{1}{\\omega T} \\int_{\\alpha}^{\\pi}\\hat{I}\\sin(\\varphi) d \\varphi \\\\\n&= \\frac{\\hat{I}}{2\\pi} \\left[ -\\cos(\\varphi) \\right]_{\\alpha}^{\\pi} & &= \\frac{\\hat{I}}{2\\pi} \\left[ 1+\\cos(\\varphi) \\right] \\\\\n\\overline{\\lvert i(t) \\lvert} &= \\frac{1}{T} \\int_0^{T} \\lvert i(t) \\lvert d t & &= \\frac{\\hat{I}}{2\\pi} \\left[ 1+\\cos(\\varphi) \\right] \\\\\nI^2_{eff} &= \\frac{1}{T} \\int_0^{T} \\overline{i^2(t)} d t & &= \\frac{1}{\\omega T} \\int_{\\alpha}^{\\pi}\\hat{I}^2\\sin^2(\\varphi) d \\varphi \\\\\n&= \\frac{\\hat{I}}{2\\pi} \\left[ \\frac{1}{2}\\varphi - \\frac{1}{4}\\sin(2\\varphi) \\right]_{\\alpha}^{\\pi} &\n&= \\frac{\\hat{I}}{2\\pi} \\left[ \\frac{1}{2}\\pi -\\frac{1}{2}\\alpha + \\frac{1}{4}\\sin(2\\alpha) \\right] \\\\\nI_{eff} &= \\hat{I} \\sqrt{\\frac{\\pi-\\alpha +\\frac{1}{2}\\sin(2\\alpha)}{4\\pi}} & &\n\\end{align}\n\\]\n\nVollwelle\n\n\\[\n\\begin{align}\n\\overline{i(t)} &= 0 \\\\\n\\overline{\\lvert i(t) \\lvert} &=  2 \\cdot \\frac{\\hat{I}}{2\\pi} \\left[ 1+\\cos(\\varphi) \\right] = \\frac{\\hat{I}}{\\pi} \\left[ 1+\\cos(\\varphi) \\right] \\\\\nI^2_{eff} &= 2 \\cdot \\frac{\\hat{I}}{2\\pi} \\left[ \\frac{1}{2}\\pi-\\frac{1}{2}\\alpha + \\frac{1}{4}\\sin(2\\alpha) \\right] \\\\\n&= \\hat{I} \\sqrt{\\frac{\\pi-\\alpha +\\frac{1}{2}\\sin(2\\alpha)}{2\\pi}}\n\\end{align}\n\\]",
+    "crumbs": [
+      "Hörsaalübungen",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Periodische Signale</span>"
+    ]
+  },
+  {
+    "objectID": "tut/tut_01_Einfuehrung.html",
+    "href": "tut/tut_01_Einfuehrung.html",
+    "title": "10  Einführung",
+    "section": "",
+    "text": "10.1 Organisatorisches\nTutor: B.Eng. Alicia von Ahlen\nZu meiner Person: Ich habe Elektrotechnik mit der Vertiefungsrichtung Informationstechnik studiert und bin zur Zeit im 1. Semester des Masterprogramms MScEE an der HSB. Ich habe bereits die Tutorien Grundlagen der Elektrotechnik 1 und 2 durchgeführt.\nDas tut ist als Unterstützung zur Vorlesung gedacht und legt den Fokus auf eine Wiederholung der Unterrichtsinhalte und Übungsaufgaben. Es besteht auch die Möglichkeit Fragen zu den Vorlesungsinhalten zu stellen und Wünsche zu äußern, zum Beispiel auf welche Themen besonders Wert gelegt oder speziell wiederholt werden sollen. Zur besseren Vorbereitung meinerseits, bitte ich darum, dass Themenwünsche und wenn möglich auch Fragen, mir im Vorfeld per Email geschickt werden, damit ich genug Zeit habe, diese zu bearbeiten.",
+    "crumbs": [
+      "Tutorium",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "tut/tut_01_Einfuehrung.html#termine",
+    "href": "tut/tut_01_Einfuehrung.html#termine",
+    "title": "10  Einführung",
+    "section": "10.2 Termine",
+    "text": "10.2 Termine\nt.b.d.\nDas GEL2-tut findet montags im ersten Block (08:00 - 09:30 Uhr) statt.\nEine grobe Zeit- und Themenplanung ist in der folgenden Tabelle zu sehen. Dabei kann es durchaus sein, dass sich diese Planung noch etwas ändert.\n\n\n\nDatum\nThema\n\n\n\n\n15.04.24\nEinführung & Komplexe Zahlen\n\n\n22.04.24\nPeriodische Signale\n\n\n29.04.24\nKomplexe Größen der Sinusstromtechnik\n\n\n06.05.24\nVerhalten der Grundzweipole 1\n\n\n13.05.24\nVerhalten der Grundzweipole 2\n\n\n20.05.24\nPfingstmontag\n\n\n27.05.24\nKWR\n\n\n03.06.24\nFilterschaltungen, Bodediagramm und Ortskurven\n\n\n10.06.24\nSchwingkreise\n\n\n17.05.24\nLTSpice und Python\n\n\n24.06.24\nTransformatoren\n\n\n01.07.24\nKlausurvorbereitung",
+    "crumbs": [
+      "Tutorium",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "tut/tut_02_Komplexe-Zahlen.html",
+    "href": "tut/tut_02_Komplexe-Zahlen.html",
+    "title": "11  Komplexe Zahlen",
+    "section": "",
+    "text": "11.1 Die imaginäre Einheit\nDie imaginäre Einheit j ist definiert als:\n\\[j^2 = -1\\]\nFür höhere Potenzen von j erhält man:\n\\[j^2 = -1\\]\n\\[j^3 = -j\\]\n\\[j^4 = 1\\]\n\\[j^5 = j\\]\n\\[j^6 = -1\\] usw.",
+    "crumbs": [
+      "Tutorium",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Komplexe Zahlen</span>"
+    ]
+  },
+  {
+    "objectID": "tut/tut_02_Komplexe-Zahlen.html#aufbau-komplexer-zahlen",
+    "href": "tut/tut_02_Komplexe-Zahlen.html#aufbau-komplexer-zahlen",
+    "title": "11  Komplexe Zahlen",
+    "section": "11.2 Aufbau komplexer Zahlen",
+    "text": "11.2 Aufbau komplexer Zahlen\nKomplexe Zahlen bestehen aus einem Real- und einem Imaginärteil. Sie werden durch einen Unterstrich gekennzeichnet. Ist der Buchstabe nicht unterstrichen, wird von dem Betrag der Komplexen Zahl geredet.\n\\[\\underline{A} = Re\\{\\underline{A}\\} + j \\cdot Im\\{\\underline{A}\\}\\]\nIn der Elektrotechnik wird zur Kennzeichnung des Imaginärteils oft der Buchstabe j anstelle des i verwendet, da das i für die Bezeichnung des Stromes vorhergesehen ist.",
+    "crumbs": [
+      "Tutorium",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Komplexe Zahlen</span>"
+    ]
+  },
+  {
+    "objectID": "tut/tut_02_Komplexe-Zahlen.html#rechenoperationen",
+    "href": "tut/tut_02_Komplexe-Zahlen.html#rechenoperationen",
+    "title": "11  Komplexe Zahlen",
+    "section": "11.3 Rechenoperationen",
+    "text": "11.3 Rechenoperationen\n\n11.3.1 Addition von komplexen Zahlen\nZwei Komplexe Zahlen \\(\\underline{A}\\) und \\(\\underline{B}\\) werden addiert, indem ihre Real- und Imaginärteile getrennt voneinander addiert werden.\n\\[\n\\underline{A} + \\underline{B} = Re\\{\\underline{A}\\} + Re\\{\\underline{B}\\} + j(Im\\{\\underline{A}\\} + Im\\{\\underline{B}\\})\n\\]\n\n\n11.3.2 Subtraktion von komplexen Zahlen\nZwei Komplexe Zahlen \\(\\underline{A}\\) und \\(\\underline{B}\\) werden subtrahiert, indem ihre Real- und Imaginärteile getrennt voneinander abgezogen werden.\n\\[\n\\underline{A} - \\underline{B} = Re\\{\\underline{A}\\} - Re\\{\\underline{B}\\} + j(Im\\{\\underline{A}\\} - Im\\{\\underline{B}\\})\n\\]\n\n\n11.3.3 Betrag einer komplexen Zahl\nDer Betrag einer komplexen Zahl \\(\\underline{A}\\) ist die Euklidische Länge des Vektors, wenn dieser zum Beispiel in einem Koordinatensystem gezeichnet ist. Der Betrag wird als \\(|\\underline{A}|\\) oder vereinfacht als A geschrieben.\n\\[\nA = |\\underline{A}| = \\sqrt{Re\\{\\underline{A}\\}^2 + Im\\{\\underline{A}\\}^2}\n\\]\n\n\n11.3.4 Phasenwinkel einer komplexen Zahl\n\\[\n\\varphi = arctan\\left(\\frac{Im\\{\\underline{A}\\}}{Re\\{\\underline{A}\\}}\\right)\n\\]\nDer Phasenwinkel wird überlicherweise von 0° bis 180° positiv (Zählweise CCW) und von 180° bis 360° negativ (Zählweise CW) angegeben.\n\n\n11.3.5 Eulersche Identität und Polarkoordinaten\nKomplexe Zahlen können auch als Polarkoordinaten über die Eulersche Identität beschrieben werden. Dabei setzt sich das aus Betrag und Phasenwinkel zusammen.\n\\[\n\\underline{A} = Re\\{\\underline{A}\\} + j \\cdot Im\\{\\underline{A}\\} = A \\cdot e^{j\\varphi}\n\\]\n\n11.3.5.1 Eulersche Identität\n\\[\ne^{j\\varphi} = cos(\\varphi) + j \\cdot sin(\\varphi)\n\\]\n\n\n\nzeigerbild_euler\n\n\nDie komplexe Zahl \\(e^{j\\varphi}\\) hat immer den Betrag 1 und den Phasenwinkel \\(\\varphi\\).\n\n\n\n11.3.6 Multiplikation komplexer Zahlen\nDie Multiplikation ist über die Polarkoordinaten einfacher. Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel addiert.\n\\[\n\\underline{A} \\cdot \\underline{B} = A \\cdot B \\cdot e^{j(\\varphi_A + \\varphi_B)}\n\\]\n\n\n11.3.7 Division komplexer Zahlen\nÄhnlich zur Multiplikation wird bei der Division die Beträge dividiert und die Phasenwinkel subtrahiert.\n\\[\n\\frac{\\underline{A}}{\\underline{B}} = \\frac{A}{B} \\cdot e^{j(\\varphi_A - \\varphi_B)}\n\\]\n\n\n11.3.8 Kehrwert einer komplexen Zahl\nBeim Kehrwert einer komplexen Zahl wird der Kehrwert des Betrages genommen und das Vorzeichen des Phasenwinkels invertiert.\n\\[\n\\frac{1}{\\underline{A}} = \\frac{1}{A} \\cdot e^{-j\\varphi}\n\\]\n\n\n11.3.9 Konjugiert-Komplex\nBei dem konjugiert-komplexen einer Zahl wird das Vorzeichen des Imaginärteils invertiert. Dadurch verändert sich der Betrag nicht, der Phasenwinkel wird allerdings auch invertiert.\n\\[\\underline{A} = Re\\{\\underline{A}\\} + j \\cdot Im\\{\\underline{A}\\}\\]\n\\[\\underline{A}^* = Re\\{\\underline{A}\\} - j \\cdot Im\\{\\underline{A}\\}\\]",
+    "crumbs": [
+      "Tutorium",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Komplexe Zahlen</span>"
+    ]
+  },
+  {
+    "objectID": "tut/tut_02_Komplexe-Zahlen.html#übungen",
+    "href": "tut/tut_02_Komplexe-Zahlen.html#übungen",
+    "title": "11  Komplexe Zahlen",
+    "section": "11.4 Übungen",
+    "text": "11.4 Übungen\n\n11.4.1 Aufgabe 2.1\n\\(\\sqrt{-9} + \\sqrt{-x^2} - \\sqrt{-y^2} + \\sqrt{-25}\\)\n\n\n\n\n\n\nLösung 2.1\n\n\n\n\n\n\\[3\\sqrt{-1} + x\\sqrt{-1} - y\\sqrt{-1} + 5\\sqrt{-1} = j3 + jx - jy + j5 = j(8 +x -y)\\]\n\n\n\n\n\n11.4.2 Aufgabe 2.2\n\n\\(\\frac{3 j^3 \\cdot 5 j^4}{6 j^{20}}\\)\n\\(\\frac{1}{j^5} + \\frac{1}{j^7}\\)\n\n\n\n\n\n\n\nLösung 2.2\n\n\n\n\n\n\n\\[\\frac{-j3 \\cdot 5}{6 i^4} = \\frac{-j15}{6} = -j2,5\\]\n\\[\\frac{1}{j} + \\frac{1}{-j} = -j + j = 0\\]\n\n\n\n\n\n\n11.4.3 Aufgabe 2.3\n\n\\((1 + 2j) - (-2 + 3j) + (-3 + j) - (5 + 4j) - (-1 + 9j) + (5 - 8j)\\)\n\\((-2a + 3j) - (u - uj) + (-2a -3j) - (-u - vj)\\)\n\n\n\n\n\n\n\nLösung 2.3\n\n\n\n\n\n\n1 - j21\n-4a + j(u + v)\n\n\n\n\n\n\n11.4.4 Aufgabe 2.4\n\n\\((5 - 2j)(-3 + j)\\) (Ergebnis in kartesischer Form)\n\\(\\left(3\\sqrt{2} + 5\\sqrt{3}j\\right)\\left(3\\sqrt{2} - 5\\sqrt{3}j\\right)\\) (Ergebnis in kartesischer Form)\n\n\n\n\n\n\n\nLösung 2.4\n\n\n\n\n\n\n-13 + j11\n93\n\n\n\n\n\n\n11.4.5 Aufgabe 2.5\n\n\\(\\frac{3 + 4j}{2 + j}\\)\n\\(\\frac{1}{\\sqrt{5} - j}\\)\n\\(\\frac{3j}{1 - j}\\)\n\n\n\n\n\n\n\nLösung 2.5\n\n\n\n\n\n\n\\(\\frac{(3 + 4j)(2 - j)}{(2 + j)(2 - j)} = \\frac{6 + 8j - 3j + 4}{4 + 1} = 2 + j\\)\n\\(\\frac{1(\\sqrt{5} + j)}{(\\sqrt{5} - j)(\\sqrt{5} + j)} = \\frac{\\sqrt{5} + j}{5 + 1} = \\frac{\\sqrt{5}}{6} + j\\frac{1}{6}\\)\n\\(\\frac{3j(1 + j)}{(1 - j)(1 + j)} = \\frac{-3 + 3j}{1 + 1}= -\\frac{3}{2} + j\\frac{3}{2}\\)\n\n\n\n\n\n\n11.4.6 Aufgabe 2.6\n\n\\(\\frac{1 + j}{1 - j} + \\frac{1 - j}{1 + j}\\)\n\\(\\frac{1 - j}{1 + j} - \\frac{1 + j}{1 - j}\\)\n\n\n\n\n\n\n\nLösung 2.6\n\n\n\n\n\n\n\\(\\frac{1 + j}{1 - j} + \\frac{1 - j}{1 + j} = \\frac{(1 + j)^2 + (1 - j)^2}{(1 - j)(1  + j)} = \\frac{1 + 2j - 1 + 1 -2j - 1}{1 + 1} = 0\\)\n\\(\\frac{(1 - j)^2 - (1 + j)^2}{(1 + j)(1 - j)} = \\frac{1 - 2j - 1 - (1 + 2j - 1)}{1 + 1} = \\frac{-4j}{2} = -2j\\)\n\n\n\n\n\n\n11.4.7 Aufgabe 2.7\nIn die Exponentialform umwandeln:\n\n\\(0,5 - \\sqrt{6}j\\)\n\\(\\sqrt{3} + \\sqrt{3}j\\)\n3 - 2j\n\n\n\n\n\n\n\nLösung 2.7\n\n\n\n\n\n\n\\(2,5 \\cdot e^{j \\cdot 4,914}\\)\n\\(2,45 \\cdot e^{j \\cdot \\frac{\\pi}{4}}\\)\n\\(3,61 \\cdot e^{j \\cdot 5,695}\\)\n\n\n\n\n\n\n11.4.8 Aufgabe 2.8\nIn die arithmetische Form umwandeln:\n\n\\(83 e^{j \\cdot 1,1083}\\)\n\\(3,8 e^{-j \\cdot 5,524}\\)\n\\(e^{0,2 + 1,2j}\\)\n\n\n\n\n\n\n\nLösung 2.8\n\n\n\n\n\n\n\\(83(cos(1,1083) + j sin(1,1083)) = 37,03 + j74,28\\)\n\\(3,8(cos(-5,524) + j sin(-5,524)) = 2,757 + j2,616\\)\n\\(e^{0,2}(cos(1,2) + j sin(1,2)) = 0,443 + j1,138\\)\n\n\n\n\n\n\n11.4.9 Aufgabe 2.9\nFür \\(z_1 = 1,5 - 0,5j\\) und \\(z_2 = 3 + 0,5j\\) die Exponentialform berechnen und die folgende Gleichung in der arithmetischen Form angeben:\n\\[z = \\frac{z_1 \\cdot z_2}{z_1 + z_2}\\]\n\n\n\n\n\n\nLösung 2.9\n\n\n\n\n\n\\[z_1 = \\frac{\\sqrt{10}}{2} \\cdot e^{-j \\cdot 0,322}\\]\n\\[z_2 = \\frac{\\sqrt{37}}{2} \\cdot e^{j \\cdot 0,165}\\]\n\\[z_1 + z_2 = 4,5\\]\n\\[\\frac{\\frac{\\sqrt{370}}{4} \\cdot e^{j(-0,322 + 0,165)}}{4,5} = 1,069 \\cdot e^{-j 0,157} = 1,056 - j0,167\\]\n\n\n\n\n\n11.4.10 Aufgabe 2.10\nBringe den folgenden Term in die Darstellung \\(\\underline{A} = Re\\{\\underline{A}\\} + j \\cdot Im\\{\\underline{A}\\}\\):\n\\[\\frac{\\frac{1}{j\\omega C}}{R + \\frac{1}{j\\omega C}}\\]\n\n\n\n\n\n\nLösung 2.10\n\n\n\n\n\n\\[\n\\frac{1}{j\\omega RC} = \\frac{1 - j\\omega RC}{(1 + j\\omega RC)(1- j\\omega RC)} = \\frac{1}{1 + (\\omega RC)^2} -\nj\\frac{\\omega RC}{1 + (\\omega RC)^2}\n\\]\n\n\n\n\n\n11.4.11 Aufgabe 2.11\nBringe den folgenden Term in die Darstellung \\(\\underline{A} = Re\\{\\underline{A}\\} + j \\cdot Im\\{\\underline{A}\\}\\):\n\\[\\frac{\\frac{1}{j\\omega C}}{j\\omega L + R + \\frac{1}{j\\omega C}}\\]\n\n\n\n\n\n\nLösung 2.11\n\n\n\n\n\n\\[\n\\frac{1}{- \\omega^2 LC + j\\omega RC + 1} = \\frac{1 - \\omega^2 LC - j\\omega RC}{(1 - \\omega^2 LC)^2 + (\\omega RC)^2} =\n\\frac{1 - \\omega^2 LC}{(1 - \\omega^2 LC)^2 + (\\omega RC)^2} - j\\frac{\\omega RC}{(1 - \\omega^2 LC)^2 + (\\omega RC)^2}\n\\]",
+    "crumbs": [
+      "Tutorium",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Komplexe Zahlen</span>"
+    ]
+  },
+  {
+    "objectID": "tut/tut_03_Periodische-Signale.html",
+    "href": "tut/tut_03_Periodische-Signale.html",
+    "title": "12  Periodische Signale",
+    "section": "",
+    "text": "12.1 Stromarten\nNeben dem Gleichstrom, der ausführlich in GEL1 behandelt wurde, gibt es weitere Stromarten.\nDer Wechselstrom kennzeichnet sich durch sein beliebig periodisches Verhalten. Die Richtung und Größe variiert dabei mit der Zeit t. Eine Sonderform, die große Bedeutung hat ist der Sinusstrom.\nWeiterhin gibt es den Mischstrom, der aus einer Überlagerung von Gleichstrom und Wechselstrom entsteht und zum Beispiel durch das Gleichrichten verursacht wird.\nDes Weiteren gibt es noch die sogenannten modulierten Ströme. Dort schwanken entweder die Amplitude A, die Frequenz f oder der Nullphasenwinkel \\(\\varphi\\) mit der Zeit t. Solche Signale werden hier nicht weiter behandelt. Diese kommen in dem Modul Grundlagen der Informationstechnik vor, welches im 4. Semester in der Vertiefungsrichtung Informationstechnik liegt.\nimport matplotlib.pyplot as plt\n\nplt.figure()\nplt.axhline(y = 0.75)\nplt.xlabel('Zeit in s')\nplt.ylabel('Spannung in V')\nplt.title('Gleichstrom')\nplt.grid()\nplt.show()\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nT = 1\nfs = 1000\ntime = np.linspace (0, T, T*fs)\n\nf = 5\nsinus1 = np.sin(2 * np.pi * f * time)\nsinus2 = np.sin(2 * np.pi * 0.5*f * time)\n\nplt.figure()\nplt.plot(time,sinus1+sinus2)\nplt.xlabel('Zeit in s')\nplt.ylabel('Spannung in V')\nplt.title('Wechselstrom')\nplt.grid()\nplt.show()\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nT = 1\nfs = 1000\ntime = np.linspace (0, T, T*fs)\n\nf = 5\nsinus = np.sin(2 * np.pi * f * time)\n\nplt.figure()\nplt.plot(time,sinus)\nplt.xlabel('Zeit in s')\nplt.ylabel('Spannung in V')\nplt.title('Sinusstrom')\nplt.grid()\nplt.show()\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nT = 1\nfs = 1000\ntime = np.linspace (0, T, T*fs)\n\nf = 5\nsinus = np.sin(2 * np.pi * f * time)\n\nplt.figure()\nplt.plot(time,sinus+0.5)\nplt.xlabel('Zeit in s')\nplt.ylabel('Spannung in V')\nplt.title('Mischstrom')\nplt.grid()\nplt.show()\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nT = 1\nfs = 1000\ntime = np.linspace (0, T, T*fs)\n\nf = 20\nsinus1 = np.sin(2 * np.pi * f * time)\nsinus2 = 0.2 * np.sin(2 * np.pi * 0.1*f * time)\nmodulated = (1 + 0.5 * np.sin(2 * np.pi * 0.1*f * time)) * np.sin(2 * np.pi * f * time)\n\nplt.figure()\nplt.plot(time,modulated)\nplt.xlabel('Zeit in s')\nplt.ylabel('Spannung in V')\nplt.title('amplituden-moduliertes Signal')\nplt.grid()\nplt.show()\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nfs = 2000\nfc = 100\nfm = 15\nbeta = 3\nt = np.arange(0,0.2,1/fs)\n\nfrm = np.cos(2*np.pi*fc*t + beta*np.sin(2*np.pi*fm*t))\nm = np.cos(2*np.pi*fm*t)\n\nplt.figure()\nplt.plot(t,frm)\nplt.xlabel('Zeit in s')\nplt.ylabel('Spannung in V')\nplt.title('frequenz-moduliertes Signal')\nplt.grid()\nplt.show()",
+    "crumbs": [
+      "Tutorium",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Periodische Signale</span>"
+    ]
+  },
+  {
+    "objectID": "tut/tut_03_Periodische-Signale.html#kennwerte-von-wechselgrößen",
+    "href": "tut/tut_03_Periodische-Signale.html#kennwerte-von-wechselgrößen",
+    "title": "12  Periodische Signale",
+    "section": "12.2 Kennwerte von Wechselgrößen",
+    "text": "12.2 Kennwerte von Wechselgrößen\nAllgemein kann man eine sich zeitlich ändernde sinusförmige Wechselgröße mit der folgenden Funktion beschreiben.\n\\[x = \\hat{x} sin(\\omega t + \\varphi)\\]\nDabei wird der Zeitwert x als auch der Scheitelwert \\(\\hat{x}\\) mit einem kleinen Formelbuchstaben bezeichnet.\n\n12.2.1 Periodendauer und Frequenz\nDa sich eine sinusförmige Wechselgröße wiederholt sich nach Ablauf des Winkels \\(2\\pi = 360^° = \\omega T\\). Damit kann man die Periodendauer T über die Kreisfrequenz \\(\\omega\\) darstellen.\n\\[T = \\frac{2 \\pi}{\\omega}\\]\nDie Frequenz f gibt die Anzahl der Perioden pro Sekunde an und wird in Hz = 1/s gemessen. Die Frequenz ist der Kehrwert der Periodendauer.\n\\[f = \\frac{1}{T}\\]\nDie Kreisfreqeunz ist die Frequenz mit dem Faktor \\(2\\pi\\) erweitert. Sie wird in 1/s und nicht in Hz gemessen!\n\\[\\omega = 2 \\pi f = \\frac{2\\pi}{T}\\]\n\n\n12.2.2 Phasenlage\nSinusgrößen können zu verschiedenen Zeitpunkten ihre Scheitelwerte und Nulldurchgänge erreichen. Man sagt, dass diese Größen unterschiedliche Phasenlagen haben; sie sind gegeneinander phasenverschoben.\n\n\n\n\n\n\nAbbildung 12.1\n\n\n\nEntn. aus (Fricke und Vaske 1982)\n\n12.2.2.1 Nullphasenwinkel\nAllgemein gesprochen beginnt eine Sinusfunktion bei t=0 und geht um den Nullphasenwinkel \\(\\varphi_x\\) früher als die normale Sinusfunktion \\(sin(\\omega t)\\) durch Null. Das Vorzeichen des Winkel ist sehr wichtig!\nBeim positiven Nulldurchgang der Sinusgröße wird ein Pfeil zum Nullpunkt gezeichnet. Ist der Pfeil in Zählrichtung der Zeitachse ist der Nullphasenwinkel positiv, ist der Pfeil entgegen der Zählrichtung der Zeitachse, dann ist er negativ (siehe Bild unter Phasenlage).\n\n\n12.2.2.2 Phasenwinkel\nZusätzlich zum Nullphasewinkel gibt es den Phasenwinkel. Dieser gibt die Phasenverschiebung zwischen zwei Sinussignalen an. Es ist festgelegt, dass der Strom in solchen Fällen als Bezugsgröße genommen wird.\n\\[\\varphi = \\varphi_U - \\varphi_I\\]\nBeispiel:\n\\[\\varphi_I = -\\frac{\\pi}{3} = -60°\\]\n\\[\\varphi_U = \\frac{\\pi}{6} = 30°\\]\n\\[\\varphi = \\varphi_U - \\varphi_I = \\left( \\frac{\\pi}{6} \\right) - \\left( -\\frac{\\pi}{3} \\right) = 30° - (-60°) = \\frac{\\pi}{2} = 90°\\]\nDie Spannung eilt dem Strom um \\(\\varphi = 90°\\) vor.\n\n\n\n12.2.3 Mittelwert\nDer Mittelwert ist der zeitlich durchschnittliche Wert einer Funktion.\n\\[\\overline{x(t)} = \\frac{1}{T} \\int\\limits_{t_0}^{t_o + T} x(t) dt\\]\nBei reinem Wechselstrom ist der Mittelwert 0.\n\n\n12.2.4 Gleichrichtwert\nDer Gleichrichtwert ist der Mittelwert einer gleichgericheten Größe.\n\\[\\overline{|x(t)|} = \\frac{1}{T} \\int\\limits_{t_0}^{t_0 + T} |x(t)| dt\\]\nVerhältnis von Gleichricht- zu Scheitelwert (bei Sinusgrößen): \\(\\frac{\\overline{|i|}}{\\hat{i}} = 0.6366\\)\n\n\n12.2.5 Effektivwert\nDer Effektivwert einer periodischen Spannung (oder eines periodischen Stroms) entspricht dem Wert einer Gleichspannung (eines Gleichstroms), der in einer ohmschen Last dieselbe Leistung umsetzt.\n\\[X = X_{eff} = \\sqrt{\\frac{1}{T} \\int\\limits_{t_0}^{t_0 + T} x^2(t) dt}\\]\nScheitelfaktor\nDer Scheitelfaktor ist das Verhältnis von Scheitelwert \\(\\hat{i}\\) bzw. \\(\\hat{u}\\) zum Effektivwert I bzw. U.\n\\[\\xi = \\frac{\\hat{x}}{X_{eff}}\\]\nDer Scheitelfaktor für Sinusgrößen beträgt \\(\\xi = \\sqrt{2} = 1.414\\).\nDer Scheitelfaktor für Dreieckspannung beträgt \\(\\xi = \\sqrt{3}\\).\nDer Scheitelfaktor für Rechtecksignale beträgt \\(\\xi = 1\\).\nFormfaktor\nDer Formfaktor stellt das Verhältnis von Effektivwert I bzw. U zu Gleichrichtwert \\(\\overline{|i|}\\) bzw. \\(\\overline{|u|}\\) dar.\n\\[F = \\frac{X_{eff}}{\\overline{|x|}}\\]\nDer Formfaktor für Sinusgrößen beträgt \\(F = \\frac{\\pi}{2\\sqrt{2}} \\approx 1.11\\).\nDer Formfaktor für Dreiecksignale beträgt \\(F = \\frac{1.11}{2}\\).\nDer Formfaktor für Rechtecksignale beträgt \\(F = 1.11\\).\n\n\n12.2.6 Effektivwert mit Gleichstromanteil\n\n\n\n\n\n\nAbbildung 12.2\n\n\n\nEntn. aus (Schenke 2023)\n\\[X_{eff} = \\sqrt{X_o^2 + X_{eff\\sim}^2}\\]",
+    "crumbs": [
+      "Tutorium",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Periodische Signale</span>"
+    ]
+  },
+  {
+    "objectID": "tut/tut_03_Periodische-Signale.html#übungen",
+    "href": "tut/tut_03_Periodische-Signale.html#übungen",
+    "title": "12  Periodische Signale",
+    "section": "12.3 Übungen",
+    "text": "12.3 Übungen\n\n12.3.1 Aufgabe Gleichrichtwert\nEin Sinusstrom mit dem Scheitelwert \\(\\hat{i} = 10 A\\) fließt durch die Gleichrichterschaltung-Brückenschaltung von Bild 3.4.\n\n\n\n\n\n\nAbbildung 12.3\n\n\n\nEntn. aus (Fricke und Vaske 1982)\nWelche Elektrizitätsmenge Q wird während der Zeit t = 2 h befördert?\nTipp: \\(Q = i \\cdot t\\)\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\\[\\overline{|i|} = 0.6366 \\hat{i} = 0.6366 \\cdot 10 A = 6.366 A\\]\n\\[Q = \\overline{|i|} t = 6.366 A \\cdot 2 h = 12.73 Ah\\]\n\n\n\n\n\n12.3.2 Aufgabe Zeitfunktion berechnen\nDie übliche Netzspannung 1982 betrug \\(U = 220 V\\) bei der Netzfrequenz \\(f = 50 Hz\\). Es sind der Gleichrichtwert \\(\\overline{|u|}\\) und die Zeitfunktion u dieser Spannung zu bestimmen.\n\n\n\n\n\n\nLösung\n\n\n\n\n\nNetzspannung ist Sinusförmig –&gt; Formfaktor F = 1.111\nGleichrichtwert:\n\\[\\overline{|u|} = \\frac{U}{F} = \\frac{220 V}{1.111} = 198 V\\]\nZeitfunktion:\nScheitelwert:\n\\[\\hat{u} = \\sqrt{2} U = \\sqrt{2} \\cdot 220 V = 311.1 V\\]\nKreisfrequenz:\n\\[\\omega = 2 \\pi f = 2 \\pi \\cdot 50 Hz = 314.2 \\frac{1}{s}\\]\n\\[u = \\hat{u} sin(\\omega t) = 311.1 V \\cdot sin(314.2 1/s)\\]\n\n\n\n\n\n12.3.3 Aufgabe Mittelwerte aus Zeitverlauf bestimmen\n\n\n\n\n\n\nAbbildung 12.4\n\n\n\nEntn. aus (Albach und Fischer 2020)\n\n\n\n\n\n\nLösung 3.3\n\n\n\n\n\n\nMittelwert:\n\n\\[\n\\overline{u} = \\frac{1}{T} \\int\\limits_{0}^{T} u(t)dt = \\frac{1}{T} \\left[ \\hat{u} \\frac{3T}{4} - \\hat{u} \\frac{T}{4}\n\\right] = \\frac{\\hat{u}}{2} = 5 V\n\\]\nGleichrichtwert:\n\\[\n\\overline{|u|} = \\frac{1}{T} \\int\\limits_{0}^{T} |u(t)|dt = \\frac{1}{T} \\left[ \\hat{u} \\frac{3T}{4} + |-\\hat{u}|\n\\frac{T}{4} \\right] = \\hat{u} = 10 V\n\\]\nEffektivwert:\n\\[\nU_{eff} = \\sqrt{\\frac{1}{T} \\int\\limits_{0}^{T} u^2(t)dt} = \\sqrt{\\frac{1}{T} \\left[ \\hat{u}^2 \\frac{3T}{4} +\n(-\\hat{u}^2) \\frac{T}{4} \\right]} = \\hat{u} = 10 V\n\\]\n\nMittelwert:\n\n\\[\n\\overline{u} = \\frac{1}{T} \\int\\limits_{0}^{T} \\hat{u} \\frac{t}{T} dt = \\frac{\\hat{u}}{T^2} \\frac{t^2}{2} \\Big\\vert_0^T\n= \\frac{\\hat{u}}{2} = 5 V\n\\]\nGleichrichtwert:\n\\[\\overline{|u|} = |u| = 5 V\\]\nEffektivwert:\n\\[\nU_{eff} = \\sqrt{\\frac{1}{T} \\int\\limits_{0}^{T} \\left(\\hat{u} \\frac{t}{T} \\right)^2 dt}\n= \\sqrt{\\frac{\\hat{u}^2}{T^3} \\frac{t^3}{3} \\Big\\vert_0^T} = \\sqrt{\\frac{\\hat{u}^2}{3}}\n= \\frac{\\hat{u}}{\\sqrt{3}} = 5.77 V\n\\]\n\nMittelwert:\n\n\\[\\overline{u} = \\frac{\\hat{u}}{4} = 2.5 V\\]\nGleichrichtwert:\n\\[\\overline{|u|} = \\overline{u} = 2.5 V\\]\nEffektivwert:\n\\[\nU_{eff} = \\sqrt{\\frac{1}{T} \\int\\limits_{0}^{T/2} \\left(2\\hat{u} \\frac{t}{T} \\right)^2 dt}\n= \\sqrt{\\frac{4\\hat{u}^2}{T^3} \\frac{t^3}{3} \\Big\\vert_0^{T/2}}\n= \\sqrt{\\frac{\\hat{u}^2}{6}}\n= \\frac{\\hat{u}}{\\sqrt{6}} = 4.08 V\n\\]\n\nMittelwert:\n\n\\[\\overline{u} = 0 V\\]\nGleichrichtwert:\n\\[\\overline{|u|} = \\frac{1}{T} \\left[ \\hat{u} \\frac{T}{4} + \\hat{u} \\frac{T}{4} \\right] = \\frac{\\hat{u}}{2} = 5 V\\]\nEffektivwert:\n\\[U_{eff} = \\sqrt{\\frac{1}{T} \\int\\limits_{0}^{T/2} \\left( 2\\hat{u} \\frac{t}{T} \\right)^2 dt + \\frac{1}{T} \\int\\limits_{T/2}^{T} \\left( 2\\hat{u} \\frac{t - T}{T} \\right)^2 dt} = \\sqrt{\\frac{\\hat{u}^2}{6} + \\frac{\\hat{u}^2}{6}} = \\frac{\\hat{u}}{\\sqrt{3}} = 5.77 V\\]\n\n\n\n\n\n12.3.4 Aufgabe 3.4\nEin Wechselstrom besteht nach der Abbildung aus “angeschnittenen” Sinushalbschwingungen. In den Bereichen \\(0 &lt; \\omega t\n&lt; \\alpha\\) und \\(\\pi &lt; \\omega t &lt; (\\pi + \\alpha)\\) fließt kein Strom (i = 0), wobei \\(\\alpha = \\pi/4 = 45°\\) sei. In der übrigen Zeit (innerhalb des Bereiches \\(0 &lt; \\omega t &lt; 2\\pi)\\) wird der Stromverlauf durch die Gleichung \\(i = \\hat{i}\nsin(\\omega t)\\) wiedergegeben. Hierbei betrage der Scheitelwert des Stromes \\(\\hat{i} = 10 A\\).\nWie groß ist der Effektivwert I des Stromes?\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nomega_t = np.arange(0,2*np.pi,np.pi/(2**6))\ni = 10 * np.sin(omega_t)\n\nalpha = np.pi/4\n\nfor a in range(len(i)):\n    if omega_t[a] &lt; alpha or (omega_t[a] &gt; np.pi and omega_t[a] &lt; np.pi+alpha):\n        i[a] = 0\n        \nlist_ticks = [None]*128\nlist_ticks[0] = '0'\nlist_ticks[63] = '$\\pi$'\nlist_ticks[127] = '$2\\pi$'\n        \nplt.figure()\nplt.plot(omega_t, i)\nplt.xlabel('$\\omega t$')\nplt.ylabel('i')\n#plt.xticks([0,63,127],['0','$\\pi$','2$\\pi$'])\nplt.xticks(omega_t,list_ticks)\nplt.grid(True)\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\\[I = \\sqrt{\\frac{1}{2\\pi} \\int\\limits_{0}^{2\\pi} i^2 d\\omega t}\\]\n\\[\\int\\limits_{0}^{2\\pi} i^2 d\\omega t = 2\\int\\limits_{0}^{\\pi} i^2 d\\omega t = 2\\int\\limits_{0}^{\\pi} \\hat{i}^2 \\cdot sin^2(\\omega t) d\\omega t\\]\n\\[2\\int\\limits_{0}^{\\pi} \\hat{i}^2 \\cdot sin^2(\\omega t) d\\omega t = 2\\hat{i}^2 \\left(\\frac{1}{2} \\omega t - \\frac{1}{4} sin(2\\omega t) \\right) \\Big\\vert_\\alpha^\\pi = \\hat{i}^2 \\left( \\pi - \\alpha + \\frac{1}{2} sin(2\\alpha) \\right)\\]\n\\[I = \\sqrt{\\frac{1}{2\\pi} \\cdot \\int\\limits_{0}^{2\\pi} i^2 d\\omega t} = \\sqrt{\\frac{1}{2\\pi} \\hat{i}^2 \\left( \\pi - \\alpha + \\frac{1}{2} sin(2\\alpha) \\right)} = \\sqrt{\\frac{1}{2\\pi} \\cdot (10 A)^2 \\cdot \\left( \\pi - \\frac{\\pi}{4} + \\frac{1}{2} \\cdot sin(2 \\cdot 45°) \\right)} = 6.74 A\\]\n\n\n\n\n\n12.3.5 Aufgabe 3.5\nAn einem ohmschen Widerstand \\(R = 30 \\Omega\\) liegt eine mittelwertfreie Dreieckspannung mit der Amplitude \\(\\hat{u} = 9\nV\\) und der Frequenz \\(f = 100 Hz\\) an.\nWelche Wirkleistung P wird im zeitlichen Mittel im Widerstand R umgesetzt?\n\n\n\n\n\n\nLösung\n\n\n\n\n\nDreieckspannung –&gt; Scheitelfaktor \\(\\xi = \\sqrt{3}\\)\n\\[U = \\frac{\\hat{u}}{\\sqrt{3}} = \\frac{9 V}{\\sqrt{3}} = 5.196 V\\]\n\\[P = \\frac{U^2}{R} = \\frac{5.196 V}{30 \\Omega} = 0.9 W\\]\n\n\n\n\n\n12.3.6 Aufgabe 3.6\nAn einem ohmschen Widerstand R liegt eine Zägezahnspannung, die von einer Gleichspannung überlagert ist, an:\n\n\n\n\n\n\nAbbildung 12.5\n\n\n\nEntn. aus (Schenke 2023)\n\nBestimmen Sie den Mittelwert \\(\\overline{u(t)}\\) des periodischen Spannungsverlaufes u(t).\nBerechnen Sie den Effektivwert U des periodischen Spannungsverlaufes u(t).\nWelche Wirkleistung P wird im zeitlichen Mittel im Widerstand R umgesetzt? (23.4)\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n\n\n\\[\\overline{u(t)} = \\frac{U_1 + U_2}{2}\\]\n\n\n\n\\[U = \\sqrt{\\left( \\frac{U_2 - U_1}{2 \\cdot \\sqrt{3}} \\right)^2 + \\left( \\frac{U_1 + U_2}{2} \\right)^2}\\]\n\n\n\n\\[P = \\frac{U^2}{R}\\]\n\n\n\n\n\n12.3.7 Aufgabe 3.7\nDurch den ohmschen Widerstand R fließt ein Sinusstrom, der mit einem Gleichstrom überlagert ist:\n\n\n\n\n\n\nAbbildung 12.6\n\n\n\nEntn. aus (Schenke 2023)\n\nBestimmen Sie den Mittelwert \\(\\overline{i(t)}\\) des periodischen Stromverlaufes i(t).\nBerechnen Sie den Effektivwert I des periodischen Stromverlaufes i(t).\nWelche Wirkleistung P wird im zeitlichen Mittel im Widerstand R umgesetzt? (23.6)\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n\n\n\\[\\overline{i(t)} = I_0\\]\n\n\n\n\\[I = \\sqrt{I_0^2 + \\left( \\frac{I_0}{\\sqrt{2}} \\right)^2}\\]\n\n\n\n\\[P = I^2 \\cdot R\\]\n\n\n\n\n\n\n\nAlbach, Manfred, und Janina Fischer. 2020. Elektrotechnik Aufgabensammlung. Pearson. https://elibrary.pearson.de/book/99.150005/9783863268930.\n\n\nFricke, H., und P. Vaske. 1982. Elektrische Netzwerke Grundlagen der Elektrotechnik 1. 17. Aufl. Stuttgart, Germany: B.G. Teubner.\n\n\nSchenke, Stefan. 2023. „Grundlagen der Elektrotechnik — Jetzt schaffst Du die Prüfung!“ Helmut-Schmidt Universität Hamburg, Germany; online. http://www.stefan-schenke.de/get/.",
+    "crumbs": [
+      "Tutorium",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Periodische Signale</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Bibliography",
+    "section": "",
+    "text": "Albach, Manfred, and Janina Fischer. 2020. Elektrotechnik\nAufgabensammlung. Pearson. https://elibrary.pearson.de/book/99.150005/9783863268930.\n\n\nBüttner, Wolf-Ewald. 2014. Grundlagen Der Elektrotechnik 2.\nOLDENBOURG WISSENSCHAFTSVERLAG. https://doi.org/10.1524/9783110371796.\n\n\nDeliyannis, T., Yichuang Sun, and J. K. Fidler. 1998.\nContinuous-Time Active Filter Design. CRC Press. https://doi.org/10.1201/9781439821879.\n\n\nFricke, H., and P. Vaske. 1982. Elektrische Netzwerke Grundlagen Der\nElektrotechnik 1. 17th ed. Stuttgart, Germany: B.G. Teubner.\n\n\nHarriehausen, Thomas, and Dieter Schwarzenau. 2020. Moeller\nGrundlagen Der Elektrotechnik. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-27840-3.\n\n\nHewlett, W. R. 1942. “Variable Frequency Oscillation\nGenerator.” U.S. Patent Office No. 2,268,872. https://de.wikipedia.org/wiki/Wien-Robinson-Brücke.\n\n\nKasper, Manfred. 2000. Mikrosystementwurf. Berlin, Germany:\nSpringer.\n\n\nMarinescu, Marlene, and Nicolae Marinescu. 2016. Elektrotechnik\nfür Studium Und Praxis. Springer Fachmedien Wiesbaden.\nhttps://doi.org/10.1007/978-3-658-14159-2.\n\n\nMietke, Detlef. 2024. “Elektroniktutor.” Technical report.\nOberstufenzentrum für Kommunikations-, Informations- und\nMedientechnik (OSZ-KIM), Berlin; online. https://www.elektroniktutor.de.\n\n\nNatt, Oliver. 2020. Physik Mit Python. Springer Berlin\nHeidelberg. https://doi.org/10.1007/978-3-662-61274-3.\n\n\nPaul, Steffen, and Reinhold Paul. 2019. Grundlagen Der\nElektrotechnik Und Elektronik 2. Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-662-58221-3.\n\n\nReisch, Michael. 2007. Elektronische Bauelemente: Funktion,\nGrundschaltungen, Modellierung Mit SPICE. 2nd ed. Springer. https://doi.org/10.1007/978-3-540-34015-7.\n\n\nSchenke, Stefan. 2023. “Grundlagen Der\nElektrotechnik — Jetzt Schaffst\nDu Die Prüfung!” Helmut-Schmidt\nUniversität Hamburg, Germany; online. http://www.stefan-schenke.de/get/.\n\n\nWicht, Bernhard. 2024. Design of Power Management Integrated\nCircuits. Wiley. https://doi.org/10.1002/9781119123095.\n\n\nWikipedia. 2023. “Ortskurve (Systemtheorie) —\nWikipedia, Die Freie Enzyklopädie.” https://de.wikipedia.org/w/index.php?title=Ortskurve_(Systemtheorie)&oldid=237346128.\n\n\nZach, Franz. 2022. Leistungselektronik: Ein Handbuch Band 1 / Band\n2. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-31436-1.",
+    "crumbs": [
+      "Bibliography"
+    ]
+  }
+]
