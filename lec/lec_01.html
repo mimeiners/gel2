@@ -128,7 +128,23 @@ window.Quarto = {
       <a href="../">Grundlagen der Elektrotechnik 2</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/mimeiners/gel2/" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
-    <a href="../Grundlagen-der-Elektrotechnik-2.epub" title="Download ePub" class="quarto-navigation-tool px-1" aria-label="Download ePub"><i class="bi bi-journal"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -588,24 +604,22 @@ window.Quarto = {
 <li><p>verschiedene Stufen der Vereinfachung</p></li>
 <li><p>Felder / Wellen / Optik / HF-Technik</p>
 <ul>
-<li>Maxwell-Gleichungen <span class="math display">\[
-\begin{align}
+<li>Maxwell-Gleichungen <span class="math display">\[\begin{align}
 \oint \mathbf{H} d\mathbf{s} &amp;= \iint \mathbf{J} + \dot{D} d\mathbf{A} \\
 \oint \mathbf{E} d\mathbf{s} &amp;= - \iint \dot{B} d\mathbf{A}
-\end{align}
-\]</span></li>
+\end{align}\]</span></li>
 </ul></li>
 <li><p>bei lokaler Konzentration der Feldenergie <span class="math inline">\(\Rightarrow\)</span> quasi-statische Näherung</p></li>
 <li><p>Mikrowellentechnik / Leitungstechnik</p>
 <ul>
-<li>verteilte Schaltungen <span class="math inline">\(l\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(\rho\)</span></li>
-<li>Kopplung, Laufzeit <span class="math inline">\(\tau = a/v\)</span></li>
+<li><p>verteilte Schaltungen <span class="math inline">\(l\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(\rho\)</span></p></li>
+<li><p>Kopplung, Laufzeit <span class="math inline">\(\tau = a/v\)</span></p></li>
 </ul></li>
 <li><p><em>kleine</em> Systeme mit <span class="math inline">\(a &lt;&lt; \lambda\)</span> bzw. <em>kurze</em> Laufzeiten mit <span class="math inline">\(\tau &lt;&lt; T\)</span></p></li>
 <li><p>Regelungstechnik / Impulstechnik</p>
 <ul>
-<li>Ersatzschaltungen</li>
-<li>(Block-)Schaltbilder</li>
+<li><p>Ersatzschaltungen</p></li>
+<li><p>(Block-)Schaltbilder</p></li>
 </ul></li>
 <li><p>eingeschwungener Zustand</p></li>
 <li><p>NF-Technik</p>
@@ -637,9 +651,7 @@ Stromdichte
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-\begin{equation}
 \frac{\int E(r,t) ds}{\iint J(r,t) dA} = \frac{u(t)}{i(t)} \Rightarrow R
-\end{equation}
 \]</span></p>
 </div>
 </div>
@@ -654,9 +666,7 @@ Verschiebungsdichte
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-\begin{equation}
 \frac{\iint D(r,t) dA}{\int E(r,t) ds} = \frac{q(t)}{u(t)} \Rightarrow C
-\end{equation}
 \]</span></p>
 </div>
 </div>
@@ -671,9 +681,7 @@ Flußdichte
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-\begin{equation}
 \frac{\iint B(r,t) dA}{\oint H(r,t) ds} = \frac{u(t)}{i(t)} \Rightarrow L
-\end{equation}
 \]</span></p>
 </div>
 </div>
@@ -691,9 +699,7 @@ als Zeitfunktion
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-\begin{equation}
 u(t) = \hat{U} \cos(\omega t + \phi)
-\end{equation}
 \]</span></p>
 </div>
 </div>
@@ -708,9 +714,7 @@ als Zeiger / komplexe Grösse (Phasor)
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-\begin{equation}
 U = \lvert \hat{U} \lvert e^{j \phi}
-\end{equation}
 \]</span></p>
 </div>
 </div>

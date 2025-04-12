@@ -162,7 +162,23 @@ window.Quarto = {
       <a href="../">Grundlagen der Elektrotechnik 2</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/mimeiners/gel2/" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
-    <a href="../Grundlagen-der-Elektrotechnik-2.epub" title="Download ePub" class="quarto-navigation-tool px-1" aria-label="Download ePub"><i class="bi bi-journal"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -366,7 +382,7 @@ Abbildung&nbsp;9.1: Wechselstromschaltung
 </div>
 <section id="lösung" class="level3" data-number="9.1.1">
 <h3 data-number="9.1.1" class="anchored" data-anchor-id="lösung"><span class="header-section-number">9.1.1</span> Lösung</h3>
-<div id="8fdeda46" class="cell">
+<div id="0b41b9fb" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -447,8 +463,7 @@ Tipp
 </div>
 <section id="lösung-3" class="level4" data-number="9.2.3.1">
 <h4 data-number="9.2.3.1" class="anchored" data-anchor-id="lösung-3"><span class="header-section-number">9.2.3.1</span> Lösung</h4>
-<p><span class="math display">\[
-\begin{align}
+<p><span class="math display">\[\begin{align}
 U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 &amp;= \frac{1}{T} \int_0^{T} ( U_0 + \hat{U}_1 \cos(\omega_1 t) + \hat{U}_2 \cos(\omega_2 t + \varphi) )^2 \\
 &amp;= \frac{1}{T} \int_0^{T} (  U^2_0 + 2U_0\hat{U}_1\cos(\omega_1t) + 2U_0\hat{U}_2\cos(\omega_2 t + \varphi) \\
@@ -456,14 +471,13 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 &amp;+ \hat{U}^2_2 \cos^2(\omega_2 t + \varphi) ) \\  
 &amp;= U_0^2 + \frac{1}{2} \hat{U}_1^2 +  \frac{1}{2} \hat{U}_2^2 \\
 &amp;= U^2_0 + U^2_{1,eff} + U^2_{2,eff}
-\end{align}
-\]</span></p>
+\end{align}\]</span></p>
 </section>
 </section>
 <section id="scheitelfaktor" class="level3" data-number="9.2.4">
 <h3 data-number="9.2.4" class="anchored" data-anchor-id="scheitelfaktor"><span class="header-section-number">9.2.4</span> Scheitelfaktor</h3>
 <p>Wie groß ist der Scheitelfaktor <span class="math inline">\(U_{max}/U_{eff}\)</span>, wenn <span class="math inline">\(U_0\)</span> = 1 V, <span class="math inline">\(\hat{U}_1\)</span> = <span class="math inline">\(\hat{U}_2\)</span> = 100 mV und <span class="math inline">\(\varphi\)</span> = 60 Grad?</p>
-<div id="b8dab71d" class="cell">
+<div id="b371336f" class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.integrate <span class="im">as</span> si</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.optimize <span class="im">as</span> so</span>
@@ -520,15 +534,13 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 </div>
 <section id="lösung-4" class="level4" data-number="9.2.4.1">
 <h4 data-number="9.2.4.1" class="anchored" data-anchor-id="lösung-4"><span class="header-section-number">9.2.4.1</span> Lösung</h4>
-<p><span class="math display">\[
-\begin{align}
+<p><span class="math display">\[\begin{align}
 U_{max} &amp;= u(t_{max}); \quad \left. \frac{du(t)}{dt} \right\lvert_{t=t_{max}} = 0 \\
 \frac{du(t)}{dt} &amp;= -\hat{U}_1\omega_1\sin(\omega_1 t) - \hat{U}_2 \omega_2\sin(\omega_2 t + \varphi) \\
 \sin(3\omega_1 t_{max} + \varphi) &amp;= -\frac{\hat{U}_1}{2\hat{U}_2}\sin(\omega_1 t_{max}) \\
 \omega_1 t_{max} &amp;= \frac{1}{3} \left( \arcsin \left( -\frac{\hat{U}_1}{3\hat{U}_2}
 \sin(\omega t_{max} + \varphi) \right) \right)
-\end{align}
-\]</span></p>
+\end{align}\]</span></p>
 <p>Die letzte Gleichung ist eine sog. <em>Fixpunktiteration</em>, deren numerische Lösung im Programmcode formuliert ist. Nach ein paar Iterationschritten erhält man <span class="math inline">\(\omega_1 t_{max}\)</span> = -0.315. Daraus ergeben sich <span class="math inline">\(U_{max}\)</span> = 1.195 V und <span class="math inline">\(U_{eff}\)</span> = 1.005 V.</p>
 <p>Der gesuchte <em>Formfaktor</em> berechnet sich zu:</p>
 <p><span class="math display">\[
@@ -556,44 +568,36 @@ Abbildung&nbsp;9.2: Netzwerk zur Schaltungsanalyse
 <section id="lösung-5" class="level4" data-number="9.3.1.1">
 <h4 data-number="9.3.1.1" class="anchored" data-anchor-id="lösung-5"><span class="header-section-number">9.3.1.1</span> Lösung</h4>
 <p>Sei <span class="math inline">\(u(t)=\hat{U} \sin(\omega t + \varphi_u)\)</span>, dann ergeben sich die Ströme zu:</p>
-<p><span class="math display">\[
-\begin{align}
+<p><span class="math display">\[\begin{align}
 i_C(t) &amp;= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2}) = -\omega C \hat{U} \cos(\omega t + \varphi_u) \\
 i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
-\end{align}
-\]</span></p>
+\end{align}\]</span></p>
 <p>Knotengleichung: <span class="math inline">\(i_0(t) = i_C(t) + i_R(t)\)</span></p>
-<p><span class="math display">\[
-\begin{align}
+<p><span class="math display">\[\begin{align}
 \hat{I}_0 \sin(\omega t) &amp;= -\omega C \hat{U} \cos(\omega t + \varphi_u) + \frac{\hat{U}}{R} \sin(\omega t + \varphi_u) \\
 \hat{I}_0 \sin(m - \varphi_u) &amp;= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m), \quad m=\omega t + \varphi_u \\
 \hat{I}_0 \left( \sin(m) \cos(\varphi_u) - \cos(m) \sin(\varphi_u) \right) &amp;= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m) \\
-\end{align}
-\]</span></p>
+\end{align}\]</span></p>
 <p>Koeffizientenvergleich:</p>
-<p><span class="math display">\[
-\begin{align}
+<p><span class="math display">\[\begin{align}
 \hat{I}_0 \cos(\varphi_u) &amp;= \frac{\hat{U}}{R} \\
 \hat{I}_0 \sin(\varphi_u) &amp;= -\omega C \hat{U} \\
 \tan{\varphi_u} = \frac{\sin(\varphi_u)}{\cos(\varphi_u)} &amp;= \frac{-\omega C \hat{U}}{\frac{\hat{U}}{R}} = -\omega R C \\
 \varphi_u &amp;= \arctan(-\omega R C)
-\end{align}
-\]</span></p>
-<p><span class="math display">\[
-\begin{align}
+\end{align}\]</span></p>
+<p><span class="math display">\[\begin{align}
 \hat{I}_0 \cos(\varphi_u) &amp;= \frac{\hat{U}}{R} \\
 \hat{U} &amp;= R \hat{I} \cos{\varphi_u} = R \hat{I} \frac{1}{\sqrt{1+\tan^2(\varphi)}} \\
 &amp;= \frac{R \hat{I}}{\sqrt{1+(\omega R C)^2}} \\
 \hat{I}_C &amp;= \omega C \hat{U} \\
 \hat{I}_R &amp;= \frac{\hat{U}}{R}
-\end{align}
-\]</span></p>
+\end{align}\]</span></p>
 </section>
 </section>
 <section id="spannungsverläufe" class="level3" data-number="9.3.2">
 <h3 data-number="9.3.2" class="anchored" data-anchor-id="spannungsverläufe"><span class="header-section-number">9.3.2</span> Spannungsverläufe</h3>
 <p>Skizzieren Sie mithilfe von Python <span class="math inline">\(i_0(t)\)</span>, <span class="math inline">\(u(t)\)</span>, <span class="math inline">\(i_C(t)\)</span> und <span class="math inline">\(i_R(t)\)</span> für <span class="math inline">\(\hat{I}_0\)</span> = 14.1 mA, <span class="math inline">\(f\)</span> = 3.183 kHz, <span class="math inline">\(R\)</span> = 50 <span class="math inline">\(\Omega\)</span> und <span class="math inline">\(C\)</span> = 1 <span class="math inline">\(\mu\)</span> F!</p>
-<div id="cc575ba3" class="cell">
+<div id="a4e3dfdd" class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> pi, sin, linspace</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -684,8 +688,7 @@ Abbildung&nbsp;9.3: Phasenanschnittsteuerung
 <ol type="1">
 <li>Halbwelle</li>
 </ol>
-<p><span class="math display">\[
-\begin{align}
+<p><span class="math display">\[\begin{align}
 \overline{i(t)} &amp;= \frac{1}{T} \int_0^{T} i(t) d t &amp; &amp;= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{I}\sin(\varphi) d \varphi \\
 &amp;= \frac{\hat{I}}{2\pi} \left[ -\cos(\varphi) \right]_{\alpha}^{\pi} &amp; &amp;= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
 \overline{\lvert i(t) \lvert} &amp;= \frac{1}{T} \int_0^{T} \lvert i(t) \lvert d t &amp; &amp;= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
@@ -693,19 +696,16 @@ I^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{i^2(t)} d t &amp; &amp;= \frac
 &amp;= \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\varphi - \frac{1}{4}\sin(2\varphi) \right]_{\alpha}^{\pi} &amp;
 &amp;= \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi -\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
 I_{eff} &amp;= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{4\pi}} &amp; &amp;
-\end{align}
-\]</span></p>
+\end{align}\]</span></p>
 <ol start="2" type="1">
 <li>Vollwelle</li>
 </ol>
-<p><span class="math display">\[
-\begin{align}
+<p><span class="math display">\[\begin{align}
 \overline{i(t)} &amp;= 0 \\
 \overline{\lvert i(t) \lvert} &amp;=  2 \cdot \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] = \frac{\hat{I}}{\pi} \left[ 1+\cos(\varphi) \right] \\
 I^2_{eff} &amp;= 2 \cdot \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
 &amp;= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{2\pi}}
-\end{align}
-\]</span></p>
+\end{align}\]</span></p>
 
 
 </section>

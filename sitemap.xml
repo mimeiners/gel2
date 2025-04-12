@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mimeiners.github.io/gel2/index.html</loc>
-    <lastmod>2025-04-11T09:18:13.882Z</lastmod>
+    <lastmod>2025-04-11T13:08:28.931Z</lastmod>
   </url>
   <url>
     <loc>https://mimeiners.github.io/gel2/lec/lec_01.html</loc>
-    <lastmod>2025-04-11T08:14:23.227Z</lastmod>
+    <lastmod>2025-04-12T17:17:15.144Z</lastmod>
   </url>
   <url>
     <loc>https://mimeiners.github.io/gel2/lec/lec_02.html</loc>
-    <lastmod>2025-04-11T08:58:59.191Z</lastmod>
+    <lastmod>2025-04-12T17:19:26.199Z</lastmod>
   </url>
   <url>
     <loc>https://mimeiners.github.io/gel2/lec/lec_03.html</loc>
@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://mimeiners.github.io/gel2/lec/lec_05.html</loc>
-    <lastmod>2025-04-11T08:42:09.452Z</lastmod>
+    <lastmod>2025-04-11T13:10:43.652Z</lastmod>
   </url>
   <url>
     <loc>https://mimeiners.github.io/gel2/lec/lec_06.html</loc>
@@ -34,11 +34,11 @@
   </url>
   <url>
     <loc>https://mimeiners.github.io/gel2/lec/lec_08.html</loc>
-    <lastmod>2025-04-11T09:08:50.996Z</lastmod>
+    <lastmod>2025-04-12T17:24:13.137Z</lastmod>
   </url>
   <url>
     <loc>https://mimeiners.github.io/gel2/hw/hw_01.html</loc>
-    <lastmod>2025-04-11T08:16:28.657Z</lastmod>
+    <lastmod>2025-04-12T17:26:58.460Z</lastmod>
   </url>
   <url>
     <loc>https://mimeiners.github.io/gel2/tut/tut_01_Einfuehrung.html</loc>
@@ -57,7 +57,11 @@
     <lastmod>2025-04-06T17:56:25.414Z</lastmod>
   </url>
   <url>
+    <loc>https://mimeiners.github.io/gel2/Grundlagen-der-Elektrotechnik-2.pdf</loc>
+    <lastmod>2025-04-12T17:35:39.036Z</lastmod>
+  </url>
+  <url>
     <loc>https://mimeiners.github.io/gel2/Grundlagen-der-Elektrotechnik-2.epub</loc>
-    <lastmod>2025-04-11T09:20:30.243Z</lastmod>
+    <lastmod>2025-04-12T17:35:42.014Z</lastmod>
   </url>
 </urlset>
