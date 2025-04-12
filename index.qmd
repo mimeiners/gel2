@@ -4,10 +4,8 @@
 |----------|----------------------------------------------|
 | Kursus   | M 2.3 Grundlagen der Elektrotechnik 2 (GEL2) |
 | Semester | SoSe25                                       |
-|----------|----------------------------------------------|
 | Dozent   | Prof. Dr.-Ing. M. Meiners                    |
 | Seminar  | Mo., 09:45 Uhr - 11:15 Uhr, E 509            |
-|----------|----------------------------------------------|
 | Tutorin  | B.Eng. Alicia von Ahlen                      |
 | Tutorium | Mo., 08:00 Uhr - 09:30 Uhr, E 509            |
 

@@ -304,12 +304,10 @@ $$
 Unter Berücksichtigung der Spannungsabfälle an den Wicklungen folgt aus dem Induktionsgesetz für die 
 Spannungsabfälle in Primär- und Sekundärkreis
 
-$$
 \begin{align}
 \underline{v}_1 &= R_{Cu1} i_1 + n_1 \frac{d\phi_1}{dt} \\
 \underline{v}_2 &= R_{Cu2} i_2 + n_2 \frac{d\phi_2}{dt}. 
 \end{align}
-$$
 
 Die Beziehungen (45) gelten allgemein und sind auch bei Aussteuerung des Kernmaterials in den Sättigungsbereich
 anwendbar. Bei Aussteuerung mit geringer Amplitude besteht annähernd ein linearer Zusammenhang zwischen den Flüssen und
@@ -436,8 +434,8 @@ $\underline{v}_2/i_2 = −\underline{Z}_L$. Für die Eingangsimpedanz $\underlin
 $$
 \underline{Z}_i = \frac{\underline{v}_1}{\underline{i}_1} 
 = \frac{\underline{v}_1}{\underline{v}_2} 
-\cdot \frac{\underline{v}_2}{\underline{i}_2}
-\cdot \frac{\underline{i}_2}{\underline{i}_1}
+\cdot \frac{\underline{v}_2}{\underline{i}_2} 
+\cdot \frac{\underline{i}_2}{\underline{i}_1} 
 = ü^2 \underline{Z}_L,
 $$
 

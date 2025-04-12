@@ -32,12 +32,12 @@ book:
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
 #  cover-image: images/hsb-logo.png
-#  favicon: images/hsb-logo.png
+  favicon: images/hsb-logo.png
   site-url: https://mimeiners.github.io/gel2/
   repo-url: https://github.com/mimeiners/gel2/
   repo-branch: main
-  repo-actions: [edit, issue]
-  downloads: [epub]
+  repo-actions: [edit,issue]
+  downloads: [pdf,epub]
 
   chapters:
     - index.qmd
@@ -80,26 +80,27 @@ bibliography: _bibliography/references.bib
 format:
   html:
     theme: flatly
-#   pdf:
-#     documentlec: scrbook 
-#     lof: true
-#     lot: true
-#     toc: true    
-#     geometry:
-#       - top=30mm
-#       - left=20mm
-#       - heightrounded
-#     hyperrefoptions:
-#       - linktoc=all
-#     colorlinks: true
-#     linkcolor: "blue"
-#     biblio-style: ieee
-#     keep-tex: true
-#     output-file: elk
+  pdf:
+    documentclass: scrbook 
+    # lof: true
+    # lot: true
+    toc: true    
+    geometry:
+      - top=30mm
+      - left=20mm
+      - heightrounded
+    hyperrefoptions:
+      - linktoc=all
+    colorlinks: true
+    linkcolor: "blue"
+    biblio-style: ieee
+    highlight-style: github
+    mainfont: "Calibri"
+    keep-tex: true
+    output-file: gel2
   epub:
     theme: flatly
-    output-file: elk
+    output-file: gel2
   
 execute:
   freeze: auto
-

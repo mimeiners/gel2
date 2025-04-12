@@ -72,11 +72,9 @@ keine Sinusschwingung (harmonische).
 
 ### Arithmetischer Mittelwert - linearer Mittelwert - Gleichwert
 
-$$
 \begin{align}
 \overline{u(t)} &= \frac{1}{T} \int_t^{t+T} u(\tau) \mathrm{d} \tau
 \end{align}
-$$
 :::
 
 ::: {.callout-note} 

@@ -188,39 +188,46 @@
 * verschiedene Stufen der Vereinfachung
 
 * Felder / Wellen / Optik / HF-Technik
+  
   * Maxwell-Gleichungen
-	$$
 	\begin{align}
 	\oint \mathbf{H} d\mathbf{s} &= \iint \mathbf{J} + \dot{D} d\mathbf{A} \\
 	\oint \mathbf{E} d\mathbf{s} &= - \iint \dot{B} d\mathbf{A}
 	\end{align}
-	$$
+	
 
 * bei lokaler Konzentration der Feldenergie $\Rightarrow$ quasi-statische Näherung
 
 * Mikrowellentechnik / Leitungstechnik
+  
   * verteilte Schaltungen $l$, $c$, $\rho$
+  
   * Kopplung, Laufzeit $\tau = a/v$
 
 * *kleine* Systeme mit $a << \lambda$ bzw. *kurze* Laufzeiten mit $\tau << T$
 
 * Regelungstechnik / Impulstechnik
+  
   * Ersatzschaltungen
+  
   * (Block-)Schaltbilder
 
 * eingeschwungener Zustand
 
 * NF-Technik
+  
   * stationär-periodische Signale
 
 * Sinussignale
 
 * Energietechnik
+  
   * monofrequente Signale $U = Z \cdot I$
 
 * Frequenz $f \rightarrow 0$
 
 * Gleichstromtechnik
+  
   * Ohmsches Gesetz $U = R \cdot I$
 
 
@@ -231,9 +238,7 @@
 ### Stromdichte
 
 $$
-\begin{equation}
 \frac{\int E(r,t) ds}{\iint J(r,t) dA} = \frac{u(t)}{i(t)} \Rightarrow R
-\end{equation}
 $$
 :::
 
@@ -242,9 +247,7 @@ $$
 ### Verschiebungsdichte
 
 $$
-\begin{equation}
 \frac{\iint D(r,t) dA}{\int E(r,t) ds} = \frac{q(t)}{u(t)} \Rightarrow C
-\end{equation}
 $$
 :::
 
@@ -253,9 +256,7 @@ $$
 ### Flußdichte
 
 $$
-\begin{equation}
 \frac{\iint B(r,t) dA}{\oint H(r,t) ds} = \frac{u(t)}{i(t)} \Rightarrow L
-\end{equation}
 $$
 :::
 
@@ -266,9 +267,7 @@ $$
 ### als Zeitfunktion
 
 $$
-\begin{equation}
 u(t) = \hat{U} \cos(\omega t + \phi)
-\end{equation}
 $$
 :::
 
@@ -277,8 +276,6 @@ $$
 ### als Zeiger / komplexe Grösse (Phasor)
 
 $$
-\begin{equation}
 U = \lvert \hat{U} \lvert e^{j \phi}
-\end{equation}
 $$
 :::
