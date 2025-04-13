@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -64,7 +84,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../tut/tut_01_Einfuehrung.html" rel="next">
+<link href="../hw/hw_02.html" rel="next">
 <link href="../lec/lec_08.html" rel="prev">
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -275,6 +295,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Signale</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -289,19 +315,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_01_Einfuehrung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_02_Komplexe-Zahlen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_03_Periodische-Signale.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
   </div>
 </li>
       </ul>
@@ -343,7 +369,7 @@ window.Quarto = {
   <li><a href="#aufgabe" id="toc-aufgabe" class="nav-link" data-scroll-target="#aufgabe"><span class="header-section-number">9.4.1</span> Aufgabe</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/main/hw/hw_01.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/hw/hw_01.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -374,7 +400,7 @@ window.Quarto = {
 <div id="fig-hw1p1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hw1p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/hw/hw1p1.png" class="img-fluid figure-img" width="200">
+<embed src="../images/hw/hw1p1.pdf" class="img-fluid" width="200">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hw1p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;9.1: Wechselstromschaltung
@@ -383,7 +409,7 @@ Abbildung&nbsp;9.1: Wechselstromschaltung
 </div>
 <section id="lösung" class="level3" data-number="9.1.1">
 <h3 data-number="9.1.1" class="anchored" data-anchor-id="lösung"><span class="header-section-number">9.1.1</span> Lösung</h3>
-<div id="0b41b9fb" class="cell">
+<div id="486170e0" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -478,7 +504,7 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 <section id="scheitelfaktor" class="level3" data-number="9.2.4">
 <h3 data-number="9.2.4" class="anchored" data-anchor-id="scheitelfaktor"><span class="header-section-number">9.2.4</span> Scheitelfaktor</h3>
 <p>Wie groß ist der Scheitelfaktor <span class="math inline">\(U_{max}/U_{eff}\)</span>, wenn <span class="math inline">\(U_0\)</span> = 1 V, <span class="math inline">\(\hat{U}_1\)</span> = <span class="math inline">\(\hat{U}_2\)</span> = 100 mV und <span class="math inline">\(\varphi\)</span> = 60 Grad?</p>
-<div id="b371336f" class="cell">
+<div id="faf20f5e" class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.integrate <span class="im">as</span> si</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.optimize <span class="im">as</span> so</span>
@@ -555,7 +581,7 @@ U_{max} &amp;= u(t_{max}); \quad \left. \frac{du(t)}{dt} \right\lvert_{t=t_{max}
 <div id="fig-hw1p3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hw1p3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/hw/hw1p3.png" class="img-fluid figure-img" width="300">
+<embed src="../images/hw/hw1p3.pdf" class="img-fluid" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hw1p3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;9.2: Netzwerk zur Schaltungsanalyse
@@ -598,7 +624,7 @@ i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 <section id="spannungsverläufe" class="level3" data-number="9.3.2">
 <h3 data-number="9.3.2" class="anchored" data-anchor-id="spannungsverläufe"><span class="header-section-number">9.3.2</span> Spannungsverläufe</h3>
 <p>Skizzieren Sie mithilfe von Python <span class="math inline">\(i_0(t)\)</span>, <span class="math inline">\(u(t)\)</span>, <span class="math inline">\(i_C(t)\)</span> und <span class="math inline">\(i_R(t)\)</span> für <span class="math inline">\(\hat{I}_0\)</span> = 14.1 mA, <span class="math inline">\(f\)</span> = 3.183 kHz, <span class="math inline">\(R\)</span> = 50 <span class="math inline">\(\Omega\)</span> und <span class="math inline">\(C\)</span> = 1 <span class="math inline">\(\mu\)</span> F!</p>
-<div id="a4e3dfdd" class="cell">
+<div id="f0f1a94c" class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> pi, sin, linspace</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -649,7 +675,7 @@ i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 <div id="fig-hw1p4a" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-hw1p4a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/hw/hw1p4a.png" class="img-fluid figure-img" data-ref-parent="fig-phasenanschnitt" width="600">
+<embed src="../images/hw/hw1p4a.pdf" class="img-fluid" data-ref-parent="fig-phasenanschnitt" width="600">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-hw1p4a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Halbwelle
@@ -663,7 +689,7 @@ i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 <div id="fig-hw1p4b" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-hw1p4b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/hw/hw1p4b.png" class="img-fluid figure-img" data-ref-parent="fig-phasenanschnitt" width="600">
+<embed src="../images/hw/hw1p4b.pdf" class="img-fluid" data-ref-parent="fig-phasenanschnitt" width="600">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-hw1p4b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Vollwelle
@@ -679,7 +705,7 @@ Abbildung&nbsp;9.3: Phasenanschnittsteuerung
 </figure>
 </div>
 <p>Das Prinzip der Phasenanschnittsteuerung, bei dem gem. <a href="#fig-hw1p4a" class="quarto-xref">Abbildung&nbsp;<span>9.3 (a)</span></a> oder <a href="#fig-hw1p4b" class="quarto-xref">Abbildung&nbsp;<span>9.3 (b)</span></a> der Stromfluß in einer Halbwelle auf den zeitlichen Bruchteil <span class="math inline">\(\pi-\alpha\)</span> begrenzt wird, wird z.B. zum Dimmen von Glühlampen und anderen Kleinverbrauchern im Haushalt verwendet. Der Phasenanschnittwinkel <span class="math inline">\(\alpha\)</span> kann dabei elektronisch mit Thyristoren im Bereich <span class="math inline">\(0 \leq
-\alpha \leq \pi\)</span> eingestellt werden.</p>
+\alpha \leq \pi\)</span> eingestellt werden <span class="citation" data-cites="wikipedia2024e">(<a href="../references.html#ref-wikipedia2024e" role="doc-biblioref">Wikipedia 2024</a>)</span>.</p>
 <p>In den hier zu untersuchenden Fällen (a) und (b) wird ein ohmscher Verbraucher mit <span class="math inline">\(R\)</span> = 100 <span class="math inline">\(\Omega\)</span> mit Netzspannung (<span class="math inline">\(U_{0,eff}\)</span> = 230 V, <span class="math inline">\(\omega\)</span> = 2 <span class="math inline">\(\pi\)</span> 50 Hz) und Phasenanschnittsteuerung betrieben.</p>
 <section id="aufgabe" class="level3" data-number="9.4.1">
 <h3 data-number="9.4.1" class="anchored" data-anchor-id="aufgabe"><span class="header-section-number">9.4.1</span> Aufgabe</h3>
@@ -709,6 +735,11 @@ I^2_{eff} &amp;= 2 \cdot \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\
 \end{align}\]</span></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-wikipedia2024e" class="csl-entry" role="listitem">
+Wikipedia. 2024. <span>„Phasenanschnittsteuerung — Wikipedia<span>,</span> die freie Enzyklopädie“</span>. <a href="https://de.wikipedia.org/w/index.php?title=Phasenanschnittsteuerung&amp;oldid=246116394">https://de.wikipedia.org/w/index.php?title=Phasenanschnittsteuerung&amp;oldid=246116394</a>.
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -1138,8 +1169,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../tut/tut_01_Einfuehrung.html" class="pagination-link" aria-label="Einführung">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Einführung</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../hw/hw_02.html" class="pagination-link" aria-label="Signale">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Signale</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1151,7 +1182,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/main/hw/hw_01.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/hw/hw_01.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

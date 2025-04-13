@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Komplexe Zahlen – Grundlagen der Elektrotechnik 2</title>
+<title>12&nbsp; Komplexe Zahlen – Grundlagen der Elektrotechnik 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_02_Komplexe-Zahlen.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_02_Komplexe-Zahlen.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -241,6 +241,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Signale</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -255,19 +261,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_01_Einfuehrung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_02_Komplexe-Zahlen.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_03_Periodische-Signale.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,43 +294,43 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#die-imaginäre-einheit" id="toc-die-imaginäre-einheit" class="nav-link active" data-scroll-target="#die-imaginäre-einheit"><span class="header-section-number">11.1</span> Die imaginäre Einheit</a></li>
-  <li><a href="#aufbau-komplexer-zahlen" id="toc-aufbau-komplexer-zahlen" class="nav-link" data-scroll-target="#aufbau-komplexer-zahlen"><span class="header-section-number">11.2</span> Aufbau komplexer Zahlen</a></li>
-  <li><a href="#rechenoperationen" id="toc-rechenoperationen" class="nav-link" data-scroll-target="#rechenoperationen"><span class="header-section-number">11.3</span> Rechenoperationen</a>
+  <li><a href="#die-imaginäre-einheit" id="toc-die-imaginäre-einheit" class="nav-link active" data-scroll-target="#die-imaginäre-einheit"><span class="header-section-number">12.1</span> Die imaginäre Einheit</a></li>
+  <li><a href="#aufbau-komplexer-zahlen" id="toc-aufbau-komplexer-zahlen" class="nav-link" data-scroll-target="#aufbau-komplexer-zahlen"><span class="header-section-number">12.2</span> Aufbau komplexer Zahlen</a></li>
+  <li><a href="#rechenoperationen" id="toc-rechenoperationen" class="nav-link" data-scroll-target="#rechenoperationen"><span class="header-section-number">12.3</span> Rechenoperationen</a>
   <ul class="collapse">
-  <li><a href="#addition-von-komplexen-zahlen" id="toc-addition-von-komplexen-zahlen" class="nav-link" data-scroll-target="#addition-von-komplexen-zahlen"><span class="header-section-number">11.3.1</span> Addition von komplexen Zahlen</a></li>
-  <li><a href="#subtraktion-von-komplexen-zahlen" id="toc-subtraktion-von-komplexen-zahlen" class="nav-link" data-scroll-target="#subtraktion-von-komplexen-zahlen"><span class="header-section-number">11.3.2</span> Subtraktion von komplexen Zahlen</a></li>
-  <li><a href="#betrag-einer-komplexen-zahl" id="toc-betrag-einer-komplexen-zahl" class="nav-link" data-scroll-target="#betrag-einer-komplexen-zahl"><span class="header-section-number">11.3.3</span> Betrag einer komplexen Zahl</a></li>
-  <li><a href="#phasenwinkel-einer-komplexen-zahl" id="toc-phasenwinkel-einer-komplexen-zahl" class="nav-link" data-scroll-target="#phasenwinkel-einer-komplexen-zahl"><span class="header-section-number">11.3.4</span> Phasenwinkel einer komplexen Zahl</a></li>
-  <li><a href="#eulersche-identität-und-polarkoordinaten" id="toc-eulersche-identität-und-polarkoordinaten" class="nav-link" data-scroll-target="#eulersche-identität-und-polarkoordinaten"><span class="header-section-number">11.3.5</span> Eulersche Identität und Polarkoordinaten</a></li>
-  <li><a href="#multiplikation-komplexer-zahlen" id="toc-multiplikation-komplexer-zahlen" class="nav-link" data-scroll-target="#multiplikation-komplexer-zahlen"><span class="header-section-number">11.3.6</span> Multiplikation komplexer Zahlen</a></li>
-  <li><a href="#division-komplexer-zahlen" id="toc-division-komplexer-zahlen" class="nav-link" data-scroll-target="#division-komplexer-zahlen"><span class="header-section-number">11.3.7</span> Division komplexer Zahlen</a></li>
-  <li><a href="#kehrwert-einer-komplexen-zahl" id="toc-kehrwert-einer-komplexen-zahl" class="nav-link" data-scroll-target="#kehrwert-einer-komplexen-zahl"><span class="header-section-number">11.3.8</span> Kehrwert einer komplexen Zahl</a></li>
-  <li><a href="#konjugiert-komplex" id="toc-konjugiert-komplex" class="nav-link" data-scroll-target="#konjugiert-komplex"><span class="header-section-number">11.3.9</span> Konjugiert-Komplex</a></li>
+  <li><a href="#addition-von-komplexen-zahlen" id="toc-addition-von-komplexen-zahlen" class="nav-link" data-scroll-target="#addition-von-komplexen-zahlen"><span class="header-section-number">12.3.1</span> Addition von komplexen Zahlen</a></li>
+  <li><a href="#subtraktion-von-komplexen-zahlen" id="toc-subtraktion-von-komplexen-zahlen" class="nav-link" data-scroll-target="#subtraktion-von-komplexen-zahlen"><span class="header-section-number">12.3.2</span> Subtraktion von komplexen Zahlen</a></li>
+  <li><a href="#betrag-einer-komplexen-zahl" id="toc-betrag-einer-komplexen-zahl" class="nav-link" data-scroll-target="#betrag-einer-komplexen-zahl"><span class="header-section-number">12.3.3</span> Betrag einer komplexen Zahl</a></li>
+  <li><a href="#phasenwinkel-einer-komplexen-zahl" id="toc-phasenwinkel-einer-komplexen-zahl" class="nav-link" data-scroll-target="#phasenwinkel-einer-komplexen-zahl"><span class="header-section-number">12.3.4</span> Phasenwinkel einer komplexen Zahl</a></li>
+  <li><a href="#eulersche-identität-und-polarkoordinaten" id="toc-eulersche-identität-und-polarkoordinaten" class="nav-link" data-scroll-target="#eulersche-identität-und-polarkoordinaten"><span class="header-section-number">12.3.5</span> Eulersche Identität und Polarkoordinaten</a></li>
+  <li><a href="#multiplikation-komplexer-zahlen" id="toc-multiplikation-komplexer-zahlen" class="nav-link" data-scroll-target="#multiplikation-komplexer-zahlen"><span class="header-section-number">12.3.6</span> Multiplikation komplexer Zahlen</a></li>
+  <li><a href="#division-komplexer-zahlen" id="toc-division-komplexer-zahlen" class="nav-link" data-scroll-target="#division-komplexer-zahlen"><span class="header-section-number">12.3.7</span> Division komplexer Zahlen</a></li>
+  <li><a href="#kehrwert-einer-komplexen-zahl" id="toc-kehrwert-einer-komplexen-zahl" class="nav-link" data-scroll-target="#kehrwert-einer-komplexen-zahl"><span class="header-section-number">12.3.8</span> Kehrwert einer komplexen Zahl</a></li>
+  <li><a href="#konjugiert-komplex" id="toc-konjugiert-komplex" class="nav-link" data-scroll-target="#konjugiert-komplex"><span class="header-section-number">12.3.9</span> Konjugiert-Komplex</a></li>
   </ul></li>
-  <li><a href="#übungen" id="toc-übungen" class="nav-link" data-scroll-target="#übungen"><span class="header-section-number">11.4</span> Übungen</a>
+  <li><a href="#übungen" id="toc-übungen" class="nav-link" data-scroll-target="#übungen"><span class="header-section-number">12.4</span> Übungen</a>
   <ul class="collapse">
-  <li><a href="#aufgabe-2.1" id="toc-aufgabe-2.1" class="nav-link" data-scroll-target="#aufgabe-2.1"><span class="header-section-number">11.4.1</span> Aufgabe 2.1</a></li>
-  <li><a href="#aufgabe-2.2" id="toc-aufgabe-2.2" class="nav-link" data-scroll-target="#aufgabe-2.2"><span class="header-section-number">11.4.2</span> Aufgabe 2.2</a></li>
-  <li><a href="#aufgabe-2.3" id="toc-aufgabe-2.3" class="nav-link" data-scroll-target="#aufgabe-2.3"><span class="header-section-number">11.4.3</span> Aufgabe 2.3</a></li>
-  <li><a href="#aufgabe-2.4" id="toc-aufgabe-2.4" class="nav-link" data-scroll-target="#aufgabe-2.4"><span class="header-section-number">11.4.4</span> Aufgabe 2.4</a></li>
-  <li><a href="#aufgabe-2.5" id="toc-aufgabe-2.5" class="nav-link" data-scroll-target="#aufgabe-2.5"><span class="header-section-number">11.4.5</span> Aufgabe 2.5</a></li>
-  <li><a href="#aufgabe-2.6" id="toc-aufgabe-2.6" class="nav-link" data-scroll-target="#aufgabe-2.6"><span class="header-section-number">11.4.6</span> Aufgabe 2.6</a></li>
-  <li><a href="#aufgabe-2.7" id="toc-aufgabe-2.7" class="nav-link" data-scroll-target="#aufgabe-2.7"><span class="header-section-number">11.4.7</span> Aufgabe 2.7</a></li>
-  <li><a href="#aufgabe-2.8" id="toc-aufgabe-2.8" class="nav-link" data-scroll-target="#aufgabe-2.8"><span class="header-section-number">11.4.8</span> Aufgabe 2.8</a></li>
-  <li><a href="#aufgabe-2.9" id="toc-aufgabe-2.9" class="nav-link" data-scroll-target="#aufgabe-2.9"><span class="header-section-number">11.4.9</span> Aufgabe 2.9</a></li>
-  <li><a href="#aufgabe-2.10" id="toc-aufgabe-2.10" class="nav-link" data-scroll-target="#aufgabe-2.10"><span class="header-section-number">11.4.10</span> Aufgabe 2.10</a></li>
-  <li><a href="#aufgabe-2.11" id="toc-aufgabe-2.11" class="nav-link" data-scroll-target="#aufgabe-2.11"><span class="header-section-number">11.4.11</span> Aufgabe 2.11</a></li>
+  <li><a href="#aufgabe-2.1" id="toc-aufgabe-2.1" class="nav-link" data-scroll-target="#aufgabe-2.1"><span class="header-section-number">12.4.1</span> Aufgabe 2.1</a></li>
+  <li><a href="#aufgabe-2.2" id="toc-aufgabe-2.2" class="nav-link" data-scroll-target="#aufgabe-2.2"><span class="header-section-number">12.4.2</span> Aufgabe 2.2</a></li>
+  <li><a href="#aufgabe-2.3" id="toc-aufgabe-2.3" class="nav-link" data-scroll-target="#aufgabe-2.3"><span class="header-section-number">12.4.3</span> Aufgabe 2.3</a></li>
+  <li><a href="#aufgabe-2.4" id="toc-aufgabe-2.4" class="nav-link" data-scroll-target="#aufgabe-2.4"><span class="header-section-number">12.4.4</span> Aufgabe 2.4</a></li>
+  <li><a href="#aufgabe-2.5" id="toc-aufgabe-2.5" class="nav-link" data-scroll-target="#aufgabe-2.5"><span class="header-section-number">12.4.5</span> Aufgabe 2.5</a></li>
+  <li><a href="#aufgabe-2.6" id="toc-aufgabe-2.6" class="nav-link" data-scroll-target="#aufgabe-2.6"><span class="header-section-number">12.4.6</span> Aufgabe 2.6</a></li>
+  <li><a href="#aufgabe-2.7" id="toc-aufgabe-2.7" class="nav-link" data-scroll-target="#aufgabe-2.7"><span class="header-section-number">12.4.7</span> Aufgabe 2.7</a></li>
+  <li><a href="#aufgabe-2.8" id="toc-aufgabe-2.8" class="nav-link" data-scroll-target="#aufgabe-2.8"><span class="header-section-number">12.4.8</span> Aufgabe 2.8</a></li>
+  <li><a href="#aufgabe-2.9" id="toc-aufgabe-2.9" class="nav-link" data-scroll-target="#aufgabe-2.9"><span class="header-section-number">12.4.9</span> Aufgabe 2.9</a></li>
+  <li><a href="#aufgabe-2.10" id="toc-aufgabe-2.10" class="nav-link" data-scroll-target="#aufgabe-2.10"><span class="header-section-number">12.4.10</span> Aufgabe 2.10</a></li>
+  <li><a href="#aufgabe-2.11" id="toc-aufgabe-2.11" class="nav-link" data-scroll-target="#aufgabe-2.11"><span class="header-section-number">12.4.11</span> Aufgabe 2.11</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/main/tut/tut_02_Komplexe-Zahlen.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/tut/tut_02_Komplexe-Zahlen.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_02_Komplexe-Zahlen.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_02_Komplexe-Zahlen.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></h1>
 </div>
 
 
@@ -353,8 +359,8 @@ window.Quarto = {
 <li>Kehrwert</li>
 <li>Konjugiert-Komplex</li>
 </ul>
-<section id="die-imaginäre-einheit" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="die-imaginäre-einheit"><span class="header-section-number">11.1</span> Die imaginäre Einheit</h2>
+<section id="die-imaginäre-einheit" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="die-imaginäre-einheit"><span class="header-section-number">12.1</span> Die imaginäre Einheit</h2>
 <p>Die imaginäre Einheit j ist definiert als:</p>
 <p><span class="math display">\[j^2 = -1\]</span></p>
 <p>Für höhere Potenzen von j erhält man:</p>
@@ -364,50 +370,50 @@ window.Quarto = {
 <p><span class="math display">\[j^5 = j\]</span></p>
 <p><span class="math display">\[j^6 = -1\]</span> usw.</p>
 </section>
-<section id="aufbau-komplexer-zahlen" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="aufbau-komplexer-zahlen"><span class="header-section-number">11.2</span> Aufbau komplexer Zahlen</h2>
+<section id="aufbau-komplexer-zahlen" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="aufbau-komplexer-zahlen"><span class="header-section-number">12.2</span> Aufbau komplexer Zahlen</h2>
 <p>Komplexe Zahlen bestehen aus einem Real- und einem Imaginärteil. Sie werden durch einen Unterstrich gekennzeichnet. Ist der Buchstabe nicht unterstrichen, wird von dem Betrag der Komplexen Zahl geredet.</p>
 <p><span class="math display">\[\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\}\]</span></p>
 <p>In der Elektrotechnik wird zur Kennzeichnung des Imaginärteils oft der Buchstabe j anstelle des i verwendet, da das i für die Bezeichnung des Stromes vorhergesehen ist.</p>
 </section>
-<section id="rechenoperationen" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="rechenoperationen"><span class="header-section-number">11.3</span> Rechenoperationen</h2>
-<section id="addition-von-komplexen-zahlen" class="level3" data-number="11.3.1">
-<h3 data-number="11.3.1" class="anchored" data-anchor-id="addition-von-komplexen-zahlen"><span class="header-section-number">11.3.1</span> Addition von komplexen Zahlen</h3>
+<section id="rechenoperationen" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="rechenoperationen"><span class="header-section-number">12.3</span> Rechenoperationen</h2>
+<section id="addition-von-komplexen-zahlen" class="level3" data-number="12.3.1">
+<h3 data-number="12.3.1" class="anchored" data-anchor-id="addition-von-komplexen-zahlen"><span class="header-section-number">12.3.1</span> Addition von komplexen Zahlen</h3>
 <p>Zwei Komplexe Zahlen <span class="math inline">\(\underline{A}\)</span> und <span class="math inline">\(\underline{B}\)</span> werden addiert, indem ihre Real- und Imaginärteile getrennt voneinander addiert werden.</p>
 <p><span class="math display">\[
 \underline{A} + \underline{B} = Re\{\underline{A}\} + Re\{\underline{B}\} + j(Im\{\underline{A}\} + Im\{\underline{B}\})
 \]</span></p>
 </section>
-<section id="subtraktion-von-komplexen-zahlen" class="level3" data-number="11.3.2">
-<h3 data-number="11.3.2" class="anchored" data-anchor-id="subtraktion-von-komplexen-zahlen"><span class="header-section-number">11.3.2</span> Subtraktion von komplexen Zahlen</h3>
+<section id="subtraktion-von-komplexen-zahlen" class="level3" data-number="12.3.2">
+<h3 data-number="12.3.2" class="anchored" data-anchor-id="subtraktion-von-komplexen-zahlen"><span class="header-section-number">12.3.2</span> Subtraktion von komplexen Zahlen</h3>
 <p>Zwei Komplexe Zahlen <span class="math inline">\(\underline{A}\)</span> und <span class="math inline">\(\underline{B}\)</span> werden subtrahiert, indem ihre Real- und Imaginärteile getrennt voneinander abgezogen werden.</p>
 <p><span class="math display">\[
 \underline{A} - \underline{B} = Re\{\underline{A}\} - Re\{\underline{B}\} + j(Im\{\underline{A}\} - Im\{\underline{B}\})
 \]</span></p>
 </section>
-<section id="betrag-einer-komplexen-zahl" class="level3" data-number="11.3.3">
-<h3 data-number="11.3.3" class="anchored" data-anchor-id="betrag-einer-komplexen-zahl"><span class="header-section-number">11.3.3</span> Betrag einer komplexen Zahl</h3>
+<section id="betrag-einer-komplexen-zahl" class="level3" data-number="12.3.3">
+<h3 data-number="12.3.3" class="anchored" data-anchor-id="betrag-einer-komplexen-zahl"><span class="header-section-number">12.3.3</span> Betrag einer komplexen Zahl</h3>
 <p>Der Betrag einer komplexen Zahl <span class="math inline">\(\underline{A}\)</span> ist die Euklidische Länge des Vektors, wenn dieser zum Beispiel in einem Koordinatensystem gezeichnet ist. Der Betrag wird als <span class="math inline">\(|\underline{A}|\)</span> oder vereinfacht als A geschrieben.</p>
 <p><span class="math display">\[
 A = |\underline{A}| = \sqrt{Re\{\underline{A}\}^2 + Im\{\underline{A}\}^2}
 \]</span></p>
 </section>
-<section id="phasenwinkel-einer-komplexen-zahl" class="level3" data-number="11.3.4">
-<h3 data-number="11.3.4" class="anchored" data-anchor-id="phasenwinkel-einer-komplexen-zahl"><span class="header-section-number">11.3.4</span> Phasenwinkel einer komplexen Zahl</h3>
+<section id="phasenwinkel-einer-komplexen-zahl" class="level3" data-number="12.3.4">
+<h3 data-number="12.3.4" class="anchored" data-anchor-id="phasenwinkel-einer-komplexen-zahl"><span class="header-section-number">12.3.4</span> Phasenwinkel einer komplexen Zahl</h3>
 <p><span class="math display">\[
 \varphi = arctan\left(\frac{Im\{\underline{A}\}}{Re\{\underline{A}\}}\right)
 \]</span></p>
 <p>Der Phasenwinkel wird überlicherweise von 0° bis 180° positiv (Zählweise CCW) und von 180° bis 360° negativ (Zählweise CW) angegeben.</p>
 </section>
-<section id="eulersche-identität-und-polarkoordinaten" class="level3" data-number="11.3.5">
-<h3 data-number="11.3.5" class="anchored" data-anchor-id="eulersche-identität-und-polarkoordinaten"><span class="header-section-number">11.3.5</span> Eulersche Identität und Polarkoordinaten</h3>
+<section id="eulersche-identität-und-polarkoordinaten" class="level3" data-number="12.3.5">
+<h3 data-number="12.3.5" class="anchored" data-anchor-id="eulersche-identität-und-polarkoordinaten"><span class="header-section-number">12.3.5</span> Eulersche Identität und Polarkoordinaten</h3>
 <p>Komplexe Zahlen können auch als Polarkoordinaten über die Eulersche Identität beschrieben werden. Dabei setzt sich das aus Betrag und Phasenwinkel zusammen.</p>
 <p><span class="math display">\[
 \underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\} = A \cdot e^{j\varphi}
 \]</span></p>
-<section id="eulersche-identität" class="level4" data-number="11.3.5.1">
-<h4 data-number="11.3.5.1" class="anchored" data-anchor-id="eulersche-identität"><span class="header-section-number">11.3.5.1</span> Eulersche Identität</h4>
+<section id="eulersche-identität" class="level4" data-number="12.3.5.1">
+<h4 data-number="12.3.5.1" class="anchored" data-anchor-id="eulersche-identität"><span class="header-section-number">12.3.5.1</span> Eulersche Identität</h4>
 <p><span class="math display">\[
 e^{j\varphi} = cos(\varphi) + j \cdot sin(\varphi)
 \]</span></p>
@@ -420,38 +426,38 @@ e^{j\varphi} = cos(\varphi) + j \cdot sin(\varphi)
 <p>Die komplexe Zahl <span class="math inline">\(e^{j\varphi}\)</span> hat immer den Betrag 1 und den Phasenwinkel <span class="math inline">\(\varphi\)</span>.</p>
 </section>
 </section>
-<section id="multiplikation-komplexer-zahlen" class="level3" data-number="11.3.6">
-<h3 data-number="11.3.6" class="anchored" data-anchor-id="multiplikation-komplexer-zahlen"><span class="header-section-number">11.3.6</span> Multiplikation komplexer Zahlen</h3>
+<section id="multiplikation-komplexer-zahlen" class="level3" data-number="12.3.6">
+<h3 data-number="12.3.6" class="anchored" data-anchor-id="multiplikation-komplexer-zahlen"><span class="header-section-number">12.3.6</span> Multiplikation komplexer Zahlen</h3>
 <p>Die Multiplikation ist über die Polarkoordinaten einfacher. Bei der Multiplikation werden die Beträge multipliziert und die Phasenwinkel addiert.</p>
 <p><span class="math display">\[
 \underline{A} \cdot \underline{B} = A \cdot B \cdot e^{j(\varphi_A + \varphi_B)}
 \]</span></p>
 </section>
-<section id="division-komplexer-zahlen" class="level3" data-number="11.3.7">
-<h3 data-number="11.3.7" class="anchored" data-anchor-id="division-komplexer-zahlen"><span class="header-section-number">11.3.7</span> Division komplexer Zahlen</h3>
+<section id="division-komplexer-zahlen" class="level3" data-number="12.3.7">
+<h3 data-number="12.3.7" class="anchored" data-anchor-id="division-komplexer-zahlen"><span class="header-section-number">12.3.7</span> Division komplexer Zahlen</h3>
 <p>Ähnlich zur Multiplikation wird bei der Division die Beträge dividiert und die Phasenwinkel subtrahiert.</p>
 <p><span class="math display">\[
 \frac{\underline{A}}{\underline{B}} = \frac{A}{B} \cdot e^{j(\varphi_A - \varphi_B)}
 \]</span></p>
 </section>
-<section id="kehrwert-einer-komplexen-zahl" class="level3" data-number="11.3.8">
-<h3 data-number="11.3.8" class="anchored" data-anchor-id="kehrwert-einer-komplexen-zahl"><span class="header-section-number">11.3.8</span> Kehrwert einer komplexen Zahl</h3>
+<section id="kehrwert-einer-komplexen-zahl" class="level3" data-number="12.3.8">
+<h3 data-number="12.3.8" class="anchored" data-anchor-id="kehrwert-einer-komplexen-zahl"><span class="header-section-number">12.3.8</span> Kehrwert einer komplexen Zahl</h3>
 <p>Beim Kehrwert einer komplexen Zahl wird der Kehrwert des Betrages genommen und das Vorzeichen des Phasenwinkels invertiert.</p>
 <p><span class="math display">\[
 \frac{1}{\underline{A}} = \frac{1}{A} \cdot e^{-j\varphi}
 \]</span></p>
 </section>
-<section id="konjugiert-komplex" class="level3" data-number="11.3.9">
-<h3 data-number="11.3.9" class="anchored" data-anchor-id="konjugiert-komplex"><span class="header-section-number">11.3.9</span> Konjugiert-Komplex</h3>
+<section id="konjugiert-komplex" class="level3" data-number="12.3.9">
+<h3 data-number="12.3.9" class="anchored" data-anchor-id="konjugiert-komplex"><span class="header-section-number">12.3.9</span> Konjugiert-Komplex</h3>
 <p>Bei dem konjugiert-komplexen einer Zahl wird das Vorzeichen des Imaginärteils invertiert. Dadurch verändert sich der Betrag nicht, der Phasenwinkel wird allerdings auch invertiert.</p>
 <p><span class="math display">\[\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\}\]</span></p>
 <p><span class="math display">\[\underline{A}^* = Re\{\underline{A}\} - j \cdot Im\{\underline{A}\}\]</span></p>
 </section>
 </section>
-<section id="übungen" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="übungen"><span class="header-section-number">11.4</span> Übungen</h2>
-<section id="aufgabe-2.1" class="level3" data-number="11.4.1">
-<h3 data-number="11.4.1" class="anchored" data-anchor-id="aufgabe-2.1"><span class="header-section-number">11.4.1</span> Aufgabe 2.1</h3>
+<section id="übungen" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="übungen"><span class="header-section-number">12.4</span> Übungen</h2>
+<section id="aufgabe-2.1" class="level3" data-number="12.4.1">
+<h3 data-number="12.4.1" class="anchored" data-anchor-id="aufgabe-2.1"><span class="header-section-number">12.4.1</span> Aufgabe 2.1</h3>
 <p><span class="math inline">\(\sqrt{-9} + \sqrt{-x^2} - \sqrt{-y^2} + \sqrt{-25}\)</span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -470,8 +476,8 @@ Lösung 2.1
 </div>
 </div>
 </section>
-<section id="aufgabe-2.2" class="level3" data-number="11.4.2">
-<h3 data-number="11.4.2" class="anchored" data-anchor-id="aufgabe-2.2"><span class="header-section-number">11.4.2</span> Aufgabe 2.2</h3>
+<section id="aufgabe-2.2" class="level3" data-number="12.4.2">
+<h3 data-number="12.4.2" class="anchored" data-anchor-id="aufgabe-2.2"><span class="header-section-number">12.4.2</span> Aufgabe 2.2</h3>
 <ol type="a">
 <li><p><span class="math inline">\(\frac{3 j^3 \cdot 5 j^4}{6 j^{20}}\)</span></p></li>
 <li><p><span class="math inline">\(\frac{1}{j^5} + \frac{1}{j^7}\)</span></p></li>
@@ -496,8 +502,8 @@ Lösung 2.2
 </div>
 </div>
 </section>
-<section id="aufgabe-2.3" class="level3" data-number="11.4.3">
-<h3 data-number="11.4.3" class="anchored" data-anchor-id="aufgabe-2.3"><span class="header-section-number">11.4.3</span> Aufgabe 2.3</h3>
+<section id="aufgabe-2.3" class="level3" data-number="12.4.3">
+<h3 data-number="12.4.3" class="anchored" data-anchor-id="aufgabe-2.3"><span class="header-section-number">12.4.3</span> Aufgabe 2.3</h3>
 <ol type="a">
 <li><p><span class="math inline">\((1 + 2j) - (-2 + 3j) + (-3 + j) - (5 + 4j) - (-1 + 9j) + (5 - 8j)\)</span></p></li>
 <li><p><span class="math inline">\((-2a + 3j) - (u - uj) + (-2a -3j) - (-u - vj)\)</span></p></li>
@@ -522,8 +528,8 @@ Lösung 2.3
 </div>
 </div>
 </section>
-<section id="aufgabe-2.4" class="level3" data-number="11.4.4">
-<h3 data-number="11.4.4" class="anchored" data-anchor-id="aufgabe-2.4"><span class="header-section-number">11.4.4</span> Aufgabe 2.4</h3>
+<section id="aufgabe-2.4" class="level3" data-number="12.4.4">
+<h3 data-number="12.4.4" class="anchored" data-anchor-id="aufgabe-2.4"><span class="header-section-number">12.4.4</span> Aufgabe 2.4</h3>
 <ol type="a">
 <li><p><span class="math inline">\((5 - 2j)(-3 + j)\)</span> (Ergebnis in kartesischer Form)</p></li>
 <li><p><span class="math inline">\(\left(3\sqrt{2} + 5\sqrt{3}j\right)\left(3\sqrt{2} - 5\sqrt{3}j\right)\)</span> (Ergebnis in kartesischer Form)</p></li>
@@ -548,8 +554,8 @@ Lösung 2.4
 </div>
 </div>
 </section>
-<section id="aufgabe-2.5" class="level3" data-number="11.4.5">
-<h3 data-number="11.4.5" class="anchored" data-anchor-id="aufgabe-2.5"><span class="header-section-number">11.4.5</span> Aufgabe 2.5</h3>
+<section id="aufgabe-2.5" class="level3" data-number="12.4.5">
+<h3 data-number="12.4.5" class="anchored" data-anchor-id="aufgabe-2.5"><span class="header-section-number">12.4.5</span> Aufgabe 2.5</h3>
 <ol type="a">
 <li><p><span class="math inline">\(\frac{3 + 4j}{2 + j}\)</span></p></li>
 <li><p><span class="math inline">\(\frac{1}{\sqrt{5} - j}\)</span></p></li>
@@ -576,8 +582,8 @@ Lösung 2.5
 </div>
 </div>
 </section>
-<section id="aufgabe-2.6" class="level3" data-number="11.4.6">
-<h3 data-number="11.4.6" class="anchored" data-anchor-id="aufgabe-2.6"><span class="header-section-number">11.4.6</span> Aufgabe 2.6</h3>
+<section id="aufgabe-2.6" class="level3" data-number="12.4.6">
+<h3 data-number="12.4.6" class="anchored" data-anchor-id="aufgabe-2.6"><span class="header-section-number">12.4.6</span> Aufgabe 2.6</h3>
 <ol type="a">
 <li><p><span class="math inline">\(\frac{1 + j}{1 - j} + \frac{1 - j}{1 + j}\)</span></p></li>
 <li><p><span class="math inline">\(\frac{1 - j}{1 + j} - \frac{1 + j}{1 - j}\)</span></p></li>
@@ -602,8 +608,8 @@ Lösung 2.6
 </div>
 </div>
 </section>
-<section id="aufgabe-2.7" class="level3" data-number="11.4.7">
-<h3 data-number="11.4.7" class="anchored" data-anchor-id="aufgabe-2.7"><span class="header-section-number">11.4.7</span> Aufgabe 2.7</h3>
+<section id="aufgabe-2.7" class="level3" data-number="12.4.7">
+<h3 data-number="12.4.7" class="anchored" data-anchor-id="aufgabe-2.7"><span class="header-section-number">12.4.7</span> Aufgabe 2.7</h3>
 <p>In die Exponentialform umwandeln:</p>
 <ol type="a">
 <li><p><span class="math inline">\(0,5 - \sqrt{6}j\)</span></p></li>
@@ -631,8 +637,8 @@ Lösung 2.7
 </div>
 </div>
 </section>
-<section id="aufgabe-2.8" class="level3" data-number="11.4.8">
-<h3 data-number="11.4.8" class="anchored" data-anchor-id="aufgabe-2.8"><span class="header-section-number">11.4.8</span> Aufgabe 2.8</h3>
+<section id="aufgabe-2.8" class="level3" data-number="12.4.8">
+<h3 data-number="12.4.8" class="anchored" data-anchor-id="aufgabe-2.8"><span class="header-section-number">12.4.8</span> Aufgabe 2.8</h3>
 <p>In die arithmetische Form umwandeln:</p>
 <ol type="a">
 <li><p><span class="math inline">\(83 e^{j \cdot 1,1083}\)</span></p></li>
@@ -660,8 +666,8 @@ Lösung 2.8
 </div>
 </div>
 </section>
-<section id="aufgabe-2.9" class="level3" data-number="11.4.9">
-<h3 data-number="11.4.9" class="anchored" data-anchor-id="aufgabe-2.9"><span class="header-section-number">11.4.9</span> Aufgabe 2.9</h3>
+<section id="aufgabe-2.9" class="level3" data-number="12.4.9">
+<h3 data-number="12.4.9" class="anchored" data-anchor-id="aufgabe-2.9"><span class="header-section-number">12.4.9</span> Aufgabe 2.9</h3>
 <p>Für <span class="math inline">\(z_1 = 1,5 - 0,5j\)</span> und <span class="math inline">\(z_2 = 3 + 0,5j\)</span> die Exponentialform berechnen und die folgende Gleichung in der arithmetischen Form angeben:</p>
 <p><span class="math display">\[z = \frac{z_1 \cdot z_2}{z_1 + z_2}\]</span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -684,8 +690,8 @@ Lösung 2.9
 </div>
 </div>
 </section>
-<section id="aufgabe-2.10" class="level3" data-number="11.4.10">
-<h3 data-number="11.4.10" class="anchored" data-anchor-id="aufgabe-2.10"><span class="header-section-number">11.4.10</span> Aufgabe 2.10</h3>
+<section id="aufgabe-2.10" class="level3" data-number="12.4.10">
+<h3 data-number="12.4.10" class="anchored" data-anchor-id="aufgabe-2.10"><span class="header-section-number">12.4.10</span> Aufgabe 2.10</h3>
 <p>Bringe den folgenden Term in die Darstellung <span class="math inline">\(\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\}\)</span>:</p>
 <p><span class="math display">\[\frac{\frac{1}{j\omega C}}{R + \frac{1}{j\omega C}}\]</span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -708,8 +714,8 @@ j\frac{\omega RC}{1 + (\omega RC)^2}
 </div>
 </div>
 </section>
-<section id="aufgabe-2.11" class="level3" data-number="11.4.11">
-<h3 data-number="11.4.11" class="anchored" data-anchor-id="aufgabe-2.11"><span class="header-section-number">11.4.11</span> Aufgabe 2.11</h3>
+<section id="aufgabe-2.11" class="level3" data-number="12.4.11">
+<h3 data-number="12.4.11" class="anchored" data-anchor-id="aufgabe-2.11"><span class="header-section-number">12.4.11</span> Aufgabe 2.11</h3>
 <p>Bringe den folgenden Term in die Darstellung <span class="math inline">\(\underline{A} = Re\{\underline{A}\} + j \cdot Im\{\underline{A}\}\)</span>:</p>
 <p><span class="math display">\[\frac{\frac{1}{j\omega C}}{j\omega L + R + \frac{1}{j\omega C}}\]</span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -1157,12 +1163,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../tut/tut_01_Einfuehrung.html" class="pagination-link" aria-label="Einführung">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Einführung</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Einführung</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../tut/tut_03_Periodische-Signale.html" class="pagination-link" aria-label="Periodische Signale">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1174,7 +1180,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/main/tut/tut_02_Komplexe-Zahlen.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/tut/tut_02_Komplexe-Zahlen.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

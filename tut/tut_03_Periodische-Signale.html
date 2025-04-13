@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>12&nbsp; Periodische Signale – Grundlagen der Elektrotechnik 2</title>
+<title>13&nbsp; Periodische Signale – Grundlagen der Elektrotechnik 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -165,7 +165,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_03_Periodische-Signale.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Periodische Signale</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_03_Periodische-Signale.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Periodische Signale</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -295,6 +295,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Signale</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -309,19 +315,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_01_Einfuehrung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_02_Komplexe-Zahlen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_03_Periodische-Signale.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
   </div>
 </li>
       </ul>
@@ -342,35 +348,35 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#stromarten" id="toc-stromarten" class="nav-link active" data-scroll-target="#stromarten"><span class="header-section-number">12.1</span> Stromarten</a></li>
-  <li><a href="#kennwerte-von-wechselgrößen" id="toc-kennwerte-von-wechselgrößen" class="nav-link" data-scroll-target="#kennwerte-von-wechselgrößen"><span class="header-section-number">12.2</span> Kennwerte von Wechselgrößen</a>
+  <li><a href="#stromarten" id="toc-stromarten" class="nav-link active" data-scroll-target="#stromarten"><span class="header-section-number">13.1</span> Stromarten</a></li>
+  <li><a href="#kennwerte-von-wechselgrößen" id="toc-kennwerte-von-wechselgrößen" class="nav-link" data-scroll-target="#kennwerte-von-wechselgrößen"><span class="header-section-number">13.2</span> Kennwerte von Wechselgrößen</a>
   <ul class="collapse">
-  <li><a href="#periodendauer-und-frequenz" id="toc-periodendauer-und-frequenz" class="nav-link" data-scroll-target="#periodendauer-und-frequenz"><span class="header-section-number">12.2.1</span> Periodendauer und Frequenz</a></li>
-  <li><a href="#phasenlage" id="toc-phasenlage" class="nav-link" data-scroll-target="#phasenlage"><span class="header-section-number">12.2.2</span> Phasenlage</a></li>
-  <li><a href="#mittelwert" id="toc-mittelwert" class="nav-link" data-scroll-target="#mittelwert"><span class="header-section-number">12.2.3</span> Mittelwert</a></li>
-  <li><a href="#gleichrichtwert" id="toc-gleichrichtwert" class="nav-link" data-scroll-target="#gleichrichtwert"><span class="header-section-number">12.2.4</span> Gleichrichtwert</a></li>
-  <li><a href="#effektivwert" id="toc-effektivwert" class="nav-link" data-scroll-target="#effektivwert"><span class="header-section-number">12.2.5</span> Effektivwert</a></li>
-  <li><a href="#effektivwert-mit-gleichstromanteil" id="toc-effektivwert-mit-gleichstromanteil" class="nav-link" data-scroll-target="#effektivwert-mit-gleichstromanteil"><span class="header-section-number">12.2.6</span> Effektivwert mit Gleichstromanteil</a></li>
+  <li><a href="#periodendauer-und-frequenz" id="toc-periodendauer-und-frequenz" class="nav-link" data-scroll-target="#periodendauer-und-frequenz"><span class="header-section-number">13.2.1</span> Periodendauer und Frequenz</a></li>
+  <li><a href="#phasenlage" id="toc-phasenlage" class="nav-link" data-scroll-target="#phasenlage"><span class="header-section-number">13.2.2</span> Phasenlage</a></li>
+  <li><a href="#mittelwert" id="toc-mittelwert" class="nav-link" data-scroll-target="#mittelwert"><span class="header-section-number">13.2.3</span> Mittelwert</a></li>
+  <li><a href="#gleichrichtwert" id="toc-gleichrichtwert" class="nav-link" data-scroll-target="#gleichrichtwert"><span class="header-section-number">13.2.4</span> Gleichrichtwert</a></li>
+  <li><a href="#effektivwert" id="toc-effektivwert" class="nav-link" data-scroll-target="#effektivwert"><span class="header-section-number">13.2.5</span> Effektivwert</a></li>
+  <li><a href="#effektivwert-mit-gleichstromanteil" id="toc-effektivwert-mit-gleichstromanteil" class="nav-link" data-scroll-target="#effektivwert-mit-gleichstromanteil"><span class="header-section-number">13.2.6</span> Effektivwert mit Gleichstromanteil</a></li>
   </ul></li>
-  <li><a href="#übungen" id="toc-übungen" class="nav-link" data-scroll-target="#übungen"><span class="header-section-number">12.3</span> Übungen</a>
+  <li><a href="#übungen" id="toc-übungen" class="nav-link" data-scroll-target="#übungen"><span class="header-section-number">13.3</span> Übungen</a>
   <ul class="collapse">
-  <li><a href="#aufgabe-gleichrichtwert" id="toc-aufgabe-gleichrichtwert" class="nav-link" data-scroll-target="#aufgabe-gleichrichtwert"><span class="header-section-number">12.3.1</span> Aufgabe Gleichrichtwert</a></li>
-  <li><a href="#aufgabe-zeitfunktion-berechnen" id="toc-aufgabe-zeitfunktion-berechnen" class="nav-link" data-scroll-target="#aufgabe-zeitfunktion-berechnen"><span class="header-section-number">12.3.2</span> Aufgabe Zeitfunktion berechnen</a></li>
-  <li><a href="#aufgabe-mittelwerte-aus-zeitverlauf-bestimmen" id="toc-aufgabe-mittelwerte-aus-zeitverlauf-bestimmen" class="nav-link" data-scroll-target="#aufgabe-mittelwerte-aus-zeitverlauf-bestimmen"><span class="header-section-number">12.3.3</span> Aufgabe Mittelwerte aus Zeitverlauf bestimmen</a></li>
-  <li><a href="#aufgabe-3.4" id="toc-aufgabe-3.4" class="nav-link" data-scroll-target="#aufgabe-3.4"><span class="header-section-number">12.3.4</span> Aufgabe 3.4</a></li>
-  <li><a href="#aufgabe-3.5" id="toc-aufgabe-3.5" class="nav-link" data-scroll-target="#aufgabe-3.5"><span class="header-section-number">12.3.5</span> Aufgabe 3.5</a></li>
-  <li><a href="#aufgabe-3.6" id="toc-aufgabe-3.6" class="nav-link" data-scroll-target="#aufgabe-3.6"><span class="header-section-number">12.3.6</span> Aufgabe 3.6</a></li>
-  <li><a href="#aufgabe-3.7" id="toc-aufgabe-3.7" class="nav-link" data-scroll-target="#aufgabe-3.7"><span class="header-section-number">12.3.7</span> Aufgabe 3.7</a></li>
+  <li><a href="#aufgabe-gleichrichtwert" id="toc-aufgabe-gleichrichtwert" class="nav-link" data-scroll-target="#aufgabe-gleichrichtwert"><span class="header-section-number">13.3.1</span> Aufgabe Gleichrichtwert</a></li>
+  <li><a href="#aufgabe-zeitfunktion-berechnen" id="toc-aufgabe-zeitfunktion-berechnen" class="nav-link" data-scroll-target="#aufgabe-zeitfunktion-berechnen"><span class="header-section-number">13.3.2</span> Aufgabe Zeitfunktion berechnen</a></li>
+  <li><a href="#aufgabe-mittelwerte-aus-zeitverlauf-bestimmen" id="toc-aufgabe-mittelwerte-aus-zeitverlauf-bestimmen" class="nav-link" data-scroll-target="#aufgabe-mittelwerte-aus-zeitverlauf-bestimmen"><span class="header-section-number">13.3.3</span> Aufgabe Mittelwerte aus Zeitverlauf bestimmen</a></li>
+  <li><a href="#aufgabe-3.4" id="toc-aufgabe-3.4" class="nav-link" data-scroll-target="#aufgabe-3.4"><span class="header-section-number">13.3.4</span> Aufgabe 3.4</a></li>
+  <li><a href="#aufgabe-3.5" id="toc-aufgabe-3.5" class="nav-link" data-scroll-target="#aufgabe-3.5"><span class="header-section-number">13.3.5</span> Aufgabe 3.5</a></li>
+  <li><a href="#aufgabe-3.6" id="toc-aufgabe-3.6" class="nav-link" data-scroll-target="#aufgabe-3.6"><span class="header-section-number">13.3.6</span> Aufgabe 3.6</a></li>
+  <li><a href="#aufgabe-3.7" id="toc-aufgabe-3.7" class="nav-link" data-scroll-target="#aufgabe-3.7"><span class="header-section-number">13.3.7</span> Aufgabe 3.7</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/main/tut/tut_03_Periodische-Signale.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/tut/tut_03_Periodische-Signale.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_03_Periodische-Signale.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Periodische Signale</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_03_Periodische-Signale.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Periodische Signale</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Periodische Signale</span></h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Periodische Signale</span></h1>
 </div>
 
 
@@ -391,8 +397,8 @@ window.Quarto = {
 <li>Stromarten</li>
 <li>Kennwerte von Wechselgrößen</li>
 </ul>
-<section id="stromarten" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="stromarten"><span class="header-section-number">12.1</span> Stromarten</h2>
+<section id="stromarten" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="stromarten"><span class="header-section-number">13.1</span> Stromarten</h2>
 <p>Neben dem Gleichstrom, der ausführlich in GEL1 behandelt wurde, gibt es weitere Stromarten.</p>
 <p>Der Wechselstrom kennzeichnet sich durch sein beliebig periodisches Verhalten. Die Richtung und Größe variiert dabei mit der Zeit t. Eine Sonderform, die große Bedeutung hat ist der Sinusstrom.</p>
 <p>Weiterhin gibt es den Mischstrom, der aus einer Überlagerung von Gleichstrom und Wechselstrom entsteht und zum Beispiel durch das Gleichrichten verursacht wird.</p>
@@ -509,13 +515,13 @@ window.Quarto = {
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="kennwerte-von-wechselgrößen" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="kennwerte-von-wechselgrößen"><span class="header-section-number">12.2</span> Kennwerte von Wechselgrößen</h2>
+<section id="kennwerte-von-wechselgrößen" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="kennwerte-von-wechselgrößen"><span class="header-section-number">13.2</span> Kennwerte von Wechselgrößen</h2>
 <p>Allgemein kann man eine sich zeitlich ändernde sinusförmige Wechselgröße mit der folgenden Funktion beschreiben.</p>
 <p><span class="math display">\[x = \hat{x} sin(\omega t + \varphi)\]</span></p>
 <p>Dabei wird der Zeitwert x als auch der Scheitelwert <span class="math inline">\(\hat{x}\)</span> mit einem kleinen Formelbuchstaben bezeichnet.</p>
-<section id="periodendauer-und-frequenz" class="level3" data-number="12.2.1">
-<h3 data-number="12.2.1" class="anchored" data-anchor-id="periodendauer-und-frequenz"><span class="header-section-number">12.2.1</span> Periodendauer und Frequenz</h3>
+<section id="periodendauer-und-frequenz" class="level3" data-number="13.2.1">
+<h3 data-number="13.2.1" class="anchored" data-anchor-id="periodendauer-und-frequenz"><span class="header-section-number">13.2.1</span> Periodendauer und Frequenz</h3>
 <p>Da sich eine sinusförmige Wechselgröße wiederholt sich nach Ablauf des Winkels <span class="math inline">\(2\pi = 360^° = \omega T\)</span>. Damit kann man die Periodendauer T über die Kreisfrequenz <span class="math inline">\(\omega\)</span> darstellen.</p>
 <p><span class="math display">\[T = \frac{2 \pi}{\omega}\]</span></p>
 <p>Die Frequenz f gibt die Anzahl der Perioden pro Sekunde an und wird in Hz = 1/s gemessen. Die Frequenz ist der Kehrwert der Periodendauer.</p>
@@ -523,8 +529,8 @@ window.Quarto = {
 <p>Die Kreisfreqeunz ist die Frequenz mit dem Faktor <span class="math inline">\(2\pi\)</span> erweitert. Sie wird in 1/s und <strong>nicht</strong> in Hz gemessen!</p>
 <p><span class="math display">\[\omega = 2 \pi f = \frac{2\pi}{T}\]</span></p>
 </section>
-<section id="phasenlage" class="level3" data-number="12.2.2">
-<h3 data-number="12.2.2" class="anchored" data-anchor-id="phasenlage"><span class="header-section-number">12.2.2</span> Phasenlage</h3>
+<section id="phasenlage" class="level3" data-number="13.2.2">
+<h3 data-number="13.2.2" class="anchored" data-anchor-id="phasenlage"><span class="header-section-number">13.2.2</span> Phasenlage</h3>
 <p>Sinusgrößen können zu verschiedenen Zeitpunkten ihre Scheitelwerte und Nulldurchgänge erreichen. Man sagt, dass diese Größen unterschiedliche Phasenlagen haben; sie sind gegeneinander phasenverschoben.</p>
 <div id="fig-TutChapPhasenlage" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -532,18 +538,18 @@ window.Quarto = {
 <embed src="../images/tut/chap3/Phasenlage.pdf" id="fig-TutChapPhasenlage" class="img-fluid">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-TutChapPhasenlage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.1
+Abbildung&nbsp;13.1
 </figcaption>
 </figure>
 </div>
 <p>Entn. aus <span class="citation" data-cites="Fricke1982">(<a href="../references.html#ref-Fricke1982" role="doc-biblioref">Fricke und Vaske 1982</a>)</span></p>
-<section id="nullphasenwinkel" class="level4" data-number="12.2.2.1">
-<h4 data-number="12.2.2.1" class="anchored" data-anchor-id="nullphasenwinkel"><span class="header-section-number">12.2.2.1</span> Nullphasenwinkel</h4>
+<section id="nullphasenwinkel" class="level4" data-number="13.2.2.1">
+<h4 data-number="13.2.2.1" class="anchored" data-anchor-id="nullphasenwinkel"><span class="header-section-number">13.2.2.1</span> Nullphasenwinkel</h4>
 <p>Allgemein gesprochen beginnt eine Sinusfunktion bei t=0 und geht um den Nullphasenwinkel <span class="math inline">\(\varphi_x\)</span> früher als die normale Sinusfunktion <span class="math inline">\(sin(\omega t)\)</span> durch Null. Das Vorzeichen des Winkel ist sehr wichtig!</p>
 <p>Beim positiven Nulldurchgang der Sinusgröße wird ein Pfeil zum Nullpunkt gezeichnet. Ist der Pfeil in Zählrichtung der Zeitachse ist der Nullphasenwinkel positiv, ist der Pfeil entgegen der Zählrichtung der Zeitachse, dann ist er negativ (siehe Bild unter Phasenlage).</p>
 </section>
-<section id="phasenwinkel" class="level4" data-number="12.2.2.2">
-<h4 data-number="12.2.2.2" class="anchored" data-anchor-id="phasenwinkel"><span class="header-section-number">12.2.2.2</span> Phasenwinkel</h4>
+<section id="phasenwinkel" class="level4" data-number="13.2.2.2">
+<h4 data-number="13.2.2.2" class="anchored" data-anchor-id="phasenwinkel"><span class="header-section-number">13.2.2.2</span> Phasenwinkel</h4>
 <p>Zusätzlich zum Nullphasewinkel gibt es den Phasenwinkel. Dieser gibt die Phasenverschiebung zwischen zwei Sinussignalen an. Es ist festgelegt, dass der Strom in solchen Fällen als Bezugsgröße genommen wird.</p>
 <p><span class="math display">\[\varphi = \varphi_U - \varphi_I\]</span></p>
 <p>Beispiel:</p>
@@ -553,20 +559,20 @@ Abbildung&nbsp;12.1
 <p>Die Spannung eilt dem Strom um <span class="math inline">\(\varphi = 90°\)</span> vor.</p>
 </section>
 </section>
-<section id="mittelwert" class="level3" data-number="12.2.3">
-<h3 data-number="12.2.3" class="anchored" data-anchor-id="mittelwert"><span class="header-section-number">12.2.3</span> Mittelwert</h3>
+<section id="mittelwert" class="level3" data-number="13.2.3">
+<h3 data-number="13.2.3" class="anchored" data-anchor-id="mittelwert"><span class="header-section-number">13.2.3</span> Mittelwert</h3>
 <p>Der Mittelwert ist der zeitlich durchschnittliche Wert einer Funktion.</p>
 <p><span class="math display">\[\overline{x(t)} = \frac{1}{T} \int\limits_{t_0}^{t_o + T} x(t) dt\]</span></p>
 <p>Bei reinem Wechselstrom ist der Mittelwert 0.</p>
 </section>
-<section id="gleichrichtwert" class="level3" data-number="12.2.4">
-<h3 data-number="12.2.4" class="anchored" data-anchor-id="gleichrichtwert"><span class="header-section-number">12.2.4</span> Gleichrichtwert</h3>
+<section id="gleichrichtwert" class="level3" data-number="13.2.4">
+<h3 data-number="13.2.4" class="anchored" data-anchor-id="gleichrichtwert"><span class="header-section-number">13.2.4</span> Gleichrichtwert</h3>
 <p>Der Gleichrichtwert ist der Mittelwert einer gleichgericheten Größe.</p>
 <p><span class="math display">\[\overline{|x(t)|} = \frac{1}{T} \int\limits_{t_0}^{t_0 + T} |x(t)| dt\]</span></p>
 <p>Verhältnis von Gleichricht- zu Scheitelwert (bei Sinusgrößen): <span class="math inline">\(\frac{\overline{|i|}}{\hat{i}} = 0.6366\)</span></p>
 </section>
-<section id="effektivwert" class="level3" data-number="12.2.5">
-<h3 data-number="12.2.5" class="anchored" data-anchor-id="effektivwert"><span class="header-section-number">12.2.5</span> Effektivwert</h3>
+<section id="effektivwert" class="level3" data-number="13.2.5">
+<h3 data-number="13.2.5" class="anchored" data-anchor-id="effektivwert"><span class="header-section-number">13.2.5</span> Effektivwert</h3>
 <p>Der Effektivwert einer periodischen Spannung (oder eines periodischen Stroms) entspricht dem Wert einer Gleichspannung (eines Gleichstroms), der in einer ohmschen Last dieselbe Leistung umsetzt.</p>
 <p><span class="math display">\[X = X_{eff} = \sqrt{\frac{1}{T} \int\limits_{t_0}^{t_0 + T} x^2(t) dt}\]</span></p>
 <p><strong>Scheitelfaktor</strong></p>
@@ -582,15 +588,15 @@ Abbildung&nbsp;12.1
 <p>Der Formfaktor für Dreiecksignale beträgt <span class="math inline">\(F = \frac{1.11}{2}\)</span>.</p>
 <p>Der Formfaktor für Rechtecksignale beträgt <span class="math inline">\(F = 1.11\)</span>.</p>
 </section>
-<section id="effektivwert-mit-gleichstromanteil" class="level3" data-number="12.2.6">
-<h3 data-number="12.2.6" class="anchored" data-anchor-id="effektivwert-mit-gleichstromanteil"><span class="header-section-number">12.2.6</span> Effektivwert mit Gleichstromanteil</h3>
+<section id="effektivwert-mit-gleichstromanteil" class="level3" data-number="13.2.6">
+<h3 data-number="13.2.6" class="anchored" data-anchor-id="effektivwert-mit-gleichstromanteil"><span class="header-section-number">13.2.6</span> Effektivwert mit Gleichstromanteil</h3>
 <div id="fig-TutChapMischspannung" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TutChapMischspannung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <embed src="../images/tut/chap3/Mischspannung.pdf" id="fig-TutChapMischspannung" class="img-fluid">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-TutChapMischspannung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.2
+Abbildung&nbsp;13.2
 </figcaption>
 </figure>
 </div>
@@ -598,10 +604,10 @@ Abbildung&nbsp;12.2
 <p><span class="math display">\[X_{eff} = \sqrt{X_o^2 + X_{eff\sim}^2}\]</span></p>
 </section>
 </section>
-<section id="übungen" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="übungen"><span class="header-section-number">12.3</span> Übungen</h2>
-<section id="aufgabe-gleichrichtwert" class="level3" data-number="12.3.1">
-<h3 data-number="12.3.1" class="anchored" data-anchor-id="aufgabe-gleichrichtwert"><span class="header-section-number">12.3.1</span> Aufgabe Gleichrichtwert</h3>
+<section id="übungen" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="übungen"><span class="header-section-number">13.3</span> Übungen</h2>
+<section id="aufgabe-gleichrichtwert" class="level3" data-number="13.3.1">
+<h3 data-number="13.3.1" class="anchored" data-anchor-id="aufgabe-gleichrichtwert"><span class="header-section-number">13.3.1</span> Aufgabe Gleichrichtwert</h3>
 <p>Ein Sinusstrom mit dem Scheitelwert <span class="math inline">\(\hat{i} = 10 A\)</span> fließt durch die Gleichrichterschaltung-Brückenschaltung von Bild 3.4.</p>
 <div id="fig-TutChapAufg3.1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -609,7 +615,7 @@ Abbildung&nbsp;12.2
 <embed src="../images/tut/chap3/Brueckengleichrichter.pdf" id="fig-TutChapAufg3.1" class="img-fluid">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-TutChapAufg3.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.3
+Abbildung&nbsp;13.3
 </figcaption>
 </figure>
 </div>
@@ -634,8 +640,8 @@ Lösung
 </div>
 </div>
 </section>
-<section id="aufgabe-zeitfunktion-berechnen" class="level3" data-number="12.3.2">
-<h3 data-number="12.3.2" class="anchored" data-anchor-id="aufgabe-zeitfunktion-berechnen"><span class="header-section-number">12.3.2</span> Aufgabe Zeitfunktion berechnen</h3>
+<section id="aufgabe-zeitfunktion-berechnen" class="level3" data-number="13.3.2">
+<h3 data-number="13.3.2" class="anchored" data-anchor-id="aufgabe-zeitfunktion-berechnen"><span class="header-section-number">13.3.2</span> Aufgabe Zeitfunktion berechnen</h3>
 <p>Die übliche Netzspannung 1982 betrug <span class="math inline">\(U = 220 V\)</span> bei der Netzfrequenz <span class="math inline">\(f = 50 Hz\)</span>. Es sind der Gleichrichtwert <span class="math inline">\(\overline{|u|}\)</span> und die Zeitfunktion u dieser Spannung zu bestimmen.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -662,15 +668,15 @@ Lösung
 </div>
 </div>
 </section>
-<section id="aufgabe-mittelwerte-aus-zeitverlauf-bestimmen" class="level3" data-number="12.3.3">
-<h3 data-number="12.3.3" class="anchored" data-anchor-id="aufgabe-mittelwerte-aus-zeitverlauf-bestimmen"><span class="header-section-number">12.3.3</span> Aufgabe Mittelwerte aus Zeitverlauf bestimmen</h3>
+<section id="aufgabe-mittelwerte-aus-zeitverlauf-bestimmen" class="level3" data-number="13.3.3">
+<h3 data-number="13.3.3" class="anchored" data-anchor-id="aufgabe-mittelwerte-aus-zeitverlauf-bestimmen"><span class="header-section-number">13.3.3</span> Aufgabe Mittelwerte aus Zeitverlauf bestimmen</h3>
 <div id="fig-TutChap3Aufg3.3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TutChap3Aufg3.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <embed src="../images/tut/chap3/Aufgabe2.3.pdf" id="fig-TutChap3Aufg3.3" class="img-fluid">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-TutChap3Aufg3.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.4
+Abbildung&nbsp;13.4
 </figcaption>
 </figure>
 </div>
@@ -744,8 +750,8 @@ U_{eff} = \sqrt{\frac{1}{T} \int\limits_{0}^{T/2} \left(2\hat{u} \frac{t}{T} \ri
 </div>
 </div>
 </section>
-<section id="aufgabe-3.4" class="level3" data-number="12.3.4">
-<h3 data-number="12.3.4" class="anchored" data-anchor-id="aufgabe-3.4"><span class="header-section-number">12.3.4</span> Aufgabe 3.4</h3>
+<section id="aufgabe-3.4" class="level3" data-number="13.3.4">
+<h3 data-number="13.3.4" class="anchored" data-anchor-id="aufgabe-3.4"><span class="header-section-number">13.3.4</span> Aufgabe 3.4</h3>
 <p>Ein Wechselstrom besteht nach der Abbildung aus “angeschnittenen” Sinushalbschwingungen. In den Bereichen <span class="math inline">\(0 &lt; \omega t
 &lt; \alpha\)</span> und <span class="math inline">\(\pi &lt; \omega t &lt; (\pi + \alpha)\)</span> fließt kein Strom (i = 0), wobei <span class="math inline">\(\alpha = \pi/4 = 45°\)</span> sei. In der übrigen Zeit (innerhalb des Bereiches <span class="math inline">\(0 &lt; \omega t &lt; 2\pi)\)</span> wird der Stromverlauf durch die Gleichung <span class="math inline">\(i = \hat{i}
 sin(\omega t)\)</span> wiedergegeben. Hierbei betrage der Scheitelwert des Stromes <span class="math inline">\(\hat{i} = 10 A\)</span>.</p>
@@ -796,8 +802,8 @@ Lösung
 </div>
 </div>
 </section>
-<section id="aufgabe-3.5" class="level3" data-number="12.3.5">
-<h3 data-number="12.3.5" class="anchored" data-anchor-id="aufgabe-3.5"><span class="header-section-number">12.3.5</span> Aufgabe 3.5</h3>
+<section id="aufgabe-3.5" class="level3" data-number="13.3.5">
+<h3 data-number="13.3.5" class="anchored" data-anchor-id="aufgabe-3.5"><span class="header-section-number">13.3.5</span> Aufgabe 3.5</h3>
 <p>An einem ohmschen Widerstand <span class="math inline">\(R = 30 \Omega\)</span> liegt eine mittelwertfreie Dreieckspannung mit der Amplitude <span class="math inline">\(\hat{u} = 9
 V\)</span> und der Frequenz <span class="math inline">\(f = 100 Hz\)</span> an.</p>
 <p>Welche Wirkleistung P wird im zeitlichen Mittel im Widerstand R umgesetzt?</p>
@@ -820,8 +826,8 @@ Lösung
 </div>
 </div>
 </section>
-<section id="aufgabe-3.6" class="level3" data-number="12.3.6">
-<h3 data-number="12.3.6" class="anchored" data-anchor-id="aufgabe-3.6"><span class="header-section-number">12.3.6</span> Aufgabe 3.6</h3>
+<section id="aufgabe-3.6" class="level3" data-number="13.3.6">
+<h3 data-number="13.3.6" class="anchored" data-anchor-id="aufgabe-3.6"><span class="header-section-number">13.3.6</span> Aufgabe 3.6</h3>
 <p>An einem ohmschen Widerstand R liegt eine Zägezahnspannung, die von einer Gleichspannung überlagert ist, an:</p>
 <div id="fig-TutChap3Aufg3.6" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -829,7 +835,7 @@ Lösung
 <embed src="../images/tut/chap3/Aufgabe2.6.pdf" id="fig-TutChap3Aufg3.6" class="img-fluid">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-TutChap3Aufg3.6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.5
+Abbildung&nbsp;13.5
 </figcaption>
 </figure>
 </div>
@@ -867,8 +873,8 @@ Lösung
 </div>
 </div>
 </section>
-<section id="aufgabe-3.7" class="level3" data-number="12.3.7">
-<h3 data-number="12.3.7" class="anchored" data-anchor-id="aufgabe-3.7"><span class="header-section-number">12.3.7</span> Aufgabe 3.7</h3>
+<section id="aufgabe-3.7" class="level3" data-number="13.3.7">
+<h3 data-number="13.3.7" class="anchored" data-anchor-id="aufgabe-3.7"><span class="header-section-number">13.3.7</span> Aufgabe 3.7</h3>
 <p>Durch den ohmschen Widerstand R fließt ein Sinusstrom, der mit einem Gleichstrom überlagert ist:</p>
 <div id="fig-TutChap3Aufg3.7" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -876,7 +882,7 @@ Lösung
 <embed src="../images/tut/chap3/Aufgabe2.7.pdf" id="fig-TutChap3Aufg3.7" class="img-fluid">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-TutChap3Aufg3.7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.6
+Abbildung&nbsp;13.6
 </figcaption>
 </figure>
 </div>
@@ -1350,7 +1356,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../tut/tut_02_Komplexe-Zahlen.html" class="pagination-link" aria-label="Komplexe Zahlen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -1367,7 +1373,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/main/tut/tut_03_Periodische-Signale.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/tut/tut_03_Periodische-Signale.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -241,6 +261,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Signale</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -255,19 +281,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_01_Einfuehrung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_02_Komplexe-Zahlen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_03_Periodische-Signale.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
   </div>
 </li>
       </ul>
@@ -295,7 +321,7 @@ window.Quarto = {
   <li><a href="#mittelwerte-periodischer-zeitfunktionen" id="toc-mittelwerte-periodischer-zeitfunktionen" class="nav-link" data-scroll-target="#mittelwerte-periodischer-zeitfunktionen"><span class="header-section-number">2.5</span> Mittelwerte periodischer Zeitfunktionen</a></li>
   <li><a href="#ui-verhalten" id="toc-ui-verhalten" class="nav-link" data-scroll-target="#ui-verhalten"><span class="header-section-number">2.6</span> <span class="math inline">\(u/i\)</span>-Verhalten</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/gel2/edit/main/lec/lec_02.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/lec/lec_02.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -329,13 +355,14 @@ window.Quarto = {
 <ul>
 <li><p>Gleichvorgänge</p></li>
 <li><p>Nichtperiodische Vorgänge</p></li>
-<li><p>Periodische Vorgänge, Spezialfall sind harmonische (sinus-, cosinusförmige) Vorgänge mit der Periodendauer <span class="math inline">\(T\)</span></p></li>
+<li><p>Periodische Vorgänge, Spezialfall sind harmonische (sinus-, kosinusförmige) Vorgänge mit der Periodendauer <span class="math inline">\(T\)</span></p></li>
 <li><p>Gleichgrößen mit <span class="math inline">\(f(t)\)</span> = const. werden mit großen lateinischen Buchstaben gekennzeichnet, Gleichspannung <span class="math inline">\(U\)</span> und Gleichstrom <span class="math inline">\(I\)</span></p></li>
 <li><p>Zeitveränderliche Größen, hierbei ändert die Erregergröße <span class="math inline">\(f(t)\)</span> ihre Amplitude und/oder ihre Richtung zeitlich. Der Wert von <span class="math inline">\(f(t)\)</span> zum momentanen Zeitpunkt heißt Augenblicks- oder Momentanwert <span class="math inline">\(f(t)\)</span> der physikalischen Größe. Momentanwerte erhalten kleine lateinische Buchstaben, Spannung <span class="math inline">\(u\)</span> und Strom <span class="math inline">\(i\)</span>.</p></li>
 </ul>
 </section>
 <section id="sinusförmige-erregung-periodische-vorgänge" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="sinusförmige-erregung-periodische-vorgänge"><span class="header-section-number">2.3</span> Sinusförmige Erregung, periodische Vorgänge</h2>
+<p><span class="citation" data-cites="wikipedia2025">(<a href="../references.html#ref-wikipedia2025" role="doc-biblioref">Wikipedia 2025</a>)</span> <span class="citation" data-cites="wikipedia2024b">(<a href="../references.html#ref-wikipedia2024b" role="doc-biblioref">Wikipedia 2024</a>)</span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -483,6 +510,14 @@ i(t) &amp;= C \cdot \frac{du_C(t)}{dt} \\
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-wikipedia2024b" class="csl-entry" role="listitem">
+Wikipedia. 2024. <span>„Wechselstromgenerator — Wikipedia<span>,</span> die freie Enzyklopädie“</span>. <a href="https://de.wikipedia.org/w/index.php?title=Wechselstromgenerator&amp;oldid=244474759">https://de.wikipedia.org/w/index.php?title=Wechselstromgenerator&amp;oldid=244474759</a>.
+</div>
+<div id="ref-wikipedia2025" class="csl-entry" role="listitem">
+———. 2025. <span>„Wechselstrom — Wikipedia<span>,</span> die freie Enzyklopädie“</span>. <a href="https://de.wikipedia.org/w/index.php?title=Wechselstrom&amp;oldid=253327355">https://de.wikipedia.org/w/index.php?title=Wechselstrom&amp;oldid=253327355</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -923,7 +958,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/gel2/edit/main/lec/lec_02.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/lec/lec_02.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
