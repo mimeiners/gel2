@@ -14,17 +14,19 @@
 
 * Nichtperiodische Vorgänge
 
-* Periodische Vorgänge, Spezialfall sind harmonische (sinus-, cosinusförmige) Vorgänge mit der Periodendauer $T$
+* Periodische Vorgänge, Spezialfall sind harmonische (sinus-, kosinusförmige) Vorgänge mit der Periodendauer $T$
 
 * Gleichgrößen mit $f(t)$ = const. werden mit großen lateinischen Buchstaben gekennzeichnet, Gleichspannung $U$ und
   Gleichstrom $I$ 
   
 * Zeitveränderliche Größen, hierbei ändert die Erregergröße $f(t)$ ihre Amplitude und/oder ihre Richtung zeitlich. Der
-  Wert von $f(t)$ zum momentanen Zeitpunkt heißt Augenblicks- oder Momentanwert $f(t)$ der physikalischen
-  Größe. Momentanwerte erhalten kleine lateinische Buchstaben, Spannung $u$ und Strom $i$. 
+  Wert von $f(t)$ zum momentanen Zeitpunkt heißt Augenblicks- oder Momentanwert $f(t)$ der physikalischen Größe. 
+  Momentanwerte erhalten kleine lateinische Buchstaben, Spannung $u$ und Strom $i$. 
 
 
 ## Sinusförmige Erregung, periodische Vorgänge
+[@wikipedia2025]
+[@wikipedia2024b]
 
 ::: {.callout-note}
 

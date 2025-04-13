@@ -35,7 +35,7 @@ book:
   favicon: images/hsb-logo.png
   site-url: https://mimeiners.github.io/gel2/
   repo-url: https://github.com/mimeiners/gel2/
-  repo-branch: main
+  repo-branch: quarto
   repo-actions: [edit,issue]
   downloads: [pdf,epub]
 
@@ -54,7 +54,7 @@ book:
     - part: Hörsaalübungen 
       chapters:
         - hw/hw_01.ipynb
-#        - hw/hw_02.ipynb
+        - hw/hw_02.ipynb
 #        - hw/hw_03.ipynb
 #        - hw/hw_04.ipynb
 #        - hw/hw_05.ipynb
@@ -96,7 +96,7 @@ format:
     biblio-style: ieee
     highlight-style: github
     mainfont: "Calibri"
-    keep-tex: true
+    # keep-tex: true
     output-file: gel2
   epub:
     theme: flatly
