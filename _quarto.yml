@@ -64,7 +64,7 @@ book:
       chapters:
         - tut/tut_01_Einfuehrung.qmd
         - tut/tut_02_Komplexe-Zahlen.ipynb
-        - tut/tut_03_Periodische-Signale.ipynb
+        - tut/tut_03_Periodische-Signale.qmd
 #        - tut/tut_04_Komplexe-Groessen.ipynb
 #        - tut/tut_05_Grundzweipole1.ipynb
 #        - tut/tut_06_Grundzweipole2.ipynb
@@ -104,3 +104,4 @@ format:
   
 execute:
   freeze: auto
+  #enabled: true
