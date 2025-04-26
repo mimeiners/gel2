@@ -9,31 +9,24 @@ Ich habe Elektrotechnik mit der Vertiefungsrichtung Informationstechnik studiert
 Masterprogramms MScEE an der HSB. Ich habe bereits die Tutorien _Grundlagen der Elektrotechnik 1 und 2_ durchgeführt.
 
 Das tut ist als Unterstützung zur Vorlesung gedacht und legt den Fokus auf eine Wiederholung der Unterrichtsinhalte
-und Übungsaufgaben. Es besteht auch die Möglichkeit Fragen zu den Vorlesungsinhalten zu stellen und Wünsche zu äußern,
-zum Beispiel auf welche Themen besonders Wert gelegt oder speziell wiederholt werden sollen.
-Zur besseren Vorbereitung meinerseits, bitte ich darum, dass Themenwünsche und wenn möglich auch Fragen, mir im Vorfeld
-per Email geschickt werden, damit ich genug Zeit habe, diese zu bearbeiten.
+und Übungsaufgaben. Es besteht auch die Möglichkeit Fragen zu den Vorlesungsinhalten zu stellen.
 
 ## Termine
 
-**t.b.d.**
-
 Das GEL2-tut findet montags im ersten Block (08:00 - 09:30 Uhr) statt.
 
-Eine grobe Zeit- und Themenplanung ist in der folgenden Tabelle zu sehen. Dabei kann es durchaus sein, dass sich diese
-Planung noch etwas ändert.
+Eine Zeit- und Themenplanung ist in der folgenden Tabelle zu sehen.
 
 | Datum    | Thema                                          |
 |:--------:|:-----------------------------------------------|
-| 15.04.24 | Einführung & Komplexe Zahlen                   |
-| 22.04.24 | Periodische Signale                            |
-| 29.04.24 | Komplexe Größen der Sinusstromtechnik          |
-| 06.05.24 | Verhalten der Grundzweipole 1                  |
-| 13.05.24 | Verhalten der Grundzweipole 2                  |
-| 20.05.24 | **Pfingstmontag**                              |
-| 27.05.24 | KWR                                            |
-| 03.06.24 | Filterschaltungen, Bodediagramm und Ortskurven |
-| 10.06.24 | Schwingkreise                                  |
-| 17.05.24 | LTSpice und Python                             |
-| 24.06.24 | Transformatoren                                |
-| 01.07.24 | Klausurvorbereitung                            |
+| 28.04.25 | Einführung & Periodische Signale               |
+| 05.05.25 | Komplexe Größen der Sinusstromtechnik          |
+| 12.05.25 | Verhalten der Grundzweipole 1                  |
+| 19.05.25 | Verhalten der Grundzweipole 2                  |
+| 26.05.25 | KWR                                            |
+| 02.06.25 | Filterschaltungen, Bodediagramm und Ortskurven |
+| 09.06.25 | **Pfingstmontag**                              |
+| 16.06.25 | Schwingkreise                                  |
+| 23.06.25 | LTSpice und Python                             |
+| 30.06.25 | Transformatoren                                |
+| 07.07.25 | Klausurvorbereitung                            |
