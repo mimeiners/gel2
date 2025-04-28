@@ -1,0 +1,329 @@
+---
+jupyter:
+  jupytext:
+    cell_metadata_filter: -all
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.17.1
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+
+# Schwingkreise 
+
+::: {.callout-note} 
+
+## Schwingungen (phys.)
+
+"Schwingungen begleiten uns im Alltag wörtlich auf Schritt und Tritt: In jeder Uhr findet eine Schwingung statt, die zur
+Zeitmessung verwendet wird. Das fängt bei dem Pendel der altmodischen Pendeluhr an und endet nicht bei der modernen
+Quarzuhr, in der ein kleines Quarzplättchen mechanische Schwingungen vollführt. Der Prozessor Ihres Smartphones erhält
+seinen elektrischen Takt ebenfalls von einem solchen Schwingquarz. Wenn wir sprechen, schwingen die Stimmlippen in
+unserem Kehlkopf und verursachen so den primären Schall, der unsere Stimme formt. Mechanische Konstruktionen und
+Bauwerke können ebenfalls in Schwingungen geraten, wenn eine äußere Kraft auf sie einwirkt, was in vielen Fällen
+unerwünscht ist. Auch in elektronischen Systemen finden Schwingungen statt. Hier ändert sich nicht eine mechanische
+Auslenkung als Funktion der Zeit, sondern eine elektrische Spannung oder ein elektrischer Strom.
+
+Sehr viele Phänomene, die bei schwingenden Systemen auftreten, kann man exemplarisch an einfachen mechanischen
+Systemen studieren. In den einführenden Physikbüchern wird sich dabei meist auf lineare Systeme beschränkt, die zu
+harmonischen Schwingungen führen. Eine Schwingung bezeichnet man als harmonisch, wenn sie sich durch eine reine Sinus-
+oder Kosinusfunktion beschreiben lässt. Die Auslenkung $x(t)$ bei einer harmonischen Schwingung lässt sich durch
+
+$$
+x(t) = \hat{x} \cos(\omega t + \varphi)
+$$
+
+beschreiben. Dabei bezeichnet $\hat{x}$ die Amplitude der Schwingung, $\varphi$ ist der Phasenwinkel und $\omega$
+die Kreisfrequenz der Schwingung, die mit der Frequenz $f$ über den Faktor $2 \pi$ verknüpft ist.
+
+Für die Beschränkung auf harmonische Schwingungen gibt es zwei Gründe: Zum einen lassen sich solche linearen Systeme gut
+analytisch behandeln, und zum anderen lassen sich viele nichtlineare Systeme für hinreichend kleine Auslenkungen gut
+durch entsprechende lineare Systeme annähern. Für die Behandlung von schwingungsfähigen Systemen mit dem Computer bieten
+sich zwei Aspekte besonders an: Wir können die Effekte der linearen Schwingungsphysik visualisieren und zum Teil auch
+hörbar machen, um damit ein intuitiveres Verständnis dieser Phänomene zu gewinnen. Darüber hinaus bieten uns die in
+diesem Buch bereits besprochenen Verfahren die Möglichkeit, auch nichtlineare Schwingungen zu untersuchen." 
+Entn. [@natt2020]
+:::
+
+
+
+
+::: {.callout-note} 
+
+## Schwingkreise (elek.)
+
+"Eine physikalische Anordnung ist schwingungsfähig, wenn sie mindestens zwei Energiespeicher unterschiedlichen
+physikalischen Charakters enthält, die miteinander Energie austauschen kön- nen. Eine solche Anordnung wird als
+Schwingkreis bezeichnet.
+
+In elektrischen Schaltungen sind diese unterschiedlichen Typen von Energiespeichern Induktivitäten, die magnetische
+Feldenergie speichern und Kapazitäten zur Speicherung elektrischer Feldenergie.
+
+Die in einer Kapazität gespeicherte Energie wird durch den Wert C der Kapazität und die Spannung u an der Kapazität
+bestimmt, die in einer Induktivität gespeicherte Energie durch den Wert L der Induktivität und den Strom i durch die
+Induktivität.
+
+Zu unterscheiden ist zwischen freien und erzwungenen Schwingungen. Bei freien Schwingungen [...] wird einer
+physikalischen Anordnung einmalig Energie zugeführt und sie sich dann selbst überlassen. Durch unvermeidliche
+Verlustmechanismen, die dazu führen, dass im Schwingkreis pendelnde Energie in Wärme umgesetzt wird, klingt die
+Schwingung zeitlich ab. Bei erzwungenen Schwingungen [...] wird einer zunächst energielosen Anordnung
+periodisch von außen Energie zugeführt. Ein Teil dieser Energie wird zur Kompensation der mit der Schwingungsintensität 
+ansteigenden Verluste benötigt, der Rest pendelt zwischen den Energiespeichern. Ändert sich die Art der periodischen
+Energiezufuhr nicht, so stellt sich nach einem Einschwingvorgang in der Anordnung eine stationäre Schwingung
+(eingeschwungener Zustand) ein."
+Entn. [@harriehausen2020]
+:::
+
+
+## Zusammenfassung der physikalische Grundlagen
+
+* periodische Zustandsänderung in einem physikalischen System
+
+* periodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder
+  und Masse, Induktivität und Kapazität 
+  
+* maßgebende Zustandsgröße $x(t)$, z.B. Auslenkung, Spannung oder Ladung, folgen einer gewöhnlichen
+  Differenzialgleichung (DGL) $\ddot{x} + \omega_0 x = 0$
+
+* harmonische Schwingung, $x(t+T_0) = x(t)$, wobei $T_0$ Periode, $\omega_0=2 \pi f_0 = 2\pi \frac{1}{T_0}$
+  Eigenfrequenz und $f_0$ Resonanzfrequenz 
+  
+* DGL gehorcht dem Energieerhaltungssatz
+
+\begin{align}
+W_{ges}(x) &= W_{pot}(x) + W_{kin}(x) = const. \\
+\frac{d W_{ges}}{dt} &= \frac{dW_{pot}}{dx} \frac{dx}{dt} + \frac{d W_{kin}}{dx} \frac{d x}{dt} = 0 \\
+x(t) &= x_{max} \cos(\omega_0 t + \varphi_0)
+\end{align}
+
+* Zusammenschaltung von Induktivität $L$ und Kapazität $C$ heißt (idealer) Schwing- oder Resonanzkreis
+
+\begin{align}
+W_{pot} &:= \mbox{Kondensator} \\
+W_{kin} &:= \mbox{Induktivität}
+\end{align}
+
+* freie und erzwungene Schwingung
+
+* ungedämpfte und gedämpfte Schwingung
+
+
+## RLC-Reihenschwingkreis (aktiver Zweipol)
+
+![RLC-Reihenschwingkreis](../images/lec/lec6rlc.pdf){#fig-lec6rlc width=400}
+
+
+::: {.callout-note} 
+
+### Maschengleichung (Zeitbereich)
+
+\begin{align}
+u_1(0) &= L \frac{di}{dt} + i\, R + \frac{1}{C} \int i dt  \\
+0 &= \frac{di}{dt^2} + \frac{R}{L} \frac{di}{dt} + \frac{1}{LC} i
+\end{align}
+:::
+
+
+::: {.callout-note} 
+
+### Lösung der Differentialgleichung
+
+$$
+i(t) = \underbrace{I_0 e^{-d \omega_0 t}}_{Dämpfung} \underbrace{\sin\left(\sqrt{1 -d^2} \omega_0 t\right)}_{harm. Schwingung}
+$$
+:::
+
+
+:::  {.callout-note} 
+
+### Spannungsübertragungsfaktor
+
+Entn. [@reisch2007]
+
+\begin{align}
+\underline{H}_u(j \omega) = \frac{\underline{U}_2}{\underline{U}_1} &= \frac{1}{1 + j \omega R C + \omega^2 LC} \\
+&= \frac{1}{1 + j \frac{\omega}{\omega_0 Q} + \left(\frac{\omega}{\omega_0}\right)^2}
+\end{align}
+
+* Eigenfrequenz / Resonanzfrequenz $\omega_0 = \frac{1}{\sqrt{L C}}$
+
+* Abklingkonstante $\delta = \frac{R}{\omega_0 L}$
+
+* Dämpfung / Verlustfaktor $d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}$
+
+* Güte $Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}$
+  - $\vert Q(\omega_0) \vert$ ist der Betrag der Blindleistung 
+  - $P(\omega_0)$ ist die Wirkleistung
+
+* Analyse mit LTspice und Python [GitHub](https://github.com/DongHoonPark/ltspice_pytool)
+  Installation mit Anaconda-Shell oder Windows-Shell (CMD/PowerShell)
+
+```shell
+$ pip install -U ltspice
+```
+:::
+
+
+```python
+import ltspice
+import numpy as np
+import matplotlib.pyplot as plt
+
+# %% Laden der RAW LTspice Daten in den Python-Workspace
+file = "../files/spice/kap137_reisch.raw"
+data = ltspice.Ltspice(file)
+data.parse()
+
+# %% Zuweisen der Simulationdaten an lokale Variablen
+Hu = data.get_data("v(vo)")
+freq = data.get_data("frequency")
+
+# %% Daten werden als Numpy-Array geladen, Typ complex
+Hu_dB = 20*np.log10(np.abs(Hu))
+Hu_arg = 180 / np.pi * np.angle(Hu)
+f = freq.real
+
+# %% Erzeugen des Bode-Diagramms (Plot)
+fig1 = plt.figure(1)
+plt.subplot(2, 1, 1)
+plt.semilogx(f, Hu_dB)
+plt.grid()
+plt.ylabel(r'$H_u(f)$/dB')
+plt.subplot(2, 1, 2)
+plt.grid()
+plt.semilogx(f, Hu_arg)
+plt.ylabel(r'arg($H_u(f)$)/deg')
+plt.xlabel('Frequenz f/Hz')
+plt.show()
+```
+
+
+## Grundeigenschaften von Reihen- und Parallelschwingkreis (passiver Zweipol)
+
+::: {.callout-note} 
+
+### Resonanzfrequenz
+
+* Thomsonsche Formel $\omega_0 = \frac{1}{L_r C_r} = \frac{1}{L_p C_p}$
+
+* bei Resonanz erreichen Impedanz und Admittanz ein Minimum
+
+\begin{align}
+\left . \underline{Z} \right\lvert_{\omega_0} &\Rightarrow \lvert\underline{Z}\lvert = R_r \\
+\left . \underline{Y} \right\lvert_{\omega_0} &\Rightarrow \lvert\underline{Y}\lvert = G_p
+\end{align}
+
+|                     | $X(\omega)$ | $B(\omega)$ |
+|---------------------|-------------|-------------|
+| $\omega < \omega_0$ | *kapazitiv* | *induktiv*  |
+| $\omega > \omega_0$ | *induktiv*  | *kapazitiv* |
+:::
+
+
+::: {.callout-note} 
+
+### Reihenkreis (Impedanz)
+
+\begin{align}
+\underline{Z} &= R_r + j\left(\omega L_r - \frac{1}{\omega C_r}\right) \\
+&= R_r + j X(\omega) \\
+\lvert\underline{Z}\lvert &= \sqrt{R_r^2 + X^2(\omega)} \\
+\arg{\underline{Z}} &= \arctan \frac{X(\omega)}{R_r}
+Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}
+\end{align}
+:::
+
+
+::: {.callout-note} 
+
+### Parallelkreis (Admittanz)
+
+\begin{align}
+\underline{Y} &= G_p + j\left(\omega C_p- \frac{1}{\omega L_p}\right) \\
+&= G_r + j B(\omega) \\
+\lvert\underline{Y}\lvert &= \sqrt{G_p^2 + B^2(\omega)} \\
+\arg{\underline{Y}} &= \arctan \frac{B(\omega)}{G_p}
+Q &= \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}
+\end{align}
+:::
+
+
+## Vereinheitlichte Kennzeichnung
+
+::: {.callout-note} 
+
+### Verstimmung $v$, relative Frequenzabweichung
+
+\begin{align}
+v &= \frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}
+\end{align}
+:::
+
+
+::: {.callout-note}
+
+### Normierte Darstellung
+
+\begin{align}
+\underline{Z} &= R \left( 1 + j \frac{1}{R} \left( \frac{\omega \omega_0 \omega L}{\omega_0}
+- \frac{\omega_0}{\omega_0 \omega C}\right)\right) \\
+&= R (1 + Q v) \\
+\underline{Y} &= G (1 + j Q v)
+\end{align}
+:::
+
+
+::: {.callout-note} 
+
+### Betrag und Phase
+
+\begin{align}
+\frac{\lvert\underline{Z}\lvert}{R} = \frac{\lvert \underline{Y}\lvert}{G} &= \sqrt{1 + \left( Q v \right)} \\
+\varphi_Z = \varphi_Y &= \arctan\left( Q v \right)
+\end{align}
+:::
+
+
+::: {.callout-note} 
+
+### 45$^{\circ}$-, $\frac{\pi}{4}$- oder 3dB-Frequenz 
+
+Der Phasenwinkel $\varphi$ ist gleich 45$^{\circ}$ und Betrag der Blindkomponente ist gleich der Wirkkomponente.
+
+\begin{align}
+\lvert X(\omega_{\pm 45}) \lvert &= \pm R &  \lvert B(\omega_{\pm 45}) \lvert &= \pm G \\
+\omega_{\pm 45} L - \frac{1}{\omega_{\pm 45} C} &= \pm R &  \omega_{\pm 45} C - \frac{1}{\omega_{\pm 45} L} &= \pm G
+\end{align}
+
+\begin{align}
+\omega_{\pm 45} &= \omega_0 \left( \sqrt{1 + \left(\frac{1}{2Q}\right)^2} \pm \frac{1}{2Q}\right) \approx \omega_0 \left( 1 \pm \frac{1}{2Q}\right)
+\end{align}
+
+\begin{align}
+\lvert \underline{Z(\omega_{\pm 45})} \lvert &= \sqrt{2} R &  \lvert \underline{Y(\omega_{\pm 45})} \lvert &= \sqrt{2} G
+\end{align}
+$$
+:::
+
+
+::: {.callout-note}
+
+### Bandbreite BW (bandwidth)
+
+\begin{align}
+BW &= \omega_{45} - \omega_{-45} = \frac{\omega_0}{Q} \\
+&= f_{45} - f_{-45} = \frac{f_0}{Q} \\
+\end{align}
+:::
+
+
+## Gegenüberstellung der Eigenschaften der elementaren Schwingkreise
+
+![Eingenschaften von Schwingkreisen](../images/lec/lec6elemSchwing.pdf){#fig-lec6elemSchwing}
+
+Entn. aus [@harriehausen2020]

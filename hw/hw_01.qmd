@@ -1,0 +1,339 @@
+---
+jupyter:
+  jupytext:
+    cell_metadata_filter: -all
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.17.1
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# Periodische Signale
+
+
+## Darstellung von Signalen
+
+Stellen Sie die Signale des angegebenen Netzwerks mit Python (und/oder von Ihnen gewählten alternativen Softwarepaketen
+des wissenschaflichten Rechnens, z.B. Matlab oder Gnu Octave) dar.
+
+Die Komponenten Werte sind: $\omega$ = $2 \pi$ 1 kHz, $\hat{U}_0$ = 10 V, $R$ = 30 $\Omega$, $L$ = 3 mH,
+$\hat{I}_0$ = 0.282 A, $\varphi_I$ = -32.1 Grad.
+
+![Wechselstromschaltung](../images/hw/hw1p1.pdf){#fig-hw1p1 width=200}
+
+
+### Lösung
+
+```{python}
+#| label: fig-signale
+#| fig-cap: "Strom- und Spannungssignale"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+f = 10**3  # Grundfrequenz 1 kHz wird auch als 10e3 geschrieben
+w = 2 * np.pi * f  # Kreisfrequenz
+
+U0p = 10  # Spannung in Volt
+R = 30  # Widerstand in Ohm
+L = 3e-3  # Induktivität in Henry
+I0p = 0.282  # Strom in  Ampere
+phiI = -32.1 * np.pi / 180  # Winkel in rad
+
+t = np.linspace(0, 5e-3, 1000)  # Zeitachse anlegen
+u0 = U0p * np.sin(w * t)
+i0 = I0p * np.sin(w * t + phiI)
+uL = w * L * I0p * np.sin(w * t + phiI + np.pi / 2)  # Spannung über der Spule
+uR = R * i0  # Spannung über Widerstand
+
+plt.plot(w * t, u0, label=r'$u_0$')
+plt.plot(w * t, uR, label=r'$u_R$')
+plt.plot(w * t, uL, label=r'$u_L$')
+plt.plot(w * t, i0, label=r'$i_0$')
+plt.xlabel(r'$\omega t$')
+plt.ylabel(r'$u(t)$')
+plt.grid()
+plt.legend()
+
+plt.show()
+```
+
+## Überlagerung von sinusförmigen Spannungen mit verschiedenen Frequenzen
+
+Der zeitliche Verlauf einer Spannung mit $\omega_2 = 3 \omega_1$ sei gegeben durch
+
+$$
+u(t) = U_0 + \hat{U}_1 \cos(\omega_1 t) + \hat{U}_2 \cos(\omega_2 t + \varphi).
+$$
+
+### Periodendauer
+Wie groß ist die Periodendauer $T$?
+
+#### Lösung
+Die Periodendauer $T$ ist der kleinste Zeitabschnitt mit $u(t+T)=u(t)$.
+
+$$
+T = \frac{2 \pi}{\omega_1}
+$$
+
+### Mittelwert
+Berechnen Sie den Mittelwert der Spannung $u(t)$!
+
+#### Lösung
+
+$$
+\overline{u(t)} = \frac{1}{T} \int_0^T u(t) dt = U_0
+$$
+
+### Effektivwert
+Berechnen Sie den Effektivwert $U_{eff}$ der Spannung $u(t)$! Wie läßt sich $U_{eff}$ aus den Effektivwerten der
+drei Einzelspannungen berechnen?
+
+::: {.callout-tip}
+$$
+\frac{1}{T}\int_0^T \cos^2(\omega t)\, dt = \left[ \frac{t}{2} 
++ \frac{\sin(\omega t) \cos(\omega t)}{2 \omega} \right]_0^T 
+= \frac{1}{2}
+$$
+:::
+
+#### Lösung
+
+\begin{align}
+U^2_{eff} &= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
+&= \frac{1}{T} \int_0^{T} ( U_0 + \hat{U}_1 \cos(\omega_1 t) + \hat{U}_2 \cos(\omega_2 t + \varphi) )^2 \\
+&= \frac{1}{T} \int_0^{T} (  U^2_0 + 2U_0\hat{U}_1\cos(\omega_1t) + 2U_0\hat{U}_2\cos(\omega_2 t + \varphi) \\
+&+ \hat{U}^2_1\cos^2(\omega_1 t) + 2\hat{U}_1\hat{U}_2\cos(\omega_1 t) \cos(\omega_2 t + \varphi) \\
+&+ \hat{U}^2_2 \cos^2(\omega_2 t + \varphi) ) \\  
+&= U_0^2 + \frac{1}{2} \hat{U}_1^2 +  \frac{1}{2} \hat{U}_2^2 \\
+&= U^2_0 + U^2_{1,eff} + U^2_{2,eff}
+\end{align}
+
+
+### Scheitelfaktor
+
+Wie groß ist der Scheitelfaktor $U_{max}/U_{eff}$, wenn $U_0$ = 1 V, $\hat{U}_1$ = $\hat{U}_2$ = 100 mV und
+$\varphi$ = 60 Grad?
+
+```{python}
+#| label: fig-mittelwerte
+#| fig-cap: "Darstellung der Mittelwerte"
+
+import numpy as np
+import scipy.integrate as si
+import scipy.optimize as so
+import matplotlib.pylab as plt
+
+U0 = 1
+U1p = 100e-3
+U2p = 100e-3
+phi = 60 * np.pi / 180
+f1 = 1e3
+T = 1 / f1
+w1 = 2 * np.pi * f1
+w2 = 3 * w1
+
+
+# Definition der Spannungen als Funktion
+def u(t):
+    return U0 + U1p * np.cos(w1 * t) + U2p * np.cos(w2 * t + phi)
+
+
+def u2(t):
+    return (U0 + U1p * np.cos(w1 * t) + U2p * np.cos(w2 * t + phi))**2
+
+
+# Zeit als Vektor
+t = np.linspace(0, 5e-3, 3000)
+
+# Darstellung der Funktion
+fig1 = plt.figure(1)
+plt.plot(t, u(t))
+plt.xlabel('Zeit t/s')
+plt.ylabel('Spannung u(t)/V')
+plt.grid('on')
+plt.show()
+
+# Mittelwert der Spannung u(t)
+y, err = si.quad(u, 0, T)
+u_bar = 1 / T * y
+print('Der Mittelwert:', u_bar)
+
+# Effektivwert der Spannung u(t)
+y2, err2 = si.quad(u2, 0, T)
+U_eff = np.sqrt(1 / T * y2)
+print('Der Effektivwert:', U_eff)
+
+
+# Berechnung des Scheitelfaktors, Fixpunkt-Iteration
+def func(x, c1, c2, c3):
+    return 1.0 / 3.0 * (np.arcsin(-c1 / (3 * c2) * np.sin(x)) - c3)
+
+SF = so.fixed_point(func, 1, args=(U1p, U2p, phi), xtol=1e-6)
+print('Der Scheitelfaktor:', SF)
+```
+
+#### Lösung
+
+\begin{align}
+U_{max} &= u(t_{max}); \quad \left. \frac{du(t)}{dt} \right\lvert_{t=t_{max}} = 0 \\
+\frac{du(t)}{dt} &= -\hat{U}_1\omega_1\sin(\omega_1 t) - \hat{U}_2 \omega_2\sin(\omega_2 t + \varphi) \\
+\sin(3\omega_1 t_{max} + \varphi) &= -\frac{\hat{U}_1}{2\hat{U}_2}\sin(\omega_1 t_{max}) \\
+\omega_1 t_{max} &= \frac{1}{3} \left( \arcsin \left( -\frac{\hat{U}_1}{3\hat{U}_2} 
+\sin(\omega t_{max} + \varphi) \right) \right) 
+\end{align}
+
+Die letzte Gleichung ist eine sog. *Fixpunktiteration*, deren numerische Lösung im Programmcode formuliert
+ist. Nach ein paar Iterationschritten erhält man $\omega_1 t_{max}$ = -0.315. 
+Daraus ergeben sich $U_{max}$ = 1.195 V und $U_{eff}$ = 1.005 V.
+
+Der gesuchte *Formfaktor* berechnet sich zu:
+
+$$
+\frac{U_{max}}{U_{eff}} = 1.189
+$$
+
+
+## Schaltungsberechnung in reeller Schreibweise
+
+![Netzwerk zur Schaltungsanalyse](../images/hw/hw1p3.pdf){#fig-hw1p3 width=300}
+
+Gegeben sei die in @fig-hw1p3 skizzierte Schaltung mit einer Wechselstromquelle $i_0(t)=\hat{I}_0 \sin(\omega t)$. 
+
+### Amplitude und Phase
+Berechnen Sie Amplitude und Phasenwinkel jeweils von $u(t)$, $i_C(t)$ und $i_R(t)$!
+
+#### Lösung
+Sei $u(t)=\hat{U} \sin(\omega t + \varphi_u)$, dann ergeben sich die Ströme zu:
+
+\begin{align}
+i_C(t) &= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2}) = -\omega C \hat{U} \cos(\omega t + \varphi_u) \\
+i_R(t) &= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
+\end{align}
+
+Knotengleichung: $i_0(t) = i_C(t) + i_R(t)$
+
+\begin{align}
+\hat{I}_0 \sin(\omega t) &= -\omega C \hat{U} \cos(\omega t + \varphi_u) + \frac{\hat{U}}{R} \sin(\omega t + \varphi_u) \\
+\hat{I}_0 \sin(m - \varphi_u) &= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m), \quad m=\omega t + \varphi_u \\
+\hat{I}_0 \left( \sin(m) \cos(\varphi_u) - \cos(m) \sin(\varphi_u) \right) &= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m) \\
+\end{align}
+
+Koeffizientenvergleich:
+
+\begin{align}
+\hat{I}_0 \cos(\varphi_u) &= \frac{\hat{U}}{R} \\
+\hat{I}_0 \sin(\varphi_u) &= -\omega C \hat{U} \\
+\tan{\varphi_u} = \frac{\sin(\varphi_u)}{\cos(\varphi_u)} &= \frac{-\omega C \hat{U}}{\frac{\hat{U}}{R}} = -\omega R C \\
+\varphi_u &= \arctan(-\omega R C)
+\end{align}
+
+
+\begin{align}
+\hat{I}_0 \cos(\varphi_u) &= \frac{\hat{U}}{R} \\
+\hat{U} &= R \hat{I} \cos{\varphi_u} = R \hat{I} \frac{1}{\sqrt{1+\tan^2(\varphi)}} \\
+&= \frac{R \hat{I}}{\sqrt{1+(\omega R C)^2}} \\
+\hat{I}_C &= \omega C \hat{U} \\
+\hat{I}_R &= \frac{\hat{U}}{R}
+\end{align}
+
+### Spannungsverläufe
+Skizzieren Sie mithilfe von Python $i_0(t)$, $u(t)$, $i_C(t)$ und $i_R(t)$ für $\hat{I}_0$ = 14.1 mA, $f$ = 3.183 kHz,
+$R$ = 50 $\Omega$ und $C$ = 1 $\mu$ F!
+
+```{python}
+#| label: fig-u_i_plot
+#| fig-cap: "Strom- und Spannungsverläufe"
+from numpy import pi, sin, linspace
+import matplotlib.pylab as plt
+
+f = 3.183e3  # Frequenz kHz
+w = 2 * pi * f  # Kreisfrequenz
+R = 50  # Widerstand in Ohm
+C = 1e-6  # Kapazität in Farad
+I0 = 14.1e-3  # Strom
+t = linspace(0, 1e-3, 1000)  # Länge der x-Achse und
+
+# Strom- und Spannungfunktionen
+i_0 = I0 * sin(w * t)  # Stromquelle
+u = 5e-3 * sin(w * t - pi / 4)  # Spannung
+i_C = 10e-3 * sin(w * t + pi / 4)  # Strom am Kondensator
+i_R = 10e-3 * sin(w * t - pi / 4)  # Strom am Widerstand
+
+# Plot der Signale
+plt.figure()
+plt.plot(t, i_0, label='$i_0$')
+plt.plot(t, u, label='$u$')
+plt.plot(t, i_C, label='$i_C$')
+plt.plot(t, i_R, label='$i_R$')
+plt.xlabel('Zeit t in s')
+plt.ylabel('Strom in i(t) mA und Spannung u(t) in 100 mV')
+plt.legend(loc='upper right')
+plt.grid()
+plt.show()
+```
+
+#### Lösung
+Mit den Werten ergeben sich folgende Spannungs- und Stromverläufe:
+
+* $i_0(t)$ = 14.1 mA $\sin(\omega t)$
+
+* $u(t)$ = 0.5 V $\sin(\omega t - \frac{\pi}{4})$
+
+* $i_C(t)$ = 10 mA $\sin(\omega t + \frac{\pi}{4})$
+
+* $i_R(t)$ = 10 mA $\sin(\omega t - \frac{\pi}{4})$
+
+
+## Phasenanschnittsteuerung
+
+::: {#fig-phasenanschnitt layout-nrow=2}
+
+![Halbwelle](../images/hw/hw1p4a.pdf){#fig-hw1p4a width=600}
+
+![Vollwelle](../images/hw/hw1p4b.pdf){#fig-hw1p4b width=600}
+
+Phasenanschnittsteuerung
+:::
+
+Das Prinzip der Phasenanschnittsteuerung, bei dem gem. @fig-hw1p4a oder @fig-hw1p4b der Stromfluß in einer Halbwelle auf
+den zeitlichen Bruchteil $\pi-\alpha$ begrenzt wird, wird z.B. zum Dimmen von Glühlampen und anderen Kleinverbrauchern
+im Haushalt verwendet. Der Phasenanschnittwinkel $\alpha$ kann dabei elektronisch mit Thyristoren im Bereich $0 \leq
+\alpha \leq \pi$ eingestellt werden [@wikipedia2024e]. 
+
+In den hier zu untersuchenden Fällen (a) und (b) wird ein ohmscher Verbraucher mit $R$ = 100 $\Omega$ mit Netzspannung 
+($U_{0,eff}$ = 230 V, $\omega$ = 2 $\pi$ 50 Hz) und Phasenanschnittsteuerung betrieben. 
+
+
+### Aufgabe 
+Berechnen und skizzieren Sie für den durch den Verbraucherwiderstand $R$ fließenden Strom $i(t)$ jeweils Mittelwert,
+Gleichrichtmittelwert und Effektivwert als Funktion vom Phasenanschnittwinkel $\alpha$!
+
+
+#### Lösung
+
+1. Halbwelle
+
+\begin{align}
+\overline{i(t)} &= \frac{1}{T} \int_0^{T} i(t) d t & &= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{I}\sin(\varphi) d \varphi \\
+&= \frac{\hat{I}}{2\pi} \left[ -\cos(\varphi) \right]_{\alpha}^{\pi} & &= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
+\overline{\lvert i(t) \lvert} &= \frac{1}{T} \int_0^{T} \lvert i(t) \lvert d t & &= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
+I^2_{eff} &= \frac{1}{T} \int_0^{T} \overline{i^2(t)} d t & &= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{I}^2\sin^2(\varphi) d \varphi \\
+&= \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\varphi - \frac{1}{4}\sin(2\varphi) \right]_{\alpha}^{\pi} &
+&= \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi -\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
+I_{eff} &= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{4\pi}} & &
+\end{align}
+
+2. Vollwelle
+
+\begin{align}
+\overline{i(t)} &= 0 \\
+\overline{\lvert i(t) \lvert} &=  2 \cdot \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] = \frac{\hat{I}}{\pi} \left[ 1+\cos(\varphi) \right] \\
+I^2_{eff} &= 2 \cdot \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
+&= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{2\pi}}
+\end{align}

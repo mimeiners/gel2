@@ -45,16 +45,16 @@ book:
       chapters:
         - lec/lec_01.qmd
         - lec/lec_02.qmd
-        - lec/lec_03.ipynb
+        - lec/lec_03.qmd
         - lec/lec_04.qmd
-        - lec/lec_05.ipynb
-        - lec/lec_06.ipynb
+        - lec/lec_05.qmd
+        - lec/lec_06.qmd
         - lec/lec_07.qmd
         - lec/lec_08.qmd
     - part: Hörsaalübungen 
       chapters:
-        - hw/hw_01.ipynb
-        - hw/hw_02.ipynb
+        - hw/hw_01.qmd
+        - hw/hw_02.qmd
 #        - hw/hw_03.ipynb
 #        - hw/hw_04.ipynb
 #        - hw/hw_05.ipynb
