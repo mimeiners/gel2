@@ -9,4 +9,5 @@ _build
 auto
 *.rel
 _book
+_freeze
 /.quarto/

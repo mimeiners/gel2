@@ -447,18 +447,20 @@ $$
 Effektivwert:
 
 $$
-U_{eff} = \sqrt{\frac{1}{T} \int\limits_{0}^{T/2} \left( 2\hat{u} \frac{t}{T} \right)^2 dt + \frac{1}{T} \int\limits_{T/2}^{T} \left( 2\hat{u} \frac{t - T}{T} \right)^2 dt} = \sqrt{\frac{\hat{u}^2}{6} + \frac{\hat{u}^2}{6}} = \frac{\hat{u}}{\sqrt{3}} = 5.77 V
+U_{eff} = \sqrt{\frac{1}{T} \int\limits_{0}^{T/2} \left( 2\hat{u} \frac{t}{T} \right)^2 dt 
++ \frac{1}{T} \int\limits_{T/2}^{T} \left( 2\hat{u} \frac{t - T}{T} \right)^2 dt} 
+= \sqrt{\frac{\hat{u}^2}{6} + \frac{\hat{u}^2}{6}} = \frac{\hat{u}}{\sqrt{3}} = 5.77 V
 $$
 :::
 
 ### Aufgabe 3.4
 
-Ein Wechselstrom besteht nach der Abbildung aus "angeschnittenen" Sinushalbschwingungen. In den Bereichen $0 < \omega t
-< \alpha$ und $\pi < \omega t < (\pi + \alpha)$ fließt kein Strom (i = 0), wobei $\alpha = \pi/4 = 45°$ sei. In der
-übrigen Zeit (innerhalb des Bereiches $0 < \omega t < 2\pi)$ wird der Stromverlauf durch die Gleichung $i = \hat{i}
-sin(\omega t)$ wiedergegeben. Hierbei betrage der Scheitelwert des Stromes $\hat{i} = 10 A$.
+Ein Wechselstrom besteht nach der Abbildung aus "angeschnittenen" Sinushalbschwingungen. In den Bereichen 
+$0 < \omega t < \alpha$ und $\pi < \omega t < (\pi + \alpha)$ fließt kein Strom (i = 0), wobei $\alpha = \pi/4 = 45°$
+sei. In der übrigen Zeit (innerhalb des Bereiches $0 < \omega t < 2\pi)$ wird der Stromverlauf durch die Gleichung $i =
+\hat{i} sin(\omega t)$ wiedergegeben. Hierbei betrage der Scheitelwert des Stromes $\hat{i} = 10 A$.
 
-Wie groß ist der Effektivwert I des Stromes?
+Wie groß ist der Effektivwert $I_{eff}$	des Stromes?
 
 ```{python}
 #| label: fig-aufg3.4
@@ -486,7 +488,7 @@ plt.figure()
 plt.plot(omega_t, i)
 plt.xlabel('$\omega t$')
 plt.ylabel('i')
-#plt.xticks([0,63,127],['0','$\pi$','2$\pi$'])
+# plt.xticks([0,63,127],['0','$\pi$','2$\pi$'])
 plt.xticks(omega_t,list_ticks)
 plt.grid(True)
 ```
@@ -499,15 +501,20 @@ I = \sqrt{\frac{1}{2\pi} \int\limits_{0}^{2\pi} i^2 d\omega t}
 $$
 
 $$
-\int\limits_{0}^{2\pi} i^2 d\omega t = 2\int\limits_{0}^{\pi} i^2 d\omega t = 2\int\limits_{0}^{\pi} \hat{i}^2 \cdot sin^2(\omega t) d\omega t
+\int\limits_{0}^{2\pi} i^2 d\omega t = 2\int\limits_{0}^{\pi} i^2 d\omega t 
+= 2\int\limits_{0}^{\pi} \hat{i}^2 \cdot sin^2(\omega t) d\omega t
 $$
 
 $$
-2\int\limits_{0}^{\pi} \hat{i}^2 \cdot sin^2(\omega t) d\omega t = 2\hat{i}^2 \left(\frac{1}{2} \omega t - \frac{1}{4} sin(2\omega t) \right) \Big\vert_\alpha^\pi = \hat{i}^2 \left( \pi - \alpha + \frac{1}{2} sin(2\alpha) \right)
+2\int\limits_{0}^{\pi} \hat{i}^2 \cdot sin^2(\omega t) d\omega t 
+= 2\hat{i}^2 \left(\frac{1}{2} \omega t - \frac{1}{4} sin(2\omega t) \right) \Big\vert_\alpha^\pi 
+= \hat{i}^2 \left( \pi - \alpha + \frac{1}{2} sin(2\alpha) \right)
 $$
 
 $$
-I = \sqrt{\frac{1}{2\pi} \cdot \int\limits_{0}^{2\pi} i^2 d\omega t} = \sqrt{\frac{1}{2\pi} \hat{i}^2 \left( \pi - \alpha + \frac{1}{2} sin(2\alpha) \right)} = \sqrt{\frac{1}{2\pi} \cdot (10 A)^2 \cdot \left( \pi - \frac{\pi}{4} + \frac{1}{2} \cdot sin(2 \cdot 45°) \right)} = 6.74 A
+I = \sqrt{\frac{1}{2\pi} \cdot \int\limits_{0}^{2\pi} i^2 d\omega t} 
+= \sqrt{\frac{1}{2\pi} \hat{i}^2 \left( \pi - \alpha + \frac{1}{2} sin(2\alpha) \right)} 
+= \sqrt{\frac{1}{2\pi} \cdot (10 A)^2 \cdot \left( \pi - \frac{\pi}{4} + \frac{1}{2} \cdot sin(2 \cdot 45°) \right)} = 6.74 A
 $$
 :::
 
