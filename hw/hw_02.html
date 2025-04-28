@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -308,7 +342,7 @@ window.Quarto = {
   <li><a href="#ersatzschaltung" id="toc-ersatzschaltung" class="nav-link" data-scroll-target="#ersatzschaltung"><span class="header-section-number">10.2.3</span> Ersatzschaltung</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/hw/hw_02.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/hw/hw_02.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -334,17 +368,53 @@ window.Quarto = {
 
 <section id="komplexe-signale" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="komplexe-signale"><span class="header-section-number">10.1</span> Komplexe Signale</h2>
+<p>Mit einem Oszilloskop wird die Zeitabhängigkeit von zwei Sinussignalen, wie in <a href="#fig-hw2p1" class="quarto-xref">Abbildung&nbsp;<span>10.1</span></a> dargestellt, gemessen.</p>
+<!-- ![Oszillogramm der Spannungsmessung](../images/hw/hw2p1.pdf){#fig-hw2p1} -->
+<div id="cell-fig-hw2p1" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Oszi-Plot</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">10e-3</span>, <span class="fl">10e-3</span>, <span class="dv">100</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="fl">8e-3</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> T</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> f</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>A1 <span class="op">=</span> <span class="dv">15</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>A2 <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">1e-3</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Spannungen</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>u1 <span class="op">=</span> <span class="op">-</span>A1 <span class="op">*</span> np.cos(w <span class="op">*</span> t)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>u2 <span class="op">=</span> A2 <span class="op">*</span> np.cos(w <span class="op">*</span> (t <span class="op">-</span> dt))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting figure properties</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.figure(<span class="dv">1</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.plot(t, u1, label<span class="op">=</span><span class="vs">r"$u_1(t)$"</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.plot(t, u2, label<span class="op">=</span><span class="vs">r"$u_2(t)$"</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.axis([<span class="op">-</span><span class="fl">5e-3</span>, <span class="fl">5e-3</span>, <span class="op">-</span><span class="dv">20</span>, <span class="dv">20</span>])</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Zeit t/s'</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Spannung u/V'</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
 <div id="fig-hw2p1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hw2p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="../images/hw/hw2p1.pdf" class="img-fluid">
+<img src="hw_02_files/figure-html/fig-hw2p1-output-1.png" width="596" height="434" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hw2p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;10.1: Oszillogramm der Spannungsmessung
+Abbildung&nbsp;10.1: Oszillogramm einer Spannungsmessung
 </figcaption>
 </figure>
 </div>
-<p>Mit einem Oszilloskop wird die Zeitabhängigkeit von zwei Sinussignalen, wie in <a href="#fig-hw2p1" class="quarto-xref">Abbildung&nbsp;<span>10.1</span></a> dargestellt, gemessen.</p>
+</div>
+</div>
 <section id="signaldarstellung" class="level3" data-number="10.1.1">
 <h3 data-number="10.1.1" class="anchored" data-anchor-id="signaldarstellung"><span class="header-section-number">10.1.1</span> Signaldarstellung</h3>
 <p>Geben Sie für die Spannungen <span class="math inline">\(u_1(t)\)</span> und <span class="math inline">\(u_2(t)\)</span> folgende Größen an:</p>
@@ -441,15 +511,58 @@ u_3(t) = \operatorname{Re}\left\{\underline{\hat{U}}_3e^{j\omega_3 t}\right\}
 </section>
 <section id="wirkleistung-blindleistung-und-scheinleistung" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="wirkleistung-blindleistung-und-scheinleistung"><span class="header-section-number">10.2</span> Wirkleistung, Blindleistung und Scheinleistung</h2>
+<!-- ![Oszillogramm der Strom- und Spannungsmessung](../images/hw/hw2p2.pdf){#fig-hw2p2} -->
+<div id="cell-fig-hw2p2" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Oszi-Plot</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="fl">50e-3</span>, <span class="dv">100</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>Up <span class="op">=</span> <span class="fl">44.7</span>  <span class="co"># in V</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>Ip <span class="op">=</span> <span class="dv">2</span>  <span class="co"># in A</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">/</span> <span class="fl">20e-3</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">13.5e-3</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>u1 <span class="op">=</span> Up <span class="op">*</span> np.sin(w <span class="op">*</span> t)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>i1 <span class="op">=</span> <span class="op">-</span>Ip <span class="op">*</span> np.sin(w <span class="op">*</span> (t <span class="op">-</span> dt))</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(<span class="dv">1</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>ax1.plot(t, u1, <span class="st">'b-'</span>, label<span class="op">=</span><span class="st">'u(t)'</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'Spannung u/V'</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'Zeit t/s'</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>ax1.set_ylim(<span class="op">-</span><span class="dv">50</span>, <span class="dv">50</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>ax1.grid()</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>ax1.text(<span class="fl">25e-3</span>, <span class="fl">44.7</span>, <span class="vs">r'$\leftarrow$ 44.7 V'</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Zweite y-Achse fuer den Strom</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> ax1.twinx()</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>ax2.plot(t, i1, <span class="st">'r-'</span>, label<span class="op">=</span><span class="st">'i(t)'</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Strom i/A'</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>ax2.set_ylim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>ax2.text(<span class="fl">13.5e-3</span>, <span class="dv">0</span>, <span class="vs">r'$\leftarrow$ 13.5 ms'</span>)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># ask matplotlib for the plotted objects and their labels</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>lines, labels <span class="op">=</span> ax1.get_legend_handles_labels()</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>lines2, labels2 <span class="op">=</span> ax2.get_legend_handles_labels()</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>ax2.legend(lines <span class="op">+</span> lines2, labels <span class="op">+</span> labels2, loc<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
 <div id="fig-hw2p2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hw2p2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="../images/hw/hw2p2.pdf" class="img-fluid">
+<img src="hw_02_files/figure-html/fig-hw2p2-output-1.png" width="643" height="429" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hw2p2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;10.2: Oszillogramm der Strom- und Spannungsmessung
+Abbildung&nbsp;10.2: Oszillogramm einer Strom- und Spannungsmessung
 </figcaption>
 </figure>
+</div>
+</div>
 </div>
 <p>An einem Verbraucher mit der Impedanz <span class="math inline">\(Z\)</span> wird mittels eines Zweistrahloszilloskops eine zeitaufgelöste Strommessung des Stroms <span class="math inline">\(i(t)\)</span> durchgeführt. Gleichzeitig wird die Klemmenspannung <span class="math inline">\(u(t)\)</span> mit aufgenommen. Beide Zeitfunktionen sind sinusförmig. Ihre Amplituden und relativen Lagen sind der <a href="#fig-hw2p2" class="quarto-xref">Abbildung&nbsp;<span>10.2</span></a> zu entnehmen.</p>
 <section id="strom--und-spannungsbeschreibung" class="level3" data-number="10.2.1">
@@ -1006,7 +1119,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/hw/hw_02.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/hw/hw_02.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

@@ -369,7 +369,7 @@ window.Quarto = {
   <li><a href="#aufgabe" id="toc-aufgabe" class="nav-link" data-scroll-target="#aufgabe"><span class="header-section-number">9.4.1</span> Aufgabe</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/hw/hw_01.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/hw/hw_01.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -409,7 +409,7 @@ Abbildung&nbsp;9.1: Wechselstromschaltung
 </div>
 <section id="lösung" class="level3" data-number="9.1.1">
 <h3 data-number="9.1.1" class="anchored" data-anchor-id="lösung"><span class="header-section-number">9.1.1</span> Lösung</h3>
-<div id="486170e0" class="cell">
+<div id="cell-fig-signale" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -438,6 +438,18 @@ Abbildung&nbsp;9.1: Wechselstromschaltung
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-signale" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-signale-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="hw_01_files/figure-html/fig-signale-output-1.png" width="609" height="429" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-signale-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;9.2: Strom- und Spannungssignale
+</figcaption>
+</figure>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -504,7 +516,7 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 <section id="scheitelfaktor" class="level3" data-number="9.2.4">
 <h3 data-number="9.2.4" class="anchored" data-anchor-id="scheitelfaktor"><span class="header-section-number">9.2.4</span> Scheitelfaktor</h3>
 <p>Wie groß ist der Scheitelfaktor <span class="math inline">\(U_{max}/U_{eff}\)</span>, wenn <span class="math inline">\(U_0\)</span> = 1 V, <span class="math inline">\(\hat{U}_1\)</span> = <span class="math inline">\(\hat{U}_2\)</span> = 100 mV und <span class="math inline">\(\varphi\)</span> = 60 Grad?</p>
-<div id="faf20f5e" class="cell">
+<div id="cell-fig-mittelwerte" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.integrate <span class="im">as</span> si</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.optimize <span class="im">as</span> so</span>
@@ -545,7 +557,7 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 <span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>u_bar <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> T <span class="op">*</span> y</span>
 <span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Der Mittelwert:'</span>, u_bar)</span>
 <span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Effiktivwert der Spannung u(t)</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Effektivwert der Spannung u(t)</span></span>
 <span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>y2, err2 <span class="op">=</span> si.quad(u2, <span class="dv">0</span>, T)</span>
 <span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>U_eff <span class="op">=</span> np.sqrt(<span class="dv">1</span> <span class="op">/</span> T <span class="op">*</span> y2)</span>
 <span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Der Effektivwert:'</span>, U_eff)</span>
@@ -555,9 +567,25 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 <span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x, c1, c2, c3):</span>
 <span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">1.0</span> <span class="op">/</span> <span class="fl">3.0</span> <span class="op">*</span> (np.arcsin(<span class="op">-</span>c1 <span class="op">/</span> (<span class="dv">3</span> <span class="op">*</span> c2) <span class="op">*</span> np.sin(x)) <span class="op">-</span> c3)</span>
 <span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>SF <span class="op">=</span> so.fixed_point(func, <span class="dv">1</span>, args<span class="op">=</span>(U1p, U2p, phi), xtol<span class="op">=</span><span class="fl">1e-6</span>)</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Der Scheitelfaktor:'</span>, SF)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>SF <span class="op">=</span> so.fixed_point(func, <span class="dv">1</span>, args<span class="op">=</span>(U1p, U2p, phi), xtol<span class="op">=</span><span class="fl">1e-6</span>)</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Der Scheitelfaktor:'</span>, SF)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-mittelwerte" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mittelwerte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="hw_01_files/figure-html/fig-mittelwerte-output-1.png" width="597" height="429" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mittelwerte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;9.3: Darstellung der Mittelwerte
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Der Mittelwert: 1.0
+Der Effektivwert: 1.004987562112089
+Der Scheitelfaktor: -0.31462061084367027</code></pre>
+</div>
 </div>
 <section id="lösung-4" class="level4" data-number="9.2.4.1">
 <h4 data-number="9.2.4.1" class="anchored" data-anchor-id="lösung-4"><span class="header-section-number">9.2.4.1</span> Lösung</h4>
@@ -584,11 +612,11 @@ U_{max} &amp;= u(t_{max}); \quad \left. \frac{du(t)}{dt} \right\lvert_{t=t_{max}
 <embed src="../images/hw/hw1p3.pdf" class="img-fluid" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hw1p3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;9.2: Netzwerk zur Schaltungsanalyse
+Abbildung&nbsp;9.4: Netzwerk zur Schaltungsanalyse
 </figcaption>
 </figure>
 </div>
-<p>Gegeben sei die in <a href="#fig-hw1p3" class="quarto-xref">Abbildung&nbsp;<span>9.2</span></a> skizzierte Schaltung mit einer Wechselstromquelle <span class="math inline">\(i_0(t)=\hat{I}_0 \sin(\omega t)\)</span>.</p>
+<p>Gegeben sei die in <a href="#fig-hw1p3" class="quarto-xref">Abbildung&nbsp;<span>9.4</span></a> skizzierte Schaltung mit einer Wechselstromquelle <span class="math inline">\(i_0(t)=\hat{I}_0 \sin(\omega t)\)</span>.</p>
 <section id="amplitude-und-phase" class="level3" data-number="9.3.1">
 <h3 data-number="9.3.1" class="anchored" data-anchor-id="amplitude-und-phase"><span class="header-section-number">9.3.1</span> Amplitude und Phase</h3>
 <p>Berechnen Sie Amplitude und Phasenwinkel jeweils von <span class="math inline">\(u(t)\)</span>, <span class="math inline">\(i_C(t)\)</span> und <span class="math inline">\(i_R(t)\)</span>!</p>
@@ -624,34 +652,46 @@ i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 <section id="spannungsverläufe" class="level3" data-number="9.3.2">
 <h3 data-number="9.3.2" class="anchored" data-anchor-id="spannungsverläufe"><span class="header-section-number">9.3.2</span> Spannungsverläufe</h3>
 <p>Skizzieren Sie mithilfe von Python <span class="math inline">\(i_0(t)\)</span>, <span class="math inline">\(u(t)\)</span>, <span class="math inline">\(i_C(t)\)</span> und <span class="math inline">\(i_R(t)\)</span> für <span class="math inline">\(\hat{I}_0\)</span> = 14.1 mA, <span class="math inline">\(f\)</span> = 3.183 kHz, <span class="math inline">\(R\)</span> = 50 <span class="math inline">\(\Omega\)</span> und <span class="math inline">\(C\)</span> = 1 <span class="math inline">\(\mu\)</span> F!</p>
-<div id="f0f1a94c" class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> pi, sin, linspace</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="fl">3.183e3</span>  <span class="co"># Frequenz kHz</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> pi <span class="op">*</span> f  <span class="co"># Kreisfrequenz</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">50</span>  <span class="co"># Widerstand in Ohm</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="fl">1e-6</span>  <span class="co"># Kapazität in Farad</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>I0 <span class="op">=</span> <span class="fl">14.1e-3</span>  <span class="co"># Strom</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> linspace(<span class="dv">0</span>, <span class="fl">1e-3</span>, <span class="dv">1000</span>)  <span class="co"># Länge der x-Achse und</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Strom- und Spannungfunktionen</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>i_0 <span class="op">=</span> I0 <span class="op">*</span> sin(w <span class="op">*</span> t)  <span class="co"># Stromquelle</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> <span class="fl">5e-3</span> <span class="op">*</span> sin(w <span class="op">*</span> t <span class="op">-</span> pi <span class="op">/</span> <span class="dv">4</span>)  <span class="co"># Spannung</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>i_C <span class="op">=</span> <span class="fl">10e-3</span> <span class="op">*</span> sin(w <span class="op">*</span> t <span class="op">+</span> pi <span class="op">/</span> <span class="dv">4</span>)  <span class="co"># Strom am Kondensator</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>i_R <span class="op">=</span> <span class="fl">10e-3</span> <span class="op">*</span> sin(w <span class="op">*</span> t <span class="op">-</span> pi <span class="op">/</span> <span class="dv">4</span>)  <span class="co"># Strom am Widerstand</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot der Signale</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>plt.plot(t, i_0, label<span class="op">=</span><span class="st">'$i_0$'</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>plt.plot(t, u, label<span class="op">=</span><span class="st">'$u$'</span>)</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>plt.plot(t, i_C, label<span class="op">=</span><span class="st">'$i_C$'</span>)</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>plt.plot(t, i_R, label<span class="op">=</span><span class="st">'$i_R$'</span>)</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Zeit t in s'</span>)</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Strom in i(t) mA und Spannung u(t) in 100 mV'</span>)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper right'</span>)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-fig-u_i_plot" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> pi, sin, linspace</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="fl">3.183e3</span>  <span class="co"># Frequenz kHz</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> pi <span class="op">*</span> f  <span class="co"># Kreisfrequenz</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">50</span>  <span class="co"># Widerstand in Ohm</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="fl">1e-6</span>  <span class="co"># Kapazität in Farad</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>I0 <span class="op">=</span> <span class="fl">14.1e-3</span>  <span class="co"># Strom</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> linspace(<span class="dv">0</span>, <span class="fl">1e-3</span>, <span class="dv">1000</span>)  <span class="co"># Länge der x-Achse und</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Strom- und Spannungfunktionen</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>i_0 <span class="op">=</span> I0 <span class="op">*</span> sin(w <span class="op">*</span> t)  <span class="co"># Stromquelle</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> <span class="fl">5e-3</span> <span class="op">*</span> sin(w <span class="op">*</span> t <span class="op">-</span> pi <span class="op">/</span> <span class="dv">4</span>)  <span class="co"># Spannung</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>i_C <span class="op">=</span> <span class="fl">10e-3</span> <span class="op">*</span> sin(w <span class="op">*</span> t <span class="op">+</span> pi <span class="op">/</span> <span class="dv">4</span>)  <span class="co"># Strom am Kondensator</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>i_R <span class="op">=</span> <span class="fl">10e-3</span> <span class="op">*</span> sin(w <span class="op">*</span> t <span class="op">-</span> pi <span class="op">/</span> <span class="dv">4</span>)  <span class="co"># Strom am Widerstand</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot der Signale</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>plt.plot(t, i_0, label<span class="op">=</span><span class="st">'$i_0$'</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>plt.plot(t, u, label<span class="op">=</span><span class="st">'$u$'</span>)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>plt.plot(t, i_C, label<span class="op">=</span><span class="st">'$i_C$'</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>plt.plot(t, i_R, label<span class="op">=</span><span class="st">'$i_R$'</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Zeit t in s'</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Strom in i(t) mA und Spannung u(t) in 100 mV'</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper right'</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-u_i_plot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-u_i_plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="hw_01_files/figure-html/fig-u_i_plot-output-1.png" width="617" height="429" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-u_i_plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;9.5: Strom- und Spannungsverläufe
+</figcaption>
+</figure>
+</div>
+</div>
 </div>
 <section id="lösung-6" class="level4" data-number="9.3.2.1">
 <h4 data-number="9.3.2.1" class="anchored" data-anchor-id="lösung-6"><span class="header-section-number">9.3.2.1</span> Lösung</h4>
@@ -700,11 +740,11 @@ i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-phasenanschnitt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;9.3: Phasenanschnittsteuerung
+Abbildung&nbsp;9.6: Phasenanschnittsteuerung
 </figcaption>
 </figure>
 </div>
-<p>Das Prinzip der Phasenanschnittsteuerung, bei dem gem. <a href="#fig-hw1p4a" class="quarto-xref">Abbildung&nbsp;<span>9.3 (a)</span></a> oder <a href="#fig-hw1p4b" class="quarto-xref">Abbildung&nbsp;<span>9.3 (b)</span></a> der Stromfluß in einer Halbwelle auf den zeitlichen Bruchteil <span class="math inline">\(\pi-\alpha\)</span> begrenzt wird, wird z.B. zum Dimmen von Glühlampen und anderen Kleinverbrauchern im Haushalt verwendet. Der Phasenanschnittwinkel <span class="math inline">\(\alpha\)</span> kann dabei elektronisch mit Thyristoren im Bereich <span class="math inline">\(0 \leq
+<p>Das Prinzip der Phasenanschnittsteuerung, bei dem gem. <a href="#fig-hw1p4a" class="quarto-xref">Abbildung&nbsp;<span>9.6 (a)</span></a> oder <a href="#fig-hw1p4b" class="quarto-xref">Abbildung&nbsp;<span>9.6 (b)</span></a> der Stromfluß in einer Halbwelle auf den zeitlichen Bruchteil <span class="math inline">\(\pi-\alpha\)</span> begrenzt wird, wird z.B. zum Dimmen von Glühlampen und anderen Kleinverbrauchern im Haushalt verwendet. Der Phasenanschnittwinkel <span class="math inline">\(\alpha\)</span> kann dabei elektronisch mit Thyristoren im Bereich <span class="math inline">\(0 \leq
 \alpha \leq \pi\)</span> eingestellt werden <span class="citation" data-cites="wikipedia2024e">(<a href="../references.html#ref-wikipedia2024e" role="doc-biblioref">Wikipedia 2024</a>)</span>.</p>
 <p>In den hier zu untersuchenden Fällen (a) und (b) wird ein ohmscher Verbraucher mit <span class="math inline">\(R\)</span> = 100 <span class="math inline">\(\Omega\)</span> mit Netzspannung (<span class="math inline">\(U_{0,eff}\)</span> = 230 V, <span class="math inline">\(\omega\)</span> = 2 <span class="math inline">\(\pi\)</span> 50 Hz) und Phasenanschnittsteuerung betrieben.</p>
 <section id="aufgabe" class="level3" data-number="9.4.1">
@@ -1182,7 +1222,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/hw/hw_01.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/hw/hw_01.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

@@ -374,7 +374,7 @@ window.Quarto = {
   <li><a href="#wien-robinson-brücke-einfaches-frequenzmessgerät" id="toc-wien-robinson-brücke-einfaches-frequenzmessgerät" class="nav-link" data-scroll-target="#wien-robinson-brücke-einfaches-frequenzmessgerät"><span class="header-section-number">5.7.4</span> Wien-Robinson-Brücke – einfaches Frequenzmessgerät</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/lec/lec_05.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/lec/lec_05.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -457,7 +457,7 @@ a_p(f) = 10\,dB \cdot \log(G_p(f)).
 <section id="bode-diagramm-einer-rc-schaltung-hochpass" class="level3" data-number="5.3.1">
 <h3 data-number="5.3.1" class="anchored" data-anchor-id="bode-diagramm-einer-rc-schaltung-hochpass"><span class="header-section-number">5.3.1</span> Bode-Diagramm einer RC-Schaltung (Hochpass)</h3>
 <p>Ermitteln Sie den Betrags- und Phasengang der einfachen RC-Schaltung mit Hilfe der komplexen Wechselstromrechnung (KWR). Nutzen Sie Python und SPICE zur Darstellung des Bode-Diagramms.</p>
-<div id="b4516cae" class="cell" data-execution_count="1">
+<div id="cell-fig-bode-rc_tp" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -491,9 +491,14 @@ a_p(f) = 10\,dB \cdot \log(G_p(f)).
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="lec_05_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-bode-rc_tp" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bode-rc_tp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="lec_05_files/figure-html/fig-bode-rc_tp-output-1.png" width="598" height="451" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bode-rc_tp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5.1: Bode-Diagramm RC-Tiefpass
+</figcaption>
 </figure>
 </div>
 </div>
@@ -534,14 +539,14 @@ Vergleich zum Zeigerdiagramm
 <img src="../images/lec/lec5s2.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5s2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5.1: RC-Schaltung für eine Ortskurve
+Abbildung&nbsp;5.2: RC-Schaltung für eine Ortskurve
 </figcaption>
 </figure>
 </div>
 <p><span class="math display">\[
 \underline{Z} = R_1 + \frac{1}{j \omega C_1}
 \]</span></p>
-<div id="55c8672d" class="cell" data-execution_count="2">
+<div id="cell-fig-nyq-rc_tp" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -562,9 +567,14 @@ Abbildung&nbsp;5.1: RC-Schaltung für eine Ortskurve
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="lec_05_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-nyq-rc_tp" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nyq-rc_tp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="lec_05_files/figure-html/fig-nyq-rc_tp-output-1.png" width="613" height="432" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nyq-rc_tp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5.3: Ortskurve RC-Tiefpass
+</figcaption>
 </figure>
 </div>
 </div>
@@ -617,7 +627,7 @@ Abbildung&nbsp;5.1: RC-Schaltung für eine Ortskurve
 <embed src="../images/lec/lec5bp.pdf" class="img-fluid" width="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5bp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5.2: Bode-Diagramm eines Bandpasses
+Abbildung&nbsp;5.4: Bode-Diagramm eines Bandpasses
 </figcaption>
 </figure>
 </div>
@@ -637,7 +647,7 @@ f_m = \sqrt{f_{gu} f_{go}}
 <embed src="../images/lec/lec5ElemTransf.pdf" class="img-fluid">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5ElemTransf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5.3: Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS
+Abbildung&nbsp;5.5: Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS
 </figcaption>
 </figure>
 </div>
@@ -1154,7 +1164,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/lec/lec_05.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/lec/lec_05.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
