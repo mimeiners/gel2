@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -92,7 +92,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-b7c2d8834e08b04a63bb76a724ffbcac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -369,7 +369,7 @@ window.Quarto = {
   <li><a href="#aufgabe-3.7" id="toc-aufgabe-3.7" class="nav-link" data-scroll-target="#aufgabe-3.7"><span class="header-section-number">13.3.7</span> Aufgabe 3.7</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/tut/tut_03_Periodische-Signale.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/tut/tut_03_Periodische-Signale.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -403,7 +403,9 @@ window.Quarto = {
 <p>Der Wechselstrom kennzeichnet sich durch sein beliebig periodisches Verhalten. Die Richtung und Größe variiert dabei mit der Zeit t. Eine Sonderform, die große Bedeutung hat ist der Sinusstrom.</p>
 <p>Weiterhin gibt es den Mischstrom, der aus einer Überlagerung von Gleichstrom und Wechselstrom entsteht und zum Beispiel durch das Gleichrichten verursacht wird.</p>
 <p>Des Weiteren gibt es noch die sogenannten modulierten Ströme. Dort schwanken entweder die Amplitude A, die Frequenz f oder der Nullphasenwinkel <span class="math inline">\(\varphi\)</span> mit der Zeit t. Solche Signale werden hier nicht weiter behandelt. Diese kommen in dem Modul <em>Grundlagen der Informationstechnik</em> vor, welches im 4. Semester in der Vertiefungsrichtung Informationstechnik liegt.</p>
-<div id="3b77d3b9" class="cell" data-tags="[&quot;hide-input&quot;]">
+<div id="cell-fig-gleichstrom" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
@@ -413,8 +415,23 @@ window.Quarto = {
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Gleichstrom'</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-gleichstrom" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gleichstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="tut_03_Periodische-Signale_files/figure-html/fig-gleichstrom-output-1.png" width="599" height="449" class="figure-img">
 </div>
-<div id="80f3cc37" class="cell" data-tags="[&quot;hide-input&quot;]">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gleichstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13.1: Gleichstrom
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-fig-wechselstrom" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -433,8 +450,23 @@ window.Quarto = {
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Wechselstrom'</span>)</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-wechselstrom" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-wechselstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="tut_03_Periodische-Signale_files/figure-html/fig-wechselstrom-output-1.png" width="600" height="449" class="figure-img">
 </div>
-<div id="2df0949f" class="cell" data-tags="[&quot;hide-input&quot;]">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wechselstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13.2: Wechselstrom
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-fig-sinusstrom" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -452,8 +484,23 @@ window.Quarto = {
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Sinusstrom'</span>)</span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-sinusstrom" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sinusstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="tut_03_Periodische-Signale_files/figure-html/fig-sinusstrom-output-1.png" width="608" height="449" class="figure-img">
 </div>
-<div id="8a08ff60" class="cell" data-tags="[&quot;hide-input&quot;]">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sinusstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13.3: Sinusstrom
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-fig-mischstrom" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -471,8 +518,23 @@ window.Quarto = {
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Mischstrom'</span>)</span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-mischstrom" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mischstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="tut_03_Periodische-Signale_files/figure-html/fig-mischstrom-output-1.png" width="608" height="449" class="figure-img">
 </div>
-<div id="b1c4e5e4" class="cell" data-tags="[&quot;hide-input&quot;]">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mischstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13.4: Mischstrom
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-fig-amplitudenModu" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -492,8 +554,23 @@ window.Quarto = {
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'amplituden-moduliertes Signal'</span>)</span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-amplitudenmodu" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-amplitudenmodu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="tut_03_Periodische-Signale_files/figure-html/fig-amplitudenmodu-output-1.png" width="600" height="449" class="figure-img">
 </div>
-<div id="b08d2ee2" class="cell" data-tags="[&quot;hide-input&quot;]">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-amplitudenmodu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13.5: Amplituden-moduliertes Signal
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-fig-frequenzModu" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -513,21 +590,42 @@ window.Quarto = {
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'frequenz-moduliertes Signal'</span>)</span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-frequenzmodu" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-frequenzmodu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="tut_03_Periodische-Signale_files/figure-html/fig-frequenzmodu-output-1.png" width="608" height="449" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-frequenzmodu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13.6: Frequenz-moduliertes Signal
+</figcaption>
+</figure>
+</div>
+</div>
 </div>
 </section>
 <section id="kennwerte-von-wechselgrößen" class="level2" data-number="13.2">
 <h2 data-number="13.2" class="anchored" data-anchor-id="kennwerte-von-wechselgrößen"><span class="header-section-number">13.2</span> Kennwerte von Wechselgrößen</h2>
 <p>Allgemein kann man eine sich zeitlich ändernde sinusförmige Wechselgröße mit der folgenden Funktion beschreiben.</p>
-<p><span class="math display">\[x = \hat{x} sin(\omega t + \varphi)\]</span></p>
+<p><span class="math display">\[
+x = \hat{x} sin(\omega t + \varphi)
+\]</span></p>
 <p>Dabei wird der Zeitwert x als auch der Scheitelwert <span class="math inline">\(\hat{x}\)</span> mit einem kleinen Formelbuchstaben bezeichnet.</p>
 <section id="periodendauer-und-frequenz" class="level3" data-number="13.2.1">
 <h3 data-number="13.2.1" class="anchored" data-anchor-id="periodendauer-und-frequenz"><span class="header-section-number">13.2.1</span> Periodendauer und Frequenz</h3>
 <p>Da sich eine sinusförmige Wechselgröße wiederholt sich nach Ablauf des Winkels <span class="math inline">\(2\pi = 360^° = \omega T\)</span>. Damit kann man die Periodendauer T über die Kreisfrequenz <span class="math inline">\(\omega\)</span> darstellen.</p>
-<p><span class="math display">\[T = \frac{2 \pi}{\omega}\]</span></p>
+<p><span class="math display">\[
+T = \frac{2 \pi}{\omega}
+\]</span></p>
 <p>Die Frequenz f gibt die Anzahl der Perioden pro Sekunde an und wird in Hz = 1/s gemessen. Die Frequenz ist der Kehrwert der Periodendauer.</p>
-<p><span class="math display">\[f = \frac{1}{T}\]</span></p>
+<p><span class="math display">\[
+f = \frac{1}{T}
+\]</span></p>
 <p>Die Kreisfreqeunz ist die Frequenz mit dem Faktor <span class="math inline">\(2\pi\)</span> erweitert. Sie wird in 1/s und <strong>nicht</strong> in Hz gemessen!</p>
-<p><span class="math display">\[\omega = 2 \pi f = \frac{2\pi}{T}\]</span></p>
+<p><span class="math display">\[
+\omega = 2 \pi f = \frac{2\pi}{T}
+\]</span></p>
 </section>
 <section id="phasenlage" class="level3" data-number="13.2.2">
 <h3 data-number="13.2.2" class="anchored" data-anchor-id="phasenlage"><span class="header-section-number">13.2.2</span> Phasenlage</h3>
@@ -535,10 +633,10 @@ window.Quarto = {
 <div id="fig-TutChapPhasenlage" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TutChapPhasenlage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="../images/tut/chap3/Phasenlage.pdf" id="fig-TutChapPhasenlage" class="img-fluid">
+<embed src="../images/tut/chap3/Phasenlage.pdf" class="img-fluid" width="400">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-TutChapPhasenlage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;13.1
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TutChapPhasenlage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13.7: Phasenlage
 </figcaption>
 </figure>
 </div>
@@ -551,39 +649,57 @@ Abbildung&nbsp;13.1
 <section id="phasenwinkel" class="level4" data-number="13.2.2.2">
 <h4 data-number="13.2.2.2" class="anchored" data-anchor-id="phasenwinkel"><span class="header-section-number">13.2.2.2</span> Phasenwinkel</h4>
 <p>Zusätzlich zum Nullphasewinkel gibt es den Phasenwinkel. Dieser gibt die Phasenverschiebung zwischen zwei Sinussignalen an. Es ist festgelegt, dass der Strom in solchen Fällen als Bezugsgröße genommen wird.</p>
-<p><span class="math display">\[\varphi = \varphi_U - \varphi_I\]</span></p>
+<p><span class="math display">\[
+\varphi = \varphi_U - \varphi_I
+\]</span></p>
 <p>Beispiel:</p>
-<p><span class="math display">\[\varphi_I = -\frac{\pi}{3} = -60°\]</span></p>
-<p><span class="math display">\[\varphi_U = \frac{\pi}{6} = 30°\]</span></p>
-<p><span class="math display">\[\varphi = \varphi_U - \varphi_I = \left( \frac{\pi}{6} \right) - \left( -\frac{\pi}{3} \right) = 30° - (-60°) = \frac{\pi}{2} = 90°\]</span></p>
+<p><span class="math display">\[
+\varphi_I = -\frac{\pi}{3} = -60°
+\]</span></p>
+<p><span class="math display">\[
+\varphi_U = \frac{\pi}{6} = 30°
+\]</span></p>
+<p><span class="math display">\[
+\varphi = \varphi_U - \varphi_I = \left( \frac{\pi}{6} \right) - \left( -\frac{\pi}{3} \right) = 30° - (-60°) = \frac{\pi}{2} = 90°
+\]</span></p>
 <p>Die Spannung eilt dem Strom um <span class="math inline">\(\varphi = 90°\)</span> vor.</p>
 </section>
 </section>
 <section id="mittelwert" class="level3" data-number="13.2.3">
 <h3 data-number="13.2.3" class="anchored" data-anchor-id="mittelwert"><span class="header-section-number">13.2.3</span> Mittelwert</h3>
 <p>Der Mittelwert ist der zeitlich durchschnittliche Wert einer Funktion.</p>
-<p><span class="math display">\[\overline{x(t)} = \frac{1}{T} \int\limits_{t_0}^{t_o + T} x(t) dt\]</span></p>
+<p><span class="math display">\[
+\overline{x(t)} = \frac{1}{T} \int\limits_{t_0}^{t_o + T} x(t) dt
+\]</span></p>
 <p>Bei reinem Wechselstrom ist der Mittelwert 0.</p>
 </section>
 <section id="gleichrichtwert" class="level3" data-number="13.2.4">
 <h3 data-number="13.2.4" class="anchored" data-anchor-id="gleichrichtwert"><span class="header-section-number">13.2.4</span> Gleichrichtwert</h3>
 <p>Der Gleichrichtwert ist der Mittelwert einer gleichgericheten Größe.</p>
-<p><span class="math display">\[\overline{|x(t)|} = \frac{1}{T} \int\limits_{t_0}^{t_0 + T} |x(t)| dt\]</span></p>
+<p><span class="math display">\[
+\overline{|x(t)|} = \frac{1}{T} \int\limits_{t_0}^{t_0 + T} |x(t)| dt
+\]</span></p>
 <p>Verhältnis von Gleichricht- zu Scheitelwert (bei Sinusgrößen): <span class="math inline">\(\frac{\overline{|i|}}{\hat{i}} = 0.6366\)</span></p>
 </section>
 <section id="effektivwert" class="level3" data-number="13.2.5">
 <h3 data-number="13.2.5" class="anchored" data-anchor-id="effektivwert"><span class="header-section-number">13.2.5</span> Effektivwert</h3>
 <p>Der Effektivwert einer periodischen Spannung (oder eines periodischen Stroms) entspricht dem Wert einer Gleichspannung (eines Gleichstroms), der in einer ohmschen Last dieselbe Leistung umsetzt.</p>
-<p><span class="math display">\[X = X_{eff} = \sqrt{\frac{1}{T} \int\limits_{t_0}^{t_0 + T} x^2(t) dt}\]</span></p>
+<p><span class="math display">\[
+X = X_{eff} = \sqrt{\frac{1}{T} \int\limits_{t_0}^{t_0 + T} x^2(t) dt}
+\]</span></p>
 <p><strong>Scheitelfaktor</strong></p>
 <p>Der Scheitelfaktor ist das Verhältnis von Scheitelwert <span class="math inline">\(\hat{i}\)</span> bzw. <span class="math inline">\(\hat{u}\)</span> zum Effektivwert I bzw. U.</p>
-<p><span class="math display">\[\xi = \frac{\hat{x}}{X_{eff}}\]</span></p>
+<p><span class="math display">\[
+\xi = \frac{\hat{x}}{X_{eff}}
+\]</span></p>
 <p>Der Scheitelfaktor für Sinusgrößen beträgt <span class="math inline">\(\xi = \sqrt{2} = 1.414\)</span>.</p>
 <p>Der Scheitelfaktor für Dreieckspannung beträgt <span class="math inline">\(\xi = \sqrt{3}\)</span>.</p>
 <p>Der Scheitelfaktor für Rechtecksignale beträgt <span class="math inline">\(\xi = 1\)</span>.</p>
 <p><strong>Formfaktor</strong></p>
 <p>Der Formfaktor stellt das Verhältnis von Effektivwert I bzw. U zu Gleichrichtwert <span class="math inline">\(\overline{|i|}\)</span> bzw. <span class="math inline">\(\overline{|u|}\)</span> dar.</p>
-<p><span class="math display">\[F = \frac{X_{eff}}{\overline{|x|}}\]</span></p>
+<p><span class="math display">\[
+F = \frac{X_{eff}}{\overline{|x|}}
+\]</span></p>
 <p>Der Formfaktor für Sinusgrößen beträgt <span class="math inline">\(F = \frac{\pi}{2\sqrt{2}} \approx 1.11\)</span>.</p>
 <p>Der Formfaktor für Dreiecksignale beträgt <span class="math inline">\(F = \frac{1.11}{2}\)</span>.</p>
 <p>Der Formfaktor für Rechtecksignale beträgt <span class="math inline">\(F = 1.11\)</span>.</p>
@@ -593,15 +709,17 @@ Abbildung&nbsp;13.1
 <div id="fig-TutChapMischspannung" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TutChapMischspannung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="../images/tut/chap3/Mischspannung.pdf" id="fig-TutChapMischspannung" class="img-fluid">
+<embed src="../images/tut/chap3/Mischspannung.pdf" class="img-fluid">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-TutChapMischspannung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;13.2
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TutChapMischspannung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13.8: Mischspannung
 </figcaption>
 </figure>
 </div>
 <p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
-<p><span class="math display">\[X_{eff} = \sqrt{X_o^2 + X_{eff\sim}^2}\]</span></p>
+<p><span class="math display">\[
+X_{eff} = \sqrt{X_o^2 + X_{eff\sim}^2}
+\]</span></p>
 </section>
 </section>
 <section id="übungen" class="level2" data-number="13.3">
@@ -612,10 +730,10 @@ Abbildung&nbsp;13.2
 <div id="fig-TutChapAufg3.1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TutChapAufg3.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="../images/tut/chap3/Brueckengleichrichter.pdf" id="fig-TutChapAufg3.1" class="img-fluid">
+<embed src="../images/tut/chap3/Brueckengleichrichter.pdf" class="img-fluid">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-TutChapAufg3.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;13.3
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TutChapAufg3.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13.9: Aufgabe 3.1
 </figcaption>
 </figure>
 </div>
@@ -634,8 +752,12 @@ Lösung
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[\overline{|i|} = 0.6366 \hat{i} = 0.6366 \cdot 10 A = 6.366 A\]</span></p>
-<p><span class="math display">\[Q = \overline{|i|} t = 6.366 A \cdot 2 h = 12.73 Ah\]</span></p>
+<p><span class="math display">\[
+\overline{|i|} = 0.6366 \hat{i} = 0.6366 \cdot 10 A = 6.366 A
+\]</span></p>
+<p><span class="math display">\[
+Q = \overline{|i|} t = 6.366 A \cdot 2 h = 12.73 Ah
+\]</span></p>
 </div>
 </div>
 </div>
@@ -657,13 +779,21 @@ Lösung
 <div class="callout-body-container callout-body">
 <p>Netzspannung ist Sinusförmig –&gt; Formfaktor F = 1.111</p>
 <p>Gleichrichtwert:</p>
-<p><span class="math display">\[\overline{|u|} = \frac{U}{F} = \frac{220 V}{1.111} = 198 V\]</span></p>
+<p><span class="math display">\[
+\overline{|u|} = \frac{U}{F} = \frac{220 V}{1.111} = 198 V
+\]</span></p>
 <p>Zeitfunktion:</p>
 <p>Scheitelwert:</p>
-<p><span class="math display">\[\hat{u} = \sqrt{2} U = \sqrt{2} \cdot 220 V = 311.1 V\]</span></p>
+<p><span class="math display">\[
+\hat{u} = \sqrt{2} U = \sqrt{2} \cdot 220 V = 311.1 V
+\]</span></p>
 <p>Kreisfrequenz:</p>
-<p><span class="math display">\[\omega = 2 \pi f = 2 \pi \cdot 50 Hz = 314.2 \frac{1}{s}\]</span></p>
-<p><span class="math display">\[u = \hat{u} sin(\omega t) = 311.1 V \cdot sin(314.2 1/s)\]</span></p>
+<p><span class="math display">\[
+\omega = 2 \pi f = 2 \pi \cdot 50 Hz = 314.2 \frac{1}{s}
+\]</span></p>
+<p><span class="math display">\[
+u = \hat{u} sin(\omega t) = 311.1 V \cdot sin(314.2 1/s)
+\]</span></p>
 </div>
 </div>
 </div>
@@ -673,10 +803,10 @@ Lösung
 <div id="fig-TutChap3Aufg3.3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TutChap3Aufg3.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="../images/tut/chap3/Aufgabe2.3.pdf" id="fig-TutChap3Aufg3.3" class="img-fluid">
+<embed src="../images/tut/chap3/Aufgabe2.3.pdf" class="img-fluid">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-TutChap3Aufg3.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;13.4
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TutChap3Aufg3.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13.10: Aufgabe 3.3
 </figcaption>
 </figure>
 </div>
@@ -718,7 +848,9 @@ U_{eff} = \sqrt{\frac{1}{T} \int\limits_{0}^{T} u^2(t)dt} = \sqrt{\frac{1}{T} \l
 = \frac{\hat{u}}{2} = 5 V
 \]</span></p>
 <p>Gleichrichtwert:</p>
-<p><span class="math display">\[\overline{|u|} = |u| = 5 V\]</span></p>
+<p><span class="math display">\[
+\overline{|u|} = |u| = 5 V
+\]</span></p>
 <p>Effektivwert:</p>
 <p><span class="math display">\[
 U_{eff} = \sqrt{\frac{1}{T} \int\limits_{0}^{T} \left(\hat{u} \frac{t}{T} \right)^2 dt}
@@ -728,9 +860,13 @@ U_{eff} = \sqrt{\frac{1}{T} \int\limits_{0}^{T} \left(\hat{u} \frac{t}{T} \right
 <ol start="3" type="a">
 <li>Mittelwert:</li>
 </ol>
-<p><span class="math display">\[\overline{u} = \frac{\hat{u}}{4} = 2.5 V\]</span></p>
+<p><span class="math display">\[
+\overline{u} = \frac{\hat{u}}{4} = 2.5 V
+\]</span></p>
 <p>Gleichrichtwert:</p>
-<p><span class="math display">\[\overline{|u|} = \overline{u} = 2.5 V\]</span></p>
+<p><span class="math display">\[
+\overline{|u|} = \overline{u} = 2.5 V
+\]</span></p>
 <p>Effektivwert:</p>
 <p><span class="math display">\[
 U_{eff} = \sqrt{\frac{1}{T} \int\limits_{0}^{T/2} \left(2\hat{u} \frac{t}{T} \right)^2 dt}
@@ -741,22 +877,31 @@ U_{eff} = \sqrt{\frac{1}{T} \int\limits_{0}^{T/2} \left(2\hat{u} \frac{t}{T} \ri
 <ol start="4" type="a">
 <li>Mittelwert:</li>
 </ol>
-<p><span class="math display">\[\overline{u} = 0 V\]</span></p>
+<p><span class="math display">\[
+\overline{u} = 0 V
+\]</span></p>
 <p>Gleichrichtwert:</p>
-<p><span class="math display">\[\overline{|u|} = \frac{1}{T} \left[ \hat{u} \frac{T}{4} + \hat{u} \frac{T}{4} \right] = \frac{\hat{u}}{2} = 5 V\]</span></p>
+<p><span class="math display">\[
+\overline{|u|} = \frac{1}{T} \left[ \hat{u} \frac{T}{4} + \hat{u} \frac{T}{4} \right] = \frac{\hat{u}}{2} = 5 V
+\]</span></p>
 <p>Effektivwert:</p>
-<p><span class="math display">\[U_{eff} = \sqrt{\frac{1}{T} \int\limits_{0}^{T/2} \left( 2\hat{u} \frac{t}{T} \right)^2 dt + \frac{1}{T} \int\limits_{T/2}^{T} \left( 2\hat{u} \frac{t - T}{T} \right)^2 dt} = \sqrt{\frac{\hat{u}^2}{6} + \frac{\hat{u}^2}{6}} = \frac{\hat{u}}{\sqrt{3}} = 5.77 V\]</span></p>
+<p><span class="math display">\[
+U_{eff} = \sqrt{\frac{1}{T} \int\limits_{0}^{T/2} \left( 2\hat{u} \frac{t}{T} \right)^2 dt
++ \frac{1}{T} \int\limits_{T/2}^{T} \left( 2\hat{u} \frac{t - T}{T} \right)^2 dt}
+= \sqrt{\frac{\hat{u}^2}{6} + \frac{\hat{u}^2}{6}} = \frac{\hat{u}}{\sqrt{3}} = 5.77 V
+\]</span></p>
 </div>
 </div>
 </div>
 </section>
 <section id="aufgabe-3.4" class="level3" data-number="13.3.4">
 <h3 data-number="13.3.4" class="anchored" data-anchor-id="aufgabe-3.4"><span class="header-section-number">13.3.4</span> Aufgabe 3.4</h3>
-<p>Ein Wechselstrom besteht nach der Abbildung aus “angeschnittenen” Sinushalbschwingungen. In den Bereichen <span class="math inline">\(0 &lt; \omega t
-&lt; \alpha\)</span> und <span class="math inline">\(\pi &lt; \omega t &lt; (\pi + \alpha)\)</span> fließt kein Strom (i = 0), wobei <span class="math inline">\(\alpha = \pi/4 = 45°\)</span> sei. In der übrigen Zeit (innerhalb des Bereiches <span class="math inline">\(0 &lt; \omega t &lt; 2\pi)\)</span> wird der Stromverlauf durch die Gleichung <span class="math inline">\(i = \hat{i}
-sin(\omega t)\)</span> wiedergegeben. Hierbei betrage der Scheitelwert des Stromes <span class="math inline">\(\hat{i} = 10 A\)</span>.</p>
-<p>Wie groß ist der Effektivwert I des Stromes?</p>
-<div id="912ed568" class="cell" data-tags="[&quot;hide-input&quot;]">
+<p>Ein Wechselstrom besteht nach der Abbildung aus “angeschnittenen” Sinushalbschwingungen. In den Bereichen <span class="math inline">\(0 &lt; \omega t &lt; \alpha\)</span> und <span class="math inline">\(\pi &lt; \omega t &lt; (\pi + \alpha)\)</span> fließt kein Strom (i = 0), wobei <span class="math inline">\(\alpha = \pi/4 = 45°\)</span> sei. In der übrigen Zeit (innerhalb des Bereiches <span class="math inline">\(0 &lt; \omega t &lt; 2\pi)\)</span> wird der Stromverlauf durch die Gleichung <span class="math inline">\(i =
+\hat{i} sin(\omega t)\)</span> wiedergegeben. Hierbei betrage der Scheitelwert des Stromes <span class="math inline">\(\hat{i} = 10 A\)</span>.</p>
+<p>Wie groß ist der Effektivwert <span class="math inline">\(I_{eff}\)</span> des Stromes?</p>
+<div id="cell-fig-aufg3.4" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -778,9 +923,60 @@ sin(\omega t)\)</span> wiedergegeben. Hierbei betrage der Scheitelwert des Strom
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>plt.plot(omega_t, i)</span>
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'$\omega t$'</span>)</span>
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'i'</span>)</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.xticks([0,63,127],['0','$\pi$','2$\pi$'])</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.xticks([0,63,127],['0','$\pi$','2$\pi$'])</span></span>
 <span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>plt.xticks(omega_t,list_ticks)</span>
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>&lt;&gt;:15: SyntaxWarning:
+
+invalid escape sequence '\p'
+
+&lt;&gt;:16: SyntaxWarning:
+
+invalid escape sequence '\p'
+
+&lt;&gt;:20: SyntaxWarning:
+
+invalid escape sequence '\o'
+
+&lt;&gt;:15: SyntaxWarning:
+
+invalid escape sequence '\p'
+
+&lt;&gt;:16: SyntaxWarning:
+
+invalid escape sequence '\p'
+
+&lt;&gt;:20: SyntaxWarning:
+
+invalid escape sequence '\o'
+
+/var/folders/bs/dl5x4l2n6xv6ywrg8knjtw440000gn/T/ipykernel_36548/3632701492.py:15: SyntaxWarning:
+
+invalid escape sequence '\p'
+
+/var/folders/bs/dl5x4l2n6xv6ywrg8knjtw440000gn/T/ipykernel_36548/3632701492.py:16: SyntaxWarning:
+
+invalid escape sequence '\p'
+
+/var/folders/bs/dl5x4l2n6xv6ywrg8knjtw440000gn/T/ipykernel_36548/3632701492.py:20: SyntaxWarning:
+
+invalid escape sequence '\o'
+</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div id="fig-aufg3.4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-aufg3.4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="tut_03_Periodische-Signale_files/figure-html/fig-aufg3.4-output-2.png" width="608" height="429" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-aufg3.4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13.11: Aufgabe 3.4
+</figcaption>
+</figure>
+</div>
+</div>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
@@ -794,10 +990,23 @@ Lösung
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[I = \sqrt{\frac{1}{2\pi} \int\limits_{0}^{2\pi} i^2 d\omega t}\]</span></p>
-<p><span class="math display">\[\int\limits_{0}^{2\pi} i^2 d\omega t = 2\int\limits_{0}^{\pi} i^2 d\omega t = 2\int\limits_{0}^{\pi} \hat{i}^2 \cdot sin^2(\omega t) d\omega t\]</span></p>
-<p><span class="math display">\[2\int\limits_{0}^{\pi} \hat{i}^2 \cdot sin^2(\omega t) d\omega t = 2\hat{i}^2 \left(\frac{1}{2} \omega t - \frac{1}{4} sin(2\omega t) \right) \Big\vert_\alpha^\pi = \hat{i}^2 \left( \pi - \alpha + \frac{1}{2} sin(2\alpha) \right)\]</span></p>
-<p><span class="math display">\[I = \sqrt{\frac{1}{2\pi} \cdot \int\limits_{0}^{2\pi} i^2 d\omega t} = \sqrt{\frac{1}{2\pi} \hat{i}^2 \left( \pi - \alpha + \frac{1}{2} sin(2\alpha) \right)} = \sqrt{\frac{1}{2\pi} \cdot (10 A)^2 \cdot \left( \pi - \frac{\pi}{4} + \frac{1}{2} \cdot sin(2 \cdot 45°) \right)} = 6.74 A\]</span></p>
+<p><span class="math display">\[
+I = \sqrt{\frac{1}{2\pi} \int\limits_{0}^{2\pi} i^2 d\omega t}
+\]</span></p>
+<p><span class="math display">\[
+\int\limits_{0}^{2\pi} i^2 d\omega t = 2\int\limits_{0}^{\pi} i^2 d\omega t
+= 2\int\limits_{0}^{\pi} \hat{i}^2 \cdot sin^2(\omega t) d\omega t
+\]</span></p>
+<p><span class="math display">\[
+2\int\limits_{0}^{\pi} \hat{i}^2 \cdot sin^2(\omega t) d\omega t
+= 2\hat{i}^2 \left(\frac{1}{2} \omega t - \frac{1}{4} sin(2\omega t) \right) \Big\vert_\alpha^\pi
+= \hat{i}^2 \left( \pi - \alpha + \frac{1}{2} sin(2\alpha) \right)
+\]</span></p>
+<p><span class="math display">\[
+I = \sqrt{\frac{1}{2\pi} \cdot \int\limits_{0}^{2\pi} i^2 d\omega t}
+= \sqrt{\frac{1}{2\pi} \hat{i}^2 \left( \pi - \alpha + \frac{1}{2} sin(2\alpha) \right)}
+= \sqrt{\frac{1}{2\pi} \cdot (10 A)^2 \cdot \left( \pi - \frac{\pi}{4} + \frac{1}{2} \cdot sin(2 \cdot 45°) \right)} = 6.74 A
+\]</span></p>
 </div>
 </div>
 </div>
@@ -820,8 +1029,12 @@ Lösung
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Dreieckspannung –&gt; Scheitelfaktor <span class="math inline">\(\xi = \sqrt{3}\)</span></p>
-<p><span class="math display">\[U = \frac{\hat{u}}{\sqrt{3}} = \frac{9 V}{\sqrt{3}} = 5.196 V\]</span></p>
-<p><span class="math display">\[P = \frac{U^2}{R} = \frac{5.196 V}{30 \Omega} = 0.9 W\]</span></p>
+<p><span class="math display">\[
+U = \frac{\hat{u}}{\sqrt{3}} = \frac{9 V}{\sqrt{3}} = 5.196 V
+\]</span></p>
+<p><span class="math display">\[
+P = \frac{U^2}{R} = \frac{5.196 V}{30 \Omega} = 0.9 W
+\]</span></p>
 </div>
 </div>
 </div>
@@ -832,10 +1045,10 @@ Lösung
 <div id="fig-TutChap3Aufg3.6" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TutChap3Aufg3.6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="../images/tut/chap3/Aufgabe2.6.pdf" id="fig-TutChap3Aufg3.6" class="img-fluid">
+<embed src="../images/tut/chap3/Aufgabe2.6.pdf" class="img-fluid">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-TutChap3Aufg3.6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;13.5
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TutChap3Aufg3.6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13.12: Aufgabe 3.6
 </figcaption>
 </figure>
 </div>
@@ -860,15 +1073,21 @@ Lösung
 <ol type="a">
 <li></li>
 </ol>
-<p><span class="math display">\[\overline{u(t)} = \frac{U_1 + U_2}{2}\]</span></p>
+<p><span class="math display">\[
+\overline{u(t)} = \frac{U_1 + U_2}{2}
+\]</span></p>
 <ol start="2" type="a">
 <li></li>
 </ol>
-<p><span class="math display">\[U = \sqrt{\left( \frac{U_2 - U_1}{2 \cdot \sqrt{3}} \right)^2 + \left( \frac{U_1 + U_2}{2} \right)^2}\]</span></p>
+<p><span class="math display">\[
+U = \sqrt{\left( \frac{U_2 - U_1}{2 \cdot \sqrt{3}} \right)^2 + \left( \frac{U_1 + U_2}{2} \right)^2}
+\]</span></p>
 <ol start="3" type="a">
 <li></li>
 </ol>
-<p><span class="math display">\[P = \frac{U^2}{R}\]</span></p>
+<p><span class="math display">\[
+P = \frac{U^2}{R}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -879,10 +1098,10 @@ Lösung
 <div id="fig-TutChap3Aufg3.7" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TutChap3Aufg3.7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="../images/tut/chap3/Aufgabe2.7.pdf" id="fig-TutChap3Aufg3.7" class="img-fluid">
+<embed src="../images/tut/chap3/Aufgabe2.7.pdf" class="img-fluid">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-TutChap3Aufg3.7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;13.6
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TutChap3Aufg3.7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13.13: Aufgabe 3.7
 </figcaption>
 </figure>
 </div>
@@ -907,15 +1126,21 @@ Lösung
 <ol type="a">
 <li></li>
 </ol>
-<p><span class="math display">\[\overline{i(t)} = I_0\]</span></p>
+<p><span class="math display">\[
+\overline{i(t)} = I_0
+\]</span></p>
 <ol start="2" type="a">
 <li></li>
 </ol>
-<p><span class="math display">\[I = \sqrt{I_0^2 + \left( \frac{I_0}{\sqrt{2}} \right)^2}\]</span></p>
+<p><span class="math display">\[
+I = \sqrt{I_0^2 + \left( \frac{I_0}{\sqrt{2}} \right)^2}
+\]</span></p>
 <ol start="3" type="a">
 <li></li>
 </ol>
-<p><span class="math display">\[P = I^2 \cdot R\]</span></p>
+<p><span class="math display">\[
+P = I^2 \cdot R
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1373,7 +1598,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/tut/tut_03_Periodische-Signale.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/tut/tut_03_Periodische-Signale.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
