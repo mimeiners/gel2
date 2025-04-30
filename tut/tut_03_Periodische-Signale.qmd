@@ -352,7 +352,7 @@ $$
 $$
 
 $$
-u = \hat{u} sin(\omega t) = 311.1 V \cdot sin(314.2 1/s)
+u = \hat{u} sin(\omega t) = 311.1 V \cdot sin(314.2 \frac{1}{s} t)
 $$
 :::
 
