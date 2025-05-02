@@ -97,37 +97,120 @@ U_{eff} = \sqrt{\overline{u^2(t)}} &= \sqrt{\frac{1}{T} \int_t^{t+T} u^2(\tau) \
 \end{align}
 :::
 
-## $u/i$-Verhalten
+## Ideale Netzwerkelemente
+
+Reale Bauteile werden für die Zwecke der Schaltungssimulation durch Ersatz- schaltungen aus idealen Netzwerkelementen
+beschrieben. Für unsere Belange sind dies Zweipole mit genau definierten Strom-Spannungs-Beziehungen sowie gesteuerte
+Quellen. Für die Beschreibung aktiver Bauelemente werden zusa ̈tzlich gesteuerte Quellen benötigt. 
+
+Ein *Zweipol* ist ein Schaltungselement mit zwei elektrischen Anschlüssen, den Polen oder Klemmen. Der Strom, der durch
+die eine Klemme in den Zweipol hineinfließt, ist dabei gleich dem durch die andere Klemme aus dem Zweipol
+herausfließenden Strom. Ein Zweipol heißt passiv wirkend, wenn er elektrische Energie aufnimmt; gibt er elektrische
+Energie ab, so wird er als aktiv wirkender Zweipol bezeichnet. 
 
 ::: {.callout-note} 
 
 ### Widerstand $R$ - Einheit: 1 $\Omega$
+
+Ein Zweipol heißt Widerstand, falls die zwischen seinen Klemmen auftretende Spannung $u(t)$ zu jedem Zeitpunkt durch den
+Klemmenstrom $i(t)$ bestimmt ist 
+
+$$
+v(t) = v[i(t)].
+$$
+
+Der Widerstand heißt linear oder ohmsch, falls Spannung und Strom zueinander proportional sind v(t) = Ri(t). (1.3)
+
+Der Proportionalitätsfaktor $R$ heißt Widerstand(swert), sein Kehrwert $G = 1/R$ der Leitwert des Zweipols. 
+Widerstandswerte werden in $\Omega$ (Ohm) angegeben, Leitwerte in S (Siemens); dabei gilt 1$\Omega$ = 1 V/A und 1S = 1/$\Omega$. 
+
+Wird der durch einen ohmschen Widerstand fließende Strom als Funktion der Spannung aufgetragen, so ergibt sich eine Gerade.
 
 \begin{align}
 u(t) &= R \cdot i(t) \\
 &= R \cdot \hat{I} \sin(\omega t + \varphi_i) \\
 &= \hat{U} \sin(\omega t + \varphi_u)
 \end{align}
+
+$$
+R = \frac{u(t)}{i(t)} = \frac{\oint \mathbf{E}(\mathbf{r},t) \, ds}{\iint \mathbf{J}(\mathbf{r},t) \, dA}
+$$
 :::
 
-::: {.callout-note}
-
-### Induktivität $L$ - Einheit: 1 H = 1 Vs/A
-
-\begin{align}
-u(t) &= L \cdot \frac{di_L(t)}{dt} \\
-&= \omega L \cdot \hat{I} \cos(\omega t + \varphi_i) \\
-&= \omega L \hat{I} \sin(\omega t + \varphi_i + \frac{\pi}{2})
-\end{align}
-:::
 
 ::: {.callout-note} 
 
 ### Kapazität $C$ - Einheit: 1 F = 1 C/V = 1 As/V
+
+Ein Zweipol heißt *Kapazität*, falls die in ihm gespeicherte Ladung $q(t)$ zu jedem Zeitpunkt eindeutig durch die zwischen
+seinen Klemmen anliegende Spannung $u(t)$ bestimmt ist
+
+$$
+q(t) = q[v(t)].
+$$
+
+Der durch eine Kapazität fließende Strom $i(t)$ ist gleich der Änderung der Ladung der Kapazität mit der Zeit
+
+$$
+i(t) = \frac{dq}{dt}
+$$
+
+Die Kapazität heißt linear, falls $q(t)$ und $u(t)$ proportional zueinander sind.
+
+$$
+q(t) = C u(t).
+$$ {#eq-qc}
+
+Der Proportionalitätsfaktor $C$ wird als Kapazität(swert) bezeichnet. Kapazitätswerte werden in F (Farad) angegeben, 
+wobei gilt 1 F = 1 C = 1 As. Im Fall der linearen Kapazität (@eq-qc) über in 
 
 \begin{align}
 i(t) &= C \cdot \frac{du_C(t)}{dt} \\
 &= \omega C \cdot \hat{U} \cos(\omega t + \varphi_u) \\
 &= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2})
 \end{align}
+
+$$
+C = \frac{q(t)}{u(t)} = \frac{\iint \mathbf{D}(\mathbf{r},t) \, dA}{\oint \mathbf{E}(\mathbf{r},t) \, ds}
+$$
+:::
+
+
+::: {.callout-note}
+
+### Induktivität $L$ - Einheit: 1 H = 1 Vs/A
+
+Ein Zweipol heißt *Induktivität*, falls sein Fluß $\varphi (t)$ zur Zeit $t$ eine Funktion des Stroms $i(t)$ ist
+
+$$
+\varphi (t) = \varphi [i(t)].
+$$
+
+Die Induktivität heißt linear, falls $\varphi (t)$ und $i(t)$ zueinander proportional sind
+
+$$
+\varphi (t) = L i(t).
+$$
+
+Der Proportionalitätsfaktor $L$ heißt Induktivität(-swert). Induktivitätswerte werden in H (Henry) angegeben, wobei gilt 
+1 H = 1 Vs/A.
+
+Die an der Induktivität abfallende Spannung $u(t)$ folgt aus dem Faradayschen Gesetz
+
+$$
+u(t) = \frac{d \varphi}{dt}
+$$
+
+und ist für lineare Induktivitäten proportional zur Änderung des Stroms (Spannungs- und Strompfeil gleichgerichtet)
+
+\begin{align}
+u(t) &= L \cdot \frac{di_L(t)}{dt} \\
+&= \omega L \cdot \hat{I} \cos(\omega t + \varphi_i) \\
+&= \omega L \hat{I} \sin(\omega t + \varphi_i + \frac{\pi}{2})
+\end{align}
+
+
+$$
+L = \frac{\varphi(t)}{i(t)} = \frac{\iint \mathbf{B}(\mathbf{r},t) \, dA}{\oint \mathbf{H}(\mathbf{r},t) \, ds}
+$$
 :::
