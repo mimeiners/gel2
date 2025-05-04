@@ -8,7 +8,7 @@ Zu meiner Person:
 Ich habe Elektrotechnik mit der Vertiefungsrichtung Informationstechnik studiert und bin zur Zeit im 1. Semester des
 Masterprogramms MScEE an der HSB. Ich habe bereits die Tutorien _Grundlagen der Elektrotechnik 1 und 2_ durchgeführt.
 
-Das tut ist als Unterstützung zur Vorlesung gedacht und legt den Fokus auf eine Wiederholung der Unterrichtsinhalte
+Das Tutorium ist als Unterstützung zur Vorlesung gedacht und legt den Fokus auf eine Wiederholung der Unterrichtsinhalte
 und Übungsaufgaben. Es besteht auch die Möglichkeit Fragen zu den Vorlesungsinhalten zu stellen.
 
 ## Termine
