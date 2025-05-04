@@ -16,20 +16,14 @@ jupyter:
 
 ## Schaltungsaufgabe mit Zeigerdiagramm
 
-```{figure} ../images/hw/hw3p1.png
-:width: 400px
-:name: fig:hw3p1
+![RLC-Schaltung für das Zeigerdiagramm.](../images/hw/hw3p1.png){#fig-hw3p1 width=400}
 
-RLC-Schaltung für das Zeigerdiagramm.
-```
-
-Gegeben ist die RLC-Schaltung in {numref}`fig:hw3p1`. Dabei sind die Bauteilwerte $R=100\,\Omega$, $L=1\,\mu H$,
-$C=1\,nF$ und die Spannungsquelle $u(t)=\hat{U} \cos(\omega t)$ mit $\hat{U}=1,41\,V$ und $\omega=2 \pi 6\,MHz$. 
+Gegeben ist die RLC-Schaltung in @fig-hw3p1. Dabei sind die Bauteilwerte $R=100\,\Omega$, $L=1\,\mu H$, $C=1\,nF$ und
+die Spannungsquelle $u(t)=\hat{U} \cos(\omega t)$ mit $\hat{U}=1,41\,V$ und $\omega=2 \pi 6\,MHz$.
 
 ### Zeigerdiagramm
 
 Die Aufgabe besteht darin, das Zeigerdiagramm für alle Teilströme und Teilspannungen zu erstellen
-
 
 #### Schrittweise graphische Lösung
 
@@ -62,11 +56,8 @@ $$
 
 5. Final den Summenvektor für die Quellenspannung einzeichnen; $\vec{U} = \vec{U_C} + \vec{U_R}$
 
-```{figure} ../images/hw/hw3p1a.png
-:width: 400px
+![Zeigerdiagramm.](../images/hw/hw3p1a.png){width=400}
 
-Zeigerdiagramm.
-```
 
 ## Kompensierter Spannungsteiler
 
@@ -74,43 +65,34 @@ Die abgebildete Schaltung in {numref}`fig:hw3p2` stellt das Prinzip eines Oszill
 dar, ein sogenannter kompensierter Spannungsteiler. Dabei bezeichnen $R$ und $C$ Widerstand und Kapazität des 
 Oszilloskopeingangs. $R_1 = 9\,M\Omega$, $R = 1\,M\Omega$, $R_2 = 1\,M\Omega$, $C = 10\,pF$.
 
-```{figure} ../images/hw/hw3p2.png
-:width: 400px
-:name: fig:hw3p2
+![Ersatzschaltbild eines Oszilloskop-Tastkopfes.](../images/hw/hw3p2.png){#fig-hw3p2 width=400}
 
-Ersatzschaltbild eines Oszilloskop-Tastkopfes.
-```
+vgl. [Kapazitiver Spannungsteiler](https://www.elektroniktutor.de/analogtechnik/c_teiler.html)  [@mietke2024]
 
-vgl. [Kapazitiver Spannungsteiler](https://www.elektroniktutor.de/analogtechnik/c_teiler.html) {cite}`mietke2024`
 
-(sec:hw3p1)=
-### Spannungsteiler
+### Spannungsteiler {#sec-hw3p2}
 Leiten Sie den Spannungsübertagungsfaktor $\underline{H}_u=\underline{U}_{osz}/\underline{U}$ allgemein für die angegebenen
 Bauteile her?
 
 #### Lösung
 Zeichnen Sie ein vereinfachtes Ersatzschaltbild mit zusammengefassten Impedanzen $Z_1$ und $Z_2$.
 
-```{figure} ../images/hw/hw3p2a.png
-:height: 200
+![Ersatzschaltbild des Tastkopfes zusammengefasst.](../images/hw/hw3p2a.png){height=200}
 
-Ersatzschaltbild des Tastkopfes zusammengefasst.
-```
-
-\begin{equation}
+$$
 Z_1 = \frac{\frac{R_1}{j\omega C_1}}{\frac{1}{j \omega C_1} + R_1} = \frac{R_1}{1 + j \omega R_1 C_1} 
-\end{equation}
+$$
 
-\begin{equation} 
+$$ 
 Z_2 = \frac{R_{2g}}{1+ j \omega R_{2g} C}, \quad \mbox{wobei} \quad  R_{2g}=\frac{R_2 R}{R_2+R}
-\end{equation}
+$$
 
 
 Mit diesen Definitionen bestimmt man das Spannungsverhältnis:
 
-\begin{equation}
+$$
 \underline{H}_u = \frac{\underline{U_{osz}}}{\underline{U}}= \frac{\underline{Z}_2}{\underline{Z}_1 + \underline{Z}_2}.
-\end{equation}
+$$
 
 
 ### Eingangsimpedanz
@@ -118,12 +100,12 @@ Wie groß ist die Eingangsimpedanz $\underline{Z}=\underline{U}/\underline{I}$ d
 
 
 #### Lösung
-Mit den Vorarbeiten aus {ref}`sec:hw3p1` kann man an dieser Stelle die Eingangsimpedanz des Tastkopfes als Reihenschaltung der 
+Mit den Vorarbeiten aus @sec-hw3p2 kann man an dieser Stelle die Eingangsimpedanz des Tastkopfes als Reihenschaltung der 
 Impedanzen $Z_1$ und $Z_2$ notieren.
 
-\begin{equation}
+$$
 \underline{Z} = \underline{Z}_1 + \underline{Z}_2 = \frac{R_1}{1 + j \omega R_1 C_1} + \frac{R_{2g}}{1+ j \omega R_{2g} C}
-\end{equation}
+$$
 
 
 ### Kapazität
@@ -136,39 +118,34 @@ Spannungsverhältnis $\underline{H}$ für alle Frequenzen gleich groß ist, sofe
 
 Die mathematische/ingenieurische Begründung ist wie folgt:
 
-\begin{equation}
+$$
 \frac{1}{Z_1} = \frac{1}{R_1} + j \omega C_1 
-\end{equation}
+$$
 
-\begin{equation} 
+$$ 
 \frac{1}{Z_2} = \frac{1}{R_{2g}} + j \omega C 
-\end{equation}
+$$
 
 
-\begin{equation} 
+$$ 
 \underline{H} = \frac{U_{osz}}{U} = \frac{Z_2}{Z_1 + Z_2} = \frac{1}{1+\frac{Z_1}{Z_2}}
 = \frac{1}{1+\frac{\frac{1}{R_{2g}}+j \omega C}{\frac{1}{R_1}+j \omega C_1}}
 = \frac{1}{1+\frac{R_1}{R_{2g}}\frac{1+j \omega R_{2g} C}{1+ j \omega R_1 C_1}}
-\end{equation}
+$$
 
 
 Hieraus folgt dann die Bestimmungsgleichung für den Kondensator $C_1$:
 
-\begin{equation}
+$$
 C_1 = \frac{R_{2g}}{R_1} C = \frac{0.5}{9} 10\,pF = 0.55\,pF.
-\end{equation}
+$$
 
 
 
 ## RC-Spannungsteiler
 Gegeben ist der abgebildete Spannungsteiler in {numref}`fig:hw3p3` mit zwei Widerständen und einem Kondensator.
 
-```{figure} ../images/hw/hw3p3.png
-:width: 400px
-:name: fig:hw3p3
-
-RC-Spannungsteiler.
-```
+![RC-Spannungsteiler.](../images/hw/hw3p3.png){width=400 #fig-hw3p3}
 
 ### Spannungsverhältnis
 Berechnen Sie den komplexen Spannungsübertragungsfaktor $\underline{H}_u=\underline{U}_2/\underline{U}_1$.
@@ -179,22 +156,19 @@ Fassen Sie die Bauteile zu Impedanzen $Z_1$ und $Z_2$ zusammen. Das gesuchte Spa
 Spannungsteilerregel.
 
 
-```{figure} ../images/hw/hw3p3a.png
-:width: 400px
+![RC-Spannungsteiler zusammengefasst.](../images/hw/hw3p3a.png){width=400}
 
-RC-Spannungsteiler zusammengefasst.
-```
 
-\begin{equation}
+$$
 \underline{Z}_1 = R_1  \underline{Z}_2 = R_2 + \frac{1}{j \omega C} 
-\end{equation}
+$$
 
 
-\begin{equation} 
+$$ 
 \underline{H} = \frac{\underline{U}_2}{\underline{U}_1} = \frac{\underline{Z}_2}{\underline{Z}_1+\underline{Z}_2} 
 = \frac{R_2+\frac{1}{j \omega C}}{R_1+R_2+\frac{1}{j \omega C}} 
 = \frac{1+j \omega R_2C}{1 + j \omega (R_1+R_2)C}
-\end{equation}
+$$
 
 
 ### Betrag und Phase
@@ -203,27 +177,31 @@ $R_1 = 1\,\Omega$, $R_2 = 100\,\Omega$ und $C = 1\,\mu F$ mit Python dar.
 
 
 #### Lösung
-Mit der Vorarbeit aus {ref}`sec:hw3p1` können Sie die Ausdrücke für Betrag und Phase der Spannungsübertragungsfunktion
+Mit der Vorarbeit aus @sec-hw3p2 können Sie die Ausdrücke für Betrag und Phase der Spannungsübertragungsfunktion
 $\underline{H}$ direkt ablesen. Der Betrag ist der Quotient der Beträge von Zähler und Nenner.
 
-\begin{equation}
+$$
 \vert \underline{H} \vert =  \frac{\vert 1 + j \omega R_2 C \vert}{\vert 1 + j \omega (R_1+R_2) C \vert} 
 = \frac{\sqrt{1 + (\omega R_2 C)^2}}{\sqrt{1+(\omega (R_1+R_2) C)^2}} 
 = \sqrt{\frac{1 + (\omega R_2 C)^2}{1 + (\omega (R_1+R_2) C)^2}}
-\end{equation}
+$$
 
 
 Für die Phase, das Argument von $\underline{H}$, kann auch der Quotient der Argumente von Zähler und Nenner gebildet
 werden.
 
-\begin{equation}
+$$
 \arg(\underline{H}) = \frac{\arg(1 + j \omega R_2 C)}{\arg(1 + j \omega (R_1+R_2) C)} 
 = \frac{\arctan(\omega R_2 C)}{\arctan(\omega (R_1+R_2) C)} 
 = \arctan(\omega R_2 C) - \arctan(\omega (R_1+R_2) C)
-\end{equation}
+$$
 
 
-```python
+```{python}
+#| code-fold: true
+#| label: fig-hw3p3
+#| fig-cap: "Bode-Diagramm"
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -245,35 +223,17 @@ H_u = (1 + 1j * w * R2 * C) / (1 + 1j * w * (R1 + R2) * C)
 
 # Mit direkten Funktionen aus numpy
 fig1 = plt.figure(1)
+
+# Frequenzgang
 plt.subplot(2, 1, 1)
 plt.semilogx(f, 20*np.log10(np.abs(H_u)))
 plt.grid()
 plt.ylabel(r'$\vert H_u \vert$/dB')
+
+# Phase
 plt.subplot(2, 1, 2)
 plt.semilogx(f, np.rad2deg(np.angle(H_u)))
 plt.grid()
 plt.ylabel(r'arg($H_u$)/Grad')
 plt.xlabel(r'Frequenz f/Hz')
-plt.title(r'Mit Bibliotheksfunktionen')
-
-
-# Mit eigenen Berechnungen
-# Betrag der Übertragungsfunktion
-abs_H_u = 20*np.log10(np.sqrt((1 + np.square(w * R2 * C)) / (1 + np.square(w * (R1 + R2) * C))))
-
-# Phase bzw. Argument der Übertragungsfunktion
-arg_H_u = np.arctan(w * R2 * C) - np.arctan(w * (R1 + R2) * C)
-
-fig2 = plt.figure(2)
-plt.subplot(2, 1, 1)
-plt.semilogx(f, abs_H_u)
-plt.grid()
-plt.ylabel(r'$\vert H_u \vert$/dB')
-plt.subplot(2, 1, 2)
-plt.semilogx(f, 180 / np.pi * arg_H_u)
-plt.grid()
-plt.ylabel(r'arg($H_u$)/Grad')
-plt.xlabel(r'Frequenz f/Hz')
-plt.title(r'Mit eigenen Berechnungen')
 ```
-
