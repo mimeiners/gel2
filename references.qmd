@@ -1,4 +1,4 @@
-# Bibliography {.unnumbered}
+# Literaturverzeichnis {.unnumbered}
 
 ::: {#refs}
 :::

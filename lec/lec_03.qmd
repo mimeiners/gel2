@@ -170,15 +170,3 @@ print('Phase in Grad =', np.degrees(z_ph))
 # Darstellung in der komplexen Ebene
 plt.plot(z.real, z.imag, 'x')
 ```
-
-### Kartesische Form
-
-### Polare Form
-
-### Kartesisch <-> Polar
-
-### Euler's Formel
-
-### Euler's inverse Formel
-
-### Algebraische Regeln
