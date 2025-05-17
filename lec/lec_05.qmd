@@ -1,4 +1,4 @@
-# Grafische Analysemethoden / Darstellungen im Frequenzbereich
+# Grafische Analysemethoden / Darstellungen in Frequenz- und Zeitbereich
 
 ## Bode-Diagramm
 
@@ -7,7 +7,9 @@ Betrag (Amplitudenverstärkung), der andere das Argument (die Phasenverschiebung
 Abhängigkeit von der Frequenz. Diese Art der Darstellung ist nach Hendrik Wade Bode benannt, welcher diese Diagramme bei
 seinen Arbeiten in den Bell Laboratories in den 1930er Jahren benutzte." [@wikipedia2021a]
 
-## Übertragungsfaktor
+
+## Übertragungsfaktor [@reisch2007]
+
 Ist die Eingangsgröße $x(t)$ eines linearen Netzwerks eine sinusförmige Wechselgröße der Kreisfrequenz $\omega$, in
 komplexer Schreibweise 
 
@@ -67,7 +69,7 @@ $$
 verzögert.
 
 
-## Angaben in dB
+## Angaben in dB [@reisch2007]
 
 Der Wert von Spannungs-, Strom- und Leistungsverstärkungen wird häufig als sog. Verstärkungsmaß $a$ in (deziBel) dB
 angegeben. Bei Spannungs- und Stromverstärkungen wird hierzu der (Zehner-)Logarithmus von $A(f)$ mit 20 dB
@@ -101,48 +103,50 @@ aber auch absolute Pegelangaben in dB vorgenommen, wobei eine feste Bezugsgröß
 hier die gebräuchliche "Einheit" dBm, die für Leistungsangaben verwendet wird und den Effektivwert $P$ der Leistung
 bezogen auf 1 mW angibt $P$ in dBm = $10\,dB \log(P/1\,mW)$.
 
+Der Übertragungsfaktor $H(j\omega)$ ist i.allg. eine komplexwertige Funktion der Frequenz. Für die grafische Darstellung
+der Frequenzabhängigkeit wird üblicherweise das sog. *Bode-Diagramm* gewählt. Dieses besteht aus zwei Abbildungen: In
+der einen wird das Verstärkungsmaß $a$, in der anderen die Phasenverschiebung $\varphi$ über dem Logarithmus der
+Frequenz $f = \omega/2\pi$ aufgetragen. Für $A(f)$ wird eine doppeltlogarithmische Auftragung gewählt, da
+Potenzfunktionen dabei Geraden ergeben: Für beliebige Zahlen $\alpha > 0$ sowie $m$ gilt
 
-### Bode-Diagramm einer RC-Schaltung (Hochpass)
+$$
+\log(\alpha f^m) = \log(\alpha) + m \log(f)
+$$
 
-Ermitteln Sie den Betrags- und Phasengang der einfachen RC-Schaltung mit Hilfe der komplexen Wechselstromrechnung (KWR).
-Nutzen Sie Python und SPICE zur Darstellung des Bode-Diagramms.
+Wird demnach $y = \log(a)$ über $x = log(f)$ aufgetragen, so ergibt sich eine Gerade der Steigung $m$, wodurch sich
+diese Größe leicht bestimmen läßt: Ein Anstieg der Spannungsverstärkung $A_v \sim f$ ergibt z.B. in
+doppeltlogarithmischer Auftragung eine Gerade der Steigung +1 bzw. 20 dB/dec, ein Abfall $A_v \sim 1/f$ entsprechend
+eine Gerade der Steigung −1 bzw. −20 dB/dec. Zeigt $a_v$ einen Abfall von 40 dB/dec, so kann umgekehrt auf eine
+Frequenzabhängigkeit $\sim 1/f^2$ geschlossen werden.
 
-```{python}
-#| label: fig-bode-rc_tp
-#| fig-cap: "Bode-Diagramm RC-Tiefpass"
-import numpy as np
-import matplotlib.pyplot as plt
 
-# Spezifikation der Impedanz/Admittanz
-R = 2e3
-C = 156e-9
+## Verzögerungszeit und Anstiegszeit [@reisch2007]
 
-# Frequenzvektor
-f = np.logspace(0, 5, 100)
-w = 2*np.pi*f
+Bezeichnet $y_0$ den minimalen Wert der Ausgangsgröße eines linearen Netzwerks und $y_s$ ihren Hub, so läßt sich
+schreiben 
 
-# Bestimmung der Impedaanzen
-Z1 = R
-Z2 = 1/(1j*w*C)
+$$
+y(t) = y_0 + y_s f(t),
+$$
 
-# Spannungsuebertrangungsfunktion
-H_u = Z1 / (Z1 + Z2)
+wobei $f(t)$ nur Werte zwischen 0 und 1 annehmen kann. Diese normierte Ausgangsvariable enthält sämtliche Informationen
+über das Zeitverhalten des Systems. Ein möglicher Verlauf von $f(t)$ als Antwort des Systems auf eine Sprungfunktion am
+Eingang ist in @fig-delay dargestellt. Zur Charakterisierung des Zeitverhaltens werden zwei Zeitkonstanten eingeführt:
 
-# Bode-Diagramm
-plt.subplot(2, 1, 1)
-plt.semilogx(f, 20*np.log10(np.abs(H_u)))
-plt.ylabel(r'$\vert H_u \vert$/dB')
-plt.grid()
-plt.title('Bode-Diagramm einer RC-Schaltung')
+1. Die *Verzögerungszeit* $t_d$, häufig definiert als die Zeit, nach der die Ausgangsgröße die Hälfte ihres Endwerts
+erreicht hat: $f(t_d) = 1/2$. 
 
-plt.subplot(2, 1, 2)
-plt.semilogx(f, np.angle(H_u))
-plt.xlabel(r'Frequenz f/Hz')
-plt.ylabel(r'arg($H_u$)/rad')
-plt.grid()
+2. Die *Anstiegszeit* $t_r$, oft definiert als der Kehrwert der Steigung von $f(t)$ bei $t = t_d$.
 
-plt.show()
-```
+::: {#fig-delay layout-ncol=2}
+
+![$f(t)$](../images/lec/lec5delay_func.pdf){#fig-delay_func}
+
+![$\dot{f}(t)$](../images/lec/lec5delay_elmore.pdf){#fig-delay_elmore}
+
+Definition von Verzögerungszeit und Anstiegszeit
+:::
+
 
 ## Nyquist-Diagramm
 
@@ -294,19 +298,194 @@ $$
 
 ## RC-Filter
 
-### RC-Tiefpaß
+### RC-Tiefpaß [@reisch2007]
+
+Ein Tiefpaß überträgt sinusförmige Wechselspannungen geringer Frequenz unverändert. Bei hohen Frequenzen bewirkt er eine
+Abschwächung und Phasenverschiebung.  @fig-lec5rc_bode_schem zeigt für einen Tiefpaß den Verlauf von $a_v$, der
+Spannungsverstärkung in decibel (dB) im Bode-Diagramm. In dem bei tiefen Frequenzen vorliegenden Durchlaßbereich ist
+$a_v \approx 0 dB$; in dem bei hohen Frequenzen vorliegenden Sperrbereich erfolgt ein Abfall, der bei Tiefpaßnetzwerken
+aus konzentrierten Elementen durch eine Potenzfunktion gegeben ist. Gilt $A_v \sim f^−m$, so spricht man von einem
+Tiefpaß m-ter Ordnung; im Bode-Diagramm entspricht dies einer Geraden der Steigung $−m \cdot$ 20 dB/dec. Der Übergang 
+zwischen Sperrbereich und Durchlaßbereich wird durch die *Grenzfrequenz* $f_g$ des Tiefpasses markiert; bei dieser weist 
+$a_v$ in guter Näherung den Wert −3 dB auf.
+
+![Schematisches Bode-Diagramm](../images/lec/lec5rc_bode_schem.pdf){#fig-lec5rc_bode_schem}
+
+**Übertragungsverhalten**
+
+![RC-Tiefpass](../images/lec/lec5rc_tp.pdf){#fig-lec5rc_tp}
+
+@fig-lec5rc_tp zeigt die Schaltung eines RC-Tiefpasses. Wird am Eingang eine sinusförmige Wechselspannung 
+$v_1(t) = \operatorname{Re}(\underline{\hat{v_1}} e^{j\omega t})$ angelegt, so tritt am Ausgang die Spannung 
+$v_2(t) = \operatorname{Re}(\underline{\hat{v_2}} e^{j\omega t})$ auf. Der Spannungsübertragungsfaktor des 
+unbelasteten Tiefpasses ergibt sich aus der komplexen Spannungsteilerformel
+
+$$
+\underline{H}_v(j \omega) = \frac{\underline{v}_2}{\underline{v}_1} = \frac{(j \omega C)^{-1}}{R + (j \omega C)^{-1}}
+$$
+
+Mit der (3 dB-)Grenzfrequenz 
+
+$$
+f_g = 1/(2 \pi RC)
+$$
+
+und $\omega = 2 \pi f$ folgt aus #eq- für die Spannungsverstärkung 
+
+$$
+A_v(f) =  \frac{1}{\sqrt{1+(f/f_g)^2}} 
+$$
+
+und für die Phasenverschiebung
+
+$$
+\varphi(f) = −\arctan(f/f_g).
+$$
+
+Das zugehörige Bode-Diagramm ist in @fig-bode-rc_tp zu sehen. Für Frequenzen $f << f_g$ gilt in guter Näherung 
+$A_v \approx 1$ bzw. $a_v = 0 dB$; für Frequenzen $f >> f_g$ dagegen $A_v(f) \approx f_g/f$. Im Bode-Diagramm 
+entspricht dies einem Abfall von 20 dB/dec, d.h. der betrachtete RC-Tiefpaß ist ein Tiefpaß erster Ordnung. 
+Wird der für große Frequenzen beobachtete Kurvenverlauf im Bode-Diagramm linear zu 0 dB extrapoliert, so 
+liefert der Schnittpunkt mit der 0 dB-Achse die Grenzfrequenz. Dort gilt $A_v = 1/\sqrt{2}$ und 
+$a_v(f_g) = 20\,dB \cdot log(1/\sqrt{2}) \approx -3.01 \,dB$, während die Phasenverschiebung den Wert −45$^{}$
+aufweist.
+
+
+```{python}
+#| label: fig-bode-rc_tp
+#| fig-cap: "Bode-Diagramm RC-Tiefpass"
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Spezifikation der Impedanz/Admittanz
+R = 1e3
+C = 100e-9
+
+# Frequenzvektor
+f = np.logspace(0, 5, 100)
+w = 2*np.pi*f
+
+# Bestimmung der Impedaanzen
+Z1 = R
+Z2 = 1/(1j*w*C)
+
+# Spannungsuebertrangungsfunktion
+H_v = Z2 / (Z1 + Z2)
+
+# Bode-Diagramm
+plt.subplot(2, 1, 1)
+plt.semilogx(f, 20*np.log10(np.abs(H_u)))
+plt.ylabel(r'$\vert H_v \vert$/dB')
+plt.grid()
+
+plt.subplot(2, 1, 2)
+plt.semilogx(f, np.rad2deg(np.angle(H_u)))
+plt.xlabel(r'Frequenz f/Hz')
+plt.ylabel(r'arg($H_v$)/deg')
+plt.grid()
+
+plt.show()
+```
+
+#### Zeitbereich - Impulsverhalten
+
+Für eine Untersuchung des Impulsverhaltens wird die Ausgangsspannung $v_2(t)$ als Funktion von $v_1(t)$ im Zeitbereich
+bestimmt. Im Fall des unbelasteten Tiefpasses ergibt der Knotensatz angewandt auf den Ausgangsknoten 
+
+$$
+\frac{v_1(t) − v_2(t)}{R} = C \frac{d v_2(t)}{dt}
+$$
+
+bzw. mit $\tau = RC$, der Zeitkonstante,
+
+$$
+\frac{d v_2(t)}{dt} + \frac{v_2(t)}{\tau} = \frac{v_1(t)}{\tau}.
+$$
+
+Als allgemeine Lösung dieser inhomogenen Differentialgleichung erster Ordnung zum Anfangswert $v_2(0)$ resultiert
+
+$$
+v_2(t) = v_2(0) \exp\left(-\frac{t}{\tau} \right) + 
+\frac{1}{\tau} \int_0^t v_1(t') exp\left(-\frac{t - t'}{\tau} \right) dt'.
+$$
+
+*Einschalt- und Ausschaltvorgang.* Einfache Spezialfälle sind der *Einschaltvorgang* 
+($v_2(0)=0$ und $v_1(t) = V_+$ für $t > 0$) mit dem Ausgangsspannungsverlauf
+
+$$
+v_2(t) = V_+ \left(1 − exp\left(−\frac{t}{\tau} \right) \right)
+$$
+
+und der *Ausschaltvorgang* ($v_2(0)=V_+$ und $v_1(t)=0$ für $t > 0$) mit dem Ausgangsspannungsverlauf
+
+$$
+v_2(t) = V_+ exp\left( -\frac{t}{\tau} \right).
+$$
+
+
+![Sprungantwort des RC-Tiefpasses](../images/lec/lec5rc_sprung.pdf){#fig-lec5rc_sprung}
+
+
+@fig-lec5rc_sprung zeigt für beide Situationen den Verlauf der Spannung an Eingang und Ausgang. Als charakteristische
+Zeit für das Erreichen des Endwerts dient die *RC-Zeitkonstante* $\tau$; diese ist gleich der *Verzögerungszeit* $t_d$
+des RC-Tiefpasses. Erst für eine Zeitspanne $t > 5\tau$ nach dem Umschaltvorgang ist der Endwert in guter 
+Näherung (Fehler ca. 0.67 %) erreicht.
+
+*Anstiegs- und Abfallzeit.* Als *Anstiegszeit* $t_r$ wird oft die Zeit bezeichnet, die das Potential am Ausgang bei 
+sprunghafter Änderung der Eingangsspannung benötigt, um von 10% auf 90% seines Endwerts anzusteigen. Aus 
+folgt die Zeit $t_{10\%}$, nach der die Ausgangsspannung 10% des Endwerts $V_+$ erreicht hat
+
+$$
+t_{10\%} = −\tau \ln(0.9),
+$$
+
+sowie die Zeit $t_{90\%}$ nach der $v_2(t)$ 90\% des Endwerts erreicht hat
+
+$$
+t_{90\%} = −\tau \ln(0.1).
+$$
+
+Die Anstiegszeit $t_r = t_{90\%} − t_{10\%}$ errechnet sich hieraus zu
+
+$$
+t_r = \tau \ln(9) \approx 2.2 \cdot \tau \approx 0.35/f_g.
+$$
+
+Sie ist gleich der Abfallzeit $t_f = t_{10\%} − t_{90\%}$, wie sich durch eine entsprechende Untersuchung des
+Ausschaltvorgangs leicht zeigen läßt.
+
+
+Beispielsweise wird ein RC-Tiefpaß mit $R = 150\,\Omega$, $C = 100\,nF$ mit LTspice betrachtet. Dieser besitzt die
+Grenzfrequenz 
+
+$$
+f_g = \frac{1}{2 \pi RC} = 10.61\,kHz.
+$$
+
+Wird auf den Eingang eine rechteckförmige Spannung gegeben
+
+$$
+v_1(t) = 2.5\,V + \Delta v_1(t); \quad 
+\Delta v_1(t) = 
+\begin{cases}
+2.5\,V & \text{in der 1. Halbperiode} \\
+-2.5\,V & \text{in der 2. Halbperiode}
+\end{cases}
+$$
+
+so stellt sich am Ausgang für $t >> \tau = 15\,\mu s$ ein periodischer Spannungsverlauf mit dem Gleichanteil 2.5 V 
+und dem Wechselanteil $\Delta v_2(t)$ ein.
 
 ### RC-Hochpaß
 
 ### RC-Bandpaß
 
 
-![Bode-Diagramm eines Bandpasses](../images/lec/lec5bp.pdf){#fig-lec5bp width=400}
-
+![Bode-Diagramm eines Bandpasses](../images/lec/lec5bp.pdf){#fig-lec5bp width=600}
 
 "Besitzt ein Netzwerk sowohl bei hohen als auch bei tiefen Frequenzen einen Sperrbereich und bei mittleren Frequenzen
 einen Durchlaßbereich, so liegt ein Bandpaß vor. Der prinzipielle Verlauf der Spannungsverstärkung $a_v$ ist im
-Bode-Diagramm {numref}`fig:lec5bp` skizziert. Die Grenzen des Durchlaßbereichs werden nach unten durch die untere
+Bode-Diagramm @fig-lec5bp skizziert. Die Grenzen des Durchlaßbereichs werden nach unten durch die untere
 Grenzfrequenz $f_{gu}$ und nach oben durch die obere Grenzfrequenz $f_{go}$ bestimmt. Die Differenz 
 $B = f_{go} − f_{gu}$ heißt Bandbreite (engl. bandwidth) des Bandpasses; das geometrische Mittel 
 
@@ -323,7 +502,7 @@ Einfügungsdämpfung bezeichnet." [@reisch2007]
 "Die als [Wien-Glied](https://www.elektroniktutor.de/analogtechnik/wien.html) bezeichnete Schaltung ist ein spezieller
 RC-Bandpass. Im Wien-Robinson-Generator bestimmt dieses Filter die Ausgangsfrequenz. Er generiert Sinusfrequenzen mit
 sehr geringem Klirrfaktor. Im durchstimmbaren Sinusgenerator sind die beiden Widerstände durch gemeinsam einstellbare
-Potentiometer ersetzt. Diese Anordnung gibt es auch in Wechselstrom-Brückenschaltungen." {cite}`mietke2024`
+Potentiometer ersetzt. Diese Anordnung gibt es auch in Wechselstrom-Brückenschaltungen." [@mietke2024]
 
 ## Elementtransformation
 
