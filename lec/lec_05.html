@@ -725,6 +725,71 @@ Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
 </div>
 </div>
 </div>
+<p>Um in LTspice das Bode-Diagramm des RC-Tiefpass zu erhalten, muss eine <a href="https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/lec5rctp.asc">.ac Analyse</a> durchgeführt werden. Diese kann mit Python wie folgt ausgewertet werden:</p>
+<div id="c38d17b8" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der AC SPICE Analyse der RC-Schaltung</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Init</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ltspice</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Laden der RAW LTSpice Daten in den Python-Workspace</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="bu">file</span> <span class="op">=</span> <span class="st">'../files/spice/lec5rctp.raw'</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>raw <span class="op">=</span> ltspice.Ltspice(<span class="bu">file</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>raw.parse()</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># %% AC Analyse</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Daten werden als Numpy-Array geladen, Typ complex</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>Af <span class="op">=</span> raw.get_data(<span class="st">"V(2)"</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>freq <span class="op">=</span> raw.get_data(<span class="st">"frequency"</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>a_dB <span class="op">=</span> <span class="dv">20</span><span class="op">*</span>np.log10(np.<span class="bu">abs</span>(Af))  <span class="co"># Betrag in dB</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>a_ph <span class="op">=</span> np.rad2deg(np.angle(Af))  <span class="co"># Phase in Grad (engl. degree)</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> freq.real</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Erzeugen des Bode-Diagramms</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, a_dB)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'</span><span class="dv">$</span><span class="ch">\v</span><span class="vs">ert H_v </span><span class="ch">\v</span><span class="vs">ert</span><span class="dv">$</span><span class="vs">/dB'</span>)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, a_ph)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'</span><span class="dv">$</span><span class="vs">arg</span><span class="kw">(</span><span class="vs">H_v</span><span class="kw">)</span><span class="dv">$</span><span class="vs">/deg'</span>)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'f/Hz'</span>)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Erzeugen der Ortskurve</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>plt.plot(Af.real, Af.imag)</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'Re'</span>)</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'Im'</span>)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lec_05_files/figure-html/cell-4-output-1.png" width="598" height="431" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lec_05_files/figure-html/cell-4-output-2.png" width="600" height="429" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 <section id="zeitbereich---impulsverhalten" class="level4" data-number="5.6.1.1">
 <h4 data-number="5.6.1.1" class="anchored" data-anchor-id="zeitbereich---impulsverhalten"><span class="header-section-number">5.6.1.1</span> Zeitbereich - Impulsverhalten</h4>
 <p>Für eine Untersuchung des Impulsverhaltens wird die Ausgangsspannung <span class="math inline">\(v_2(t)\)</span> als Funktion von <span class="math inline">\(v_1(t)\)</span> im Zeitbereich bestimmt. Im Fall des unbelasteten Tiefpasses ergibt der Knotensatz angewandt auf den Ausgangsknoten</p>
@@ -738,15 +803,15 @@ Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
 <p>Als allgemeine Lösung dieser inhomogenen Differentialgleichung erster Ordnung zum Anfangswert <span class="math inline">\(v_2(0)\)</span> resultiert</p>
 <p><span class="math display">\[
 v_2(t) = v_2(0) \exp\left(-\frac{t}{\tau} \right) +
-\frac{1}{\tau} \int_0^t v_1(t') exp\left(-\frac{t - t'}{\tau} \right) dt'.
+\frac{1}{\tau} \int_0^t v_1(t') \exp\left(-\frac{t - t'}{\tau} \right) dt'.
 \]</span></p>
 <p><em>Einschalt- und Ausschaltvorgang.</em> Einfache Spezialfälle sind der <em>Einschaltvorgang</em> (<span class="math inline">\(v_2(0)=0\)</span> und <span class="math inline">\(v_1(t) = V_+\)</span> für <span class="math inline">\(t &gt; 0\)</span>) mit dem Ausgangsspannungsverlauf</p>
 <p><span class="math display">\[
-v_2(t) = V_+ \left(1 − exp\left(−\frac{t}{\tau} \right) \right)
+v_2(t) = V_+ \left(1 − \exp\left(−\frac{t}{\tau} \right) \right)
 \]</span></p>
 <p>und der <em>Ausschaltvorgang</em> (<span class="math inline">\(v_2(0)=V_+\)</span> und <span class="math inline">\(v_1(t)=0\)</span> für <span class="math inline">\(t &gt; 0\)</span>) mit dem Ausgangsspannungsverlauf</p>
 <p><span class="math display">\[
-v_2(t) = V_+ exp\left( -\frac{t}{\tau} \right).
+v_2(t) = V_+ \exp\left( -\frac{t}{\tau} \right).
 \]</span></p>
 <div id="fig-lec5rc_sprung" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -772,7 +837,7 @@ t_{90\%} = −\tau \ln(0.1).
 t_r = \tau \ln(9) \approx 2.2 \cdot \tau \approx 0.35/f_g.
 \]</span></p>
 <p>Sie ist gleich der Abfallzeit <span class="math inline">\(t_f = t_{10\%} − t_{90\%}\)</span>, wie sich durch eine entsprechende Untersuchung des Ausschaltvorgangs leicht zeigen läßt.</p>
-<p>Beispielsweise wird ein RC-Tiefpaß mit <span class="math inline">\(R = 150\,\Omega\)</span>, <span class="math inline">\(C = 100\,nF\)</span> mit LTspice betrachtet. Dieser besitzt die Grenzfrequenz</p>
+<p>Beispielsweise wird ein RC-Tiefpaß mit <span class="math inline">\(R = 150\,\Omega\)</span>, <span class="math inline">\(C = 100\,nF\)</span> mit <a href="https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/bsp133_reisch.asc">LTspice</a> betrachtet. Dieser besitzt die Grenzfrequenz</p>
 <p><span class="math display">\[
 f_g = \frac{1}{2 \pi RC} = 10.61\,kHz.
 \]</span></p>
