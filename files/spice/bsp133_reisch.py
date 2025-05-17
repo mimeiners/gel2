@@ -3,12 +3,13 @@
 Auswertung der TRAN SPICE Analyse der RC-Schaltung
 
 """
+
 # %% Init
 import ltspice
 import matplotlib.pyplot as plt
 
 # %% Laden der RAW LTSpice Daten in den Python-Workspace
-file = 'bsp133_reisch.raw'
+file = '../files/spice/bsp133_reisch.raw'
 raw = ltspice.Ltspice(file)
 raw.parse()
 

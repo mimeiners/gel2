@@ -387,6 +387,15 @@ plt.grid()
 plt.show()
 ```
 
+Um in LTspice das Bode-Diagramm des RC-Tiefpass zu erhalten, muss eine 
+[.ac Analyse](https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/lec5rctp.asc) durchgeführt werden.
+Diese kann mit Python wie folgt ausgewertet werden:
+
+```{python}
+
+{{< include ../files/spice/lec5rctp_ac.py >}}
+```
+
 #### Zeitbereich - Impulsverhalten
 
 Für eine Untersuchung des Impulsverhaltens wird die Ausgangsspannung $v_2(t)$ als Funktion von $v_1(t)$ im Zeitbereich
@@ -406,20 +415,20 @@ Als allgemeine Lösung dieser inhomogenen Differentialgleichung erster Ordnung z
 
 $$
 v_2(t) = v_2(0) \exp\left(-\frac{t}{\tau} \right) + 
-\frac{1}{\tau} \int_0^t v_1(t') exp\left(-\frac{t - t'}{\tau} \right) dt'.
+\frac{1}{\tau} \int_0^t v_1(t') \exp\left(-\frac{t - t'}{\tau} \right) dt'.
 $$
 
 *Einschalt- und Ausschaltvorgang.* Einfache Spezialfälle sind der *Einschaltvorgang* 
 ($v_2(0)=0$ und $v_1(t) = V_+$ für $t > 0$) mit dem Ausgangsspannungsverlauf
 
 $$
-v_2(t) = V_+ \left(1 − exp\left(−\frac{t}{\tau} \right) \right)
+v_2(t) = V_+ \left(1 − \exp\left(−\frac{t}{\tau} \right) \right)
 $$
 
 und der *Ausschaltvorgang* ($v_2(0)=V_+$ und $v_1(t)=0$ für $t > 0$) mit dem Ausgangsspannungsverlauf
 
 $$
-v_2(t) = V_+ exp\left( -\frac{t}{\tau} \right).
+v_2(t) = V_+ \exp\left( -\frac{t}{\tau} \right).
 $$
 
 
@@ -455,8 +464,8 @@ Sie ist gleich der Abfallzeit $t_f = t_{10\%} − t_{90\%}$, wie sich durch eine
 Ausschaltvorgangs leicht zeigen läßt.
 
 
-Beispielsweise wird ein RC-Tiefpaß mit $R = 150\,\Omega$, $C = 100\,nF$ mit LTspice betrachtet. Dieser besitzt die
-Grenzfrequenz 
+Beispielsweise wird ein RC-Tiefpaß mit $R = 150\,\Omega$, $C = 100\,nF$ mit [LTspice](https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/bsp133_reisch.asc)
+betrachtet. Dieser besitzt die Grenzfrequenz 
 
 $$
 f_g = \frac{1}{2 \pi RC} = 10.61\,kHz.
@@ -475,6 +484,14 @@ $$
 
 so stellt sich am Ausgang für $t >> \tau = 15\,\mu s$ ein periodischer Spannungsverlauf mit dem Gleichanteil 2.5 V 
 und dem Wechselanteil $\Delta v_2(t)$ ein.
+
+Auswertung der LTspice Analyse mit Python:
+
+```{python}
+
+{{< include ../files/spice/bsp133_reisch.py >}}
+
+```
 
 ### RC-Hochpaß
 
