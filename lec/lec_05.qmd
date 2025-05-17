@@ -374,12 +374,12 @@ H_v = Z2 / (Z1 + Z2)
 
 # Bode-Diagramm
 plt.subplot(2, 1, 1)
-plt.semilogx(f, 20*np.log10(np.abs(H_u)))
+plt.semilogx(f, 20*np.log10(np.abs(H_v)))
 plt.ylabel(r'$\vert H_v \vert$/dB')
 plt.grid()
 
 plt.subplot(2, 1, 2)
-plt.semilogx(f, np.rad2deg(np.angle(H_u)))
+plt.semilogx(f, np.rad2deg(np.angle(H_v)))
 plt.xlabel(r'Frequenz f/Hz')
 plt.ylabel(r'arg($H_v$)/deg')
 plt.grid()
