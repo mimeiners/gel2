@@ -347,8 +347,8 @@ $A_v \approx 1$ bzw. $a_v = 0 dB$; für Frequenzen $f >> f_g$ dagegen $A_v(f) \a
 entspricht dies einem Abfall von 20 dB/dec, d.h. der betrachtete RC-Tiefpaß ist ein Tiefpaß erster Ordnung. 
 Wird der für große Frequenzen beobachtete Kurvenverlauf im Bode-Diagramm linear zu 0 dB extrapoliert, so 
 liefert der Schnittpunkt mit der 0 dB-Achse die Grenzfrequenz. Dort gilt $A_v = 1/\sqrt{2}$ und 
-$a_v(f_g) = 20\,dB \cdot log(1/\sqrt{2}) \approx -3.01 \,dB$, während die Phasenverschiebung den Wert −45$^{}$
-aufweist.
+$a_v(f_g) = 20\,dB \cdot \log(1/\sqrt{2}) \approx -3.01 \,dB$, während die Phasenverschiebung den 
+Wert −45$^{\circ}$ aufweist.
 
 
 ```{python}
