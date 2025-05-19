@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -94,7 +94,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -309,6 +309,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Spannungsteiler</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Bode-Diagramm und Nyquist-Ortskurve</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -323,37 +329,37 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_01_Einfuehrung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_02_Komplexe-Zahlen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_03_Periodische-Signale.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_04_Komplexe-Groessen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Komplexe Größen der Wechselstromtechnik</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Komplexe Größen der Wechselstromtechnik</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_05_Grundzweipole1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Verhalten der Grundzweipole 1</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Verhalten der Grundzweipole 1</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_06_Grundzweipole2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Verhalten der Grundzweipole 2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Verhalten der Grundzweipole 2</span></span></a>
   </div>
 </li>
       </ul>
@@ -679,7 +685,7 @@ A_v(f) =  \frac{1}{\sqrt{1+(f/f_g)^2}}
 <p><span class="math display">\[
 \varphi(f) = −\arctan(f/f_g).
 \]</span></p>
-<p>Das zugehörige Bode-Diagramm ist in <a href="#fig-bode-rc_tp" class="quarto-xref">Abbildung&nbsp;<span>5.6</span></a> zu sehen. Für Frequenzen <span class="math inline">\(f &lt;&lt; f_g\)</span> gilt in guter Näherung <span class="math inline">\(A_v \approx 1\)</span> bzw. <span class="math inline">\(a_v = 0 dB\)</span>; für Frequenzen <span class="math inline">\(f &gt;&gt; f_g\)</span> dagegen <span class="math inline">\(A_v(f) \approx f_g/f\)</span>. Im Bode-Diagramm entspricht dies einem Abfall von 20 dB/dec, d.h. der betrachtete RC-Tiefpaß ist ein Tiefpaß erster Ordnung. Wird der für große Frequenzen beobachtete Kurvenverlauf im Bode-Diagramm linear zu 0 dB extrapoliert, so liefert der Schnittpunkt mit der 0 dB-Achse die Grenzfrequenz. Dort gilt <span class="math inline">\(A_v = 1/\sqrt{2}\)</span> und <span class="math inline">\(a_v(f_g) = 20\,dB \cdot log(1/\sqrt{2}) \approx -3.01 \,dB\)</span>, während die Phasenverschiebung den Wert −45<span class="math inline">\(^{}\)</span> aufweist.</p>
+<p>Das zugehörige Bode-Diagramm ist in <a href="#fig-bode-rc_tp" class="quarto-xref">Abbildung&nbsp;<span>5.6</span></a> zu sehen. Für Frequenzen <span class="math inline">\(f &lt;&lt; f_g\)</span> gilt in guter Näherung <span class="math inline">\(A_v \approx 1\)</span> bzw. <span class="math inline">\(a_v = 0 dB\)</span>; für Frequenzen <span class="math inline">\(f &gt;&gt; f_g\)</span> dagegen <span class="math inline">\(A_v(f) \approx f_g/f\)</span>. Im Bode-Diagramm entspricht dies einem Abfall von 20 dB/dec, d.h. der betrachtete RC-Tiefpaß ist ein Tiefpaß erster Ordnung. Wird der für große Frequenzen beobachtete Kurvenverlauf im Bode-Diagramm linear zu 0 dB extrapoliert, so liefert der Schnittpunkt mit der 0 dB-Achse die Grenzfrequenz. Dort gilt <span class="math inline">\(A_v = 1/\sqrt{2}\)</span> und <span class="math inline">\(a_v(f_g) = 20\,dB \cdot \log(1/\sqrt{2}) \approx -3.01 \,dB\)</span>, während die Phasenverschiebung den Wert −45<span class="math inline">\(^{\circ}\)</span> aufweist.</p>
 <div id="cell-fig-bode-rc_tp" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -726,7 +732,7 @@ Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
 </div>
 </div>
 <p>Um in LTspice das Bode-Diagramm des RC-Tiefpass zu erhalten, muss eine <a href="https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/lec5rctp.asc">.ac Analyse</a> durchgeführt werden. Diese kann mit Python wie folgt ausgewertet werden:</p>
-<div id="2cd17053" class="cell" data-execution_count="3">
+<div id="eb01c042" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der AC SPICE Analyse der RC-Schaltung</span></span>
@@ -847,7 +853,7 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 \]</span></p>
 <p>so stellt sich am Ausgang für <span class="math inline">\(t &gt;&gt; \tau = 15\,\mu s\)</span> ein periodischer Spannungsverlauf mit dem Gleichanteil 2.5 V und dem Wechselanteil <span class="math inline">\(\Delta v_2(t)\)</span> ein.</p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="1ec7b446" class="cell" data-execution_count="4">
+<div id="f1503047" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der TRAN SPICE Analyse der RC-Schaltung</span></span>
