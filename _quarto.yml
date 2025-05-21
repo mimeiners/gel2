@@ -56,7 +56,7 @@ book:
         - hw/hw_01.qmd
         - hw/hw_02.qmd
         - hw/hw_03.qmd
-#        - hw/hw_04.ipynb
+        - hw/hw_04.qmd
 #        - hw/hw_05.ipynb
 #        - hw/hw_06.ipynb
 #        - hw/hw_07.ipynb
