@@ -342,8 +342,8 @@ $$
 \varphi(f) = −\arctan(f/f_g).
 $$
 
-Das zugehörige Bode-Diagramm ist in @fig-bode-rc_tp zu sehen. Für Frequenzen $f << f_g$ gilt in guter Näherung 
-$A_v \approx 1$ bzw. $a_v = 0 dB$; für Frequenzen $f >> f_g$ dagegen $A_v(f) \approx f_g/f$. Im Bode-Diagramm 
+Das zugehörige Bode-Diagramm ist in @fig-bode-rc_tp zu sehen. Für Frequenzen $f \ll f_g$ gilt in guter Näherung 
+$A_v \approx 1$ bzw. $a_v = 0 dB$; für Frequenzen $f \gg f_g$ dagegen $A_v(f) \approx f_g/f$. Im Bode-Diagramm 
 entspricht dies einem Abfall von 20 dB/dec, d.h. der betrachtete RC-Tiefpaß ist ein Tiefpaß erster Ordnung. 
 Wird der für große Frequenzen beobachtete Kurvenverlauf im Bode-Diagramm linear zu 0 dB extrapoliert, so 
 liefert der Schnittpunkt mit der 0 dB-Achse die Grenzfrequenz. Dort gilt $A_v = 1/\sqrt{2}$ und 
@@ -365,7 +365,7 @@ C = 100e-9
 f = np.logspace(0, 5, 100)
 w = 2*np.pi*f
 
-# Bestimmung der Impedaanzen
+# Bestimmung der Impedanzen
 Z1 = R
 Z2 = 1/(1j*w*C)
 
@@ -387,7 +387,7 @@ plt.grid()
 plt.show()
 ```
 
-Um in LTspice das Bode-Diagramm des RC-Tiefpass zu erhalten, muss eine 
+Um in LTspice das Bode-Diagramm des RC-Tiefpasses zu erhalten, muss eine 
 [.ac Analyse](https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/lec5rctp.asc) durchgeführt werden.
 Diese kann mit Python wie folgt ausgewertet werden:
 
@@ -415,7 +415,7 @@ Als allgemeine Lösung dieser inhomogenen Differentialgleichung erster Ordnung z
 
 $$
 v_2(t) = v_2(0) \exp\left(-\frac{t}{\tau} \right) + 
-\frac{1}{\tau} \int_0^t v_1(t') \exp\left(-\frac{t - t'}{\tau} \right) dt'.
+\frac{1}{\tau} \int_0^t \dot{v}_1(t') \exp\left(-\frac{t - t'}{\tau} \right) dt'.
 $$
 
 *Einschalt- und Ausschaltvorgang.* Einfache Spezialfälle sind der *Einschaltvorgang* 
@@ -482,7 +482,7 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 \end{cases}
 $$
 
-so stellt sich am Ausgang für $t >> \tau = 15\,\mu s$ ein periodischer Spannungsverlauf mit dem Gleichanteil 2.5 V 
+so stellt sich am Ausgang für $t \gg \tau = 15\,\mu s$ ein periodischer Spannungsverlauf mit dem Gleichanteil 2.5 V 
 und dem Wechselanteil $\Delta v_2(t)$ ein.
 
 Auswertung der LTspice Analyse mit Python:
@@ -495,8 +495,173 @@ Auswertung der LTspice Analyse mit Python:
 
 ### RC-Hochpaß
 
-### RC-Bandpaß
+Ein *Hochpaß* überträgt sinusförmige Eingangsspannungen hoher Frequenz unverändert. Bei Eingangsspannungen tiefer
+Frequenz bewirkt er eine Abschwächung und eine Phasenvorauseilung. Abbildung @fig-  zeigt schematisch den Verlauf von 
+$a_v$ im Bode-Diagramm für einen Hochpaß. In dem bei tiefen Frequenzen vorliegenden Sperrbereich erfolgt bei
+Hochpaßnetzwerken aus linearen Elementen ein Anstieg mit einem Vielfachen von 20 dB/dec entsprechend der Ordnung des
+Hochpasses: Ein Hochpaß der Ordnung $k$ zeigt im Sperrbereich einen Anstieg mit $k  \cdot$ 20\dB/dec. In dem bei hohen
+Frequenzen vorliegenden Durchlaßbereich ist $a_v \approx$ 0 dB. Der Übergang zwischen Durch laßbereich und Sperrbereich
+wird durch die Grenzfrequenz $f_g$ des Hochpasses markiert, bei der $a_v$ den Wert −3 dB aufweist. 
 
+![RC-Hochpass](../images/lec/lec5rc_hp.pdf){#fig-lec5rc_hp}
+
+![Schematisches Bode-Diagramm](../images/lec/lec5rc_hp_bode_schem.pdf){#fig-lec5rc_hp_bode_schem}
+
+
+**Übertragungsfaktor**
+
+Für den in @fig-lec5rc_hp gezeigten RC-Hochpaß ergibt sich aus der Spannungsteilerformel
+
+$$
+\underline{H}_v(j\omega) = \frac{\underline{v}_2}{\underline{v}_1} = \frac{R}{R + \(j\omega C)^{-1}} 
+= \frac{1}{1 + (j\omega \tau)^{-1}}
+$$
+
+wobei wiederum $ \tau = RC$ gilt.
+
+Mit der Grenzfrequenz $f_g = (2 \pi RC)^{−1}$ resultiert hieraus für Betrag und Phase des Übertragungsfaktors
+
+$$
+A_v(f) = \frac{f}{f_g} \frac{1}{\sqrt{1 + (f/f_g)^2}}
+$$ {#eq-abs-hv}
+
+sowie
+
+$$
+\varphi(f) = \arctan(f_g/f).
+$$
+
+Für kleine Frequenzen kann in @eq-abs-hv für $A_v(f)$ die Frequenzabhängigkeit des Wurzelausdrucks vernachlässigt 
+werden. $A_v(f)$ steigt bei diesen Frequenzen in guter Näherung proportional zur Frequenz an
+
+$$
+A_v(f) \approx \frac{f}{f_g}; \quad \text{mit} \quad f_g = \frac{1}{2\pi RC}
+$$
+
+Im Bode-Diagramm (@fig-bode-rc_hp) resultiert für $f \ll f_g$ ein Anstieg mit 20 dB/dec, d.h. es liegt ein Hochpaß 1.
+Ordnung vor. für $\omega \tau \gg 1$ bzw. $f \gg f_g$ nähert sich $A_v(f)$ dem Wert 1 (bzw. $a_v \rightarrow 0$ dB); die 
+Phasenverschiebung zwischen Eingangs- und Ausgangssignal, die bei kleinen Frequenzen 90$ˆ{\circ}$ beträgt, wird nun zu
+0$^{\circ}$. Bei der Grenzfrequenz gilt wie beim Tiefpaß $A_v(f_g) = 1/\sqrt{2}$; die Phasenverschiebung zwischen
+Eingang und Ausgang ist hier jedoch 45$^{\circ}. 
+
+
+```{python}
+#| label: fig-bode-rc_hp
+#| fig-cap: "Bode-Diagramm RC-Hochpass"
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Spezifikation der Impedanz/Admittanz
+R = 1e3
+C = 100e-9
+
+# Frequenzvektor
+f = np.logspace(0, 5, 100)
+w = 2*np.pi*f
+
+# Bestimmung der Impedanzen
+Z1 = R
+Z2 = 1/(1j*w*C)
+
+# Spannungsuebertrangungsfunktion
+H_v = Z1 / (Z1 + Z2)
+
+# Bode-Diagramm
+plt.subplot(2, 1, 1)
+plt.semilogx(f, 20*np.log10(np.abs(H_v)))
+plt.ylabel(r'$\vert H_v \vert$/dB')
+plt.grid()
+
+plt.subplot(2, 1, 2)
+plt.semilogx(f, np.rad2deg(np.angle(H_v)))
+plt.xlabel(r'Frequenz f/Hz')
+plt.ylabel(r'arg($H_v$)/deg')
+plt.grid()
+
+plt.show()
+```
+
+**Impulsverhalten**
+
+Die Analyse des Impulsverhaltens wird wie beim Tiefpaß im Zeitbereich durchgeführt. Der Knotensatz liefert (im
+unbelasteten Fall) für den Ausgangsknoten
+
+$$
+C\frac{d}{dt}(v_1 - v_2) = \frac{v_2}{R}
+$$
+
+bzw. mit $\tau = RC$
+
+$$
+\frac{dv_2}{dt} + \frac{v_2}{\tau} = \frac{dv_1}{dt} = \dot{v}_1.
+$$
+
+Die Lösung zum Anfangswert $v_2(0)$ ist in diesem Fall
+
+$$
+v_2(t) = v_2(0^+) \exp\left(-\frac{t}{\tau} \right) + 
+\frac{1}{\tau} \int_{0^+}^t \dot{v}_1(t') \exp\left(-\frac{t - t'}{\tau} \right) dt'.
+$$ {#eq-lsg-dgl-hp}
+
+*Einschalt- und Ausschaltvorgang.* Als einfache Spezialfälle werden der Einschaltvorgang und der Ausschaltvorgang
+betrachtet. Beim Einschaltvorgang springt $v_$1 bei $t = 0$ vom Wert 0 auf den Wert $V_+$. Da die Spannung über der
+Kapazität dabei erhalten bleibt (vC(0+) = vC(0−) = 0), folgt v2(0+) = V+. Wegen der für $t > 0$ konstanten
+Eingangsspannung $v_1(t)$, gilt $v'1(t) = 0$ für alle Zeiten $t > 0$. Aus diesem Grund verschwindet das Integral in 
+(1.75) und der Ausgangsspannungsverlauf ergibt sich zu 
+
+$$
+v_2(t) = V_+ \exp\left(-\frac{t}{\tau} \right)
+$$
+
+Das Verhalten beim *Ausschaltvorgang* folgt auf analoge Weise. Hier war die Kapazität vor dem Sprung der Eingangsspannung
+auf die Spannung $V_+$ aufgeladen, d.h. hier gilt direkt nach dem Umschalten v2(0+) = −V+. Aus @eq-lsg-dgl-hp folgt so der
+Ausgangsspannungsverlauf
+
+$$
+v_2(t) = -V_+ \exp\left(-\frac{t}{\tau} \right)
+$$
+
+![Sprungantwort des RC-Hochpasses](../images/lec/lec5rc_hp_sprung.pdf){#fig-lec5rc_hp_sprung}
+
+Abbildung 1.19 zeigt für beide Situationen den Verlauf der Spannung an Eingang und Ausgang. Als charakteristische Zeit
+für das Erreichen des jeweiligen Endwerts dient auch hier $\tau = RC$.
+
+
+Beispielsweise wird mit [LTspice](https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/bsp134_reisch.asc)
+auf den Eingang eines RC-Hochpasses mit $R = 150\,\Omega$, $C = 150\, nF$, $f_g = 10.61\,kHz$ eine
+Dreiecksspannung gegeben, so ist bei steigender Flanke
+
+$$
+\frac{dv_1}{dt} = \frac{5V}{0.5\,ms} = 10^4 V/s
+$$
+
+und bei fallender Flanke
+
+$$
+{dv1}{dt}  = {−5V}{0.5\,ms} = −10^4\,V/s.
+$$
+
+Da die Frequenz der Eingangsspannung klein ist gegenüber der Grenzfrequenz des Hochpasses, wird am Ausgang eine
+symmetrische Rechteckspannung erwartet: Die Ableitung einer Geraden ergibt eine Konstante. Mit RC = 15 $mu s$ 
+folgt für die Ausgangsspannung
+
+$$
+v_2 \approx \tau \frac{dv_1}{dt} =
+\begin{case}
+150\,mV \quad \text{bei steigender Flanke} \\\
+−150 \,mV \quad \text{bei fallender Flanke.}
+\end{case}
+$$
+
+
+Auswertung der LTspice Analyse mit Python:
+
+```{python}
+
+{{< include ../files/spice/bsp134_reisch.py >}}
+
+
+### RC-Bandpaß
 
 ![Bode-Diagramm eines Bandpasses](../images/lec/lec5bp.pdf){#fig-lec5bp width=600}
 
@@ -511,7 +676,7 @@ f_m = \sqrt{f_{gu} f_{go}}
 $$
 
 der beiden Grenzfrequenzen wird als Bandmittenfrequenz bezeichnet. Bei logarithmisch unterteilter Frequenzskala liegt
-$f_m$ genau in der Mitte zwischen $f_{gu}$ und $f_{go}$. Ein Bandpaß heißt schmalbandig, falls $B << f_m$ gilt; als Maß
+$f_m$ genau in der Mitte zwischen $f_{gu}$ und $f_{go}$. Ein Bandpaß heißt schmalbandig, falls $B \ll f_m$ gilt; als Maß 
 gilt die relative Bandbreite $B/f_m$. Die Abschwächung des Signals bei der Bandmittenfrequenz wird als
 Einfügungsdämpfung bezeichnet." [@reisch2007]
 
