@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>20&nbsp; Filterschaltungen, Bode-Diagramme und Ortskurven – Grundlagen der Elektrotechnik 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../tut/tut_09_Schwingkreise.html" rel="next">
+<link href="../tut/tut_07_KWR.html" rel="prev">
+<link href="../images/hsb-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_08_Filterschaltungen.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Filterschaltungen, Bode-Diagramme und Ortskurven</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Grundlagen der Elektrotechnik 2</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/mimeiners/gel2/" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unsyllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Seminar</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Netzwerkerregung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Impedanz, Admittanz und Leistung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Grafische Analysemethoden / Darstellungen in Frequenz- und Zeitbereich</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Schwingkreise</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Netzwerkanalyse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spulen und Übertrager</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Hörsaalübungen</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Signale</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Spannungsteiler</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Bode-Diagramm und Nyquist-Ortskurve</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tutorium</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_01_Einfuehrung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_02_Komplexe-Zahlen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_03_Periodische-Signale.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_04_Komplexe-Groessen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Komplexe Größen der Wechselstromtechnik</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_05_Grundzweipole1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Verhalten der Grundzweipole 1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_06_Grundzweipole2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Verhalten der Grundzweipole 2</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_07_KWR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_08_Filterschaltungen.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Filterschaltungen, Bode-Diagramme und Ortskurven</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_09_Schwingkreise.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">8. Schwingkreise</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literaturverzeichnis</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#frequenzgang" id="toc-frequenzgang" class="nav-link active" data-scroll-target="#frequenzgang"><span class="header-section-number">20.1</span> Frequenzgang</a>
+  <ul class="collapse">
+  <li><a href="#bode-diagramm" id="toc-bode-diagramm" class="nav-link" data-scroll-target="#bode-diagramm"><span class="header-section-number">20.1.1</span> Bode-Diagramm</a></li>
+  <li><a href="#db" id="toc-db" class="nav-link" data-scroll-target="#db"><span class="header-section-number">20.1.2</span> dB</a></li>
+  </ul></li>
+  <li><a href="#ortskurven" id="toc-ortskurven" class="nav-link" data-scroll-target="#ortskurven"><span class="header-section-number">20.2</span> Ortskurven</a>
+  <ul class="collapse">
+  <li><a href="#inversionsregeln" id="toc-inversionsregeln" class="nav-link" data-scroll-target="#inversionsregeln"><span class="header-section-number">20.2.1</span> Inversionsregeln</a></li>
+  </ul></li>
+  <li><a href="#filterschaltungen" id="toc-filterschaltungen" class="nav-link" data-scroll-target="#filterschaltungen"><span class="header-section-number">20.3</span> Filterschaltungen</a>
+  <ul class="collapse">
+  <li><a href="#tiefpass" id="toc-tiefpass" class="nav-link" data-scroll-target="#tiefpass"><span class="header-section-number">20.3.1</span> Tiefpass</a></li>
+  <li><a href="#hochpass" id="toc-hochpass" class="nav-link" data-scroll-target="#hochpass"><span class="header-section-number">20.3.2</span> Hochpass</a></li>
+  </ul></li>
+  <li><a href="#übungen" id="toc-übungen" class="nav-link" data-scroll-target="#übungen"><span class="header-section-number">20.4</span> Übungen</a>
+  <ul class="collapse">
+  <li><a href="#übung-8.1-tief--und-hochpass" id="toc-übung-8.1-tief--und-hochpass" class="nav-link" data-scroll-target="#übung-8.1-tief--und-hochpass"><span class="header-section-number">20.4.1</span> Übung 8.1 (Tief- und Hochpass)</a></li>
+  <li><a href="#übung-8.2-tiefpass" id="toc-übung-8.2-tiefpass" class="nav-link" data-scroll-target="#übung-8.2-tiefpass"><span class="header-section-number">20.4.2</span> Übung 8.2 (Tiefpass)</a></li>
+  <li><a href="#übung-8.3-tiefpass-grenzfrequenz" id="toc-übung-8.3-tiefpass-grenzfrequenz" class="nav-link" data-scroll-target="#übung-8.3-tiefpass-grenzfrequenz"><span class="header-section-number">20.4.3</span> Übung 8.3 (Tiefpass Grenzfrequenz)</a></li>
+  <li><a href="#übung-8.4-hochpass" id="toc-übung-8.4-hochpass" class="nav-link" data-scroll-target="#übung-8.4-hochpass"><span class="header-section-number">20.4.4</span> Übung 8.4 (Hochpass)</a></li>
+  <li><a href="#übung-8.6-ortskurve" id="toc-übung-8.6-ortskurve" class="nav-link" data-scroll-target="#übung-8.6-ortskurve"><span class="header-section-number">20.4.5</span> Übung 8.6 (Ortskurve)</a></li>
+  <li><a href="#übung-8.7-ortskurve" id="toc-übung-8.7-ortskurve" class="nav-link" data-scroll-target="#übung-8.7-ortskurve"><span class="header-section-number">20.4.6</span> Übung 8.7 (Ortskurve)</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/tut/tut_08_Filterschaltungen.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_08_Filterschaltungen.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Filterschaltungen, Bode-Diagramme und Ortskurven</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Filterschaltungen, Bode-Diagramme und Ortskurven</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<ul>
+<li>Bode-Diagramm</li>
+<li>Ortskurven</li>
+<li>Tief- und Hochpass</li>
+</ul>
+<section id="frequenzgang" class="level2" data-number="20.1">
+<h2 data-number="20.1" class="anchored" data-anchor-id="frequenzgang"><span class="header-section-number">20.1</span> Frequenzgang</h2>
+<p>In Netzwerken mit den Bauteilen Wirkwiderstand R, Induktivität L und Kapazität C ist das Verhalten bei verschiedenen Frequenzen interessant. Zwei Varianten sich den Frequenzgang eines Netzwerks anzuschauen, ist das Bode-Diagramm und die Ortskurve.</p>
+<section id="bode-diagramm" class="level3" data-number="20.1.1">
+<h3 data-number="20.1.1" class="anchored" data-anchor-id="bode-diagramm"><span class="header-section-number">20.1.1</span> Bode-Diagramm</h3>
+<p>In dem Bode-Diagramm werden die Amplitude und die Phase des Frequenzganges getrennt voneinander dargestellt. Ein Bode-Diagramm wird von der Übertragungsfunktion gezeichnet.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\underline{H}(j\omega) = \frac{\underline{U}_2}{\underline{U}_1}\]</span></p>
+</div>
+</div>
+<p>Für den Amplitudengang erhält man:</p>
+<p><span class="math display">\[A_v(\omega) = |\underline{H}_v(j\omega)|\]</span></p>
+<p>und für den Phasengang:</p>
+<p><span class="math display">\[\varphi(\omega) = \arctan \left( \frac{Im\{\underline{H}(j\omega)\}}{Re\{\underline{H}(j\omega)\}} \right)\]</span></p>
+<p>Das Bode-Diagramm wird im Amplitudengang und Phasengang doppelt logarithmisch dargestellt.</p>
+<div id="fig-betragsgang" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-enabled="true">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-betragsgang-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">16e3</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="fl">10e-9</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> np.arange(<span class="dv">10</span>, <span class="fl">100e3</span>, <span class="dv">10</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> f</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>b_gangTP <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>np.sqrt(<span class="dv">1</span> <span class="op">+</span> (w<span class="op">*</span>R<span class="op">*</span>C)<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>p_gangTP <span class="op">=</span> np.arctan(<span class="op">-</span>w<span class="op">*</span>R<span class="op">*</span>C)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>b_gangTP_dB <span class="op">=</span> <span class="dv">20</span> <span class="op">*</span> np.log10(b_gangTP)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>p_gangTP_grad <span class="op">=</span> p_gangTP <span class="op">*</span> <span class="dv">180</span><span class="op">/</span>np.pi</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f,b_gangTP_dB)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Frequenz in Hz (logarithmisch)"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Betragsgang in dB"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-betragsgang-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.1
+</figcaption>
+</figure>
+</div>
+<div id="fig-frequenzgang" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-enabled="true">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-frequenzgang-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">16e3</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="fl">10e-9</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> np.arange(<span class="dv">10</span>, <span class="fl">100e3</span>, <span class="dv">10</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> f</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>b_gangTP <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>np.sqrt(<span class="dv">1</span> <span class="op">+</span> (w<span class="op">*</span>R<span class="op">*</span>C)<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>p_gangTP <span class="op">=</span> np.arctan(<span class="op">-</span>w<span class="op">*</span>R<span class="op">*</span>C)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>b_gangTP_dB <span class="op">=</span> <span class="dv">20</span> <span class="op">*</span> np.log10(b_gangTP)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>p_gangTP_grad <span class="op">=</span> p_gangTP <span class="op">*</span> <span class="dv">180</span><span class="op">/</span>np.pi</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f,p_gangTP_grad)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Frequenz in Hz (logarithmisch)"</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Phasengang in °"</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-frequenzgang-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.2
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="db" class="level3" data-number="20.1.2">
+<h3 data-number="20.1.2" class="anchored" data-anchor-id="db"><span class="header-section-number">20.1.2</span> dB</h3>
+<p>Wenn man eine Größe in dB ausdrücken möchte, dann kann man bei Strömen oder Spannungen folgende Formel anwenden.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[ x_{dB} = 20 \cdot log_{10}(x) \]</span></p>
+</div>
+</div>
+<p>Wichtige Größen in dB:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 32%">
+<col style="width: 18%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">x</th>
+<th style="text-align: center;"><span class="math inline">\(20 \cdot log_{10}(x)\)</span></th>
+<th style="text-align: center;">x</th>
+<th style="text-align: center;"><span class="math inline">\(20 \cdot log_{10}(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0 dB</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0 dB</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\sqrt{2}\)</span></td>
+<td style="text-align: center;">3 dB</td>
+<td style="text-align: center;">1/<span class="math inline">\(\sqrt{2}\)</span></td>
+<td style="text-align: center;">-3 dB</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6 dB</td>
+<td style="text-align: center;">1/2</td>
+<td style="text-align: center;">-6 dB</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">20 dB</td>
+<td style="text-align: center;">1/10</td>
+<td style="text-align: center;">-20 dB</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">40 dB</td>
+<td style="text-align: center;">1/100</td>
+<td style="text-align: center;">-40 dB</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1000</td>
+<td style="text-align: center;">60 dB</td>
+<td style="text-align: center;">1/1000</td>
+<td style="text-align: center;">-60 dB</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="ortskurven" class="level2" data-number="20.2">
+<h2 data-number="20.2" class="anchored" data-anchor-id="ortskurven"><span class="header-section-number">20.2</span> Ortskurven</h2>
+<p>Die Ortskurve stellt die Veränderung einer komplexen Größe, die von einem reellen Parameter abhängt, in der komplexen Ebene dar. Man kann zum Beispiel die Impedanz in Abhängigkeit der Frequenz darstellen.</p>
+<p>Am Beispiel einer Reihenschaltung aus Wirkwiderstand und Induktivität</p>
+<p><span class="math display">\[\underline{Z} = R + j\omega L\]</span></p>
+<p>erhält man folgende Ortskurve der Impedanz:</p>
+<div id="fig-tutChap8OrtskurveReihe" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChap8OrtskurveReihe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_ortskurve-reihe.png" id="fig-tutChap8OrtskurveReihe" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap8OrtskurveReihe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.3
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Man kann auch die Ortskurve der Admittanz aufstellen. In diesem Fall lässt sie sich aus der Ortskurve der Impedanz ableiten. Dazu muss nur der Kehrwert der Impedanz an allen Frequenzstellen genommen werden.</p>
+<p><span class="math display">\[\underline{Y} = \frac{1}{\underline{Z}}\]</span></p>
+<p>Da die Impedanz eine komplexe Zahl ist, muss der Kehrwert einer komplexen Zahl genommen werden. Zur Erinnerung: Den Kehrwert einer komplexen Zahl erhält man indem man den Kehrwert des Betrages bildet und den Phasenwinkel negiert.</p>
+<div id="fig-tutChapOrtskurveInvertiert" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChapOrtskurveInvertiert-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_ortskurve-invertiert.png" id="fig-tutChapOrtskurveInvertiert" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChapOrtskurveInvertiert-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.4
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<section id="inversionsregeln" class="level3" data-number="20.2.1">
+<h3 data-number="20.2.1" class="anchored" data-anchor-id="inversionsregeln"><span class="header-section-number">20.2.1</span> Inversionsregeln</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+1. Inversionsregel: Inversion einer Gerade durch den Ursprung
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“Die Inversion einer Geraden durch den Ursprung ergibt eine Gerade durch den Ursprung.”</p>
+</div>
+</div>
+<div id="fig-tutChaptInversionsregel1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChaptInversionsregel1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_inversionsregel1.png" id="fig-tutChaptInversionsregel1" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChaptInversionsregel1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.5
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+2. Inversionsregel: Inversion einer allgemeinen Geraden
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“Die Inversion einer allgemeinen Geraden ergibt einen Kreis durch den Ursprung.”</p>
+</div>
+</div>
+<div id="fig-tutChap8Inversionsregel2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChap8Inversionsregel2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_inversionsregel2.png" id="fig-tutChap8Inversionsregel2" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap8Inversionsregel2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.6
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+3. Inversionsregel: Inversion eines allgemeinen Kreises
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“Die Inversion eines allgemeinen Kreises ergibt einen allgemeinen Kreis.”</p>
+</div>
+</div>
+<div id="fig-tutChapInversionsregel3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChapInversionsregel3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_inversionsregel3.png" id="fig-tutChapInversionsregel3" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChapInversionsregel3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.7
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+</section>
+</section>
+<section id="filterschaltungen" class="level2" data-number="20.3">
+<h2 data-number="20.3" class="anchored" data-anchor-id="filterschaltungen"><span class="header-section-number">20.3</span> Filterschaltungen</h2>
+<p>Aus zwei der Grundzweipole der Induktivität L und der Kapazität C, kann man in Kombination mit dem Wirkwiderstand R zwei Filterschaltungen bauen.</p>
+<section id="tiefpass" class="level3" data-number="20.3.1">
+<h3 data-number="20.3.1" class="anchored" data-anchor-id="tiefpass"><span class="header-section-number">20.3.1</span> Tiefpass</h3>
+<p>Das Kennzeichen des Tiefpasses ist es, dass kleine Frequenzen so gut wie vollständig übertragen werden, während große Frequenzen zunehmend gedämpft werden. Ein Amplitudengang eines Tiefpasses kann zum Beispiel so aussehen:</p>
+<div id="fig-betragsgangtiefpasses" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-enabled="true">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-betragsgangtiefpasses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">16e3</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="fl">10e-9</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> np.arange(<span class="dv">10</span>, <span class="fl">100e3</span>, <span class="dv">10</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> f</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>b_gangTP <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>np.sqrt(<span class="dv">1</span> <span class="op">+</span> (w<span class="op">*</span>R<span class="op">*</span>C)<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>p_gangTP <span class="op">=</span> np.arctan(<span class="op">-</span>w<span class="op">*</span>R<span class="op">*</span>C)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>b_gangTP_dB <span class="op">=</span> <span class="dv">20</span> <span class="op">*</span> np.log10(b_gangTP)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>p_gangTP_grad <span class="op">=</span> p_gangTP <span class="op">*</span> <span class="dv">180</span><span class="op">/</span>np.pi</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f,b_gangTP_dB)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Frequenz in Hz (logarithmisch)"</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Betragsgang in dB"</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-betragsgangtiefpasses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.8
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="hochpass" class="level3" data-number="20.3.2">
+<h3 data-number="20.3.2" class="anchored" data-anchor-id="hochpass"><span class="header-section-number">20.3.2</span> Hochpass</h3>
+<p>Bei einem Hochpass können hohe Frequenzen ungestört durch die Schaltung gehen, während kleinere Freqeunzen gedämpft werden. Der Amplitudengang eines Tiefpasses könnte zum Beispiel so aussehen:</p>
+<div id="fig-betragsganghochpass" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-enabled="true">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-betragsganghochpass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">16e3</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="fl">10e-9</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="fl">1e-0</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> np.arange(<span class="dv">10</span>, <span class="fl">100e3</span>, <span class="dv">10</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> f</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>b_gangHP <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>np.sqrt(<span class="dv">1</span> <span class="op">+</span> (R<span class="op">/</span>(w<span class="op">*</span>L))<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>p_gangHP <span class="op">=</span> np.arctan(<span class="op">-</span>w<span class="op">*</span>R<span class="op">*</span>C)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>b_gangHP_dB <span class="op">=</span> <span class="dv">20</span> <span class="op">*</span> np.log10(b_gangHP)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>p_gangHP_grad <span class="op">=</span> p_gangHP <span class="op">*</span> <span class="dv">180</span><span class="op">/</span>np.pi</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f,b_gangHP_dB)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Frequenz in Hz (logarithmisch)"</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Betragsgang in dB"</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-betragsganghochpass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.9
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="übungen" class="level2" data-number="20.4">
+<h2 data-number="20.4" class="anchored" data-anchor-id="übungen"><span class="header-section-number">20.4</span> Übungen</h2>
+<section id="übung-8.1-tief--und-hochpass" class="level3" data-number="20.4.1">
+<h3 data-number="20.4.1" class="anchored" data-anchor-id="übung-8.1-tief--und-hochpass"><span class="header-section-number">20.4.1</span> Übung 8.1 (Tief- und Hochpass)</h3>
+<p>Ordne die folgenden Schaltungen entweder dem Tiefpass oder Hochpass zu. Stelle zusätzlich für jede Schaltung die Übertragungsfunktion auf (keine Brüche im Nenner oder Zähler).</p>
+<ol type="a">
+<li></li>
+</ol>
+<div id="fig-tutChap8RCHochpass" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChap8RCHochpass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_rcHochpass.png" id="fig-tutChap8RCHochpass" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap8RCHochpass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.10
+</figcaption>
+</figure>
+</div>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<div id="fig-tutChap8RLTiefpass" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChap8RLTiefpass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_rlTiefpass.png" id="fig-tutChap8RLTiefpass" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap8RLTiefpass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.11
+</figcaption>
+</figure>
+</div>
+<ol start="3" type="a">
+<li></li>
+</ol>
+<div id="fig-tutChapRCTiefpass" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChapRCTiefpass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_rcTiefpass.png" id="fig-tutChapRCTiefpass" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChapRCTiefpass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.12
+</figcaption>
+</figure>
+</div>
+<ol start="4" type="a">
+<li></li>
+</ol>
+<div id="fig-tutChapRLHochpass" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChapRLHochpass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_rlHochpass.png" id="fig-tutChapRLHochpass" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChapRLHochpass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.13
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 8.1
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>RC-Hochpass:</li>
+</ol>
+<p><span class="math display">\[H(j\omega) = \frac{R}{\frac{1}{j\omega C} + R} = \frac{j\omega RC}{1 + j\omega RC}\]</span></p>
+<ol start="2" type="a">
+<li>RL-Tiefpass:</li>
+</ol>
+<p><span class="math display">\[H(j\omega) = \frac{R}{j\omega L + R}\]</span></p>
+<ol start="3" type="a">
+<li>RC-Tiefpass:</li>
+</ol>
+<p><span class="math display">\[H(j\omega) = \frac{\frac{1}{j\omega C}}{R + \frac{1}{j\omega C}} = \frac{1}{1 + j\omega RC}\]</span></p>
+<ol start="4" type="a">
+<li>RL-Hochpass:</li>
+</ol>
+<p><span class="math display">\[H(j\omega) = \frac{j\omega L}{R + j\omega L}\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="übung-8.2-tiefpass" class="level3" data-number="20.4.2">
+<h3 data-number="20.4.2" class="anchored" data-anchor-id="übung-8.2-tiefpass"><span class="header-section-number">20.4.2</span> Übung 8.2 (Tiefpass)</h3>
+<p>(Hagmann Aufgabe 9.1)</p>
+<p>Der in dem Bild dargestellte Tiefpass enthält den Wirkwiderstand <span class="math inline">\(R = 10\,k\Omega\)</span> und einen Kondensator mit der Kapazität <span class="math inline">\(C = 120\,nF\)</span>.</p>
+<p>Bei welcher Frequenz <span class="math inline">\(f\)</span> ist die Ausgangsspannung <span class="math inline">\(U_2\)</span> um den Faktor 10 kleiner als die Eingangsspannung <span class="math inline">\(U_1\)</span>?</p>
+<div id="fig-tutChap8Aufgabe8.2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChap8Aufgabe8.2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_aufgabe8.2.jpg" id="fig-tutChap8Aufgabe8.2" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap8Aufgabe8.2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.14
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="hagmann2019">(<a href="../references.html#ref-hagmann2019" role="doc-biblioref">Hagmann 2019</a>)</span></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 8.2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>nach der Spannungsteilerregeln:</p>
+<p><span class="math display">\[\frac{\underline{U}_2}{\underline{U}_1} = \frac{\frac{1}{j\omega C}}{R + \frac{1}{j\omega C}} = \frac{1}{1 + j\omega RC}\]</span></p>
+<p>Betrag:</p>
+<p><span class="math display">\[\frac{U_2}{U_1} = \frac{1}{\sqrt{1 + (\omega RC)^2}}\]</span></p>
+<p>Umstellen und <span class="math inline">\(U_1/U_2 = 10\)</span> einsetzen:</p>
+<p><span class="math display">\[\omega = \frac{\sqrt{(U_1/U_2)^2 - 1}}{RC} = \frac{\sqrt{10^2 -1}}{10\,k\Omega \cdot 120\,nF} = 8,29\,k1/s\]</span></p>
+<p><span class="math display">\[f = \frac{\omega}{2\pi} = \frac{8,29\,k1/s}{2\pi} = 1,32\,kHz\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="übung-8.3-tiefpass-grenzfrequenz" class="level3" data-number="20.4.3">
+<h3 data-number="20.4.3" class="anchored" data-anchor-id="übung-8.3-tiefpass-grenzfrequenz"><span class="header-section-number">20.4.3</span> Übung 8.3 (Tiefpass Grenzfrequenz)</h3>
+<p>(Hagmann Aufgabe 9.2)</p>
+<p>Der in dem Bild dargestellte Tiefpass enthält den Wirkwiderstand <span class="math inline">\(R = 1,5\,k\Omega\)</span>. Die Kapazität C des vorhandenen Kondensators soll so gewählt werden, dass die Grenzfreqeunz der Schaltung <span class="math inline">\(f_g = 1,2\,kHz\)</span> wird.</p>
+<p>Welchen Wert muss die Kapazität C haben?</p>
+<p><code>yiybmghs ../images/Tutorium/chap8/chap8_aufgabe8.3.jpg :name: fig:TutChap8_aufgabe8.3</code> {cite}<code>hagmann2019</code></p>
+<div id="fig-tutChap8Aufgabe8.3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChap8Aufgabe8.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_aufgabe8.3.jpg" id="fig-tutChap8Aufgabe8.3" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap8Aufgabe8.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.15
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="hagmann2019">(<a href="../references.html#ref-hagmann2019" role="doc-biblioref">Hagmann 2019</a>)</span></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 8.3
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>nach der Spannungsteilerregel:</p>
+<p><span class="math display">\[\frac{\underline{U}_2}{\underline{U}_1} = \frac{\frac{1}{j\omega C}}{R + \frac{1}{j\omega C}} = \frac{1}{1 + j\omega RC}\]</span></p>
+<p>Betrag:</p>
+<p><span class="math display">\[\frac{U_2}{U_1} = \frac{1}{\sqrt{1 + (\omega RC)^2}}\]</span></p>
+<p>Grenzfrequenz <span class="math inline">\(f_g\)</span> ist bei <span class="math inline">\(U_2/U_1 = 1/\sqrt{2}\)</span>:</p>
+<p><span class="math display">\[\omega RC = 1\]</span></p>
+<p>Kapazität:</p>
+<p><span class="math display">\[C = \frac{1}{\omega R} = \frac{1}{2\pi \cdot 1,2\,kHz \cdot 1,5\,k\Omega} = 88,4\,nF\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="übung-8.4-hochpass" class="level3" data-number="20.4.4">
+<h3 data-number="20.4.4" class="anchored" data-anchor-id="übung-8.4-hochpass"><span class="header-section-number">20.4.4</span> Übung 8.4 (Hochpass)</h3>
+<p>(Hagmann Aufgabe 9.8)</p>
+<p>Der in dem Bild dargestellte Hochpass enthält eine Spule mit der Induktivität <span class="math inline">\(L = 85\,mH\)</span>. Die Schaltung soll so ausgelegt werden, dass die Grenzfrequenz des Hochpasses <span class="math inline">\(f_g = 2,5\,kHz\)</span> wird.</p>
+<p>Welchen Wert muss der Wirkwiderstand R haben?</p>
+<div id="fig-tutChapAufgabe8.4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChapAufgabe8.4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_aufgabe8.4.jpg" id="fig-tutChapAufgabe8.4" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChapAufgabe8.4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.16
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="hagmann2019">(<a href="../references.html#ref-hagmann2019" role="doc-biblioref">Hagmann 2019</a>)</span></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 8.4
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>nach der Spannungsteilerregel:</p>
+<p><span class="math display">\[\frac{\underline{U}_2}{\underline{U}_1} = \frac{j\omega L}{R + j\omega L}\]</span></p>
+<p>Betrag:</p>
+<p><span class="math display">\[\frac{U_2}{U_1} = \frac{\omega L}{\sqrt{R^2 + (\omega L)^2}}\]</span></p>
+<p>Grenzfrequenz <span class="math inline">\(f_g\)</span> ist bei <span class="math inline">\(U_2/U_1 = 1/\sqrt{2}\)</span>:</p>
+<p><span class="math display">\[R = \omega L\]</span></p>
+<p>Wirkwiderstand:</p>
+<p><span class="math display">\[R = \omega L = 2\pi \cdot 2,5\,kHz \cdot 85\,mH = 1,34\,K\Omega\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="übung-8.6-ortskurve" class="level3" data-number="20.4.5">
+<h3 data-number="20.4.5" class="anchored" data-anchor-id="übung-8.6-ortskurve"><span class="header-section-number">20.4.5</span> Übung 8.6 (Ortskurve)</h3>
+<p>(Schenke 28.10)</p>
+<p>Gegeben ist die folgende Schaltung:</p>
+<div id="fig-tutChap8Aufgabe8.6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChap8Aufgabe8.6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_aufgabe8.6.png" id="fig-tutChap8Aufgabe8.6" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap8Aufgabe8.6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.17
+</figcaption>
+</figure>
+</div>
+<ol type="a">
+<li><p>Zeichnen Sie die Ortskurve der Admittanz <span class="math inline">\(\underline{Y}(\omega)\)</span>.</p></li>
+<li><p>Zeichnen Sie die Ortskurve der Impedanz <span class="math inline">\(\underline{Z}(\omega)\)</span>.</p></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled" data-collaps="true">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 8.6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="fig-tutChap8Aufgabe8.6a" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChap8Aufgabe8.6a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_aufgabe8.6a.png" id="fig-tutChap8Aufgabe8.6a" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap8Aufgabe8.6a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.18
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+</div>
+</div>
+</section>
+<section id="übung-8.7-ortskurve" class="level3" data-number="20.4.6">
+<h3 data-number="20.4.6" class="anchored" data-anchor-id="übung-8.7-ortskurve"><span class="header-section-number">20.4.6</span> Übung 8.7 (Ortskurve)</h3>
+<p>(Schenke 28.16)</p>
+<p>Gegeben ist die folgende Schaltung:</p>
+<div id="fig-tutChap8Aufgabe8.7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChap8Aufgabe8.7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_aufgabe8.7.png" id="fig-tutChap8Aufgabe8.7" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap8Aufgabe8.7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.19
+</figcaption>
+</figure>
+</div>
+<ol type="a">
+<li>Zeichnen Sie die Ortskurve der Admittanz <span class="math inline">\(\underline{Y}(\omega)\)</span>.</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 8.7
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="fig-tutChap8Aufgabe8.7a" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChap8Aufgabe8.7a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap8/chap8_aufgabe8.7a.png" id="fig-tutChap8Aufgabe8.7a" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap8Aufgabe8.7a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20.20
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+</div>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-hagmann2019" class="csl-entry" role="listitem">
+Hagmann, Gert. 2019. <em>Aufgabensammlung zu den Grundlagen der Elektrotechnik</em>. 18., durchgesehene Auflage. Wiebelsheim: AULA-Verlag.
+</div>
+<div id="ref-schenke2023" class="csl-entry" role="listitem">
+Schenke, Stefan. 2023. <span>„<span>G</span>rundlagen der <span>E</span>lektrotechnik — <span>J</span>etzt schaffst <span>D</span>u die <span>P</span>rüfung!“</span> Helmut-Schmidt Universit<span>ä</span>t Hamburg, Germany; online. <a href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a>.
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Kopiert");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Kopiert");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mimeiners\.github\.io\/gel2\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../tut/tut_07_KWR.html" class="pagination-link" aria-label="Komplexe Wechselstromrechnung">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../tut/tut_09_Schwingkreise.html" class="pagination-link" aria-label="8. Schwingkreise">
+        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">8. Schwingkreise</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Grundlagen der Elektrotechnik 2 (GEL2), M. Meiners, HSB.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/tut/tut_08_Filterschaltungen.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

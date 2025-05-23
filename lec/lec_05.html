@@ -362,6 +362,24 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Verhalten der Grundzweipole 2</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_07_KWR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_08_Filterschaltungen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Filterschaltungen, Bode-Diagramme und Ortskurven</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tut/tut_09_Schwingkreise.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">8. Schwingkreise</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -685,7 +703,7 @@ A_v(f) =  \frac{1}{\sqrt{1+(f/f_g)^2}}
 <p><span class="math display">\[
 \varphi(f) = −\arctan(f/f_g).
 \]</span></p>
-<p>Das zugehörige Bode-Diagramm ist in <a href="#fig-bode-rc_tp" class="quarto-xref">Abbildung&nbsp;<span>5.6</span></a> zu sehen. Für Frequenzen <span class="math inline">\(f &lt;&lt; f_g\)</span> gilt in guter Näherung <span class="math inline">\(A_v \approx 1\)</span> bzw. <span class="math inline">\(a_v = 0 dB\)</span>; für Frequenzen <span class="math inline">\(f &gt;&gt; f_g\)</span> dagegen <span class="math inline">\(A_v(f) \approx f_g/f\)</span>. Im Bode-Diagramm entspricht dies einem Abfall von 20 dB/dec, d.h. der betrachtete RC-Tiefpaß ist ein Tiefpaß erster Ordnung. Wird der für große Frequenzen beobachtete Kurvenverlauf im Bode-Diagramm linear zu 0 dB extrapoliert, so liefert der Schnittpunkt mit der 0 dB-Achse die Grenzfrequenz. Dort gilt <span class="math inline">\(A_v = 1/\sqrt{2}\)</span> und <span class="math inline">\(a_v(f_g) = 20\,dB \cdot \log(1/\sqrt{2}) \approx -3.01 \,dB\)</span>, während die Phasenverschiebung den Wert −45<span class="math inline">\(^{\circ}\)</span> aufweist.</p>
+<p>Das zugehörige Bode-Diagramm ist in <a href="#fig-bode-rc_tp" class="quarto-xref">Abbildung&nbsp;<span>5.6</span></a> zu sehen. Für Frequenzen <span class="math inline">\(f \ll f_g\)</span> gilt in guter Näherung <span class="math inline">\(A_v \approx 1\)</span> bzw. <span class="math inline">\(a_v = 0 dB\)</span>; für Frequenzen <span class="math inline">\(f \gg f_g\)</span> dagegen <span class="math inline">\(A_v(f) \approx f_g/f\)</span>. Im Bode-Diagramm entspricht dies einem Abfall von 20 dB/dec, d.h. der betrachtete RC-Tiefpaß ist ein Tiefpaß erster Ordnung. Wird der für große Frequenzen beobachtete Kurvenverlauf im Bode-Diagramm linear zu 0 dB extrapoliert, so liefert der Schnittpunkt mit der 0 dB-Achse die Grenzfrequenz. Dort gilt <span class="math inline">\(A_v = 1/\sqrt{2}\)</span> und <span class="math inline">\(a_v(f_g) = 20\,dB \cdot \log(1/\sqrt{2}) \approx -3.01 \,dB\)</span>, während die Phasenverschiebung den Wert −45<span class="math inline">\(^{\circ}\)</span> aufweist.</p>
 <div id="cell-fig-bode-rc_tp" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -698,7 +716,7 @@ A_v(f) =  \frac{1}{\sqrt{1+(f/f_g)^2}}
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> np.logspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>f</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Bestimmung der Impedaanzen</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Bestimmung der Impedanzen</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>Z1 <span class="op">=</span> R</span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>Z2 <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(<span class="ot">1j</span><span class="op">*</span>w<span class="op">*</span>C)</span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
@@ -731,8 +749,8 @@ Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
 </div>
 </div>
 </div>
-<p>Um in LTspice das Bode-Diagramm des RC-Tiefpass zu erhalten, muss eine <a href="https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/lec5rctp.asc">.ac Analyse</a> durchgeführt werden. Diese kann mit Python wie folgt ausgewertet werden:</p>
-<div id="eb01c042" class="cell" data-execution_count="3">
+<p>Um in LTspice das Bode-Diagramm des RC-Tiefpasses zu erhalten, muss eine <a href="https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/lec5rctp.asc">.ac Analyse</a> durchgeführt werden. Diese kann mit Python wie folgt ausgewertet werden:</p>
+<div id="e9f1b423" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der AC SPICE Analyse der RC-Schaltung</span></span>
@@ -804,7 +822,7 @@ Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
 <p>Als allgemeine Lösung dieser inhomogenen Differentialgleichung erster Ordnung zum Anfangswert <span class="math inline">\(v_2(0)\)</span> resultiert</p>
 <p><span class="math display">\[
 v_2(t) = v_2(0) \exp\left(-\frac{t}{\tau} \right) +
-\frac{1}{\tau} \int_0^t v_1(t') \exp\left(-\frac{t - t'}{\tau} \right) dt'.
+\frac{1}{\tau} \int_0^t \dot{v}_1(t') \exp\left(-\frac{t - t'}{\tau} \right) dt'.
 \]</span></p>
 <p><em>Einschalt- und Ausschaltvorgang.</em> Einfache Spezialfälle sind der <em>Einschaltvorgang</em> (<span class="math inline">\(v_2(0)=0\)</span> und <span class="math inline">\(v_1(t) = V_+\)</span> für <span class="math inline">\(t &gt; 0\)</span>) mit dem Ausgangsspannungsverlauf</p>
 <p><span class="math display">\[
@@ -851,9 +869,9 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 -2.5\,V &amp; \text{in der 2. Halbperiode}
 \end{cases}
 \]</span></p>
-<p>so stellt sich am Ausgang für <span class="math inline">\(t &gt;&gt; \tau = 15\,\mu s\)</span> ein periodischer Spannungsverlauf mit dem Gleichanteil 2.5 V und dem Wechselanteil <span class="math inline">\(\Delta v_2(t)\)</span> ein.</p>
+<p>so stellt sich am Ausgang für <span class="math inline">\(t \gg \tau = 15\,\mu s\)</span> ein periodischer Spannungsverlauf mit dem Gleichanteil 2.5 V und dem Wechselanteil <span class="math inline">\(\Delta v_2(t)\)</span> ein.</p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="f1503047" class="cell" data-execution_count="4">
+<div id="d83f5ee3" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der TRAN SPICE Analyse der RC-Schaltung</span></span>
@@ -894,6 +912,179 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 </section>
 <section id="rc-hochpaß" class="level3" data-number="5.6.2">
 <h3 data-number="5.6.2" class="anchored" data-anchor-id="rc-hochpaß"><span class="header-section-number">5.6.2</span> RC-Hochpaß</h3>
+<p>Ein <em>Hochpaß</em> überträgt sinusförmige Eingangsspannungen hoher Frequenz unverändert. Bei Eingangsspannungen tiefer Frequenz bewirkt er eine Abschwächung und eine Phasenvorauseilung. Abbildung <span class="citation" data-cites="fig">(<a href="../references.html#ref-fig" role="doc-biblioref"><strong>fig?</strong></a>)</span>- zeigt schematisch den Verlauf von <span class="math inline">\(a_v\)</span> im Bode-Diagramm für einen Hochpaß. In dem bei tiefen Frequenzen vorliegenden Sperrbereich erfolgt bei Hochpaßnetzwerken aus linearen Elementen ein Anstieg mit einem Vielfachen von 20 dB/dec entsprechend der Ordnung des Hochpasses: Ein Hochpaß der Ordnung <span class="math inline">\(k\)</span> zeigt im Sperrbereich einen Anstieg mit <span class="math inline">\(k  \cdot 20\,dB/dec\)</span>. In dem bei hohen Frequenzen vorliegenden Durchlaßbereich ist <span class="math inline">\(a_v \approx\)</span> 0 dB. Der Übergang zwischen Durch laßbereich und Sperrbereich wird durch die Grenzfrequenz <span class="math inline">\(f_g\)</span> des Hochpasses markiert, bei der <span class="math inline">\(a_v\)</span> den Wert −3 dB aufweist.</p>
+<div id="fig-lec5rc_hp" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec5rc_hp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec5rc_hp.pdf" class="img-fluid">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5rc_hp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5.8: RC-Hochpass
+</figcaption>
+</figure>
+</div>
+<div id="fig-lec5rc_hp_bode_schem" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec5rc_hp_bode_schem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec5rc_hp_bode_schem.pdf" class="img-fluid">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5rc_hp_bode_schem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5.9: Schematisches Bode-Diagramm
+</figcaption>
+</figure>
+</div>
+<p><strong>Übertragungsfaktor</strong></p>
+<p>Für den in <a href="#fig-lec5rc_hp" class="quarto-xref">Abbildung&nbsp;<span>5.8</span></a> gezeigten RC-Hochpaß ergibt sich aus der Spannungsteilerformel</p>
+<p><span class="math display">\[
+\underline{H}_v(j\omega) = \frac{\underline{v}_2}{\underline{v}_1} = \frac{R}{R + (j\omega C)^{-1}}
+= \frac{1}{1 + (j\omega \tau)^{-1}}
+\]</span></p>
+<p>wobei wiederum $ = RC$ gilt.</p>
+<p>Mit der Grenzfrequenz <span class="math inline">\(f_g = (2 \pi RC)^{−1}\)</span> resultiert hieraus für Betrag und Phase des Übertragungsfaktors</p>
+<p><span id="eq-abs-hv"><span class="math display">\[
+A_v(f) = \frac{f}{f_g} \frac{1}{\sqrt{1 + (f/f_g)^2}}
+\tag{5.1}\]</span></span></p>
+<p>sowie</p>
+<p><span class="math display">\[
+\varphi(f) = \arctan(f_g/f).
+\]</span></p>
+<p>Für kleine Frequenzen kann in <a href="#eq-abs-hv" class="quarto-xref">Gleichung&nbsp;<span>5.1</span></a> für <span class="math inline">\(A_v(f)\)</span> die Frequenzabhängigkeit des Wurzelausdrucks vernachlässigt werden. <span class="math inline">\(A_v(f)\)</span> steigt bei diesen Frequenzen in guter Näherung proportional zur Frequenz an</p>
+<p><span class="math display">\[
+A_v(f) \approx \frac{f}{f_g}; \quad \text{mit} \quad f_g = \frac{1}{2\pi RC}
+\]</span></p>
+<p>Im Bode-Diagramm (<a href="#fig-bode-rc_hp" class="quarto-xref">Abbildung&nbsp;<span>5.10</span></a>) resultiert für <span class="math inline">\(f \ll f_g\)</span> ein Anstieg mit 20 dB/dec, d.h. es liegt ein Hochpaß 1. Ordnung vor. für <span class="math inline">\(\omega \tau \gg 1\)</span> bzw. <span class="math inline">\(f \gg f_g\)</span> nähert sich <span class="math inline">\(A_v(f)\)</span> dem Wert 1 (bzw. <span class="math inline">\(a_v \rightarrow 0\)</span> dB); die Phasenverschiebung zwischen Eingangs- und Ausgangssignal, die bei kleinen Frequenzen 90<span class="math inline">\(^{\circ}\)</span> beträgt, wird nun zu 0<span class="math inline">\(^{\circ}\)</span>. Bei der Grenzfrequenz gilt wie beim Tiefpaß <span class="math inline">\(A_v(f_g) = 1/\sqrt{2}\)</span>; die Phasenverschiebung zwischen Eingang und Ausgang ist hier jedoch 45<span class="math inline">\(^{\circ}\)</span>.</p>
+<div id="cell-fig-bode-rc_hp" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Spezifikation der Impedanz/Admittanz</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">1e3</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="fl">100e-9</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Frequenzvektor</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> np.logspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>f</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Bestimmung der Impedanzen</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>Z1 <span class="op">=</span> R</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>Z2 <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(<span class="ot">1j</span><span class="op">*</span>w<span class="op">*</span>C)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Spannungsuebertrangungsfunktion</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>H_v <span class="op">=</span> Z1 <span class="op">/</span> (Z1 <span class="op">+</span> Z2)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Bode-Diagramm</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, <span class="dv">20</span><span class="op">*</span>np.log10(np.<span class="bu">abs</span>(H_v)))</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'</span><span class="dv">$</span><span class="ch">\v</span><span class="vs">ert H_v </span><span class="ch">\v</span><span class="vs">ert</span><span class="dv">$</span><span class="vs">/dB'</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, np.rad2deg(np.angle(H_v)))</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'Frequenz f/Hz'</span>)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'arg</span><span class="kw">(</span><span class="dv">$</span><span class="vs">H_v</span><span class="dv">$</span><span class="kw">)</span><span class="vs">/deg'</span>)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-bode-rc_hp" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bode-rc_hp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="lec_05_files/figure-html/fig-bode-rc_hp-output-1.png" width="598" height="431" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bode-rc_hp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5.10: Bode-Diagramm RC-Hochpass
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Impulsverhalten</strong></p>
+<p>Die Analyse des Impulsverhaltens wird wie beim Tiefpaß im Zeitbereich durchgeführt. Der Knotensatz liefert (im unbelasteten Fall) für den Ausgangsknoten</p>
+<p><span class="math display">\[
+C\frac{d}{dt}(v_1 - v_2) = \frac{v_2}{R}
+\]</span></p>
+<p>bzw. mit <span class="math inline">\(\tau = RC\)</span></p>
+<p><span class="math display">\[
+\frac{dv_2}{dt} + \frac{v_2}{\tau} = \frac{dv_1}{dt} = \dot{v}_1.
+\]</span></p>
+<p>Die Lösung zum Anfangswert <span class="math inline">\(v_2(0)\)</span> ist in diesem Fall</p>
+<p><span id="eq-lsg-dgl-hp"><span class="math display">\[
+v_2(t) = v_2(0^+) \exp\left(-\frac{t}{\tau} \right) +
+\frac{1}{\tau} \int_{0^+}^t \dot{v}_1(t') \exp\left(-\frac{t - t'}{\tau} \right) dt'.
+\tag{5.2}\]</span></span></p>
+<p><em>Einschalt- und Ausschaltvorgang.</em> Als einfache Spezialfälle werden der Einschaltvorgang und der Ausschaltvorgang betrachtet. Beim Einschaltvorgang springt $v_$1 bei <span class="math inline">\(t = 0\)</span> vom Wert 0 auf den Wert <span class="math inline">\(V_+\)</span>. Da die Spannung über der Kapazität dabei erhalten bleibt (vC(0+) = vC(0−) = 0), folgt v2(0+) = V+. Wegen der für <span class="math inline">\(t &gt; 0\)</span> konstanten Eingangsspannung <span class="math inline">\(v_1(t)\)</span>, gilt <span class="math inline">\(v'1(t) = 0\)</span> für alle Zeiten <span class="math inline">\(t &gt; 0\)</span>. Aus diesem Grund verschwindet das Integral in (1.75) und der Ausgangsspannungsverlauf ergibt sich zu</p>
+<p><span class="math display">\[
+v_2(t) = V_+ \exp\left(-\frac{t}{\tau} \right)
+\]</span></p>
+<p>Das Verhalten beim <em>Ausschaltvorgang</em> folgt auf analoge Weise. Hier war die Kapazität vor dem Sprung der Eingangsspannung auf die Spannung <span class="math inline">\(V_+\)</span> aufgeladen, d.h. hier gilt direkt nach dem Umschalten v2(0+) = −V+. Aus <a href="#eq-lsg-dgl-hp" class="quarto-xref">Gleichung&nbsp;<span>5.2</span></a> folgt so der Ausgangsspannungsverlauf</p>
+<p><span class="math display">\[
+v_2(t) = -V_+ \exp\left(-\frac{t}{\tau} \right)
+\]</span></p>
+<div id="fig-lec5rc_hp_sprung" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec5rc_hp_sprung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<embed src="../images/lec/lec5rc_hp_sprung.pdf" class="img-fluid">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5rc_hp_sprung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5.11: Sprungantwort des RC-Hochpasses
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-lec5rc_hp_sprung" class="quarto-xref">Abbildung&nbsp;<span>5.11</span></a> zeigt für beide Situationen den Verlauf der Spannung an Eingang und Ausgang. Als charakteristische Zeit für das Erreichen des jeweiligen Endwerts dient auch hier <span class="math inline">\(\tau = RC\)</span>.</p>
+<p>Beispielsweise wird mit <a href="https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/bsp134_reisch.asc">LTspice</a> auf den Eingang eines RC-Hochpasses mit <span class="math inline">\(R = 150\,\Omega\)</span>, <span class="math inline">\(C = 150\, nF\)</span>, <span class="math inline">\(f_g = 10.61\,kHz\)</span> eine Dreiecksspannung gegeben, so ist bei steigender Flanke</p>
+<p><span class="math display">\[
+\frac{dv_1}{dt} = \frac{5V}{0.5\,ms} = 10^4\,V/s
+\]</span></p>
+<p>und bei fallender Flanke</p>
+<p><span class="math display">\[
+\frac{dv1}{dt}  = \frac{−5V}{0.5\,ms} = −10^4\,V/s.
+\]</span></p>
+<p>Da die Frequenz der Eingangsspannung klein ist gegenüber der Grenzfrequenz des Hochpasses, wird am Ausgang eine symmetrische Rechteckspannung erwartet: Die Ableitung einer Geraden ergibt eine Konstante. Mit RC = 15 <span class="math inline">\(mu s\)</span> folgt für die Ausgangsspannung</p>
+<p><span class="math display">\[
+v_2 \approx \tau \frac{dv_1}{dt} =
+\begin{cases}
+150\,mV &amp; \text{bei steigender Flanke} \\\
+−150 \,mV &amp; \text{bei fallender Flanke.}
+\end{cases}
+\]</span></p>
+<p>Auswertung der LTspice Analyse mit Python:</p>
+<div id="80384b8c" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der TRAN SPICE Analyse des RC-Hochpasses</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Init</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ltspice</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Laden der RAW LTSpice Daten in den Python-Workspace</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="bu">file</span> <span class="op">=</span> <span class="st">'../files/spice/bsp134_reisch.raw'</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>raw <span class="op">=</span> ltspice.Ltspice(<span class="bu">file</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>raw.parse()</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># %% TRAN Analyse</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> raw.get_time()<span class="op">*</span><span class="fl">1e6</span>  <span class="co"># skaliert</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>V2 <span class="op">=</span> raw.get_data(<span class="st">'V(2)'</span>)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>V1 <span class="op">=</span> raw.get_data(<span class="st">'V(1)'</span>)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Erzeugen des Plots</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>plt.plot(t, V1, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">V_1</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>plt.plot(t, V2, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">V_2</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'Zeit t in </span><span class="dv">$\m</span><span class="vs">u</span><span class="dv">$</span><span class="vs">s'</span>)</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Spannung in V'</span>)</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lec_05_files/figure-html/cell-7-output-1.png" width="576" height="431" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="rc-bandpaß" class="level3" data-number="5.6.3">
 <h3 data-number="5.6.3" class="anchored" data-anchor-id="rc-bandpaß"><span class="header-section-number">5.6.3</span> RC-Bandpaß</h3>
@@ -903,15 +1094,15 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 <embed src="../images/lec/lec5bp.pdf" class="img-fluid" width="600">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5bp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5.8: Bode-Diagramm eines Bandpasses
+Abbildung&nbsp;5.12: Bode-Diagramm eines Bandpasses
 </figcaption>
 </figure>
 </div>
-<p>“Besitzt ein Netzwerk sowohl bei hohen als auch bei tiefen Frequenzen einen Sperrbereich und bei mittleren Frequenzen einen Durchlaßbereich, so liegt ein Bandpaß vor. Der prinzipielle Verlauf der Spannungsverstärkung <span class="math inline">\(a_v\)</span> ist im Bode-Diagramm <a href="#fig-lec5bp" class="quarto-xref">Abbildung&nbsp;<span>5.8</span></a> skizziert. Die Grenzen des Durchlaßbereichs werden nach unten durch die untere Grenzfrequenz <span class="math inline">\(f_{gu}\)</span> und nach oben durch die obere Grenzfrequenz <span class="math inline">\(f_{go}\)</span> bestimmt. Die Differenz <span class="math inline">\(B = f_{go} − f_{gu}\)</span> heißt Bandbreite (engl. bandwidth) des Bandpasses; das geometrische Mittel</p>
+<p>“Besitzt ein Netzwerk sowohl bei hohen als auch bei tiefen Frequenzen einen Sperrbereich und bei mittleren Frequenzen einen Durchlaßbereich, so liegt ein Bandpaß vor. Der prinzipielle Verlauf der Spannungsverstärkung <span class="math inline">\(a_v\)</span> ist im Bode-Diagramm <a href="#fig-lec5bp" class="quarto-xref">Abbildung&nbsp;<span>5.12</span></a> skizziert. Die Grenzen des Durchlaßbereichs werden nach unten durch die untere Grenzfrequenz <span class="math inline">\(f_{gu}\)</span> und nach oben durch die obere Grenzfrequenz <span class="math inline">\(f_{go}\)</span> bestimmt. Die Differenz <span class="math inline">\(B = f_{go} − f_{gu}\)</span> heißt Bandbreite (engl. bandwidth) des Bandpasses; das geometrische Mittel</p>
 <p><span class="math display">\[
 f_m = \sqrt{f_{gu} f_{go}}
 \]</span></p>
-<p>der beiden Grenzfrequenzen wird als Bandmittenfrequenz bezeichnet. Bei logarithmisch unterteilter Frequenzskala liegt <span class="math inline">\(f_m\)</span> genau in der Mitte zwischen <span class="math inline">\(f_{gu}\)</span> und <span class="math inline">\(f_{go}\)</span>. Ein Bandpaß heißt schmalbandig, falls <span class="math inline">\(B &lt;&lt; f_m\)</span> gilt; als Maß gilt die relative Bandbreite <span class="math inline">\(B/f_m\)</span>. Die Abschwächung des Signals bei der Bandmittenfrequenz wird als Einfügungsdämpfung bezeichnet.” <span class="citation" data-cites="reisch2007">(<a href="../references.html#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span></p>
+<p>der beiden Grenzfrequenzen wird als Bandmittenfrequenz bezeichnet. Bei logarithmisch unterteilter Frequenzskala liegt <span class="math inline">\(f_m\)</span> genau in der Mitte zwischen <span class="math inline">\(f_{gu}\)</span> und <span class="math inline">\(f_{go}\)</span>. Ein Bandpaß heißt schmalbandig, falls <span class="math inline">\(B \ll f_m\)</span> gilt; als Maß gilt die relative Bandbreite <span class="math inline">\(B/f_m\)</span>. Die Abschwächung des Signals bei der Bandmittenfrequenz wird als Einfügungsdämpfung bezeichnet.” <span class="citation" data-cites="reisch2007">(<a href="../references.html#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span></p>
 <p>“Die als <a href="https://www.elektroniktutor.de/analogtechnik/wien.html">Wien-Glied</a> bezeichnete Schaltung ist ein spezieller RC-Bandpass. Im Wien-Robinson-Generator bestimmt dieses Filter die Ausgangsfrequenz. Er generiert Sinusfrequenzen mit sehr geringem Klirrfaktor. Im durchstimmbaren Sinusgenerator sind die beiden Widerstände durch gemeinsam einstellbare Potentiometer ersetzt. Diese Anordnung gibt es auch in Wechselstrom-Brückenschaltungen.” <span class="citation" data-cites="mietke2024">(<a href="../references.html#ref-mietke2024" role="doc-biblioref">Mietke 2024</a>)</span></p>
 </section>
 </section>
@@ -923,7 +1114,7 @@ f_m = \sqrt{f_{gu} f_{go}}
 <embed src="../images/lec/lec5ElemTransf.pdf" class="img-fluid">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5ElemTransf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5.9: Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS
+Abbildung&nbsp;5.13: Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS
 </figcaption>
 </figure>
 </div>
