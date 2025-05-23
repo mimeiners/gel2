@@ -68,9 +68,9 @@ book:
         - tut/tut_04_Komplexe-Groessen.ipynb
         - tut/tut_05_Grundzweipole1.ipynb
         - tut/tut_06_Grundzweipole2.ipynb
-#        - tut/tut_07_KWR.ipynb
-#        - tut/tut_08_Filterschaltungen.ipynb
-#        - tut/tut_09_Schwingkreise.ipynb
+        - tut/tut_07_KWR.ipynb
+        - tut/tut_08_Filterschaltungen.ipynb
+        - tut/tut_09_Schwingkreise.ipynb
 #        - tut/tut_10_Transformatoren.ipynb
 #        - tut/tut_11_Klausurvorbereitung.ipynb
     - references.qmd
