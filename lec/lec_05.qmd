@@ -499,7 +499,7 @@ Ein *Hochpaß* überträgt sinusförmige Eingangsspannungen hoher Frequenz unver
 Frequenz bewirkt er eine Abschwächung und eine Phasenvorauseilung. Abbildung @fig-  zeigt schematisch den Verlauf von 
 $a_v$ im Bode-Diagramm für einen Hochpaß. In dem bei tiefen Frequenzen vorliegenden Sperrbereich erfolgt bei
 Hochpaßnetzwerken aus linearen Elementen ein Anstieg mit einem Vielfachen von 20 dB/dec entsprechend der Ordnung des
-Hochpasses: Ein Hochpaß der Ordnung $k$ zeigt im Sperrbereich einen Anstieg mit $k  \cdot$ 20\dB/dec. In dem bei hohen
+Hochpasses: Ein Hochpaß der Ordnung $k$ zeigt im Sperrbereich einen Anstieg mit $k  \cdot 20\,dB/dec$. In dem bei hohen
 Frequenzen vorliegenden Durchlaßbereich ist $a_v \approx$ 0 dB. Der Übergang zwischen Durch laßbereich und Sperrbereich
 wird durch die Grenzfrequenz $f_g$ des Hochpasses markiert, bei der $a_v$ den Wert −3 dB aufweist. 
 
@@ -513,7 +513,7 @@ wird durch die Grenzfrequenz $f_g$ des Hochpasses markiert, bei der $a_v$ den We
 Für den in @fig-lec5rc_hp gezeigten RC-Hochpaß ergibt sich aus der Spannungsteilerformel
 
 $$
-\underline{H}_v(j\omega) = \frac{\underline{v}_2}{\underline{v}_1} = \frac{R}{R + \(j\omega C)^{-1}} 
+\underline{H}_v(j\omega) = \frac{\underline{v}_2}{\underline{v}_1} = \frac{R}{R + (j\omega C)^{-1}} 
 = \frac{1}{1 + (j\omega \tau)^{-1}}
 $$
 
@@ -540,9 +540,9 @@ $$
 
 Im Bode-Diagramm (@fig-bode-rc_hp) resultiert für $f \ll f_g$ ein Anstieg mit 20 dB/dec, d.h. es liegt ein Hochpaß 1.
 Ordnung vor. für $\omega \tau \gg 1$ bzw. $f \gg f_g$ nähert sich $A_v(f)$ dem Wert 1 (bzw. $a_v \rightarrow 0$ dB); die 
-Phasenverschiebung zwischen Eingangs- und Ausgangssignal, die bei kleinen Frequenzen 90$ˆ{\circ}$ beträgt, wird nun zu
+Phasenverschiebung zwischen Eingangs- und Ausgangssignal, die bei kleinen Frequenzen 90$^{\circ}$ beträgt, wird nun zu
 0$^{\circ}$. Bei der Grenzfrequenz gilt wie beim Tiefpaß $A_v(f_g) = 1/\sqrt{2}$; die Phasenverschiebung zwischen
-Eingang und Ausgang ist hier jedoch 45$^{\circ}. 
+Eingang und Ausgang ist hier jedoch 45$^{\circ}$. 
 
 
 ```{python}
@@ -623,8 +623,8 @@ $$
 
 ![Sprungantwort des RC-Hochpasses](../images/lec/lec5rc_hp_sprung.pdf){#fig-lec5rc_hp_sprung}
 
-Abbildung 1.19 zeigt für beide Situationen den Verlauf der Spannung an Eingang und Ausgang. Als charakteristische Zeit
-für das Erreichen des jeweiligen Endwerts dient auch hier $\tau = RC$.
+@fig-lec5rc_hp_sprung zeigt für beide Situationen den Verlauf der Spannung an Eingang und Ausgang. Als charakteristische
+Zeit für das Erreichen des jeweiligen Endwerts dient auch hier $\tau = RC$.
 
 
 Beispielsweise wird mit [LTspice](https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/bsp134_reisch.asc)
@@ -632,13 +632,13 @@ auf den Eingang eines RC-Hochpasses mit $R = 150\,\Omega$, $C = 150\, nF$, $f_g 
 Dreiecksspannung gegeben, so ist bei steigender Flanke
 
 $$
-\frac{dv_1}{dt} = \frac{5V}{0.5\,ms} = 10^4 V/s
+\frac{dv_1}{dt} = \frac{5V}{0.5\,ms} = 10^4\,V/s
 $$
 
 und bei fallender Flanke
 
 $$
-{dv1}{dt}  = {−5V}{0.5\,ms} = −10^4\,V/s.
+\frac{dv1}{dt}  = \frac{−5V}{0.5\,ms} = −10^4\,V/s.
 $$
 
 Da die Frequenz der Eingangsspannung klein ist gegenüber der Grenzfrequenz des Hochpasses, wird am Ausgang eine
@@ -647,10 +647,10 @@ folgt für die Ausgangsspannung
 
 $$
 v_2 \approx \tau \frac{dv_1}{dt} =
-\begin{case}
-150\,mV \quad \text{bei steigender Flanke} \\\
-−150 \,mV \quad \text{bei fallender Flanke.}
-\end{case}
+\begin{cases}
+150\,mV & \text{bei steigender Flanke} \\\
+−150 \,mV & \text{bei fallender Flanke.}
+\end{cases}
 $$
 
 
@@ -660,6 +660,7 @@ Auswertung der LTspice Analyse mit Python:
 
 {{< include ../files/spice/bsp134_reisch.py >}}
 
+``` 
 
 ### RC-Bandpaß
 
