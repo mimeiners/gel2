@@ -496,9 +496,9 @@ Auswertung der LTspice Analyse mit Python:
 ### RC-Hochpaß
 
 Ein *Hochpaß* überträgt sinusförmige Eingangsspannungen hoher Frequenz unverändert. Bei Eingangsspannungen tiefer
-Frequenz bewirkt er eine Abschwächung und eine Phasenvorauseilung. Abbildung @fig-  zeigt schematisch den Verlauf von 
-$a_v$ im Bode-Diagramm für einen Hochpaß. In dem bei tiefen Frequenzen vorliegenden Sperrbereich erfolgt bei
-Hochpaßnetzwerken aus linearen Elementen ein Anstieg mit einem Vielfachen von 20 dB/dec entsprechend der Ordnung des
+Frequenz bewirkt er eine Abschwächung und eine Phasenvorauseilung. Abbildung @fig-lec5rc_hp_bode_schem zeigt schematisch
+den Verlauf von $a_v$ im Bode-Diagramm für einen Hochpaß. In dem bei tiefen Frequenzen vorliegenden Sperrbereich erfolgt
+bei Hochpaßnetzwerken aus linearen Elementen ein Anstieg mit einem Vielfachen von 20 dB/dec entsprechend der Ordnung des
 Hochpasses: Ein Hochpaß der Ordnung $k$ zeigt im Sperrbereich einen Anstieg mit $k  \cdot 20\,dB/dec$. In dem bei hohen
 Frequenzen vorliegenden Durchlaßbereich ist $a_v \approx$ 0 dB. Der Übergang zwischen Durch laßbereich und Sperrbereich
 wird durch die Grenzfrequenz $f_g$ des Hochpasses markiert, bei der $a_v$ den Wert −3 dB aufweist. 

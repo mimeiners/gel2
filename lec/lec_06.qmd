@@ -134,16 +134,20 @@ Entn. [@reisch2007]
 &= \frac{1}{1 + j \frac{\omega}{\omega_0 Q} + \left(\frac{\omega}{\omega_0}\right)^2}
 \end{align}
 
-* Eigenfrequenz / Resonanzfrequenz $\omega_0 = \frac{1}{\sqrt{L C}}$
+* Eigenfrequenz / Resonanzfrequenz $\omega$
+  - $\omega_0 = \frac{1}{\sqrt{L C}}$
 
-* Abklingkonstante $\delta = \frac{R}{\omega_0 L}$
+* Abklingkonstante $\delta$
+  - $\delta = \frac{R}{\omega_0 L}$
 
-* Dämpfung / Verlustfaktor $d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}$
+* Dämpfung / Verlustfaktor 
+  - $d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}$
 
-* Güte $Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}$
+* Güte(faktor) $Q$ [@wikipedia2025a]
+  - $Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}$
   - $\vert Q(\omega_0) \vert$ ist der Betrag der Blindleistung 
-  - $P(\omega_0)$ ist die Wirkleistung [@wikipedia2025a]
-
+  - $P(\omega_0)$ ist die Wirkleistung 
+  
 :::
 
 
