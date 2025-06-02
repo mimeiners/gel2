@@ -413,13 +413,12 @@ window.Quarto = {
   <li><a href="#rc-hochpaß" id="toc-rc-hochpaß" class="nav-link" data-scroll-target="#rc-hochpaß"><span class="header-section-number">5.6.2</span> RC-Hochpaß</a></li>
   <li><a href="#rc-bandpaß" id="toc-rc-bandpaß" class="nav-link" data-scroll-target="#rc-bandpaß"><span class="header-section-number">5.6.3</span> RC-Bandpaß</a></li>
   </ul></li>
-  <li><a href="#elementtransformation" id="toc-elementtransformation" class="nav-link" data-scroll-target="#elementtransformation"><span class="header-section-number">5.7</span> Elementtransformation</a></li>
-  <li><a href="#messbrücken" id="toc-messbrücken" class="nav-link" data-scroll-target="#messbrücken"><span class="header-section-number">5.8</span> Messbrücken</a>
+  <li><a href="#messbrücken" id="toc-messbrücken" class="nav-link" data-scroll-target="#messbrücken"><span class="header-section-number">5.7</span> Messbrücken</a>
   <ul class="collapse">
-  <li><a href="#wheatstone-messbrücke-gleichstrommessbrücke" id="toc-wheatstone-messbrücke-gleichstrommessbrücke" class="nav-link" data-scroll-target="#wheatstone-messbrücke-gleichstrommessbrücke"><span class="header-section-number">5.8.1</span> Wheatstone-Messbrücke – Gleichstrommessbrücke</a></li>
-  <li><a href="#wechselstrommessbrücke" id="toc-wechselstrommessbrücke" class="nav-link" data-scroll-target="#wechselstrommessbrücke"><span class="header-section-number">5.8.2</span> Wechselstrommessbrücke</a></li>
-  <li><a href="#kapazitätsmessbrücke-nach-wien-wien-brücke" id="toc-kapazitätsmessbrücke-nach-wien-wien-brücke" class="nav-link" data-scroll-target="#kapazitätsmessbrücke-nach-wien-wien-brücke"><span class="header-section-number">5.8.3</span> Kapazitätsmessbrücke nach Wien – Wien-Brücke</a></li>
-  <li><a href="#wien-robinson-brücke-einfaches-frequenzmessgerät" id="toc-wien-robinson-brücke-einfaches-frequenzmessgerät" class="nav-link" data-scroll-target="#wien-robinson-brücke-einfaches-frequenzmessgerät"><span class="header-section-number">5.8.4</span> Wien-Robinson-Brücke – einfaches Frequenzmessgerät</a></li>
+  <li><a href="#wheatstone-messbrücke-gleichstrommessbrücke" id="toc-wheatstone-messbrücke-gleichstrommessbrücke" class="nav-link" data-scroll-target="#wheatstone-messbrücke-gleichstrommessbrücke"><span class="header-section-number">5.7.1</span> Wheatstone-Messbrücke – Gleichstrommessbrücke</a></li>
+  <li><a href="#wechselstrommessbrücke" id="toc-wechselstrommessbrücke" class="nav-link" data-scroll-target="#wechselstrommessbrücke"><span class="header-section-number">5.7.2</span> Wechselstrommessbrücke</a></li>
+  <li><a href="#kapazitätsmessbrücke-nach-wien-wien-brücke" id="toc-kapazitätsmessbrücke-nach-wien-wien-brücke" class="nav-link" data-scroll-target="#kapazitätsmessbrücke-nach-wien-wien-brücke"><span class="header-section-number">5.7.3</span> Kapazitätsmessbrücke nach Wien – Wien-Brücke</a></li>
+  <li><a href="#wien-robinson-brücke-einfaches-frequenzmessgerät" id="toc-wien-robinson-brücke-einfaches-frequenzmessgerät" class="nav-link" data-scroll-target="#wien-robinson-brücke-einfaches-frequenzmessgerät"><span class="header-section-number">5.7.4</span> Wien-Robinson-Brücke – einfaches Frequenzmessgerät</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/lec/lec_05.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
@@ -750,7 +749,7 @@ Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
 </div>
 </div>
 <p>Um in LTspice das Bode-Diagramm des RC-Tiefpasses zu erhalten, muss eine <a href="https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/lec5rctp.asc">.ac Analyse</a> durchgeführt werden. Diese kann mit Python wie folgt ausgewertet werden:</p>
-<div id="e9f1b423" class="cell" data-execution_count="3">
+<div id="2f99f1bb" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der AC SPICE Analyse der RC-Schaltung</span></span>
@@ -871,7 +870,7 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 \]</span></p>
 <p>so stellt sich am Ausgang für <span class="math inline">\(t \gg \tau = 15\,\mu s\)</span> ein periodischer Spannungsverlauf mit dem Gleichanteil 2.5 V und dem Wechselanteil <span class="math inline">\(\Delta v_2(t)\)</span> ein.</p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="d83f5ee3" class="cell" data-execution_count="4">
+<div id="0e65d5d6" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der TRAN SPICE Analyse der RC-Schaltung</span></span>
@@ -912,7 +911,7 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 </section>
 <section id="rc-hochpaß" class="level3" data-number="5.6.2">
 <h3 data-number="5.6.2" class="anchored" data-anchor-id="rc-hochpaß"><span class="header-section-number">5.6.2</span> RC-Hochpaß</h3>
-<p>Ein <em>Hochpaß</em> überträgt sinusförmige Eingangsspannungen hoher Frequenz unverändert. Bei Eingangsspannungen tiefer Frequenz bewirkt er eine Abschwächung und eine Phasenvorauseilung. Abbildung <span class="citation" data-cites="fig">(<a href="../references.html#ref-fig" role="doc-biblioref"><strong>fig?</strong></a>)</span>- zeigt schematisch den Verlauf von <span class="math inline">\(a_v\)</span> im Bode-Diagramm für einen Hochpaß. In dem bei tiefen Frequenzen vorliegenden Sperrbereich erfolgt bei Hochpaßnetzwerken aus linearen Elementen ein Anstieg mit einem Vielfachen von 20 dB/dec entsprechend der Ordnung des Hochpasses: Ein Hochpaß der Ordnung <span class="math inline">\(k\)</span> zeigt im Sperrbereich einen Anstieg mit <span class="math inline">\(k  \cdot 20\,dB/dec\)</span>. In dem bei hohen Frequenzen vorliegenden Durchlaßbereich ist <span class="math inline">\(a_v \approx\)</span> 0 dB. Der Übergang zwischen Durch laßbereich und Sperrbereich wird durch die Grenzfrequenz <span class="math inline">\(f_g\)</span> des Hochpasses markiert, bei der <span class="math inline">\(a_v\)</span> den Wert −3 dB aufweist.</p>
+<p>Ein <em>Hochpaß</em> überträgt sinusförmige Eingangsspannungen hoher Frequenz unverändert. Bei Eingangsspannungen tiefer Frequenz bewirkt er eine Abschwächung und eine Phasenvorauseilung. Abbildung <a href="#fig-lec5rc_hp_bode_schem" class="quarto-xref">Abbildung&nbsp;<span>5.9</span></a> zeigt schematisch den Verlauf von <span class="math inline">\(a_v\)</span> im Bode-Diagramm für einen Hochpaß. In dem bei tiefen Frequenzen vorliegenden Sperrbereich erfolgt bei Hochpaßnetzwerken aus linearen Elementen ein Anstieg mit einem Vielfachen von 20 dB/dec entsprechend der Ordnung des Hochpasses: Ein Hochpaß der Ordnung <span class="math inline">\(k\)</span> zeigt im Sperrbereich einen Anstieg mit <span class="math inline">\(k  \cdot 20\,dB/dec\)</span>. In dem bei hohen Frequenzen vorliegenden Durchlaßbereich ist <span class="math inline">\(a_v \approx\)</span> 0 dB. Der Übergang zwischen Durch laßbereich und Sperrbereich wird durch die Grenzfrequenz <span class="math inline">\(f_g\)</span> des Hochpasses markiert, bei der <span class="math inline">\(a_v\)</span> den Wert −3 dB aufweist.</p>
 <div id="fig-lec5rc_hp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lec5rc_hp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1048,7 +1047,7 @@ v_2 \approx \tau \frac{dv_1}{dt} =
 \end{cases}
 \]</span></p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="80384b8c" class="cell" data-execution_count="6">
+<div id="da53ad28" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der TRAN SPICE Analyse des RC-Hochpasses</span></span>
@@ -1104,34 +1103,23 @@ f_m = \sqrt{f_{gu} f_{go}}
 \]</span></p>
 <p>der beiden Grenzfrequenzen wird als Bandmittenfrequenz bezeichnet. Bei logarithmisch unterteilter Frequenzskala liegt <span class="math inline">\(f_m\)</span> genau in der Mitte zwischen <span class="math inline">\(f_{gu}\)</span> und <span class="math inline">\(f_{go}\)</span>. Ein Bandpaß heißt schmalbandig, falls <span class="math inline">\(B \ll f_m\)</span> gilt; als Maß gilt die relative Bandbreite <span class="math inline">\(B/f_m\)</span>. Die Abschwächung des Signals bei der Bandmittenfrequenz wird als Einfügungsdämpfung bezeichnet.” <span class="citation" data-cites="reisch2007">(<a href="../references.html#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span></p>
 <p>“Die als <a href="https://www.elektroniktutor.de/analogtechnik/wien.html">Wien-Glied</a> bezeichnete Schaltung ist ein spezieller RC-Bandpass. Im Wien-Robinson-Generator bestimmt dieses Filter die Ausgangsfrequenz. Er generiert Sinusfrequenzen mit sehr geringem Klirrfaktor. Im durchstimmbaren Sinusgenerator sind die beiden Widerstände durch gemeinsam einstellbare Potentiometer ersetzt. Diese Anordnung gibt es auch in Wechselstrom-Brückenschaltungen.” <span class="citation" data-cites="mietke2024">(<a href="../references.html#ref-mietke2024" role="doc-biblioref">Mietke 2024</a>)</span></p>
+<!-- ## Elementtransformation -->
+<!-- ![Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS](../images/lec/lec5ElemTransf.pdf){#fig-lec5ElemTransf} -->
+<!-- Entn. aus [@deliyannis1998] -->
 </section>
 </section>
-<section id="elementtransformation" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="elementtransformation"><span class="header-section-number">5.7</span> Elementtransformation</h2>
-<div id="fig-lec5ElemTransf" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-lec5ElemTransf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="../images/lec/lec5ElemTransf.pdf" class="img-fluid">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5ElemTransf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5.13: Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS
-</figcaption>
-</figure>
-</div>
-<p>Entn. aus <span class="citation" data-cites="deliyannis1998">(<a href="../references.html#ref-deliyannis1998" role="doc-biblioref">Deliyannis, Sun, und Fidler 1998</a>)</span></p>
-</section>
-<section id="messbrücken" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="messbrücken"><span class="header-section-number">5.8</span> Messbrücken</h2>
-<section id="wheatstone-messbrücke-gleichstrommessbrücke" class="level3" data-number="5.8.1">
-<h3 data-number="5.8.1" class="anchored" data-anchor-id="wheatstone-messbrücke-gleichstrommessbrücke"><span class="header-section-number">5.8.1</span> Wheatstone-Messbrücke – Gleichstrommessbrücke</h3>
+<section id="messbrücken" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="messbrücken"><span class="header-section-number">5.7</span> Messbrücken</h2>
+<section id="wheatstone-messbrücke-gleichstrommessbrücke" class="level3" data-number="5.7.1">
+<h3 data-number="5.7.1" class="anchored" data-anchor-id="wheatstone-messbrücke-gleichstrommessbrücke"><span class="header-section-number">5.7.1</span> Wheatstone-Messbrücke – Gleichstrommessbrücke</h3>
 <p>Zwei mögliche Messverfahren:</p>
 <ol type="1">
 <li><p>Ausschlagverfahren Brückenspannung <span class="math inline">\(U_D\)</span> wird mit hochohmigem Messinstrument gemessen.</p></li>
 <li><p>Abgleich- oder Nullverfahren Brückenspannung <span class="math inline">\(U_D\)</span> wird zu Null abgeglichen.</p></li>
 </ol>
 </section>
-<section id="wechselstrommessbrücke" class="level3" data-number="5.8.2">
-<h3 data-number="5.8.2" class="anchored" data-anchor-id="wechselstrommessbrücke"><span class="header-section-number">5.8.2</span> Wechselstrommessbrücke</h3>
+<section id="wechselstrommessbrücke" class="level3" data-number="5.7.2">
+<h3 data-number="5.7.2" class="anchored" data-anchor-id="wechselstrommessbrücke"><span class="header-section-number">5.7.2</span> Wechselstrommessbrücke</h3>
 <ul>
 <li>Abgleichbedingung</li>
 </ul>
@@ -1156,26 +1144,29 @@ X_1 R_4 + R_1 X_4 &amp;= X_2 R_3 + R_2 X_3
 <li>zwei Bedingungen <span class="math inline">\(\Rightarrow\)</span> zwei abgleichbare Elemente</li>
 </ul>
 </section>
-<section id="kapazitätsmessbrücke-nach-wien-wien-brücke" class="level3" data-number="5.8.3">
-<h3 data-number="5.8.3" class="anchored" data-anchor-id="kapazitätsmessbrücke-nach-wien-wien-brücke"><span class="header-section-number">5.8.3</span> Kapazitätsmessbrücke nach Wien – Wien-Brücke</h3>
+<section id="kapazitätsmessbrücke-nach-wien-wien-brücke" class="level3" data-number="5.7.3">
+<h3 data-number="5.7.3" class="anchored" data-anchor-id="kapazitätsmessbrücke-nach-wien-wien-brücke"><span class="header-section-number">5.7.3</span> Kapazitätsmessbrücke nach Wien – Wien-Brücke</h3>
 </section>
-<section id="wien-robinson-brücke-einfaches-frequenzmessgerät" class="level3" data-number="5.8.4">
-<h3 data-number="5.8.4" class="anchored" data-anchor-id="wien-robinson-brücke-einfaches-frequenzmessgerät"><span class="header-section-number">5.8.4</span> Wien-Robinson-Brücke – einfaches Frequenzmessgerät</h3>
-<p><span class="citation" data-cites="wikipedia2019a">(<a href="../references.html#ref-wikipedia2019a" role="doc-biblioref">Wikipedia 2019</a>)</span> <span class="citation" data-cites="hewlett1942">(<a href="../references.html#ref-hewlett1942" role="doc-biblioref">Hewlett 1942</a>)</span></p>
+<section id="wien-robinson-brücke-einfaches-frequenzmessgerät" class="level3" data-number="5.7.4">
+<h3 data-number="5.7.4" class="anchored" data-anchor-id="wien-robinson-brücke-einfaches-frequenzmessgerät"><span class="header-section-number">5.7.4</span> Wien-Robinson-Brücke – einfaches Frequenzmessgerät</h3>
+<p><span class="citation" data-cites="lerch2016">(<a href="../references.html#ref-lerch2016" role="doc-biblioref">Lerch 2016</a>)</span> <span class="citation" data-cites="muehl2020">(<a href="../references.html#ref-muehl2020" role="doc-biblioref">Mühl 2020</a>)</span> <span class="citation" data-cites="wikipedia2019a">(<a href="../references.html#ref-wikipedia2019a" role="doc-biblioref">Wikipedia 2019</a>)</span> <span class="citation" data-cites="hewlett1942">(<a href="../references.html#ref-hewlett1942" role="doc-biblioref">Hewlett 1942</a>)</span></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-buettner2014" class="csl-entry" role="listitem">
 Büttner, Wolf-Ewald. 2014. <em>Grundlagen der Elektrotechnik 2</em>. <span>OLDENBOURG</span> <span>WISSENSCHAFTSVERLAG</span>. <a href="https://doi.org/10.1524/9783110371796">https://doi.org/10.1524/9783110371796</a>.
 </div>
-<div id="ref-deliyannis1998" class="csl-entry" role="listitem">
-Deliyannis, T., Yichuang Sun, und J. K. Fidler. 1998. <em>Continuous-Time Active Filter Design</em>. CRC Press. <a href="https://doi.org/10.1201/9781439821879">https://doi.org/10.1201/9781439821879</a>.
-</div>
 <div id="ref-hewlett1942" class="csl-entry" role="listitem">
 Hewlett, W. R. 1942. <span>„Variable Frequency Oscillation Generator“</span>. U.S. Patent Office No. 2,268,872. <a href="https://de.wikipedia.org/wiki/Wien-Robinson-Brücke">https://de.wikipedia.org/wiki/Wien-Robinson-Brücke</a>.
 </div>
+<div id="ref-lerch2016" class="csl-entry" role="listitem">
+Lerch, Reinhard. 2016. <em>Elektrische Messtechnik: Analoge, digitale und computergestützte Verfahren</em>. Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-662-46941-5">https://doi.org/10.1007/978-3-662-46941-5</a>.
+</div>
 <div id="ref-mietke2024" class="csl-entry" role="listitem">
 Mietke, Detlef. 2024. <span>„Elektroniktutor“</span>. Techreport. Oberstufenzentrum f<span>ü</span>r Kommunikations-, Informations- und Medientechnik (OSZ-KIM), Berlin; online. <a href="https://www.elektroniktutor.de">https://www.elektroniktutor.de</a>.
+</div>
+<div id="ref-muehl2020" class="csl-entry" role="listitem">
+Mühl, Thomas. 2020. <em>Elektrische Messtechnik: Grundlagen, Messverfahren, Anwendungen</em>. Springer Fachmedien Wiesbaden. <a href="https://doi.org/10.1007/978-3-658-29116-7">https://doi.org/10.1007/978-3-658-29116-7</a>.
 </div>
 <div id="ref-reisch2007" class="csl-entry" role="listitem">
 Reisch, Michael. 2007. <em>Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE</em>. 2. Aufl. Springer. <a href="https://doi.org/10.1007/978-3-540-34015-7">https://doi.org/10.1007/978-3-540-34015-7</a>.

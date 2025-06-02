@@ -548,49 +548,66 @@ Spannungsübertragungsfaktor
 &amp;= \frac{1}{1 + j \frac{\omega}{\omega_0 Q} + \left(\frac{\omega}{\omega_0}\right)^2}
 \end{align}\]</span></p>
 <ul>
-<li><p>Eigenfrequenz / Resonanzfrequenz <span class="math inline">\(\omega_0 = \frac{1}{\sqrt{L C}}\)</span></p></li>
-<li><p>Abklingkonstante <span class="math inline">\(\delta = \frac{R}{\omega_0 L}\)</span></p></li>
-<li><p>Dämpfung / Verlustfaktor <span class="math inline">\(d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}\)</span></p></li>
-<li><p>Güte <span class="math inline">\(Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}\)</span></p>
+<li>Eigenfrequenz / Resonanzfrequenz <span class="math inline">\(\omega\)</span>
 <ul>
+<li><span class="math inline">\(\omega_0 = \frac{1}{\sqrt{L C}}\)</span></li>
+</ul></li>
+<li>Abklingkonstante <span class="math inline">\(\delta\)</span>
+<ul>
+<li><span class="math inline">\(\delta = \frac{R}{\omega_0 L}\)</span></li>
+</ul></li>
+<li>Dämpfung / Verlustfaktor
+<ul>
+<li><span class="math inline">\(d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}\)</span></li>
+</ul></li>
+<li>Güte(faktor) <span class="math inline">\(Q\)</span> <span class="citation" data-cites="wikipedia2025a">(<a href="../references.html#ref-wikipedia2025a" role="doc-biblioref">Wikipedia 2025</a>)</span>
+<ul>
+<li><span class="math inline">\(Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}\)</span></li>
 <li><span class="math inline">\(\vert Q(\omega_0) \vert\)</span> ist der Betrag der Blindleistung</li>
 <li><span class="math inline">\(P(\omega_0)\)</span> ist die Wirkleistung</li>
 </ul></li>
-<li><p>Analyse mit LTspice und Python <a href="https://github.com/DongHoonPark/ltspice_pytool">GitHub</a> Installation mit Anaconda-Shell oder Windows-Shell (CMD/PowerShell)</p></li>
 </ul>
-<pre class="shell"><code>$ pip install -U ltspice</code></pre>
 </div>
 </div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ltspice</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Laden der RAW LTspice Daten in den Python-Workspace</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">file</span> <span class="op">=</span> <span class="st">"../files/spice/kap137_reisch.raw"</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> ltspice.Ltspice(<span class="bu">file</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>data.parse()</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Zuweisen der Simulationdaten an lokale Variablen</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>Hu <span class="op">=</span> data.get_data(<span class="st">"v(vo)"</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>freq <span class="op">=</span> data.get_data(<span class="st">"frequency"</span>)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Daten werden als Numpy-Array geladen, Typ complex</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>Hu_dB <span class="op">=</span> <span class="dv">20</span><span class="op">*</span>np.log10(np.<span class="bu">abs</span>(Hu))</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>Hu_arg <span class="op">=</span> <span class="dv">180</span> <span class="op">/</span> np.pi <span class="op">*</span> np.angle(Hu)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> freq.real</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Erzeugen des Bode-Diagramms (Plot)</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>fig1 <span class="op">=</span> plt.figure(<span class="dv">1</span>)</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, Hu_dB)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'</span><span class="dv">$</span><span class="vs">H_u</span><span class="kw">(</span><span class="vs">f</span><span class="kw">)</span><span class="dv">$</span><span class="vs">/dB'</span>)</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, Hu_arg)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'arg</span><span class="kw">(</span><span class="dv">$</span><span class="vs">H_u</span><span class="kw">(</span><span class="vs">f</span><span class="kw">)</span><span class="dv">$</span><span class="kw">)</span><span class="vs">/deg'</span>)</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Frequenz f/Hz'</span>)</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="999d5627" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ltspice</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Laden der RAW LTspice Daten in den Python-Workspace</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">file</span> <span class="op">=</span> <span class="st">"../files/spice/kap137_reisch.raw"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> ltspice.Ltspice(<span class="bu">file</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>data.parse()</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Zuweisen der Simulationdaten an lokale Variablen</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Hu <span class="op">=</span> data.get_data(<span class="st">"v(vo)"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>freq <span class="op">=</span> data.get_data(<span class="st">"frequency"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Daten werden als Numpy-Array geladen, Typ complex</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Hu_dB <span class="op">=</span> <span class="dv">20</span><span class="op">*</span>np.log10(np.<span class="bu">abs</span>(Hu))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Hu_arg <span class="op">=</span> <span class="dv">180</span> <span class="op">/</span> np.pi <span class="op">*</span> np.angle(Hu)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> freq.real</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Erzeugen des Bode-Diagramms (Plot)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>fig1 <span class="op">=</span> plt.figure(<span class="dv">1</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, Hu_dB)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'</span><span class="dv">$</span><span class="vs">H_u</span><span class="kw">(</span><span class="vs">f</span><span class="kw">)</span><span class="dv">$</span><span class="vs">/dB'</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, Hu_arg)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'arg</span><span class="kw">(</span><span class="dv">$</span><span class="vs">H_u</span><span class="kw">(</span><span class="vs">f</span><span class="kw">)</span><span class="dv">$</span><span class="kw">)</span><span class="vs">/deg'</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Frequenz f/Hz'</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lec_06_files/figure-html/cell-2-output-1.png" width="606" height="431" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol"><span class="header-section-number">6.3</span> Grundeigenschaften von Reihen- und Parallelschwingkreis (passiver Zweipol)</h2>
@@ -702,7 +719,7 @@ Normierte Darstellung
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align}
-\underline{Z} &amp;= R \left( 1 + j \frac{1}{R} \left( \frac{\omega \omega_0 \omega L}{\omega_0}
+\underline{Z} &amp;= R \left( 1 + j \frac{1}{R} \left( \frac{\omega_0 \omega L}{\omega_0}
 - \frac{\omega_0}{\omega_0 \omega C}\right)\right) \\
 &amp;= R (1 + Q v) \\
 \underline{Y} &amp;= G (1 + j Q v)
@@ -789,6 +806,9 @@ Natt, Oliver. 2020. <em>Physik mit Python</em>. Springer Berlin Heidelberg. <a h
 </div>
 <div id="ref-reisch2007" class="csl-entry" role="listitem">
 Reisch, Michael. 2007. <em>Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE</em>. 2. Aufl. Springer. <a href="https://doi.org/10.1007/978-3-540-34015-7">https://doi.org/10.1007/978-3-540-34015-7</a>.
+</div>
+<div id="ref-wikipedia2025a" class="csl-entry" role="listitem">
+Wikipedia. 2025. <span>„Gütefaktor — Wikipedia<span>,</span> die freie Enzyklopädie“</span>. <a href="https://de.wikipedia.org/w/index.php?title=G%C3%BCtefaktor&amp;oldid=254210812">https://de.wikipedia.org/w/index.php?title=G%C3%BCtefaktor&amp;oldid=254210812</a>.
 </div>
 </div>
 </section>
