@@ -687,11 +687,11 @@ RC-Bandpass. Im Wien-Robinson-Generator bestimmt dieses Filter die Ausgangsfrequ
 sehr geringem Klirrfaktor. Im durchstimmbaren Sinusgenerator sind die beiden Widerstände durch gemeinsam einstellbare
 Potentiometer ersetzt. Diese Anordnung gibt es auch in Wechselstrom-Brückenschaltungen." [@mietke2024]
 
-## Elementtransformation
+<!-- ## Elementtransformation -->
 
-![Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS](../images/lec/lec5ElemTransf.pdf){#fig-lec5ElemTransf}
+<!-- ![Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS](../images/lec/lec5ElemTransf.pdf){#fig-lec5ElemTransf} -->
 
-Entn. aus [@deliyannis1998]
+<!-- Entn. aus [@deliyannis1998] -->
 
 
 ## Messbrücken
@@ -732,6 +732,9 @@ X_1 R_4 + R_1 X_4 &= X_2 R_3 + R_2 X_3
 
 ### Kapazitätsmessbrücke nach Wien -- Wien-Brücke
 
+
 ### Wien-Robinson-Brücke -- einfaches Frequenzmessgerät
+[@lerch2016]
+[@muehl2020]
 [@wikipedia2019a]
 [@hewlett1942]
