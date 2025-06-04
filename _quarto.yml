@@ -57,9 +57,9 @@ book:
         - hw/hw_02.qmd
         - hw/hw_03.qmd
         - hw/hw_04.qmd
-#        - hw/hw_05.ipynb
-#        - hw/hw_06.ipynb
-#        - hw/hw_07.ipynb
+#        - hw/hw_05.qmd
+#        - hw/hw_06.qmd
+#        - hw/hw_07.qmd
     - part: Tutorium
       chapters:
         - tut/tut_01_Einfuehrung.qmd

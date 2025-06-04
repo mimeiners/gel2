@@ -1,39 +1,21 @@
----
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.17.1
-  kernelspec:
-    display_name: Python 3 (ipykernel)
-    language: python
-    name: python3
----
-
 # Anpassung und Wechselstrommessbrücke
 
 ## Blindleistungskompensation
 Ein Verbraucher $\underline{Z}_L$ wird über eine näherungsweise verlustlose Leitung aus dem Netz versorgt ($f$ = 50 Hz),
 $U_{eff}$ = 230 V. Er nimmt eine Wirkleistung von $P$ = 5 kW und eine Blindleistung von $Q$ = 4,5 kvar auf.
 
-```{figure} ../images/hw/hw5p11.png
-:width: 400px
-:name: fig:hw5p11
-
-Erstatzschaltbild des Versorgungsnetzes mit Verbraucher.
-```
+![Ersatzschaltbild des Versorgungsnetzes mit Verbraucher](../images/hw/hw5p11.png){#fig-hw5p11 width=400}
 
 ### Leistungsfaktor 
 Wie groß ist der Leistungsfaktor $\cos \phi$?
 
 #### Lösung
-$$
-P = U_{eff} \cdot I_{eff} \cdot  \cos \phi \\
-Q = U_{eff} \cdot I_{eff} \cdot \sin \phi \\
-\cos \phi = \frac{P}{S} = \frac{P}{\sqrt{P^2 + Q^2}} = 0,74
-$$
+
+\begin{align}
+P &= U_{eff} \cdot I_{eff} \cdot  \cos \phi \\
+Q &= U_{eff} \cdot I_{eff} \cdot \sin \phi \\
+\cos \phi &= \frac{P}{S} = \frac{P}{\sqrt{P^2 + Q^2}} = 0,74
+\end{align}
 
 
 ### Auslegung
@@ -41,19 +23,16 @@ Für welchen Effektivwert des Stromes $I_{eff}$ muß die Leitung ausgelegt sein?
 
 #### Lösung
 
-$$
-S = \sqrt{P^2 + Q^2} = U_{eff} \cdot I_{eff} = 6,73\,kVA \\
-I_{eff} = 29,2\,A
-$$
+\begin{align}
+S &= \sqrt{P^2 + Q^2} = U_{eff} \cdot I_{eff} = 6,73\,kVA \\
+I_{eff} &= 29,2\,A
+\end{align}
 
 ### Zusätzlicher Verbraucher
 
-```{figure} ../images/hw/hw5p12.png
-:width: 400px
-:name: fig:hw5p12
 
-Ersatzschaltbild des Versorgungsnetzes mit Verbraucher und zusätzlicher Kondensatorbatterie.
-```
+![Ersatzschaltbild des Versorgungsnetzes mit Verbraucher und zusätzlicher Kondensatorbatterie.](../images/hw/hw5p12.png){#fig-hw5p12 width=400}
+
 
 An die Anschlüsse des Verbrauchers wird zusätzlich eine Kondensatorbatterie von $C_L$ = 188 $\mu$F parallel 
 gelegt. Wie groß ist nun der Leistungsfaktor $\cos \phi$ und der Effektivwert $I_{eff}$ des Stromes?
@@ -98,15 +77,11 @@ $$
 
 ## Anpassung einer Heizeinrichtung
 Zur Erwärmung von Werkstücken in einer Härteanlage wird ein Mittelfrequenzgenerator ($f$ = 20 kHz bis 200 kHz)
-mit folgendem Ersatzschaltbild {numref}`fig:hw5p2` eingesetzt.
-
-```{figure} ../images/hw/hw5p2.png
-:width: 400px
-:name: fig:hw5p2
+mit folgendem Ersatzschaltbild {numref}`@fig-hw5p2` eingesetzt.
 
 
-Ersatzschaltbild des Mittelfrequenzgenerators.
-```
+![Ersatzschaltbild des Mittelfrequenzgenerators.](../images/hw/hw5p2.png){#fig-hw5p2 width=400}
+
 
 Bei der Erhitzung durch Stromdurchgang wirkt das Werkstück als ohmscher Widerstand $R_V$, dessen Wert durch die
 Abmessungen frei wählbar ist. Es wird an den Generator $U_{G,eff}$ = 300 V, $R_G$ = 18 $\Omega$,
@@ -146,19 +121,16 @@ P_V &= \frac{U_{eff,V}^2}{\operatorname{Re}(Z_V)} = \frac{1}{4} \frac{U_{eff}^2}
 
 ## Wien-Robinson-Brücke
 Die abgebildete Wechselstrommessbrücke kann als Sperrfilter eingesetzt werden. Sie bildet auch den passiven
-Teil eines Wien-Robinson-Oszillators {cite}`dewiki:208364385`.
-
-```{figure} ../images/hw/hw5p3.png
-:width: 400px
-:name: fig:hw5p3
+Teil eines Wien-Robinson-Oszillators [@wikipedia2019a].
 
 
-Wien-Robinson-Brücke
-```
+![Wien-Robinson-Brücke](../images/hw/hw5p3.png){#fig-hw5p3 width=400}
+
 
 ### Widerstandsverhältnis
 Welches Widerstandsverhältnis $R_3/R_4$ muss gewählt werden, wenn $R_1=R_2=R$ und
 $C_1=C_2=C$, damit die Brücke abgeglichen werden kann? 
+
 
 #### Lösung
 
@@ -176,7 +148,9 @@ werden, wenn das Widerstandsverhältnis $R_3/R_4 = 2$ ist.
 
 
 ### Kreisfrequenz
+
 Für welche Kreisfrequenz $\omega_A$ ist die Brücke bei $R_3=2 R_4$ abgeglichen? 
+
 
 #### Lösung
 
@@ -198,7 +172,8 @@ Bei $\omega = \omega_A$ ist $\underline{Z}_1 / \underline{Z}_2 = 2 / 1$ und glei
 und Im) ist der Graph durch $\underline{Z}_1(\omega_A)$ und $\underline{Z}_2(\omega_A)$ eine Gerade, deren Mittelpunkt
 auf der Ortskurve von $\underline{Z}_2$ liegt.
 
-```python
+
+```{python}
 # %% Bibliotheken
 import numpy as np
 import matplotlib.pylab as plt
@@ -271,15 +246,7 @@ Hieraus folgt das Spannungsübertragungsverhältnis:
 
 Betrag und Phase des Spannungsübertragungsverhältnisses:
 
-
 \begin{align}
 \vert\underline{H}_u\vert &= \frac{1}{3 \sqrt{1 + \left(\frac{3}{\omega/\omega_A - \omega_A/\omega}\right)^2}} \\
 \arg(\underline{H}_u) &= \arctan(\frac{3}{\omega/\omega_A - \omega_A/\omega})
 \end{align}
-
-
-## Literaturverzeichnis
-
-```{bibliography}
-:filter: docname in docnames
-```

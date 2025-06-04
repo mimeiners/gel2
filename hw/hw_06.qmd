@@ -1,17 +1,3 @@
----
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.17.1
-  kernelspec:
-    display_name: Python 3 (ipykernel)
-    language: python
-    name: python3
----
-
 # Leistungsanpassung und Schwingkreis
 
 ## Leistungsberechnung
@@ -20,11 +6,7 @@ An eine Spannungsquelle mit der Leerlaufspannung $\underline{U}_0$, der inneren 
 L_i$ und der Kreisfrequenz $\omega$ ist ein Widerstand $R_2$ angeschlossen. In Reihe mit dem Widerstand $R_2$ soll ein
 Kondensator $C_2$ geschaltet werden. 
 
-```{figure} ../images/hw/hw6p1.png
-:width: 400px
-
-Schaltung für die Leistungsberechnung.
-```
+![Schaltung für die Leistungsberechnung.](../images/hw/hw6p1.png){#fig-hw6p1 widht=400}
 
 
 ### Leistungsaufnahme
@@ -34,8 +16,7 @@ Darstellungsform, so dass die Kapazität $C_2=C_{opt}$ des Kondensators bestimmt
 $R_2$ aufgenommene mittlere Leistung möglichst groß wird.
 
 
-```{admonition} Lösung
-:class: dropdown
+#### Lösung
 
 \begin{align}
 \underline{S} &= \underline{U} \cdot \underline{I}^* \\
@@ -50,35 +31,32 @@ P &= R_2 \frac{\vert\underline{U}_0\vert^2}{\vert R_i+R_2+j(\omega L_i-\frac{1}{
 
 
 Daraus folgt, dass die Wirkleistung $P$ im Resonanzfall maximal wird, wenn $(\omega L_i-\frac{1}{\omega C_2})=0$ gilt.
-```
+
 
 ### Bestimmung der Kapazität
 
-Wie groß ist $C_{opt}$ zu wählen für den Fall $R_2=90\,\Omega$, $R_i=10\,\Omega$,
-$L_i=20\,mH$, $U_0=141\,V$ und $\omega=2\pi 100\,Hz$
+Wie groß ist $C_{opt}$ zu wählen für den Fall $R_2=90\,\Omega$, $R_i=10\,\Omega$, $L_i=20\,mH$, $U_0=141\,V$ und
+$\omega=2\pi 100\,Hz$ 
 
 
-```{admonition} Lösung
-:class: dropdown
+#### Lösung
 
 $$
 \omega_0 = \frac{1}{\sqrt{L_i C_{opt}}} \\
 C_{opt} = \frac{1}{\omega^2_0 L_i} = 127\,\mu F 
 $$
-```
+
 
 ### Maximale Leistung
 
 Welche maximale Leistung nimmt der Widerstand $R_2$ für den berechneten Fall auf?
 
 
-```{admonition} Lösung
-:class: dropdown
+#### Lösung
 
 $$
 P_{max} = \frac{1}{2} R_2 \frac{\hat{U}_0^2}{(R_i+R_2)^2} = 90\,W
 $$
-```
 
 
 ## Parallelresonanzkreis mit Übertrager
@@ -88,25 +66,18 @@ Parallelschaltung eines Widerstandes $R_2$ und eines Kondensators $C_2$ angeschl
 $L_1=1\,\mu H$, $C_1=100\,pF$, $R_1=2\,k\Omega$, $R_2=R_1$ und $C_2=C_1$. Wie beeinflusst die Parallelschaltung aus
 $R_2$ und $C_2$ die Resonanzfrequenz und die Güte des Parallelschwingkreises?
 
-```{figure} ../images/hw/hw6p2.png
-:width: 400px
+![Schaltung mit idealem Übertrager.](../images/hw/hw6p2.png){#fig-hw6p3 width=400}
 
-Schaltung mit idealem Übertrager.
-```
 
 ### Ersatzschaltbild
 
 Skizzieren Sie das Ersatzschaltbild der transformierten Parallelschaltung aus $R_2$ und $C_2$.
 
 
-````{admonition} Lösung
-:class: dropdown
+#### Lösung
 
-  ```{figure} ../images/hw/hw6p2a.png
-  :width: 400px
 
-  Ersatzschaltbild mit transformierter Impedanz.
-  ```
+![Impedanztransformation mimt einem idealen Übertrager.](../images/hw/hw6p2a.png){width=400}
 
 
 Impedanztransformation mit einem idealen Übertrager:
@@ -119,30 +90,22 @@ R_{2t} &= \mbox{ü}^2 R_2 = 4 R_2 \\
 C_{2t} &= \frac{C_2}{\mbox{ü}^2} = \frac{C_2}{4}
 \end{align}
 
-````
-
 
 ### Zusammenfassen
 Fassen Sie gleichartige Zweipole zusammen.
 
 
-````{admonition} Lösung
-:class: dropdown
+#### Lösung
 
 
-  ```{figure} ../images/hw/hw6p2b.png
-  :width: 400px
+![Ersatzschaltbild mit zusammengefassten Zweipolen.](../images/hw/hw6p2b.png){width=400}
 
-  Ersatzschaltbild mit zusammengefassten Zweipolen.
-  ```
 
 \begin{align}
 \frac{1}{R_{ges}} &= \frac{1}{R_1} + \frac{1}{R_{2t}} = \frac{5}{4 R} \\
 R_{ges} &= \frac{4}{5} R \\
 C_{ges} &= C_1 + C_{2t} = \frac{5}{4} C
 \end{align}
-
-````
 
 
 ### Güte und Resonanz
@@ -151,8 +114,7 @@ Bestimmen Sie mit den Bezeichnungen aus der vorherigen Unteraufgabe die Resonanz
 die Güte $Q_t$.
 
 
-```{admonition} Lösung
-:class: dropdown
+### Lösung
 
 \begin{align}
 \omega_0 &= \frac{1}{\sqrt{L_1 C_1}} = 100\,MHz \\
@@ -161,4 +123,3 @@ Q &= \frac{R_p}{\omega_0 L_p} = \frac{1}{G_p}\sqrt{\frac{C_p}{L_p}} = 20 \\
 Q_t &= \frac{1}{G_{ges}}\sqrt{\frac{C_{ges}}{L_1}} = R_{ges}\sqrt{\frac{C_{ges}}{L_1}} \\
 &= \frac{4}{5}\sqrt{\frac{5}{4}}Q = \sqrt{\frac{4}{5}} Q = 17.89
 \end{align}
-```
