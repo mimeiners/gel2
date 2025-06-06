@@ -12,23 +12,29 @@ von Tor 1 auf Tor 2, $\underline{H}_u=\underline{U}_2/\underline{U}_1$, abgebild
 ### Funktion
 Welche Funktion erfüllt das gemessene Zweitor?
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 Das gemessene Zweitor hat die Funktion eines Hochpassfilters.
+:::
 
 ### Bauteilanordnung
 Welche Bauteilanordnung vermuten Sie zwischen den zwei Toren? Zeichnen Sie ein Ersatzschaltbild des Zweitors mit
 Eingangsspannung $\underline{U}_1$ und Ausgangsspannung $\underline{U}_2$.
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 In einfachster Ausführung kann man einen Hochpass durch einen Spannungsteiler mit Kapazität $C$ und Widerstand $R$ realisieren.
 
 ![Einfacher RC-Hochpass, Zweitor-Ersatzschaltbild](../images/hw/hw4p1b.png){#fig-hw4p1b width=400}
+
+:::
 
 
 ### Spannungsübertragungsfunktion
 Leiten Sie die Spannungsübertragungsfunktion, $\underline{H}_u=\underline{U}_2/\underline{U}_1$, Ihres Ersatzschaltbildes her.
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 $$
 \underline{H}_u=\frac{\underline{U}_2}{\underline{U}_1} = \frac{j \omega R C}{1+j \omega R C}
@@ -53,6 +59,8 @@ $$
 \right)
 = \arctan\left(\frac{1}{\omega R C}\right)
 $$
+:::
+
 
 ### 3 dB-Grenzfrequenz
 Leiten Sie eine Bestimmungsgleichung für die 3 dB-Grenzfrequenz $f_g$ der Spannungsübertragungsfunktion her. 
@@ -64,7 +72,9 @@ Die Grenzfrequenz kennzeichnet die Frequenz, bei der der Betrag auf -3 dB abfäl
 
 :::
 
-#### Lösung
+
+::: {.callout-caution collapse="true"}
+### Lösung
 Es gibt zwei Lösungswege:
 
 $$
@@ -97,10 +107,14 @@ $$
 \Rightarrow f_g = \frac{1}{2 \pi R C}
 $$
 
+:::
+
+
 ### Grenzfrequenz
 Wie groß ist die Grenzfrequenz für $R=1\,k\Omega$ und $C=100\,nF$?
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 $$
 \omega_g = \frac{1}{R C} = 10\,kHz 
@@ -109,6 +123,8 @@ $$
 $$
 f_g = \frac{1}{2 \pi R C} \approx 1.6\,kHz
 $$
+:::
+
 
 ## Ortskurve einer Zweipol-Admittanz
 
@@ -131,7 +147,9 @@ Die Werte der Bauteile lauten $R_1 = 60\,\Omega$, $R_2 = 200\,\Omega$, $L = 200\
 $f(\omega)$ Konstruieren Sie die Ortskurve der Eingangsimpedanz $\underline{Z}_e$ mit der Kreisfrequenz $\omega$ als Parameter,
 $0 \leq \omega \leq \infty$. Dabei sei der Widerstand $R = 200\,\Omega$.
 
-#### Lösung
+
+::: {.callout-caution collapse="true"}
+### Lösung
 
 $$
 \underline{Y}_p = \frac{1}{\underline{Z}_p} = \underbrace{\frac{1}{R}
@@ -190,12 +208,15 @@ plt.legend(('Zp', 'Ze'))
 plt.grid()
 plt.show()
 ```
+:::
+
 
 ### Ortskurve mit R als Parameter
 Konstruieren Sie die Ortskurve der Eingangsimpedanz $\underline{Z}_e$ mit dem Widerstand R als Parameter,
 $0 \leq R \leq \infty$. Dabei sei die Kreisfrequenz $\omega = 1.5e6 1/s$.
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 $$
 \underline{Y}_p = \frac{1}{R_3} + j 4.17\,mS 
@@ -258,3 +279,4 @@ plt.grid()
 plt.axis([0, 200, -55, 55])
 plt.show()
 ```
+:::

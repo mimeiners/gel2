@@ -42,7 +42,7 @@ Entn. [@natt2020]
 ## Schwingkreise (elek.)
 
 "Eine physikalische Anordnung ist schwingungsfähig, wenn sie mindestens zwei Energiespeicher unterschiedlichen
-physikalischen Charakters enthält, die miteinander Energie austauschen kön- nen. Eine solche Anordnung wird als
+physikalischen Charakters enthält, die miteinander Energie austauschen können. Eine solche Anordnung wird als
 Schwingkreis bezeichnet.
 
 In elektrischen Schaltungen sind diese unterschiedlichen Typen von Energiespeichern Induktivitäten, die magnetische

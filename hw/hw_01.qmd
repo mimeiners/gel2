@@ -1,20 +1,4 @@
----
-jupyter:
-  jupytext:
-    cell_metadata_filter: -all
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.17.1
-  kernelspec:
-    display_name: Python 3 (ipykernel)
-    language: python
-    name: python3
----
-
 # Periodische Signale
-
 
 ## Darstellung von Signalen
 
@@ -26,7 +10,7 @@ $\hat{I}_0$ = 0.282 A, $\varphi_I$ = -32.1 Grad.
 
 ![Wechselstromschaltung](../images/hw/hw1p1.pdf){#fig-hw1p1 width=200}
 
-
+::: {.callout-caution collapse="true"}
 ### Lösung
 
 ```{python}
@@ -62,6 +46,8 @@ plt.legend()
 
 plt.show()
 ```
+:::
+
 
 ## Überlagerung von sinusförmigen Spannungen mit verschiedenen Frequenzen
 
@@ -74,21 +60,25 @@ $$
 ### Periodendauer
 Wie groß ist die Periodendauer $T$?
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 Die Periodendauer $T$ ist der kleinste Zeitabschnitt mit $u(t+T)=u(t)$.
 
 $$
 T = \frac{2 \pi}{\omega_1}
 $$
+:::
 
 ### Mittelwert
 Berechnen Sie den Mittelwert der Spannung $u(t)$!
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 $$
 \overline{u(t)} = \frac{1}{T} \int_0^T u(t) dt = U_0
 $$
+:::
 
 ### Effektivwert
 Berechnen Sie den Effektivwert $U_{eff}$ der Spannung $u(t)$! Wie läßt sich $U_{eff}$ aus den Effektivwerten der
@@ -102,7 +92,8 @@ $$
 $$
 :::
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 \begin{align}
 U^2_{eff} &= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
@@ -113,7 +104,7 @@ U^2_{eff} &= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 &= U_0^2 + \frac{1}{2} \hat{U}_1^2 +  \frac{1}{2} \hat{U}_2^2 \\
 &= U^2_0 + U^2_{1,eff} + U^2_{2,eff}
 \end{align}
-
+:::
 
 ### Scheitelfaktor
 
@@ -177,8 +168,8 @@ def func(x, c1, c2, c3):
 SF = so.fixed_point(func, 1, args=(U1p, U2p, phi), xtol=1e-6)
 print('Der Scheitelfaktor:', SF)
 ```
-
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 \begin{align}
 U_{max} &= u(t_{max}); \quad \left. \frac{du(t)}{dt} \right\lvert_{t=t_{max}} = 0 \\
@@ -197,6 +188,7 @@ Der gesuchte *Formfaktor* berechnet sich zu:
 $$
 \frac{U_{max}}{U_{eff}} = 1.189
 $$
+:::
 
 
 ## Schaltungsberechnung in reeller Schreibweise
@@ -208,7 +200,8 @@ Gegeben sei die in @fig-hw1p3 skizzierte Schaltung mit einer Wechselstromquelle 
 ### Amplitude und Phase
 Berechnen Sie Amplitude und Phasenwinkel jeweils von $u(t)$, $i_C(t)$ und $i_R(t)$!
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 Sei $u(t)=\hat{U} \sin(\omega t + \varphi_u)$, dann ergeben sich die Ströme zu:
 
 \begin{align}
@@ -241,6 +234,9 @@ Koeffizientenvergleich:
 \hat{I}_C &= \omega C \hat{U} \\
 \hat{I}_R &= \frac{\hat{U}}{R}
 \end{align}
+
+:::
+
 
 ### Spannungsverläufe
 Skizzieren Sie mithilfe von Python $i_0(t)$, $u(t)$, $i_C(t)$ und $i_R(t)$ für $\hat{I}_0$ = 14.1 mA, $f$ = 3.183 kHz,
@@ -278,7 +274,8 @@ plt.grid()
 plt.show()
 ```
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 Mit den Werten ergeben sich folgende Spannungs- und Stromverläufe:
 
 * $i_0(t)$ = 14.1 mA $\sin(\omega t)$
@@ -288,6 +285,7 @@ Mit den Werten ergeben sich folgende Spannungs- und Stromverläufe:
 * $i_C(t)$ = 10 mA $\sin(\omega t + \frac{\pi}{4})$
 
 * $i_R(t)$ = 10 mA $\sin(\omega t - \frac{\pi}{4})$
+:::
 
 
 ## Phasenanschnittsteuerung
@@ -314,8 +312,8 @@ In den hier zu untersuchenden Fällen (a) und (b) wird ein ohmscher Verbraucher 
 Berechnen und skizzieren Sie für den durch den Verbraucherwiderstand $R$ fließenden Strom $i(t)$ jeweils Mittelwert,
 Gleichrichtmittelwert und Effektivwert als Funktion vom Phasenanschnittwinkel $\alpha$!
 
-
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 1. Halbwelle
 
@@ -337,3 +335,4 @@ I_{eff} &= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{4\pi}} & &
 I^2_{eff} &= 2 \cdot \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
 &= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{2\pi}}
 \end{align}
+:::

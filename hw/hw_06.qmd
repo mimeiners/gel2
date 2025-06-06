@@ -16,7 +16,8 @@ Darstellungsform, so dass die Kapazität $C_2=C_{opt}$ des Kondensators bestimmt
 $R_2$ aufgenommene mittlere Leistung möglichst groß wird.
 
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 \begin{align}
 \underline{S} &= \underline{U} \cdot \underline{I}^* \\
@@ -31,7 +32,7 @@ P &= R_2 \frac{\vert\underline{U}_0\vert^2}{\vert R_i+R_2+j(\omega L_i-\frac{1}{
 
 
 Daraus folgt, dass die Wirkleistung $P$ im Resonanzfall maximal wird, wenn $(\omega L_i-\frac{1}{\omega C_2})=0$ gilt.
-
+:::
 
 ### Bestimmung der Kapazität
 
@@ -39,24 +40,29 @@ Wie groß ist $C_{opt}$ zu wählen für den Fall $R_2=90\,\Omega$, $R_i=10\,\Ome
 $\omega=2\pi 100\,Hz$ 
 
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 $$
-\omega_0 = \frac{1}{\sqrt{L_i C_{opt}}} \\
+\omega_0 = \frac{1}{\sqrt{L_i C_{opt}}}
+$$
+
+$$
 C_{opt} = \frac{1}{\omega^2_0 L_i} = 127\,\mu F 
 $$
-
+:::
 
 ### Maximale Leistung
-
 Welche maximale Leistung nimmt der Widerstand $R_2$ für den berechneten Fall auf?
 
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 $$
 P_{max} = \frac{1}{2} R_2 \frac{\hat{U}_0^2}{(R_i+R_2)^2} = 90\,W
 $$
+:::
 
 
 ## Parallelresonanzkreis mit Übertrager
@@ -70,11 +76,11 @@ $R_2$ und $C_2$ die Resonanzfrequenz und die Güte des Parallelschwingkreises?
 
 
 ### Ersatzschaltbild
-
 Skizzieren Sie das Ersatzschaltbild der transformierten Parallelschaltung aus $R_2$ und $C_2$.
 
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 
 ![Impedanztransformation mimt einem idealen Übertrager.](../images/hw/hw6p2a.png){width=400}
@@ -89,14 +95,13 @@ Y_{2t} &= \frac{1}{R_{2t}} + j\omega C_{2t} = \frac{1}{\mbox{ü}^2}Y_2 \\
 R_{2t} &= \mbox{ü}^2 R_2 = 4 R_2 \\
 C_{2t} &= \frac{C_2}{\mbox{ü}^2} = \frac{C_2}{4}
 \end{align}
-
+:::
 
 ### Zusammenfassen
 Fassen Sie gleichartige Zweipole zusammen.
 
-
-#### Lösung
-
+::: {.callout-caution collapse="true"}
+### Lösung
 
 ![Ersatzschaltbild mit zusammengefassten Zweipolen.](../images/hw/hw6p2b.png){width=400}
 
@@ -106,14 +111,14 @@ Fassen Sie gleichartige Zweipole zusammen.
 R_{ges} &= \frac{4}{5} R \\
 C_{ges} &= C_1 + C_{2t} = \frac{5}{4} C
 \end{align}
+:::
 
 
 ### Güte und Resonanz
-
 Bestimmen Sie mit den Bezeichnungen aus der vorherigen Unteraufgabe die Resonanzfrequenz $\omega_{0t}$ und
 die Güte $Q_t$.
 
-
+::: {.callout-caution collapse="true"}
 ### Lösung
 
 \begin{align}
@@ -123,3 +128,4 @@ Q &= \frac{R_p}{\omega_0 L_p} = \frac{1}{G_p}\sqrt{\frac{C_p}{L_p}} = 20 \\
 Q_t &= \frac{1}{G_{ges}}\sqrt{\frac{C_{ges}}{L_1}} = R_{ges}\sqrt{\frac{C_{ges}}{L_1}} \\
 &= \frac{4}{5}\sqrt{\frac{5}{4}}Q = \sqrt{\frac{4}{5}} Q = 17.89
 \end{align}
+:::

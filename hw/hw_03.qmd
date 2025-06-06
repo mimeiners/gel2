@@ -1,17 +1,3 @@
----
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.17.1
-  kernelspec:
-    display_name: Python 3 (ipykernel)
-    language: python
-    name: python3
----
-
 # Spannungsteiler
 
 ## Schaltungsaufgabe mit Zeigerdiagramm
@@ -23,9 +9,10 @@ die Spannungsquelle $u(t)=\hat{U} \cos(\omega t)$ mit $\hat{U}=1,41\,V$ und $\om
 
 ### Zeigerdiagramm
 
-Die Aufgabe besteht darin, das Zeigerdiagramm für alle Teilströme und Teilspannungen zu erstellen
+Die Aufgabe besteht darin, das Zeigerdiagramm für alle Teilströme und Teilspannungen zu erstellen.
 
-#### Schrittweise graphische Lösung
+::: {.callout-caution collapse="true"}
+### Schrittweise graphische Lösung
 
 1. $\vec{I_R}$ und $\vec{U_R}$ sind reelle Zeiger in Phase. Diese beiden Zeiger als Bezug mit selbst definierten Längen
   einzeichnen, z.B. $\vec{I_R} = 5\,cm$ und $\vec{U_R} = 10\,cm$. 
@@ -57,7 +44,7 @@ $$
 5. Final den Summenvektor für die Quellenspannung einzeichnen; $\vec{U} = \vec{U_C} + \vec{U_R}$
 
 ![Zeigerdiagramm.](../images/hw/hw3p1a.png){width=400}
-
+:::
 
 ## Kompensierter Spannungsteiler
 
@@ -74,7 +61,8 @@ vgl. [Kapazitiver Spannungsteiler](https://www.elektroniktutor.de/analogtechnik/
 Leiten Sie den Spannungsübertagungsfaktor $\underline{H}_u=\underline{U}_{osz}/\underline{U}$ allgemein für die angegebenen
 Bauteile her?
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 Zeichnen Sie ein vereinfachtes Ersatzschaltbild mit zusammengefassten Impedanzen $Z_1$ und $Z_2$.
 
 ![Ersatzschaltbild des Tastkopfes zusammengefasst.](../images/hw/hw3p2a.png){height=200}
@@ -93,26 +81,28 @@ Mit diesen Definitionen bestimmt man das Spannungsverhältnis:
 $$
 \underline{H}_u = \frac{\underline{U_{osz}}}{\underline{U}}= \frac{\underline{Z}_2}{\underline{Z}_1 + \underline{Z}_2}.
 $$
-
+:::
 
 ### Eingangsimpedanz
 Wie groß ist die Eingangsimpedanz $\underline{Z}=\underline{U}/\underline{I}$ des Tastkopfes?
 
-
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 Mit den Vorarbeiten aus @sec-hw3p2 kann man an dieser Stelle die Eingangsimpedanz des Tastkopfes als Reihenschaltung der 
 Impedanzen $Z_1$ und $Z_2$ notieren.
 
 $$
 \underline{Z} = \underline{Z}_1 + \underline{Z}_2 = \frac{R_1}{1 + j \omega R_1 C_1} + \frac{R_{2g}}{1+ j \omega R_{2g} C}
 $$
+:::
 
 
 ### Kapazität
 Wie muß die Kapazität $C_1$ gewählt werden, damit das Verhältnis $\underline{H}=\underline{U}_{osz}/\underline{U}$ für
 alle Frequenzen gleich groß ist?
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 Ähnlich einer Abgleichbedingung für eine Wechselstrommessbrücke kann man an dieser Stelle argumentieren, dass das
 Spannungsverhältnis $\underline{H}$ für alle Frequenzen gleich groß ist, sofern $R_1C_1 = R_{2g}C$ gilt.
 
@@ -126,20 +116,18 @@ $$
 \frac{1}{Z_2} = \frac{1}{R_{2g}} + j \omega C 
 $$
 
-
 $$ 
 \underline{H} = \frac{U_{osz}}{U} = \frac{Z_2}{Z_1 + Z_2} = \frac{1}{1+\frac{Z_1}{Z_2}}
 = \frac{1}{1+\frac{\frac{1}{R_{2g}}+j \omega C}{\frac{1}{R_1}+j \omega C_1}}
 = \frac{1}{1+\frac{R_1}{R_{2g}}\frac{1+j \omega R_{2g} C}{1+ j \omega R_1 C_1}}
 $$
 
-
 Hieraus folgt dann die Bestimmungsgleichung für den Kondensator $C_1$:
 
 $$
 C_1 = \frac{R_{2g}}{R_1} C = \frac{0.5}{9} 10\,pF = 0.55\,pF.
 $$
-
+:::
 
 
 ## RC-Spannungsteiler
@@ -150,8 +138,8 @@ Gegeben ist der abgebildete Spannungsteiler in {numref}`fig:hw3p3` mit zwei Wide
 ### Spannungsverhältnis
 Berechnen Sie den komplexen Spannungsübertragungsfaktor $\underline{H}_u=\underline{U}_2/\underline{U}_1$.
 
-
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 Fassen Sie die Bauteile zu Impedanzen $Z_1$ und $Z_2$ zusammen. Das gesuchte Spannungsverhältnis erhalten Sie aus der
 Spannungsteilerregel.
 
@@ -169,14 +157,15 @@ $$
 = \frac{R_2+\frac{1}{j \omega C}}{R_1+R_2+\frac{1}{j \omega C}} 
 = \frac{1+j \omega R_2C}{1 + j \omega (R_1+R_2)C}
 $$
+:::
 
 
 ### Betrag und Phase
 Stellen Sie den Betrag und den Phasenwinkel von $\underline{H}_u$ als Funktion von $\omega$ für den Fall
 $R_1 = 1\,\Omega$, $R_2 = 100\,\Omega$ und $C = 1\,\mu F$ mit Python dar.
 
-
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 Mit der Vorarbeit aus @sec-hw3p2 können Sie die Ausdrücke für Betrag und Phase der Spannungsübertragungsfunktion
 $\underline{H}$ direkt ablesen. Der Betrag ist der Quotient der Beträge von Zähler und Nenner.
 
@@ -237,3 +226,4 @@ plt.grid()
 plt.ylabel(r'arg($H_u$)/Grad')
 plt.xlabel(r'Frequenz f/Hz')
 ```
+:::

@@ -35,6 +35,7 @@ Stellen Sie die Ergebnisse als Funktion der Frequenz grafisch dar:
 Bei der Analyse und Erläuterung interessieren Grenzfrequenzen, Eckfrequenzen, Hochpass/Tiefpass-Verhalten, die
 Resonanz-Güte und die Rolle der einzelnen Komponenten im Hinblick auf die genannten Frequenzen.
 
+
 ::: {.callout-caution collapse="true"}
 ### Lösung
 
@@ -45,7 +46,6 @@ Um den idealen Tranformator aufzulösen muss man:
 2. $U_0$ durch eine sekundärseitige Ersatzspannungsquelle $U_{0s}=U_0/\text{ü}$ ersetzen.
 
 Neues Netzwerk:
-
 
 ![](../images/hw/hw7p1s.png){#fig-hw7p1s width=400}
 
@@ -119,7 +119,6 @@ fig2 = plt.figure(2)
 plt.title('Betrag und Phase')
 plt.subplot(211)
 plt.semilogx(f, np.abs(H))
-# plt.xlabel(r'$\log(f/f_0)$')
 plt.ylabel(r'|H|')
 plt.grid()
 plt.subplot(212)
@@ -143,6 +142,7 @@ plt.show()
 ```
 :::
 
+
 ## Ersatzschaltbild eines Lautsprechers
 
 Die dargestellte Schaltung in {numref}`fig:hw7p2` ist ein vereinfachtes Ersatzschaltbild eines elektrodynamischen
@@ -162,6 +162,7 @@ $$
 Drücken Sie die Eingangsimpedanz $\underline{Z}_E$ der Schaltung als Funktion der verwandten Bauteile ($R_1$, $L_1$,
 $R_2$, $L_2$, $C_2$) und der Kreisfrequenz $\omega$ aus.
 
+
 ::: {.callout-caution collapse="true"}
 ### Lösung
 
@@ -173,8 +174,8 @@ Z_E &= R_1 + j \omega L_1 + Z_M \\
 \end{align}
 :::
 
-### Ortskurve
 
+### Ortskurve
 Für niedrige Frequenzen ($0 \leq f \leq 100\,Hz$) kann der Beitrag $\omega L_1$ der Induktivität $L_1$ zur
 Eingangsimpedanz vernachlässigt werden. Konstruieren Sie mit dieser Vereinfachung die Ortskurve der Eingangsimpedanz
 $\underline{Z}_{E0}$ als Funktion der Kreisfrequenz $\omega$.
@@ -196,8 +197,8 @@ Konstruktion der Ortskurve $Z_{E0}(\omega)$:
 * $R_1$ addieren $\rightarrow Z_{E0}$: verschobener Kreis
 :::
 
-### Wert der Impedanz
 
+### Wert der Impedanz
 Berechnen Sie den Wert der Impedanz $\underline{Z}_{E0}$ bei der Frequenz $f$ = 100 Hz.
 
 ::: {.callout-caution collapse="true"}
@@ -206,10 +207,10 @@ Berechnen Sie den Wert der Impedanz $\underline{Z}_{E0}$ bei der Frequenz $f$ = 
 $$
 Z_{E0}(f=100\,Hz) = (3,6 - j 4,25) \Omega
 $$
-::: {.callout-caution collapse="true"}
+::: 
+
 
 ### Ortskurve 
-
 Geben Sie näherungsweise die Ortskurve der Impedanz $\underline{Z}_E$ als Funktion der Kreisfrequenz $\omega$ an,
 inklusive des Beitrags der Induktivität $L_1$.
 
@@ -220,8 +221,8 @@ Für $f \leq 100\,Hz$ ist $\omega L_1 \leq 0.125$, daraus folgt für $f \leq 100
 Für $f >> 100\,Hz$ ist $Z_{E0} \approx R_1$ und $Z_E \approx R_1 + j \omega L_1$.
 :::
 
-### Bode-Diagramm
 
+### Bode-Diagramm
 Der Lautsprecher werde aus einer Sinusspannungsquelle mit $\hat{U}_0$ = 10 V und Innenwiderstand $R_i$ = 0,5 $\Omega$
 gespeist. Stellen Sie das Verhältnis der Effektivwerte von $I_R$ und $I$ sowie den Phasenwinkel von $I_R$ zu $I$ als
 Funktion der Frequenz in einem Bode-Diagramm dar.

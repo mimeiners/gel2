@@ -1,24 +1,8 @@
----
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.17.1
-  kernelspec:
-    display_name: Python 3 (ipykernel)
-    language: python
-    name: python3
----
-
 # Signale
 
 ## Komplexe Signale
 
 Mit einem Oszilloskop wird die Zeitabhängigkeit von zwei Sinussignalen, wie in @fig-hw2p1 dargestellt, gemessen.
-
-<!-- ![Oszillogramm der Spannungsmessung](../images/hw/hw2p1.pdf){#fig-hw2p1} -->
 
 ```{python}
 #| label: fig-hw2p1
@@ -64,8 +48,8 @@ Geben Sie für die Spannungen $u_1(t)$ und $u_2(t)$ folgende Größen an:
 
 * die Kreisfrequenz $\omega$.
 
-
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 $$
 T = 8\,ms 
@@ -78,14 +62,15 @@ $$
 $$
 \omega = 2\pi f = 785\,1/s
 $$
-
+:::
 
 ### Sinussignale
 Geben Sie für die Darstellungen der Sinus- und Kosinussignale $u_i(t) = \hat{U}_i \sin(\omega t + \varphi_{ui})$ und 
 $u_i(t) = \hat{U}_i \cos(\omega t + \psi_{ui})$ die Amplituden $\hat{U}_i$ und die Phasen $\varphi_{ui}$ und $\psi_{ui}$
 mit $i=1,2$ an. 
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 Die Amplituden der Spannungen sind $\hat{U}_1=15\,V$ und $\hat{U}_2=10\,V$.
 Die zeitlichen Verläufen können dann wie folgt angegeben werden:
 
@@ -104,13 +89,15 @@ $$
 $$
 u_2(t) = \hat{U}_2 \sin\left(\omega t + \frac{\pi}{4}\right)
 $$
+:::
 
 
 ### Übertragungsfaktor
 Wenn $u_1(t)$ die Eingangsspannung und $u_2(t)$ die Ausgangsspannung einer Schaltung bedeuten, wie groß ist dann der
 komplexe Übertragungsfaktor $\underline{H} = \underline{U}_2 / \underline{U}_1$ der Schaltung?
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 Die Umrechnung der reellen Spannungsverläufe in komplexe Größen geschieht über die Funktionaltransformation. 
 	
 \begin{align}
@@ -147,13 +134,15 @@ $$
 &= \frac{\hat{U}_2}{\hat{U}_1} e^{j (-\frac{\pi}{4}+\pi)} \\
 &= \frac{2}{3}  e^{j \frac{3}{4}\pi}
 \end{align}
+:::
 
 
 ### Spannungsverlauf
 Zeichnen Sie in das Oszillogramm den Verlauf der Spannung $u_3(t)$ mit der Frequenz $f=100\,Hz$ und dem komplexen 
 Scheitelwert $\underline{\hat{U}}_3 = (15-j 20)\,V$ (karthesische Koordinaten) ein.
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 Darstellung des komplexen Scheitelwertes $\underline{\hat{U}}_3$ in Polarkoordinaten, Betrag und Phase.
 
 $$
@@ -165,6 +154,7 @@ $$
 u_3(t) = \operatorname{Re}\left\{\underline{\hat{U}}_3e^{j\omega_3 t}\right\} 
 = 25\,V \cos(\omega_3 t - 0.927) = 25\,V \cos\left(\omega_3 (t - 1.43\,ms)\right)
 $$
+:::
 
 
 ## Wirkleistung, Blindleistung und Scheinleistung
@@ -220,7 +210,8 @@ sinusförmig. Ihre Amplituden und relativen Lagen sind der @fig-hw2p2 zu entnehm
 ### Strom- und Spannungsbeschreibung
 Stellen Sie Strom und Spannung in reeller und komplexer Schreibweise dar.
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 1. Reelle Schreibweise
 
@@ -244,14 +235,15 @@ $$
 i(t) = -\hat{I} \cos\left(\omega t- \omega\Delta t -\frac{\pi}{2}\right) \rightarrow \underline{I} 
 = -\frac{1}{\sqrt{2}}\hat{I} e^{-j(\omega \Delta t + \frac{\pi}{2})}
 $$
+:::
 
 
 ### Komplexe Leistung
 Geben Sie für den Verbraucher die komplexe Leistung $\underline{P}=P+jQ$ mit aufgenommener Wirkleistung $P$ und
 aufgenommener Blindleistung $Q$ an. 
 
-
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 $$
 \underline{P} = \underline{U} \cdot \underline{I}^* = -\frac{1}{2} \hat{U} \hat{I} e^{-j(\omega \Delta t)} = P + j Q
@@ -270,6 +262,7 @@ Q = \operatorname{Im}\left\{\underline{P}\right\}
 = \operatorname{Im}\left\{-\frac{1}{2} \hat{U} \hat{I}e^{-j(\omega\Delta t)}\right\}
 = -\frac{1}{2} \hat{U} \hat{I}\sin(\omega \Delta t) = 40\,VA
 $$
+:::
 
 
 ### Ersatzschaltung
@@ -277,8 +270,8 @@ Geben Sie eine Reihenschaltung und eine Parallelschaltung aus R-, L- und/oder C-
 Realisierung des Verbrauchers an. Bestimmen Sie dazu die Komponentenwerte aus den gemessenen Strom- und
 Spannungsverläufen.
 
-
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 Reihen- oder Parallelschaltung aus Widerstand $R$ und Induktivität $L$. Für die Reihenschaltung errechnen sich die
 Bauteilwerte wie folgt:
 
@@ -324,3 +317,4 @@ $$
 ![Parallelersatzschaltung des Verbrauchers](../images/hw/hw2p2b.pdf){#fig-hw2p2b}
 :::
 
+:::
