@@ -1,0 +1,116 @@
+% Wien-Brücke
+\begin{tikzpicture}[scale=2.54]%
+% dpic version 2024.01.01 option -g for TikZ and PGF 1.01
+\ifx\dpiclw\undefined\newdimen\dpiclw\fi
+\global\def\dpicdraw{\draw[line width=\dpiclw]}
+\global\def\dpicstop{;}
+\dpiclw=0.8bp
+\dpiclw=0.8bp
+\dpicdraw (0,0)
+ --(0,-0.0625)\dpicstop
+\dpicdraw (0,-0.3125)
+ --(0.05,-0.3125)
+ --(0.05,-0.0625)
+ --(-0.05,-0.0625)
+ --(-0.05,-0.3125)
+ --(0,-0.3125)\dpicstop
+\dpicdraw (0,-0.3125)
+ --(0,-0.375)\dpicstop
+\draw (0.05,-0.1875) node[right=-2bp]{$ R_1$};
+\dpicdraw (0,-0.375)
+ --(0,-0.5375)\dpicstop
+\dpicdraw (-0.083333,-0.5375)
+ --(0.083333,-0.5375)\dpicstop
+\dpicdraw (-0.083333,-0.5875)
+ --(0.083333,-0.5875)\dpicstop
+\dpicdraw (0,-0.5875)
+ --(0,-0.75)\dpicstop
+\draw (0.083333,-0.5625) node[right=-2bp]{$ C_1$};
+\dpicdraw[fill=black](0,-0.75) circle (0.007874in)\dpicstop
+\dpicdraw (0,-0.75)
+ --(0.5,-0.75)\dpicstop
+\dpicdraw[fill=black](0.5,-0.75) circle (0.007874in)\dpicstop
+\dpicdraw[fill=black](1.25,-0.75) circle (0.007874in)\dpicstop
+\filldraw[line width=0bp](1.09,-0.775)
+ --(1.19,-0.75)
+ --(1.09,-0.725) --cycle\dpicstop
+\dpicdraw (0.56,-0.75)
+ --(1.167094,-0.75)\dpicstop
+\draw (0.875,-0.75) node[below=-2bp]{$ \underline{U}_D$};
+\dpicdraw (1.25,-0.75)
+ --(1.75,-0.75)\dpicstop
+\dpicdraw[fill=black](1.75,-0.75) circle (0.007874in)\dpicstop
+\dpicdraw (1.75,-0.75)
+ --(1.75,-0.5)\dpicstop
+\dpicdraw (1.75,-0.25)
+ --(1.7,-0.25)
+ --(1.7,-0.5)
+ --(1.8,-0.5)
+ --(1.8,-0.25)
+ --(1.75,-0.25)\dpicstop
+\dpicdraw (1.75,-0.25)
+ --(1.75,0)\dpicstop
+\draw (1.7,-0.375) node[left=-2bp]{$ R_3$};
+\dpicdraw (1.75,0)
+ --(0,0)\dpicstop
+\dpicdraw[fill=black](0,0) circle (0.007874in)\dpicstop
+\dpicdraw (1.75,-0.75)
+ --(1.75,-1)\dpicstop
+\dpicdraw (1.75,-1.25)
+ --(1.8,-1.25)
+ --(1.8,-1)
+ --(1.7,-1)
+ --(1.7,-1.25)
+ --(1.75,-1.25)\dpicstop
+\dpicdraw (1.75,-1.25)
+ --(1.75,-1.5)\dpicstop
+\draw (1.8,-1.125) node[right=-2bp]{$ R_4$};
+\dpicdraw (1.75,-1.5)
+ --(0,-1.5)\dpicstop
+\dpicdraw[fill=black](0,-1.5) circle (0.007874in)\dpicstop
+\dpicdraw (0,-1.5)
+ --(0,-1.25)\dpicstop
+\dpicdraw[fill=black](0,-1.25) circle (0.007874in)\dpicstop
+\dpicdraw (0,-1.25)
+ --(0.25,-1.25)\dpicstop
+\dpicdraw (0.25,-1.25)
+ --(0.25,-1.0875)\dpicstop
+\dpicdraw (0.333333,-1.0875)
+ --(0.166667,-1.0875)\dpicstop
+\dpicdraw (0.333333,-1.0375)
+ --(0.166667,-1.0375)\dpicstop
+\dpicdraw (0.25,-1.0375)
+ --(0.25,-0.875)\dpicstop
+\draw (0.333333,-1.0625) node[right=-2bp]{$ C_2$};
+\dpicdraw (0.25,-0.875)
+ --(0,-0.875)\dpicstop
+\dpicdraw[fill=black](0,-0.875) circle (0.007874in)\dpicstop
+\dpicdraw (0,-1.25)
+ --(-0.25,-1.25)\dpicstop
+\dpicdraw (-0.25,-1.25)
+ --(-0.25,-1.1875)\dpicstop
+\dpicdraw (-0.25,-0.9375)
+ --(-0.3,-0.9375)
+ --(-0.3,-1.1875)
+ --(-0.2,-1.1875)
+ --(-0.2,-0.9375)
+ --(-0.25,-0.9375)\dpicstop
+\dpicdraw (-0.25,-0.9375)
+ --(-0.25,-0.875)\dpicstop
+\draw (-0.3,-1.0625) node[left=-2bp]{$ R_2$};
+\dpicdraw (-0.25,-0.875)
+ --(0,-0.875)
+ --(0,-0.75)\dpicstop
+\dpicdraw (0,0)
+ --(-0.75,0)\dpicstop
+\dpicdraw[fill=black](-0.75,0) circle (0.007874in)\dpicstop
+\dpicdraw[fill=black](-0.75,-1.5) circle (0.007874in)\dpicstop
+\filldraw[line width=0bp](-0.775,-1.34)
+ --(-0.75,-1.44)
+ --(-0.725,-1.34) --cycle\dpicstop
+\dpicdraw (-0.75,-0.06)
+ --(-0.75,-1.417094)\dpicstop
+\draw (-0.75,-0.75) node[left=-2bp]{$ \underline{U}_E$};
+\dpicdraw (-0.75,-1.5)
+ --(0,-1.5)\dpicstop
+\end{tikzpicture}%

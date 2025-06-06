@@ -1,0 +1,173 @@
+% maschenv.m4: Netzwerk fuer Maschenstromverfahren nach Brinkmeyer
+\begin{tikzpicture}[scale=2.54]%
+% dpic version 2024.01.01 option -g for TikZ and PGF 1.01
+\ifx\dpiclw\undefined\newdimen\dpiclw\fi
+\global\def\dpicdraw{\draw[line width=\dpiclw]}
+\global\def\dpicstop{;}
+\dpiclw=0.8bp
+\dpiclw=0.8bp
+\dpicdraw[fill=black](0,0) circle (0.007874in)\dpicstop
+\draw (0,0) node[below left=-2bp]{0};
+\dpicdraw (0,0)
+ --(0,0.25)\dpicstop
+\dpicdraw (0,0.5)
+ --(-0.05,0.5)
+ --(-0.05,0.25)
+ --(0.05,0.25)
+ --(0.05,0.5)
+ --(0,0.5)\dpicstop
+\dpicdraw (0,0.5)
+ --(0,0.75)\dpicstop
+\draw (-0.05,0.375) node[left=-2bp]{$ Z_3$};
+\dpicdraw[fill=black](0,0.75) circle (0.007874in)\dpicstop
+\draw (0,0.75) node[below left=-2bp]{1};
+\dpicdraw (0,0.75)
+ --(0.25,0.75)\dpicstop
+\dpicdraw (0.5,0.75)
+ --(0.5,0.8)
+ --(0.25,0.8)
+ --(0.25,0.7)
+ --(0.5,0.7)
+ --(0.5,0.75)\dpicstop
+\dpicdraw (0.5,0.75)
+ --(0.75,0.75)\dpicstop
+\draw (0.375,0.7) node[below=-2bp]{$ Z_4$};
+\dpicdraw (0.75,0.75)
+ --(1,0.75)\dpicstop
+\dpicdraw (1.125,0.75) circle (0.049213in)\dpicstop
+\dpicdraw (1.125,0.75)
+ ..controls (1.119022,0.767935) and (1.102238,0.780032)
+ ..(1.083333,0.780032)
+ ..controls (1.064429,0.780032) and (1.047645,0.767935)
+ ..(1.041667,0.75)\dpicstop
+\dpicdraw (1.125,0.75)
+ ..controls (1.130978,0.732065) and (1.147762,0.719968)
+ ..(1.166667,0.719968)
+ ..controls (1.185571,0.719968) and (1.202355,0.732065)
+ ..(1.208333,0.75)\dpicstop
+\dpicdraw (1.25,0.75)
+ --(1.5,0.75)\dpicstop
+\draw (1.125,0.625) node[below=-2bp]{$ U_4$};
+\dpicdraw[fill=black](1.5,0.75) circle (0.007874in)\dpicstop
+\draw (1.5,0.75) node[below right=-2bp]{5};
+\dpicdraw (1.5,0.75)
+ --(1.5,0.5)\dpicstop
+\dpicdraw (1.5,0.25)
+ --(1.55,0.25)
+ --(1.55,0.5)
+ --(1.45,0.5)
+ --(1.45,0.25)
+ --(1.5,0.25)\dpicstop
+\dpicdraw (1.5,0.25)
+ --(1.5,-0)\dpicstop
+\draw (1.55,0.375) node[right=-2bp]{$ Z_{10}$};
+\dpicdraw[fill=black](1.5,0) circle (0.007874in)\dpicstop
+\draw (1.5,0) node[below right=-2bp]{6};
+\dpicdraw (1.5,0)
+ --(0.875,0)\dpicstop
+\dpicdraw (0.625,0)
+ --(0.625,-0.05)
+ --(0.875,-0.05)
+ --(0.875,0.05)
+ --(0.625,0.05)
+ --(0.625,0)\dpicstop
+\dpicdraw (0.625,0)
+ --(-0,0)\dpicstop
+\draw (0.75,-0.05) node[below=-2bp]{$ Z_7$};
+\dpicdraw (0,0.75)
+ --(0,1)\dpicstop
+\dpicdraw (0,1.25)
+ --(-0.05,1.25)
+ --(-0.05,1)
+ --(0.05,1)
+ --(0.05,1.25)
+ --(0,1.25)\dpicstop
+\dpicdraw (0,1.25)
+ --(0,1.5)\dpicstop
+\draw (-0.05,1.125) node[left=-2bp]{$ Z_2$};
+\dpicdraw[fill=black](0,1.5) circle (0.007874in)\dpicstop
+\draw (0,1.5) node[above left=-2bp]{2};
+\dpicdraw (0,1.5)
+ --(0.25,1.5)\dpicstop
+\dpicdraw (0.5,1.5)
+ --(0.5,1.55)
+ --(0.25,1.55)
+ --(0.25,1.45)
+ --(0.5,1.45)
+ --(0.5,1.5)\dpicstop
+\dpicdraw (0.5,1.5)
+ --(0.75,1.5)\dpicstop
+\draw (0.375,1.55) node[above=-2bp]{$ Z_5$};
+\dpicdraw[fill=black](0.75,1.5) circle (0.007874in)\dpicstop
+\draw (0.75,1.5) node[above left=-2bp]{3};
+\dpicdraw (0.75,1.5)
+ --(1,1.5)\dpicstop
+\dpicdraw (1.25,1.5)
+ --(1.25,1.55)
+ --(1,1.55)
+ --(1,1.45)
+ --(1.25,1.45)
+ --(1.25,1.5)\dpicstop
+\dpicdraw (1.25,1.5)
+ --(1.5,1.5)\dpicstop
+\draw (1.125,1.55) node[above=-2bp]{$ Z_6$};
+\dpicdraw[fill=black](1.5,1.5) circle (0.007874in)\dpicstop
+\draw (1.5,1.5) node[above right=-2bp]{4};
+\dpicdraw (1.5,1.5)
+ --(1.5,1.25)\dpicstop
+\dpicdraw (1.5,1)
+ --(1.55,1)
+ --(1.55,1.25)
+ --(1.45,1.25)
+ --(1.45,1)
+ --(1.5,1)\dpicstop
+\dpicdraw (1.5,1)
+ --(1.5,0.75)\dpicstop
+\draw (1.55,1.125) node[right=-2bp]{$ Z_9$};
+\dpicdraw (0,0)
+ --(-0.5,0)\dpicstop
+\dpicdraw (-0.5,0)
+ --(-0.5,0.625)\dpicstop
+\dpicdraw (-0.5,0.875)
+ --(-0.55,0.875)
+ --(-0.55,0.625)
+ --(-0.45,0.625)
+ --(-0.45,0.875)
+ --(-0.5,0.875)\dpicstop
+\dpicdraw (-0.5,0.875)
+ --(-0.5,1.5)\dpicstop
+\draw (-0.55,0.75) node[left=-2bp]{$ Z_1$};
+\dpicdraw (-0.5,1.5)
+ --(0,1.5)\dpicstop
+\dpicdraw (1.5,0)
+ --(2,0)\dpicstop
+\dpicdraw (2,0)
+ --(2,0.25)\dpicstop
+\dpicdraw (2,0.5)
+ --(1.95,0.5)
+ --(1.95,0.25)
+ --(2.05,0.25)
+ --(2.05,0.5)
+ --(2,0.5)\dpicstop
+\dpicdraw (2,0.5)
+ --(2,0.75)\dpicstop
+\draw (2.05,0.375) node[right=-2bp]{$ Z_8$};
+\dpicdraw (2,0.75)
+ --(2,1)\dpicstop
+\dpicdraw (2,1.125) circle (0.049213in)\dpicstop
+\dpicdraw (2,1.125)
+ ..controls (1.994022,1.142935) and (1.977238,1.155032)
+ ..(1.958333,1.155032)
+ ..controls (1.939429,1.155032) and (1.922645,1.142935)
+ ..(1.916667,1.125)\dpicstop
+\dpicdraw (2,1.125)
+ ..controls (2.005978,1.107065) and (2.022762,1.094968)
+ ..(2.041667,1.094968)
+ ..controls (2.060571,1.094968) and (2.077355,1.107065)
+ ..(2.083333,1.125)\dpicstop
+\dpicdraw (2,1.25)
+ --(2,1.5)\dpicstop
+\draw (2.125,1.125) node[right=-2bp]{$ U_8$};
+\dpicdraw (2,1.5)
+ --(1.5,1.5)\dpicstop
+\end{tikzpicture}%

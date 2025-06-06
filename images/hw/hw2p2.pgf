@@ -1,0 +1,49 @@
+\input{../../common/tikz-prefix.tex}
+
+% =============================================================================
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[%
+    width=12cm,
+    height=8cm,
+    at={(0cm, 0cm)},
+    scale only axis,
+    xmin=0,
+    xmax=0.05,
+    xtick={0, 0.01, 0.02, 0.03, 0.04, 0.05},
+    ymin=-50,
+    ymax=50,
+    ytick={-50, -40, -30, -20, -10,   0,  10,  20,  30,  40,  50},
+    ylabel={Spannung u/V},
+    ]
+    \addplot [blue, domain=0:50e-3, samples=100] {44.7*sin(deg(2*pi*1/20e-3*x))}; label{uPlot}
+    \addlegendentry{$u(t)$};
+    \node[right, align=left, text=black] at (axis cs:0.025,44.7,0) {$\leftarrow\text{ 44.7 V}$};
+  \end{axis}
+  %
+  \begin{axis}[%
+    width=12cm,
+    height=8cm,
+    at={(0cm,0cm)},
+    scale only axis,
+    xmin=0,
+    xmax=0.05,
+    xtick={0, 0.01, 0.02, 0.03, 0.04, 0.05},
+    xlabel={Zeit t/s},
+    xmajorgrids,
+    ymin=-5,
+    ymax=5,
+    ytick={-5, -4, -3, -2, -1,  0,  1,  2,  3,  4,  5},
+    ylabel={Strom i/A},
+    ymajorgrids,
+    axis x line*=bottom,
+    axis y line*=right,
+    ]
+    \addlegendimage{/pgfplots/refstyle=uPlot}\addlegendentry{$u(t)$}
+    \addplot [red, domain=0:50e-3, samples=100] {-2*sin(deg(2*pi*1/20e-3*(x-13.5e-3)))}; label{iPlot}
+    \addlegendentry{$i(t)$};
+    \node[right, align=left, text=black] at (axis cs:0.0135,0,0) {$\leftarrow\text{ 13.5 ms}$};
+  \end{axis}
+\end{tikzpicture}
+\end{document}

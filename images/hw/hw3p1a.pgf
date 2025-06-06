@@ -1,0 +1,18 @@
+\input{../../common/tikz-prefix.tex}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  % Draw axes
+  \draw [<->,thick] (0,2) node (yaxis) [left] {Im}
+  |- (6,0) node (xaxis) [below] {Re};
+  \draw[->, blue] (0,0) -- (3,0) node[above] {$I_R$};
+  \draw[->, red] (0,0) -- (4,0) node[above] {$U_R$};
+  \draw[->, blue] (0,0) -- (0,-2.65*3) node[left] {$I_L$};
+  \draw[->, blue] (0,0) -- (3,-2.65*3) node[right] {$I$};
+  \coordinate (a) at (0,0);
+  \coordinate (b) at (3,-2.65*3);
+  \tikzAngleOfLine(a)(b){\angle};
+  \draw[->, red] (a) -- ++(\angle-90:0.76*4) node[below] {$U_C$} coordinate (c);
+  \draw[<-, red] (c)+(4,0) node[below] {$U$} -- (a);
+\end{tikzpicture}
+\end{document}

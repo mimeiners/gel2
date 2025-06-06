@@ -1,0 +1,32 @@
+\input{../../common/tikz-prefix.tex}
+
+% =============================================================================
+
+\begin{document}
+
+\begin{tikzpicture}
+  \begin{axis}[%
+    width=12cm,
+    height=8cm,
+    at={(0cm,0cm)},
+    scale only axis,
+    xmin=-0.005,
+    xmax=0.005,
+    xtick={-0.005, -0.004, -0.003, -0.002, -0.001, 0,  0.001,  0.002,  0.003,  0.004,  0.005},
+    xlabel={Zeit t/s},
+    xmajorgrids,
+    ymin=-20,
+    ymax=20,
+    ytick={-20, -15, -10,  -5,   0,   5,  10,  15,  20},
+    ylabel={Spannung u/V},
+    ymajorgrids,
+    legend style={legend cell align=right,align=right,legend plot pos=left,draw=black}
+    ]
+    \addplot [blue, domain=-5e-3:5e-3, samples=100] {-15*cos(deg(2*pi*1/8e-3*x))};
+    \addlegendentry{$u_1(t)$};
+    \addplot [red, domain=-5e-3:5e-3, samples=100] {10*cos(deg(2*pi*1/8e-3*(x-1e-3))};
+    \addlegendentry{$u_2(t)$};
+  \end{axis}
+\end{tikzpicture}
+
+\end{document}
