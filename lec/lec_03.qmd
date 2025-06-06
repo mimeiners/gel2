@@ -128,7 +128,7 @@ $$
 
 ## Zeigerdarstellung
 
-![Phasor-Diagramm](../images/lec/phasor-diagram.pdf){#fig-phasor width=400}
+![Phasor-Diagramm](../images/lec/phasor-diagram){#fig-phasor width=400}
 
 
 ### Grundschaltelemente

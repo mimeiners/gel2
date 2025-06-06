@@ -99,7 +99,7 @@ W_{kin} &:= \mbox{Induktivität}
 
 ## RLC-Reihenschwingkreis (aktiver Zweipol)
 
-![RLC-Reihenschwingkreis](../images/lec/lec6rlc.pdf){#fig-lec6rlc width=400}
+![RLC-Reihenschwingkreis](../images/lec/lec6rlc){#fig-lec6rlc width=400}
 
 
 ::: {.callout-note} 
@@ -306,6 +306,6 @@ BW &= \omega_{45} - \omega_{-45} = \frac{\omega_0}{Q} \\
 
 ## Gegenüberstellung der Eigenschaften der elementaren Schwingkreise
 
-![Eingenschaften von Schwingkreisen](../images/lec/lec6elemSchwing.pdf){#fig-lec6elemSchwing}
+![Eingenschaften von Schwingkreisen](../images/lec/lec6elemSchwing){#fig-lec6elemSchwing}
 
 Entn. aus [@harriehausen2020]

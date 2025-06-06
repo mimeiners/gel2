@@ -6,7 +6,7 @@ Im Labor ist mit einem Vektornetzwerkanalysator das Bode-Diagramm eines Zweitors
 In @fig-hw4p1a sind Betrag $\vert H_u \vert$ und Phase $\arg(H_u)$ der Spannungsübertragungsfunktion
 von Tor 1 auf Tor 2, $\underline{H}_u=\underline{U}_2/\underline{U}_1$, abgebildet. 
 
-![Bode-Diagramm des Zweitors](../images/hw/hw4p1a.pdf){#fig-hw4p1a width=600}
+![Bode-Diagramm des Zweitors](../images/hw/hw4p1){#fig-hw4p1a}
 
 
 ### Funktion
@@ -25,7 +25,7 @@ Eingangsspannung $\underline{U}_1$ und Ausgangsspannung $\underline{U}_2$.
 ### Lösung
 In einfachster Ausführung kann man einen Hochpass durch einen Spannungsteiler mit Kapazität $C$ und Widerstand $R$ realisieren.
 
-![Einfacher RC-Hochpass, Zweitor-Ersatzschaltbild](../images/hw/hw4p1b.png){#fig-hw4p1b width=400}
+![Einfacher RC-Hochpass, Zweitor-Ersatzschaltbild](../images/hw/hw4p12){#fig-hw4p1b}
 
 :::
 
@@ -132,7 +132,7 @@ Konstruieren Sie eine Ortskurve der Admittanz $Y(\omega)$ für den skizzierten Z
 Überprüfen Sie das Ergebnis, indem Sie ausgezeichnete Frequenzwerte betrachten. Die Werte der Bauteile lauten 
 $R_s = 50\,\Omega$, $R_p = 200\,\Omega$ und $C = 2\,\mu F$.
 
-![Zweipol-Admittanz](../images/hw/hw4p2.png){#fig-hw4p2 width=400}
+![Zweipol-Admittanz](../images/hw/hw4p2){#fig-hw4p2}
 
 
 ## Ortskurve mit verschiedenen Parametern
@@ -140,7 +140,7 @@ $R_s = 50\,\Omega$, $R_p = 200\,\Omega$ und $C = 2\,\mu F$.
 Gegeben sei nachfolgende RLC-Schaltung in @fig-hw4p3.
 Die Werte der Bauteile lauten $R_1 = 60\,\Omega$, $R_2 = 200\,\Omega$, $L = 200\,\mu H$ und $C = 5\,nF$. 
 
-![RLC-Schaltung](../images/hw/hw4p3.png){#fig-hw4p3 width=400}
+![RLC-Schaltung](../images/hw/hw4p3){#fig-hw4p3}
 
 
 ### Ortskurve mit $\omega$ als Parameter

@@ -6,7 +6,7 @@ An eine Spannungsquelle mit der Leerlaufspannung $\underline{U}_0$, der inneren 
 L_i$ und der Kreisfrequenz $\omega$ ist ein Widerstand $R_2$ angeschlossen. In Reihe mit dem Widerstand $R_2$ soll ein
 Kondensator $C_2$ geschaltet werden. 
 
-![Schaltung für die Leistungsberechnung.](../images/hw/hw6p1.png){#fig-hw6p1 widht=400}
+![Schaltung für die Leistungsberechnung.](../images/hw/hw6p1){#fig-hw6p1 widht=400}
 
 
 ### Leistungsaufnahme
@@ -72,7 +72,7 @@ Parallelschaltung eines Widerstandes $R_2$ und eines Kondensators $C_2$ angeschl
 $L_1=1\,\mu H$, $C_1=100\,pF$, $R_1=2\,k\Omega$, $R_2=R_1$ und $C_2=C_1$. Wie beeinflusst die Parallelschaltung aus
 $R_2$ und $C_2$ die Resonanzfrequenz und die Güte des Parallelschwingkreises?
 
-![Schaltung mit idealem Übertrager.](../images/hw/hw6p2.png){#fig-hw6p3 width=400}
+![Schaltung mit idealem Übertrager.](../images/hw/hw6p2){#fig-hw6p3 width=400}
 
 
 ### Ersatzschaltbild
@@ -83,7 +83,7 @@ Skizzieren Sie das Ersatzschaltbild der transformierten Parallelschaltung aus $R
 ### Lösung
 
 
-![Impedanztransformation mimt einem idealen Übertrager.](../images/hw/hw6p2a.png){width=400}
+![Impedanztransformation mimt einem idealen Übertrager.](../images/hw/hw6p2a){width=400}
 
 
 Impedanztransformation mit einem idealen Übertrager:
@@ -103,7 +103,7 @@ Fassen Sie gleichartige Zweipole zusammen.
 ::: {.callout-caution collapse="true"}
 ### Lösung
 
-![Ersatzschaltbild mit zusammengefassten Zweipolen.](../images/hw/hw6p2b.png){width=400}
+![Ersatzschaltbild mit zusammengefassten Zweipolen.](../images/hw/hw6p2b){width=400}
 
 
 \begin{align}

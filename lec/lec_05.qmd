@@ -140,9 +140,9 @@ erreicht hat: $f(t_d) = 1/2$.
 
 ::: {#fig-delay layout-ncol=2}
 
-![$f(t)$](../images/lec/lec5delay_func.pdf){#fig-delay_func}
+![$f(t)$](../images/lec/lec5delay_func){#fig-delay_func}
 
-![$\dot{f}(t)$](../images/lec/lec5delay_elmore.pdf){#fig-delay_elmore}
+![$\dot{f}(t)$](../images/lec/lec5delay_elmore){#fig-delay_elmore}
 
 Definition von Verzögerungszeit und Anstiegszeit
 :::
@@ -202,7 +202,7 @@ ohmsche Widerstand ist von der Frequenz unabhängig ist, verläuft sie parallel 
 2 k$\Omega$. Auf die reelle (Re) Achse bezogen ist der Phasenwinkel der Impedanz negativ. Das Diagramm ist mit den
 angegebenen gerundeten Rechenwerten des Blindwiderstands, der Impedanz und des Phasenwinkels erstellt.
 
-![RC-Schaltung für eine Ortskurve](../images/lec/lec5s2.png){#fig-lec5s2 width=300}
+![RC-Schaltung für eine Ortskurve](../images/lec/lec5s2){#fig-lec5s2 width=300}
 
 $$
 \underline{Z} = R_1 + \frac{1}{j \omega C_1} 
@@ -309,11 +309,11 @@ Tiefpaß m-ter Ordnung; im Bode-Diagramm entspricht dies einer Geraden der Steig
 zwischen Sperrbereich und Durchlaßbereich wird durch die *Grenzfrequenz* $f_g$ des Tiefpasses markiert; bei dieser weist 
 $a_v$ in guter Näherung den Wert −3 dB auf.
 
-![Schematisches Bode-Diagramm](../images/lec/lec5rc_bode_schem.pdf){#fig-lec5rc_bode_schem}
+![Schematisches Bode-Diagramm](../images/lec/lec5rc_bode_schem){#fig-lec5rc_bode_schem}
 
 **Übertragungsverhalten**
 
-![RC-Tiefpass](../images/lec/lec5rc_tp.pdf){#fig-lec5rc_tp}
+![RC-Tiefpass](../images/lec/lec5rc_tp){#fig-lec5rc_tp}
 
 @fig-lec5rc_tp zeigt die Schaltung eines RC-Tiefpasses. Wird am Eingang eine sinusförmige Wechselspannung 
 $v_1(t) = \operatorname{Re}(\underline{\hat{v_1}} e^{j\omega t})$ angelegt, so tritt am Ausgang die Spannung 
@@ -432,7 +432,7 @@ v_2(t) = V_+ \exp\left( -\frac{t}{\tau} \right).
 $$
 
 
-![Sprungantwort des RC-Tiefpasses](../images/lec/lec5rc_sprung.pdf){#fig-lec5rc_sprung}
+![Sprungantwort des RC-Tiefpasses](../images/lec/lec5rc_sprung){#fig-lec5rc_sprung}
 
 
 @fig-lec5rc_sprung zeigt für beide Situationen den Verlauf der Spannung an Eingang und Ausgang. Als charakteristische
@@ -503,9 +503,9 @@ Hochpasses: Ein Hochpaß der Ordnung $k$ zeigt im Sperrbereich einen Anstieg mit
 Frequenzen vorliegenden Durchlaßbereich ist $a_v \approx$ 0 dB. Der Übergang zwischen Durch laßbereich und Sperrbereich
 wird durch die Grenzfrequenz $f_g$ des Hochpasses markiert, bei der $a_v$ den Wert −3 dB aufweist. 
 
-![RC-Hochpass](../images/lec/lec5rc_hp.pdf){#fig-lec5rc_hp}
+![RC-Hochpass](../images/lec/lec5rc_hp){#fig-lec5rc_hp}
 
-![Schematisches Bode-Diagramm](../images/lec/lec5rc_hp_bode_schem.pdf){#fig-lec5rc_hp_bode_schem}
+![Schematisches Bode-Diagramm](../images/lec/lec5rc_hp_bode_schem){#fig-lec5rc_hp_bode_schem}
 
 
 **Übertragungsfaktor**
@@ -621,7 +621,7 @@ $$
 v_2(t) = -V_+ \exp\left(-\frac{t}{\tau} \right)
 $$
 
-![Sprungantwort des RC-Hochpasses](../images/lec/lec5rc_hp_sprung.pdf){#fig-lec5rc_hp_sprung}
+![Sprungantwort des RC-Hochpasses](../images/lec/lec5rc_hp_sprung){#fig-lec5rc_hp_sprung}
 
 @fig-lec5rc_hp_sprung zeigt für beide Situationen den Verlauf der Spannung an Eingang und Ausgang. Als charakteristische
 Zeit für das Erreichen des jeweiligen Endwerts dient auch hier $\tau = RC$.
@@ -664,7 +664,7 @@ Auswertung der LTspice Analyse mit Python:
 
 ### RC-Bandpaß
 
-![Bode-Diagramm eines Bandpasses](../images/lec/lec5bp.pdf){#fig-lec5bp width=600}
+![Bode-Diagramm eines Bandpasses](../images/lec/lec5bp){#fig-lec5bp width=600}
 
 "Besitzt ein Netzwerk sowohl bei hohen als auch bei tiefen Frequenzen einen Sperrbereich und bei mittleren Frequenzen
 einen Durchlaßbereich, so liegt ein Bandpaß vor. Der prinzipielle Verlauf der Spannungsverstärkung $a_v$ ist im
@@ -689,7 +689,7 @@ Potentiometer ersetzt. Diese Anordnung gibt es auch in Wechselstrom-Brückenscha
 
 <!-- ## Elementtransformation -->
 
-<!-- ![Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS](../images/lec/lec5ElemTransf.pdf){#fig-lec5ElemTransf} -->
+<!-- ![Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS](../images/lec/lec5ElemTransf){#fig-lec5ElemTransf} -->
 
 <!-- Entn. aus [@deliyannis1998] -->
 

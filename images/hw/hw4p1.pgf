@@ -1,7 +1,3 @@
-\documentclass[border=10pt]{standalone}
-\input{../../common/tikz-prefix.tex}
-
-\begin{document}
 \begin{tikzpicture}
 
   \begin{axis}[%
@@ -22,7 +18,7 @@
     xminorgrids,
     ymajorgrids
     ]
-    \addplot [smooth, solid, color=red, line width=2.0pt] table [x index=0,y index=1] {../spice/hw4p1.csv};
+    \addplot [smooth, solid, color=red, line width=2.0pt] table [x index=0,y index=1] {../../files/spice/hw4p1.csv};
 
     % \addplot [color=black, line width=2.0pt, forget plot]
     % table[row sep=crcr]{%
@@ -99,7 +95,7 @@
     xminorgrids,
     ymajorgrids
     ]
-    \addplot [smooth, solid, color=red, line width=2.0pt] table [x index=2,y index=3] {../spice/hw4p1.csv};
+    \addplot [smooth, solid, color=red, line width=2.0pt] table [x index=2,y index=3] {../../files/spice/hw4p1.csv};
 
     % \addplot [color=black, line width=2.0pt, forget plot]
     % table[row sep=crcr]{%
@@ -156,4 +152,3 @@
     % };
   \end{axis}
 \end{tikzpicture}%
-\end{document}

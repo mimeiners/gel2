@@ -159,7 +159,7 @@ $$
 
 ## Wirkleistung, Blindleistung und Scheinleistung
 
-<!-- ![Oszillogramm der Strom- und Spannungsmessung](../images/hw/hw2p2.pdf){#fig-hw2p2} -->
+<!-- ![Oszillogramm der Strom- und Spannungsmessung](../images/hw/hw2p2){#fig-hw2p2} -->
 
 ```{python}
 #| label: fig-hw2p2
@@ -312,9 +312,9 @@ L_p = 796\,mH
 $$
 
 ::: {#fig-hw2p2s}
-![Reihenersatzschaltung des Verbrauchers](../images/hw/hw2p2a.pdf){#fig-hw2p2a}
+![Reihenersatzschaltung des Verbrauchers](../images/hw/hw2p2a){#fig-hw2p2a}
 	
-![Parallelersatzschaltung des Verbrauchers](../images/hw/hw2p2b.pdf){#fig-hw2p2b}
+![Parallelersatzschaltung des Verbrauchers](../images/hw/hw2p2b){#fig-hw2p2b}
 :::
 
 :::

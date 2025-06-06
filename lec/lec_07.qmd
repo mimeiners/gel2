@@ -39,7 +39,7 @@ Entn. aus [@kasper2000] [@paul2019]
 
 ## Netzwerk
 
-![Netzwerk für die Knotenspannungsanalyse](../images/lec/lec6s20.png){#fig-lec7knoten width=400}
+![Netzwerk für die Knotenspannungsanalyse](../images/lec/lec6s20){#fig-lec7knoten width=400}
 
 
 ### Transiente Analyse
@@ -225,7 +225,7 @@ $m=z-(k-1)$.
 
 ## Maschenstromverfahren
 
-![Netzwerk für die Maschenstromanalyse](../images/lec/lec6s30.png){#fig-lec7masch width=400}
+![Netzwerk für die Maschenstromanalyse](../images/lec/lec6s30){#fig-lec7masch width=400}
 
 
 ## Wahl der unabhängigen Ströme $I_M$

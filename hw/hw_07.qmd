@@ -10,7 +10,7 @@ Berechnen Sie den Frequenzgang der komplexen Amplitude $\underline{H}_u(f)=U_1(f
 Transformator-Schaltung eines dynamischen Mikrofons @fig-hw7p1.
 
 
-![Ersatzschaltung eines dynamischen Mikrofons.](../images/hw/hw7p1.png){#fig-hw7p1 width=400}
+![Ersatzschaltung eines dynamischen Mikrofons.](../images/hw/hw7p1){#fig-hw7p1 width=400}
 
 
 \begin{align}
@@ -47,7 +47,7 @@ Um den idealen Tranformator aufzulösen muss man:
 
 Neues Netzwerk:
 
-![](../images/hw/hw7p1s.png){#fig-hw7p1s width=400}
+![](../images/hw/hw7p1s){#fig-hw7p1s width=400}
 
 
 \begin{align}
@@ -150,7 +150,7 @@ Lautsprechers. Dabei repräsentiert $\underline{Z}_1 = R_1 + j \omega L_1$ die I
 $\underline{Z}_M$, die Parallelschaltung aus $R_2$, $L_2$ und $C_2$, repräsentiert die dynamisch-mechanischen
 Eigenschaften des Systems.
 
-![Ersatzschaltbild eines Lautsprechers.](../images/hw/hw7p2.png){#fig-hw7p2 width=400}
+![Ersatzschaltbild eines Lautsprechers.](../images/hw/hw7p2){#fig-hw7p2 width=400}
 
 $$
 R_1 = 3\,\Omega,  L_1 = 200\,\mu H, C_2 = 1000\,\mu F,  L_2 = 4\,mH, R_2 = 30\,\Omega

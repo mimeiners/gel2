@@ -4,7 +4,7 @@
 Ein Verbraucher $\underline{Z}_L$ wird über eine näherungsweise verlustlose Leitung aus dem Netz versorgt ($f$ = 50 Hz),
 $U_{eff}$ = 230 V. Er nimmt eine Wirkleistung von $P$ = 5 kW und eine Blindleistung von $Q$ = 4,5 kvar auf.
 
-![Ersatzschaltbild des Versorgungsnetzes mit Verbraucher](../images/hw/hw5p11.png){#fig-hw5p11 width=400}
+![Ersatzschaltbild des Versorgungsnetzes mit Verbraucher](../images/hw/hw5p11){#fig-hw5p11 width=400}
 
 ### Leistungsfaktor 
 Wie groß ist der Leistungsfaktor $\cos \phi$?
@@ -35,7 +35,7 @@ I_{eff} &= 29,2\,A
 
 ### Zusätzlicher Verbraucher
 
-![Ersatzschaltbild des Versorgungsnetzes mit Verbraucher und zusätzlicher Kondensatorbatterie.](../images/hw/hw5p12.png){#fig-hw5p12 width=400}
+![Ersatzschaltbild des Versorgungsnetzes mit Verbraucher und zusätzlicher Kondensatorbatterie.](../images/hw/hw5p12){#fig-hw5p12 width=400}
 
 
 An die Anschlüsse des Verbrauchers wird zusätzlich eine Kondensatorbatterie von $C_L$ = 188 $\mu$F parallel 
@@ -94,7 +94,7 @@ Zur Erwärmung von Werkstücken in einer Härteanlage wird ein Mittelfrequenzgen
 mit folgendem Ersatzschaltbild {numref}`@fig-hw5p2` eingesetzt.
 
 
-![Ersatzschaltbild des Mittelfrequenzgenerators.](../images/hw/hw5p2.png){#fig-hw5p2 width=400}
+![Ersatzschaltbild des Mittelfrequenzgenerators.](../images/hw/hw5p2){#fig-hw5p2 width=400}
 
 
 Bei der Erhitzung durch Stromdurchgang wirkt das Werkstück als ohmscher Widerstand $R_V$, dessen Wert durch die
@@ -145,7 +145,7 @@ Die abgebildete Wechselstrommessbrücke kann als Sperrfilter eingesetzt werden. 
 Teil eines Wien-Robinson-Oszillators [@wikipedia2019a].
 
 
-![Wien-Robinson-Brücke](../images/hw/hw5p3.png){#fig-hw5p3 width=400}
+![Wien-Robinson-Brücke](../images/hw/hw5p3){#fig-hw5p3 width=400}
 
 
 ### Widerstandsverhältnis

@@ -2,7 +2,7 @@
 
 ## Schaltungsaufgabe mit Zeigerdiagramm
 
-![RLC-Schaltung für das Zeigerdiagramm.](../images/hw/hw3p1.png){#fig-hw3p1 width=400}
+![RLC-Schaltung für das Zeigerdiagramm.](../images/hw/hw3p1){#fig-hw3p1 width=400}
 
 Gegeben ist die RLC-Schaltung in @fig-hw3p1. Dabei sind die Bauteilwerte $R=100\,\Omega$, $L=1\,\mu H$, $C=1\,nF$ und
 die Spannungsquelle $u(t)=\hat{U} \cos(\omega t)$ mit $\hat{U}=1,41\,V$ und $\omega=2 \pi 6\,MHz$.
@@ -43,7 +43,7 @@ $$
 
 5. Final den Summenvektor für die Quellenspannung einzeichnen; $\vec{U} = \vec{U_C} + \vec{U_R}$
 
-![Zeigerdiagramm.](../images/hw/hw3p1a.png){width=400}
+![Zeigerdiagramm.](../images/hw/hw3p1a){width=400}
 :::
 
 ## Kompensierter Spannungsteiler
@@ -52,7 +52,7 @@ Die abgebildete Schaltung in {numref}`fig:hw3p2` stellt das Prinzip eines Oszill
 dar, ein sogenannter kompensierter Spannungsteiler. Dabei bezeichnen $R$ und $C$ Widerstand und Kapazität des 
 Oszilloskopeingangs. $R_1 = 9\,M\Omega$, $R = 1\,M\Omega$, $R_2 = 1\,M\Omega$, $C = 10\,pF$.
 
-![Ersatzschaltbild eines Oszilloskop-Tastkopfes.](../images/hw/hw3p2.png){#fig-hw3p2 width=400}
+![Ersatzschaltbild eines Oszilloskop-Tastkopfes.](../images/hw/hw3p2){#fig-hw3p2 width=400}
 
 vgl. [Kapazitiver Spannungsteiler](https://www.elektroniktutor.de/analogtechnik/c_teiler.html)  [@mietke2024]
 
@@ -65,7 +65,7 @@ Bauteile her?
 ### Lösung
 Zeichnen Sie ein vereinfachtes Ersatzschaltbild mit zusammengefassten Impedanzen $Z_1$ und $Z_2$.
 
-![Ersatzschaltbild des Tastkopfes zusammengefasst.](../images/hw/hw3p2a.png){height=200}
+![Ersatzschaltbild des Tastkopfes zusammengefasst.](../images/hw/hw3p2a){height=200}
 
 $$
 Z_1 = \frac{\frac{R_1}{j\omega C_1}}{\frac{1}{j \omega C_1} + R_1} = \frac{R_1}{1 + j \omega R_1 C_1} 
@@ -133,7 +133,7 @@ $$
 ## RC-Spannungsteiler
 Gegeben ist der abgebildete Spannungsteiler in {numref}`fig:hw3p3` mit zwei Widerständen und einem Kondensator.
 
-![RC-Spannungsteiler.](../images/hw/hw3p3.png){width=400 #fig-hw3p3}
+![RC-Spannungsteiler.](../images/hw/hw3p3){width=400 #fig-hw3p3}
 
 ### Spannungsverhältnis
 Berechnen Sie den komplexen Spannungsübertragungsfaktor $\underline{H}_u=\underline{U}_2/\underline{U}_1$.
@@ -144,7 +144,7 @@ Fassen Sie die Bauteile zu Impedanzen $Z_1$ und $Z_2$ zusammen. Das gesuchte Spa
 Spannungsteilerregel.
 
 
-![RC-Spannungsteiler zusammengefasst.](../images/hw/hw3p3a.png){width=400}
+![RC-Spannungsteiler zusammengefasst.](../images/hw/hw3p3a){width=400}
 
 
 $$

@@ -1,6 +1,3 @@
-\input{../../common/tikz-prefix.tex}
-
-\begin{document}
 \begin{tikzpicture}[scale=1.0]
   % Draw axes
   \draw [<->,thick] (0,2) node (yaxis) [left] {Im}
@@ -15,4 +12,3 @@
   \draw[->, red] (a) -- ++(\angle-90:0.76*4) node[below] {$U_C$} coordinate (c);
   \draw[<-, red] (c)+(4,0) node[below] {$U$} -- (a);
 \end{tikzpicture}
-\end{document}

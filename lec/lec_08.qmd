@@ -30,7 +30,7 @@ $\mathbf{H}$ ist die magnetische Flußdichte im Kern um die Permeabilitätszahl 
 $\mathbf{B} = \mu_0 \mu_r \mathbf{H} = \mu \mathbf{H}$. Der Wert von $\mu_r$ ist aussteuerungsabhängig; bei geringer
 Aussteuerung liegt $\mu_r$ für typische Spulenkerne im Bereich $10^2$ bis $10^4$.
 
-![$B(H)$-Hysteresekurve, Rayleigh-Schleife](../images/lec/lec8s1.pdf){#fig-lec8s1 width=400}
+![$B(H)$-Hysteresekurve, Rayleigh-Schleife](../images/lec/lec8s1){#fig-lec8s1 width=400}
 
 
 ::: {.callout-note} 
@@ -123,10 +123,10 @@ L = \frac{\mu}{i^2} \int \vert \mathbf{H}\vert^2 d^3 x .
 $$
 :::
 
-![(a) Zylinderspule, (b) Ringkernspule und \(c\) Drahtring](../images/lec/lec8s3.pdf){#fig-lec8s3 width=400}
+![(a) Zylinderspule, (b) Ringkernspule und \(c\) Drahtring](../images/lec/lec8s3){#fig-lec8s3 width=400}
 
 
-![Gedruckte Spule (PCB)](../images/lec/lec8s4.pdf){#fig-lec8s4 width=200}
+![Gedruckte Spule (PCB)](../images/lec/lec8s4){#fig-lec8s4 width=200}
 
 
 ## Spulen
@@ -136,7 +136,7 @@ Kern aus einem hochpermeablen Material (Eisen, Ferrit) der Erhöhung des Indukti
 Kern werden als *Luftspulen* bezeichnet.
 
 
-![Ersatzschaltung einer Spule.](../images/lec/lec8s2.pdf){#fig-lec8s2 width=400}
+![Ersatzschaltung einer Spule.](../images/lec/lec8s2){#fig-lec8s2 width=400}
 
 Abbildung @fig-lec8s2 zeigt eine Ersatzschaltung für eine Spule, die bei Kleinsignalaussteuerung verwendet
 werden kann. Da die Netzwerkelemente arbeitspunktabhängig sind, wurden kleine Buchstaben verwendet. Wie in Gl. (9.33)
@@ -207,7 +207,7 @@ Dämpfungsperlen sind kleine zylindrische Ferritkörper mit einer Bohrung, durch
 weisen einen Durchmesser von wenigen Millimetern auf und werden gewöhnlich über einen Anschlußdraht eines bedrahteten
 Bauteils – z.B. Basisanschluß eines Transistors – gesteckt.
 
-![Dämpfungsperle](../images/lec/lec8s5.pdf){#fig-lec8s5 width=400}
+![Dämpfungsperle](../images/lec/lec8s5){#fig-lec8s5 width=400}
 
 Durch die Dämpfungsperle wird die Impedanz des Anschlußdrahts erhöht. Ist diese ohne Dämpfungsperle durch 
 $R_0 + j\omega L_0$ gegeben, so folgt mit der komplexen Permeabilität $\mu_r = \mu_s' − j\mu_s''$ des 
@@ -231,12 +231,12 @@ stark dämpfen (drosseln). Der Kern einer Drosselspule ist deshalb in der Regel 
 dem ein schwaches Wechselfeld überlagert ist. Die Verluste in der Drosselspule sind somit vorwiegend Kupferverluste, da
 der dominierende Gleichanteil keine Kernverluste verursacht; vgl. auch {cite}`schlienz2020` Kap. 2 - Abwärtswandler.
 
-![Schaltnetzteil mit Drossel-Abwärtswandler](../images/lec/lec8s6.pdf){#fig-lec8s6 width=400}
+![Schaltnetzteil mit Drossel-Abwärtswandler](../images/lec/lec8s6){#fig-lec8s6 width=400}
 
 
 #### Power Management Integrated Circuits (PMICs)
 
-![PMICs](../images/lec/lec8sPMICs.pdf){#fig-lec8sPMICs width=400}
+![PMICs](../images/lec/lec8sPMICs){#fig-lec8sPMICs width=400}
 
 "Power management integrated circuits (PMICs) are essential in today's electronic devices. They manage power delivery
 and consumption, provide efficient power supplies, and drive power switches that control actuators and motors, as
@@ -277,7 +277,7 @@ sowie in *Übertragern* und *Trenntrafos* zur galvanischen Trennung von Wechsels
 von Gleichanteilen und zum Unterbrechen von Erdschleifen. Die Verkopplung der Induktivitäten wird gewöhnlich 
 durch einen gemeinsamen Kern erhöht, der – zur Verbesserung der Linearität – meist einen Luftspalt enthält.
 
-![Haupt- und Streuflüsse im Transformator](../images/lec/lec8s7.pdf){#fig-lec8s4 width=400}
+![Haupt- und Streuflüsse im Transformator](../images/lec/lec8s7){#fig-lec8s4 width=400}
 
 Abbildung @fig-lec8s4 zeigt den prinzipiellen Aufbau eines Transformators bzw. Übertragers mit einer 
 primärseitigen Wicklung der Windungszahl $n_1$ und einer sekundärseitigen Wicklung der Windungszahl $n_2$.
@@ -336,7 +336,7 @@ Diese Beziehungen gelten nur bei Kleinsignalaussteuerung ohne Vormagnetisierung 
 Bei höheren Frequenzen tritt eine Phasenverschiebung zwischen magnetischem Feld (bzw. Spulenstrom) und magnetischer 
 Polarisation auf.
 
-![Schaltsymbol zweier gekoppelter Induktivitäten](../images/lec/lec8s8.pdf){#fig-lec8s8 width=400}
+![Schaltsymbol zweier gekoppelter Induktivitäten](../images/lec/lec8s8){#fig-lec8s8 width=400}
 
 
 ### Der verlustlose Übertrager
@@ -392,7 +392,7 @@ $$
 
 
 ![Idealer Übertrager. (a) Schaltsymbol und (b) Impedanztransformation mit idealem
-Übertrager](../images/lec/lec8s9.pdf){#fig-lec8s9 width=400}
+Übertrager](../images/lec/lec8s9){#fig-lec8s9 width=400}
 
 Abbildung @fig-lec8s9 (a) zeigt des Netzwerksymbol eines idealen Übertragers. Für diesen gelten die folgenden
 Beziehungen zwischen den Zeigern von Strom und Spannung an Ein- und Ausgang 
@@ -449,7 +449,7 @@ Sekundärseite auf die Primärseite.
 In realen Übertragern ist der Kopplungsfaktor von eins verschieden, da aufgrund von Streufeldern der die eine Spule
 durchsetzende Fluß die andere nicht vollständig durchsetzt.
 
-![T-Ersatzschaltung](../images/lec/lec8s10.pdf){#fig-lec8s10 width=400}
+![T-Ersatzschaltung](../images/lec/lec8s10){#fig-lec8s10 width=400}
 
 Die Transformatorgleichungen lassen sich in die in Abb. @fig-lec8s10 dargestellte T-Ersatzschaltung
 überführen. Durch Anwenden des Maschensatzes folgt sofort
@@ -467,7 +467,7 @@ eins gilt $M \approx \sqrt{L_1 L_2}$; d.h. zumindest eine der Längsinduktivitä
 aus diesem Grund als rein formales Netzwerk anzusehen, das die Transformatorgleichungen korrekt erfaßt – eine 
 physikalisch anschauliche Interpretation der Netzwerkelemente besteht jedoch nicht. 
 
-![Ersatzschaltung eines unvollständig gekoppelten Übertragers](../images/lec/lec8s11.pdf){#fig-lec8s11 width=400}
+![Ersatzschaltung eines unvollständig gekoppelten Übertragers](../images/lec/lec8s11){#fig-lec8s11 width=400}
 
 Abbildung @fig-lec8s11 zeigt die Ersatzschaltung eines unvollständig gekoppelten $(k < 1)$, ansonsten verlustfreien
 Übertragers. Dabei wird von der Induktivität $L_1$ ein Streuanteil $\sigma L_1$ abgespalten; der 
@@ -497,13 +497,13 @@ lassen sich diese in die Gln. (48) überführen, wobei die Details der Rechnung 
 überlassen werden.
 
 ![(a) Parallel- und (b) Serienersatzschaltung eines verlustbehafteten
-Übertragers](../images/lec/lec8s12.pdf){#fig-lec8s12 width=400}
+Übertragers](../images/lec/lec8s12){#fig-lec8s12 width=400}
 
 
 ### Übertragungsfaktor
 
 ![Parallelersatzschaltung eines verlustbehafteten Übertragers mit beschaltetem
-Ausgang](../images/lec/lec8s13.pdf){#fig-lec8s13 width=400}
+Ausgang](../images/lec/lec8s13){#fig-lec8s13 width=400}
 
 Übertrager sollen eine formtreue Signalübertragung aufweisen, was erhöhte Anforderungen an die Linearität bedingt
 und eine hohe Bandbreite voraussetzt. Für eine Untersuchung des Frequenzgangs von Übertragern wird die in
@@ -519,7 +519,7 @@ $$
 beschaltet, die eingangseitig wie eine Impedanz $k^2 ü^2 \underline{Z}_x$ wirkt. Zur Berechnung der Amplitude von 
 $\underline{v}'_1$ kann demnach die in Abb. @fig-lec8s14 dargestellte Ersatzschaltung herangezogen werden.
 
-![Zusammenfassung und Transformation der Sekundärseite](../images/lec/lec8s14.pdf){#fig-lec8s14 width=400}
+![Zusammenfassung und Transformation der Sekundärseite](../images/lec/lec8s14){#fig-lec8s14 width=400}
 
 Nach der Spannungsteilerregel folgt sofort
 
