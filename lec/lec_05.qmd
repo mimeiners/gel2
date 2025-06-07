@@ -202,7 +202,7 @@ ohmsche Widerstand ist von der Frequenz unabhängig ist, verläuft sie parallel 
 2 k$\Omega$. Auf die reelle (Re) Achse bezogen ist der Phasenwinkel der Impedanz negativ. Das Diagramm ist mit den
 angegebenen gerundeten Rechenwerten des Blindwiderstands, der Impedanz und des Phasenwinkels erstellt.
 
-![RC-Schaltung für eine Ortskurve](../images/lec/lec5s2){#fig-lec5s2 width=300}
+![RC-Schaltung für eine Ortskurve](../images/lec/lec5s2){#fig-lec5s2}
 
 $$
 \underline{Z} = R_1 + \frac{1}{j \omega C_1} 
@@ -664,7 +664,7 @@ Auswertung der LTspice Analyse mit Python:
 
 ### RC-Bandpaß
 
-![Bode-Diagramm eines Bandpasses](../images/lec/lec5bp){#fig-lec5bp width=600}
+![Bode-Diagramm eines Bandpasses](../images/lec/lec5bp){#fig-lec5bp}
 
 "Besitzt ein Netzwerk sowohl bei hohen als auch bei tiefen Frequenzen einen Sperrbereich und bei mittleren Frequenzen
 einen Durchlaßbereich, so liegt ein Bandpaß vor. Der prinzipielle Verlauf der Spannungsverstärkung $a_v$ ist im
@@ -730,10 +730,29 @@ X_1 R_4 + R_1 X_4 &= X_2 R_3 + R_2 X_3
 
 * zwei Bedingungen $\Rightarrow$ zwei abgleichbare Elemente
 
-### Kapazitätsmessbrücke nach Wien -- Wien-Brücke
-
-
 ### Wien-Robinson-Brücke -- einfaches Frequenzmessgerät
+
+![Wien-Robinson-Brücke](../images/lec/lec5wine-robinson){#fig-wien-robinson}
+
+"Brücken mit frequenzabhängigem Abgleich, wie die Wien-Robinson-Brücke in @fig-wien-robinson, können als einfache
+Frequenzmessgeräte genutzt werden. Die Abgleichbedingungen der Wien-Robinson-Brücke lauten
+
+$$
+\frac{C_4}{C_3} = \frac{R_1}{R_2} - \frac{R_3}{R_4}
+$$
+
+$$
+\frac{C_3}{C_4} = \frac{1}{\omega^2 R_3 R_4}.
+$$
+
+Häufig wählt man $R_2=R_3=R_4=R$, $R_1=2R$ und $C_3=C_4=C$. Damit ist Gl. (9.58) automatisch erfüllt, während Gl.
+(9.59) eine neue Abgleichbedingung ergibt, aus der die Frequenz $\omega$ der Brückeneingangsspannung ermittelt werden
+kann
+
+$$
+\omega = \frac{1}{RC}.
+$$
+
 [@lerch2016]
 [@muehl2020]
 [@wikipedia2019a]
