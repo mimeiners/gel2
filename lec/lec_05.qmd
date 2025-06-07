@@ -732,7 +732,7 @@ X_1 R_4 + R_1 X_4 &= X_2 R_3 + R_2 X_3
 
 ### Wien-Robinson-Brücke -- einfaches Frequenzmessgerät
 
-![Wien-Robinson-Brücke](../images/lec/lec5wine-robinson){#fig-wien-robinson}
+![Wien-Robinson-Brücke](../images/lec/lec5wien-robinson){#fig-wien-robinson}
 
 "Brücken mit frequenzabhängigem Abgleich, wie die Wien-Robinson-Brücke in @fig-wien-robinson, können als einfache
 Frequenzmessgeräte genutzt werden. Die Abgleichbedingungen der Wien-Robinson-Brücke lauten
