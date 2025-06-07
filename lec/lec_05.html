@@ -435,8 +435,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#wheatstone-messbrücke-gleichstrommessbrücke" id="toc-wheatstone-messbrücke-gleichstrommessbrücke" class="nav-link" data-scroll-target="#wheatstone-messbrücke-gleichstrommessbrücke"><span class="header-section-number">5.7.1</span> Wheatstone-Messbrücke – Gleichstrommessbrücke</a></li>
   <li><a href="#wechselstrommessbrücke" id="toc-wechselstrommessbrücke" class="nav-link" data-scroll-target="#wechselstrommessbrücke"><span class="header-section-number">5.7.2</span> Wechselstrommessbrücke</a></li>
-  <li><a href="#kapazitätsmessbrücke-nach-wien-wien-brücke" id="toc-kapazitätsmessbrücke-nach-wien-wien-brücke" class="nav-link" data-scroll-target="#kapazitätsmessbrücke-nach-wien-wien-brücke"><span class="header-section-number">5.7.3</span> Kapazitätsmessbrücke nach Wien – Wien-Brücke</a></li>
-  <li><a href="#wien-robinson-brücke-einfaches-frequenzmessgerät" id="toc-wien-robinson-brücke-einfaches-frequenzmessgerät" class="nav-link" data-scroll-target="#wien-robinson-brücke-einfaches-frequenzmessgerät"><span class="header-section-number">5.7.4</span> Wien-Robinson-Brücke – einfaches Frequenzmessgerät</a></li>
+  <li><a href="#wien-robinson-brücke-einfaches-frequenzmessgerät" id="toc-wien-robinson-brücke-einfaches-frequenzmessgerät" class="nav-link" data-scroll-target="#wien-robinson-brücke-einfaches-frequenzmessgerät"><span class="header-section-number">5.7.3</span> Wien-Robinson-Brücke – einfaches Frequenzmessgerät</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/lec/lec_05.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
@@ -603,7 +602,7 @@ Vergleich zum Zeigerdiagramm
 <div id="fig-lec5s2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lec5s2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/lec/lec5s2.png" class="img-fluid figure-img" width="300">
+<img src="../images/lec/lec5s2.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5s2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.2: RC-Schaltung für eine Ortskurve
@@ -767,7 +766,7 @@ Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
 </div>
 </div>
 <p>Um in LTspice das Bode-Diagramm des RC-Tiefpasses zu erhalten, muss eine <a href="https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/lec5rctp.asc">.ac Analyse</a> durchgeführt werden. Diese kann mit Python wie folgt ausgewertet werden:</p>
-<div id="c814a821" class="cell" data-execution_count="3">
+<div id="bf927760" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der AC SPICE Analyse der RC-Schaltung</span></span>
@@ -888,7 +887,7 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 \]</span></p>
 <p>so stellt sich am Ausgang für <span class="math inline">\(t \gg \tau = 15\,\mu s\)</span> ein periodischer Spannungsverlauf mit dem Gleichanteil 2.5 V und dem Wechselanteil <span class="math inline">\(\Delta v_2(t)\)</span> ein.</p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="1cb3b78c" class="cell" data-execution_count="4">
+<div id="d2d9fbac" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der TRAN SPICE Analyse der RC-Schaltung</span></span>
@@ -1065,7 +1064,7 @@ v_2 \approx \tau \frac{dv_1}{dt} =
 \end{cases}
 \]</span></p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="82b14f7a" class="cell" data-execution_count="6">
+<div id="88983778" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der TRAN SPICE Analyse des RC-Hochpasses</span></span>
@@ -1108,7 +1107,7 @@ v_2 \approx \tau \frac{dv_1}{dt} =
 <div id="fig-lec5bp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lec5bp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/lec/lec5bp.png" class="img-fluid figure-img" width="600">
+<img src="../images/lec/lec5bp.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec5bp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.12: Bode-Diagramm eines Bandpasses
@@ -1162,11 +1161,29 @@ X_1 R_4 + R_1 X_4 &amp;= X_2 R_3 + R_2 X_3
 <li>zwei Bedingungen <span class="math inline">\(\Rightarrow\)</span> zwei abgleichbare Elemente</li>
 </ul>
 </section>
-<section id="kapazitätsmessbrücke-nach-wien-wien-brücke" class="level3" data-number="5.7.3">
-<h3 data-number="5.7.3" class="anchored" data-anchor-id="kapazitätsmessbrücke-nach-wien-wien-brücke"><span class="header-section-number">5.7.3</span> Kapazitätsmessbrücke nach Wien – Wien-Brücke</h3>
-</section>
-<section id="wien-robinson-brücke-einfaches-frequenzmessgerät" class="level3" data-number="5.7.4">
-<h3 data-number="5.7.4" class="anchored" data-anchor-id="wien-robinson-brücke-einfaches-frequenzmessgerät"><span class="header-section-number">5.7.4</span> Wien-Robinson-Brücke – einfaches Frequenzmessgerät</h3>
+<section id="wien-robinson-brücke-einfaches-frequenzmessgerät" class="level3" data-number="5.7.3">
+<h3 data-number="5.7.3" class="anchored" data-anchor-id="wien-robinson-brücke-einfaches-frequenzmessgerät"><span class="header-section-number">5.7.3</span> Wien-Robinson-Brücke – einfaches Frequenzmessgerät</h3>
+<div id="fig-wien-robinson" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-wien-robinson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/lec/lec5wien-robinson.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wien-robinson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5.13: Wien-Robinson-Brücke
+</figcaption>
+</figure>
+</div>
+<p>“Brücken mit frequenzabhängigem Abgleich, wie die Wien-Robinson-Brücke in <a href="#fig-wien-robinson" class="quarto-xref">Abbildung&nbsp;<span>5.13</span></a>, können als einfache Frequenzmessgeräte genutzt werden. Die Abgleichbedingungen der Wien-Robinson-Brücke lauten</p>
+<p><span class="math display">\[
+\frac{C_4}{C_3} = \frac{R_1}{R_2} - \frac{R_3}{R_4}
+\]</span></p>
+<p><span class="math display">\[
+\frac{C_3}{C_4} = \frac{1}{\omega^2 R_3 R_4}.
+\]</span></p>
+<p>Häufig wählt man <span class="math inline">\(R_2=R_3=R_4=R\)</span>, <span class="math inline">\(R_1=2R\)</span> und <span class="math inline">\(C_3=C_4=C\)</span>. Damit ist Gl. (9.58) automatisch erfüllt, während Gl. (9.59) eine neue Abgleichbedingung ergibt, aus der die Frequenz <span class="math inline">\(\omega\)</span> der Brückeneingangsspannung ermittelt werden kann</p>
+<p><span class="math display">\[
+\omega = \frac{1}{RC}.
+\]</span></p>
 <p><span class="citation" data-cites="lerch2016">(<a href="../references.html#ref-lerch2016" role="doc-biblioref">Lerch 2016</a>)</span> <span class="citation" data-cites="muehl2020">(<a href="../references.html#ref-muehl2020" role="doc-biblioref">Mühl 2020</a>)</span> <span class="citation" data-cites="wikipedia2019a">(<a href="../references.html#ref-wikipedia2019a" role="doc-biblioref">Wikipedia 2019</a>)</span> <span class="citation" data-cites="hewlett1942">(<a href="../references.html#ref-hewlett1942" role="doc-biblioref">Hewlett 1942</a>)</span></p>
 
 
