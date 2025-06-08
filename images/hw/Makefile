@@ -168,8 +168,9 @@ LTXFILE=printf "|documentclass[11pt]{article}\n\
 	make $*.pdf
 	dvisvgm --pdf $*.pdf $*.svg
 .pdf.png:
-	$(MAGICK) $*.pdf $(PNGOPTS) $*.png
-
+	# $(MAGICK) $*.pdf $(PNGOPTS) $*.png
+	$(MAGICK) -density 300 -quality 100 $*.pdf $*.png
+	# pdftocairo -png $*.pdf 
 
 clean:
 	@printf "\n clean:\n"

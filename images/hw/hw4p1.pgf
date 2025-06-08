@@ -1,5 +1,4 @@
 \begin{tikzpicture}
-
   \begin{axis}[%
     width=14cm,
     height=4cm,

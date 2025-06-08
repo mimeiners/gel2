@@ -48,7 +48,6 @@ IMv7 = /opt/local/lib/ImageMagick7/bin
 MAGICK = $(IMv7)/magick
 EPSOPTS =
 PNGOPTS = -quiet -density 400 -scale 75% -alpha Remove
-PDF2PNG = -density 300 -quality 100 
 # PNGOPTS by sspors for SS2 notebooks
 # PNGOPTS = -units PixelsPerInch -density 144 -resize 400
 
@@ -164,13 +163,14 @@ LTXFILE=printf "|documentclass[11pt]{article}\n\
 	rm -f F_*
 .pgf.png:
 	make $*.pdf
-	$(MAGICK) $(PNGOPTS) $*.pdf $*.png
+	$(MAGICK) $*.pdf $(PNGOPTS) $*.png
 .png.svg:
 	make $*.pdf
 	dvisvgm --pdf $*.pdf $*.svg
 .pdf.png:
-	$(MAGICK) $(PDF2PNG) $*.pdf $*.png
-
+	# $(MAGICK) $*.pdf $(PNGOPTS) $*.png
+	$(MAGICK) -density 300 -quality 100 $*.pdf $*.png
+	# pdftocairo -png $*.pdf 
 
 clean:
 	@printf "\n clean:\n"

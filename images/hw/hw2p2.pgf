@@ -1,4 +1,3 @@
-\begin{document}
 \begin{tikzpicture}
   \begin{axis}[%
     width=12cm,

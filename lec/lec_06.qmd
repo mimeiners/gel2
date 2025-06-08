@@ -35,8 +35,6 @@ Entn. [@natt2020]
 :::
 
 
-
-
 ::: {.callout-note} 
 
 ## Schwingkreise (elek.)
@@ -72,25 +70,30 @@ Entn. [@harriehausen2020]
   und Masse, Induktivität und Kapazität 
   
 * maßgebende Zustandsgröße $x(t)$, z.B. Auslenkung, Spannung oder Ladung, folgen einer gewöhnlichen
-  Differenzialgleichung (DGL) $\ddot{x} + \omega_0 x = 0$
+  Differenzialgleichung (DGL) 
+  
+\begin{align}
+\ddot{x} + \omega_0^2 x &= 0 \\
+\frac{d^2 x(t)}{dt^2} + \omega_0^2 x(t) &= 0
+\end{align}
 
 * harmonische Schwingung, $x(t+T_0) = x(t)$, wobei $T_0$ Periode, $\omega_0=2 \pi f_0 = 2\pi \frac{1}{T_0}$
   Eigenfrequenz und $f_0$ Resonanzfrequenz 
   
-* DGL gehorcht dem Energieerhaltungssatz
-
-\begin{align}
-W_{ges}(x) &= W_{pot}(x) + W_{kin}(x) = const. \\
-\frac{d W_{ges}}{dt} &= \frac{dW_{pot}}{dx} \frac{dx}{dt} + \frac{d W_{kin}}{dx} \frac{d x}{dt} = 0 \\
-x(t) &= x_{max} \cos(\omega_0 t + \varphi_0)
-\end{align}
-
 * Zusammenschaltung von Induktivität $L$ und Kapazität $C$ heißt (idealer) Schwing- oder Resonanzkreis
 
 \begin{align}
-W_{pot} &:= \mbox{Kondensator} \\
-W_{kin} &:= \mbox{Induktivität}
+W_C(t) = W_{pot}(t) &= \frac{1}{2} C v_C^2(t) = \frac{1}{2} C v_C(0) \cos^2(\omega_0 t) \\
+W_L(t) = W_{kin}(t) &= \frac{1}{2} L i_L^2(t) = \frac{1}{2} L\omega^2_0 C^2 v^2_C(0) \sin^2(\omega_0 t) 
+= \frac{1}{2} C v^2_C(0) \sin^2(\omega_0 t)
 \end{align}
+
+* *Energieerhaltungssatz* Erhalt der gespeicherten Gesamtenergie
+
+$$
+W_{C}(t) + W_{L}(t)\lvert_{\omega_0} = \frac{1}{2} C v^2_C(0) \left(\cos^2(\omega_0 t) + \sin^2(\omega_0 t) \right) =
+W_{ges} = const. 
+$$
 
 * freie und erzwungene Schwingung
 
@@ -99,7 +102,7 @@ W_{kin} &:= \mbox{Induktivität}
 
 ## RLC-Reihenschwingkreis (aktiver Zweipol)
 
-![RLC-Reihenschwingkreis](../images/lec/lec6rlc){#fig-lec6rlc width=400}
+![RLC-Reihenschwingkreis](../images/lec/lec6rlc){#fig-lec6rlc}
 
 
 ::: {.callout-note} 
@@ -107,7 +110,7 @@ W_{kin} &:= \mbox{Induktivität}
 ### Maschengleichung (Zeitbereich)
 
 \begin{align}
-u_1(0) &= L \frac{di}{dt} + i\, R + \frac{1}{C} \int i dt  \\
+v_1(0) &= L \frac{di}{dt} + i\, R + \frac{1}{C} \int i dt  \\
 0 &= \frac{di}{dt^2} + \frac{R}{L} \frac{di}{dt} + \frac{1}{LC} i
 \end{align}
 :::
@@ -130,24 +133,20 @@ $$
 Entn. [@reisch2007]
 
 \begin{align}
-\underline{H}_u(j \omega) = \frac{\underline{U}_2}{\underline{U}_1} &= \frac{1}{1 + j \omega R C + \omega^2 LC} \\
+\underline{H}_v(j \omega) = \frac{\underline{V}_2}{\underline{V}_1} &= \frac{1}{1 + j \omega R C + \omega^2 LC} \\
 &= \frac{1}{1 + j \frac{\omega}{\omega_0 Q} + \left(\frac{\omega}{\omega_0}\right)^2}
 \end{align}
 
-* Eigenfrequenz / Resonanzfrequenz $\omega$
-  - $\omega_0 = \frac{1}{\sqrt{L C}}$
+* Eigenfrequenz / Resonanzfrequenz $\omega_0 = \frac{1}{\sqrt{L C}}$
 
-* Abklingkonstante $\delta$
-  - $\delta = \frac{R}{\omega_0 L}$
+* Abklingkonstante $\delta = \frac{R}{\omega_0 L}$
 
-* Dämpfung / Verlustfaktor 
-  - $d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}$
+* Dämpfung / Verlustfaktor $d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}$
 
-* Güte(faktor) $Q$ [@wikipedia2025a]
-  - $Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}$
+* Güte(faktor) $Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}$
   - $\vert Q(\omega_0) \vert$ ist der Betrag der Blindleistung 
   - $P(\omega_0)$ ist die Wirkleistung 
-  
+  [@wikipedia2025a]
 :::
 
 
@@ -214,9 +213,9 @@ plt.show()
 \begin{align}
 \underline{Z} &= R_r + j\left(\omega L_r - \frac{1}{\omega C_r}\right) \\
 &= R_r + j X(\omega) \\
-\lvert\underline{Z}\lvert &= \sqrt{R_r^2 + X^2(\omega)} \\
-\arg{\underline{Z}} &= \arctan \frac{X(\omega)}{R_r}
-Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}
+\lvert\underline{Z}\lvert &= \sqrt{R_r^2 + X^2(\omega)} \quad \mbox{Betrag}\\
+\arg{\underline{Z}} &= \arctan \frac{X(\omega)}{R_r} \quad \mbox{Phase} \\
+Q &= \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}} \quad \mbox{Güte}
 \end{align}
 :::
 
@@ -228,9 +227,9 @@ Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}
 \begin{align}
 \underline{Y} &= G_p + j\left(\omega C_p- \frac{1}{\omega L_p}\right) \\
 &= G_r + j B(\omega) \\
-\lvert\underline{Y}\lvert &= \sqrt{G_p^2 + B^2(\omega)} \\
-\arg{\underline{Y}} &= \arctan \frac{B(\omega)}{G_p}
-Q &= \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}
+\lvert\underline{Y}\lvert &= \sqrt{G_p^2 + B^2(\omega)} \quad \mbox{Betrag}\\
+\arg{\underline{Y}} &= \arctan \frac{B(\omega)}{G_p} \quad \mbox{Phase} \\
+Q &= \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}} \quad \mbox{Güte}
 \end{align}
 :::
 
@@ -306,6 +305,6 @@ BW &= \omega_{45} - \omega_{-45} = \frac{\omega_0}{Q} \\
 
 ## Gegenüberstellung der Eigenschaften der elementaren Schwingkreise
 
-![Eingenschaften von Schwingkreisen](../images/lec/lec6elemSchwing){#fig-lec6elemSchwing}
+![Eigenschaften von Schwingkreisen](../images/lec/lec6elemSchwing){#fig-lec6elemSchwing}
 
 Entn. aus [@harriehausen2020]
