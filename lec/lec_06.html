@@ -486,22 +486,28 @@ Schwingkreise (elek.)
 <ul>
 <li><p>periodische Zustandsänderung in einem physikalischen System</p></li>
 <li><p>periodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder und Masse, Induktivität und Kapazität</p></li>
-<li><p>maßgebende Zustandsgröße <span class="math inline">\(x(t)\)</span>, z.B. Auslenkung, Spannung oder Ladung, folgen einer gewöhnlichen Differenzialgleichung (DGL) <span class="math inline">\(\ddot{x} + \omega_0 x = 0\)</span></p></li>
-<li><p>harmonische Schwingung, <span class="math inline">\(x(t+T_0) = x(t)\)</span>, wobei <span class="math inline">\(T_0\)</span> Periode, <span class="math inline">\(\omega_0=2 \pi f_0 = 2\pi \frac{1}{T_0}\)</span> Eigenfrequenz und <span class="math inline">\(f_0\)</span> Resonanzfrequenz</p></li>
-<li><p>DGL gehorcht dem Energieerhaltungssatz</p></li>
+<li><p>maßgebende Zustandsgröße <span class="math inline">\(x(t)\)</span>, z.B. Auslenkung, Spannung oder Ladung, folgen einer gewöhnlichen Differenzialgleichung (DGL)</p></li>
 </ul>
 <p><span class="math display">\[\begin{align}
-W_{ges}(x) &amp;= W_{pot}(x) + W_{kin}(x) = const. \\
-\frac{d W_{ges}}{dt} &amp;= \frac{dW_{pot}}{dx} \frac{dx}{dt} + \frac{d W_{kin}}{dx} \frac{d x}{dt} = 0 \\
-x(t) &amp;= x_{max} \cos(\omega_0 t + \varphi_0)
+\ddot{x} + \omega_0^2 x &amp;= 0 \\
+\frac{d^2 x(t)}{dt^2} + \omega_0^2 x(t) &amp;= 0
 \end{align}\]</span></p>
 <ul>
-<li>Zusammenschaltung von Induktivität <span class="math inline">\(L\)</span> und Kapazität <span class="math inline">\(C\)</span> heißt (idealer) Schwing- oder Resonanzkreis</li>
+<li><p>harmonische Schwingung, <span class="math inline">\(x(t+T_0) = x(t)\)</span>, wobei <span class="math inline">\(T_0\)</span> Periode, <span class="math inline">\(\omega_0=2 \pi f_0 = 2\pi \frac{1}{T_0}\)</span> Eigenfrequenz und <span class="math inline">\(f_0\)</span> Resonanzfrequenz</p></li>
+<li><p>Zusammenschaltung von Induktivität <span class="math inline">\(L\)</span> und Kapazität <span class="math inline">\(C\)</span> heißt (idealer) Schwing- oder Resonanzkreis</p></li>
 </ul>
 <p><span class="math display">\[\begin{align}
-W_{pot} &amp;:= \mbox{Kondensator} \\
-W_{kin} &amp;:= \mbox{Induktivität}
+W_C(t) = W_{pot}(t) &amp;= \frac{1}{2} C v_C^2(t) = \frac{1}{2} C v_C(0) \cos^2(\omega_0 t) \\
+W_L(t) = W_{kin}(t) &amp;= \frac{1}{2} L i_L^2(t) = \frac{1}{2} L\omega^2_0 C^2 v^2_C(0) \sin^2(\omega_0 t)
+= \frac{1}{2} C v^2_C(0) \sin^2(\omega_0 t)
 \end{align}\]</span></p>
+<ul>
+<li><em>Energieerhaltungssatz</em> Erhalt der gespeicherten Gesamtenergie</li>
+</ul>
+<p><span class="math display">\[
+W_{C}(t) + W_{L}(t)\lvert_{\omega_0} = \frac{1}{2} C v^2_C(0) \left(\cos^2(\omega_0 t) + \sin^2(\omega_0 t) \right) =
+W_{ges} = const.
+\]</span></p>
 <ul>
 <li><p>freie und erzwungene Schwingung</p></li>
 <li><p>ungedämpfte und gedämpfte Schwingung</p></li>
@@ -512,7 +518,7 @@ W_{kin} &amp;:= \mbox{Induktivität}
 <div id="fig-lec6rlc" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lec6rlc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/lec/lec6rlc.png" class="img-fluid figure-img" width="400">
+<img src="../images/lec/lec6rlc.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec6rlc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;6.1: RLC-Reihenschwingkreis
@@ -530,7 +536,7 @@ Maschengleichung (Zeitbereich)
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align}
-u_1(0) &amp;= L \frac{di}{dt} + i\, R + \frac{1}{C} \int i dt  \\
+v_1(0) &amp;= L \frac{di}{dt} + i\, R + \frac{1}{C} \int i dt  \\
 0 &amp;= \frac{di}{dt^2} + \frac{R}{L} \frac{di}{dt} + \frac{1}{LC} i
 \end{align}\]</span></p>
 </div>
@@ -562,32 +568,22 @@ Spannungsübertragungsfaktor
 <div class="callout-body-container callout-body">
 <p>Entn. <span class="citation" data-cites="reisch2007">(<a href="../references.html#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span></p>
 <p><span class="math display">\[\begin{align}
-\underline{H}_u(j \omega) = \frac{\underline{U}_2}{\underline{U}_1} &amp;= \frac{1}{1 + j \omega R C + \omega^2 LC} \\
+\underline{H}_v(j \omega) = \frac{\underline{V}_2}{\underline{V}_1} &amp;= \frac{1}{1 + j \omega R C + \omega^2 LC} \\
 &amp;= \frac{1}{1 + j \frac{\omega}{\omega_0 Q} + \left(\frac{\omega}{\omega_0}\right)^2}
 \end{align}\]</span></p>
 <ul>
-<li>Eigenfrequenz / Resonanzfrequenz <span class="math inline">\(\omega\)</span>
+<li><p>Eigenfrequenz / Resonanzfrequenz <span class="math inline">\(\omega_0 = \frac{1}{\sqrt{L C}}\)</span></p></li>
+<li><p>Abklingkonstante <span class="math inline">\(\delta = \frac{R}{\omega_0 L}\)</span></p></li>
+<li><p>Dämpfung / Verlustfaktor <span class="math inline">\(d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}\)</span></p></li>
+<li><p>Güte(faktor) <span class="math inline">\(Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}\)</span></p>
 <ul>
-<li><span class="math inline">\(\omega_0 = \frac{1}{\sqrt{L C}}\)</span></li>
-</ul></li>
-<li>Abklingkonstante <span class="math inline">\(\delta\)</span>
-<ul>
-<li><span class="math inline">\(\delta = \frac{R}{\omega_0 L}\)</span></li>
-</ul></li>
-<li>Dämpfung / Verlustfaktor
-<ul>
-<li><span class="math inline">\(d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}\)</span></li>
-</ul></li>
-<li>Güte(faktor) <span class="math inline">\(Q\)</span> <span class="citation" data-cites="wikipedia2025a">(<a href="../references.html#ref-wikipedia2025a" role="doc-biblioref">Wikipedia 2025</a>)</span>
-<ul>
-<li><span class="math inline">\(Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}\)</span></li>
 <li><span class="math inline">\(\vert Q(\omega_0) \vert\)</span> ist der Betrag der Blindleistung</li>
-<li><span class="math inline">\(P(\omega_0)\)</span> ist die Wirkleistung</li>
+<li><span class="math inline">\(P(\omega_0)\)</span> ist die Wirkleistung <span class="citation" data-cites="wikipedia2025a">(<a href="../references.html#ref-wikipedia2025a" role="doc-biblioref">Wikipedia 2025</a>)</span></li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div id="2391707f" class="cell" data-execution_count="1">
+<div id="f5243f85" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ltspice</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -683,9 +679,9 @@ Reihenkreis (Impedanz)
 <p><span class="math display">\[\begin{align}
 \underline{Z} &amp;= R_r + j\left(\omega L_r - \frac{1}{\omega C_r}\right) \\
 &amp;= R_r + j X(\omega) \\
-\lvert\underline{Z}\lvert &amp;= \sqrt{R_r^2 + X^2(\omega)} \\
-\arg{\underline{Z}} &amp;= \arctan \frac{X(\omega)}{R_r}
-Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}
+\lvert\underline{Z}\lvert &amp;= \sqrt{R_r^2 + X^2(\omega)} \quad \mbox{Betrag}\\
+\arg{\underline{Z}} &amp;= \arctan \frac{X(\omega)}{R_r} \quad \mbox{Phase} \\
+Q &amp;= \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}} \quad \mbox{Güte}
 \end{align}\]</span></p>
 </div>
 </div>
@@ -702,9 +698,9 @@ Parallelkreis (Admittanz)
 <p><span class="math display">\[\begin{align}
 \underline{Y} &amp;= G_p + j\left(\omega C_p- \frac{1}{\omega L_p}\right) \\
 &amp;= G_r + j B(\omega) \\
-\lvert\underline{Y}\lvert &amp;= \sqrt{G_p^2 + B^2(\omega)} \\
-\arg{\underline{Y}} &amp;= \arctan \frac{B(\omega)}{G_p}
-Q &amp;= \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}
+\lvert\underline{Y}\lvert &amp;= \sqrt{G_p^2 + B^2(\omega)} \quad \mbox{Betrag}\\
+\arg{\underline{Y}} &amp;= \arctan \frac{B(\omega)}{G_p} \quad \mbox{Phase} \\
+Q &amp;= \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}} \quad \mbox{Güte}
 \end{align}\]</span></p>
 </div>
 </div>
@@ -808,7 +804,7 @@ BW &amp;= \omega_{45} - \omega_{-45} = \frac{\omega_0}{Q} \\
 <img src="../images/lec/lec6elemSchwing.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec6elemSchwing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6.2: Eingenschaften von Schwingkreisen
+Abbildung&nbsp;6.2: Eigenschaften von Schwingkreisen
 </figcaption>
 </figure>
 </div>
