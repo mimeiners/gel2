@@ -8,7 +8,7 @@ des wissenschaflichten Rechnens, z.B. Matlab oder Gnu Octave) dar.
 Die Komponenten Werte sind: $\omega$ = $2 \pi$ 1 kHz, $\hat{U}_0$ = 10 V, $R$ = 30 $\Omega$, $L$ = 3 mH,
 $\hat{I}_0$ = 0.282 A, $\varphi_I$ = -32.1 Grad.
 
-![Wechselstromschaltung](../images/hw/hw1p1){#fig-hw1p1 width=200}
+![Wechselstromschaltung](../images/hw/hw1p1){#fig-hw1p1}
 
 ::: {.callout-caution collapse="true"}
 ### Lösung
@@ -193,7 +193,7 @@ $$
 
 ## Schaltungsberechnung in reeller Schreibweise
 
-![Netzwerk zur Schaltungsanalyse](../images/hw/hw1p3){#fig-hw1p3 width=300}
+![Netzwerk zur Schaltungsanalyse](../images/hw/hw1p3){#fig-hw1p3}
 
 Gegeben sei die in @fig-hw1p3 skizzierte Schaltung mit einer Wechselstromquelle $i_0(t)=\hat{I}_0 \sin(\omega t)$. 
 

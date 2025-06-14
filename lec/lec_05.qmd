@@ -739,15 +739,15 @@ Frequenzmessgeräte genutzt werden. Die Abgleichbedingungen der Wien-Robinson-Br
 
 $$
 \frac{C_4}{C_3} = \frac{R_1}{R_2} - \frac{R_3}{R_4}
-$$
+$$ {#eq-wien-robinson1}
 
 $$
 \frac{C_3}{C_4} = \frac{1}{\omega^2 R_3 R_4}.
-$$
+$$ {#eq-wien-robinson2}
 
-Häufig wählt man $R_2=R_3=R_4=R$, $R_1=2R$ und $C_3=C_4=C$. Damit ist Gl. (9.58) automatisch erfüllt, während Gl.
-(9.59) eine neue Abgleichbedingung ergibt, aus der die Frequenz $\omega$ der Brückeneingangsspannung ermittelt werden
-kann
+Häufig wählt man $R_2=R_3=R_4=R$, $R_1=2R$ und $C_3=C_4=C$. Damit ist @eq-wien-robinson1 automatisch erfüllt, während
+@eq-wien-robinson2 eine neue Abgleichbedingung ergibt, aus der die Frequenz $\omega$ der Brückeneingangsspannung
+ermittelt werden kann
 
 $$
 \omega = \frac{1}{RC}.

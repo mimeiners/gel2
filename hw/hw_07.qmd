@@ -145,7 +145,7 @@ plt.show()
 
 ## Ersatzschaltbild eines Lautsprechers
 
-Die dargestellte Schaltung in {numref}`fig:hw7p2` ist ein vereinfachtes Ersatzschaltbild eines elektrodynamischen
+Die dargestellte Schaltung in @fig-hw7p2 ist ein vereinfachtes Ersatzschaltbild eines elektrodynamischen
 Lautsprechers. Dabei repräsentiert $\underline{Z}_1 = R_1 + j \omega L_1$ die Impedanz der ruhenden Schwingspule und
 $\underline{Z}_M$, die Parallelschaltung aus $R_2$, $L_2$ und $C_2$, repräsentiert die dynamisch-mechanischen
 Eigenschaften des Systems.

@@ -80,6 +80,7 @@ bibliography: _bibliography/references.bib
 format:
   html:
     theme: flatly
+    default-image-extension: svg
   pdf:
     documentclass: scrbook 
     # lof: true
@@ -97,9 +98,11 @@ format:
     highlight-style: github
     mainfont: "Calibri"
     # keep-tex: true
+    # default-image-extension: tex
     output-file: gel2
   epub:
     theme: flatly
+    default-image-extension: svg
     output-file: gel2
   
 execute:

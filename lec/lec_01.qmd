@@ -108,21 +108,21 @@
 
 ## Es war einmal ...
 
-![1906 die Elektronenröhre](../images/lec/lec-01-vacuum_tube)
+![1906 die Elektronenröhre](../images/lec/lec-01-vacuum_tube.png)
 
-![1947 der erste Transistor, Bell Labs Foto](../images/lec/lec-01-1st_transistor)
+![1947 der erste Transistor, Bell Labs Foto](../images/lec/lec-01-1st_transistor.png)
 
 
 ## Damals und heute
 
-![1958 Jack Kilby's erster IC](../images/lec/lec-01-1st_ic_kilby)
+![1958 Jack Kilby's erster IC](../images/lec/lec-01-1st_ic_kilby.png)
 
-![Moderner IC](../images/lec/lec-01-modern_ic)
+![Moderner IC](../images/lec/lec-01-modern_ic.png)
 
 
 ## Systemhierarchie
 
-![Funktionsblöcke eines elektronischen Systems](../images/lec/lec-01-system_hierarchy)
+![Funktionsblöcke eines elektronischen Systems](../images/lec/lec-01-system_hierarchy.png)
 
 * Nutzen Sie Hierarchien zur Beschreibung komplexer Systeme
 
@@ -131,17 +131,17 @@
 
 ## Schnittstellen zur Aussenwelt
 
-![Interfacing](../images/lec/lec-01-real_world_interface)
+![Interfacing](../images/lec/lec-01-real_world_interface.png)
 
 
 ## Meeting mit einem System
 
-![Drahtloses Kommunikationssystem](../images/lec/lec-01-smartphone)
+![Drahtloses Kommunikationssystem](../images/lec/lec-01-smartphone.png)
 
 
 ## System in a Package (SiP)
 
-![Beschleunigungssensor](../images/lec/lec-01-system_in_package)
+![Beschleunigungssensor](../images/lec/lec-01-system_in_package.png)
 
 
 ## Sie werden unsere Experten

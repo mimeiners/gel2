@@ -91,7 +91,7 @@ $$
 
 ## Anpassung einer Heizeinrichtung
 Zur Erwärmung von Werkstücken in einer Härteanlage wird ein Mittelfrequenzgenerator ($f$ = 20 kHz bis 200 kHz)
-mit folgendem Ersatzschaltbild {numref}`@fig-hw5p2` eingesetzt.
+mit folgendem Ersatzschaltbild @fig-hw5p2 eingesetzt.
 
 
 ![Ersatzschaltbild des Mittelfrequenzgenerators.](../images/hw/hw5p2){#fig-hw5p2 width=400}
