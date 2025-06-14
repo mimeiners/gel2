@@ -130,8 +130,6 @@ $$
 
 ### Spannungsübertragungsfaktor
 
-Entn. [@reisch2007]
-
 \begin{align}
 \underline{H}_v(j \omega) = \frac{\underline{V}_2}{\underline{V}_1} &= \frac{1}{1 + j \omega R C + \omega^2 LC} \\
 &= \frac{1}{1 + j \frac{\omega}{\omega_0 Q} + \left(\frac{\omega}{\omega_0}\right)^2}
@@ -141,12 +139,19 @@ Entn. [@reisch2007]
 
 * Abklingkonstante $\delta = \frac{R}{\omega_0 L}$
 
-* Dämpfung / Verlustfaktor $d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}$
-
 * Güte(faktor) $Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}$
-  - $\vert Q(\omega_0) \vert$ ist der Betrag der Blindleistung 
-  - $P(\omega_0)$ ist die Wirkleistung 
-  [@wikipedia2025a]
+  "Für Schwingkreise mit einem Freiheitsgrad ist die *Güte* $Q$ definiert als das Verhältnis des Betrages der bei
+  Resonanz in einem der beiden Blindelemente umgesetzten, also innerhalb des Schwingkreises pendelnden Blindleistung $Q$
+  zur aufgenommenen Wirkleistung $P$.
+  
+  Die Bildung des Betrages der Blindleistung ist erforderlich, damit sowohl die in der Induktivi- tät als auch die in
+  der Kapazität umgesetzte Blindleistung eingesetzt werden können und das Ergebnis unabhängig vom bei der
+  Leistungsberechnung verwendeten Zählpfeilsystem ist." 
+
+* Dämpfung / Verlustfaktor $d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}$
+  "Der Kehrwert der Güte ist der *Verlustfaktor*, der bei Schwingkreisen auch als die *Dämpfung* bezeichnet wird.
+
+[@reisch2007][@wikipedia2025a] [@harriehausen2020]
 :::
 
 
