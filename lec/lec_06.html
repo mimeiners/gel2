@@ -417,10 +417,11 @@ window.Quarto = {
    
   <ul>
   <li><a href="#zusammenfassung-der-physikalische-grundlagen" id="toc-zusammenfassung-der-physikalische-grundlagen" class="nav-link active" data-scroll-target="#zusammenfassung-der-physikalische-grundlagen"><span class="header-section-number">6.1</span> Zusammenfassung der physikalische Grundlagen</a></li>
-  <li><a href="#rlc-reihenschwingkreis-aktiver-zweipol" id="toc-rlc-reihenschwingkreis-aktiver-zweipol" class="nav-link" data-scroll-target="#rlc-reihenschwingkreis-aktiver-zweipol"><span class="header-section-number">6.2</span> RLC-Reihenschwingkreis (aktiver Zweipol)</a></li>
-  <li><a href="#grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol" id="toc-grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol" class="nav-link" data-scroll-target="#grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol"><span class="header-section-number">6.3</span> Grundeigenschaften von Reihen- und Parallelschwingkreis (passiver Zweipol)</a></li>
-  <li><a href="#vereinheitlichte-kennzeichnung" id="toc-vereinheitlichte-kennzeichnung" class="nav-link" data-scroll-target="#vereinheitlichte-kennzeichnung"><span class="header-section-number">6.4</span> Vereinheitlichte Kennzeichnung</a></li>
-  <li><a href="#gegenüberstellung-der-eigenschaften-der-elementaren-schwingkreise" id="toc-gegenüberstellung-der-eigenschaften-der-elementaren-schwingkreise" class="nav-link" data-scroll-target="#gegenüberstellung-der-eigenschaften-der-elementaren-schwingkreise"><span class="header-section-number">6.5</span> Gegenüberstellung der Eigenschaften der elementaren Schwingkreise</a></li>
+  <li><a href="#energiependel" id="toc-energiependel" class="nav-link" data-scroll-target="#energiependel"><span class="header-section-number">6.2</span> Energiependel</a></li>
+  <li><a href="#rlc-reihenschwingkreis-aktiver-zweipol" id="toc-rlc-reihenschwingkreis-aktiver-zweipol" class="nav-link" data-scroll-target="#rlc-reihenschwingkreis-aktiver-zweipol"><span class="header-section-number">6.3</span> RLC-Reihenschwingkreis (aktiver Zweipol)</a></li>
+  <li><a href="#grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol" id="toc-grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol" class="nav-link" data-scroll-target="#grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol"><span class="header-section-number">6.4</span> Grundeigenschaften von Reihen- und Parallelschwingkreis (passiver Zweipol)</a></li>
+  <li><a href="#vereinheitlichte-kennzeichnung" id="toc-vereinheitlichte-kennzeichnung" class="nav-link" data-scroll-target="#vereinheitlichte-kennzeichnung"><span class="header-section-number">6.5</span> Vereinheitlichte Kennzeichnung</a></li>
+  <li><a href="#gegenüberstellung-der-eigenschaften-der-elementaren-schwingkreise" id="toc-gegenüberstellung-der-eigenschaften-der-elementaren-schwingkreise" class="nav-link" data-scroll-target="#gegenüberstellung-der-eigenschaften-der-elementaren-schwingkreise"><span class="header-section-number">6.6</span> Gegenüberstellung der Eigenschaften der elementaren Schwingkreise</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/lec/lec_06.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
@@ -484,17 +485,18 @@ Schwingkreise (elek.)
 <section id="zusammenfassung-der-physikalische-grundlagen" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="zusammenfassung-der-physikalische-grundlagen"><span class="header-section-number">6.1</span> Zusammenfassung der physikalische Grundlagen</h2>
 <ul>
-<li><p>periodische Zustandsänderung in einem physikalischen System</p></li>
-<li><p>periodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder und Masse, Induktivität und Kapazität</p></li>
-<li><p>maßgebende Zustandsgröße <span class="math inline">\(x(t)\)</span>, z.B. Auslenkung, Spannung oder Ladung, folgen einer gewöhnlichen Differenzialgleichung (DGL)</p></li>
+<li><p>Periodische Zustandsänderung in einem physikalischen System</p></li>
+<li><p>Periodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder und Masse, Induktivität und Kapazität</p></li>
+<li><p>Maßgebende Zustandsgröße <span class="math inline">\(x(t)\)</span>, z.B. Auslenkung, Spannung oder Ladung, folgen einer gewöhnlichen Differenzialgleichung (DGL), engl. Ordenary Differential Equation (ODE).</p></li>
 </ul>
 <p><span class="math display">\[\begin{align}
 \ddot{x} + \omega_0^2 x &amp;= 0 \\
 \frac{d^2 x(t)}{dt^2} + \omega_0^2 x(t) &amp;= 0
 \end{align}\]</span></p>
 <ul>
-<li><p>harmonische Schwingung, <span class="math inline">\(x(t+T_0) = x(t)\)</span>, wobei <span class="math inline">\(T_0\)</span> Periode, <span class="math inline">\(\omega_0=2 \pi f_0 = 2\pi \frac{1}{T_0}\)</span> Eigenfrequenz und <span class="math inline">\(f_0\)</span> Resonanzfrequenz</p></li>
-<li><p>Zusammenschaltung von Induktivität <span class="math inline">\(L\)</span> und Kapazität <span class="math inline">\(C\)</span> heißt (idealer) Schwing- oder Resonanzkreis</p></li>
+<li><p>Harmonische Schwingung, <span class="math inline">\(x(t+T_0) = x(t)\)</span>, wobei <span class="math inline">\(T_0\)</span> Periode, <span class="math inline">\(\omega_0=2 \pi f_0 = 2\pi \frac{1}{T_0}\)</span> Eigenfrequenz und <span class="math inline">\(f_0\)</span> Resonanzfrequenz</p></li>
+<li><p>Zusammenschaltung von Induktivität <span class="math inline">\(L\)</span> und Kapazität <span class="math inline">\(C\)</span> heißt (idealer) Schwing- oder Resonanzkreis</p>
+<p>Beide bestimmen die <em>momentane Speicherenergie</em> in Kondensator und Spule:</p></li>
 </ul>
 <p><span class="math display">\[\begin{align}
 W_C(t) = W_{pot}(t) &amp;= \frac{1}{2} C v_C^2(t) = \frac{1}{2} C v_C(0) \cos^2(\omega_0 t) \\
@@ -502,26 +504,75 @@ W_L(t) = W_{kin}(t) &amp;= \frac{1}{2} L i_L^2(t) = \frac{1}{2} L\omega^2_0 C^2 
 = \frac{1}{2} C v^2_C(0) \sin^2(\omega_0 t)
 \end{align}\]</span></p>
 <ul>
-<li><em>Energieerhaltungssatz</em> Erhalt der gespeicherten Gesamtenergie</li>
+<li><em>Energiesatz: Erhalt der gespeicherten Gesamtenergie</em></li>
 </ul>
 <p><span class="math display">\[
 W_{C}(t) + W_{L}(t)\lvert_{\omega_0} = \frac{1}{2} C v^2_C(0) \left(\cos^2(\omega_0 t) + \sin^2(\omega_0 t) \right) =
 W_{ges} = const.
 \]</span></p>
 <ul>
-<li><p>freie und erzwungene Schwingung</p></li>
-<li><p>ungedämpfte und gedämpfte Schwingung</p></li>
+<li>Eigenfrequenz des idealen Schwingkreises, <em>Thomsonformel</em></li>
 </ul>
+<p><span class="math display">\[
+\omega_0 = \frac{1}{\sqrt{LC}}
+\]</span></p>
 </section>
-<section id="rlc-reihenschwingkreis-aktiver-zweipol" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="rlc-reihenschwingkreis-aktiver-zweipol"><span class="header-section-number">6.2</span> RLC-Reihenschwingkreis (aktiver Zweipol)</h2>
+<section id="energiependel" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="energiependel"><span class="header-section-number">6.2</span> Energiependel</h2>
+<p>aus <span class="citation" data-cites="paul2017">(<a href="../references.html#ref-paul2017" role="doc-biblioref">Paul und Paul 2017</a>)</span>, Kap. 3.2.3</p>
+<p>“Der ständige Energieaustausch zwischen Kondensator und Spule folgt aus den verkoppelten Strom-Spannungsbeziehungen: die Kondensatorspannung <span class="math inline">\(u_C\)</span> hat den Höchstwert bei Stromnulldurchgang und umgekehrt. Deshalb wechseln die Höchstwerte ständig nacheinander.</p>
+<div id="fig-lec6energiep" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lec6energiep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/lec/lec6energiependel.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec6energiep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6.1: Energiependel im Schwingkreis
+</figcaption>
+</figure>
+</div>
+<p>“Beide Energieformen pulsieren je mit doppelter Resonanzfrequenz <span class="math inline">\(\omega_0\)</span> zeitversetzt um <span class="math inline">\(\pi/2\)</span> (durch <span class="math inline">\(\cos^2(\omega_0 t)\)</span>) um einen zeitlichen Mittelwert […].</p>
+<p>“Damit tragen die mittleren Kondensator- und Spulenenergien je zur Hälfte zur gesamten Speicherenergie im idealen <span class="math inline">\(LC\)</span>-System bei der Eigenfrequenz <span class="math inline">\(\omega = \omega_0\)</span> (nur hier!) bei:</p>
+<ul>
+<li><em>Physikalische Resonanzbedingung</em></li>
+</ul>
+<p><span class="math display">\[
+\overline{W_C(t)} = \overline{W_L(t)} = \frac{W_{ges}}{2}
+\]</span></p>
+<ul>
+<li><p><em>Gütemaß (Kreisgüte, Resonanzschärfe)</em></p>
+<p>Zur Kennzeichnung der Verluste im Schwingungssystem eignet sich das Verhältnis der Speicherenergie (bei Resonanz) zur Verlustenergie je Periode. Wir definieren dafür die <em>Kreisgüte</em> <span class="math inline">\(Q\)</span> oder <em>Resonanzschärfe</em> <span class="math inline">\(\varrho\)</span></p></li>
+</ul>
+<p><span class="math display">\[
+\varrho = Q = \left . \frac{2 \pi \cdot \mbox{gesamte Speicherenergie}}
+{\mbox{Verlustenergie je Periode}}\right\lvert_{\omega_0}
+= \frac{\omega_0 \cdot \mbox{gesamte Speicherenergie}}{\mbox{Verlustleistung}}
+\]</span></p>
+<p>Daraus folgt für <em>Reihen- und Parallelschwingkreis</em> gleichwertig:</p>
+<ul>
+<li>Reihenkreis</li>
+</ul>
+<p><span class="math display">\[
+\varrho = \frac{2\pi W_{ges}}{T \cdot P} = \left . \frac{2\pi L I^2}{T \cdot R \cdot I^2}\right\lvert_{omega_0}
+= \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}
+\]</span></p>
+<ul>
+<li>Prallelkreis</li>
+</ul>
+<p><span class="math display">\[
+\varrho = \left . \frac{2\pi C U^2}{T \cdot G \cdot U^2}\right\lvert_{omega_0}
+= \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}
+\]</span></p>
+</section>
+<section id="rlc-reihenschwingkreis-aktiver-zweipol" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="rlc-reihenschwingkreis-aktiver-zweipol"><span class="header-section-number">6.3</span> RLC-Reihenschwingkreis (aktiver Zweipol)</h2>
 <div id="fig-lec6rlc" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lec6rlc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/lec/lec6rlc.svg" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec6rlc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6.1: RLC-Reihenschwingkreis
+Abbildung&nbsp;6.2: RLC-Reihenschwingkreis
 </figcaption>
 </figure>
 </div>
@@ -573,14 +624,16 @@ Spannungsübertragungsfaktor
 <ul>
 <li><p>Eigenfrequenz / Resonanzfrequenz <span class="math inline">\(\omega_0 = \frac{1}{\sqrt{L C}}\)</span></p></li>
 <li><p>Abklingkonstante <span class="math inline">\(\delta = \frac{R}{\omega_0 L}\)</span></p></li>
-<li><p>Güte(faktor) <span class="math inline">\(Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}\)</span> “Für Schwingkreise mit einem Freiheitsgrad ist die <em>Güte</em> <span class="math inline">\(Q\)</span> definiert als das Verhältnis des Betrages der bei Resonanz in einem der beiden Blindelemente umgesetzten, also innerhalb des Schwingkreises pendelnden Blindleistung <span class="math inline">\(Q\)</span> zur aufgenommenen Wirkleistung <span class="math inline">\(P\)</span>.</p>
+<li><p>Güte <span class="math inline">\(Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}\)</span></p>
+<p>“Für Schwingkreise mit einem Freiheitsgrad ist die <em>Güte</em> <span class="math inline">\(Q\)</span> definiert als das Verhältnis des Betrages der bei Resonanz in einem der beiden Blindelemente umgesetzten, also innerhalb des Schwingkreises pendelnden Blindleistung <span class="math inline">\(Q\)</span> zur aufgenommenen Wirkleistung <span class="math inline">\(P\)</span>.</p>
 <p>Die Bildung des Betrages der Blindleistung ist erforderlich, damit sowohl die in der Induktivi- tät als auch die in der Kapazität umgesetzte Blindleistung eingesetzt werden können und das Ergebnis unabhängig vom bei der Leistungsberechnung verwendeten Zählpfeilsystem ist.”</p></li>
-<li><p>Dämpfung / Verlustfaktor <span class="math inline">\(d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}\)</span> “Der Kehrwert der Güte ist der <em>Verlustfaktor</em>, der bei Schwingkreisen auch als die <em>Dämpfung</em> bezeichnet wird.</p></li>
+<li><p>Dämpfung / Verlustfaktor <span class="math inline">\(d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}\)</span></p>
+<p>“Der Kehrwert der Güte ist der <em>Verlustfaktor</em>, der bei Schwingkreisen auch als die <em>Dämpfung</em> bezeichnet wird.</p></li>
 </ul>
 <p>[<span class="citation" data-cites="reisch2007">Reisch (<a href="../references.html#ref-reisch2007" role="doc-biblioref">2007</a>)</span>]<span class="citation" data-cites="wikipedia2025a">(<a href="../references.html#ref-wikipedia2025a" role="doc-biblioref">Wikipedia 2025</a>)</span> <span class="citation" data-cites="harriehausen2020">(<a href="../references.html#ref-harriehausen2020" role="doc-biblioref">Harriehausen und Schwarzenau 2020</a>)</span></p>
 </div>
 </div>
-<div id="02ceff26" class="cell" data-execution_count="1">
+<div id="b1c551d1" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ltspice</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -620,8 +673,8 @@ Spannungsübertragungsfaktor
 </div>
 </div>
 </section>
-<section id="grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol"><span class="header-section-number">6.3</span> Grundeigenschaften von Reihen- und Parallelschwingkreis (passiver Zweipol)</h2>
+<section id="grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="grundeigenschaften-von-reihen--und-parallelschwingkreis-passiver-zweipol"><span class="header-section-number">6.4</span> Grundeigenschaften von Reihen- und Parallelschwingkreis (passiver Zweipol)</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -702,8 +755,8 @@ Q &amp;= \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}} \quad \mbox{Güte}
 </div>
 </div>
 </section>
-<section id="vereinheitlichte-kennzeichnung" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="vereinheitlichte-kennzeichnung"><span class="header-section-number">6.4</span> Vereinheitlichte Kennzeichnung</h2>
+<section id="vereinheitlichte-kennzeichnung" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="vereinheitlichte-kennzeichnung"><span class="header-section-number">6.5</span> Vereinheitlichte Kennzeichnung</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -793,15 +846,15 @@ BW &amp;= \omega_{45} - \omega_{-45} = \frac{\omega_0}{Q} \\
 </div>
 </div>
 </section>
-<section id="gegenüberstellung-der-eigenschaften-der-elementaren-schwingkreise" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="gegenüberstellung-der-eigenschaften-der-elementaren-schwingkreise"><span class="header-section-number">6.5</span> Gegenüberstellung der Eigenschaften der elementaren Schwingkreise</h2>
+<section id="gegenüberstellung-der-eigenschaften-der-elementaren-schwingkreise" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="gegenüberstellung-der-eigenschaften-der-elementaren-schwingkreise"><span class="header-section-number">6.6</span> Gegenüberstellung der Eigenschaften der elementaren Schwingkreise</h2>
 <div id="fig-lec6elemSchwing" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lec6elemSchwing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/lec/lec6elemSchwing.svg" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lec6elemSchwing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6.2: Eigenschaften von Schwingkreisen
+Abbildung&nbsp;6.3: Eigenschaften von Schwingkreisen
 </figcaption>
 </figure>
 </div>
@@ -814,6 +867,9 @@ Harriehausen, Thomas, und Dieter Schwarzenau. 2020. <em>Moeller Grundlagen der E
 </div>
 <div id="ref-natt2020" class="csl-entry" role="listitem">
 Natt, Oliver. 2020. <em>Physik mit Python</em>. Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-662-61274-3">https://doi.org/10.1007/978-3-662-61274-3</a>.
+</div>
+<div id="ref-paul2017" class="csl-entry" role="listitem">
+Paul, Steffen, und Reinhold Paul. 2017. <em>Grundlagen der Elektrotechnik und Elektronik 3</em>. Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-662-44978-3">https://doi.org/10.1007/978-3-662-44978-3</a>.
 </div>
 <div id="ref-reisch2007" class="csl-entry" role="listitem">
 Reisch, Michael. 2007. <em>Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE</em>. 2. Aufl. Springer. <a href="https://doi.org/10.1007/978-3-540-34015-7">https://doi.org/10.1007/978-3-540-34015-7</a>.
