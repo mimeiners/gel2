@@ -64,23 +64,25 @@ Entn. [@harriehausen2020]
 
 ## Zusammenfassung der physikalische Grundlagen
 
-* periodische Zustandsänderung in einem physikalischen System
+* Periodische Zustandsänderung in einem physikalischen System
 
-* periodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder
+* Periodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder 
   und Masse, Induktivität und Kapazität 
   
-* maßgebende Zustandsgröße $x(t)$, z.B. Auslenkung, Spannung oder Ladung, folgen einer gewöhnlichen
-  Differenzialgleichung (DGL) 
+* Maßgebende Zustandsgröße $x(t)$, z.B. Auslenkung, Spannung oder Ladung, folgen einer gewöhnlichen
+  Differenzialgleichung (DGL), engl. Ordenary Differential Equation (ODE).
   
 \begin{align}
 \ddot{x} + \omega_0^2 x &= 0 \\
 \frac{d^2 x(t)}{dt^2} + \omega_0^2 x(t) &= 0
 \end{align}
 
-* harmonische Schwingung, $x(t+T_0) = x(t)$, wobei $T_0$ Periode, $\omega_0=2 \pi f_0 = 2\pi \frac{1}{T_0}$
+* Harmonische Schwingung, $x(t+T_0) = x(t)$, wobei $T_0$ Periode, $\omega_0=2 \pi f_0 = 2\pi \frac{1}{T_0}$
   Eigenfrequenz und $f_0$ Resonanzfrequenz 
   
 * Zusammenschaltung von Induktivität $L$ und Kapazität $C$ heißt (idealer) Schwing- oder Resonanzkreis
+  
+  Beide bestimmen die *momentane Speicherenergie* in Kondensator und Spule:
 
 \begin{align}
 W_C(t) = W_{pot}(t) &= \frac{1}{2} C v_C^2(t) = \frac{1}{2} C v_C(0) \cos^2(\omega_0 t) \\
@@ -88,16 +90,69 @@ W_L(t) = W_{kin}(t) &= \frac{1}{2} L i_L^2(t) = \frac{1}{2} L\omega^2_0 C^2 v^2_
 = \frac{1}{2} C v^2_C(0) \sin^2(\omega_0 t)
 \end{align}
 
-* *Energieerhaltungssatz* Erhalt der gespeicherten Gesamtenergie
+
+* *Energiesatz: Erhalt der gespeicherten Gesamtenergie*
 
 $$
 W_{C}(t) + W_{L}(t)\lvert_{\omega_0} = \frac{1}{2} C v^2_C(0) \left(\cos^2(\omega_0 t) + \sin^2(\omega_0 t) \right) =
 W_{ges} = const. 
 $$
 
-* freie und erzwungene Schwingung
+* Eigenfrequenz des idealen Schwingkreises, *Thomsonformel*
 
-* ungedämpfte und gedämpfte Schwingung
+$$
+\omega_0 = \frac{1}{\sqrt{LC}}
+$$
+
+
+## Energiependel 
+aus [@paul2017], Kap. 3.2.3
+
+"Der ständige Energieaustausch zwischen Kondensator und Spule folgt aus den verkoppelten Strom-Spannungsbeziehungen: die 
+Kondensatorspannung $u_C$ hat den Höchstwert bei Stromnulldurchgang und umgekehrt. Deshalb wechseln die Höchstwerte
+ständig nacheinander.
+
+![Energiependel im Schwingkreis](../images/lec/lec6energiependel){#fig-lec6energiep}
+
+"Beide Energieformen pulsieren je mit doppelter Resonanzfrequenz $\omega_0$ zeitversetzt um $\pi/2$ (durch
+$\cos^2(\omega_0 t)$) um einen zeitlichen Mittelwert [...].
+
+"Damit tragen die mittleren Kondensator- und Spulenenergien je zur Hälfte zur gesamten Speicherenergie im idealen 
+$LC$-System bei der Eigenfrequenz $\omega = \omega_0$ (nur hier!) bei:
+
+* *Physikalische Resonanzbedingung*
+
+$$
+\overline{W_C(t)} = \overline{W_L(t)} = \frac{W_{ges}}{2}
+$$
+
+* *Gütemaß (Kreisgüte, Resonanzschärfe)*
+  
+  Zur Kennzeichnung der Verluste im Schwingungssystem eignet sich das Verhältnis der Speicherenergie (bei Resonanz) zur
+  Verlustenergie je Periode. Wir definieren dafür die *Kreisgüte* $Q$ oder *Resonanzschärfe* $\varrho$
+
+$$
+\varrho = Q = \left . \frac{2 \pi \cdot \mbox{gesamte Speicherenergie}}
+{\mbox{Verlustenergie je Periode}}\right\lvert_{\omega_0}
+= \frac{\omega_0 \cdot \mbox{gesamte Speicherenergie}}{\mbox{Verlustleistung}}
+$$
+
+  Daraus folgt für *Reihen- und Parallelschwingkreis* gleichwertig:
+
+
+  * Reihenkreis
+
+$$
+\varrho = \frac{2\pi W_{ges}}{T \cdot P} = \left . \frac{2\pi L I^2}{T \cdot R \cdot I^2}\right\lvert_{omega_0} 
+= \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}
+$$
+
+  * Prallelkreis
+
+$$
+\varrho = \left . \frac{2\pi C U^2}{T \cdot G \cdot U^2}\right\lvert_{omega_0} 
+= \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}
+$$
 
 
 ## RLC-Reihenschwingkreis (aktiver Zweipol)
@@ -139,7 +194,8 @@ $$
 
 * Abklingkonstante $\delta = \frac{R}{\omega_0 L}$
 
-* Güte(faktor) $Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}$
+* Güte $Q = \frac{\vert Q(\omega_0) \vert}{P(\omega_0)} = \frac{1}{\omega_0 RC} = \frac{\omega_0}{2 \delta}$
+  
   "Für Schwingkreise mit einem Freiheitsgrad ist die *Güte* $Q$ definiert als das Verhältnis des Betrages der bei
   Resonanz in einem der beiden Blindelemente umgesetzten, also innerhalb des Schwingkreises pendelnden Blindleistung $Q$
   zur aufgenommenen Wirkleistung $P$.
@@ -149,6 +205,7 @@ $$
   Leistungsberechnung verwendeten Zählpfeilsystem ist." 
 
 * Dämpfung / Verlustfaktor $d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}$
+  
   "Der Kehrwert der Güte ist der *Verlustfaktor*, der bei Schwingkreisen auch als die *Dämpfung* bezeichnet wird.
 
 [@reisch2007][@wikipedia2025a] [@harriehausen2020]
