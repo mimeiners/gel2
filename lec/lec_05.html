@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -94,7 +94,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -784,7 +784,7 @@ Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
 </div>
 </div>
 <p>Um in LTspice das Bode-Diagramm des RC-Tiefpasses zu erhalten, muss eine <a href="https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/lec5rctp.asc">.ac Analyse</a> durchgeführt werden. Diese kann mit Python wie folgt ausgewertet werden:</p>
-<div id="e483574e" class="cell" data-execution_count="3">
+<div id="08a1bc55" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der AC SPICE Analyse der RC-Schaltung</span></span>
@@ -905,7 +905,7 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 \]</span></p>
 <p>so stellt sich am Ausgang für <span class="math inline">\(t \gg \tau = 15\,\mu s\)</span> ein periodischer Spannungsverlauf mit dem Gleichanteil 2.5 V und dem Wechselanteil <span class="math inline">\(\Delta v_2(t)\)</span> ein.</p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="2e9d3097" class="cell" data-execution_count="4">
+<div id="34d5b7bd" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der TRAN SPICE Analyse der RC-Schaltung</span></span>
@@ -1082,7 +1082,7 @@ v_2 \approx \tau \frac{dv_1}{dt} =
 \end{cases}
 \]</span></p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="5443021c" class="cell" data-execution_count="6">
+<div id="330e2d27" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der TRAN SPICE Analyse des RC-Hochpasses</span></span>

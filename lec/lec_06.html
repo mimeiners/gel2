@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -94,7 +94,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -505,7 +505,7 @@ Schwingkreise (elek.)
 <ul>
 <li><p>Periodische Zustandsänderung in einem physikalischen System</p></li>
 <li><p>Periodischer Energieaustausch zw. zwei unterschiedlichen Energiespeichern (potentiellen und kinetischen), z.B. Feder und Masse, Induktivität und Kapazität</p></li>
-<li><p>Maßgebende Zustandsgröße <span class="math inline">\(x(t)\)</span>, z.B. Auslenkung, Spannung oder Ladung, folgen einer gewöhnlichen Differenzialgleichung (DGL), engl. Ordenary Differential Equation (ODE).</p></li>
+<li><p>Maßgebende Zustandsgröße <span class="math inline">\(x(t)\)</span>, z.B. Auslenkung, Spannung oder Ladung, folgen einer gewöhnlichen Differenzialgleichung (DGL).</p></li>
 </ul>
 <p><span class="math display">\[\begin{align}
 \ddot{x} + \omega_0^2 x &amp;= 0 \\
@@ -571,14 +571,14 @@ Abbildung&nbsp;6.1: Energiependel im Schwingkreis
 <li>Reihenkreis</li>
 </ul>
 <p><span class="math display">\[
-\varrho = \frac{2\pi W_{ges}}{T \cdot P} = \left . \frac{2\pi L I^2}{T \cdot R \cdot I^2}\right\lvert_{omega_0}
+\varrho = \frac{2\pi W_{ges}}{T \cdot P} = \left . \frac{2\pi L I^2}{T \cdot R \cdot I^2}\right\lvert_{\omega_0}
 = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}
 \]</span></p>
 <ul>
-<li>Prallelkreis</li>
+<li>Parallelkreis</li>
 </ul>
 <p><span class="math display">\[
-\varrho = \left . \frac{2\pi C U^2}{T \cdot G \cdot U^2}\right\lvert_{omega_0}
+\varrho = \left . \frac{2\pi C U^2}{T \cdot G \cdot U^2}\right\lvert_{\omega_0}
 = \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}
 \]</span></p>
 </section>
@@ -646,12 +646,12 @@ Spannungsübertragungsfaktor
 <p>“Für Schwingkreise mit einem Freiheitsgrad ist die <em>Güte</em> <span class="math inline">\(Q\)</span> definiert als das Verhältnis des Betrages der bei Resonanz in einem der beiden Blindelemente umgesetzten, also innerhalb des Schwingkreises pendelnden Blindleistung <span class="math inline">\(Q\)</span> zur aufgenommenen Wirkleistung <span class="math inline">\(P\)</span>.</p>
 <p>Die Bildung des Betrages der Blindleistung ist erforderlich, damit sowohl die in der Induktivi- tät als auch die in der Kapazität umgesetzte Blindleistung eingesetzt werden können und das Ergebnis unabhängig vom bei der Leistungsberechnung verwendeten Zählpfeilsystem ist.”</p></li>
 <li><p>Dämpfung / Verlustfaktor <span class="math inline">\(d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}\)</span></p>
-<p>“Der Kehrwert der Güte ist der <em>Verlustfaktor</em>, der bei Schwingkreisen auch als die <em>Dämpfung</em> bezeichnet wird.</p></li>
+<p>“Der Kehrwert der Güte ist der <em>Verlustfaktor</em>, der bei Schwingkreisen auch als die <em>Dämpfung</em> bezeichnet wird.”</p></li>
 </ul>
 <p>[<span class="citation" data-cites="reisch2007">Reisch (<a href="../references.html#ref-reisch2007" role="doc-biblioref">2007</a>)</span>]<span class="citation" data-cites="wikipedia2025a">(<a href="../references.html#ref-wikipedia2025a" role="doc-biblioref">Wikipedia 2025</a>)</span> <span class="citation" data-cites="harriehausen2020">(<a href="../references.html#ref-harriehausen2020" role="doc-biblioref">Harriehausen und Schwarzenau 2020</a>)</span></p>
 </div>
 </div>
-<div id="ef7cf5cb" class="cell" data-execution_count="1">
+<div id="8a71ad64" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ltspice</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -704,8 +704,12 @@ Resonanzfrequenz
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><p>Thomsonsche Formel <span class="math inline">\(\omega_0 = \frac{1}{L_r C_r} = \frac{1}{L_p C_p}\)</span></p></li>
-<li><p>bei Resonanz erreichen Impedanz und Admittanz ein Minimum</p></li>
+<li><p>Thomsonformel<br>
+<span class="math display">\[
+\omega_0 = \underbrace{\frac{1}{\sqrt{L_r C_r}}}_{\mbox{Reihenschwingkreis}}
+= \underbrace{\frac{1}{\sqrt{L_p C_p}}}_{\mbox{Parallelschwingkreis}}
+\]</span></p></li>
+<li><p>bei Resonanz erreichen Impedanz und Admittanz des Reihen- bzw. Parallelschwingkreises ein Minimum</p></li>
 </ul>
 <p><span class="math display">\[\begin{align}
 \left . \underline{Z} \right\lvert_{\omega_0} &amp;\Rightarrow \lvert\underline{Z}\lvert = R_r \\
