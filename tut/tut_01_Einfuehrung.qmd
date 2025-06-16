@@ -27,6 +27,6 @@ Eine Zeit- und Themenplanung ist in der folgenden Tabelle zu sehen.
 | 02.06.25 | Filterschaltungen, Bodediagramm und Ortskurven |
 | 09.06.25 | **Pfingstmontag**                              |
 | 16.06.25 | Schwingkreise                                  |
-| 23.06.25 | LTSpice und Python                             |
-| 30.06.25 | Transformatoren                                |
-| 07.07.25 | Klausurvorbereitung                            |
+| 23.06.25 | Transformatoren                                |
+| 30.06.25 | Klausurvorbereitung I                          |
+| 07.07.25 | Klausurvorbereitung II                         |
