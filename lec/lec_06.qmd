@@ -70,7 +70,7 @@ Entn. [@harriehausen2020]
   und Masse, Induktivität und Kapazität 
   
 * Maßgebende Zustandsgröße $x(t)$, z.B. Auslenkung, Spannung oder Ladung, folgen einer gewöhnlichen
-  Differenzialgleichung (DGL), engl. Ordenary Differential Equation (ODE).
+  Differenzialgleichung (DGL).
   
 \begin{align}
 \ddot{x} + \omega_0^2 x &= 0 \\
@@ -143,14 +143,14 @@ $$
   * Reihenkreis
 
 $$
-\varrho = \frac{2\pi W_{ges}}{T \cdot P} = \left . \frac{2\pi L I^2}{T \cdot R \cdot I^2}\right\lvert_{omega_0} 
+\varrho = \frac{2\pi W_{ges}}{T \cdot P} = \left . \frac{2\pi L I^2}{T \cdot R \cdot I^2}\right\lvert_{\omega_0} 
 = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}
 $$
 
-  * Prallelkreis
+  * Parallelkreis
 
 $$
-\varrho = \left . \frac{2\pi C U^2}{T \cdot G \cdot U^2}\right\lvert_{omega_0} 
+\varrho = \left . \frac{2\pi C U^2}{T \cdot G \cdot U^2}\right\lvert_{\omega_0} 
 = \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}}
 $$
 
@@ -206,7 +206,7 @@ $$
 
 * Dämpfung / Verlustfaktor $d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}$
   
-  "Der Kehrwert der Güte ist der *Verlustfaktor*, der bei Schwingkreisen auch als die *Dämpfung* bezeichnet wird.
+  "Der Kehrwert der Güte ist der *Verlustfaktor*, der bei Schwingkreisen auch als die *Dämpfung* bezeichnet wird."
 
 [@reisch2007][@wikipedia2025a] [@harriehausen2020]
 :::
@@ -252,9 +252,13 @@ plt.show()
 
 ### Resonanzfrequenz
 
-* Thomsonsche Formel $\omega_0 = \frac{1}{L_r C_r} = \frac{1}{L_p C_p}$
+* Thomsonformel  
+  $$
+  \omega_0 = \underbrace{\frac{1}{\sqrt{L_r C_r}}}_{\mbox{Reihenschwingkreis}} 
+  = \underbrace{\frac{1}{\sqrt{L_p C_p}}}_{\mbox{Parallelschwingkreis}}
+  $$
 
-* bei Resonanz erreichen Impedanz und Admittanz ein Minimum
+* bei Resonanz erreichen Impedanz und Admittanz des Reihen- bzw. Parallelschwingkreises ein Minimum
 
 \begin{align}
 \left . \underline{Z} \right\lvert_{\omega_0} &\Rightarrow \lvert\underline{Z}\lvert = R_r \\
