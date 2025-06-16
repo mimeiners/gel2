@@ -23,14 +23,14 @@ würde.
 Jeder von einem Strom durchflossene Leiter erzeugt ein magnetisches Feld der Feldstärke $\mathbf{H}$. Die Einheit der
 magnetischen Feldstärke im SI-System ist A/m. Im Vakuum ist $\mathbf{H}$ mit der magnetischen Flußdichte $\mathbf{B}$
 verknüpft über $\mathbf{B} = \mu_0 \mathbf{H}$ wobei $\mu_0$ = $4 \pi 10^{-7}$ Vs/Am = $4 \pi$ nH/cm die magnetische
-Feldkonstante (Induktionskonstante) bezeichnet. Die Einheit der magnetischen Flußdichte ist Tesla (1T = 1Vs/m2).1 Durch
-Kernmaterialien mit ferromagnetischen oder ferrimagnetischen Eigenschaften wird in technischen Spulen und Übertragern
-häufig die magnetischen Flußdichte $\mathbf{B}$ erhöht. Durch die magnetische Polarisation dieser Materialien im Feld 
-$\mathbf{H}$ ist die magnetische Flußdichte im Kern um die Permeabilitätszahl $\mu_r$ erhöht 
+Feldkonstante (Induktionskonstante) bezeichnet. Die Einheit der magnetischen Flußdichte ist Tesla (1T = 1Vs/m2). 
+Durch Kernmaterialien mit ferromagnetischen oder ferrimagnetischen Eigenschaften wird in technischen Spulen und 
+Übertragern häufig die magnetischen Flußdichte $\mathbf{B}$ erhöht. Durch die magnetische Polarisation dieser 
+Materialien im Feld $\mathbf{H}$ ist die magnetische Flußdichte im Kern um die Permeabilitätszahl $\mu_r$ erhöht 
 $\mathbf{B} = \mu_0 \mu_r \mathbf{H} = \mu \mathbf{H}$. Der Wert von $\mu_r$ ist aussteuerungsabhängig; bei geringer
 Aussteuerung liegt $\mu_r$ für typische Spulenkerne im Bereich $10^2$ bis $10^4$.
 
-![$B(H)$-Hysteresekurve, Rayleigh-Schleife](../images/lec/lec8s1){#fig-lec8s1 width=400}
+![$B(H)$-Hysteresekurve, Rayleigh-Schleife](../images/lec/lec8s1){#fig-lec8s1 width=600}
 
 
 ::: {.callout-note} 

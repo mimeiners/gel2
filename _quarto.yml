@@ -100,11 +100,11 @@ format:
     mainfont: "Calibri"
     # keep-tex: true
     # default-image-extension: tex
-    output-file: "gel2"
+    output-file: gel2
   epub:
     theme: flatly
     default-image-extension: svg
-    output-file: "gel2"
+    output-file: gel2
   
 execute:
   freeze: auto
