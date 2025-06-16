@@ -71,8 +71,9 @@ book:
         - tut/tut_07_KWR.ipynb
         - tut/tut_08_Filterschaltungen.ipynb
         - tut/tut_09_Schwingkreise.ipynb
-#        - tut/tut_10_Transformatoren.ipynb
-#        - tut/tut_11_Klausurvorbereitung.ipynb
+        - tut/tut_10_Transformatoren.ipynb
+        - tut/tut_11_Klausurvorbereitung1.ipynb
+        - tut/tut_12_Klausurvorbereitung2.ipynb
     - references.qmd
     
 bibliography: _bibliography/references.bib
