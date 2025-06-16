@@ -2,6 +2,7 @@ _build
 .ipynb_checkpoints
 .DS_Store
 *.log
+*.op.raw
 .Rproj.user
 .Rhistory
 *_cache
