@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -345,8 +374,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#aufgabe-12.1-übertragungsfunktion" id="toc-aufgabe-12.1-übertragungsfunktion" class="nav-link active" data-scroll-target="#aufgabe-12.1-übertragungsfunktion"><span class="header-section-number">27.1</span> Aufgabe 12.1 (Übertragungsfunktion)</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/tut/tut_12_Klausurvorbereitung2.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -383,8 +418,37 @@ Wichtig
 <p>Gerade unter Konstruktion!!!</p>
 </div>
 </div>
+<ul>
+<li>Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 3 Aufgabe 1 (Übertragungsfunktion)</li>
+<li>Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 2 Aufgabe 2 (Brückenschaltung)</li>
+<li>Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 4 Aufgabe 3 (Parallelschwingkreis)</li>
+<li>Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 4 Aufgabe 4 (Trafo) (evtl tauschen, weil Trafo Aufgabe gibt es schon…)</li>
+</ul>
+<section id="aufgabe-12.1-übertragungsfunktion" class="level2" data-number="27.1">
+<h2 data-number="27.1" class="anchored" data-anchor-id="aufgabe-12.1-übertragungsfunktion"><span class="header-section-number">27.1</span> Aufgabe 12.1 (Übertragungsfunktion)</h2>
+<p>(Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 3 Aufgabe 1)</p>
+<p>In der gezeichneten Schaltung soll die sinusförmige Ausgangsspannung <span class="math inline">\(u_2\)</span> mit der sinusförmigen Ein- gangsspannung <span class="math inline">\(u_1\)</span> in Phase sein.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Wichtig
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Insert figure!</p>
+</div>
+</div>
+<ol type="a">
+<li></li>
+<li></li>
+<li></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -806,7 +870,7 @@ Wichtig
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/tut/tut_12_Klausurvorbereitung2.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/tut/tut_12_Klausurvorbereitung2.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
