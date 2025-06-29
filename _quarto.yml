@@ -73,7 +73,7 @@ book:
         - tut/tut_09_Schwingkreise.ipynb
         - tut/tut_10_Transformatoren.ipynb
         - tut/tut_11_Klausurvorbereitung1.ipynb
-        - tut/tut_12_Klausurvorbereitung2.ipynb
+        #- tut/tut_12_Klausurvorbereitung2.ipynb
     - references.qmd
     
 bibliography: _bibliography/references.bib
