@@ -1781,6 +1781,50 @@
     ]
   },
   {
+    "objectID": "tut/tut_12_Klausurvorbereitung2.html",
+    "href": "tut/tut_12_Klausurvorbereitung2.html",
+    "title": "27  Klausurvorbereitung II",
+    "section": "",
+    "text": "27.1 Aufgabe 12.1 (Übertragungsfunktion)\n(Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 3 Aufgabe 1)\nIn der gezeichneten Schaltung soll die sinusförmige Ausgangsspannung \\(u_2\\) mit der sinusförmigen Eingangsspannung \\(u_1\\) in Phase sein.\nEntn. aus (Weißgerber 2015)",
+    "crumbs": [
+      "Tutorium",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Klausurvorbereitung II</span>"
+    ]
+  },
+  {
+    "objectID": "tut/tut_12_Klausurvorbereitung2.html#aufgabe-12.1-übertragungsfunktion",
+    "href": "tut/tut_12_Klausurvorbereitung2.html#aufgabe-12.1-übertragungsfunktion",
+    "title": "27  Klausurvorbereitung II",
+    "section": "",
+    "text": "Abbildung 27.1\n\n\n\n\n\nEntwickeln Sie das Spannungsverhältnis \\(\\underline{U}_2/\\underline{U}_1\\) in Form eines komplexen Nennoperators in algebraischer Form. (Hinweis: \\(\\frac{1}{Re\\{\\underline{Z}\\} + j Im\\{\\underline{Z}\\}}\\))\nBei welcher Kreisfrequenz \\(\\omega\\) ist die obige Bedingung erfüllt?\nWie groß ist dann das Spannungsverhältnis \\(\\underline{U}_2/\\underline{U}_1\\), wenn \\(R_{Lr} = R_{Lp}\\) und \\(L_r = L_p\\) ist?\n\n\n\n\n\n\n\nLösung 12.1\n\n\n\n\n\n\n\n\n\\[\n\\frac{\\underline{U}_2}{\\underline{U}_1} = \\frac{\\frac{1}{\\frac{1}{R_{Lp}} + \\frac{1}{j\\omega L_p}}}{\\frac{1}{\\frac{1}{R_{Lp}} + \\frac{1}{j\\omega L_p}} + R_{Lr} + j\\omega L_r} = \\frac{1}{1 + (R_{Lr} + j\\omega L_r) \\cdot \\left( \\frac{1}{R_{Lp}} + \\frac{1}{j\\omega L_p} \\right)} = \\frac{1}{\\left( 1 + \\frac{R_{Lr}}{R_{Lp}} + \\frac{L_r}{L_p} \\right) + j \\left( \\frac{\\omega L_r}{R_{Lp}} - \\frac{R_{Lr}}{\\omega L_p} \\right)}\n\\]\n\n\n\n\\(u_2\\) und \\(u_1\\) sind in Phase, wenn der Operator reell ist, d.h. der Imaginärteil 0 ist:\n\\[\n\\frac{\\omega L_r}{R_{Lp}} = \\frac{R_{Lr}}{\\omega L_p}\n\\]\n\\[\n\\omega = \\sqrt{\\frac{R_{Lr} \\cdot R_{Lp}}{L_r \\cdot L_p}}\n\\]\n\n\n\n\\[\n\\frac{U_2}{U_1} = \\frac{1}{3}\n\\]",
+    "crumbs": [
+      "Tutorium",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Klausurvorbereitung II</span>"
+    ]
+  },
+  {
+    "objectID": "tut/tut_12_Klausurvorbereitung2.html#aufgabe-12.2-brückenschaltung",
+    "href": "tut/tut_12_Klausurvorbereitung2.html#aufgabe-12.2-brückenschaltung",
+    "title": "27  Klausurvorbereitung II",
+    "section": "27.2 Aufgabe 12.2 (Brückenschaltung)",
+    "text": "27.2 Aufgabe 12.2 (Brückenschaltung)\n(Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 5 Aufgabe 2)\n\n\n\n\n\n\nAbbildung 27.2\n\n\n\nEntn. aus (Weißgerber 2015)\n\nEntwickeln Sie für die gezeichnete Wechselstrombrücke die Abgleichbedingung und die Formel für \\(\\omega\\). Welche Anwenung ergibt sicha us der Abgleichbedingung?\nVereinfachen Sie die Ergebnisse mit \\(R_1 = 2 \\cdot R_2\\), \\(R_{r3} = R_{p4} = R\\) und \\(L_{r3} = L_{p4} = L\\).\n\n\n\n\n\n\n\nLösung 12.2\n\n\n\n\n\n\n\n\n\\[\n\\frac{\\underline{Z}_1}{\\underline{Z}_2} = \\frac{\\underline{Z}_3}{\\underline{Z}_4}\n\\]\n\\[\n\\frac{R_1}{R_2} = (R_{r3} + j\\omega L_{r3}) \\left( \\frac{1}{R_{p4}} + \\frac{1}{j\\omega L_{p4}} \\right)\n\\]\n\\[\n\\frac{R_1}{R_2} = \\frac{R_{r3}}{R_{p4}} + \\frac{L_{r3}}{L_{p4}} + \\frac{j\\omega L_{r3}}{R_{p4}} + \\frac{R_{r3}}{j\\omega L_{p4}}\n\\]\n\\[\n\\frac{R_1}{R_2} = \\frac{R_{r3}}{R_{p4}} + \\frac{L_{r3}}{L_{p4}} + j \\cdot \\left( \\frac{\\omega L_{r3}}{R_{p4}} - \\frac{R_{r3}}{\\omega L_{p4}} \\right)\n\\]\nVergleich der Real- und Imaginärteile:\n\\[\n\\frac{R_1}{R_2} = \\frac{R_{r3}}{R_{p4}} + \\frac{L_{r3}}{L_{p4}}\n\\]\n\\[\n\\frac{\\omega L_{r3}}{R_{p4}} = \\frac{R_{r3}}{\\omega L_{p4}}\n\\]\n\\[\n\\omega = \\sqrt{\\frac{R_{r3} \\cdot R_{p4}}{L_{r3} \\cdot L_{p4}}}\n\\]\nAus der frequenzabhängigen Abgleichbedingung folgt, dass die Wechselstrombrücke für die Messung von Spannungsfrequenzen geeignet ist. Allerdings wird in der Praxis die entsprechende Messbrücke mit Kapazitäten zur Messung von Frequenzen verwendet, weil verschiedene Vergleichsspulen in einer Brücke größer und ungenauer sind als Kapazitäten.\n\n\n\n\\[\n\\frac{R_1}{R_2} = \\frac{R}{R} + \\frac{L}{L}\n\\]\n\\[\n\\omega = \\sqrt{\\frac{R^2}{L^2}} = \\frac{R}{L}\n\\]",
+    "crumbs": [
+      "Tutorium",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Klausurvorbereitung II</span>"
+    ]
+  },
+  {
+    "objectID": "tut/tut_12_Klausurvorbereitung2.html#aufgabe-12.3-parallelschwingkreis",
+    "href": "tut/tut_12_Klausurvorbereitung2.html#aufgabe-12.3-parallelschwingkreis",
+    "title": "27  Klausurvorbereitung II",
+    "section": "27.3 Aufgabe 12.3 (Parallelschwingkreis)",
+    "text": "27.3 Aufgabe 12.3 (Parallelschwingkreis)\n(Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 5 Aufgabe 3)\n\n\n\n\n\n\nAbbildung 27.3\n\n\n\nEntn. aus (Weißgerber 2015)\nFür den gezeichneten Parallelschwingkreis mit \\(R_{Cp} = 500\\,\\Omega\\), \\(C_p = 2\\,\\mu F\\), \\(R_{Lr} = 100\\,\\Omega\\) und \\(L_r = 0,1\\,H\\) ist die Resonanzkurve zu ermitteln, indem der gezeichnete Schwingkreis in einen Parallelschwingkreis mit idealen Bauelementen \\(R_p\\), \\(C_p\\), \\(L_p\\) überführt wird.\n\nBerechnen Sie die Resonanzkreisfrequenz.\nBerechnen Sie \\(L_p\\), \\(R_{Lp}\\) und \\(R_p\\).\nBerechnen Sie anschließend die Güte \\(Q_p\\) des idealen Parallelschwingkreises.\n\n\n\n\n\n\n\nVorsicht\n\n\n\n\n\n\n\n\n\\[\n\\omega_0 C_p = \\frac{1}{\\omega_0 L_p} = \\frac{\\omega_0 L_r}{R^2_{Lr} + \\omega^2_0 L^2_r}\n\\]\n\\[\nR^2_{Lr} + \\omega^2_0 L^2_r = \\frac{L_r}{C_p}\n\\]\noder\n\\[\n\\omega^2_0 L^2_r = \\frac{L_r}{C_p} - R^2_{Lr}\n\\]\n\\[\n\\omega^2_0 = \\frac{L_r}{L^2_r C_p} - \\frac{R^2_{Lr}}{L^2_r}\n\\]\noder\n\\[\n\\omega_0 = \\sqrt{\\frac{1}{L_r C_p} - \\left( \\frac{R_{Lr}}{L_r} \\right)^2}\n\\]\ngleiche Formel wie die des Praktischen Parallel-Resonanzkreises\n\\[\n\\omega_0 = \\sqrt{\\frac{1}{0,1\\,H \\cdot 2\\,\\mu F} - \\left( \\frac{100\\,\\Omega}{0,1\\,H} \\right)^2} = 2000\\,s^{-1}\n\\]\n\n\n\n\\[\nL_p = \\frac{R^2_{Lr} + \\omega^2_0 L^2_{r}}{\\omega^2_0 L_r} = \\frac{(100\\,\\Omega)^2 + (2000\\,s^{-1} \\cdot 0,1\\,H)^2}{(2000\\,s^{-1})^2 \\cdot 0,1\\,H} = 125\\,mH\n\\]\n\\[\nR_{Lp} = \\frac{R^2_{Lr} + \\omega^2_0 L^2_r}{R_{Lr}} = \\frac{(100\\,\\Omega)^2 + (2000\\,s^{-1} \\cdot 0,1\\,H)^2}{100\\,\\Omega} = 500\\,\\Omega\n\\]\n\\[\nR_p = \\frac{500\\,\\Omega}{2} = 250\\,\\Omega\n\\]\n\n\n\n\\[\nQ_p = \\frac{1}{G_p} \\cdot \\sqrt{\\frac{C_p}{L_p}} = R_p \\cdot \\sqrt{\\frac{C_p}{L_p}} = 250\\,\\Omega \\cdot \\sqrt{\\frac{2\\,\\mu F}{125\\,mH}} = 1\n\\]\n\n\n\n\n\n\n\nWeißgerber, Wilfried. 2015. Elektrotechnik für Ingenieure - Klausurenrechnen. 6. Aufl. Springer Vieweg. https://doi.org/10.1007/978-3-658-09088-3.",
+    "crumbs": [
+      "Tutorium",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Klausurvorbereitung II</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "Literaturverzeichnis",
