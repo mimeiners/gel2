@@ -624,10 +624,14 @@ Lösung
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align}
-Z_G &amp;= Z_V^*  R_G + j \omega L_G = \left( \frac{R_V}{1+j \omega C_K R_V} \right)^* \\
-R_G &amp;= \frac{R_V}{1 + (\omega C_K R_V)^2}  L_G = \frac{R_V^2 C_K}{1 + (\omega C_K R_V)^2} \\
-R_V &amp;= \frac{L_G}{C_K R_G}  \omega^2=\frac{1}{L_G C_K} - \frac{R_G^2}{L_G^2} \\
-R_V &amp;= 74,1\,k\Omega  f = 91,9\,kHz
+Z_G &amp;= Z_V^*  \\
+R_G + j \omega L_G &amp;= \left( \frac{R_V}{1+j \omega C_K R_V} \right)^* \\
+R_G &amp;= \frac{R_V}{1 + (\omega C_K R_V)^2}  \\
+L_G &amp;= \frac{R_V^2 C_K}{1 + (\omega C_K R_V)^2} \\
+R_V &amp;= \frac{L_G}{C_K R_G} \\
+\omega^2 &amp;=\frac{1}{L_G C_K} - \frac{R_G^2}{L_G^2} \\
+R_V &amp;= 74,1\,k\Omega  \\
+f &amp;= 91,9\,kHz
 \end{align}\]</span></p>
 </div>
 </div>
@@ -742,7 +746,7 @@ Lösung
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Bei <span class="math inline">\(\omega = \omega_A\)</span> ist <span class="math inline">\(\underline{Z}_1 / \underline{Z}_2 = 2 / 1\)</span> und gleichen Verhältnissen auf den Achsen (Re und Im) ist der Graph durch <span class="math inline">\(\underline{Z}_1(\omega_A)\)</span> und <span class="math inline">\(\underline{Z}_2(\omega_A)\)</span> eine Gerade, deren Mittelpunkt auf der Ortskurve von <span class="math inline">\(\underline{Z}_2\)</span> liegt.</p>
-<div id="76da3732" class="cell" data-execution_count="1">
+<div id="e23147d3" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Bibliotheken</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
