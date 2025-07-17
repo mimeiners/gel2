@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -380,6 +400,8 @@ window.Quarto = {
    
   <ul>
   <li><a href="#aufgabe-12.1-übertragungsfunktion" id="toc-aufgabe-12.1-übertragungsfunktion" class="nav-link active" data-scroll-target="#aufgabe-12.1-übertragungsfunktion"><span class="header-section-number">27.1</span> Aufgabe 12.1 (Übertragungsfunktion)</a></li>
+  <li><a href="#aufgabe-12.2-brückenschaltung" id="toc-aufgabe-12.2-brückenschaltung" class="nav-link" data-scroll-target="#aufgabe-12.2-brückenschaltung"><span class="header-section-number">27.2</span> Aufgabe 12.2 (Brückenschaltung)</a></li>
+  <li><a href="#aufgabe-12.3-parallelschwingkreis" id="toc-aufgabe-12.3-parallelschwingkreis" class="nav-link" data-scroll-target="#aufgabe-12.3-parallelschwingkreis"><span class="header-section-number">27.3</span> Aufgabe 12.3 (Parallelschwingkreis)</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/tut/tut_12_Klausurvorbereitung2.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
@@ -405,49 +427,222 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Wichtig
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Gerade unter Konstruktion!!!</p>
-</div>
-</div>
 <ul>
-<li>Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 3 Aufgabe 1 (Übertragungsfunktion)</li>
-<li>Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 2 Aufgabe 2 (Brückenschaltung)</li>
-<li>Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 4 Aufgabe 3 (Parallelschwingkreis)</li>
-<li>Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 4 Aufgabe 4 (Trafo) (evtl tauschen, weil Trafo Aufgabe gibt es schon…)</li>
+<li>Übertragungsfunktion</li>
+<li>Brückenschaltung</li>
+<li>Parallelschwingkreis</li>
 </ul>
 <section id="aufgabe-12.1-übertragungsfunktion" class="level2" data-number="27.1">
 <h2 data-number="27.1" class="anchored" data-anchor-id="aufgabe-12.1-übertragungsfunktion"><span class="header-section-number">27.1</span> Aufgabe 12.1 (Übertragungsfunktion)</h2>
 <p>(Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 3 Aufgabe 1)</p>
-<p>In der gezeichneten Schaltung soll die sinusförmige Ausgangsspannung <span class="math inline">\(u_2\)</span> mit der sinusförmigen Ein- gangsspannung <span class="math inline">\(u_1\)</span> in Phase sein.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
+<p>In der gezeichneten Schaltung soll die sinusförmige Ausgangsspannung <span class="math inline">\(u_2\)</span> mit der sinusförmigen Eingangsspannung <span class="math inline">\(u_1\)</span> in Phase sein.</p>
+<div id="fig-tutChap12Aufgabe1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tutChap12Aufgabe1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap12/chap12_aufgabe1.png" id="fig-tutChap12Aufgabe1" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap12Aufgabe1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;27.1
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="weissgerber2015d">(<a href="../references.html#ref-weissgerber2015d" role="doc-biblioref">Weißgerber 2015</a>)</span></p>
+<ol type="a">
+<li><p>Entwickeln Sie das Spannungsverhältnis <span class="math inline">\(\underline{U}_2/\underline{U}_1\)</span> in Form eines komplexen Nennoperators in algebraischer Form. (Hinweis: <span class="math inline">\(\frac{1}{Re\{\underline{Z}\} + j Im\{\underline{Z}\}}\)</span>)</p></li>
+<li><p>Bei welcher Kreisfrequenz <span class="math inline">\(\omega\)</span> ist die obige Bedingung erfüllt?</p></li>
+<li><p>Wie groß ist dann das Spannungsverhältnis <span class="math inline">\(\underline{U}_2/\underline{U}_1\)</span>, wenn <span class="math inline">\(R_{Lr} = R_{Lp}\)</span> und <span class="math inline">\(L_r = L_p\)</span> ist?</p></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Wichtig
+Lösung 12.1
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Insert figure!</p>
-</div>
-</div>
 <ol type="a">
 <li></li>
-<li></li>
+</ol>
+<p><span class="math display">\[
+\frac{\underline{U}_2}{\underline{U}_1} = \frac{\frac{1}{\frac{1}{R_{Lp}} + \frac{1}{j\omega L_p}}}{\frac{1}{\frac{1}{R_{Lp}} + \frac{1}{j\omega L_p}} + R_{Lr} + j\omega L_r} = \frac{1}{1 + (R_{Lr} + j\omega L_r) \cdot \left( \frac{1}{R_{Lp}} + \frac{1}{j\omega L_p} \right)} = \frac{1}{\left( 1 + \frac{R_{Lr}}{R_{Lp}} + \frac{L_r}{L_p} \right) + j \left( \frac{\omega L_r}{R_{Lp}} - \frac{R_{Lr}}{\omega L_p} \right)}
+\]</span></p>
+<ol start="2" type="a">
 <li></li>
 </ol>
+<p><span class="math inline">\(u_2\)</span> und <span class="math inline">\(u_1\)</span> sind in Phase, wenn der Operator reell ist, d.h. der Imaginärteil 0 ist:</p>
+<p><span class="math display">\[
+\frac{\omega L_r}{R_{Lp}} = \frac{R_{Lr}}{\omega L_p}
+\]</span></p>
+<p><span class="math display">\[
+\omega = \sqrt{\frac{R_{Lr} \cdot R_{Lp}}{L_r \cdot L_p}}
+\]</span></p>
+<ol start="3" type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+\frac{U_2}{U_1} = \frac{1}{3}
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-12.2-brückenschaltung" class="level2" data-number="27.2">
+<h2 data-number="27.2" class="anchored" data-anchor-id="aufgabe-12.2-brückenschaltung"><span class="header-section-number">27.2</span> Aufgabe 12.2 (Brückenschaltung)</h2>
+<p>(Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 5 Aufgabe 2)</p>
+<div id="fig-chap12Aufgabe2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-chap12Aufgabe2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap12/chap12_aufgabe2.png" id="fig-chap12Aufgabe2" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-chap12Aufgabe2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;27.2
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="weissgerber2015d">(<a href="../references.html#ref-weissgerber2015d" role="doc-biblioref">Weißgerber 2015</a>)</span></p>
+<ol type="a">
+<li><p>Entwickeln Sie für die gezeichnete Wechselstrombrücke die Abgleichbedingung und die Formel für <span class="math inline">\(\omega\)</span>. Welche Anwendung ergibt sich aus der Abgleichbedingung?</p></li>
+<li><p>Vereinfachen Sie die Ergebnisse mit <span class="math inline">\(R_1 = 2 \cdot R_2\)</span>, <span class="math inline">\(R_{r3} = R_{p4} = R\)</span> und <span class="math inline">\(L_{r3} = L_{p4} = L\)</span>.</p></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 12.2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+\frac{\underline{Z}_1}{\underline{Z}_2} = \frac{\underline{Z}_3}{\underline{Z}_4}
+\]</span></p>
+<p><span class="math display">\[
+\frac{R_1}{R_2} = (R_{r3} + j\omega L_{r3}) \left( \frac{1}{R_{p4}} + \frac{1}{j\omega L_{p4}} \right)
+\]</span></p>
+<p><span class="math display">\[
+\frac{R_1}{R_2} = \frac{R_{r3}}{R_{p4}} + \frac{L_{r3}}{L_{p4}} + \frac{j\omega L_{r3}}{R_{p4}} + \frac{R_{r3}}{j\omega L_{p4}}
+\]</span></p>
+<p><span class="math display">\[
+\frac{R_1}{R_2} = \frac{R_{r3}}{R_{p4}} + \frac{L_{r3}}{L_{p4}} + j \cdot \left( \frac{\omega L_{r3}}{R_{p4}} - \frac{R_{r3}}{\omega L_{p4}} \right)
+\]</span></p>
+<p>Vergleich der Real- und Imaginärteile:</p>
+<p><span class="math display">\[
+\frac{R_1}{R_2} = \frac{R_{r3}}{R_{p4}} + \frac{L_{r3}}{L_{p4}}
+\]</span></p>
+<p><span class="math display">\[
+\frac{\omega L_{r3}}{R_{p4}} = \frac{R_{r3}}{\omega L_{p4}}
+\]</span></p>
+<p><span class="math display">\[
+\omega = \sqrt{\frac{R_{r3} \cdot R_{p4}}{L_{r3} \cdot L_{p4}}}
+\]</span></p>
+<p>Aus der frequenzabhängigen Abgleichbedingung folgt, dass die Wechselstrombrücke für die Messung von Spannungsfrequenzen geeignet ist. Allerdings wird in der Praxis die entsprechende Messbrücke mit Kapazitäten zur Messung von Frequenzen verwendet, weil verschiedene Vergleichsspulen in einer Brücke größer und ungenauer sind als Kapazitäten.</p>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+\frac{R_1}{R_2} = \frac{R}{R} + \frac{L}{L}
+\]</span></p>
+<p><span class="math display">\[
+\omega = \sqrt{\frac{R^2}{L^2}} = \frac{R}{L}
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-12.3-parallelschwingkreis" class="level2" data-number="27.3">
+<h2 data-number="27.3" class="anchored" data-anchor-id="aufgabe-12.3-parallelschwingkreis"><span class="header-section-number">27.3</span> Aufgabe 12.3 (Parallelschwingkreis)</h2>
+<p>(Weißgerber Aufgabensammlung Abschnitt 3 Aufgabenblatt 5 Aufgabe 3)</p>
+<div id="fig-chap12Aufgabe3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-chap12Aufgabe3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/tut/chap12/chap12_aufgabe3.png" id="fig-chap12Aufgabe3" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-chap12Aufgabe3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;27.3
+</figcaption>
+</figure>
+</div>
+<p>Entn. aus <span class="citation" data-cites="weissgerber2015d">(<a href="../references.html#ref-weissgerber2015d" role="doc-biblioref">Weißgerber 2015</a>)</span></p>
+<p>Für den gezeichneten Parallelschwingkreis mit <span class="math inline">\(R_{Cp} = 500\,\Omega\)</span>, <span class="math inline">\(C_p = 2\,\mu F\)</span>, <span class="math inline">\(R_{Lr} = 100\,\Omega\)</span> und <span class="math inline">\(L_r = 0,1\,H\)</span> ist die Resonanzkurve zu ermitteln, indem der gezeichnete Schwingkreis in einen Parallelschwingkreis mit idealen Bauelementen <span class="math inline">\(R_p\)</span>, <span class="math inline">\(C_p\)</span>, <span class="math inline">\(L_p\)</span> überführt wird.</p>
+<ol type="a">
+<li><p>Berechnen Sie die Resonanzkreisfrequenz.</p></li>
+<li><p>Berechnen Sie <span class="math inline">\(L_p\)</span>, <span class="math inline">\(R_{Lp}\)</span> und <span class="math inline">\(R_p\)</span>.</p></li>
+<li><p>Berechnen Sie anschließend die Güte <span class="math inline">\(Q_p\)</span> des idealen Parallelschwingkreises.</p></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung 12.3
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+\omega_0 C_p = \frac{1}{\omega_0 L_p} = \frac{\omega_0 L_r}{R^2_{Lr} + \omega^2_0 L^2_r}
+\]</span></p>
+<p><span class="math display">\[
+R^2_{Lr} + \omega^2_0 L^2_r = \frac{L_r}{C_p}
+\]</span></p>
+<p>oder</p>
+<p><span class="math display">\[
+\omega^2_0 L^2_r = \frac{L_r}{C_p} - R^2_{Lr}
+\]</span></p>
+<p><span class="math display">\[
+\omega^2_0 = \frac{L_r}{L^2_r C_p} - \frac{R^2_{Lr}}{L^2_r}
+\]</span></p>
+<p>oder</p>
+<p><span class="math display">\[
+\omega_0 = \sqrt{\frac{1}{L_r C_p} - \left( \frac{R_{Lr}}{L_r} \right)^2}
+\]</span></p>
+<p>gleiche Formel wie die des Praktischen Parallel-Resonanzkreises</p>
+<p><span class="math display">\[
+\omega_0 = \sqrt{\frac{1}{0,1\,H \cdot 2\,\mu F} - \left( \frac{100\,\Omega}{0,1\,H} \right)^2} = 2000\,s^{-1}
+\]</span></p>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+L_p = \frac{R^2_{Lr} + \omega^2_0 L^2_{r}}{\omega^2_0 L_r} = \frac{(100\,\Omega)^2 + (2000\,s^{-1} \cdot 0,1\,H)^2}{(2000\,s^{-1})^2 \cdot 0,1\,H} = 125\,mH
+\]</span></p>
+<p><span class="math display">\[
+R_{Lp} = \frac{R^2_{Lr} + \omega^2_0 L^2_r}{R_{Lr}} = \frac{(100\,\Omega)^2 + (2000\,s^{-1} \cdot 0,1\,H)^2}{100\,\Omega} = 500\,\Omega
+\]</span></p>
+<p><span class="math display">\[
+R_p = \frac{500\,\Omega}{2} = 250\,\Omega
+\]</span></p>
+<ol start="3" type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+Q_p = \frac{1}{G_p} \cdot \sqrt{\frac{C_p}{L_p}} = R_p \cdot \sqrt{\frac{C_p}{L_p}} = 250\,\Omega \cdot \sqrt{\frac{2\,\mu F}{125\,mH}} = 1
+\]</span></p>
+</div>
+</div>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-weissgerber2015d" class="csl-entry" role="listitem">
+Weißgerber, Wilfried. 2015. <em>Elektrotechnik f<span>ü</span>r Ingenieure - Klausurenrechnen</em>. 6. Aufl. Springer Vieweg. <a href="https://doi.org/10.1007/978-3-658-09088-3">https://doi.org/10.1007/978-3-658-09088-3</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
