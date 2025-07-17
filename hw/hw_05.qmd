@@ -111,10 +111,14 @@ Werkstückes maximal wird.
 ### Lösung
 
 \begin{align}
-Z_G &= Z_V^*  R_G + j \omega L_G = \left( \frac{R_V}{1+j \omega C_K R_V} \right)^* \\
-R_G &= \frac{R_V}{1 + (\omega C_K R_V)^2}  L_G = \frac{R_V^2 C_K}{1 + (\omega C_K R_V)^2} \\
-R_V &= \frac{L_G}{C_K R_G}  \omega^2=\frac{1}{L_G C_K} - \frac{R_G^2}{L_G^2} \\
-R_V &= 74,1\,k\Omega  f = 91,9\,kHz
+Z_G &= Z_V^*  \\
+R_G + j \omega L_G &= \left( \frac{R_V}{1+j \omega C_K R_V} \right)^* \\
+R_G &= \frac{R_V}{1 + (\omega C_K R_V)^2}  \\
+L_G &= \frac{R_V^2 C_K}{1 + (\omega C_K R_V)^2} \\
+R_V &= \frac{L_G}{C_K R_G} \\
+\omega^2 &=\frac{1}{L_G C_K} - \frac{R_G^2}{L_G^2} \\
+R_V &= 74,1\,k\Omega  \\
+f &= 91,9\,kHz
 \end{align}
 :::
 

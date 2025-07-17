@@ -39,11 +39,13 @@ Leiten Sie die Spannungsübertragungsfunktion, $\underline{H}_u=\underline{U}_2/
 $$
 \underline{H}_u=\frac{\underline{U}_2}{\underline{U}_1} = \frac{j \omega R C}{1+j \omega R C}
 $$
+:::
 
 ### Betrag und Phase
 Bestimmen Sie Betrag und Phase der Spannungsübertragungsfunktion $\underline{H}_u$.
 
-#### Lösung
+::: {.callout-caution collapse="true"}
+### Lösung
 
 $$
 \vert\underline{H}_u\vert =\frac{\omega R C}{\sqrt{1 + (\omega R C)^2}} 
