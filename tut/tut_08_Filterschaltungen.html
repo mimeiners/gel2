@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -90,14 +90,15 @@ div.csl-indent {
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-847404b1397bb642580d6a42be486c59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -140,7 +141,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -189,13 +190,13 @@ window.Quarto = {
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
@@ -514,7 +515,7 @@ Hinweis
 <div id="cell-fig-betragsgang" class="cell" data-enabled="true" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">16e3</span></span>
@@ -534,7 +535,7 @@ Hinweis
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Betragsgang in dB"</span>)</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-betragsgang" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -552,7 +553,7 @@ Abbildung&nbsp;23.1: Betragsgang
 <div id="cell-fig-frequenzgang" class="cell" data-enabled="true" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">16e3</span></span>
@@ -572,7 +573,7 @@ Abbildung&nbsp;23.1: Betragsgang
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Phasengang in °"</span>)</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-frequenzgang" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -677,7 +678,7 @@ Abbildung&nbsp;23.3
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 <p>Man kann auch die Ortskurve der Admittanz aufstellen. In diesem Fall lässt sie sich aus der Ortskurve der Impedanz ableiten. Dazu muss nur der Kehrwert der Impedanz an allen Frequenzstellen genommen werden.</p>
 <p><span class="math display">\[\underline{Y} = \frac{1}{\underline{Z}}\]</span></p>
 <p>Da die Impedanz eine komplexe Zahl ist, muss der Kehrwert einer komplexen Zahl genommen werden. Zur Erinnerung: Den Kehrwert einer komplexen Zahl erhält man indem man den Kehrwert des Betrages bildet und den Phasenwinkel negiert.</p>
@@ -691,7 +692,7 @@ Abbildung&nbsp;23.4
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 <section id="inversionsregeln" class="level3" data-number="23.2.1">
 <h3 data-number="23.2.1" class="anchored" data-anchor-id="inversionsregeln"><span class="header-section-number">23.2.1</span> Inversionsregeln</h3>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -700,7 +701,7 @@ Abbildung&nbsp;23.4
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-1. Inversionsregel: Inversion einer Gerade durch den Ursprung
+<span class="screen-reader-only">Hinweis</span>1. Inversionsregel: Inversion einer Gerade durch den Ursprung
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -717,14 +718,14 @@ Abbildung&nbsp;23.5
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-2. Inversionsregel: Inversion einer allgemeinen Geraden
+<span class="screen-reader-only">Hinweis</span>2. Inversionsregel: Inversion einer allgemeinen Geraden
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -741,14 +742,14 @@ Abbildung&nbsp;23.6
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-3. Inversionsregel: Inversion eines allgemeinen Kreises
+<span class="screen-reader-only">Hinweis</span>3. Inversionsregel: Inversion eines allgemeinen Kreises
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -765,7 +766,7 @@ Abbildung&nbsp;23.7
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 </section>
 </section>
 <section id="filterschaltungen" class="level2" data-number="23.3">
@@ -777,7 +778,7 @@ Abbildung&nbsp;23.7
 <div id="cell-fig-BetragsgangTiefpasses" class="cell" data-enabled="true" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">16e3</span></span>
@@ -797,7 +798,7 @@ Abbildung&nbsp;23.7
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Betragsgang in dB"</span>)</span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-betragsgangtiefpasses" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -819,7 +820,7 @@ Abbildung&nbsp;23.8: Betragsgang des Tiefpasses
 <div id="cell-fig-betragsgangHochpass" class="cell" data-enabled="true" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">16e3</span></span>
@@ -840,7 +841,7 @@ Abbildung&nbsp;23.8: Betragsgang des Tiefpasses
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Betragsgang in dB"</span>)</span>
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-betragsganghochpass" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -915,12 +916,12 @@ Abbildung&nbsp;23.13
 </figure>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 8.1
+<span class="screen-reader-only">Vorsicht</span>Lösung 8.1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -961,14 +962,14 @@ Abbildung&nbsp;23.14
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="hagmann2019">(<a href="../references.html#ref-hagmann2019" role="doc-biblioref">Hagmann 2019</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="hagmann2019"><a href="../references.html#ref-hagmann2019" role="doc-biblioref">[2]</a></span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 8.2
+<span class="screen-reader-only">Vorsicht</span>Lösung 8.2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1000,14 +1001,14 @@ Abbildung&nbsp;23.15
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="hagmann2019">(<a href="../references.html#ref-hagmann2019" role="doc-biblioref">Hagmann 2019</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="hagmann2019"><a href="../references.html#ref-hagmann2019" role="doc-biblioref">[2]</a></span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 8.3
+<span class="screen-reader-only">Vorsicht</span>Lösung 8.3
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1040,14 +1041,14 @@ Abbildung&nbsp;23.16
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="hagmann2019">(<a href="../references.html#ref-hagmann2019" role="doc-biblioref">Hagmann 2019</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="hagmann2019"><a href="../references.html#ref-hagmann2019" role="doc-biblioref">[2]</a></span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 8.4
+<span class="screen-reader-only">Vorsicht</span>Lösung 8.4
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1084,12 +1085,12 @@ Abbildung&nbsp;23.17
 <li><p>Zeichnen Sie die Ortskurve der Impedanz <span class="math inline">\(\underline{Z}(\omega)\)</span>.</p></li>
 </ol>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 8.6
+<span class="screen-reader-only">Vorsicht</span>Lösung 8.6
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1105,7 +1106,7 @@ Abbildung&nbsp;23.18
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 </div>
 </div>
 </div>
@@ -1128,12 +1129,12 @@ Abbildung&nbsp;23.19
 <li>Zeichnen Sie die Ortskurve der Admittanz <span class="math inline">\(\underline{Y}(\omega)\)</span>.</li>
 </ol>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 8.7
+<span class="screen-reader-only">Vorsicht</span>Lösung 8.7
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1149,18 +1150,18 @@ Abbildung&nbsp;23.20
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 </div>
 </div>
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-hagmann2019" class="csl-entry" role="listitem">
-Hagmann, Gert. 2019. <em>Aufgabensammlung zu den Grundlagen der Elektrotechnik</em>. 18., durchgesehene Auflage. Wiebelsheim: AULA-Verlag.
-</div>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-schenke2023" class="csl-entry" role="listitem">
-Schenke, Stefan. 2023. <span>„<span>G</span>rundlagen der <span>E</span>lektrotechnik — <span>J</span>etzt schaffst <span>D</span>u die <span>P</span>rüfung!“</span> Helmut-Schmidt Universit<span>ä</span>t Hamburg, Germany; online. <a href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a>.
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">S. Schenke, <span>„<span>G</span>rundlagen der <span>E</span>lektrotechnik — <span>J</span>etzt schaffst <span>D</span>u die <span>P</span>rüfung!“</span>, Helmut-Schmidt Universit<span>ä</span>t Hamburg, Germany; online, 2023. Verfügbar unter: <a href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a></div>
+</div>
+<div id="ref-hagmann2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">G. Hagmann, <em>Aufgabensammlung zu den Grundlagen der Elektrotechnik</em>, 18., durchgesehene Auflage. Wiebelsheim: AULA-Verlag, 2019.</div>
 </div>
 </div>
 </section>
@@ -1218,13 +1219,14 @@ Schenke, Stefan. 2023. <span>„<span>G</span>rundlagen der <span>E</span>lektro
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -55,14 +55,15 @@ div.csl-indent {
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-847404b1397bb642580d6a42be486c59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -105,7 +106,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -154,13 +155,13 @@ window.Quarto = {
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
@@ -455,7 +456,7 @@ Abbildung&nbsp;25.1
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 <p>Die Wicklung, die an die Spannungsversorgung angeschlossen ist, ist die Eingangsseite und wird Primärwicklung genannt, mit <span class="math inline">\(N_1\)</span> Windungen. Die Sekundärwicklung ist dagegenen an der Ausgangsseite angeschlossen, mit der Anzahl <span class="math inline">\(N_2\)</span> Windungen, und ihr wird die Energie entnommen.</p>
 <p>Der Zusammenhang der Spannungen und Ströme auf der Primär- und Sekundärseite kann mithilfe des magnetischen Kreises betrachtet werden. Diese Zusammenhänge sollten bereits Elektrodynamik bekannt sein.</p>
 <section id="idealer-transformator" class="level2" data-number="25.1">
@@ -471,7 +472,7 @@ Abbildung&nbsp;25.2
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 <p>Von Interesse ist hier das Übersetzungsverhältnis <span class="math inline">\(ü\)</span>, da hiermit das Verhältnis der Spannungen <span class="math inline">\(U_1\)</span> und <span class="math inline">\(U_2\)</span> beschrieben werden kann. Unter Anwendung des Induktionsgesetzes</p>
 <p><span class="math display">\[u_q = N \cdot \frac{d \Phi_t}{dt}\]</span></p>
 <p>kann der Rückschluss auf die Anzahl der Windungen <span class="math inline">\(N\)</span> geschlossen werden.</p>
@@ -487,7 +488,7 @@ Abbildung&nbsp;25.3
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 <p>Dadurch ergeben sich für Strom und Widerstand:</p>
 <p><span class="math display">\[I_2 = ü \cdot I_1\]</span></p>
 <p><span class="math display">\[ü^2 \cdot R_L = \frac{U_1}{I_1}\]</span></p>
@@ -502,7 +503,7 @@ Abbildung&nbsp;25.4
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 </section>
 <section id="t-ersatzschaltbild" class="level2" data-number="25.2">
 <h2 data-number="25.2" class="anchored" data-anchor-id="t-ersatzschaltbild"><span class="header-section-number">25.2</span> T-Ersatzschaltbild</h2>
@@ -519,7 +520,7 @@ Abbildung&nbsp;25.5
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 <p>Da die Ersatzgrößen auf der fiktiven Sekundärseite den idealen Transformator schon enthalten, wird dieser oft nicht mitgezeichnet.</p>
 <div id="fig-tutChap10TErsatzschaltbildEinfach" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -531,7 +532,7 @@ Abbildung&nbsp;25.6
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 <p>Die Zusammenhänge der realen und fiktiven Größen der Sekundärseite sind hier zusammengefasst:</p>
 <p><span class="math display">\[R^{\prime}_2 = ü^2 \cdot R_2\]</span></p>
 <p><span class="math display">\[L^{\prime}_{2\sigma} = ü^2 \cdot L_{2\sigma}\]</span></p>
@@ -562,7 +563,7 @@ Abbildung&nbsp;25.7
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 <p>Zur Ermittlung der Werte muss bekannt sein, dass die Wicklungsverluste in Vergleich zu den Eisenverlusten und die Streuinduktivität der Hauptinduktivität vernachlässigbar klein sind. Dadurch vereinfacht sich das Ersatzschaltbild weiter:</p>
 <div id="fig-tutChap10TrafoLeerlaufEinfach" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -574,7 +575,7 @@ Abbildung&nbsp;25.8
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 <p>In der Praxis misst man nun die Nenneingangsspannung, den Nennleerlaufstrom und entweder die umgesetzte Wirkleistung <span class="math inline">\(P_L\)</span> oder den Phasenverschiebungswinkel <span class="math inline">\(\varphi_L\)</span> (zwischen <span class="math inline">\(U_{1N}\)</span> und <span class="math inline">\(I_{1L}\)</span>).</p>
 </section>
 <section id="kurzschlussversuch" class="level2" data-number="25.5">
@@ -591,7 +592,7 @@ Abbildung&nbsp;25.9
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 <p>Wenn man die T-Symmetrie in Betracht zieht vereinfacht sich das Ersatzschaltbild erheblich.</p>
 <div id="fig-tutChap10KurzschlussEinfach" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -603,7 +604,7 @@ Abbildung&nbsp;25.10
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 <p>Dabei gilt:</p>
 <p><span class="math display">\[R_k = R_1 + R^{\prime}_2 = 2 R_1\]</span></p>
 <p><span class="math display">\[L_k = L_{1\sigma} + L^{\prime}_{2\sigma} = 2 L_{1\sigma}\]</span></p>
@@ -617,12 +618,12 @@ Abbildung&nbsp;25.10
 <p>An einem T-Symmetrischen Transformator führen Sie den Leerlauf- und den Kurzschlussversuch durch. Die im Leerlauf gemessene Wirkleistungsaufnahme kann vernachlässigt werden.</p>
 <p>Zeichnen Sie das T-Ersatzschaltbild dieses Transformators.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 10.1
+<span class="screen-reader-only">Vorsicht</span>Lösung 10.1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -638,7 +639,7 @@ Abbildung&nbsp;25.11
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 </div>
 </div>
 </div>
@@ -658,12 +659,12 @@ Abbildung&nbsp;25.11
 <p><span class="math display">\[P_1 = 20\,W\]</span></p>
 <p>Zeichnen Sie das T-Ersatzschaltbild dieses Transformators.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 10.2
+<span class="screen-reader-only">Vorsicht</span>Lösung 10.2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -679,7 +680,7 @@ Abbildung&nbsp;25.12
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[1]</a></span></p>
 </div>
 </div>
 </div>
@@ -695,12 +696,12 @@ Abbildung&nbsp;25.12
 <p><span class="math display">\[P_1 = 50\,W\]</span></p>
 <p>Berechnen Sie die Elemente <span class="math inline">\(R_{Fe}\)</span> und <span class="math inline">\(L_h\)</span> des T-Ersatzschaltbildes.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 10.3
+<span class="screen-reader-only">Vorsicht</span>Lösung 10.3
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -724,12 +725,12 @@ Lösung 10.3
 <p><span class="math display">\[\varphi_1 = 45°\]</span></p>
 <p>Berechnen Sie die Elemente <span class="math inline">\(R_1\)</span>, <span class="math inline">\(R^{\prime}_2\)</span>, <span class="math inline">\(L_{1\sigma}\)</span> und <span class="math inline">\(L^{\prime}_{2\sigma}\)</span> des T-Ersatzschaltbildes, sowie die Werte des sekundären Wicklungswiderstandes <span class="math inline">\(R_2\)</span> und der sekundären Streuinduktivität <span class="math inline">\(L_{2\sigma}\)</span>.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 10.4
+<span class="screen-reader-only">Vorsicht</span>Lösung 10.4
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -746,9 +747,9 @@ Lösung 10.4
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-schenke2023" class="csl-entry" role="listitem">
-Schenke, Stefan. 2023. <span>„<span>G</span>rundlagen der <span>E</span>lektrotechnik — <span>J</span>etzt schaffst <span>D</span>u die <span>P</span>rüfung!“</span> Helmut-Schmidt Universit<span>ä</span>t Hamburg, Germany; online. <a href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a>.
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">S. Schenke, <span>„<span>G</span>rundlagen der <span>E</span>lektrotechnik — <span>J</span>etzt schaffst <span>D</span>u die <span>P</span>rüfung!“</span>, Helmut-Schmidt Universit<span>ä</span>t Hamburg, Germany; online, 2023. Verfügbar unter: <a href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a></div>
 </div>
 </div>
 </section>
@@ -806,13 +807,14 @@ Schenke, Stefan. 2023. <span>„<span>G</span>rundlagen der <span>E</span>lektro
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

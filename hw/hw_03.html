@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -90,14 +90,15 @@ div.csl-indent {
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-847404b1397bb642580d6a42be486c59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -140,7 +141,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -189,13 +190,13 @@ window.Quarto = {
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
@@ -491,12 +492,12 @@ Abbildung&nbsp;11.1: RLC-Schaltung für das Zeigerdiagramm.
 <h3 data-number="11.1.1" class="anchored" data-anchor-id="zeigerdiagramm"><span class="header-section-number">11.1.1</span> Zeigerdiagramm</h3>
 <p>Die Aufgabe besteht darin, das Zeigerdiagramm für alle Teilströme und Teilspannungen zu erstellen.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Schrittweise graphische Lösung
+<span class="screen-reader-only">Vorsicht</span>Schrittweise graphische Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -549,17 +550,17 @@ Abbildung&nbsp;11.2: Ersatzschaltbild eines Oszilloskop-Tastkopfes.
 </figcaption>
 </figure>
 </div>
-<p>vgl. <a href="https://www.elektroniktutor.de/analogtechnik/c_teiler.html">Kapazitiver Spannungsteiler</a> <span class="citation" data-cites="mietke2024">(<a href="../references.html#ref-mietke2024" role="doc-biblioref">Mietke 2024</a>)</span></p>
+<p>vgl. <a href="https://www.elektroniktutor.de/analogtechnik/c_teiler.html">Kapazitiver Spannungsteiler</a> <span class="citation" data-cites="mietke2024"><a href="../references.html#ref-mietke2024" role="doc-biblioref">[1]</a></span></p>
 <section id="sec-hw3p2" class="level3" data-number="11.2.1">
 <h3 data-number="11.2.1" class="anchored" data-anchor-id="sec-hw3p2"><span class="header-section-number">11.2.1</span> Spannungsteiler</h3>
 <p>Leiten Sie den Spannungsübertagungsfaktor <span class="math inline">\(\underline{H}_u=\underline{U}_{osz}/\underline{U}\)</span> allgemein für die angegebenen Bauteile her?</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -594,12 +595,12 @@ Z_2 = \frac{R_{2g}}{1+ j \omega R_{2g} C}, \quad \mbox{wobei} \quad  R_{2g}=\fra
 <h3 data-number="11.2.2" class="anchored" data-anchor-id="eingangsimpedanz"><span class="header-section-number">11.2.2</span> Eingangsimpedanz</h3>
 <p>Wie groß ist die Eingangsimpedanz <span class="math inline">\(\underline{Z}=\underline{U}/\underline{I}\)</span> des Tastkopfes?</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -617,12 +618,12 @@ Lösung
 <h3 data-number="11.2.3" class="anchored" data-anchor-id="kapazität"><span class="header-section-number">11.2.3</span> Kapazität</h3>
 <p>Wie muß die Kapazität <span class="math inline">\(C_1\)</span> gewählt werden, damit das Verhältnis <span class="math inline">\(\underline{H}=\underline{U}_{osz}/\underline{U}\)</span> für alle Frequenzen gleich groß ist?</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -667,12 +668,12 @@ Abbildung&nbsp;11.4: RC-Spannungsteiler
 <h3 data-number="11.3.1" class="anchored" data-anchor-id="spannungsverhältnis"><span class="header-section-number">11.3.1</span> Spannungsverhältnis</h3>
 <p>Berechnen Sie den komplexen Spannungsübertragungsfaktor <span class="math inline">\(\underline{H}_u=\underline{U}_2/\underline{U}_1\)</span>.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -705,12 +706,12 @@ Abbildung&nbsp;11.5: RC-Spannungsteiler zusammengefasst.
 <h3 data-number="11.3.2" class="anchored" data-anchor-id="betrag-und-phase"><span class="header-section-number">11.3.2</span> Betrag und Phase</h3>
 <p>Stellen Sie den Betrag und den Phasenwinkel von <span class="math inline">\(\underline{H}_u\)</span> als Funktion von <span class="math inline">\(\omega\)</span> für den Fall <span class="math inline">\(R_1 = 1\,\Omega\)</span>, <span class="math inline">\(R_2 = 100\,\Omega\)</span> und <span class="math inline">\(C = 1\,\mu F\)</span> mit Python dar.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -731,7 +732,7 @@ Lösung
 <div class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Definitionen</span></span>
@@ -764,12 +765,12 @@ Lösung
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, np.rad2deg(np.angle(H_u)))</span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'arg</span><span class="kw">(</span><span class="dv">$</span><span class="vs">H_u</span><span class="dv">$</span><span class="kw">)</span><span class="vs">/Grad'</span>)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'Frequenz f/Hz'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'Frequenz f/Hz'</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="fig-hw3p3" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hw3p3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="fig-hw3p3-1" class="cell-output cell-output-display quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
+<div id="fig-hw3p3-1" class="cell-output cell-output-display quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-hw3p3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <pre><code>Text(0.5, 0, 'Frequenz f/Hz')</code></pre>
@@ -780,7 +781,7 @@ Lösung
 </figure>
 </div>
 <div class="cell-output cell-output-display">
-<div id="fig-hw3p3-2" class="quarto-float quarto-figure quarto-figure-center anchored" height="431" width="611">
+<div id="fig-hw3p3-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="611" height="431">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-hw3p3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="hw_03_files/figure-html/fig-hw3p3-output-2.png" id="fig-hw3p3-2" data-ref-parent="fig-hw3p3" width="611" height="431" class="figure-img">
@@ -803,9 +804,9 @@ Abbildung&nbsp;11.6
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-mietke2024" class="csl-entry" role="listitem">
-Mietke, Detlef. 2024. <span>„Elektroniktutor“</span>. Techreport. Oberstufenzentrum f<span>ü</span>r Kommunikations-, Informations- und Medientechnik (OSZ-KIM), Berlin; online. <a href="https://www.elektroniktutor.de">https://www.elektroniktutor.de</a>.
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">D. Mietke, <span>„Elektroniktutor“</span>, Oberstufenzentrum f<span>ü</span>r Kommunikations-, Informations- und Medientechnik (OSZ-KIM), Berlin; online, techreport, 2024. Verfügbar unter: <a href="https://www.elektroniktutor.de">https://www.elektroniktutor.de</a></div>
 </div>
 </div>
 </section>
@@ -863,13 +864,14 @@ Mietke, Detlef. 2024. <span>„Elektroniktutor“</span>. Techreport. Oberstufen
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -55,14 +55,15 @@ div.csl-indent {
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-847404b1397bb642580d6a42be486c59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -105,7 +106,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -154,13 +155,13 @@ window.Quarto = {
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
@@ -446,19 +447,19 @@ Abbildung&nbsp;27.1
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="weissgerber2015d">(<a href="../references.html#ref-weissgerber2015d" role="doc-biblioref">Weißgerber 2015</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="weissgerber2015d"><a href="../references.html#ref-weissgerber2015d" role="doc-biblioref">[1]</a></span></p>
 <ol type="a">
 <li><p>Entwickeln Sie das Spannungsverhältnis <span class="math inline">\(\underline{U}_2/\underline{U}_1\)</span> in Form eines komplexen Nennoperators in algebraischer Form. (Hinweis: <span class="math inline">\(\frac{1}{Re\{\underline{Z}\} + j Im\{\underline{Z}\}}\)</span>)</p></li>
 <li><p>Bei welcher Kreisfrequenz <span class="math inline">\(\omega\)</span> ist die obige Bedingung erfüllt?</p></li>
 <li><p>Wie groß ist dann das Spannungsverhältnis <span class="math inline">\(\underline{U}_2/\underline{U}_1\)</span>, wenn <span class="math inline">\(R_{Lr} = R_{Lp}\)</span> und <span class="math inline">\(L_r = L_p\)</span> ist?</p></li>
 </ol>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 12.1
+<span class="screen-reader-only">Vorsicht</span>Lösung 12.1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -503,7 +504,7 @@ Abbildung&nbsp;27.2
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="weissgerber2015d">(<a href="../references.html#ref-weissgerber2015d" role="doc-biblioref">Weißgerber 2015</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="weissgerber2015d"><a href="../references.html#ref-weissgerber2015d" role="doc-biblioref">[1]</a></span></p>
 <ol type="a">
 <li><p>Entwickeln Sie für die gezeichnete Wechselstrombrücke die Abgleichbedingung und die Formel für <span class="math inline">\(\omega\)</span>. Welche Anwendung ergibt sich aus der Abgleichbedingung?</p></li>
 <li><p>Vereinfachen Sie die Ergebnisse mit <span class="math inline">\(R_1 = 2 \cdot R_2\)</span>, <span class="math inline">\(R_{r3} = R_{p4} = R\)</span> und <span class="math inline">\(L_{r3} = L_{p4} = L\)</span>.</p></li>
@@ -514,7 +515,7 @@ Abbildung&nbsp;27.2
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 12.2
+<span class="screen-reader-only">Vorsicht</span>Lösung 12.2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -572,7 +573,7 @@ Abbildung&nbsp;27.3
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="weissgerber2015d">(<a href="../references.html#ref-weissgerber2015d" role="doc-biblioref">Weißgerber 2015</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="weissgerber2015d"><a href="../references.html#ref-weissgerber2015d" role="doc-biblioref">[1]</a></span></p>
 <p>Für den gezeichneten Parallelschwingkreis mit <span class="math inline">\(R_{Cp} = 500\,\Omega\)</span>, <span class="math inline">\(C_p = 2\,\mu F\)</span>, <span class="math inline">\(R_{Lr} = 100\,\Omega\)</span> und <span class="math inline">\(L_r = 0,1\,H\)</span> ist die Resonanzkurve zu ermitteln, indem der gezeichnete Schwingkreis in einen Parallelschwingkreis mit idealen Bauelementen <span class="math inline">\(R_p\)</span>, <span class="math inline">\(C_p\)</span>, <span class="math inline">\(L_p\)</span> überführt wird.</p>
 <ol type="a">
 <li><p>Berechnen Sie die Resonanzkreisfrequenz.</p></li>
@@ -580,12 +581,12 @@ Abbildung&nbsp;27.3
 <li><p>Berechnen Sie anschließend die Güte <span class="math inline">\(Q_p\)</span> des idealen Parallelschwingkreises.</p></li>
 </ol>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 12.3
+<span class="screen-reader-only">Vorsicht</span>Lösung 12.3
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -638,9 +639,9 @@ Q_p = \frac{1}{G_p} \cdot \sqrt{\frac{C_p}{L_p}} = R_p \cdot \sqrt{\frac{C_p}{L_
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-weissgerber2015d" class="csl-entry" role="listitem">
-Weißgerber, Wilfried. 2015. <em>Elektrotechnik f<span>ü</span>r Ingenieure - Klausurenrechnen</em>. 6. Aufl. Springer Vieweg. <a href="https://doi.org/10.1007/978-3-658-09088-3">https://doi.org/10.1007/978-3-658-09088-3</a>.
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">W. Weißgerber, <em>Elektrotechnik f<span>ü</span>r Ingenieure - Klausurenrechnen</em>, 6. Aufl. Springer Vieweg, 2015. doi: <a href="https://doi.org/10.1007/978-3-658-09088-3">10.1007/978-3-658-09088-3</a>.</div>
 </div>
 </div>
 </section>
@@ -697,13 +698,14 @@ Weißgerber, Wilfried. 2015. <em>Elektrotechnik f<span>ü</span>r Ingenieure - K
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

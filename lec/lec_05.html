@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -90,14 +90,15 @@ div.csl-indent {
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-847404b1397bb642580d6a42be486c59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -140,7 +141,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -189,13 +190,13 @@ window.Quarto = {
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
@@ -435,9 +436,9 @@ window.Quarto = {
    
   <ul>
   <li><a href="#bode-diagramm" id="toc-bode-diagramm" class="nav-link active" data-scroll-target="#bode-diagramm"><span class="header-section-number">5.1</span> Bode-Diagramm</a></li>
-  <li><a href="#übertragungsfaktor-reisch2007" id="toc-übertragungsfaktor-reisch2007" class="nav-link" data-scroll-target="#übertragungsfaktor-reisch2007"><span class="header-section-number">5.2</span> Übertragungsfaktor <span class="citation" data-cites="reisch2007">(Reisch 2007)</span></a></li>
-  <li><a href="#angaben-in-db-reisch2007" id="toc-angaben-in-db-reisch2007" class="nav-link" data-scroll-target="#angaben-in-db-reisch2007"><span class="header-section-number">5.3</span> Angaben in dB <span class="citation" data-cites="reisch2007">(Reisch 2007)</span></a></li>
-  <li><a href="#verzögerungszeit-und-anstiegszeit-reisch2007" id="toc-verzögerungszeit-und-anstiegszeit-reisch2007" class="nav-link" data-scroll-target="#verzögerungszeit-und-anstiegszeit-reisch2007"><span class="header-section-number">5.4</span> Verzögerungszeit und Anstiegszeit <span class="citation" data-cites="reisch2007">(Reisch 2007)</span></a></li>
+  <li><a href="#übertragungsfaktor-reisch2007" id="toc-übertragungsfaktor-reisch2007" class="nav-link" data-scroll-target="#übertragungsfaktor-reisch2007"><span class="header-section-number">5.2</span> Übertragungsfaktor <span class="citation" data-cites="reisch2007">[2]</span></a></li>
+  <li><a href="#angaben-in-db-reisch2007" id="toc-angaben-in-db-reisch2007" class="nav-link" data-scroll-target="#angaben-in-db-reisch2007"><span class="header-section-number">5.3</span> Angaben in dB <span class="citation" data-cites="reisch2007">[2]</span></a></li>
+  <li><a href="#verzögerungszeit-und-anstiegszeit-reisch2007" id="toc-verzögerungszeit-und-anstiegszeit-reisch2007" class="nav-link" data-scroll-target="#verzögerungszeit-und-anstiegszeit-reisch2007"><span class="header-section-number">5.4</span> Verzögerungszeit und Anstiegszeit <span class="citation" data-cites="reisch2007">[2]</span></a></li>
   <li><a href="#nyquist-diagramm" id="toc-nyquist-diagramm" class="nav-link" data-scroll-target="#nyquist-diagramm"><span class="header-section-number">5.5</span> Nyquist-Diagramm</a>
   <ul class="collapse">
   <li><a href="#ortskurve-einer-rc-schaltung" id="toc-ortskurve-einer-rc-schaltung" class="nav-link" data-scroll-target="#ortskurve-einer-rc-schaltung"><span class="header-section-number">5.5.1</span> Ortskurve einer RC-Schaltung</a></li>
@@ -445,7 +446,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#rc-filter" id="toc-rc-filter" class="nav-link" data-scroll-target="#rc-filter"><span class="header-section-number">5.6</span> RC-Filter</a>
   <ul class="collapse">
-  <li><a href="#rc-tiefpaß-reisch2007" id="toc-rc-tiefpaß-reisch2007" class="nav-link" data-scroll-target="#rc-tiefpaß-reisch2007"><span class="header-section-number">5.6.1</span> RC-Tiefpaß <span class="citation" data-cites="reisch2007">(Reisch 2007)</span></a></li>
+  <li><a href="#rc-tiefpaß-reisch2007" id="toc-rc-tiefpaß-reisch2007" class="nav-link" data-scroll-target="#rc-tiefpaß-reisch2007"><span class="header-section-number">5.6.1</span> RC-Tiefpaß <span class="citation" data-cites="reisch2007">[2]</span></a></li>
   <li><a href="#rc-hochpaß" id="toc-rc-hochpaß" class="nav-link" data-scroll-target="#rc-hochpaß"><span class="header-section-number">5.6.2</span> RC-Hochpaß</a></li>
   <li><a href="#rc-bandpaß" id="toc-rc-bandpaß" class="nav-link" data-scroll-target="#rc-bandpaß"><span class="header-section-number">5.6.3</span> RC-Bandpaß</a></li>
   </ul></li>
@@ -482,10 +483,10 @@ window.Quarto = {
 
 <section id="bode-diagramm" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="bode-diagramm"><span class="header-section-number">5.1</span> Bode-Diagramm</h2>
-<p>“Unter Bode-Diagramm (engl. Bode plot) versteht man eine Darstellung von zwei Funktionsgraphen: Ein Graph zeigt den Betrag (Amplitudenverstärkung), der andere das Argument (die Phasenverschiebung) einer komplexwertigen Funktion in Abhängigkeit von der Frequenz. Diese Art der Darstellung ist nach Hendrik Wade Bode benannt, welcher diese Diagramme bei seinen Arbeiten in den Bell Laboratories in den 1930er Jahren benutzte.” <span class="citation" data-cites="wikipedia2021a">(<a href="../references.html#ref-wikipedia2021a" role="doc-biblioref">Wikipedia 2021</a>)</span></p>
+<p>“Unter Bode-Diagramm (engl. Bode plot) versteht man eine Darstellung von zwei Funktionsgraphen: Ein Graph zeigt den Betrag (Amplitudenverstärkung), der andere das Argument (die Phasenverschiebung) einer komplexwertigen Funktion in Abhängigkeit von der Frequenz. Diese Art der Darstellung ist nach Hendrik Wade Bode benannt, welcher diese Diagramme bei seinen Arbeiten in den Bell Laboratories in den 1930er Jahren benutzte.” <span class="citation" data-cites="wikipedia2021a"><a href="../references.html#ref-wikipedia2021a" role="doc-biblioref">[1]</a></span></p>
 </section>
 <section id="übertragungsfaktor-reisch2007" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="übertragungsfaktor-reisch2007"><span class="header-section-number">5.2</span> Übertragungsfaktor <span class="citation" data-cites="reisch2007">(<a href="../references.html#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span></h2>
+<h2 data-number="5.2" class="anchored" data-anchor-id="übertragungsfaktor-reisch2007"><span class="header-section-number">5.2</span> Übertragungsfaktor <span class="citation" data-cites="reisch2007"><a href="../references.html#ref-reisch2007" role="doc-biblioref">[2]</a></span></h2>
 <p>Ist die Eingangsgröße <span class="math inline">\(x(t)\)</span> eines linearen Netzwerks eine sinusförmige Wechselgröße der Kreisfrequenz <span class="math inline">\(\omega\)</span>, in komplexer Schreibweise</p>
 <p><span class="math display">\[
 x(t) = \operatorname{Re}(\underline{\hat{X}} e^{j\omega t}) = \operatorname{Re}(\underline{X}),
@@ -520,7 +521,7 @@ t_g(\omega) = \frac{d\varphi}{d\omega}
 <p>verzögert.</p>
 </section>
 <section id="angaben-in-db-reisch2007" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="angaben-in-db-reisch2007"><span class="header-section-number">5.3</span> Angaben in dB <span class="citation" data-cites="reisch2007">(<a href="../references.html#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span></h2>
+<h2 data-number="5.3" class="anchored" data-anchor-id="angaben-in-db-reisch2007"><span class="header-section-number">5.3</span> Angaben in dB <span class="citation" data-cites="reisch2007"><a href="../references.html#ref-reisch2007" role="doc-biblioref">[2]</a></span></h2>
 <p>Der Wert von Spannungs-, Strom- und Leistungsverstärkungen wird häufig als sog. Verstärkungsmaß <span class="math inline">\(a\)</span> in (deziBel) dB angegeben. Bei Spannungs- und Stromverstärkungen wird hierzu der (Zehner-)Logarithmus von <span class="math inline">\(A(f)\)</span> mit 20 dB multipliziert. Dies führt im Fall der <em>Spannungsverstärkung</em> auf</p>
 <p><span class="math display">\[
 a_v(f) = 20\,dB \cdot \log(A_v(f))
@@ -543,7 +544,7 @@ a_p(f) = 10\,dB \cdot \log(G_p(f)).
 <p>Wird demnach <span class="math inline">\(y = \log(a)\)</span> über <span class="math inline">\(x = log(f)\)</span> aufgetragen, so ergibt sich eine Gerade der Steigung <span class="math inline">\(m\)</span>, wodurch sich diese Größe leicht bestimmen läßt: Ein Anstieg der Spannungsverstärkung <span class="math inline">\(A_v \sim f\)</span> ergibt z.B. in doppeltlogarithmischer Auftragung eine Gerade der Steigung +1 bzw. 20 dB/dec, ein Abfall <span class="math inline">\(A_v \sim 1/f\)</span> entsprechend eine Gerade der Steigung −1 bzw. −20 dB/dec. Zeigt <span class="math inline">\(a_v\)</span> einen Abfall von 40 dB/dec, so kann umgekehrt auf eine Frequenzabhängigkeit <span class="math inline">\(\sim 1/f^2\)</span> geschlossen werden.</p>
 </section>
 <section id="verzögerungszeit-und-anstiegszeit-reisch2007" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="verzögerungszeit-und-anstiegszeit-reisch2007"><span class="header-section-number">5.4</span> Verzögerungszeit und Anstiegszeit <span class="citation" data-cites="reisch2007">(<a href="../references.html#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span></h2>
+<h2 data-number="5.4" class="anchored" data-anchor-id="verzögerungszeit-und-anstiegszeit-reisch2007"><span class="header-section-number">5.4</span> Verzögerungszeit und Anstiegszeit <span class="citation" data-cites="reisch2007"><a href="../references.html#ref-reisch2007" role="doc-biblioref">[2]</a></span></h2>
 <p>Bezeichnet <span class="math inline">\(y_0\)</span> den minimalen Wert der Ausgangsgröße eines linearen Netzwerks und <span class="math inline">\(y_s\)</span> ihren Hub, so läßt sich schreiben</p>
 <p><span class="math display">\[
 y(t) = y_0 + y_s f(t),
@@ -591,18 +592,18 @@ Abbildung&nbsp;5.1: Definition von Verzögerungszeit und Anstiegszeit
 </section>
 <section id="nyquist-diagramm" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="nyquist-diagramm"><span class="header-section-number">5.5</span> Nyquist-Diagramm</h2>
-<p>“Ein Nyquist-Diagramm, auch als Nyquist-Graph oder Nyquist-Plot bezeichnet, stellt die Ortskurve der Ausgangsgröße eines Regelkreises mit der Frequenz als Parameter dar. Es wird in der Regelungstechnik, Verstärkerkonstruktion und Signalaufbereitung verwendet, um die Stabilität eines Systems mit Rückkopplung zu beschreiben. Benannt ist es nach dem schwedisch-amerikanischen Physiker Harry Nyquist.” <span class="citation" data-cites="wikipedia2023">(<a href="../references.html#ref-wikipedia2023" role="doc-biblioref">Wikipedia 2023</a>)</span></p>
+<p>“Ein Nyquist-Diagramm, auch als Nyquist-Graph oder Nyquist-Plot bezeichnet, stellt die Ortskurve der Ausgangsgröße eines Regelkreises mit der Frequenz als Parameter dar. Es wird in der Regelungstechnik, Verstärkerkonstruktion und Signalaufbereitung verwendet, um die Stabilität eines Systems mit Rückkopplung zu beschreiben. Benannt ist es nach dem schwedisch-amerikanischen Physiker Harry Nyquist.” <span class="citation" data-cites="wikipedia2023"><a href="../references.html#ref-wikipedia2023" role="doc-biblioref">[3]</a></span></p>
 <p>“Passive lineare Schaltungen mit R, L und C an sinusförmigen Signalen sind durch ihre Impedanz, dem Wechselstromwiderstand oder seinem Leitwert, der Admittanz charakterisierbar. Die Schaltungen bilden von der Frequenz abhängige Spannungsteiler, deren Spannungsverlauf im Amplitudenfrequenzgang grafisch darstellbar ist. Die Phasenlage des Ausgangssignals bezogen auf das Eingangssignal kann grafisch im Phasenfrequenzgang gezeigt werden. Beide Darstellungen bilden das komplette Bodediagramm.</p>
 <p>Bei gegebenen Bauteilwerten kann für jede Frequenz die Impedanz Z berechnet und als Zeiger in ein Polarkoordinatensystem mit reeller und imaginärer Achse gezeichnet werden. Entsprechend den Achsenparametern gibt die Zeigerlänge dann die Impedanz, Admittanz, Ausgangsspannung oder den Ausgangsstrom an. Die Phasenlage ist durch den Winkel des Zeigers mit der reellen Achse bestimmt.</p>
 <p>In der Elektronik beschreibt die Systemtheorie unter anderem das Übertragungsverhalten von Signalen. Eine hilfreiche Voraussetzung ist das Rechnen mit komplexen Größen sowie deren Darstellungen im Polarkoordinatensystem oder der [Einführung in die komplexe Gaußschen Zahlenebene. Die oben genannten komplexen Größen sind von den Bauteilwerten abhängig. Die Impedanz Z einer dimensionierten RC- oder RL-Reihenschaltung ist frequenzabhängig. Die Ortskurve ist die Verbindung der errechneten Impedanzwerte in der komplexen Ebene durch einen Kurvenzug mit der Frequenz als Parameter. Die Zeigerlänge vom Nullpunkt zum Kurvenpunkt auf der Ortskurve entspricht dem skalaren Impedanzwert der aktuellen Frequenz. Der Phasenwinkel bezogen auf die Re-Achse zählt linksdrehend positiv und rechtsdrehend negativ. Die Lote vom Zeigerendpunkt auf die Koordinatenachsen ergeben für die jeweilige Frequenz als Achsenabschnitte die Wirk- und Blindkomponente des Systems.”</p>
-<p>Entnommen aus Elektrophysik – Spezielle Grundlagen, <a href="https://elektroniktutor.de/elektrophysik/ortskurv.html">Ortskurve</a> <span class="citation" data-cites="mietke2024">(<a href="../references.html#ref-mietke2024" role="doc-biblioref">Mietke 2024</a>)</span></p>
+<p>Entnommen aus Elektrophysik – Spezielle Grundlagen, <a href="https://elektroniktutor.de/elektrophysik/ortskurv.html">Ortskurve</a> <span class="citation" data-cites="mietke2024"><a href="../references.html#ref-mietke2024" role="doc-biblioref">[4]</a></span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Vergleich zum Zeigerdiagramm
+<span class="screen-reader-only">Hinweis</span>Vergleich zum Zeigerdiagramm
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -631,7 +632,7 @@ Abbildung&nbsp;5.2: RC-Schaltung für eine Ortskurve
 \underline{Z} = R_1 + \frac{1}{j \omega C_1}
 \]</span></p>
 <div id="cell-fig-nyq-rc_tp" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Spezifikation der Impedanz/Admittanz</span></span>
@@ -649,7 +650,7 @@ Abbildung&nbsp;5.2: RC-Schaltung für eine Ortskurve
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'Re{Z}'</span>)</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'Im{Z}'</span>)</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="fig-nyq-rc_tp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -663,11 +664,11 @@ Abbildung&nbsp;5.3: Ortskurve RC-Tiefpass
 </div>
 </div>
 </div>
-<p>“Die Ortskurve kann auch für die Parallelschaltung von R und C mit der Frequenz als Parameter gezeichnet werden. Im Polardiagramm wird sie durch die Zeiger aller Gesamtleitwerte oder Admittanzen gebildet und verläuft im 1. Quadranten parallel zur imaginären Achse. Die Achsenbezeichnungen der Leitwerte werden in Siemens (S) angeben. Die Phasenwinkel sind auf die reelle (Re) Achse bezogen positiv.” <span class="citation" data-cites="mietke2024">(<a href="../references.html#ref-mietke2024" role="doc-biblioref">Mietke 2024</a>)</span></p>
+<p>“Die Ortskurve kann auch für die Parallelschaltung von R und C mit der Frequenz als Parameter gezeichnet werden. Im Polardiagramm wird sie durch die Zeiger aller Gesamtleitwerte oder Admittanzen gebildet und verläuft im 1. Quadranten parallel zur imaginären Achse. Die Achsenbezeichnungen der Leitwerte werden in Siemens (S) angeben. Die Phasenwinkel sind auf die reelle (Re) Achse bezogen positiv.” <span class="citation" data-cites="mietke2024"><a href="../references.html#ref-mietke2024" role="doc-biblioref">[4]</a></span></p>
 </section>
 <section id="inversion-von-ortskurven" class="level3" data-number="5.5.2">
 <h3 data-number="5.5.2" class="anchored" data-anchor-id="inversion-von-ortskurven"><span class="header-section-number">5.5.2</span> Inversion von Ortskurven</h3>
-<p>“Bei der Konstruktion einer Ortskurve ist es oft notwendig von der Widerstandsform <span class="math inline">\(\underline{Z}(\omega)\)</span> auf die Leitwertsform <span class="math inline">\(\underline{Y}(\omega)\)</span> überzugehen und umgekehrt. Beide Funktionen gehen jeweils aus der Kehrwertbildung der anderen hervor, man nennt sie zueinander inverse Funktionen und die Kehrwertbildung selbst Inversion.” Kap. 5, <span class="citation" data-cites="buettner2014">(<a href="../references.html#ref-buettner2014" role="doc-biblioref">Büttner 2014</a>)</span></p>
+<p>“Bei der Konstruktion einer Ortskurve ist es oft notwendig von der Widerstandsform <span class="math inline">\(\underline{Z}(\omega)\)</span> auf die Leitwertsform <span class="math inline">\(\underline{Y}(\omega)\)</span> überzugehen und umgekehrt. Beide Funktionen gehen jeweils aus der Kehrwertbildung der anderen hervor, man nennt sie zueinander inverse Funktionen und die Kehrwertbildung selbst Inversion.” Kap. 5, <span class="citation" data-cites="buettner2014"><a href="../references.html#ref-buettner2014" role="doc-biblioref">[5]</a></span></p>
 <p>Die Inversion der Ortskurve hat als Ergebnis die zur Ausgangsschaltung äquivalente Schaltung. Diese Umrechnung ist immer dann notwendig, wenn es sich um gemischte Reihen- und Parallelschaltungen wie bei T- und <span class="math inline">\(\Pi\)</span>-Filtern, belasteten Filtern und Schwingkreisen handelt.</p>
 <p>Die Ortskurven einfacher RC- und RL-Schaltungen verhalten sich wie folgt:</p>
 <ul>
@@ -698,7 +699,7 @@ Abbildung&nbsp;5.3: Ortskurve RC-Tiefpass
 <section id="rc-filter" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="rc-filter"><span class="header-section-number">5.6</span> RC-Filter</h2>
 <section id="rc-tiefpaß-reisch2007" class="level3" data-number="5.6.1">
-<h3 data-number="5.6.1" class="anchored" data-anchor-id="rc-tiefpaß-reisch2007"><span class="header-section-number">5.6.1</span> RC-Tiefpaß <span class="citation" data-cites="reisch2007">(<a href="../references.html#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span></h3>
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="rc-tiefpaß-reisch2007"><span class="header-section-number">5.6.1</span> RC-Tiefpaß <span class="citation" data-cites="reisch2007"><a href="../references.html#ref-reisch2007" role="doc-biblioref">[2]</a></span></h3>
 <p>Ein Tiefpaß überträgt sinusförmige Wechselspannungen geringer Frequenz unverändert. Bei hohen Frequenzen bewirkt er eine Abschwächung und Phasenverschiebung. <a href="#fig-lec5rc_bode_schem" class="quarto-xref">Abbildung&nbsp;<span>5.4</span></a> zeigt für einen Tiefpaß den Verlauf von <span class="math inline">\(a_v\)</span>, der Spannungsverstärkung in decibel (dB) im Bode-Diagramm. In dem bei tiefen Frequenzen vorliegenden Durchlaßbereich ist <span class="math inline">\(a_v \approx 0 dB\)</span>; in dem bei hohen Frequenzen vorliegenden Sperrbereich erfolgt ein Abfall, der bei Tiefpaßnetzwerken aus konzentrierten Elementen durch eine Potenzfunktion gegeben ist. Gilt <span class="math inline">\(A_v \sim f^−m\)</span>, so spricht man von einem Tiefpaß m-ter Ordnung; im Bode-Diagramm entspricht dies einer Geraden der Steigung <span class="math inline">\(−m \cdot\)</span> 20 dB/dec. Der Übergang zwischen Sperrbereich und Durchlaßbereich wird durch die <em>Grenzfrequenz</em> <span class="math inline">\(f_g\)</span> des Tiefpasses markiert; bei dieser weist <span class="math inline">\(a_v\)</span> in guter Näherung den Wert −3 dB auf.</p>
 <div id="fig-lec5rc_bode_schem" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -739,7 +740,7 @@ A_v(f) =  \frac{1}{\sqrt{1+(f/f_g)^2}}
 \]</span></p>
 <p>Das zugehörige Bode-Diagramm ist in <a href="#fig-bode-rc_tp" class="quarto-xref">Abbildung&nbsp;<span>5.6</span></a> zu sehen. Für Frequenzen <span class="math inline">\(f \ll f_g\)</span> gilt in guter Näherung <span class="math inline">\(A_v \approx 1\)</span> bzw. <span class="math inline">\(a_v = 0 dB\)</span>; für Frequenzen <span class="math inline">\(f \gg f_g\)</span> dagegen <span class="math inline">\(A_v(f) \approx f_g/f\)</span>. Im Bode-Diagramm entspricht dies einem Abfall von 20 dB/dec, d.h. der betrachtete RC-Tiefpaß ist ein Tiefpaß erster Ordnung. Wird der für große Frequenzen beobachtete Kurvenverlauf im Bode-Diagramm linear zu 0 dB extrapoliert, so liefert der Schnittpunkt mit der 0 dB-Achse die Grenzfrequenz. Dort gilt <span class="math inline">\(A_v = 1/\sqrt{2}\)</span> und <span class="math inline">\(a_v(f_g) = 20\,dB \cdot \log(1/\sqrt{2}) \approx -3.01 \,dB\)</span>, während die Phasenverschiebung den Wert −45<span class="math inline">\(^{\circ}\)</span> aufweist.</p>
 <div id="cell-fig-bode-rc_tp" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Spezifikation der Impedanz/Admittanz</span></span>
@@ -769,7 +770,7 @@ A_v(f) =  \frac{1}{\sqrt{1+(f/f_g)^2}}
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'arg</span><span class="kw">(</span><span class="dv">$</span><span class="vs">H_v</span><span class="dv">$</span><span class="kw">)</span><span class="vs">/deg'</span>)</span>
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="fig-bode-rc_tp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -784,8 +785,8 @@ Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
 </div>
 </div>
 <p>Um in LTspice das Bode-Diagramm des RC-Tiefpasses zu erhalten, muss eine <a href="https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/lec5rctp.asc">.ac Analyse</a> durchgeführt werden. Diese kann mit Python wie folgt ausgewertet werden:</p>
-<div id="08a1bc55" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
+<div id="a52a75ab" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der AC SPICE Analyse der RC-Schaltung</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -827,7 +828,7 @@ Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
 <span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'Re'</span>)</span>
 <span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'Im'</span>)</span>
 <span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -905,8 +906,8 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 \]</span></p>
 <p>so stellt sich am Ausgang für <span class="math inline">\(t \gg \tau = 15\,\mu s\)</span> ein periodischer Spannungsverlauf mit dem Gleichanteil 2.5 V und dem Wechselanteil <span class="math inline">\(\Delta v_2(t)\)</span> ein.</p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="34d5b7bd" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
+<div id="676bfec6" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der TRAN SPICE Analyse der RC-Schaltung</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -933,7 +934,7 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 <span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Spannung in V'</span>)</span>
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -988,7 +989,7 @@ A_v(f) \approx \frac{f}{f_g}; \quad \text{mit} \quad f_g = \frac{1}{2\pi RC}
 \]</span></p>
 <p>Im Bode-Diagramm (<a href="#fig-bode-rc_hp" class="quarto-xref">Abbildung&nbsp;<span>5.10</span></a>) resultiert für <span class="math inline">\(f \ll f_g\)</span> ein Anstieg mit 20 dB/dec, d.h. es liegt ein Hochpaß 1. Ordnung vor. für <span class="math inline">\(\omega \tau \gg 1\)</span> bzw. <span class="math inline">\(f \gg f_g\)</span> nähert sich <span class="math inline">\(A_v(f)\)</span> dem Wert 1 (bzw. <span class="math inline">\(a_v \rightarrow 0\)</span> dB); die Phasenverschiebung zwischen Eingangs- und Ausgangssignal, die bei kleinen Frequenzen 90<span class="math inline">\(^{\circ}\)</span> beträgt, wird nun zu 0<span class="math inline">\(^{\circ}\)</span>. Bei der Grenzfrequenz gilt wie beim Tiefpaß <span class="math inline">\(A_v(f_g) = 1/\sqrt{2}\)</span>; die Phasenverschiebung zwischen Eingang und Ausgang ist hier jedoch 45<span class="math inline">\(^{\circ}\)</span>.</p>
 <div id="cell-fig-bode-rc_hp" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Spezifikation der Impedanz/Admittanz</span></span>
@@ -1018,7 +1019,7 @@ A_v(f) \approx \frac{f}{f_g}; \quad \text{mit} \quad f_g = \frac{1}{2\pi RC}
 <span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'arg</span><span class="kw">(</span><span class="dv">$</span><span class="vs">H_v</span><span class="dv">$</span><span class="kw">)</span><span class="vs">/deg'</span>)</span>
 <span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="fig-bode-rc_hp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1082,8 +1083,8 @@ v_2 \approx \tau \frac{dv_1}{dt} =
 \end{cases}
 \]</span></p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="330e2d27" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
+<div id="d92b9a40" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der TRAN SPICE Analyse des RC-Hochpasses</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1110,7 +1111,7 @@ v_2 \approx \tau \frac{dv_1}{dt} =
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Spannung in V'</span>)</span>
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1136,8 +1137,8 @@ Abbildung&nbsp;5.12: Bode-Diagramm eines Bandpasses
 <p><span class="math display">\[
 f_m = \sqrt{f_{gu} f_{go}}
 \]</span></p>
-<p>der beiden Grenzfrequenzen wird als Bandmittenfrequenz bezeichnet. Bei logarithmisch unterteilter Frequenzskala liegt <span class="math inline">\(f_m\)</span> genau in der Mitte zwischen <span class="math inline">\(f_{gu}\)</span> und <span class="math inline">\(f_{go}\)</span>. Ein Bandpaß heißt schmalbandig, falls <span class="math inline">\(B \ll f_m\)</span> gilt; als Maß gilt die relative Bandbreite <span class="math inline">\(B/f_m\)</span>. Die Abschwächung des Signals bei der Bandmittenfrequenz wird als Einfügungsdämpfung bezeichnet.” <span class="citation" data-cites="reisch2007">(<a href="../references.html#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span></p>
-<p>“Die als <a href="https://www.elektroniktutor.de/analogtechnik/wien.html">Wien-Glied</a> bezeichnete Schaltung ist ein spezieller RC-Bandpass. Im Wien-Robinson-Generator bestimmt dieses Filter die Ausgangsfrequenz. Er generiert Sinusfrequenzen mit sehr geringem Klirrfaktor. Im durchstimmbaren Sinusgenerator sind die beiden Widerstände durch gemeinsam einstellbare Potentiometer ersetzt. Diese Anordnung gibt es auch in Wechselstrom-Brückenschaltungen.” <span class="citation" data-cites="mietke2024">(<a href="../references.html#ref-mietke2024" role="doc-biblioref">Mietke 2024</a>)</span></p>
+<p>der beiden Grenzfrequenzen wird als Bandmittenfrequenz bezeichnet. Bei logarithmisch unterteilter Frequenzskala liegt <span class="math inline">\(f_m\)</span> genau in der Mitte zwischen <span class="math inline">\(f_{gu}\)</span> und <span class="math inline">\(f_{go}\)</span>. Ein Bandpaß heißt schmalbandig, falls <span class="math inline">\(B \ll f_m\)</span> gilt; als Maß gilt die relative Bandbreite <span class="math inline">\(B/f_m\)</span>. Die Abschwächung des Signals bei der Bandmittenfrequenz wird als Einfügungsdämpfung bezeichnet.” <span class="citation" data-cites="reisch2007"><a href="../references.html#ref-reisch2007" role="doc-biblioref">[2]</a></span></p>
+<p>“Die als <a href="https://www.elektroniktutor.de/analogtechnik/wien.html">Wien-Glied</a> bezeichnete Schaltung ist ein spezieller RC-Bandpass. Im Wien-Robinson-Generator bestimmt dieses Filter die Ausgangsfrequenz. Er generiert Sinusfrequenzen mit sehr geringem Klirrfaktor. Im durchstimmbaren Sinusgenerator sind die beiden Widerstände durch gemeinsam einstellbare Potentiometer ersetzt. Diese Anordnung gibt es auch in Wechselstrom-Brückenschaltungen.” <span class="citation" data-cites="mietke2024"><a href="../references.html#ref-mietke2024" role="doc-biblioref">[4]</a></span></p>
 <!-- ## Elementtransformation -->
 <!-- ![Tabelle der Elementtransformationen TP zu HP, zu BP und zu BS](../images/lec/lec5ElemTransf){#fig-lec5ElemTransf} -->
 <!-- Entn. aus [@deliyannis1998] -->
@@ -1202,36 +1203,36 @@ Abbildung&nbsp;5.13: Wien-Robinson-Brücke
 <p><span class="math display">\[
 \omega = \frac{1}{RC}.
 \]</span></p>
-<p><span class="citation" data-cites="lerch2016">(<a href="../references.html#ref-lerch2016" role="doc-biblioref">Lerch 2016</a>)</span> <span class="citation" data-cites="muehl2020">(<a href="../references.html#ref-muehl2020" role="doc-biblioref">Mühl 2020</a>)</span> <span class="citation" data-cites="wikipedia2019a">(<a href="../references.html#ref-wikipedia2019a" role="doc-biblioref">Wikipedia 2019</a>)</span> <span class="citation" data-cites="hewlett1942">(<a href="../references.html#ref-hewlett1942" role="doc-biblioref">Hewlett 1942</a>)</span></p>
+<p><span class="citation" data-cites="lerch2016"><a href="../references.html#ref-lerch2016" role="doc-biblioref">[6]</a></span> <span class="citation" data-cites="muehl2020"><a href="../references.html#ref-muehl2020" role="doc-biblioref">[7]</a></span> <span class="citation" data-cites="wikipedia2019a"><a href="../references.html#ref-wikipedia2019a" role="doc-biblioref">[8]</a></span> <span class="citation" data-cites="hewlett1942"><a href="../references.html#ref-hewlett1942" role="doc-biblioref">[9]</a></span></p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-buettner2014" class="csl-entry" role="listitem">
-Büttner, Wolf-Ewald. 2014. <em>Grundlagen der Elektrotechnik 2</em>. <span>OLDENBOURG</span> <span>WISSENSCHAFTSVERLAG</span>. <a href="https://doi.org/10.1524/9783110371796">https://doi.org/10.1524/9783110371796</a>.
-</div>
-<div id="ref-hewlett1942" class="csl-entry" role="listitem">
-Hewlett, W. R. 1942. <span>„Variable Frequency Oscillation Generator“</span>. U.S. Patent Office No. 2,268,872. <a href="https://de.wikipedia.org/wiki/Wien-Robinson-Brücke">https://de.wikipedia.org/wiki/Wien-Robinson-Brücke</a>.
-</div>
-<div id="ref-lerch2016" class="csl-entry" role="listitem">
-Lerch, Reinhard. 2016. <em>Elektrische Messtechnik: Analoge, digitale und computergestützte Verfahren</em>. Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-662-46941-5">https://doi.org/10.1007/978-3-662-46941-5</a>.
-</div>
-<div id="ref-mietke2024" class="csl-entry" role="listitem">
-Mietke, Detlef. 2024. <span>„Elektroniktutor“</span>. Techreport. Oberstufenzentrum f<span>ü</span>r Kommunikations-, Informations- und Medientechnik (OSZ-KIM), Berlin; online. <a href="https://www.elektroniktutor.de">https://www.elektroniktutor.de</a>.
-</div>
-<div id="ref-muehl2020" class="csl-entry" role="listitem">
-Mühl, Thomas. 2020. <em>Elektrische Messtechnik: Grundlagen, Messverfahren, Anwendungen</em>. Springer Fachmedien Wiesbaden. <a href="https://doi.org/10.1007/978-3-658-29116-7">https://doi.org/10.1007/978-3-658-29116-7</a>.
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-wikipedia2021a" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Wikipedia, <span>„<span>B</span>ode-<span>D</span>iagramm — <span>W</span>ikipedia<span>,</span> die freie <span>E</span>nzyklopädie“</span>. 2021. Verfügbar unter: <a href="https://de.wikipedia.org/w/index.php?title=Bode-Diagramm&amp;oldid=215892781">https://de.wikipedia.org/w/index.php?title=Bode-Diagramm&amp;oldid=215892781</a></div>
 </div>
 <div id="ref-reisch2007" class="csl-entry" role="listitem">
-Reisch, Michael. 2007. <em>Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE</em>. 2. Aufl. Springer. <a href="https://doi.org/10.1007/978-3-540-34015-7">https://doi.org/10.1007/978-3-540-34015-7</a>.
-</div>
-<div id="ref-wikipedia2019a" class="csl-entry" role="listitem">
-Wikipedia. 2019. <span>„<span>W</span>ien-<span>R</span>obinson-<span>B</span>rücke — <span>W</span>ikipedia<span>,</span> die freie <span>E</span>nzyklopädie“</span>. <a href="https://de.wikipedia.org/w/index.php?title=Wien-Robinson-Br%C3%BCcke&amp;oldid=194933790">https://de.wikipedia.org/w/index.php?title=Wien-Robinson-Br%C3%BCcke&amp;oldid=194933790</a>.
-</div>
-<div id="ref-wikipedia2021a" class="csl-entry" role="listitem">
-———. 2021. <span>„<span>B</span>ode-<span>D</span>iagramm — <span>W</span>ikipedia<span>,</span> die freie <span>E</span>nzyklopädie“</span>. <a href="https://de.wikipedia.org/w/index.php?title=Bode-Diagramm&amp;oldid=215892781">https://de.wikipedia.org/w/index.php?title=Bode-Diagramm&amp;oldid=215892781</a>.
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">M. Reisch, <em>Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE</em>, 2. Aufl. Springer, 2007, S. 1517. doi: <a href="https://doi.org/10.1007/978-3-540-34015-7">10.1007/978-3-540-34015-7</a>.</div>
 </div>
 <div id="ref-wikipedia2023" class="csl-entry" role="listitem">
-———. 2023. <span>„Ortskurve (Systemtheorie) — Wikipedia<span>,</span> die freie Enzyklopädie“</span>. <a href="https://de.wikipedia.org/w/index.php?title=Ortskurve_(Systemtheorie)&amp;oldid=237346128">https://de.wikipedia.org/w/index.php?title=Ortskurve_(Systemtheorie)&amp;oldid=237346128</a>.
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Wikipedia, <span>„Ortskurve (Systemtheorie) — Wikipedia<span>,</span> die freie Enzyklopädie“</span>. 2023. Verfügbar unter: <a href="https://de.wikipedia.org/w/index.php?title=Ortskurve_(Systemtheorie)&amp;oldid=237346128">https://de.wikipedia.org/w/index.php?title=Ortskurve_(Systemtheorie)&amp;oldid=237346128</a></div>
+</div>
+<div id="ref-mietke2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">D. Mietke, <span>„Elektroniktutor“</span>, Oberstufenzentrum f<span>ü</span>r Kommunikations-, Informations- und Medientechnik (OSZ-KIM), Berlin; online, techreport, 2024. Verfügbar unter: <a href="https://www.elektroniktutor.de">https://www.elektroniktutor.de</a></div>
+</div>
+<div id="ref-buettner2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">W.-E. Büttner, <em>Grundlagen der Elektrotechnik 2</em>. <span>OLDENBOURG</span> <span>WISSENSCHAFTSVERLAG</span>, 2014. doi: <a href="https://doi.org/10.1524/9783110371796">10.1524/9783110371796</a>.</div>
+</div>
+<div id="ref-lerch2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">R. Lerch, <em>Elektrische Messtechnik: Analoge, digitale und computergestützte Verfahren</em>. Springer Berlin Heidelberg, 2016. doi: <a href="https://doi.org/10.1007/978-3-662-46941-5">10.1007/978-3-662-46941-5</a>.</div>
+</div>
+<div id="ref-muehl2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">T. Mühl, <em>Elektrische Messtechnik: Grundlagen, Messverfahren, Anwendungen</em>. Springer Fachmedien Wiesbaden, 2020. doi: <a href="https://doi.org/10.1007/978-3-658-29116-7">10.1007/978-3-658-29116-7</a>.</div>
+</div>
+<div id="ref-wikipedia2019a" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">Wikipedia, <span>„<span>W</span>ien-<span>R</span>obinson-<span>B</span>rücke — <span>W</span>ikipedia<span>,</span> die freie <span>E</span>nzyklopädie“</span>. 2019. Verfügbar unter: <a href="https://de.wikipedia.org/w/index.php?title=Wien-Robinson-Br%C3%BCcke&amp;oldid=194933790">https://de.wikipedia.org/w/index.php?title=Wien-Robinson-Br%C3%BCcke&amp;oldid=194933790</a></div>
+</div>
+<div id="ref-hewlett1942" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">W. R. Hewlett, <span>„Variable Frequency Oscillation Generator“</span>. U.S. Patent Office No. 2,268,872, Januar 1942. Verfügbar unter: <a href="https://de.wikipedia.org/wiki/Wien-Robinson-Brücke">https://de.wikipedia.org/wiki/Wien-Robinson-Brücke</a></div>
 </div>
 </div>
 </section>
@@ -1289,13 +1290,14 @@ Wikipedia. 2019. <span>„<span>W</span>ien-<span>R</span>obinson-<span>B</span>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

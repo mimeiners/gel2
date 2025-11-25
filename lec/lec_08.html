@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -55,14 +55,15 @@ div.csl-indent {
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-847404b1397bb642580d6a42be486c59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -105,7 +106,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -154,13 +155,13 @@ window.Quarto = {
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
@@ -446,7 +447,7 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Die Inhalte sind dem gleichnamigen Kapitel 9 von <span class="citation" data-cites="reisch2007">(<a href="../references.html#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span> entnommen worden.</p>
+<p>Die Inhalte sind dem gleichnamigen Kapitel 9 von <span class="citation" data-cites="reisch2007"><a href="../references.html#ref-reisch2007" role="doc-biblioref">[1]</a></span> entnommen worden.</p>
 </div>
 </div>
 <p>Spulen dienen der Verwirklichung von Induktivitäten. Übertrager und Transformatoren nutzen die induktive Kopplung von i. allg. galvanisch getrennten Spulen zur Spannungstransformation und zum Übertragen von elektrischer Leistung. Spulen und Übertrager werden in der Elektronik hauptsa ̈chlich zum Aufbau von Stromversorgungen, galvanischen Trennungen (z.B. Trennverstärker) und bei der Verwirklichung von Übertragern (z.B. Filter) mit definiertem Frequenzgang verwendet.</p>
@@ -470,7 +471,7 @@ Abbildung&nbsp;8.1: <span class="math inline">\(B(H)\)</span>-Hysteresekurve, Ra
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Magnetisierung
+<span class="screen-reader-only">Hinweis</span>Magnetisierung
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -487,7 +488,7 @@ Magnetisierung
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Permeabilität
+<span class="screen-reader-only">Hinweis</span>Permeabilität
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -507,7 +508,7 @@ Permeabilität
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Durchflutungs- und Induktionsgesetz
+<span class="screen-reader-only">Hinweis</span>Durchflutungs- und Induktionsgesetz
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -532,7 +533,7 @@ v = \oint_C \mathbf{E} \cdot d\mathbf{s} = -\frac{d\phi}{dt}
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Induktionskoeffizienten ausgewählter Leiterformen
+<span class="screen-reader-only">Hinweis</span>Induktionskoeffizienten ausgewählter Leiterformen
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -591,7 +592,7 @@ r_s = r_{Cu} + r_{ks}.
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Impedanz, Eigenresonanz
+<span class="screen-reader-only">Hinweis</span>Impedanz, Eigenresonanz
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -611,7 +612,7 @@ Impedanz, Eigenresonanz
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Verlustfaktor, Spulengüte
+<span class="screen-reader-only">Hinweis</span>Verlustfaktor, Spulengüte
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -677,7 +678,7 @@ Abbildung&nbsp;8.7: PMICs
 </div>
 <p>“Power management integrated circuits (PMICs) are essential in today’s electronic devices. They manage power delivery and consumption, provide efficient power supplies, and drive power switches that control actuators and motors, as illustrated in <a href="#fig-lec8sPMICs" class="quarto-xref">Abbildung&nbsp;<span>8.7</span></a> PMICs can be integrated into complex integrated circuits (ICs) or implemented as dedicated ICs. In this book, the term PMIC will refer to any type of power integrated circuit.</p>
 <p>The importance of PMICs has grown significantly in recent years, driving innovation and progress in various industries, from consumer electronics to automotive and industrial applications. With the progress of machine learning and artificial intelligence (AI), intelligent power management is critical to supplying complex processors and sensors.</p>
-<p>PMICs have enabled the development of smaller, more energy-efficient, and reliable electronic solutions. They also play an essential role in environmental aspects and sustainability. By regulating the power supply of electronic devices, PMICs can reduce energy consumption and carbon emissions. Moreover, PMICs are crucial for the development of renewable energies, such as solar and wind power, by enabling efficient power conversion and management.” <span class="citation" data-cites="wicht2024">(<a href="../references.html#ref-wicht2024" role="doc-biblioref">Wicht 2024</a>)</span></p>
+<p>PMICs have enabled the development of smaller, more energy-efficient, and reliable electronic solutions. They also play an essential role in environmental aspects and sustainability. By regulating the power supply of electronic devices, PMICs can reduce energy consumption and carbon emissions. Moreover, PMICs are crucial for the development of renewable energies, such as solar and wind power, by enabling efficient power conversion and management.” <span class="citation" data-cites="wicht2024"><a href="../references.html#ref-wicht2024" role="doc-biblioref">[2]</a></span></p>
 <ul>
 <li><p>IoT Nodes and Energy Harvesting</p></li>
 <li><p>Portable Devices, Smartphones, and Wearables</p></li>
@@ -732,7 +733,7 @@ Abbildung&nbsp;8.8: Haupt- und Streuflüsse im Transformator
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Transformatorgleichungen
+<span class="screen-reader-only">Hinweis</span>Transformatorgleichungen
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -776,7 +777,7 @@ i_1 &amp;= \frac{1}{j\omega k \sqrt{L_1 L_2}} \cdot \underline{v}_2 = \frac{1}{k
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Vollständige Kopplung
+<span class="screen-reader-only">Hinweis</span>Vollständige Kopplung
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -830,7 +831,7 @@ Abbildung&nbsp;8.10: Idealer Übertrager. (a) Schaltsymbol und (b) Impedanztrans
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Impedanztransformation
+<span class="screen-reader-only">Hinweis</span>Impedanztransformation
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -884,7 +885,7 @@ Abbildung&nbsp;8.12: Ersatzschaltung eines unvollständig gekoppelten Übertrage
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Streugrad <span class="math inline">\(\sigma\)</span>
+<span class="screen-reader-only">Hinweis</span>Streugrad <span class="math inline">\(\sigma\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -976,18 +977,18 @@ P = C \cdot \Delta B \cdot J \cdot A_W A_e \cdot F_{Cu} \cdot f.
 \]</span></p>
 <p>Dabei bezeichnet <span class="math inline">\(C\)</span> einen von der Betriebsart abhängigen Faktor, der typischerweise im Bereich <span class="math inline">\(0.6 &lt; C &lt; 1\)</span> liegt und <span class="math inline">\(J\)</span> die Stromdichte in der Wicklung. Der Induktionshub <span class="math inline">\(\Delta B\)</span> ist bei niedrigen Frequenzen durch Sättigungseffekte und bei hohen Frequenzen durch die Erwärmung des Kerns aufgrund von Kernverlusten beschränkt. Die Stromdichte <span class="math inline">\(J\)</span> wird durch die Erwärmung der Wicklung aufgrund von Kupferverlusten begrenzt.</p>
 <p><em>Der wirksame Kernquerschnitt sollte im Sinne geringer Kosten und geringen Gewichts möglichst klein sein. Eine Steigerung der übertragbaren Leistung ist demnach nur durch eine Anhebung der Frequenz möglich. Mit zunehmender Schaltfrequenz kann das Gewicht – und damit auch der Preis – von Stromversorgungen und DC-DC-Wandlern gesenkt werden.</em></p>
-<p>Ein 100 W-Netzteil, realisiert mit einem bei Netzfrequenz (50 Hz) arbeitenden Transformator, hat eine Masse in der Größenordnung von 10 kg; durch Erhöhen der Schaltfrequenz auf 50 kHz kann diese auf unter 1 kg gesenkt werden, bei 500 kHz sind weniger als 400 g erreichbar. Wesentlich für diese Anhebung der Schaltfrequenz war die Entwicklung spezieller, verlustarmer Ferritwerkstoffe; vgl. mit <span class="citation" data-cites="zach2022">(<a href="../references.html#ref-zach2022" role="doc-biblioref">Zach 2022</a>)</span>, Kap. 15.</p>
+<p>Ein 100 W-Netzteil, realisiert mit einem bei Netzfrequenz (50 Hz) arbeitenden Transformator, hat eine Masse in der Größenordnung von 10 kg; durch Erhöhen der Schaltfrequenz auf 50 kHz kann diese auf unter 1 kg gesenkt werden, bei 500 kHz sind weniger als 400 g erreichbar. Wesentlich für diese Anhebung der Schaltfrequenz war die Entwicklung spezieller, verlustarmer Ferritwerkstoffe; vgl. mit <span class="citation" data-cites="zach2022"><a href="../references.html#ref-zach2022" role="doc-biblioref">[3]</a></span>, Kap. 15.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-reisch2007" class="csl-entry" role="listitem">
-Reisch, Michael. 2007. <em>Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE</em>. 2. Aufl. Springer. <a href="https://doi.org/10.1007/978-3-540-34015-7">https://doi.org/10.1007/978-3-540-34015-7</a>.
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">M. Reisch, <em>Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE</em>, 2. Aufl. Springer, 2007, S. 1517. doi: <a href="https://doi.org/10.1007/978-3-540-34015-7">10.1007/978-3-540-34015-7</a>.</div>
 </div>
 <div id="ref-wicht2024" class="csl-entry" role="listitem">
-Wicht, Bernhard. 2024. <em>Design of Power Management Integrated Circuits</em>. Wiley. <a href="https://doi.org/10.1002/9781119123095">https://doi.org/10.1002/9781119123095</a>.
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">B. Wicht, <em>Design of Power Management Integrated Circuits</em>. Wiley, 2024. doi: <a href="https://doi.org/10.1002/9781119123095">10.1002/9781119123095</a>.</div>
 </div>
 <div id="ref-zach2022" class="csl-entry" role="listitem">
-Zach, Franz. 2022. <em>Leistungselektronik: Ein Handbuch Band 1 / Band 2</em>. Springer Fachmedien Wiesbaden. <a href="https://doi.org/10.1007/978-3-658-31436-1">https://doi.org/10.1007/978-3-658-31436-1</a>.
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">F. Zach, <em>Leistungselektronik: Ein Handbuch Band 1 / Band 2</em>. Springer Fachmedien Wiesbaden, 2022. doi: <a href="https://doi.org/10.1007/978-3-658-31436-1">10.1007/978-3-658-31436-1</a>.</div>
 </div>
 </div>
 </section>
@@ -1045,13 +1046,14 @@ Zach, Franz. 2022. <em>Leistungselektronik: Ein Handbuch Band 1 / Band 2</em>. S
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

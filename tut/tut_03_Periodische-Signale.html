@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -90,14 +90,15 @@ div.csl-indent {
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-847404b1397bb642580d6a42be486c59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -140,7 +141,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -189,13 +190,13 @@ window.Quarto = {
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
@@ -492,7 +493,7 @@ window.Quarto = {
 <div id="cell-fig-gleichstrom" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>plt.axhline(y <span class="op">=</span> <span class="fl">0.75</span>)</span>
@@ -500,13 +501,13 @@ window.Quarto = {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Spannung in V'</span>)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Gleichstrom'</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-gleichstrom" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-gleichstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="tut_03_Periodische-Signale_files/figure-html/fig-gleichstrom-output-1.png" width="599" height="449" class="figure-img">
+<img src="tut_03_Periodische-Signale_files/figure-html/fig-gleichstrom-output-1.png" width="600" height="449" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gleichstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;18.1: Gleichstrom
@@ -518,7 +519,7 @@ Abbildung&nbsp;18.1: Gleichstrom
 <div id="cell-fig-wechselstrom" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="dv">1</span></span>
@@ -535,7 +536,7 @@ Abbildung&nbsp;18.1: Gleichstrom
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Spannung in V'</span>)</span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Wechselstrom'</span>)</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-wechselstrom" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -553,7 +554,7 @@ Abbildung&nbsp;18.2: Wechselstrom
 <div id="cell-fig-sinusstrom" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="dv">1</span></span>
@@ -569,13 +570,13 @@ Abbildung&nbsp;18.2: Wechselstrom
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Spannung in V'</span>)</span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Sinusstrom'</span>)</span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-sinusstrom" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-sinusstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="tut_03_Periodische-Signale_files/figure-html/fig-sinusstrom-output-1.png" width="608" height="449" class="figure-img">
+<img src="tut_03_Periodische-Signale_files/figure-html/fig-sinusstrom-output-1.png" width="609" height="449" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sinusstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;18.3: Sinusstrom
@@ -587,7 +588,7 @@ Abbildung&nbsp;18.3: Sinusstrom
 <div id="cell-fig-mischstrom" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="dv">1</span></span>
@@ -603,13 +604,13 @@ Abbildung&nbsp;18.3: Sinusstrom
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Spannung in V'</span>)</span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Mischstrom'</span>)</span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-mischstrom" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mischstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="tut_03_Periodische-Signale_files/figure-html/fig-mischstrom-output-1.png" width="608" height="449" class="figure-img">
+<img src="tut_03_Periodische-Signale_files/figure-html/fig-mischstrom-output-1.png" width="609" height="449" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mischstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;18.4: Mischstrom
@@ -621,7 +622,7 @@ Abbildung&nbsp;18.4: Mischstrom
 <div id="cell-fig-amplitudenModu" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="dv">1</span></span>
@@ -639,7 +640,7 @@ Abbildung&nbsp;18.4: Mischstrom
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Spannung in V'</span>)</span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'amplituden-moduliertes Signal'</span>)</span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-amplitudenmodu" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -657,7 +658,7 @@ Abbildung&nbsp;18.5: Amplituden-moduliertes Signal
 <div id="cell-fig-frequenzModu" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>fs <span class="op">=</span> <span class="dv">2000</span></span>
@@ -675,13 +676,13 @@ Abbildung&nbsp;18.5: Amplituden-moduliertes Signal
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Spannung in V'</span>)</span>
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'frequenz-moduliertes Signal'</span>)</span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-frequenzmodu" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-frequenzmodu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="tut_03_Periodische-Signale_files/figure-html/fig-frequenzmodu-output-1.png" width="608" height="449" class="figure-img">
+<img src="tut_03_Periodische-Signale_files/figure-html/fig-frequenzmodu-output-1.png" width="609" height="449" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-frequenzmodu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;18.6: Frequenz-moduliertes Signal
@@ -726,7 +727,7 @@ Abbildung&nbsp;18.7: Phasenlage
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="Fricke1982">(<a href="../references.html#ref-Fricke1982" role="doc-biblioref">Fricke und Vaske 1982</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="Fricke1982"><a href="../references.html#ref-Fricke1982" role="doc-biblioref">[1]</a></span></p>
 <section id="nullphasenwinkel" class="level4" data-number="18.2.2.1">
 <h4 data-number="18.2.2.1" class="anchored" data-anchor-id="nullphasenwinkel"><span class="header-section-number">18.2.2.1</span> Nullphasenwinkel</h4>
 <p>Allgemein gesprochen beginnt eine Sinusfunktion bei t=0 und geht um den Nullphasenwinkel <span class="math inline">\(\varphi_x\)</span> früher als die normale Sinusfunktion <span class="math inline">\(sin(\omega t)\)</span> durch Null. Das Vorzeichen des Winkel ist sehr wichtig!</p>
@@ -802,7 +803,7 @@ Abbildung&nbsp;18.8: Mischspannung
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[2]</a></span></p>
 <p><span class="math display">\[
 X_{eff} = \sqrt{X_o^2 + X_{eff\sim}^2}
 \]</span></p>
@@ -823,16 +824,16 @@ Abbildung&nbsp;18.9: Aufgabe 3.1
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="Fricke1982">(<a href="../references.html#ref-Fricke1982" role="doc-biblioref">Fricke und Vaske 1982</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="Fricke1982"><a href="../references.html#ref-Fricke1982" role="doc-biblioref">[1]</a></span></p>
 <p>Welche Elektrizitätsmenge Q wird während der Zeit t = 2 h befördert?<br>
 Tipp: <span class="math inline">\(Q = i \cdot t\)</span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -852,12 +853,12 @@ Q = \overline{|i|} t = 6.366 A \cdot 2 h = 12.73 Ah
 <h3 data-number="18.3.2" class="anchored" data-anchor-id="aufgabe-zeitfunktion-berechnen"><span class="header-section-number">18.3.2</span> Aufgabe Zeitfunktion berechnen</h3>
 <p>Die übliche Netzspannung 1982 betrug <span class="math inline">\(U = 220 V\)</span> bei der Netzfrequenz <span class="math inline">\(f = 50 Hz\)</span>. Es sind der Gleichrichtwert <span class="math inline">\(\overline{|u|}\)</span> und die Zeitfunktion u dieser Spannung zu bestimmen.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -896,14 +897,14 @@ Abbildung&nbsp;18.10: Aufgabe 3.3
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="albach2020a">(<a href="../references.html#ref-albach2020a" role="doc-biblioref">Albach und Fischer 2020</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="albach2020a"><a href="../references.html#ref-albach2020a" role="doc-biblioref">[3]</a></span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 3.3
+<span class="screen-reader-only">Vorsicht</span>Lösung 3.3
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -988,7 +989,7 @@ U_{eff} = \sqrt{\frac{1}{T} \int\limits_{0}^{T/2} \left( 2\hat{u} \frac{t}{T} \r
 <div id="cell-fig-aufg3.4" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>omega_t <span class="op">=</span> np.arange(<span class="dv">0</span>,<span class="dv">2</span><span class="op">*</span>np.pi,np.pi<span class="op">/</span>(<span class="dv">2</span><span class="op">**</span><span class="dv">6</span>))</span>
@@ -1011,13 +1012,13 @@ U_{eff} = \sqrt{\frac{1}{T} \int\limits_{0}^{T/2} \left( 2\hat{u} \frac{t}{T} \r
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'i'</span>)</span>
 <span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.xticks([0,63,127],['0','$\pi$','2$\pi$'])</span></span>
 <span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>plt.xticks(omega_t,list_ticks)</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-aufg3.4" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-aufg3.4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="tut_03_Periodische-Signale_files/figure-html/fig-aufg3.4-output-1.png" width="608" height="429" class="figure-img">
+<img src="tut_03_Periodische-Signale_files/figure-html/fig-aufg3.4-output-1.png" width="609" height="429" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-aufg3.4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;18.11: Aufgabe 3.4
@@ -1027,12 +1028,12 @@ Abbildung&nbsp;18.11: Aufgabe 3.4
 </div>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1065,12 +1066,12 @@ I = \sqrt{\frac{1}{2\pi} \cdot \int\limits_{0}^{2\pi} i^2 d\omega t}
 V\)</span> und der Frequenz <span class="math inline">\(f = 100 Hz\)</span> an.</p>
 <p>Welche Wirkleistung P wird im zeitlichen Mittel im Widerstand R umgesetzt?</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1100,19 +1101,19 @@ Abbildung&nbsp;18.12: Aufgabe 3.6
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[2]</a></span></p>
 <ol type="a">
 <li><p>Bestimmen Sie den Mittelwert <span class="math inline">\(\overline{u(t)}\)</span> des periodischen Spannungsverlaufes u(t).</p></li>
 <li><p>Berechnen Sie den Effektivwert U des periodischen Spannungsverlaufes u(t).</p></li>
 <li><p>Welche Wirkleistung P wird im zeitlichen Mittel im Widerstand R umgesetzt? (23.4)</p></li>
 </ol>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1153,19 +1154,19 @@ Abbildung&nbsp;18.13: Aufgabe 3.7
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="schenke2023">(<a href="../references.html#ref-schenke2023" role="doc-biblioref">Schenke 2023</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="schenke2023"><a href="../references.html#ref-schenke2023" role="doc-biblioref">[2]</a></span></p>
 <ol type="a">
 <li><p>Bestimmen Sie den Mittelwert <span class="math inline">\(\overline{i(t)}\)</span> des periodischen Stromverlaufes i(t).</p></li>
 <li><p>Berechnen Sie den Effektivwert I des periodischen Stromverlaufes i(t).</p></li>
 <li><p>Welche Wirkleistung P wird im zeitlichen Mittel im Widerstand R umgesetzt? (23.6)</p></li>
 </ol>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1194,15 +1195,15 @@ P = I^2 \cdot R
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-albach2020a" class="csl-entry" role="listitem">
-Albach, Manfred, und Janina Fischer. 2020. <em>Elektrotechnik Aufgabensammlung</em>. Pearson. <a href="https://elibrary.pearson.de/book/99.150005/9783863268930">https://elibrary.pearson.de/book/99.150005/9783863268930</a>.
-</div>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-Fricke1982" class="csl-entry" role="listitem">
-Fricke, H., und P. Vaske. 1982. <em>Elektrische Netzwerke Grundlagen der Elektrotechnik 1</em>. 17. Aufl. Stuttgart, Germany: B.G. Teubner.
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">H. Fricke und P. Vaske, <em>Elektrische Netzwerke Grundlagen der Elektrotechnik 1</em>, 17. Aufl. Stuttgart, Germany: B.G. Teubner, 1982.</div>
 </div>
 <div id="ref-schenke2023" class="csl-entry" role="listitem">
-Schenke, Stefan. 2023. <span>„<span>G</span>rundlagen der <span>E</span>lektrotechnik — <span>J</span>etzt schaffst <span>D</span>u die <span>P</span>rüfung!“</span> Helmut-Schmidt Universit<span>ä</span>t Hamburg, Germany; online. <a href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a>.
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S. Schenke, <span>„<span>G</span>rundlagen der <span>E</span>lektrotechnik — <span>J</span>etzt schaffst <span>D</span>u die <span>P</span>rüfung!“</span>, Helmut-Schmidt Universit<span>ä</span>t Hamburg, Germany; online, 2023. Verfügbar unter: <a href="http://www.stefan-schenke.de/get/">http://www.stefan-schenke.de/get/</a></div>
+</div>
+<div id="ref-albach2020a" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">M. Albach und J. Fischer, <em>Elektrotechnik Aufgabensammlung</em>. Pearson, 2020. Verfügbar unter: <a href="https://elibrary.pearson.de/book/99.150005/9783863268930">https://elibrary.pearson.de/book/99.150005/9783863268930</a></div>
 </div>
 </div>
 </section>
@@ -1260,13 +1261,14 @@ Schenke, Stefan. 2023. <span>„<span>G</span>rundlagen der <span>E</span>lektro
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

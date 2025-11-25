@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -90,14 +90,15 @@ div.csl-indent {
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-847404b1397bb642580d6a42be486c59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -140,7 +141,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -189,13 +190,13 @@ window.Quarto = {
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
@@ -479,7 +480,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Problemstellung
+<span class="screen-reader-only">Hinweis</span>Problemstellung
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -493,7 +494,7 @@ Problemstellung
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Symbolische Verfahren/Methoden
+<span class="screen-reader-only">Hinweis</span>Symbolische Verfahren/Methoden
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -515,7 +516,7 @@ Symbolische Verfahren/Methoden
 <li><p>Man schreibt die Differentialgleichungen des Netzwerkes mit den symbolischen Größen;</p></li>
 <li><p>Statt die Differentialgleichungen zu lösen, löst man die Gleichungen für die Symbole und bestimmt die unbekannten Größen.</p></li>
 <li><p>Man transformiert die gefundenen Symbolgrößen zurück in die gesuchten Sinusgrößen.</p></li>
-<li><p>entn. <span class="citation" data-cites="marinescu2016">(<a href="../references.html#ref-marinescu2016" role="doc-biblioref">Marinescu und Marinescu 2016</a>)</span></p></li>
+<li><p>entn. <span class="citation" data-cites="marinescu2016"><a href="../references.html#ref-marinescu2016" role="doc-biblioref">[1]</a></span></p></li>
 </ul>
 </section>
 <section id="vorteile-des-frequenzbereichs" class="level2" data-number="3.3">
@@ -535,7 +536,7 @@ Symbolische Verfahren/Methoden
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Euler’sche Formel
+<span class="screen-reader-only">Hinweis</span>Euler’sche Formel
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -553,7 +554,7 @@ a = \sqrt{\sigma^2 + \omega^2} \quad \mbox{und} \quad \varphi = \arctan\left(\fr
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exponentialdarstellung
+<span class="screen-reader-only">Hinweis</span>Exponentialdarstellung
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -569,7 +570,7 @@ Exponentialdarstellung
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Transformation
+<span class="screen-reader-only">Hinweis</span>Transformation
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -592,7 +593,7 @@ f(t) &amp;= \hat{A}\cos(\omega t + \varphi_a) \\
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-rotierender Zeiger, komplexer Momentanwert
+<span class="screen-reader-only">Hinweis</span>rotierender Zeiger, komplexer Momentanwert
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -607,7 +608,7 @@ rotierender Zeiger, komplexer Momentanwert
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-ruhender Zeiger, komplexer Scheitelwert, Phasor
+<span class="screen-reader-only">Hinweis</span>ruhender Zeiger, komplexer Scheitelwert, Phasor
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -622,7 +623,7 @@ ruhender Zeiger, komplexer Scheitelwert, Phasor
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-komplexer Effektivwert
+<span class="screen-reader-only">Hinweis</span>komplexer Effektivwert
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -656,7 +657,7 @@ Abbildung&nbsp;3.1: Phasor-Diagramm
 <section id="komplexe-zahlen-mit-python" class="level3" data-number="3.5.2">
 <h3 data-number="3.5.2" class="anchored" data-anchor-id="komplexe-zahlen-mit-python"><span class="header-section-number">3.5.2</span> Komplexe Zahlen mit Python</h3>
 <div id="cell-fig-komplexe_zahl" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Für mathematische Operationen benötigt man eine Bibliothek:</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Für mathematische Operationen benötigt man eine Bibliothek:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cmath, math</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -676,7 +677,7 @@ Abbildung&nbsp;3.1: Phasor-Diagramm
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Phase in Grad ='</span>, np.degrees(z_ph))</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Darstellung in der komplexen Ebene</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.plot(z.real, z.imag, <span class="st">'x'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.plot(z.real, z.imag, <span class="st">'x'</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Betrag = 5.656854249492381
 Phase in rad = 0.7853981633974483
@@ -697,9 +698,9 @@ Abbildung&nbsp;3.2: Darstellung einer komplexen Zahl
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-marinescu2016" class="csl-entry" role="listitem">
-Marinescu, Marlene, und Nicolae Marinescu. 2016. <em>Elektrotechnik f<span>ü</span>r Studium und Praxis</em>. Springer Fachmedien Wiesbaden. <a href="https://doi.org/10.1007/978-3-658-14159-2">https://doi.org/10.1007/978-3-658-14159-2</a>.
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">M. Marinescu und N. Marinescu, <em>Elektrotechnik f<span>ü</span>r Studium und Praxis</em>. Springer Fachmedien Wiesbaden, 2016. doi: <a href="https://doi.org/10.1007/978-3-658-14159-2">10.1007/978-3-658-14159-2</a>.</div>
 </div>
 </div>
 </section>
@@ -757,13 +758,14 @@ Marinescu, Marlene, und Nicolae Marinescu. 2016. <em>Elektrotechnik f<span>ü</s
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -90,14 +90,15 @@ div.csl-indent {
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-847404b1397bb642580d6a42be486c59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -140,7 +141,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -189,13 +190,13 @@ window.Quarto = {
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
@@ -471,7 +472,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Schwingungen (phys.)
+<span class="screen-reader-only">Hinweis</span>Schwingungen (phys.)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -481,7 +482,7 @@ Schwingungen (phys.)
 x(t) = \hat{x} \cos(\omega t + \varphi)
 \]</span></p>
 <p>beschreiben. Dabei bezeichnet <span class="math inline">\(\hat{x}\)</span> die Amplitude der Schwingung, <span class="math inline">\(\varphi\)</span> ist der Phasenwinkel und <span class="math inline">\(\omega\)</span> die Kreisfrequenz der Schwingung, die mit der Frequenz <span class="math inline">\(f\)</span> über den Faktor <span class="math inline">\(2 \pi\)</span> verknüpft ist.</p>
-<p>Für die Beschränkung auf harmonische Schwingungen gibt es zwei Gründe: Zum einen lassen sich solche linearen Systeme gut analytisch behandeln, und zum anderen lassen sich viele nichtlineare Systeme für hinreichend kleine Auslenkungen gut durch entsprechende lineare Systeme annähern. Für die Behandlung von schwingungsfähigen Systemen mit dem Computer bieten sich zwei Aspekte besonders an: Wir können die Effekte der linearen Schwingungsphysik visualisieren und zum Teil auch hörbar machen, um damit ein intuitiveres Verständnis dieser Phänomene zu gewinnen. Darüber hinaus bieten uns die in diesem Buch bereits besprochenen Verfahren die Möglichkeit, auch nichtlineare Schwingungen zu untersuchen.” Entn. <span class="citation" data-cites="natt2020">(<a href="../references.html#ref-natt2020" role="doc-biblioref">Natt 2020</a>)</span></p>
+<p>Für die Beschränkung auf harmonische Schwingungen gibt es zwei Gründe: Zum einen lassen sich solche linearen Systeme gut analytisch behandeln, und zum anderen lassen sich viele nichtlineare Systeme für hinreichend kleine Auslenkungen gut durch entsprechende lineare Systeme annähern. Für die Behandlung von schwingungsfähigen Systemen mit dem Computer bieten sich zwei Aspekte besonders an: Wir können die Effekte der linearen Schwingungsphysik visualisieren und zum Teil auch hörbar machen, um damit ein intuitiveres Verständnis dieser Phänomene zu gewinnen. Darüber hinaus bieten uns die in diesem Buch bereits besprochenen Verfahren die Möglichkeit, auch nichtlineare Schwingungen zu untersuchen.” Entn. <span class="citation" data-cites="natt2020"><a href="../references.html#ref-natt2020" role="doc-biblioref">[1]</a></span></p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -490,14 +491,14 @@ x(t) = \hat{x} \cos(\omega t + \varphi)
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Schwingkreise (elek.)
+<span class="screen-reader-only">Hinweis</span>Schwingkreise (elek.)
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>“Eine physikalische Anordnung ist schwingungsfähig, wenn sie mindestens zwei Energiespeicher unterschiedlichen physikalischen Charakters enthält, die miteinander Energie austauschen können. Eine solche Anordnung wird als Schwingkreis bezeichnet.</p>
 <p>In elektrischen Schaltungen sind diese unterschiedlichen Typen von Energiespeichern Induktivitäten, die magnetische Feldenergie speichern und Kapazitäten zur Speicherung elektrischer Feldenergie.</p>
 <p>Die in einer Kapazität gespeicherte Energie wird durch den Wert C der Kapazität und die Spannung u an der Kapazität bestimmt, die in einer Induktivität gespeicherte Energie durch den Wert L der Induktivität und den Strom i durch die Induktivität.</p>
-<p>Zu unterscheiden ist zwischen freien und erzwungenen Schwingungen. Bei freien Schwingungen […] wird einer physikalischen Anordnung einmalig Energie zugeführt und sie sich dann selbst überlassen. Durch unvermeidliche Verlustmechanismen, die dazu führen, dass im Schwingkreis pendelnde Energie in Wärme umgesetzt wird, klingt die Schwingung zeitlich ab. Bei erzwungenen Schwingungen […] wird einer zunächst energielosen Anordnung periodisch von außen Energie zugeführt. Ein Teil dieser Energie wird zur Kompensation der mit der Schwingungsintensität ansteigenden Verluste benötigt, der Rest pendelt zwischen den Energiespeichern. Ändert sich die Art der periodischen Energiezufuhr nicht, so stellt sich nach einem Einschwingvorgang in der Anordnung eine stationäre Schwingung (eingeschwungener Zustand) ein.” Entn. <span class="citation" data-cites="harriehausen2020">(<a href="../references.html#ref-harriehausen2020" role="doc-biblioref">Harriehausen und Schwarzenau 2020</a>)</span></p>
+<p>Zu unterscheiden ist zwischen freien und erzwungenen Schwingungen. Bei freien Schwingungen […] wird einer physikalischen Anordnung einmalig Energie zugeführt und sie sich dann selbst überlassen. Durch unvermeidliche Verlustmechanismen, die dazu führen, dass im Schwingkreis pendelnde Energie in Wärme umgesetzt wird, klingt die Schwingung zeitlich ab. Bei erzwungenen Schwingungen […] wird einer zunächst energielosen Anordnung periodisch von außen Energie zugeführt. Ein Teil dieser Energie wird zur Kompensation der mit der Schwingungsintensität ansteigenden Verluste benötigt, der Rest pendelt zwischen den Energiespeichern. Ändert sich die Art der periodischen Energiezufuhr nicht, so stellt sich nach einem Einschwingvorgang in der Anordnung eine stationäre Schwingung (eingeschwungener Zustand) ein.” Entn. <span class="citation" data-cites="harriehausen2020"><a href="../references.html#ref-harriehausen2020" role="doc-biblioref">[2]</a></span></p>
 </div>
 </div>
 <section id="zusammenfassung-der-physikalische-grundlagen" class="level2" data-number="6.1">
@@ -537,7 +538,7 @@ W_{ges} = const.
 </section>
 <section id="energiependel" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="energiependel"><span class="header-section-number">6.2</span> Energiependel</h2>
-<p>aus <span class="citation" data-cites="paul2017">(<a href="../references.html#ref-paul2017" role="doc-biblioref">Paul und Paul 2017</a>)</span>, Kap. 3.2.3</p>
+<p>aus <span class="citation" data-cites="paul2017"><a href="../references.html#ref-paul2017" role="doc-biblioref">[3]</a></span>, Kap. 3.2.3</p>
 <p>“Der ständige Energieaustausch zwischen Kondensator und Spule folgt aus den verkoppelten Strom-Spannungsbeziehungen: die Kondensatorspannung <span class="math inline">\(u_C\)</span> hat den Höchstwert bei Stromnulldurchgang und umgekehrt. Deshalb wechseln die Höchstwerte ständig nacheinander.</p>
 <div id="fig-lec6energiep" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -600,7 +601,7 @@ Abbildung&nbsp;6.2: RLC-Reihenschwingkreis
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Maschengleichung (Zeitbereich)
+<span class="screen-reader-only">Hinweis</span>Maschengleichung (Zeitbereich)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -616,7 +617,7 @@ v_1(0) &amp;= L \frac{di}{dt} + i\, R + \frac{1}{C} \int i dt  \\
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung der Differentialgleichung
+<span class="screen-reader-only">Hinweis</span>Lösung der Differentialgleichung
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -631,7 +632,7 @@ i(t) = \underbrace{I_0 e^{-d \omega_0 t}}_{Dämpfung} \underbrace{\sin\left(\sqr
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Spannungsübertragungsfaktor
+<span class="screen-reader-only">Hinweis</span>Spannungsübertragungsfaktor
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -648,11 +649,11 @@ Spannungsübertragungsfaktor
 <li><p>Dämpfung / Verlustfaktor <span class="math inline">\(d = \frac{1}{Q} = \frac{R}{\omega_0 L} = \frac{2 \delta}{\omega_0}\)</span></p>
 <p>“Der Kehrwert der Güte ist der <em>Verlustfaktor</em>, der bei Schwingkreisen auch als die <em>Dämpfung</em> bezeichnet wird.”</p></li>
 </ul>
-<p>[<span class="citation" data-cites="reisch2007">Reisch (<a href="../references.html#ref-reisch2007" role="doc-biblioref">2007</a>)</span>]<span class="citation" data-cites="wikipedia2025a">(<a href="../references.html#ref-wikipedia2025a" role="doc-biblioref">Wikipedia 2025</a>)</span> <span class="citation" data-cites="harriehausen2020">(<a href="../references.html#ref-harriehausen2020" role="doc-biblioref">Harriehausen und Schwarzenau 2020</a>)</span></p>
+<p>[<span class="citation" data-cites="reisch2007"><a href="../references.html#ref-reisch2007" role="doc-biblioref">[4]</a></span>]<span class="citation" data-cites="wikipedia2025a"><a href="../references.html#ref-wikipedia2025a" role="doc-biblioref">[5]</a></span> <span class="citation" data-cites="harriehausen2020"><a href="../references.html#ref-harriehausen2020" role="doc-biblioref">[2]</a></span></p>
 </div>
 </div>
-<div id="8a71ad64" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ltspice</span>
+<div id="4f75f543" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ltspice</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -681,7 +682,7 @@ Spannungsübertragungsfaktor
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, Hu_arg)</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'arg</span><span class="kw">(</span><span class="dv">$</span><span class="vs">H_u</span><span class="kw">(</span><span class="vs">f</span><span class="kw">)</span><span class="dv">$</span><span class="kw">)</span><span class="vs">/deg'</span>)</span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Frequenz f/Hz'</span>)</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -699,7 +700,7 @@ Spannungsübertragungsfaktor
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Resonanzfrequenz
+<span class="screen-reader-only">Hinweis</span>Resonanzfrequenz
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -744,7 +745,7 @@ Resonanzfrequenz
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Reihenkreis (Impedanz)
+<span class="screen-reader-only">Hinweis</span>Reihenkreis (Impedanz)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -763,7 +764,7 @@ Q &amp;= \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}} \quad \mbox{Güte}
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Parallelkreis (Admittanz)
+<span class="screen-reader-only">Hinweis</span>Parallelkreis (Admittanz)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -785,7 +786,7 @@ Q &amp;= \frac{\omega_0 C}{G} = \frac{1}{G}\sqrt{\frac{C}{L}} \quad \mbox{Güte}
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Verstimmung <span class="math inline">\(v\)</span>, relative Frequenzabweichung
+<span class="screen-reader-only">Hinweis</span>Verstimmung <span class="math inline">\(v\)</span>, relative Frequenzabweichung
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -800,7 +801,7 @@ v &amp;= \frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Normierte Darstellung
+<span class="screen-reader-only">Hinweis</span>Normierte Darstellung
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -818,7 +819,7 @@ Normierte Darstellung
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Betrag und Phase
+<span class="screen-reader-only">Hinweis</span>Betrag und Phase
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -834,7 +835,7 @@ Betrag und Phase
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-45<span class="math inline">\(^{\circ}\)</span>-, <span class="math inline">\(\frac{\pi}{4}\)</span>- oder 3dB-Frequenz
+<span class="screen-reader-only">Hinweis</span>45<span class="math inline">\(^{\circ}\)</span>-, <span class="math inline">\(\frac{\pi}{4}\)</span>- oder 3dB-Frequenz
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -857,7 +858,7 @@ Betrag und Phase
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Bandbreite BW (bandwidth)
+<span class="screen-reader-only">Hinweis</span>Bandbreite BW (bandwidth)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -880,24 +881,24 @@ Abbildung&nbsp;6.3: Eigenschaften von Schwingkreisen
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="harriehausen2020">(<a href="../references.html#ref-harriehausen2020" role="doc-biblioref">Harriehausen und Schwarzenau 2020</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="harriehausen2020"><a href="../references.html#ref-harriehausen2020" role="doc-biblioref">[2]</a></span></p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-harriehausen2020" class="csl-entry" role="listitem">
-Harriehausen, Thomas, und Dieter Schwarzenau. 2020. <em>Moeller Grundlagen der Elektrotechnik</em>. Springer Fachmedien Wiesbaden. <a href="https://doi.org/10.1007/978-3-658-27840-3">https://doi.org/10.1007/978-3-658-27840-3</a>.
-</div>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-natt2020" class="csl-entry" role="listitem">
-Natt, Oliver. 2020. <em>Physik mit Python</em>. Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-662-61274-3">https://doi.org/10.1007/978-3-662-61274-3</a>.
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">O. Natt, <em>Physik mit Python</em>. Springer Berlin Heidelberg, 2020. doi: <a href="https://doi.org/10.1007/978-3-662-61274-3">10.1007/978-3-662-61274-3</a>.</div>
+</div>
+<div id="ref-harriehausen2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">T. Harriehausen und D. Schwarzenau, <em>Moeller Grundlagen der Elektrotechnik</em>. Springer Fachmedien Wiesbaden, 2020. doi: <a href="https://doi.org/10.1007/978-3-658-27840-3">10.1007/978-3-658-27840-3</a>.</div>
 </div>
 <div id="ref-paul2017" class="csl-entry" role="listitem">
-Paul, Steffen, und Reinhold Paul. 2017. <em>Grundlagen der Elektrotechnik und Elektronik 3</em>. Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-662-44978-3">https://doi.org/10.1007/978-3-662-44978-3</a>.
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">S. Paul und R. Paul, <em>Grundlagen der Elektrotechnik und Elektronik 3</em>. Springer Berlin Heidelberg, 2017. doi: <a href="https://doi.org/10.1007/978-3-662-44978-3">10.1007/978-3-662-44978-3</a>.</div>
 </div>
 <div id="ref-reisch2007" class="csl-entry" role="listitem">
-Reisch, Michael. 2007. <em>Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE</em>. 2. Aufl. Springer. <a href="https://doi.org/10.1007/978-3-540-34015-7">https://doi.org/10.1007/978-3-540-34015-7</a>.
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">M. Reisch, <em>Elektronische Bauelemente: Funktion, Grundschaltungen, Modellierung mit SPICE</em>, 2. Aufl. Springer, 2007, S. 1517. doi: <a href="https://doi.org/10.1007/978-3-540-34015-7">10.1007/978-3-540-34015-7</a>.</div>
 </div>
 <div id="ref-wikipedia2025a" class="csl-entry" role="listitem">
-Wikipedia. 2025. <span>„Gütefaktor — Wikipedia<span>,</span> die freie Enzyklopädie“</span>. <a href="https://de.wikipedia.org/w/index.php?title=G%C3%BCtefaktor&amp;oldid=254210812">https://de.wikipedia.org/w/index.php?title=G%C3%BCtefaktor&amp;oldid=254210812</a>.
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Wikipedia, <span>„Gütefaktor — Wikipedia<span>,</span> die freie Enzyklopädie“</span>. 2025. Verfügbar unter: <a href="https://de.wikipedia.org/w/index.php?title=G%C3%BCtefaktor&amp;oldid=254210812">https://de.wikipedia.org/w/index.php?title=G%C3%BCtefaktor&amp;oldid=254210812</a></div>
 </div>
 </div>
 </section>
@@ -954,13 +955,14 @@ Wikipedia. 2025. <span>„Gütefaktor — Wikipedia<span>,</span> die freie Enzy
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

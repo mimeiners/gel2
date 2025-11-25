@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,14 +70,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-847404b1397bb642580d6a42be486c59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -120,7 +121,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -169,13 +170,13 @@ window.Quarto = {
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
@@ -471,12 +472,12 @@ Abbildung&nbsp;12.1: Bode-Diagramm des Zweitors
 <h3 data-number="12.1.1" class="anchored" data-anchor-id="funktion"><span class="header-section-number">12.1.1</span> Funktion</h3>
 <p>Welche Funktion erfüllt das gemessene Zweitor?</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -491,12 +492,12 @@ Lösung
 <h3 data-number="12.1.2" class="anchored" data-anchor-id="bauteilanordnung"><span class="header-section-number">12.1.2</span> Bauteilanordnung</h3>
 <p>Welche Bauteilanordnung vermuten Sie zwischen den zwei Toren? Zeichnen Sie ein Ersatzschaltbild des Zweitors mit Eingangsspannung <span class="math inline">\(\underline{U}_1\)</span> und Ausgangsspannung <span class="math inline">\(\underline{U}_2\)</span>.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -521,12 +522,12 @@ Abbildung&nbsp;12.2: Einfacher RC-Hochpass, Zweitor-Ersatzschaltbild
 <h3 data-number="12.1.3" class="anchored" data-anchor-id="spannungsübertragungsfunktion"><span class="header-section-number">12.1.3</span> Spannungsübertragungsfunktion</h3>
 <p>Leiten Sie die Spannungsübertragungsfunktion, <span class="math inline">\(\underline{H}_u=\underline{U}_2/\underline{U}_1\)</span>, Ihres Ersatzschaltbildes her.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -543,12 +544,12 @@ Lösung
 <h3 data-number="12.1.4" class="anchored" data-anchor-id="betrag-und-phase"><span class="header-section-number">12.1.4</span> Betrag und Phase</h3>
 <p>Bestimmen Sie Betrag und Phase der Spannungsübertragungsfunktion <span class="math inline">\(\underline{H}_u\)</span>.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -587,12 +588,12 @@ Hinweis
 </div>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -627,12 +628,12 @@ R = \frac{1}{2 \pi f_g C}
 <h3 data-number="12.1.6" class="anchored" data-anchor-id="grenzfrequenz"><span class="header-section-number">12.1.6</span> Grenzfrequenz</h3>
 <p>Wie groß ist die Grenzfrequenz für <span class="math inline">\(R=1\,k\Omega\)</span> und <span class="math inline">\(C=100\,nF\)</span>?</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -680,12 +681,12 @@ Abbildung&nbsp;12.4: RLC-Schaltung
 <h3 data-number="12.3.1" class="anchored" data-anchor-id="ortskurve-mit-omega-als-parameter"><span class="header-section-number">12.3.1</span> Ortskurve mit <span class="math inline">\(\omega\)</span> als Parameter</h3>
 <p><span class="math inline">\(f(\omega)\)</span> Konstruieren Sie die Ortskurve der Eingangsimpedanz <span class="math inline">\(\underline{Z}_e\)</span> mit der Kreisfrequenz <span class="math inline">\(\omega\)</span> als Parameter, <span class="math inline">\(0 \leq \omega \leq \infty\)</span>. Dabei sei der Widerstand <span class="math inline">\(R = 200\,\Omega\)</span>.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -702,7 +703,7 @@ Lösung
 <li><p>Ortskurve verschieben, <span class="math inline">\(\underline{Z}_e(\omega)=\underline{Z}_p(\omega) + R_1\)</span></p></li>
 </ul>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Import der Bibliotheken</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Import der Bibliotheken</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -739,7 +740,7 @@ Lösung
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>plt.axis([<span class="dv">0</span>, <span class="dv">200</span>, <span class="op">-</span><span class="dv">55</span>, <span class="dv">55</span>])</span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>plt.legend((<span class="st">'Zp'</span>, <span class="st">'Ze'</span>))</span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="fig-hw-04-nyq1" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hw-04-nyq1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -756,10 +757,10 @@ Lösung
 </div>
 </div>
 <div class="cell-output cell-output-display">
-<div id="fig-hw-04-nyq1-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="608" height="449">
+<div id="fig-hw-04-nyq1-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="609" height="449">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-hw-04-nyq1-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="hw_04_files/figure-html/fig-hw-04-nyq1-output-2.png" id="fig-hw-04-nyq1-2" data-ref-parent="fig-hw-04-nyq1" width="608" height="449" class="figure-img">
+<img src="hw_04_files/figure-html/fig-hw-04-nyq1-output-2.png" id="fig-hw-04-nyq1-2" data-ref-parent="fig-hw-04-nyq1" width="609" height="449" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-hw-04-nyq1-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b)
@@ -782,12 +783,12 @@ Abbildung&nbsp;12.5
 <h3 data-number="12.3.2" class="anchored" data-anchor-id="ortskurve-mit-r-als-parameter"><span class="header-section-number">12.3.2</span> Ortskurve mit R als Parameter</h3>
 <p>Konstruieren Sie die Ortskurve der Eingangsimpedanz <span class="math inline">\(\underline{Z}_e\)</span> mit dem Widerstand R als Parameter, <span class="math inline">\(0 \leq R \leq \infty\)</span>. Dabei sei die Kreisfrequenz <span class="math inline">\(\omega = 1.5e6 1/s\)</span>.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung
+<span class="screen-reader-only">Vorsicht</span>Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -810,7 +811,7 @@ Lösung
 <li><p>Ortskurve verschieben, <span class="math inline">\(\underline{Z}_e=\underline{Z}_p + R_1\)</span>.</p></li>
 </ul>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Bibliotheken</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Bibliotheken</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -844,7 +845,7 @@ Lösung
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Im'</span>)</span>
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>plt.axis([<span class="dv">0</span>, <span class="dv">200</span>, <span class="op">-</span><span class="dv">55</span>, <span class="dv">55</span>])</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="fig-hw-04-nyq2" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hw-04-nyq2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -861,10 +862,10 @@ Lösung
 </div>
 </div>
 <div class="cell-output cell-output-display">
-<div id="fig-hw-04-nyq2-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="608" height="449">
+<div id="fig-hw-04-nyq2-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="609" height="449">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-hw-04-nyq2-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="hw_04_files/figure-html/fig-hw-04-nyq2-output-2.png" id="fig-hw-04-nyq2-2" data-ref-parent="fig-hw-04-nyq2" width="608" height="449" class="figure-img">
+<img src="hw_04_files/figure-html/fig-hw-04-nyq2-output-2.png" id="fig-hw-04-nyq2-2" data-ref-parent="fig-hw-04-nyq2" width="609" height="449" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-hw-04-nyq2-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b)
@@ -939,13 +940,14 @@ Abbildung&nbsp;12.6
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

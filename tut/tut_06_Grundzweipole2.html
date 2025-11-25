@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -55,14 +55,15 @@ div.csl-indent {
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-847404b1397bb642580d6a42be486c59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -105,7 +106,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -154,13 +155,13 @@ window.Quarto = {
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Grundlagen-der-Elektrotechnik-2.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
@@ -470,7 +471,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Induktivität
+<span class="screen-reader-only">Wichtig</span>Induktivität
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -497,7 +498,7 @@ Abbildung&nbsp;21.1
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="Fricke1982">(<a href="../references.html#ref-Fricke1982" role="doc-biblioref">Fricke und Vaske 1982</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="Fricke1982"><a href="../references.html#ref-Fricke1982" role="doc-biblioref">[1]</a></span></p>
 <p>In komplexer Schreibweise erhält man:</p>
 <p><span class="math display">\[
 \underline{u} = L \frac{d\underline{i}}{dt} = L \hat{i} \frac{d(e^{j \omega t})}{dt} = j \omega L \hat{i} e^{j \omega t}
@@ -510,7 +511,7 @@ Abbildung&nbsp;21.1
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Merkspruch
+<span class="screen-reader-only">Wichtig</span>Merkspruch
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -543,7 +544,7 @@ Abbildung&nbsp;21.2
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="Fricke1982">(<a href="../references.html#ref-Fricke1982" role="doc-biblioref">Fricke und Vaske 1982</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="Fricke1982"><a href="../references.html#ref-Fricke1982" role="doc-biblioref">[1]</a></span></p>
 <p>Die Leistung an einer Induktivität schwingt zwar, wie beim Wirkwiderstand mit doppelter Frequenz, aber wechselt immer zwischen positiv und negativ. Sie nimmt damit während einer Spannungs-Viertelperiode Energie auf und baut ein magnetischen Feld auf. Während der nächsten Spannungs-Viertelperiode wird das Magnetfeld unter Energieabgabe wieder abgebaut.</p>
 <p>Die mittlere Leistung, also die Wirkleistung, ist somit <span class="math inline">\(P = 0\)</span>. Man nimmt daher auch zur Bezeichnung der Blindleistung den Formelbuchstaben P, sondern das Q. Es wird keine elektrische Energie in Wärme oder mechanische Leistung umgewandelt, deshalb nennt man es Blindleistung.</p>
 <p><span class="math display">\[Q = U I = I^2 X_L = -U^2 B_L\]</span></p>
@@ -561,7 +562,7 @@ Abbildung&nbsp;21.3
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="Fricke1982">(<a href="../references.html#ref-Fricke1982" role="doc-biblioref">Fricke und Vaske 1982</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="Fricke1982"><a href="../references.html#ref-Fricke1982" role="doc-biblioref">[1]</a></span></p>
 <p>Analog zur induktiven Blindleistung ist auch die kapazitive Blindleistung mit der doppelten Frequenz am schwingen und hat die mittlere Leistung, also Wirkleistung, <span class="math inline">\(P = 0\)</span>. Die Energie kommt hier aus dem Auf- und Abbau elektrischer Felder.</p>
 <p>Im Vergleich zwischen kapazitiver und induktiver Blindleistung stellt man fest, dass diese um 180° versetzt zueinander schwingen. Man setzt daher die kapazitive Blindleistung negativ an.</p>
 <p><span class="math display">\[Q = - U I = -U^2 B_C = I^2 X_C\]</span></p>
@@ -593,7 +594,7 @@ Abbildung&nbsp;21.4
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="Fricke1982">(<a href="../references.html#ref-Fricke1982" role="doc-biblioref">Fricke und Vaske 1982</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="Fricke1982"><a href="../references.html#ref-Fricke1982" role="doc-biblioref">[1]</a></span></p>
 </section>
 <section id="leistungen" class="level3" data-number="21.3.2">
 <h3 data-number="21.3.2" class="anchored" data-anchor-id="leistungen"><span class="header-section-number">21.3.2</span> Leistungen</h3>
@@ -691,7 +692,7 @@ Abbildung&nbsp;21.5
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="Fricke1982">(<a href="../references.html#ref-Fricke1982" role="doc-biblioref">Fricke und Vaske 1982</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="Fricke1982"><a href="../references.html#ref-Fricke1982" role="doc-biblioref">[1]</a></span></p>
 <div id="fig-tutChap6Zusammenfassung1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tutChap6Zusammenfassung1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -702,7 +703,7 @@ Abbildung&nbsp;21.6
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="Dzieia2016">(<a href="../references.html#ref-Dzieia2016" role="doc-biblioref">Dzieia u.&nbsp;a. 2016</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="Dzieia2016"><a href="../references.html#ref-Dzieia2016" role="doc-biblioref">[2]</a></span></p>
 <div id="fig-tutChap6Zusammenfassung2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tutChap6Zusammenfassung2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -713,7 +714,7 @@ Abbildung&nbsp;21.7
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="Dzieia2016">(<a href="../references.html#ref-Dzieia2016" role="doc-biblioref">Dzieia u.&nbsp;a. 2016</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="Dzieia2016"><a href="../references.html#ref-Dzieia2016" role="doc-biblioref">[2]</a></span></p>
 </section>
 </section>
 <section id="übungen" class="level2" data-number="21.4">
@@ -723,12 +724,12 @@ Abbildung&nbsp;21.7
 <p>(Vaske/Fricke Beispiel 3.13)</p>
 <p>An eine Spule mit vernachlässigbar kleinem Wirkwiderstand <span class="math inline">\(R\)</span> wird die Sinusspannung <span class="math inline">\(U = 125\,V\)</span> mit der Frequenz <span class="math inline">\(f = 40\,Hz\)</span> gelegt. Der Strommesser zeigt den Sinusstrom <span class="math inline">\(I = 10\,A\)</span> an. Welche Induktivität <span class="math inline">\(L\)</span> hat die Spule?</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 6.1
+<span class="screen-reader-only">Vorsicht</span>Lösung 6.1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -744,12 +745,12 @@ Lösung 6.1
 <p>(Vaske/Fricke Beispiel 3.21)</p>
 <p>Ein Verbraucher nimmt bei der Sinusspannung <span class="math inline">\(U = 220\,V\)</span> den Strom <span class="math inline">\(I = 10\,A\)</span> und die Leistung <span class="math inline">\(P = 1500\,W\)</span> auf. Wie groß sind Scheinleistung S, Wirkfaktor <span class="math inline">\(\cos(\varphi)\)</span>, Blindfaktor <span class="math inline">\(\sin(\varphi)\)</span>, Blindleistung <span class="math inline">\(Q\)</span> und Scheinwiderstand <span class="math inline">\(Z\)</span>?</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 6.2
+<span class="screen-reader-only">Vorsicht</span>Lösung 6.2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -767,7 +768,7 @@ Lösung 6.2
 </section>
 <section id="übung-6.3" class="level3" data-number="21.4.3">
 <h3 data-number="21.4.3" class="anchored" data-anchor-id="übung-6.3"><span class="header-section-number">21.4.3</span> Übung 6.3</h3>
-<p>Albach/Fischer Aufgabensammlung Kap. 8.1, 4. Aufgabe, <span class="citation" data-cites="albach2020a">(<a href="../references.html#ref-albach2020a" role="doc-biblioref">Albach und Fischer 2020</a>)</span></p>
+<p>Albach/Fischer Aufgabensammlung Kap. 8.1, 4. Aufgabe, <span class="citation" data-cites="albach2020a"><a href="../references.html#ref-albach2020a" role="doc-biblioref">[3]</a></span></p>
 <p>Das in der Abbildung gezeigte Netzwerk wird von einer harmonischen Spannung <span class="math inline">\(\underline{\hat{u}}_0 = \hat{u}_0 e^{j 0}\)</span> erregt. Zeichnen Sie je ein Ersatzschaltbild des gezeigten Netzwerks für <span class="math inline">\(f -&gt; 0 Hz\)</span> und <span class="math inline">\(f -&gt; \infty Hz\)</span> und berechnen Sie für beide Fälle den Strom <span class="math inline">\(\underline{\hat{i}}_R\)</span> durch den Widerstand <span class="math inline">\(R\)</span> in Abhängigkeit von der Quellenspannung <span class="math inline">\(\underline{\hat{u}}_0\)</span>.</p>
 <div id="fig-tutChap6Aufgabe6.3a" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -779,14 +780,14 @@ Abbildung&nbsp;21.8
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="albach2020a">(<a href="../references.html#ref-albach2020a" role="doc-biblioref">Albach und Fischer 2020</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="albach2020a"><a href="../references.html#ref-albach2020a" role="doc-biblioref">[3]</a></span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 6.3
+<span class="screen-reader-only">Vorsicht</span>Lösung 6.3
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -802,7 +803,7 @@ Abbildung&nbsp;21.9
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="albach2020a">(<a href="../references.html#ref-albach2020a" role="doc-biblioref">Albach und Fischer 2020</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="albach2020a"><a href="../references.html#ref-albach2020a" role="doc-biblioref">[3]</a></span></p>
 <p>In beiden Grenzfällen gilt <span class="math inline">\(\underline{\hat{i}}_R = 0\)</span>.</p>
 </div>
 </div>
@@ -822,14 +823,14 @@ Abbildung&nbsp;21.10
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="albach2020a">(<a href="../references.html#ref-albach2020a" role="doc-biblioref">Albach und Fischer 2020</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="albach2020a"><a href="../references.html#ref-albach2020a" role="doc-biblioref">[3]</a></span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 6.4
+<span class="screen-reader-only">Vorsicht</span>Lösung 6.4
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -860,14 +861,14 @@ Abbildung&nbsp;21.11
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="hagmann2019">(<a href="../references.html#ref-hagmann2019" role="doc-biblioref">Hagmann 2019</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="hagmann2019"><a href="../references.html#ref-hagmann2019" role="doc-biblioref">[4]</a></span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 6.5
+<span class="screen-reader-only">Vorsicht</span>Lösung 6.5
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -901,14 +902,14 @@ Abbildung&nbsp;21.12
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="hagmann2019">(<a href="../references.html#ref-hagmann2019" role="doc-biblioref">Hagmann 2019</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="hagmann2019"><a href="../references.html#ref-hagmann2019" role="doc-biblioref">[4]</a></span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 6.6
+<span class="screen-reader-only">Vorsicht</span>Lösung 6.6
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -939,14 +940,14 @@ Abbildung&nbsp;21.13
 </figcaption>
 </figure>
 </div>
-<p>Entn. aus <span class="citation" data-cites="hagmann2019">(<a href="../references.html#ref-hagmann2019" role="doc-biblioref">Hagmann 2019</a>)</span></p>
+<p>Entn. aus <span class="citation" data-cites="hagmann2019"><a href="../references.html#ref-hagmann2019" role="doc-biblioref">[4]</a></span></p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lösung 6.7
+<span class="screen-reader-only">Vorsicht</span>Lösung 6.7
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -973,18 +974,18 @@ Lösung 6.7
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-albach2020a" class="csl-entry" role="listitem">
-Albach, Manfred, und Janina Fischer. 2020. <em>Elektrotechnik Aufgabensammlung</em>. Pearson. <a href="https://elibrary.pearson.de/book/99.150005/9783863268930">https://elibrary.pearson.de/book/99.150005/9783863268930</a>.
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Fricke1982" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">H. Fricke und P. Vaske, <em>Elektrische Netzwerke Grundlagen der Elektrotechnik 1</em>, 17. Aufl. Stuttgart, Germany: B.G. Teubner, 1982.</div>
 </div>
 <div id="ref-Dzieia2016" class="csl-entry" role="listitem">
-Dzieia, M., H. Hübscher, D. Jagla, J. Klaue, H.-J. Petersen, und H. Wickert. 2016. <em>Elektronik Tabellen Betriebs- und Automatisierungstechnik</em>. 2. Aufl. Braunschweig: Westermann.
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">M. Dzieia, H. Hübscher, D. Jagla, J. Klaue, H.-J. Petersen, und H. Wickert, <em>Elektronik Tabellen Betriebs- und Automatisierungstechnik</em>, 2. Aufl. Braunschweig: Westermann, 2016.</div>
 </div>
-<div id="ref-Fricke1982" class="csl-entry" role="listitem">
-Fricke, H., und P. Vaske. 1982. <em>Elektrische Netzwerke Grundlagen der Elektrotechnik 1</em>. 17. Aufl. Stuttgart, Germany: B.G. Teubner.
+<div id="ref-albach2020a" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">M. Albach und J. Fischer, <em>Elektrotechnik Aufgabensammlung</em>. Pearson, 2020. Verfügbar unter: <a href="https://elibrary.pearson.de/book/99.150005/9783863268930">https://elibrary.pearson.de/book/99.150005/9783863268930</a></div>
 </div>
 <div id="ref-hagmann2019" class="csl-entry" role="listitem">
-Hagmann, Gert. 2019. <em>Aufgabensammlung zu den Grundlagen der Elektrotechnik</em>. 18., durchgesehene Auflage. Wiebelsheim: AULA-Verlag.
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">G. Hagmann, <em>Aufgabensammlung zu den Grundlagen der Elektrotechnik</em>, 18., durchgesehene Auflage. Wiebelsheim: AULA-Verlag, 2019.</div>
 </div>
 </div>
 </section>
@@ -1042,13 +1043,14 @@ Hagmann, Gert. 2019. <em>Aufgabensammlung zu den Grundlagen der Elektrotechnik</
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
