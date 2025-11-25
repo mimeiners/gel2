@@ -12,3 +12,5 @@ auto
 _book
 _freeze
 /.quarto/
+
+**/*.quarto_ipynb

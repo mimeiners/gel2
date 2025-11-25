@@ -7,23 +7,28 @@ lang: de
 book:
   title: "Grundlagen der Elektrotechnik 2"
   author:
-    - name: Mirco Meiners
-      orcid: 0000-0002-9709-4191
-      email: Mirco.Meiners@hs-bremen.de
+    - name: "Mirco Meiners"
+      orcid: "0000-0002-9709-4191"
+      email: "Mirco.Meiners@hs-bremen.de"
       corresponding: true
       roles: "Lead author"
       affiliation:
-        - name: Hochschule Bremen - City University of Applied Sciences (HSB)
-          city: Bremen
-          state: Germany
-          url: https://www.hs-bremen.de/person/mimeiners/ 
-    - name: Alicia von Ahlen
-      orcid: 0009-0007-3049-2455
-      email: avahlen@stud.hs-bremen.de
+        - id: hsb
+        - name: "Hochschule Bremen - City University of Applied Sciences"
+          city: "Bremen"
+          state: "Germany"
+          url: "https://www.hs-bremen.de/person/mimeiners/"
+    - name: "Alicia von Ahlen"
+      orcid: "0009-0007-3049-2455"
+      email: "avahlen@stud.hs-bremen.de"
       roles: "Supporting author"
-  date: last-modified
-#  license: "Apache-2.0 license"
+      affiliation:
+        - ref: hsb
 
+  date: last-modified
+
+  #  license: "Apache-2.0 license"
+  
   reader-mode: true
 
   page-footer:
@@ -75,36 +80,76 @@ book:
         - tut/tut_11_Klausurvorbereitung1.ipynb
         - tut/tut_12_Klausurvorbereitung2.ipynb
     - references.qmd
-    
+
+  output-file: "gel2"
+
+# Bibliography
 bibliography: _bibliography/references.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl"
+# csl: _bibliography/ieee.csl
+
 
 format:
   html:
     theme: flatly
+    fontsize: 1.2em
+    linestretch: 1.7
+    # mainfont: Helvetica Neue, Helvetica, Arial, sans
+    # monofont: Cascadia Mono, Menlo, Consolas, Courier New, Courier
+    # backgroundcolor: "white"
+    # fontcolor: "black"
+    highlight-style: github
     default-image-extension: svg
-  pdf:
-    documentclass: scrbook 
-    # lof: true
-    # lot: true
-    toc: true    
-    geometry:
-      - top=30mm
-      - left=20mm
-      - heightrounded
-    hyperrefoptions:
-      - linktoc=all
-    colorlinks: true
-    linkcolor: "blue"
-    biblio-style: "ieee"
-    highlight-style: "github"
-    mainfont: "Calibri"
-    # keep-tex: true
-    # default-image-extension: tex
-    output-file: gel2
+
   epub:
     theme: flatly
+    fontsize: 1.2em
+    linestretch: 1.7
+    # mainfont: Helvetica Neue, Helvetica, Arial, sans
+    # monofont: Cascadia Mono, Menlo, Consolas, Courier New, Courier
+    # backgroundcolor: "white"
+    # fontcolor: "black"
+    highlight-style: github
     default-image-extension: svg
-    output-file: gel2
-  
-execute:
-  freeze: auto
+
+  pdf:
+    documentclass: scrbook
+    classoption: [twoside]
+
+    keep-tex: true
+
+    toc: true
+    toc-depth: 3
+    # toc-title: "Table of contents"
+    # lof: true
+    # lot: true
+
+    number-sections: true
+    number-depth: 2
+        
+    papersize: a4
+    
+    geometry:
+      - inner=3cm
+      - outer=4cm
+      - top=3cm
+      - bottom=4cm
+      - headsep=22pt
+      - headheight=11pt
+      - footskip=33pt
+      - ignorehead
+      - ignorefoot
+      - heightrounded
+
+    fontsize: 11pt
+    pdfengine: xelatex
+
+    mainfont: "Calibri"
+    monofont: "Courier New"
+    mathfont: "TeX Gyre Termes Math"
+    
+    # include-in-header:
+    #   - frontmatter/header.tex
+    # template-partials:
+    # - frontmatter/before-body.tex
+    # - frontmatter/toc.tex
