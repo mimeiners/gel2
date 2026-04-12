@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Grundlagen der Elektrotechnik 2",
     "section": "",
-    "text": "Unsyllabus\n\n\n\nName\nBeschreibung\n\n\n\n\nKursus\nM 2.3 Grundlagen der Elektrotechnik 2 (GEL2)\n\n\nSemester\nSoSe26\n\n\nDozent\nProf. Dr.-Ing. M. Meiners\n\n\nSeminar\nMo., 09:00 Uhr - 11:00 Uhr, E 509",
+    "text": "Unsyllabus\n\n\n\nName\nBeschreibung\n\n\n\n\nKursus\nM 2.3 Grundlagen der Elektrotechnik 2 (GEL2)\n\n\nSemester\nSoSe 2026\n\n\nDozent\nProf. Dr.-Ing. M. Meiners\n\n\nSeminar\nMo., 09:00 Uhr - 11:00 Uhr, E 509",
     "crumbs": [
       "Unsyllabus"
     ]
@@ -32,11 +32,11 @@
     ]
   },
   {
-    "objectID": "lec/lec_01.html#schaltungssimulation-spice",
-    "href": "lec/lec_01.html#schaltungssimulation-spice",
+    "objectID": "lec/lec_01.html#eda-tools",
+    "href": "lec/lec_01.html#eda-tools",
     "title": "1  Einleitung",
-    "section": "1.2 Schaltungssimulation (SPICE)",
-    "text": "1.2 Schaltungssimulation (SPICE)\n\nLTspice Linear Technology\nngspice (open-source)\nELDO (Siemens EDA)\nSpectre (cadence)\nPrimeSim HSPICE (SYNOPSIS)",
+    "section": "1.2 EDA Tools",
+    "text": "1.2 EDA Tools\n\nPCB / System Design\n\nLTspice\nKiCad EDA\nAltium Designer\nSiemensEDA PCB tools\ncadence System Design & Analysis\n\nIC / Silicon Design\n\nIIC-OSIC-TOOLS (open-source)\nSiemensEDA IC tools\ncadence IC Design & Verification\nsynopsys silicon design (IC)",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -58,51 +58,18 @@
     "href": "lec/lec_01.html#code-editoren",
     "title": "1  Einleitung",
     "section": "1.4 Code Editoren",
-    "text": "1.4 Code Editoren\n\nVisual Studio Code\nEmacs\n\nVim",
+    "text": "1.4 Code Editoren\n\nVisual Studio Code\nSpyder IDE\nThonny (Micro-)Python IDE\nEmacs\nVim",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "lec/lec_01.html#datenverarbeitung-data-sciences",
-    "href": "lec/lec_01.html#datenverarbeitung-data-sciences",
+    "objectID": "lec/lec_01.html#berichtswesen-laborberichte",
+    "href": "lec/lec_01.html#berichtswesen-laborberichte",
     "title": "1  Einleitung",
-    "section": "1.5 Datenverarbeitung / Data Sciences",
-    "text": "1.5 Datenverarbeitung / Data Sciences\n\n1.5.1 Dateisystem / Journaled File System\n\nOrdner / Directories\nDateien / Files\n\n\n\n1.5.2 Tabellenformate / Rectangular Data\n\nComma-Separated-Values (CSV), Tab-Separated-Values (TSV)\nwireservice/csvkit: A suite of utilities for converting to and working with CSV, the king of tabular file formats.\njohnkerl/miller: Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON\nSpreadsheet (.xlsx, .ods)\n\n\n\n1.5.3 Serialisation\n\nData Serialization — The Hitchhiker’s Guide to Python\nJSON\nMessagePack: It’s like JSON. but fast and small.\n\n\n\n1.5.4 Spezielle Formate / Data Frames\n\nMastering Python Dictionaries: Efficient Data Storage and Retrieval - Adventures in Machine Learning\nMAT-File Versions - MATLAB & Simulink - MathWorks Deutschland\nHDF5 Or How I Learned To Love Data Compression And Partial I/O\nWas ist Apache Parquet?\n\n\n\n1.5.5 Embedded DB-Engines\n\nSQL, z.B. SQLite\nOLAP, z.B. DuckDB",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "lec/lec_01.html#schreibst-du-noch-oder-texst-du-schon",
-    "href": "lec/lec_01.html#schreibst-du-noch-oder-texst-du-schon",
-    "title": "1  Einleitung",
-    "section": "1.6 Schreibst Du noch oder TeXst Du schon?",
-    "text": "1.6 Schreibst Du noch oder TeXst Du schon?\n\nMikTeX (Windows, MacOS, Linux)\nMacTeX (MacOS)\nTeXLive (Linux)",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "lec/lec_01.html#latex-editoren",
-    "href": "lec/lec_01.html#latex-editoren",
-    "title": "1  Einleitung",
-    "section": "1.7 LaTeX Editoren",
-    "text": "1.7 LaTeX Editoren\n\nIDE’s\n\nTeXStudio\nTeXMaker\nTeXWorks\n\nKollaborative Frameworks\n\nShareLaTeX, Online LaTeX\nCoCalc - Online LaTeX",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "lec/lec_01.html#literaturverwaltung-und-latex",
-    "href": "lec/lec_01.html#literaturverwaltung-und-latex",
-    "title": "1  Einleitung",
-    "section": "1.8 Literaturverwaltung und LaTeX",
-    "text": "1.8 Literaturverwaltung und LaTeX\n\nCitavi im Detail &gt; Titel exportieren &gt; Export nach BibTeX\nZotero\nBenutzerdefinierte BibTex-Keys mit Zotero | nerdpause\nJabRef - Library Guide Univ. Melbourne",
+    "section": "1.5 Berichtswesen / Laborberichte",
+    "text": "1.5 Berichtswesen / Laborberichte\n\nquarto\n\nManuscripts\n\nLaTeX\n\nMikTeX (Windows, MacOS, Linux)\nMacTeX (MacOS)\nTeXLive (Linux)\n\nLaTeX Editoren\n\nTeXStudio\nTeXMaker\nTeXWorks\n\nKollaborative Frameworks\n\nShareLaTeX, Online LaTeX\nCoCalc - Online LaTeX\n\nein Service der AcademicCloud\n\n\nLiteraturverwaltung\n\nZotero\nCitavi\n\nDatenverarbeitung\n\nDateisystem Ordner und Dateien\nComma-Separated-Values (CSV), Tab-Separated-Values (TSV)\n\ncsvkit\nmiller\n\nSpreadsheet (.xlsx, .ods)",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -112,8 +79,8 @@
     "objectID": "lec/lec_01.html#schöne-neue-welt",
     "href": "lec/lec_01.html#schöne-neue-welt",
     "title": "1  Einleitung",
-    "section": "1.9 Schöne neue Welt",
-    "text": "1.9 Schöne neue Welt\n\n\n\nAMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016",
+    "section": "1.6 Schöne neue Welt",
+    "text": "1.6 Schöne neue Welt\n\n\n\nAMD Jaguar APU (CPU/GPU), 16 nm, 325 qmm, 2016",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -123,8 +90,8 @@
     "objectID": "lec/lec_01.html#halbleiterherstellung-infineon-dresden",
     "href": "lec/lec_01.html#halbleiterherstellung-infineon-dresden",
     "title": "1  Einleitung",
-    "section": "1.10 Halbleiterherstellung (Infineon, Dresden)",
-    "text": "1.10 Halbleiterherstellung (Infineon, Dresden)",
+    "section": "1.7 Halbleiterherstellung (Infineon, Dresden)",
+    "text": "1.7 Halbleiterherstellung (Infineon, Dresden)",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -134,8 +101,8 @@
     "objectID": "lec/lec_01.html#finfet-intel",
     "href": "lec/lec_01.html#finfet-intel",
     "title": "1  Einleitung",
-    "section": "1.11 FinFET (Intel)",
-    "text": "1.11 FinFET (Intel)",
+    "section": "1.8 FinFET (Intel)",
+    "text": "1.8 FinFET (Intel)",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -145,8 +112,8 @@
     "objectID": "lec/lec_01.html#tsmc-fab-next-gen-75-nm",
     "href": "lec/lec_01.html#tsmc-fab-next-gen-75-nm",
     "title": "1  Einleitung",
-    "section": "1.12 TSMC Fab (Next Gen 7/5 nm)",
-    "text": "1.12 TSMC Fab (Next Gen 7/5 nm)",
+    "section": "1.9 TSMC Fab (Next Gen 7/5 nm)",
+    "text": "1.9 TSMC Fab (Next Gen 7/5 nm)",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -156,8 +123,8 @@
     "objectID": "lec/lec_01.html#es-war-einmal",
     "href": "lec/lec_01.html#es-war-einmal",
     "title": "1  Einleitung",
-    "section": "1.13 Es war einmal …",
-    "text": "1.13 Es war einmal …\n\n\n\n1906 die Elektronenröhre\n\n\n\n\n\n1947 der erste Transistor, Bell Labs Foto",
+    "section": "1.10 Es war einmal …",
+    "text": "1.10 Es war einmal …\n\n\n\n1906 die Elektronenröhre\n\n\n\n\n\n1947 der erste Transistor, Bell Labs Foto",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -167,8 +134,8 @@
     "objectID": "lec/lec_01.html#damals-und-heute",
     "href": "lec/lec_01.html#damals-und-heute",
     "title": "1  Einleitung",
-    "section": "1.14 Damals und heute",
-    "text": "1.14 Damals und heute\n\n\n\n1958 Jack Kilby’s erster IC\n\n\n\n\n\nModerner IC",
+    "section": "1.11 Damals und heute",
+    "text": "1.11 Damals und heute\n\n\n\n1958 Jack Kilby’s erster IC\n\n\n\n\n\nModerner IC",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -178,8 +145,8 @@
     "objectID": "lec/lec_01.html#systemhierarchie",
     "href": "lec/lec_01.html#systemhierarchie",
     "title": "1  Einleitung",
-    "section": "1.15 Systemhierarchie",
-    "text": "1.15 Systemhierarchie\n\n\n\nFunktionsblöcke eines elektronischen Systems\n\n\n\nNutzen Sie Hierarchien zur Beschreibung komplexer Systeme\nTeile und herrsche",
+    "section": "1.12 Systemhierarchie",
+    "text": "1.12 Systemhierarchie\n\n\n\nFunktionsblöcke eines elektronischen Systems\n\n\n\nNutzen Sie Hierarchien zur Beschreibung komplexer Systeme\nTeile und herrsche",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -189,8 +156,8 @@
     "objectID": "lec/lec_01.html#schnittstellen-zur-aussenwelt",
     "href": "lec/lec_01.html#schnittstellen-zur-aussenwelt",
     "title": "1  Einleitung",
-    "section": "1.16 Schnittstellen zur Aussenwelt",
-    "text": "1.16 Schnittstellen zur Aussenwelt\n\n\n\nInterfacing",
+    "section": "1.13 Schnittstellen zur Aussenwelt",
+    "text": "1.13 Schnittstellen zur Aussenwelt\n\n\n\nInterfacing",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -200,8 +167,8 @@
     "objectID": "lec/lec_01.html#meeting-mit-einem-system",
     "href": "lec/lec_01.html#meeting-mit-einem-system",
     "title": "1  Einleitung",
-    "section": "1.17 Meeting mit einem System",
-    "text": "1.17 Meeting mit einem System\n\n\n\nDrahtloses Kommunikationssystem",
+    "section": "1.14 Meeting mit einem System",
+    "text": "1.14 Meeting mit einem System\n\n\n\nDrahtloses Kommunikationssystem",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -211,8 +178,8 @@
     "objectID": "lec/lec_01.html#system-in-a-package-sip",
     "href": "lec/lec_01.html#system-in-a-package-sip",
     "title": "1  Einleitung",
-    "section": "1.18 System in a Package (SiP)",
-    "text": "1.18 System in a Package (SiP)\n\n\n\nBeschleunigungssensor",
+    "section": "1.15 System in a Package (SiP)",
+    "text": "1.15 System in a Package (SiP)\n\n\n\nBeschleunigungssensor",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -222,8 +189,8 @@
     "objectID": "lec/lec_01.html#sie-werden-unsere-experten",
     "href": "lec/lec_01.html#sie-werden-unsere-experten",
     "title": "1  Einleitung",
-    "section": "1.19 Sie werden unsere Experten",
-    "text": "1.19 Sie werden unsere Experten\n\nHintergrundwissen\n\nSystemverständnis, Architektur, Herstellungsverfahren, Implementation\n\nUnterbewusste Kompetenz\n\nAbgespeicherte Erfahrungen aus Erfolgsgeschichten und Misserfolgen\n\nSpezialwissen\n\nBerufsspezifisches Wissen\n\nTeamwork Haltung\n\nKommunikationsfähigkeit, Berichtswesen und technische Präsentation\n\nKreativität\nTool-Kenntnisse",
+    "section": "1.16 Sie werden unsere Experten",
+    "text": "1.16 Sie werden unsere Experten\n\nHintergrundwissen\n\nSystemverständnis, Architektur, Herstellungsverfahren, Implementation\n\nUnterbewusste Kompetenz\n\nAbgespeicherte Erfahrungen aus Erfolgsgeschichten und Misserfolgen\n\nSpezialwissen\n\nBerufsspezifisches Wissen\n\nTeamwork Haltung\n\nKommunikationsfähigkeit, Berichtswesen und technische Präsentation\n\nKreativität\nTool-Kenntnisse",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -233,8 +200,8 @@
     "objectID": "lec/lec_01.html#lernziele-des-moduls",
     "href": "lec/lec_01.html#lernziele-des-moduls",
     "title": "1  Einleitung",
-    "section": "1.20 Lernziele des Moduls",
-    "text": "1.20 Lernziele des Moduls\n\nElektrische Systeme mathematisch und graphisch im Zeit- und Frequenzbereich beschreiben\nNetzwerkanalyse mit RLC-Gliedern\nSpezielle Netzwerke, wie Messbrücken, Schwingkreise und ideale Transformatoren, dimensionieren.",
+    "section": "1.17 Lernziele des Moduls",
+    "text": "1.17 Lernziele des Moduls\n\nElektrische Systeme mathematisch und graphisch im Zeit- und Frequenzbereich beschreiben\nNetzwerkanalyse mit RLC-Gliedern\nSpezielle Netzwerke, wie Messbrücken, Schwingkreise und ideale Transformatoren, dimensionieren.",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -244,8 +211,8 @@
     "objectID": "lec/lec_01.html#seminaristischer-unterricht",
     "href": "lec/lec_01.html#seminaristischer-unterricht",
     "title": "1  Einleitung",
-    "section": "1.21 Seminaristischer Unterricht",
-    "text": "1.21 Seminaristischer Unterricht\n\nKomplexe Wechselstromrechnung\nDiskrete Bauelemente und ihre Modellierung (RLC)\nMethodik der Netzwerkanalyse\nAnwendungsbeispiele mit EDA-Werkzeugen und wissenschaftliches Rechnen (Scientific Computing)",
+    "section": "1.18 Seminaristischer Unterricht",
+    "text": "1.18 Seminaristischer Unterricht\n\nKomplexe Wechselstromrechnung\nDiskrete Bauelemente und ihre Modellierung (RLC)\nMethodik der Netzwerkanalyse\nAnwendungsbeispiele mit EDA-Werkzeugen und wissenschaftliches Rechnen (Scientific Computing)",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -255,8 +222,8 @@
     "objectID": "lec/lec_01.html#beschreibung-elektrotechnischer-systeme",
     "href": "lec/lec_01.html#beschreibung-elektrotechnischer-systeme",
     "title": "1  Einleitung",
-    "section": "1.22 Beschreibung elektrotechnischer Systeme",
-    "text": "1.22 Beschreibung elektrotechnischer Systeme\n\nverschiedene Stufen der Vereinfachung\nFelder / Wellen / Optik / HF-Technik\n\nMaxwell-Gleichungen \\[\\begin{align}\n\\oint \\mathbf{H} d\\mathbf{s} &= \\iint \\mathbf{J} + \\dot{D} d\\mathbf{A} \\\\\n\\oint \\mathbf{E} d\\mathbf{s} &= - \\iint \\dot{B} d\\mathbf{A}\n\\end{align}\\]\n\nbei lokaler Konzentration der Feldenergie \\(\\Rightarrow\\) quasi-statische Näherung\nMikrowellentechnik / Leitungstechnik\n\nverteilte Schaltungen \\(l\\), \\(c\\), \\(\\rho\\)\nKopplung, Laufzeit \\(\\tau = a/v\\)\n\nkleine Systeme mit \\(a &lt;&lt; \\lambda\\) bzw. kurze Laufzeiten mit \\(\\tau &lt;&lt; T\\)\nRegelungstechnik / Impulstechnik\n\nErsatzschaltungen\n(Block-)Schaltbilder\n\neingeschwungener Zustand\nNF-Technik\n\nstationär-periodische Signale\n\nSinussignale\nEnergietechnik\n\nmonofrequente Signale \\(U = Z \\cdot I\\)\n\nFrequenz \\(f \\rightarrow 0\\)\nGleichstromtechnik\n\nOhmsches Gesetz \\(U = R \\cdot I\\)",
+    "section": "1.19 Beschreibung elektrotechnischer Systeme",
+    "text": "1.19 Beschreibung elektrotechnischer Systeme\n\nverschiedene Stufen der Vereinfachung\nFelder / Wellen / Optik / HF-Technik\n\nMaxwell-Gleichungen \\[\\begin{align}\n\\oint \\mathbf{H} d\\mathbf{s} &= \\iint \\mathbf{J} + \\dot{D} d\\mathbf{A} \\\\\n\\oint \\mathbf{E} d\\mathbf{s} &= - \\iint \\dot{B} d\\mathbf{A}\n\\end{align}\\]\n\nbei lokaler Konzentration der Feldenergie \\(\\Rightarrow\\) quasi-statische Näherung\nMikrowellentechnik / Leitungstechnik\n\nverteilte Schaltungen \\(l\\), \\(c\\), \\(\\rho\\)\nKopplung, Laufzeit \\(\\tau = a/v\\)\n\nkleine Systeme mit \\(a &lt;&lt; \\lambda\\) bzw. kurze Laufzeiten mit \\(\\tau &lt;&lt; T\\)\nRegelungstechnik / Impulstechnik\n\nErsatzschaltungen\n(Block-)Schaltbilder\n\neingeschwungener Zustand\nNF-Technik\n\nstationär-periodische Signale\n\nSinussignale\nEnergietechnik\n\nmonofrequente Signale \\(U = Z \\cdot I\\)\n\nFrequenz \\(f \\rightarrow 0\\)\nGleichstromtechnik\n\nOhmsches Gesetz \\(U = R \\cdot I\\)",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -266,8 +233,8 @@
     "objectID": "lec/lec_01.html#konzentrierte-schaltelemente",
     "href": "lec/lec_01.html#konzentrierte-schaltelemente",
     "title": "1  Einleitung",
-    "section": "1.23 Konzentrierte Schaltelemente",
-    "text": "1.23 Konzentrierte Schaltelemente\n\n\n\n\n\n\nHinweisStromdichte\n\n\n\n\\[\n\\frac{\\int E(r,t) ds}{\\iint J(r,t) dA} = \\frac{u(t)}{i(t)} \\Rightarrow R\n\\]\n\n\n\n\n\n\n\n\nHinweisVerschiebungsdichte\n\n\n\n\\[\n\\frac{\\iint D(r,t) dA}{\\int E(r,t) ds} = \\frac{q(t)}{u(t)} \\Rightarrow C\n\\]\n\n\n\n\n\n\n\n\nHinweisFlußdichte\n\n\n\n\\[\n\\frac{\\iint B(r,t) dA}{\\oint H(r,t) ds} = \\frac{u(t)}{i(t)} \\Rightarrow L\n\\]",
+    "section": "1.20 Konzentrierte Schaltelemente",
+    "text": "1.20 Konzentrierte Schaltelemente\n\n\n\n\n\n\nHinweisStromdichte\n\n\n\n\\[\n\\frac{\\int E(r,t) ds}{\\iint J(r,t) dA} = \\frac{u(t)}{i(t)} \\Rightarrow R\n\\]\n\n\n\n\n\n\n\n\nHinweisVerschiebungsdichte\n\n\n\n\\[\n\\frac{\\iint D(r,t) dA}{\\int E(r,t) ds} = \\frac{q(t)}{u(t)} \\Rightarrow C\n\\]\n\n\n\n\n\n\n\n\nHinweisFlußdichte\n\n\n\n\\[\n\\frac{\\iint B(r,t) dA}{\\oint H(r,t) ds} = \\frac{u(t)}{i(t)} \\Rightarrow L\n\\]",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
@@ -277,8 +244,8 @@
     "objectID": "lec/lec_01.html#harmonische-signale",
     "href": "lec/lec_01.html#harmonische-signale",
     "title": "1  Einleitung",
-    "section": "1.24 Harmonische Signale …",
-    "text": "1.24 Harmonische Signale …\n\n\n\n\n\n\nHinweisals Zeitfunktion\n\n\n\n\\[\nu(t) = \\hat{U} \\cos(\\omega t + \\phi)\n\\]\n\n\n\n\n\n\n\n\nHinweisals Zeiger / komplexe Grösse (Phasor)\n\n\n\n\\[\nU = \\lvert \\hat{U} \\lvert e^{j \\phi}\n\\]",
+    "section": "1.21 Harmonische Signale …",
+    "text": "1.21 Harmonische Signale …\n\n\n\n\n\n\nHinweisals Zeitfunktion\n\n\n\n\\[\nu(t) = \\hat{U} \\cos(\\omega t + \\phi)\n\\]\n\n\n\n\n\n\n\n\nHinweisals Zeiger / komplexe Grösse (Phasor)\n\n\n\n\\[\nU = \\lvert \\hat{U} \\lvert e^{j \\phi}\n\\]",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
