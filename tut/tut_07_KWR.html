@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>22&nbsp; Komplexe Wechselstromrechnung – Grundlagen der Elektrotechnik 2</title>
+<title>21&nbsp; Komplexe Wechselstromrechnung – Grundlagen der Elektrotechnik 2</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -55,15 +58,14 @@ div.csl-indent {
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-847404b1397bb642580d6a42be486c59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c17bf2369ec451fec7864fad2b46db76.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -93,7 +95,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -133,7 +135,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_07_KWR.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_02_Komplexe-Zahlen.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_07_KWR.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -151,23 +153,7 @@ window.Quarto = {
       <a href="../">Grundlagen der Elektrotechnik 2</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/mimeiners/gel2/" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
-    <div class="dropdown">
-      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
-      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.pdf">
-              <i class="bi bi-file-pdf pe-1"></i>
-            Download PDF
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../gel2.epub">
-              <i class="bi bi-journal pe-1"></i>
-            Download ePub
-            </a>
-          </li>
-      </ul>
-    </div>
+    <a href="../gel2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -312,74 +298,68 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tut/tut_01_Einfuehrung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../tut/tut_02_Komplexe-Zahlen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Komplexe Zahlen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_03_Periodische-Signale.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_04_Komplexe-Groessen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Komplexe Größen der Wechselstromtechnik</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Komplexe Größen der Wechselstromtechnik</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_05_Grundzweipole1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Verhalten der Grundzweipole 1</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Verhalten der Grundzweipole 1</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_06_Grundzweipole2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Verhalten der Grundzweipole 2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Verhalten der Grundzweipole 2</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_07_KWR.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_08_Filterschaltungen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Filterschaltungen, Bode-Diagramme und Ortskurven</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Filterschaltungen, Bode-Diagramme und Ortskurven</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_09_Schwingkreise.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Schwingkreise</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Schwingkreise</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_10_Transformatoren.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Transformator</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Transformator</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_11_Klausurvorbereitung1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Klausurvorbereitung I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Klausurvorbereitung I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tut/tut_12_Klausurvorbereitung2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Klausurvorbereitung II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Klausurvorbereitung II</span></span></a>
   </div>
 </li>
       </ul>
@@ -400,22 +380,22 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#komplexer-spannungs--und-stromteiler" id="toc-komplexer-spannungs--und-stromteiler" class="nav-link active" data-scroll-target="#komplexer-spannungs--und-stromteiler"><span class="header-section-number">22.1</span> Komplexer Spannungs- und Stromteiler</a></li>
-  <li><a href="#leistungsanpassung" id="toc-leistungsanpassung" class="nav-link" data-scroll-target="#leistungsanpassung"><span class="header-section-number">22.2</span> Leistungsanpassung</a></li>
-  <li><a href="#brückenschaltung" id="toc-brückenschaltung" class="nav-link" data-scroll-target="#brückenschaltung"><span class="header-section-number">22.3</span> Brückenschaltung</a></li>
-  <li><a href="#blindleistungskompensation" id="toc-blindleistungskompensation" class="nav-link" data-scroll-target="#blindleistungskompensation"><span class="header-section-number">22.4</span> Blindleistungskompensation</a></li>
-  <li><a href="#überlagerungsprinzip" id="toc-überlagerungsprinzip" class="nav-link" data-scroll-target="#überlagerungsprinzip"><span class="header-section-number">22.5</span> Überlagerungsprinzip</a></li>
-  <li><a href="#maschenstromverfahren" id="toc-maschenstromverfahren" class="nav-link" data-scroll-target="#maschenstromverfahren"><span class="header-section-number">22.6</span> Maschenstromverfahren</a></li>
-  <li><a href="#knotenpotentialverfahren" id="toc-knotenpotentialverfahren" class="nav-link" data-scroll-target="#knotenpotentialverfahren"><span class="header-section-number">22.7</span> Knotenpotentialverfahren</a></li>
-  <li><a href="#übungen" id="toc-übungen" class="nav-link" data-scroll-target="#übungen"><span class="header-section-number">22.8</span> Übungen</a>
+  <li><a href="#komplexer-spannungs--und-stromteiler" id="toc-komplexer-spannungs--und-stromteiler" class="nav-link active" data-scroll-target="#komplexer-spannungs--und-stromteiler"><span class="header-section-number">21.1</span> Komplexer Spannungs- und Stromteiler</a></li>
+  <li><a href="#leistungsanpassung" id="toc-leistungsanpassung" class="nav-link" data-scroll-target="#leistungsanpassung"><span class="header-section-number">21.2</span> Leistungsanpassung</a></li>
+  <li><a href="#brückenschaltung" id="toc-brückenschaltung" class="nav-link" data-scroll-target="#brückenschaltung"><span class="header-section-number">21.3</span> Brückenschaltung</a></li>
+  <li><a href="#blindleistungskompensation" id="toc-blindleistungskompensation" class="nav-link" data-scroll-target="#blindleistungskompensation"><span class="header-section-number">21.4</span> Blindleistungskompensation</a></li>
+  <li><a href="#überlagerungsprinzip" id="toc-überlagerungsprinzip" class="nav-link" data-scroll-target="#überlagerungsprinzip"><span class="header-section-number">21.5</span> Überlagerungsprinzip</a></li>
+  <li><a href="#maschenstromverfahren" id="toc-maschenstromverfahren" class="nav-link" data-scroll-target="#maschenstromverfahren"><span class="header-section-number">21.6</span> Maschenstromverfahren</a></li>
+  <li><a href="#knotenpotentialverfahren" id="toc-knotenpotentialverfahren" class="nav-link" data-scroll-target="#knotenpotentialverfahren"><span class="header-section-number">21.7</span> Knotenpotentialverfahren</a></li>
+  <li><a href="#übungen" id="toc-übungen" class="nav-link" data-scroll-target="#übungen"><span class="header-section-number">21.8</span> Übungen</a>
   <ul class="collapse">
-  <li><a href="#übung-7.1-zusammenfassung-komplexer-impedanzen" id="toc-übung-7.1-zusammenfassung-komplexer-impedanzen" class="nav-link" data-scroll-target="#übung-7.1-zusammenfassung-komplexer-impedanzen"><span class="header-section-number">22.8.1</span> Übung 7.1 (Zusammenfassung komplexer Impedanzen)</a></li>
-  <li><a href="#übung-7.2-netzwerkberechnung" id="toc-übung-7.2-netzwerkberechnung" class="nav-link" data-scroll-target="#übung-7.2-netzwerkberechnung"><span class="header-section-number">22.8.2</span> Übung 7.2 (Netzwerkberechnung)</a></li>
-  <li><a href="#übung-7.3-leistungsanpassung" id="toc-übung-7.3-leistungsanpassung" class="nav-link" data-scroll-target="#übung-7.3-leistungsanpassung"><span class="header-section-number">22.8.3</span> Übung 7.3 (Leistungsanpassung)</a></li>
-  <li><a href="#übung-7.4-brückenschaltung" id="toc-übung-7.4-brückenschaltung" class="nav-link" data-scroll-target="#übung-7.4-brückenschaltung"><span class="header-section-number">22.8.4</span> Übung 7.4 (Brückenschaltung)</a></li>
-  <li><a href="#übung-7.5-blindleistungskompensation" id="toc-übung-7.5-blindleistungskompensation" class="nav-link" data-scroll-target="#übung-7.5-blindleistungskompensation"><span class="header-section-number">22.8.5</span> Übung 7.5 (Blindleistungskompensation)</a></li>
-  <li><a href="#übung-7.6-maschenstromverfahren" id="toc-übung-7.6-maschenstromverfahren" class="nav-link" data-scroll-target="#übung-7.6-maschenstromverfahren"><span class="header-section-number">22.8.6</span> Übung 7.6 (Maschenstromverfahren)</a></li>
-  <li><a href="#übung-7.7-überlagerungsverfahren" id="toc-übung-7.7-überlagerungsverfahren" class="nav-link" data-scroll-target="#übung-7.7-überlagerungsverfahren"><span class="header-section-number">22.8.7</span> Übung 7.7 (Überlagerungsverfahren)</a></li>
+  <li><a href="#übung-7.1-zusammenfassung-komplexer-impedanzen" id="toc-übung-7.1-zusammenfassung-komplexer-impedanzen" class="nav-link" data-scroll-target="#übung-7.1-zusammenfassung-komplexer-impedanzen"><span class="header-section-number">21.8.1</span> Übung 7.1 (Zusammenfassung komplexer Impedanzen)</a></li>
+  <li><a href="#übung-7.2-netzwerkberechnung" id="toc-übung-7.2-netzwerkberechnung" class="nav-link" data-scroll-target="#übung-7.2-netzwerkberechnung"><span class="header-section-number">21.8.2</span> Übung 7.2 (Netzwerkberechnung)</a></li>
+  <li><a href="#übung-7.3-leistungsanpassung" id="toc-übung-7.3-leistungsanpassung" class="nav-link" data-scroll-target="#übung-7.3-leistungsanpassung"><span class="header-section-number">21.8.3</span> Übung 7.3 (Leistungsanpassung)</a></li>
+  <li><a href="#übung-7.4-brückenschaltung" id="toc-übung-7.4-brückenschaltung" class="nav-link" data-scroll-target="#übung-7.4-brückenschaltung"><span class="header-section-number">21.8.4</span> Übung 7.4 (Brückenschaltung)</a></li>
+  <li><a href="#übung-7.5-blindleistungskompensation" id="toc-übung-7.5-blindleistungskompensation" class="nav-link" data-scroll-target="#übung-7.5-blindleistungskompensation"><span class="header-section-number">21.8.5</span> Übung 7.5 (Blindleistungskompensation)</a></li>
+  <li><a href="#übung-7.6-maschenstromverfahren" id="toc-übung-7.6-maschenstromverfahren" class="nav-link" data-scroll-target="#übung-7.6-maschenstromverfahren"><span class="header-section-number">21.8.6</span> Übung 7.6 (Maschenstromverfahren)</a></li>
+  <li><a href="#übung-7.7-überlagerungsverfahren" id="toc-übung-7.7-überlagerungsverfahren" class="nav-link" data-scroll-target="#übung-7.7-überlagerungsverfahren"><span class="header-section-number">21.8.7</span> Übung 7.7 (Überlagerungsverfahren)</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/tut/tut_07_KWR.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
@@ -423,9 +403,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_01_Einfuehrung.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_07_KWR.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tut/tut_02_Komplexe-Zahlen.html">Tutorium</a></li><li class="breadcrumb-item"><a href="../tut/tut_07_KWR.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></h1>
+<h1 class="title"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Komplexe Wechselstromrechnung</span></h1>
 </div>
 
 
@@ -450,8 +430,8 @@ window.Quarto = {
 <li>Maschenstromverfahren</li>
 <li>Knotenpotentialverfahren</li>
 </ul>
-<section id="komplexer-spannungs--und-stromteiler" class="level2" data-number="22.1">
-<h2 data-number="22.1" class="anchored" data-anchor-id="komplexer-spannungs--und-stromteiler"><span class="header-section-number">22.1</span> Komplexer Spannungs- und Stromteiler</h2>
+<section id="komplexer-spannungs--und-stromteiler" class="level2" data-number="21.1">
+<h2 data-number="21.1" class="anchored" data-anchor-id="komplexer-spannungs--und-stromteiler"><span class="header-section-number">21.1</span> Komplexer Spannungs- und Stromteiler</h2>
 <p>Der Spannungs- und Stromteiler ist bereits aus GEL1 bekannt. Unter Anwendung der komplexen Zahlen können diese Konzepte auf den Sinusstrom übertragen werden.</p>
 <div id="fig-tutChap7SpannungsStromteiler" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -459,14 +439,14 @@ window.Quarto = {
 <img src="../images/tut/chap7/chap7_spannungs-stromteiler.jpg" id="fig-tutChap7SpannungsStromteiler" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap7SpannungsStromteiler-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22.1
+Abbildung&nbsp;21.1
 </figcaption>
 </figure>
 </div>
 <p>Entn. aus <span class="citation" data-cites="Fricke1982"><a href="../references.html#ref-Fricke1982" role="doc-biblioref">[1]</a></span></p>
 </section>
-<section id="leistungsanpassung" class="level2" data-number="22.2">
-<h2 data-number="22.2" class="anchored" data-anchor-id="leistungsanpassung"><span class="header-section-number">22.2</span> Leistungsanpassung</h2>
+<section id="leistungsanpassung" class="level2" data-number="21.2">
+<h2 data-number="21.2" class="anchored" data-anchor-id="leistungsanpassung"><span class="header-section-number">21.2</span> Leistungsanpassung</h2>
 <p>Bei der Leistungsanpassung soll der Empfänger die größtmögliche Leistung übertragen bekommen.</p>
 <div id="fig-tutChap7Leistungsanpassung" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -474,7 +454,7 @@ Abbildung&nbsp;22.1
 <img src="../images/tut/chap7/chap7_leistungsanpassung.jpg" id="fig-tutChap7Leistungsanpassung" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap7Leistungsanpassung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22.2
+Abbildung&nbsp;21.2
 </figcaption>
 </figure>
 </div>
@@ -482,8 +462,8 @@ Abbildung&nbsp;22.2
 <p><span class="math display">\[\underline{Z}_a = \underline{Z}_i^*\]</span></p>
 <p><span class="math display">\[\underline{Y}_a = \underline{Y}_i^*\]</span></p>
 </section>
-<section id="brückenschaltung" class="level2" data-number="22.3">
-<h2 data-number="22.3" class="anchored" data-anchor-id="brückenschaltung"><span class="header-section-number">22.3</span> Brückenschaltung</h2>
+<section id="brückenschaltung" class="level2" data-number="21.3">
+<h2 data-number="21.3" class="anchored" data-anchor-id="brückenschaltung"><span class="header-section-number">21.3</span> Brückenschaltung</h2>
 <p>Bei der Brückenschaltung spricht man von abgegelichen, wenn im Diagonalzweig keine Spannung anliegt. Damit das geschieht, müssen die Impedanzen in den Zweigen der Brückenschaltung die gleichen Verhältnisse aufweisen.</p>
 <p><span class="math display">\[\frac{\underline{Z}_1}{\underline{Z}_2} = \frac{\underline{Z}_3}{\underline{Z}_4}\]</span></p>
 <p><span class="math display">\[\underline{Z}_1 \cdot \underline{Z}_4 = \underline{Z}_2 \cdot \underline{Z}_3\]</span></p>
@@ -491,8 +471,8 @@ Abbildung&nbsp;22.2
 <p><span class="math display">\[Z_1 \cdot Z_4 = Z_2 \cdot Z_3\]</span></p>
 <p><span class="math display">\[\varphi_1 + \varphi_4 = \varphi_2 + \varphi_3\]</span></p>
 </section>
-<section id="blindleistungskompensation" class="level2" data-number="22.4">
-<h2 data-number="22.4" class="anchored" data-anchor-id="blindleistungskompensation"><span class="header-section-number">22.4</span> Blindleistungskompensation</h2>
+<section id="blindleistungskompensation" class="level2" data-number="21.4">
+<h2 data-number="21.4" class="anchored" data-anchor-id="blindleistungskompensation"><span class="header-section-number">21.4</span> Blindleistungskompensation</h2>
 <p>Da eine Induktivität positive Blindleistung aufnimmt und eine Kapazität negative Blindleistung, kann man die Zweipole so zusammenschalten, dass sich die Blindleistungen gegenseitig ausgleichen. Damit werden die Zuleitungen durch weniger Blindleistung belastet. Dieses Vorgehen nennt man Blindleistungskompensation.</p>
 <div id="fig-tutChap7ZusammenfassungWestermann" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -500,14 +480,14 @@ Abbildung&nbsp;22.2
 <img src="../images/tut/chap7/chap6_zusammenfassung-westermann2.jpg" id="fig-tutChap7ZusammenfassungWestermann" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap7ZusammenfassungWestermann-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22.3
+Abbildung&nbsp;21.3
 </figcaption>
 </figure>
 </div>
 <p>Entn. aus <span class="citation" data-cites="Dzieia2016"><a href="../references.html#ref-Dzieia2016" role="doc-biblioref">[2]</a></span></p>
 </section>
-<section id="überlagerungsprinzip" class="level2" data-number="22.5">
-<h2 data-number="22.5" class="anchored" data-anchor-id="überlagerungsprinzip"><span class="header-section-number">22.5</span> Überlagerungsprinzip</h2>
+<section id="überlagerungsprinzip" class="level2" data-number="21.5">
+<h2 data-number="21.5" class="anchored" data-anchor-id="überlagerungsprinzip"><span class="header-section-number">21.5</span> Überlagerungsprinzip</h2>
 <p>Das Überlagerungsprinzip darf <strong>nur</strong> in linearen Netzwerken benutzt werden.</p>
 <p>Bei Sinusstrom gilt Linearität bei den komplexen Effektivwerten <span class="math inline">\(\underline{U}\)</span> und <span class="math inline">\(\underline{I}\)</span>, sowie bei den komplexen Scheitelwerten <span class="math inline">\(\underline{\hat{u}}\)</span> und <span class="math inline">\(\underline{\hat{i}}\)</span>.</p>
 <p>Bei dem Überlagerungsprinzip berechnet man das Netzwerk für jede Quelle einzelnd. Spannungsquellen werden kurzgeschlossen und Stromquellen werden abgetrennt. Nach Berechnung z.B. aller Teilströme für alle einzelnd wirksamen Quellen, wird aus allen Teilströmen der Gesamtstrom berechnet.</p>
@@ -517,14 +497,14 @@ Abbildung&nbsp;22.3
 <img src="../images/tut/chap7/chap7_ueberlagerungsverfahren.jpg" id="fig-tutChap7Ueberlagerungsverfahren" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap7Ueberlagerungsverfahren-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22.4
+Abbildung&nbsp;21.4
 </figcaption>
 </figure>
 </div>
 <p>Entn. aus <span class="citation" data-cites="Fricke1982"><a href="../references.html#ref-Fricke1982" role="doc-biblioref">[1]</a></span></p>
 </section>
-<section id="maschenstromverfahren" class="level2" data-number="22.6">
-<h2 data-number="22.6" class="anchored" data-anchor-id="maschenstromverfahren"><span class="header-section-number">22.6</span> Maschenstromverfahren</h2>
+<section id="maschenstromverfahren" class="level2" data-number="21.6">
+<h2 data-number="21.6" class="anchored" data-anchor-id="maschenstromverfahren"><span class="header-section-number">21.6</span> Maschenstromverfahren</h2>
 <p>Das Maschenstromverfahren kann auf Sinusstromnetzwerke angewendet werden, indem man die reellen Gleichstromgrößen durch die komplexen Größen <span class="math inline">\(\underline{U}\)</span>, <span class="math inline">\(\underline{I}\)</span> und <span class="math inline">\(\underline{Z}\)</span> ersetzt.</p>
 <p>Zusammenfassung des Maschenstromverfahrens:</p>
 <p>Vorbereitung:</p>
@@ -582,8 +562,8 @@ Abbildung&nbsp;22.4
 </ul></li>
 </ul>
 </section>
-<section id="knotenpotentialverfahren" class="level2" data-number="22.7">
-<h2 data-number="22.7" class="anchored" data-anchor-id="knotenpotentialverfahren"><span class="header-section-number">22.7</span> Knotenpotentialverfahren</h2>
+<section id="knotenpotentialverfahren" class="level2" data-number="21.7">
+<h2 data-number="21.7" class="anchored" data-anchor-id="knotenpotentialverfahren"><span class="header-section-number">21.7</span> Knotenpotentialverfahren</h2>
 <p>Das Knotenpotentialverfahren kann auf Sinusstromnetzwerke angewendet werden, indem man die reellen Gleichstromgrößen durch die komplexen Größen <span class="math inline">\(\underline{U}\)</span>, <span class="math inline">\(\underline{I}\)</span> und <span class="math inline">\(\underline{Z}\)</span> bzw. <span class="math inline">\(\underline{Y}\)</span> ersetzt.</p>
 <p>Zusammenfassung des Knotenpotentialverfahrens:</p>
 <ul>
@@ -608,10 +588,10 @@ Abbildung&nbsp;22.4
 <li>Stromvektor besteht aus Quellströmen (auf Knoten zu -&gt; positiv; von Knoten weg -&gt; negativ)</li>
 </ul>
 </section>
-<section id="übungen" class="level2" data-number="22.8">
-<h2 data-number="22.8" class="anchored" data-anchor-id="übungen"><span class="header-section-number">22.8</span> Übungen</h2>
-<section id="übung-7.1-zusammenfassung-komplexer-impedanzen" class="level3" data-number="22.8.1">
-<h3 data-number="22.8.1" class="anchored" data-anchor-id="übung-7.1-zusammenfassung-komplexer-impedanzen"><span class="header-section-number">22.8.1</span> Übung 7.1 (Zusammenfassung komplexer Impedanzen)</h3>
+<section id="übungen" class="level2" data-number="21.8">
+<h2 data-number="21.8" class="anchored" data-anchor-id="übungen"><span class="header-section-number">21.8</span> Übungen</h2>
+<section id="übung-7.1-zusammenfassung-komplexer-impedanzen" class="level3" data-number="21.8.1">
+<h3 data-number="21.8.1" class="anchored" data-anchor-id="übung-7.1-zusammenfassung-komplexer-impedanzen"><span class="header-section-number">21.8.1</span> Übung 7.1 (Zusammenfassung komplexer Impedanzen)</h3>
 <p>(Albach Kapitel 8 Level 2 Aufgabe 8.8)</p>
 <p>Gegeben ist das folgende Netzwerk.</p>
 <div id="fig-tutChap7Aufgabe7.1" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -620,7 +600,7 @@ Abbildung&nbsp;22.4
 <img src="../images/tut/chap7/chap7_aufgabe7.1.jpg" id="fig-tutChap7Aufgabe7.1" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap7Aufgabe7.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22.5
+Abbildung&nbsp;21.5
 </figcaption>
 </figure>
 </div>
@@ -652,7 +632,7 @@ Abbildung&nbsp;22.5
 <img src="../images/tut/chap7/chap7_aufgabe7.1a.jpg" id="fig-tutChap7Aufgabe7.1a" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap7Aufgabe7.1a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22.6
+Abbildung&nbsp;21.6
 </figcaption>
 </figure>
 </div>
@@ -665,8 +645,8 @@ Abbildung&nbsp;22.6
 </div>
 </div>
 </section>
-<section id="übung-7.2-netzwerkberechnung" class="level3" data-number="22.8.2">
-<h3 data-number="22.8.2" class="anchored" data-anchor-id="übung-7.2-netzwerkberechnung"><span class="header-section-number">22.8.2</span> Übung 7.2 (Netzwerkberechnung)</h3>
+<section id="übung-7.2-netzwerkberechnung" class="level3" data-number="21.8.2">
+<h3 data-number="21.8.2" class="anchored" data-anchor-id="übung-7.2-netzwerkberechnung"><span class="header-section-number">21.8.2</span> Übung 7.2 (Netzwerkberechnung)</h3>
 <p>(Hagmann Aufgabe 7.4)</p>
 <p>Die im Bild angegebene Schaltung enthält die ohmschen Widerstände <span class="math inline">\(R_1 = 150\,\Omega\)</span>, <span class="math inline">\(R_2 = 200\,\Omega\)</span> und <span class="math inline">\(R_3 = 350\,\Omega\)</span>. Die beiden vorhandenen Spulen haben die Induktivitäten <span class="math inline">\(L_1 = 10\,mH\)</span> und <span class="math inline">\(L_2 = 30\,mH\)</span>. Der Kondensator besitzt die Kapazität <span class="math inline">\(C = 1\,\mu F\)</span>. Die Schaltung liegt an der Spannung <span class="math inline">\(U = 40\,V\)</span> der Frequenz <span class="math inline">\(f = 1,2\,kHz\)</span>.</p>
 <p>Es sind alle auftretenden Ströme zu berechnen.</p>
@@ -676,7 +656,7 @@ Abbildung&nbsp;22.6
 <img src="../images/tut/chap7/chap7_aufgabe7.2.jpg" id="fig-tutChapAufgabe7.2" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChapAufgabe7.2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22.7
+Abbildung&nbsp;21.7
 </figcaption>
 </figure>
 </div>
@@ -712,8 +692,8 @@ Abbildung&nbsp;22.7
 </div>
 </div>
 </section>
-<section id="übung-7.3-leistungsanpassung" class="level3" data-number="22.8.3">
-<h3 data-number="22.8.3" class="anchored" data-anchor-id="übung-7.3-leistungsanpassung"><span class="header-section-number">22.8.3</span> Übung 7.3 (Leistungsanpassung)</h3>
+<section id="übung-7.3-leistungsanpassung" class="level3" data-number="21.8.3">
+<h3 data-number="21.8.3" class="anchored" data-anchor-id="übung-7.3-leistungsanpassung"><span class="header-section-number">21.8.3</span> Übung 7.3 (Leistungsanpassung)</h3>
 <p>(Hagman Aufgabe 7.31)</p>
 <p>Die im Bild dargestellte Schaltung enthält eine Spannungsquelle mit dem (ohmschen) Innenwiderstand <span class="math inline">\(R_i = 100\,\Omega\)</span>. Die Frequenz der gelieferten Spannung beträgt <span class="math inline">\(f = 100\,Hz\)</span>. Ein ohmscher Belastungswiderstand (Verbraucherwiderstand) <span class="math inline">\(R_a = 10\,\Omega\)</span> soll -wie dargestellt- über eine LC-Kombination an die Spannungsquelle angeschlossen werden. Dabei sollen die Induktivität <span class="math inline">\(L\)</span> und die Kapazität <span class="math inline">\(C\)</span> so gewählt werden, dass Wirkleistungsanpassung besteht, <span class="math inline">\(R_a\)</span> also die maximal mögliche Wirkleistung aufnimmt.</p>
 <p>Welche Werte sind für <span class="math inline">\(L\)</span> und <span class="math inline">\(C\)</span> erforderlich?</p>
@@ -723,7 +703,7 @@ Abbildung&nbsp;22.7
 <img src="../images/tut/chap7/chap7_aufgabe7.3.jpg" id="fig-tutChap7Aufgabe7.3" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap7Aufgabe7.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22.8
+Abbildung&nbsp;21.8
 </figcaption>
 </figure>
 </div>
@@ -761,8 +741,8 @@ Abbildung&nbsp;22.8
 </div>
 </div>
 </section>
-<section id="übung-7.4-brückenschaltung" class="level3" data-number="22.8.4">
-<h3 data-number="22.8.4" class="anchored" data-anchor-id="übung-7.4-brückenschaltung"><span class="header-section-number">22.8.4</span> Übung 7.4 (Brückenschaltung)</h3>
+<section id="übung-7.4-brückenschaltung" class="level3" data-number="21.8.4">
+<h3 data-number="21.8.4" class="anchored" data-anchor-id="übung-7.4-brückenschaltung"><span class="header-section-number">21.8.4</span> Übung 7.4 (Brückenschaltung)</h3>
 <p>(Weißgerber Aufgabenblatt 3 Aufgabe 2)</p>
 <p>Das Ersatzschaltbild der unbekannten Spule soll die Parallelschaltung von <span class="math inline">\(R_{p3}\)</span> und <span class="math inline">\(L_{p3}\)</span> sein.</p>
 <ol type="a">
@@ -775,7 +755,7 @@ Abbildung&nbsp;22.8
 <img src="../images/tut/chap7/chap7_aufgabe7.7_brueckenschaltung.png" id="fig-tutChap7Aufgabe7.7" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap7Aufgabe7.7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22.9
+Abbildung&nbsp;21.9
 </figcaption>
 </figure>
 </div>
@@ -810,8 +790,8 @@ Abbildung&nbsp;22.9
 </div>
 </div>
 </section>
-<section id="übung-7.5-blindleistungskompensation" class="level3" data-number="22.8.5">
-<h3 data-number="22.8.5" class="anchored" data-anchor-id="übung-7.5-blindleistungskompensation"><span class="header-section-number">22.8.5</span> Übung 7.5 (Blindleistungskompensation)</h3>
+<section id="übung-7.5-blindleistungskompensation" class="level3" data-number="21.8.5">
+<h3 data-number="21.8.5" class="anchored" data-anchor-id="übung-7.5-blindleistungskompensation"><span class="header-section-number">21.8.5</span> Übung 7.5 (Blindleistungskompensation)</h3>
 <p>(Vaske/Fricke Beispiel 3.103)</p>
 <p>Ein Verbraucher entnimmt einem Netz für die Sinusspannung <span class="math inline">\(U = 20\,kV\)</span> bei der Frequenz <span class="math inline">\(f = 50\,Hz\)</span> die Wirkleistung <span class="math inline">\(P = 300\,kW\)</span> bei dem induktiven Wirkfaktor <span class="math inline">\(\cos(\varphi) = 0,8\)</span>. Der Wirkfaktor soll auf <span class="math inline">\(\cos(\varphi ') = 0,95\)</span> verbessert werden. Die erfoderliche Kapazität <span class="math inline">\(C\)</span> soll bestimmt werden.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -832,7 +812,7 @@ Abbildung&nbsp;22.9
 <img src="../images/tut/chap7/chap7_aufgabe7.4.jpg" id="fig-tutChap7Aufgabe7.4" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap7Aufgabe7.4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22.10
+Abbildung&nbsp;21.10
 </figcaption>
 </figure>
 </div>
@@ -856,8 +836,8 @@ Abbildung&nbsp;22.10
 </div>
 </div>
 </section>
-<section id="übung-7.6-maschenstromverfahren" class="level3" data-number="22.8.6">
-<h3 data-number="22.8.6" class="anchored" data-anchor-id="übung-7.6-maschenstromverfahren"><span class="header-section-number">22.8.6</span> Übung 7.6 (Maschenstromverfahren)</h3>
+<section id="übung-7.6-maschenstromverfahren" class="level3" data-number="21.8.6">
+<h3 data-number="21.8.6" class="anchored" data-anchor-id="übung-7.6-maschenstromverfahren"><span class="header-section-number">21.8.6</span> Übung 7.6 (Maschenstromverfahren)</h3>
 <p>(Hagmann Aufgabe 7.27)</p>
 <p>In der Schaltung haben die ohmschen Widerstände die Werte <span class="math inline">\(R_1 = 85\,\Omega\)</span>, <span class="math inline">\(R_2 = 35\,\Omega\)</span> und <span class="math inline">\(R_3 = 75\,\Omega\)</span>. Die Induktivitäten der Spulen betragen <span class="math inline">\(L_1 = 21,22\,mH\)</span> und <span class="math inline">\(L_2 = 50,4\,mH\)</span>. Der vorhandene Kondensator besitzt die Kapazität <span class="math inline">\(C = 17,68 \,\mu F\)</span>. Die Versorgungsspannung hat eine Frequenz von <span class="math inline">\(f = 300\,Hz\)</span> und beträgt <span class="math inline">\(U = 100\,V\)</span>.</p>
 <p>Die Widerstandsmatrix soll über das Maschenstromverfahren aufgestellt werden.</p>
@@ -867,7 +847,7 @@ Abbildung&nbsp;22.10
 <img src="../images/tut/chap7/chap7_aufgabe7.5.jpg" id="fig-tutChap7Aufgabe7.5" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap7Aufgabe7.5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22.11
+Abbildung&nbsp;21.11
 </figcaption>
 </figure>
 </div>
@@ -921,8 +901,8 @@ Abbildung&nbsp;22.11
 </div>
 </div>
 </section>
-<section id="übung-7.7-überlagerungsverfahren" class="level3" data-number="22.8.7">
-<h3 data-number="22.8.7" class="anchored" data-anchor-id="übung-7.7-überlagerungsverfahren"><span class="header-section-number">22.8.7</span> Übung 7.7 (Überlagerungsverfahren)</h3>
+<section id="übung-7.7-überlagerungsverfahren" class="level3" data-number="21.8.7">
+<h3 data-number="21.8.7" class="anchored" data-anchor-id="übung-7.7-überlagerungsverfahren"><span class="header-section-number">21.8.7</span> Übung 7.7 (Überlagerungsverfahren)</h3>
 <p>(Vaske/Fricke Beispiel 3.92)</p>
 <p>Das Netzwerk im Bild besteht aus Wirkwiderstand <span class="math inline">\(R = 5\,\Omega\)</span>, den Blindwiderständen <span class="math inline">\(X_L = 10\,\Omega\)</span> und <span class="math inline">\(X_C = -20\,\Omega\)</span>, sowie den komplexen Widerständen <span class="math inline">\(\underline{Z}_b = 100\,\Omega \angle{-30°}\)</span> und <span class="math inline">\(\underline{Z}_c = 50\,\Omega \angle{50°}\)</span> und führt die Ströme <span class="math inline">\(\underline{I}_{qb} = -j4\,A\)</span> und <span class="math inline">\(\underline{I}_{qc} = 3\,A\)</span>.</p>
 <p>Es sollen alle Ströme berechent werden.</p>
@@ -932,7 +912,7 @@ Abbildung&nbsp;22.11
 <img src="../images/tut/chap7/chap7_aufgabe7.6.jpg" id="fig-tutChap7Aufgabe7.6" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap7Aufgabe7.6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22.12
+Abbildung&nbsp;21.12
 </figcaption>
 </figure>
 </div>
@@ -955,7 +935,7 @@ Abbildung&nbsp;22.12
 <img src="../images/tut/chap7/chap7_ueberlagerungsverfahren.jpg" id="fig-tutChap7Ueberlagerungsverfahren" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tutChap7Ueberlagerungsverfahren-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22.13
+Abbildung&nbsp;21.13
 </figcaption>
 </figure>
 </div>
@@ -1407,12 +1387,12 @@ Abbildung&nbsp;22.13
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../tut/tut_06_Grundzweipole2.html" class="pagination-link" aria-label="Verhalten der Grundzweipole 2">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Verhalten der Grundzweipole 2</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Verhalten der Grundzweipole 2</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../tut/tut_08_Filterschaltungen.html" class="pagination-link" aria-label="Filterschaltungen, Bode-Diagramme und Ortskurven">
-        <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Filterschaltungen, Bode-Diagramme und Ortskurven</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Filterschaltungen, Bode-Diagramme und Ortskurven</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
