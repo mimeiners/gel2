@@ -2,31 +2,31 @@
 
 ## Organisatorisches
 
-Tutor: **B.Eng. Alicia von Ahlen**
+<!-- Tutor: **B.Eng. Alicia von Ahlen** -->
 
-Zu meiner Person:
-Ich habe Elektrotechnik mit der Vertiefungsrichtung Informationstechnik studiert und bin zur Zeit im 1. Semester des
-Masterprogramms MScEE an der HSB. Ich habe bereits die Tutorien _Grundlagen der Elektrotechnik 1 und 2_ durchgeführt.
+<!-- Zu meiner Person: -->
+<!-- Ich habe Elektrotechnik mit der Vertiefungsrichtung Informationstechnik studiert und bin zur Zeit im 1. Semester des -->
+<!-- Masterprogramms MScEE an der HSB. Ich habe bereits die Tutorien _Grundlagen der Elektrotechnik 1 und 2_ durchgeführt. -->
 
-Das Tutorium ist als Unterstützung zur Vorlesung gedacht und legt den Fokus auf eine Wiederholung der Unterrichtsinhalte
-und Übungsaufgaben. Es besteht auch die Möglichkeit Fragen zu den Vorlesungsinhalten zu stellen.
+<!-- Das Tutorium ist als Unterstützung zur Vorlesung gedacht und legt den Fokus auf eine Wiederholung der Unterrichtsinhalte -->
+<!-- und Übungsaufgaben. Es besteht auch die Möglichkeit Fragen zu den Vorlesungsinhalten zu stellen. -->
 
-## Termine
+<!-- ## Termine -->
 
-Das GEL2-tut findet montags im ersten Block (08:00 - 09:30 Uhr) statt.
+<!-- Das GEL2-tut findet montags im ersten Block (08:00 - 09:30 Uhr) statt. -->
 
-Eine Zeit- und Themenplanung ist in der folgenden Tabelle zu sehen.
+<!-- Eine Zeit- und Themenplanung ist in der folgenden Tabelle zu sehen. -->
 
 | Datum    | Thema                                          |
 |:--------:|:-----------------------------------------------|
-| 28.04.25 | Einführung & Periodische Signale               |
-| 05.05.25 | Komplexe Größen der Sinusstromtechnik          |
-| 12.05.25 | Verhalten der Grundzweipole 1                  |
-| 19.05.25 | Verhalten der Grundzweipole 2                  |
-| 26.05.25 | KWR                                            |
-| 02.06.25 | Filterschaltungen, Bodediagramm und Ortskurven |
-| 09.06.25 | **Pfingstmontag**                              |
-| 16.06.25 | Schwingkreise                                  |
-| 23.06.25 | Transformatoren                                |
-| 30.06.25 | Klausurvorbereitung I                          |
-| 07.07.25 | Klausurvorbereitung II                         |
+| 13.04.26 | Einführung & Periodische Signale               |
+| 20.04.26 | Komplexe Größen der Sinusstromtechnik          |
+| 27.04.26 | Verhalten der Grundzweipole 1                  |
+| 04.05.26 | Verhalten der Grundzweipole 2                  |
+| 11.05.26 | KWR                                            |
+| 18.05.26 | Filterschaltungen, Bodediagramm und Ortskurven |
+| 25.05.26 | **Pfingstmontag**                              |
+| 01.06.26 | Schwingkreise                                  |
+| 08.06.26 | Transformatoren                                |
+| 29.06.26 | Klausurvorbereitung I                          |
+| 06.07.26 | Klausurvorbereitung II                         |

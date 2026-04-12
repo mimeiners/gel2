@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Auswertung der TRAN SPICE Analyse der RC-Schaltung
-
-"""
+"""Auswertung der TRAN SPICE Analyse der RC-Schaltung"""
 
 # %% Init
 import ltspice
