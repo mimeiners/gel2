@@ -245,21 +245,21 @@ $R$ = 50 $\Omega$ und $C$ = 1 $\mu$ F!
 ```{python}
 #| label: fig-u_i_plot
 #| fig-cap: "Strom- und Spannungsverläufe"
-from numpy import pi, sin, linspace
+import numpy as np
 import matplotlib.pylab as plt
 
 f = 3.183e3  # Frequenz kHz
-w = 2 * pi * f  # Kreisfrequenz
+w = 2 * np.pi * f  # Kreisfrequenz
 R = 50  # Widerstand in Ohm
 C = 1e-6  # Kapazität in Farad
 I0 = 14.1e-3  # Strom
-t = linspace(0, 1e-3, 1000)  # Länge der x-Achse und
+t = np.linspace(0, 1e-3, 1000)  # Länge der x-Achse und
 
 # Strom- und Spannungfunktionen
-i_0 = I0 * sin(w * t)  # Stromquelle
-u = 5e-3 * sin(w * t - pi / 4)  # Spannung
-i_C = 10e-3 * sin(w * t + pi / 4)  # Strom am Kondensator
-i_R = 10e-3 * sin(w * t - pi / 4)  # Strom am Widerstand
+i_0 = I0 * np.sin(w * t)  # Stromquelle
+u = 5e-3 * np.sin(w * t - np.pi / 4)  # Spannung
+i_C = 10e-3 * np.sin(w * t + np.pi / 4)  # Strom am Kondensator
+i_R = 10e-3 * np.sin(w * t - np.pi / 4)  # Strom am Widerstand
 
 # Plot der Signale
 plt.figure()

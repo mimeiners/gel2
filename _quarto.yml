@@ -59,7 +59,7 @@ book:
     - part: Hörsaalübungen 
       chapters:
         - hw/hw_01.qmd
-        - hw/hw_02.qmd
+#        - hw/hw_02.qmd
         - hw/hw_03.qmd
         - hw/hw_04.qmd
         - hw/hw_05.qmd
