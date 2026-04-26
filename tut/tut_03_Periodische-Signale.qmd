@@ -298,7 +298,7 @@ $$
 
 ## Übungen
 
-### Aufgabe Gleichrichtwert
+### Aufgabe 3.1
 
 Ein Sinusstrom mit dem Scheitelwert $\hat{i} = 10 A$ fließt durch die Gleichrichterschaltung-Brückenschaltung von Bild 3.4.
 
@@ -310,7 +310,7 @@ Welche Elektrizitätsmenge Q wird während der Zeit t = 2 h befördert?
 Tipp: $Q = i \cdot t$
 
 ::: {.callout-caution collapse="true"}
-#### Lösung 
+#### Lösung 3.1
 
 $$
 \overline{|i|} = 0.6366 \hat{i} = 0.6366 \cdot 10 A = 6.366 A
@@ -321,13 +321,13 @@ Q = \overline{|i|} t = 6.366 A \cdot 2 h = 12.73 Ah
 $$
 :::
 
-### Aufgabe Zeitfunktion berechnen
+### Aufgabe 3.2
 
 Die übliche Netzspannung 1982 betrug $U = 220 V$ bei der Netzfrequenz $f = 50 Hz$. Es sind der Gleichrichtwert
 $\overline{|u|}$ und die Zeitfunktion u dieser Spannung zu bestimmen.
 
 ::: {.callout-caution collapse="true"}
-#### Lösung
+#### Lösung 3.2
 
 Netzspannung ist Sinusförmig --> Formfaktor F = 1.111
 
@@ -356,7 +356,7 @@ u = \hat{u} sin(\omega t) = 311.1 V \cdot sin(314.2 \frac{1}{s} t)
 $$
 :::
 
-### Aufgabe Mittelwerte aus Zeitverlauf bestimmen
+### Aufgabe 3.3
 
 ![Aufgabe 3.3](../images/tut/chap3/Aufgabe2.3.pdf){#fig-TutChap3Aufg3.3}
 
