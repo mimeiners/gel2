@@ -423,7 +423,6 @@ window.Quarto = {
   <li><a href="#mittelwert" id="toc-mittelwert" class="nav-link" data-scroll-target="#mittelwert"><span class="header-section-number">17.2.3</span> Mittelwert</a></li>
   <li><a href="#gleichrichtwert" id="toc-gleichrichtwert" class="nav-link" data-scroll-target="#gleichrichtwert"><span class="header-section-number">17.2.4</span> Gleichrichtwert</a></li>
   <li><a href="#effektivwert" id="toc-effektivwert" class="nav-link" data-scroll-target="#effektivwert"><span class="header-section-number">17.2.5</span> Effektivwert</a></li>
-  <li><a href="#effektivwert-mit-gleichstromanteil" id="toc-effektivwert-mit-gleichstromanteil" class="nav-link" data-scroll-target="#effektivwert-mit-gleichstromanteil"><span class="header-section-number">17.2.6</span> Effektivwert mit Gleichstromanteil</a></li>
   </ul></li>
   <li><a href="#übungen" id="toc-übungen" class="nav-link" data-scroll-target="#übungen"><span class="header-section-number">17.3</span> Übungen</a>
   <ul class="collapse">
@@ -754,7 +753,8 @@ Abbildung&nbsp;17.7: Phasenlage
 <p><span class="math display">\[
 X = X_{eff} = \sqrt{\frac{1}{T} \int\limits_{t_0}^{t_0 + T} x^2(t) dt}
 \]</span></p>
-<p><strong>Scheitelfaktor</strong></p>
+<section id="scheitelfaktor" class="level4" data-number="17.2.5.1">
+<h4 data-number="17.2.5.1" class="anchored" data-anchor-id="scheitelfaktor"><span class="header-section-number">17.2.5.1</span> Scheitelfaktor</h4>
 <p>Der Scheitelfaktor ist das Verhältnis von Scheitelwert <span class="math inline">\(\hat{i}\)</span> bzw. <span class="math inline">\(\hat{u}\)</span> zum Effektivwert I bzw. U.</p>
 <p><span class="math display">\[
 \xi = \frac{\hat{x}}{X_{eff}}
@@ -762,7 +762,9 @@ X = X_{eff} = \sqrt{\frac{1}{T} \int\limits_{t_0}^{t_0 + T} x^2(t) dt}
 <p>Der Scheitelfaktor für Sinusgrößen beträgt <span class="math inline">\(\xi = \sqrt{2} = 1.414\)</span>.</p>
 <p>Der Scheitelfaktor für Dreieckspannung beträgt <span class="math inline">\(\xi = \sqrt{3}\)</span>.</p>
 <p>Der Scheitelfaktor für Rechtecksignale beträgt <span class="math inline">\(\xi = 1\)</span>.</p>
-<p><strong>Formfaktor</strong></p>
+</section>
+<section id="formfaktor" class="level4" data-number="17.2.5.2">
+<h4 data-number="17.2.5.2" class="anchored" data-anchor-id="formfaktor"><span class="header-section-number">17.2.5.2</span> Formfaktor</h4>
 <p>Der Formfaktor stellt das Verhältnis von Effektivwert I bzw. U zu Gleichrichtwert <span class="math inline">\(\overline{|i|}\)</span> bzw. <span class="math inline">\(\overline{|u|}\)</span> dar.</p>
 <p><span class="math display">\[
 F = \frac{X_{eff}}{\overline{|x|}}
@@ -771,8 +773,8 @@ F = \frac{X_{eff}}{\overline{|x|}}
 <p>Der Formfaktor für Dreiecksignale beträgt <span class="math inline">\(F = \frac{1.11}{2}\)</span>.</p>
 <p>Der Formfaktor für Rechtecksignale beträgt <span class="math inline">\(F = 1.11\)</span>.</p>
 </section>
-<section id="effektivwert-mit-gleichstromanteil" class="level3" data-number="17.2.6">
-<h3 data-number="17.2.6" class="anchored" data-anchor-id="effektivwert-mit-gleichstromanteil"><span class="header-section-number">17.2.6</span> Effektivwert mit Gleichstromanteil</h3>
+<section id="effektivwert-mit-gleichstromanteil" class="level4" data-number="17.2.5.3">
+<h4 data-number="17.2.5.3" class="anchored" data-anchor-id="effektivwert-mit-gleichstromanteil"><span class="header-section-number">17.2.5.3</span> Effektivwert mit Gleichstromanteil</h4>
 <div id="fig-TutChapMischspannung" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TutChapMischspannung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -787,6 +789,7 @@ Abbildung&nbsp;17.8: Mischspannung
 <p><span class="math display">\[
 X_{eff} = \sqrt{X_o^2 + X_{eff\sim}^2}
 \]</span></p>
+</section>
 </section>
 </section>
 <section id="übungen" class="level2" data-number="17.3">
