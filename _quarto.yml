@@ -58,6 +58,7 @@ book:
         - lec/lec_08.qmd
     - part: Hörsaalübungen 
       chapters:
+        - hw/hw_00.ipynb
         - hw/hw_01.qmd
 #        - hw/hw_02.qmd
         - hw/hw_03.qmd
