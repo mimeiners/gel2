@@ -258,7 +258,7 @@ $$
 X = X_{eff} = \sqrt{\frac{1}{T} \int\limits_{t_0}^{t_0 + T} x^2(t) dt}
 $$
 
-**Scheitelfaktor**
+#### Scheitelfaktor
 
 Der Scheitelfaktor ist das Verhältnis von Scheitelwert $\hat{i}$ bzw. $\hat{u}$ zum Effektivwert I bzw. U.
 
@@ -272,7 +272,7 @@ Der Scheitelfaktor für Dreieckspannung beträgt $\xi = \sqrt{3}$.
 
 Der Scheitelfaktor für Rechtecksignale beträgt $\xi = 1$.
 
-**Formfaktor**
+#### Formfaktor
 
 Der Formfaktor stellt das Verhältnis von Effektivwert I bzw. U zu Gleichrichtwert $\overline{|i|}$ bzw. $\overline{|u|}$ dar.
 
@@ -286,7 +286,7 @@ Der Formfaktor für Dreiecksignale beträgt $F = \frac{1.11}{2}$.
 
 Der Formfaktor für Rechtecksignale beträgt $F = 1.11$.
 
-### Effektivwert mit Gleichstromanteil
+#### Effektivwert mit Gleichstromanteil
 
 ![Mischspannung](../images/tut/chap3/Mischspannung.pdf){#fig-TutChapMischspannung}
 
