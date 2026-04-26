@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Spannungsteiler – Grundlagen der Elektrotechnik 2</title>
+<title>9&nbsp; Einstieg in LTspice – Grundlagen der Elektrotechnik 2</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -58,27 +58,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -88,8 +68,8 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../hw/hw_04.html" rel="next">
-<link href="../hw/hw_01.html" rel="prev">
+<link href="../hw/hw_01.html" rel="next">
+<link href="../lec/lec_08.html" rel="prev">
 <link href="../images/hsb-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -129,35 +109,6 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -170,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/hw_00.html">Hörsaalübungen</a></li><li class="breadcrumb-item"><a href="../hw/hw_03.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Spannungsteiler</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/hw_00.html">Hörsaalübungen</a></li><li class="breadcrumb-item"><a href="../hw/hw_00.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Einstieg in LTspice</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -280,7 +231,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../hw/hw_00.html" class="sidebar-item-text sidebar-link">
+  <a href="../hw/hw_00.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Einstieg in LTspice</span></span></a>
   </div>
 </li>
@@ -292,7 +243,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../hw/hw_03.html" class="sidebar-item-text sidebar-link active">
+  <a href="../hw/hw_03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Spannungsteiler</span></span></a>
   </div>
 </li>
@@ -415,30 +366,19 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#schaltungsaufgabe-mit-zeigerdiagramm" id="toc-schaltungsaufgabe-mit-zeigerdiagramm" class="nav-link active" data-scroll-target="#schaltungsaufgabe-mit-zeigerdiagramm"><span class="header-section-number">11.1</span> Schaltungsaufgabe mit Zeigerdiagramm</a>
-  <ul class="collapse">
-  <li><a href="#zeigerdiagramm" id="toc-zeigerdiagramm" class="nav-link" data-scroll-target="#zeigerdiagramm"><span class="header-section-number">11.1.1</span> Zeigerdiagramm</a></li>
-  </ul></li>
-  <li><a href="#kompensierter-spannungsteiler" id="toc-kompensierter-spannungsteiler" class="nav-link" data-scroll-target="#kompensierter-spannungsteiler"><span class="header-section-number">11.2</span> Kompensierter Spannungsteiler</a>
-  <ul class="collapse">
-  <li><a href="#sec-hw3p2" id="toc-sec-hw3p2" class="nav-link" data-scroll-target="#sec-hw3p2"><span class="header-section-number">11.2.1</span> Spannungsteiler</a></li>
-  <li><a href="#eingangsimpedanz" id="toc-eingangsimpedanz" class="nav-link" data-scroll-target="#eingangsimpedanz"><span class="header-section-number">11.2.2</span> Eingangsimpedanz</a></li>
-  <li><a href="#kapazität" id="toc-kapazität" class="nav-link" data-scroll-target="#kapazität"><span class="header-section-number">11.2.3</span> Kapazität</a></li>
-  </ul></li>
-  <li><a href="#rc-spannungsteiler" id="toc-rc-spannungsteiler" class="nav-link" data-scroll-target="#rc-spannungsteiler"><span class="header-section-number">11.3</span> RC-Spannungsteiler</a>
-  <ul class="collapse">
-  <li><a href="#spannungsverhältnis" id="toc-spannungsverhältnis" class="nav-link" data-scroll-target="#spannungsverhältnis"><span class="header-section-number">11.3.1</span> Spannungsverhältnis</a></li>
-  <li><a href="#betrag-und-phase" id="toc-betrag-und-phase" class="nav-link" data-scroll-target="#betrag-und-phase"><span class="header-section-number">11.3.2</span> Betrag und Phase</a></li>
-  </ul></li>
+  <li><a href="#laden-der-notwendigen-bibliotheken" id="toc-laden-der-notwendigen-bibliotheken" class="nav-link active" data-scroll-target="#laden-der-notwendigen-bibliotheken"><span class="header-section-number">9.1</span> Laden der notwendigen Bibliotheken</a></li>
+  <li><a href="#einlesen-der-rohdaten" id="toc-einlesen-der-rohdaten" class="nav-link" data-scroll-target="#einlesen-der-rohdaten"><span class="header-section-number">9.2</span> Einlesen der Rohdaten</a></li>
+  <li><a href="#zuweisen-der-daten-zu-variablen" id="toc-zuweisen-der-daten-zu-variablen" class="nav-link" data-scroll-target="#zuweisen-der-daten-zu-variablen"><span class="header-section-number">9.3</span> Zuweisen der Daten zu Variablen</a></li>
+  <li><a href="#plotten-der-spannungsverläufe" id="toc-plotten-der-spannungsverläufe" class="nav-link" data-scroll-target="#plotten-der-spannungsverläufe"><span class="header-section-number">9.4</span> Plotten der Spannungsverläufe</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/hw/hw_03.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/hw/hw_00.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/hw_00.html">Hörsaalübungen</a></li><li class="breadcrumb-item"><a href="../hw/hw_03.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Spannungsteiler</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/hw_00.html">Hörsaalübungen</a></li><li class="breadcrumb-item"><a href="../hw/hw_00.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Einstieg in LTspice</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Spannungsteiler</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Einstieg in LTspice</span></h1>
 </div>
 
 
@@ -455,341 +395,43 @@ window.Quarto = {
 </header>
 
 
-<section id="schaltungsaufgabe-mit-zeigerdiagramm" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="schaltungsaufgabe-mit-zeigerdiagramm"><span class="header-section-number">11.1</span> Schaltungsaufgabe mit Zeigerdiagramm</h2>
-<div id="fig-hw3p1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-hw3p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/hw/hw3p1.svg" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hw3p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;11.1: RLC-Schaltung für das Zeigerdiagramm.
-</figcaption>
-</figure>
-</div>
-<p>Gegeben ist die RLC-Schaltung in <a href="#fig-hw3p1" class="quarto-xref">Abbildung&nbsp;<span>11.1</span></a>. Dabei sind die Bauteilwerte <span class="math inline">\(R=100\,\Omega\)</span>, <span class="math inline">\(L=1\,\mu H\)</span>, <span class="math inline">\(C=1\,nF\)</span> und die Spannungsquelle <span class="math inline">\(u(t)=\hat{U} \cos(\omega t)\)</span> mit <span class="math inline">\(\hat{U}=1,41\,V\)</span> und <span class="math inline">\(\omega=2 \pi 6\,MHz\)</span>.</p>
-<section id="zeigerdiagramm" class="level3" data-number="11.1.1">
-<h3 data-number="11.1.1" class="anchored" data-anchor-id="zeigerdiagramm"><span class="header-section-number">11.1.1</span> Zeigerdiagramm</h3>
-<p>Die Aufgabe besteht darin, das Zeigerdiagramm für alle Teilströme und Teilspannungen zu erstellen.</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Vorsicht</span>Schrittweise graphische Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li><p><span class="math inline">\(\vec{I_R}\)</span> und <span class="math inline">\(\vec{U_R}\)</span> sind reelle Zeiger in Phase. Diese beiden Zeiger als Bezug mit selbst definierten Längen einzeichnen, z.B. <span class="math inline">\(\vec{I_R} = 5\,cm\)</span> und <span class="math inline">\(\vec{U_R} = 10\,cm\)</span>.</p></li>
-<li><p><span class="math inline">\(\vec{I_L}\)</span> mit -90<span class="math inline">\(^{\circ}\)</span> bezüglich <span class="math inline">\(\vec{U_R}\)</span> einzeichnen. Zur Bestimmung der Länge muss nun der Zeiger für den Strom durch die Induktivität im Bezug zum Zeiger für den Strom durch den Widerstand bestimmt werden, da Strom- und Spannungszeiger am Widerstand als Referenz für das Zeigerdiagramm zu Beginn gesetzt worden sind.</p></li>
-</ol>
-<p><span class="math display">\[
-\vert\vec{I_L}\vert = \frac{\vert\vec{U_L}\vert}{\omega L}
-= \frac{\vert\vec{U_R}\vert}{\omega L}
-= \frac{\vert\vec{U_L}\vert}{R}\frac{R}{\omega L}
-= \vert\vec{I_R}\vert \cdot 2.65
-\]</span></p>
-<ol start="3" type="1">
-<li><p>Jetzt den Summenvektor für den Gesamtstrom <span class="math inline">\(\vec{I}=\vec{I_R}+\vec{I_L}\)</span> einzeichnen.</p></li>
-<li><p>Die Spannung am Kondensator mit -90<span class="math inline">\(^{\circ}\)</span> bezüglich <span class="math inline">\(\vec{I}\)</span> einzeichnen. Wie auch schon beim Strom durch die Induktivität wird die Länge des Zeigers für die Spannung am Kondensator durch einen Faktor zum Referenzzeiger, <span class="math inline">\(\vec{U_R}\)</span>, ausgedrückt.</p></li>
-</ol>
-<p><span class="math display">\[
-\vert\vec{U_C}\vert = \frac{\vert\vec{I}\vert}{\omega C}
-= \frac{\vert\vec{I}\vert}{\vert\vec{I_R}\vert} \cdot \frac{\vert\vec{I_R}\vert}{\omega C}
-= \frac{\vert\vec{I}\vert}{\vert\vec{I_R}\vert} \cdot R \vert\vec{I_R}\vert \cdot \frac{1}{\omega R C}
-= 2.85 \cdot \vert\vec{U_R}\vert \cdot 0.265 = 0.76 \vert\vec{U_R}\vert
-\]</span></p>
-<ol start="5" type="1">
-<li>Final den Summenvektor für die Quellenspannung einzeichnen; <span class="math inline">\(\vec{U} = \vec{U_C} + \vec{U_R}\)</span></li>
-</ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/hw/hw3p1a.svg" class="img-fluid figure-img" width="400"></p>
-<figcaption>Zeigerdiagramm.</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<p>Sie benötigen eine Bibliothek aus dem Python-Paket-Archiv, um mit LTSpice interagieren zu können. Entnehmen Sie die notwendigen Installationsschritte bitte der entsprechenden Webseite: https://github.com/nunobrum/PyLTSpice</p>
+<section id="laden-der-notwendigen-bibliotheken" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="laden-der-notwendigen-bibliotheken"><span class="header-section-number">9.1</span> Laden der notwendigen Bibliotheken</h2>
+<div id="e4b2d9ad" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PyLTSpice <span class="im">import</span> RawRead</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-</section>
-<section id="kompensierter-spannungsteiler" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="kompensierter-spannungsteiler"><span class="header-section-number">11.2</span> Kompensierter Spannungsteiler</h2>
-<p>Die abgebildete Schaltung in <a href="#fig-hw3p2" class="quarto-xref">Abbildung&nbsp;<span>11.2</span></a> stellt das Prinzip eines Oszilloskoptastkopfes dar, ein sogenannter kompensierter Spannungsteiler. Dabei bezeichnen <span class="math inline">\(R\)</span> und <span class="math inline">\(C\)</span> Widerstand und Kapazität des Oszilloskopeingangs. <span class="math inline">\(R_1 = 9\,M\Omega\)</span>, <span class="math inline">\(R = 1\,M\Omega\)</span>, <span class="math inline">\(R_2 = 1\,M\Omega\)</span>, <span class="math inline">\(C = 10\,pF\)</span>.</p>
-<div id="fig-hw3p2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-hw3p2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/hw/hw3p2.svg" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hw3p2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;11.2: Ersatzschaltbild eines Oszilloskop-Tastkopfes.
-</figcaption>
-</figure>
-</div>
-<p>vgl. <a href="https://www.elektroniktutor.de/analogtechnik/c_teiler.html">Kapazitiver Spannungsteiler</a> <span class="citation" data-cites="mietke2024"><a href="../references.html#ref-mietke2024" role="doc-biblioref">[1]</a></span></p>
-<section id="sec-hw3p2" class="level3" data-number="11.2.1">
-<h3 data-number="11.2.1" class="anchored" data-anchor-id="sec-hw3p2"><span class="header-section-number">11.2.1</span> Spannungsteiler</h3>
-<p>Leiten Sie den Spannungsübertagungsfaktor <span class="math inline">\(\underline{H}_u=\underline{U}_{osz}/\underline{U}\)</span> allgemein für die angegebenen Bauteile her?</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Vorsicht</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Zeichnen Sie ein vereinfachtes Ersatzschaltbild mit zusammengefassten Impedanzen <span class="math inline">\(Z_1\)</span> und <span class="math inline">\(Z_2\)</span>.</p>
-<div id="fig-hw3p2a" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-hw3p2a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/hw/hw3p2a.svg" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hw3p2a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;11.3: Ersatzschaltbild des Tastkopfes zusammengefasst.
-</figcaption>
-</figure>
-</div>
-<p><span class="math display">\[
-Z_1 = \frac{\frac{R_1}{j\omega C_1}}{\frac{1}{j \omega C_1} + R_1} = \frac{R_1}{1 + j \omega R_1 C_1}
-\]</span></p>
-<p><span class="math display">\[
-Z_2 = \frac{R_{2g}}{1+ j \omega R_{2g} C}, \quad \mbox{wobei} \quad  R_{2g}=\frac{R_2 R}{R_2+R}
-\]</span></p>
-<p>Mit diesen Definitionen bestimmt man das Spannungsverhältnis:</p>
-<p><span class="math display">\[
-\underline{H}_u = \frac{\underline{U_{osz}}}{\underline{U}}= \frac{\underline{Z}_2}{\underline{Z}_1 + \underline{Z}_2}.
-\]</span></p>
-</div>
-</div>
+<section id="einlesen-der-rohdaten" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="einlesen-der-rohdaten"><span class="header-section-number">9.2</span> Einlesen der Rohdaten</h2>
+<div id="5e1730c6" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ltr <span class="op">=</span> RawRead(<span class="st">'bsp433_reisch.raw'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># print(ltr.get_trace_names())</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># print(ltr.get_raw_property())</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="eingangsimpedanz" class="level3" data-number="11.2.2">
-<h3 data-number="11.2.2" class="anchored" data-anchor-id="eingangsimpedanz"><span class="header-section-number">11.2.2</span> Eingangsimpedanz</h3>
-<p>Wie groß ist die Eingangsimpedanz <span class="math inline">\(\underline{Z}=\underline{U}/\underline{I}\)</span> des Tastkopfes?</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Vorsicht</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Mit den Vorarbeiten aus <a href="#sec-hw3p2" class="quarto-xref"><span>Kapitel 11.2.1</span></a> kann man an dieser Stelle die Eingangsimpedanz des Tastkopfes als Reihenschaltung der Impedanzen <span class="math inline">\(Z_1\)</span> und <span class="math inline">\(Z_2\)</span> notieren.</p>
-<p><span class="math display">\[
-\underline{Z} = \underline{Z}_1 + \underline{Z}_2 = \frac{R_1}{1 + j \omega R_1 C_1} + \frac{R_{2g}}{1+ j \omega R_{2g} C}
-\]</span></p>
-</div>
-</div>
+<section id="zuweisen-der-daten-zu-variablen" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="zuweisen-der-daten-zu-variablen"><span class="header-section-number">9.3</span> Zuweisen der Daten zu Variablen</h2>
+<div id="b77ac11a" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> ltr.get_trace(<span class="st">'time'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>V1 <span class="op">=</span> ltr.get_trace(<span class="st">'V(1)'</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>V2 <span class="op">=</span> ltr.get_trace(<span class="st">'V(2)'</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="kapazität" class="level3" data-number="11.2.3">
-<h3 data-number="11.2.3" class="anchored" data-anchor-id="kapazität"><span class="header-section-number">11.2.3</span> Kapazität</h3>
-<p>Wie muß die Kapazität <span class="math inline">\(C_1\)</span> gewählt werden, damit das Verhältnis <span class="math inline">\(\underline{H}=\underline{U}_{osz}/\underline{U}\)</span> für alle Frequenzen gleich groß ist?</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Vorsicht</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Ähnlich einer Abgleichbedingung für eine Wechselstrommessbrücke kann man an dieser Stelle argumentieren, dass das Spannungsverhältnis <span class="math inline">\(\underline{H}\)</span> für alle Frequenzen gleich groß ist, sofern <span class="math inline">\(R_1C_1 = R_{2g}C\)</span> gilt.</p>
-<p>Die mathematische/ingenieurische Begründung ist wie folgt:</p>
-<p><span class="math display">\[
-\frac{1}{Z_1} = \frac{1}{R_1} + j \omega C_1
-\]</span></p>
-<p><span class="math display">\[
-\frac{1}{Z_2} = \frac{1}{R_{2g}} + j \omega C
-\]</span></p>
-<p><span class="math display">\[
-\underline{H} = \frac{U_{osz}}{U} = \frac{Z_2}{Z_1 + Z_2} = \frac{1}{1+\frac{Z_1}{Z_2}}
-= \frac{1}{1+\frac{\frac{1}{R_{2g}}+j \omega C}{\frac{1}{R_1}+j \omega C_1}}
-= \frac{1}{1+\frac{R_1}{R_{2g}}\frac{1+j \omega R_{2g} C}{1+ j \omega R_1 C_1}}
-\]</span></p>
-<p>Hieraus folgt dann die Bestimmungsgleichung für den Kondensator <span class="math inline">\(C_1\)</span>:</p>
-<p><span class="math display">\[
-C_1 = \frac{R_{2g}}{R_1} C = \frac{0.5}{9} 10\,pF = 0.55\,pF.
-\]</span></p>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="rc-spannungsteiler" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="rc-spannungsteiler"><span class="header-section-number">11.3</span> RC-Spannungsteiler</h2>
-<p>Gegeben ist der abgebildete Spannungsteiler in <a href="#fig-hw3p3" class="quarto-xref">Abbildung&nbsp;<span>11.6</span></a> mit zwei Widerständen und einem Kondensator.</p>
-<div id="fig-hw3p3" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-hw3p3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/hw/hw3p3.svg" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hw3p3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;11.4: RC-Spannungsteiler
-</figcaption>
-</figure>
-</div>
-<section id="spannungsverhältnis" class="level3" data-number="11.3.1">
-<h3 data-number="11.3.1" class="anchored" data-anchor-id="spannungsverhältnis"><span class="header-section-number">11.3.1</span> Spannungsverhältnis</h3>
-<p>Berechnen Sie den komplexen Spannungsübertragungsfaktor <span class="math inline">\(\underline{H}_u=\underline{U}_2/\underline{U}_1\)</span>.</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Vorsicht</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Fassen Sie die Bauteile zu Impedanzen <span class="math inline">\(Z_1\)</span> und <span class="math inline">\(Z_2\)</span> zusammen. Das gesuchte Spannungsverhältnis erhalten Sie aus der Spannungsteilerregel.</p>
-<div id="fig-hw3p3a" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-hw3p3a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/hw/hw3p3a.svg" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hw3p3a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;11.5: RC-Spannungsteiler zusammengefasst.
-</figcaption>
-</figure>
-</div>
-<p><span class="math display">\[
-\underline{Z}_1 = R_1  \underline{Z}_2 = R_2 + \frac{1}{j \omega C}
-\]</span></p>
-<p><span class="math display">\[
-\underline{H} = \frac{\underline{U}_2}{\underline{U}_1} = \frac{\underline{Z}_2}{\underline{Z}_1+\underline{Z}_2}
-= \frac{R_2+\frac{1}{j \omega C}}{R_1+R_2+\frac{1}{j \omega C}}
-= \frac{1+j \omega R_2C}{1 + j \omega (R_1+R_2)C}
-\]</span></p>
-</div>
-</div>
-</div>
-</section>
-<section id="betrag-und-phase" class="level3" data-number="11.3.2">
-<h3 data-number="11.3.2" class="anchored" data-anchor-id="betrag-und-phase"><span class="header-section-number">11.3.2</span> Betrag und Phase</h3>
-<p>Stellen Sie den Betrag und den Phasenwinkel von <span class="math inline">\(\underline{H}_u\)</span> als Funktion von <span class="math inline">\(\omega\)</span> für den Fall <span class="math inline">\(R_1 = 1\,\Omega\)</span>, <span class="math inline">\(R_2 = 100\,\Omega\)</span> und <span class="math inline">\(C = 1\,\mu F\)</span> mit Python dar.</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Vorsicht</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Mit der Vorarbeit aus <a href="#sec-hw3p2" class="quarto-xref"><span>Kapitel 11.2.1</span></a> können Sie die Ausdrücke für Betrag und Phase der Spannungsübertragungsfunktion <span class="math inline">\(\underline{H}\)</span> direkt ablesen. Der Betrag ist der Quotient der Beträge von Zähler und Nenner.</p>
-<p><span class="math display">\[
-\vert \underline{H} \vert =  \frac{\vert 1 + j \omega R_2 C \vert}{\vert 1 + j \omega (R_1+R_2) C \vert}
-= \frac{\sqrt{1 + (\omega R_2 C)^2}}{\sqrt{1+(\omega (R_1+R_2) C)^2}}
-= \sqrt{\frac{1 + (\omega R_2 C)^2}{1 + (\omega (R_1+R_2) C)^2}}
-\]</span></p>
-<p>Für die Phase, das Argument von <span class="math inline">\(\underline{H}\)</span>, kann auch der Quotient der Argumente von Zähler und Nenner gebildet werden.</p>
-<p><span class="math display">\[
-\arg(\underline{H}) = \frac{\arg(1 + j \omega R_2 C)}{\arg(1 + j \omega (R_1+R_2) C)}
-= \frac{\arctan(\omega R_2 C)}{\arctan(\omega (R_1+R_2) C)}
-= \arctan(\omega R_2 C) - \arctan(\omega (R_1+R_2) C)
-\]</span></p>
-<div class="cell" data-execution_count="1">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Definitionen</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Datenbereich</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> np.logspace(<span class="dv">0</span>, <span class="dv">6</span>)  <span class="co"># Hz logarithmisch</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> f</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Bauteilwerte</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>R1 <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>R2 <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="fl">1e-6</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Übertragungsfunktion</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>H_u <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> <span class="ot">1j</span> <span class="op">*</span> w <span class="op">*</span> R2 <span class="op">*</span> C) <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> <span class="ot">1j</span> <span class="op">*</span> w <span class="op">*</span> (R1 <span class="op">+</span> R2) <span class="op">*</span> C)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellen des Bode-Diagramms</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Mit direkten Funktionen aus numpy</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>fig1 <span class="op">=</span> plt.figure(<span class="dv">1</span>)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Frequenzgang</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, <span class="dv">20</span><span class="op">*</span>np.log10(np.<span class="bu">abs</span>(H_u)))</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'</span><span class="dv">$</span><span class="ch">\v</span><span class="vs">ert H_u </span><span class="ch">\v</span><span class="vs">ert</span><span class="dv">$</span><span class="vs">/dB'</span>)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Phase</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, np.rad2deg(np.angle(H_u)))</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'arg</span><span class="kw">(</span><span class="dv">$</span><span class="vs">H_u</span><span class="dv">$</span><span class="kw">)</span><span class="vs">/Grad'</span>)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'Frequenz f/Hz'</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div id="fig-hw3p3" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-hw3p3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="fig-hw3p3-1" class="cell-output cell-output-display quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-hw3p3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<pre><code>Text(0.5, 0, 'Frequenz f/Hz')</code></pre>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-hw3p3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) Bode-Diagramm
-</figcaption>
-</figure>
-</div>
-<div class="cell-output cell-output-display">
-<div id="fig-hw3p3-2" class="quarto-float quarto-figure quarto-figure-center anchored" height="431" width="611">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-hw3p3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="hw_03_files/figure-html/fig-hw3p3-output-2.png" id="fig-hw3p3-2" data-ref-parent="fig-hw3p3" width="611" height="431" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-hw3p3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b)
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-hw3p3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;11.6
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
+<section id="plotten-der-spannungsverläufe" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="plotten-der-spannungsverläufe"><span class="header-section-number">9.4</span> Plotten der Spannungsverläufe</h2>
+<div id="8496e5bc" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>plt.plot(t, V1, label<span class="op">=</span><span class="st">"$v_1(t)$"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>plt.plot(t, V2, label<span class="op">=</span><span class="st">"$v_2(t)$"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Zeit t in s'</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Spannung V in V'</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
-<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-mietke2024" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">D. Mietke, <span>„Elektroniktutor“</span>, Oberstufenzentrum f<span>ü</span>r Kommunikations-, Informations- und Medientechnik (OSZ-KIM), Berlin; online, techreport, 2024. Verfügbar unter: <a href="https://www.elektroniktutor.de">https://www.elektroniktutor.de</a></div>
-</div>
-</div>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1195,13 +837,13 @@ Abbildung&nbsp;11.6
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../hw/hw_01.html" class="pagination-link" aria-label="Periodische Signale">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span>
+      <a href="../lec/lec_08.html" class="pagination-link" aria-label="Spulen und Übertrager">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spulen und Übertrager</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../hw/hw_04.html" class="pagination-link" aria-label="Bode-Diagramm und Nyquist-Ortskurve">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Bode-Diagramm und Nyquist-Ortskurve</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../hw/hw_01.html" class="pagination-link" aria-label="Periodische Signale">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Periodische Signale</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1213,7 +855,7 @@ Abbildung&nbsp;11.6
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/gel2/edit/quarto/hw/hw_03.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mimeiners/gel2/blob/quarto/hw/hw_00.ipynb" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/gel2/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
