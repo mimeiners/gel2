@@ -298,11 +298,11 @@ $$
 
 ## Übungen
 
-### Aufgabe 3.1
+### Aufgabe 3.1 {.unnumbered}
 
 Ein Sinusstrom mit dem Scheitelwert $\hat{i} = 10 A$ fließt durch die Gleichrichterschaltung-Brückenschaltung von Bild 3.4.
 
-![Aufgabe 3.1](../images/tut/chap3/Brueckengleichrichter.pdf){#fig-TutChapAufg3.1}
+![Aufgabe 3.1](../images/tut/chap3/Brueckengleichrichter){#fig-TutChapAufg3.1}
 
 Entn. aus [@Fricke1982]
 
@@ -321,7 +321,7 @@ Q = \overline{|i|} t = 6.366 A \cdot 2 h = 12.73 Ah
 $$
 :::
 
-### Aufgabe 3.2
+### Aufgabe 3.2 {.unnumbered}
 
 Die übliche Netzspannung 1982 betrug $U = 220 V$ bei der Netzfrequenz $f = 50 Hz$. Es sind der Gleichrichtwert
 $\overline{|u|}$ und die Zeitfunktion u dieser Spannung zu bestimmen.
@@ -356,14 +356,18 @@ u = \hat{u} sin(\omega t) = 311.1 V \cdot sin(314.2 \frac{1}{s} t)
 $$
 :::
 
-### Aufgabe 3.3
+### Aufgabe 3.3 {.unnumbered}
+In den folgenden Abbildungen a bis d sind periodische, zeitabhängige Spannungen mit dem Spitzenwert $\hat{u}$ = 10 V und
+er Periodendauer $T$ gegeben. Berechnen Sie jeweils den Mittelwert, den Gleichrichtwert sowie den Effektivwert für die
+Spannungsverläufe.
 
-![Aufgabe 3.3](../images/tut/chap3/Aufgabe2.3.pdf){#fig-TutChap3Aufg3.3}
+
+![Aufgabe 3.3](../images/tut/chap3/Aufgabe2.3){#fig-TutChap3Aufg3.3}
 
 Entn. aus [@albach2020a]
 
 ::: {.callout-caution collapse="true"}
-#### Lösung 3.3
+#### Lösung 3.3 
 
 a)
 Mittelwert:
@@ -453,7 +457,7 @@ U_{eff} = \sqrt{\frac{1}{T} \int\limits_{0}^{T/2} \left( 2\hat{u} \frac{t}{T} \r
 $$
 :::
 
-### Aufgabe 3.4
+### Aufgabe 3.4 {.unnumbered}
 
 Ein Wechselstrom besteht nach der Abbildung aus "angeschnittenen" Sinushalbschwingungen. In den Bereichen 
 $0 < \omega t < \alpha$ und $\pi < \omega t < (\pi + \alpha)$ fließt kein Strom (i = 0), wobei $\alpha = \pi/4 = 45°$
@@ -518,7 +522,7 @@ I = \sqrt{\frac{1}{2\pi} \cdot \int\limits_{0}^{2\pi} i^2 d\omega t}
 $$
 :::
 
-### Aufgabe 3.5
+### Aufgabe 3.5 {.unnumbered}
 
 An einem ohmschen Widerstand $R = 30 \Omega$ liegt eine mittelwertfreie Dreieckspannung mit der Amplitude $\hat{u} = 9
 V$ und der Frequenz $f = 100 Hz$ an.
@@ -539,7 +543,7 @@ P = \frac{U^2}{R} = \frac{5.196 V}{30 \Omega} = 0.9 W
 $$
 :::
 
-### Aufgabe 3.6
+### Aufgabe 3.6 {.unnumbered}
 
 An einem ohmschen Widerstand R liegt eine Zägezahnspannung, die von einer Gleichspannung überlagert ist, an:
 
@@ -575,7 +579,7 @@ P = \frac{U^2}{R}
 $$
 :::
 
-### Aufgabe 3.7
+### Aufgabe 3.7 {.unnumbered}
 
 Durch den ohmschen Widerstand R fließt ein Sinusstrom, der mit einem Gleichstrom überlagert ist:
 

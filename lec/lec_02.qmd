@@ -116,10 +116,10 @@ Ein Zweipol heißt Widerstand, falls die zwischen seinen Klemmen auftretende Spa
 Klemmenstrom $i(t)$ bestimmt ist 
 
 $$
-v(t) = v[i(t)].
+u(t) = u[i(t)].
 $$
 
-Der Widerstand heißt linear oder ohmsch, falls Spannung und Strom zueinander proportional sind v(t) = Ri(t). (1.3)
+Der Widerstand heißt linear oder ohmsch, falls Spannung und Strom zueinander proportional sind u(t) = Ri(t). (1.3)
 
 Der Proportionalitätsfaktor $R$ heißt Widerstand(swert), sein Kehrwert $G = 1/R$ der Leitwert des Zweipols. 
 Widerstandswerte werden in $\Omega$ (Ohm) angegeben, Leitwerte in S (Siemens); dabei gilt 1$\Omega$ = 1 V/A und 1S = 1/$\Omega$. 
@@ -146,7 +146,7 @@ Ein Zweipol heißt *Kapazität*, falls die in ihm gespeicherte Ladung $q(t)$ zu 
 seinen Klemmen anliegende Spannung $u(t)$ bestimmt ist
 
 $$
-q(t) = q[v(t)].
+q(t) = q[u(t)].
 $$
 
 Der durch eine Kapazität fließende Strom $i(t)$ ist gleich der Änderung der Ladung der Kapazität mit der Zeit

@@ -58,7 +58,7 @@ book:
         - lec/lec_08.qmd
     - part: Hörsaalübungen 
       chapters:
-        - hw/hw_00.ipynb
+        - hw/hw_00.qmd
         - hw/hw_01.qmd
 #        - hw/hw_02.qmd
         - hw/hw_03.qmd
@@ -89,9 +89,9 @@ bibliography: _bibliography/references.bib
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl"
 # csl: _bibliography/ieee.csl
 
-
-# format: orange-book-typst
-
+# execute:
+#   freeze: auto
+  
 format:
   
   html:
@@ -115,7 +115,7 @@ format:
  #   # fontcolor: "black"
  #   highlight-style: github
  #   default-image-extension: svg
-
+ 
   pdf:
     documentclass: scrbook
     classoption: [twoside]
@@ -157,3 +157,4 @@ format:
   #   # template-partials:
   #   # - frontmatter/before-body.tex
   #   # - frontmatter/toc.tex
+  

@@ -1,0 +1,13 @@
+# Einstieg in LTspice
+
+Beispielsweise wird ein RC-Tiefpaß mit 
+[LTspice](https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/kap433_reisch.asc) betrachtet.
+
+Sie benötigen eine Bibliothek aus dem Python-Paket-Archiv, um mit LTSpice interagieren zu können. Entnehmen Sie die
+notwendigen Installationsschritte bitte der entsprechenden Webseite [PyLTSpice](https://github.com/nunobrum/PyLTSpice).
+
+```{python}
+
+{{< include ../files/spice/kap433_reisch.py >}}
+
+```

@@ -1,0 +1,16 @@
+.title RC Tiefpass
+* Reisch, Kap. 4.3.3
+C1 2 0 500p
+R1 2 1 100
+V1 1 0 PULSE(0 1 100p 10n 10n 5e-7 1e-6)
+
+* ANALYSE
+.tran 10n 3u
+
+.control
+run
+wrdata kap433_reisch.csv V(1) V(2)
+write kap433_reisch.raw
+.endc
+
+.end

@@ -2,8 +2,7 @@
 
 ## Darstellung von Signalen
 
-Stellen Sie die Signale des angegebenen Netzwerks mit Python (und/oder von Ihnen gewählten alternativen Softwarepaketen
-des wissenschaflichten Rechnens, z.B. Matlab oder Gnu Octave) dar.
+Stellen Sie die Signale des angegebenen Netzwerks mit Python und LTspice dar.
 
 Die Komponenten Werte sind: $\omega$ = $2 \pi$ 1 kHz, $\hat{U}_0$ = 10 V, $R$ = 30 $\Omega$, $L$ = 3 mH,
 $\hat{I}_0$ = 0.282 A, $\varphi_I$ = -32.1 Grad.
