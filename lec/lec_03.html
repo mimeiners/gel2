@@ -521,10 +521,10 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-\sigma + j \omega = a e^{j \varphi} = a \left( \cos(\varphi) + j \sin(\varphi) \right)
+\sigma + j \omega = x e^{j \varphi} = x \left( \cos(\varphi) + j \sin(\varphi) \right)
 \]</span></p>
 <p><span class="math display">\[
-a = \sqrt{\sigma^2 + \omega^2} \quad \mbox{und} \quad \varphi = \arctan\left(\frac{\omega}{\sigma}\right)
+x = \sqrt{\sigma^2 + \omega^2} \quad \mbox{und} \quad \varphi = \arctan\left(\frac{\omega}{\sigma}\right)
 \]</span></p>
 </div>
 </div>
@@ -555,13 +555,13 @@ a = \sqrt{\sigma^2 + \omega^2} \quad \mbox{und} \quad \varphi = \arctan\left(\fr
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align}
-f(t) &amp;= \hat{A}\cos(\omega t + \varphi_a) \\
-&amp;= \frac{1}{2} \underbrace{\hat{A} e^{j \varphi_a}}_{Phasor} e^{j \omega t}
-+ \frac{1}{2} \underbrace{\hat{A} e^{-j\varphi_a}}_{Phasor} e^{-j \omega t} \\
-&amp;= \frac{1}{2}\underline{\hat{A}} e^{j \omega t} + \frac{1}{2}\underline{\hat{A}}^{*} e^{-j \omega t} \\
-&amp;= \operatorname{Re}\left\{\underline{\hat{A}}e^{j\omega t}\right\} \\
-&amp;= \operatorname{Re}\left\{\hat{A}e^{j \varphi_a}e^{j \omega t}\right\} \\
-&amp;= \operatorname{Re}\left\{\hat{A}\left( \cos(\omega t + \varphi_a) + j \sin(\omega t + \varphi_a)\right)\right\}
+x(t) &amp;= \hat{x}\cos(\omega t + \varphi_x) \\
+&amp;= \frac{1}{2} \underbrace{\hat{x} e^{j \varphi_x}}_{Phasor} e^{j \omega t}
++ \frac{1}{2} \underbrace{\hat{x} e^{-j\varphi_x}}_{Phasor} e^{-j \omega t} \\
+&amp;= \frac{1}{2}\underline{\hat{x}} e^{j \omega t} + \frac{1}{2}\underline{\hat{x}}^{*} e^{-j \omega t} \\
+&amp;= \operatorname{Re}\left\{\underline{\hat{x}}e^{j\omega t}\right\} \\
+&amp;= \operatorname{Re}\left\{\hat{x}e^{j \varphi_x}e^{j \omega t}\right\} \\
+&amp;= \operatorname{Re}\left\{\hat{x}\left( \cos(\omega t + \varphi_x) + j \sin(\omega t + \varphi_a)\right)\right\}
 \end{align}\]</span></p>
 </div>
 </div>
@@ -578,7 +578,7 @@ f(t) &amp;= \hat{A}\cos(\omega t + \varphi_a) \\
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-\underline{f}(t) = \underline{\hat{A}} e^{j\omega t} = \hat{A} e^{j \varphi_a} e^{j \omega t}
+\underline{x}(t) = \underline{\hat{x}} e^{j\omega t} = \hat{x} e^{j \varphi_x} e^{j \omega t}
 \]</span></p>
 </div>
 </div>
@@ -593,7 +593,7 @@ f(t) &amp;= \hat{A}\cos(\omega t + \varphi_a) \\
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-\underline{f}(0) = \underline{\hat{A}} = \hat{A} e^{j\varphi_a}
+\underline{x}(0) = \underline{\hat{x}} = \hat{x} e^{j\varphi_x}
 \]</span></p>
 </div>
 </div>
@@ -608,7 +608,7 @@ f(t) &amp;= \hat{A}\cos(\omega t + \varphi_a) \\
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-\underline{A} = \frac{1}{\sqrt{2}} \hat{A} e^{j \varphi_a}
+\underline{x} = \frac{1}{\sqrt{2}} \hat{x} e^{j \varphi_a}
 \]</span></p>
 </div>
 </div>
@@ -629,9 +629,9 @@ Abbildung&nbsp;3.1: Phasor-Diagramm
 <section id="grundschaltelemente" class="level3" data-number="3.5.1">
 <h3 data-number="3.5.1" class="anchored" data-anchor-id="grundschaltelemente"><span class="header-section-number">3.5.1</span> Grundschaltelemente</h3>
 <ul>
-<li><p>Sinusgröße <span class="math inline">\(i(t) = I \sqrt{2} \sin(\omega t + \varphi)\)</span></p></li>
+<li><p>Sinusgröße <span class="math inline">\(i(t) = I_{eff} \sqrt{2} \sin(\omega t + \varphi)\)</span></p></li>
 <li><p>da alle in einer Schaltung vorkommenen Sinusgrößen (meist) dieselbe Kreisfrequenz <span class="math inline">\(\omega\)</span> aufweisen, kann man diese außer Acht lassen und die Zeiger als stehend betrachten;</p></li>
-<li><p>Der Faktor 2 in den Scheitelwerten aller Sinusgrößen wird nicht berücksichtigt und man arbeitet mit Effektivwerten, […], vor allem zur Bestimmung von Leistungen. Man reduziert also die Zeigerlängen im Maßstab <span class="math inline">\(\frac{1}{\sqrt{2}}\)</span>.</p></li>
+<li><p>Der Faktor <span class="math inline">\(\sqrt{2}\)</span> in den Scheitelwerten aller Sinusgrößen wird nicht berücksichtigt und man arbeitet mit Effektivwerten, […], vor allem zur Bestimmung von Leistungen. Man reduziert also die Zeigerlängen im Maßstab <span class="math inline">\(\frac{1}{\sqrt{2}}\)</span>.</p></li>
 </ul>
 </section>
 <section id="komplexe-zahlen-mit-python" class="level3" data-number="3.5.2">

@@ -422,8 +422,8 @@ window.Quarto = {
 <li><p>Gleichvorgänge</p></li>
 <li><p>Nichtperiodische Vorgänge</p></li>
 <li><p>Periodische Vorgänge, Spezialfall sind harmonische (sinus-, kosinusförmige) Vorgänge mit der Periodendauer <span class="math inline">\(T\)</span></p></li>
-<li><p>Gleichgrößen mit <span class="math inline">\(f(t)\)</span> = const. werden mit großen lateinischen Buchstaben gekennzeichnet, Gleichspannung <span class="math inline">\(U\)</span> und Gleichstrom <span class="math inline">\(I\)</span></p></li>
-<li><p>Zeitveränderliche Größen, hierbei ändert die Erregergröße <span class="math inline">\(f(t)\)</span> ihre Amplitude und/oder ihre Richtung zeitlich. Der Wert von <span class="math inline">\(f(t)\)</span> zum momentanen Zeitpunkt heißt Augenblicks- oder Momentanwert <span class="math inline">\(f(t)\)</span> der physikalischen Größe. Momentanwerte erhalten kleine lateinische Buchstaben, Spannung <span class="math inline">\(u\)</span> und Strom <span class="math inline">\(i\)</span>.</p></li>
+<li><p>Gleichgrößen mit <span class="math inline">\(x(t)\)</span> = const. werden mit großen lateinischen Buchstaben gekennzeichnet, Gleichspannung <span class="math inline">\(U\)</span> und Gleichstrom <span class="math inline">\(I\)</span></p></li>
+<li><p>Zeitveränderliche Größen, hierbei ändert die Erregergröße <span class="math inline">\(x(t)\)</span> ihre Amplitude und/oder ihre Richtung zeitlich. Der Wert von <span class="math inline">\(f(t)\)</span> zum momentanen Zeitpunkt heißt Augenblicks- oder Momentanwert <span class="math inline">\(x(t)\)</span> der physikalischen Größe. Momentanwerte erhalten kleine lateinische Buchstaben, Spannung <span class="math inline">\(u\)</span> und Strom <span class="math inline">\(i\)</span>.</p></li>
 </ul>
 </section>
 <section id="sinusförmige-erregung-periodische-vorgänge" class="level2" data-number="2.3">
@@ -440,12 +440,12 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><p><span class="math inline">\(f(t)=f(t+nT)\)</span> mit <span class="math inline">\(n=0, 1 ...\)</span></p></li>
+<li><p><span class="math inline">\(x(t)=x(t+nT)\)</span> mit <span class="math inline">\(n=0, 1 ...\)</span></p></li>
 <li><p>Frequenz <span class="math inline">\(f=1/T\)</span></p></li>
 <li><p>Kreisfrequenz <span class="math inline">\(\omega=2\pi f = 2\pi/T\)</span></p></li>
 <li><p>Periodendauer <span class="math inline">\(T\)</span></p></li>
-<li><p>Wechselgröße allgem. <span class="math inline">\(a(t)=\hat{A} \sin (\omega t +\varphi) = \hat{A} \sin(\omega t + \omega t_0)\)</span></p></li>
-<li><p>Scheitelwert, Maximalwert der Amplitude <span class="math inline">\(\hat{A}=\max{A}=A_{max}\)</span></p></li>
+<li><p>Wechselgröße allgem. <span class="math inline">\(x(t)=\hat{X} \sin (\omega t +\varphi) = \hat{x} \sin(\omega t + \omega t_0)\)</span></p></li>
+<li><p>Scheitelwert, Maximalwert der Amplitude <span class="math inline">\(\hat{x}=\max{x}=x_{max}\)</span></p></li>
 <li><p>Nullphasenwinkel bzw. Nullzeitpunkt <span class="math inline">\(\varphi=\omega t_0\)</span></p></li>
 <li><p>Erregergröße wird aufgetragen mit <span class="math inline">\(\omega t\)</span> und nicht <span class="math inline">\(t\)</span>; <span class="math inline">\(\psi(t) = \omega t + \varphi = \omega t + \omega t_0\)</span></p></li>
 <li><p>Bogenmaß <span class="math inline">\(\psi/\mbox{Bogenmaß} = \frac{2 \pi}{360} \psi/\mbox{Grad}\)</span></p></li>
@@ -486,7 +486,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align}
-\overline{u(t)} &amp;= \frac{1}{T} \int_t^{t+T} u(\tau) \mathrm{d} \tau
+\overline{x(t)} &amp;= \frac{1}{T} \int_t^{t+T} x(\tau) \mathrm{d} \tau
 \end{align}\]</span></p>
 </div>
 </div>
@@ -501,7 +501,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align}
-\overline{\lvert u(t) \lvert} &amp;= \frac{1}{T} \int_t^{t+T} \lvert u(\tau) \lvert \mathrm{d} \tau
+\overline{\lvert x(t) \lvert} &amp;= \frac{1}{T} \int_t^{t+T} \lvert x(\tau) \lvert \mathrm{d} \tau
 \end{align}\]</span></p>
 </div>
 </div>
@@ -516,7 +516,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align}
-U_{eff} = \sqrt{\overline{u^2(t)}} &amp;= \sqrt{\frac{1}{T} \int_t^{t+T} u^2(\tau) \mathrm{d} \tau}
+X_{eff} = \sqrt{\overline{x^2(t)}} &amp;= \sqrt{\frac{1}{T} \int_t^{t+T} x^2(\tau) \mathrm{d} \tau}
 \end{align}\]</span></p>
 </div>
 </div>
