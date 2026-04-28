@@ -193,7 +193,7 @@ $$
 
 Sinusgrößen können zu verschiedenen Zeitpunkten ihre Scheitelwerte und Nulldurchgänge erreichen. Man sagt, dass diese Größen unterschiedliche Phasenlagen haben; sie sind gegeneinander phasenverschoben.
 
-![Phasenlage](../images/tut/chap3/Phasenlage.pdf){#fig-TutChapPhasenlage width=400}
+![Phasenlage](../images/tut/chap3/Phasenlage){#fig-TutChapPhasenlage width=400}
 
 Entn. aus [@Fricke1982]
 
@@ -288,7 +288,7 @@ Der Formfaktor für Rechtecksignale beträgt $F = 1.11$.
 
 #### Effektivwert mit Gleichstromanteil
 
-![Mischspannung](../images/tut/chap3/Mischspannung.pdf){#fig-TutChapMischspannung}
+![Mischspannung](../images/tut/chap3/Mischspannung){#fig-TutChapMischspannung}
 
 Entn. aus [@schenke2023]
 

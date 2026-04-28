@@ -64,11 +64,11 @@ Gleichungssystemen ausgehen (Maschen-, Knoten- und andere Verfahren) können nic
 ### Euler'sche Formel
 
 $$
-\sigma + j \omega = a e^{j \varphi} = a \left( \cos(\varphi) + j \sin(\varphi) \right) 
+\sigma + j \omega = x e^{j \varphi} = x \left( \cos(\varphi) + j \sin(\varphi) \right) 
 $$
 
 $$
-a = \sqrt{\sigma^2 + \omega^2} \quad \mbox{und} \quad \varphi = \arctan\left(\frac{\omega}{\sigma}\right)
+x = \sqrt{\sigma^2 + \omega^2} \quad \mbox{und} \quad \varphi = \arctan\left(\frac{\omega}{\sigma}\right)
 $$
 :::
 
@@ -87,13 +87,13 @@ $$
 ### Transformation
 
 \begin{align}
-f(t) &= \hat{A}\cos(\omega t + \varphi_a) \\
-&= \frac{1}{2} \underbrace{\hat{A} e^{j \varphi_a}}_{Phasor} e^{j \omega t} 
-+ \frac{1}{2} \underbrace{\hat{A} e^{-j\varphi_a}}_{Phasor} e^{-j \omega t} \\ 
-&= \frac{1}{2}\underline{\hat{A}} e^{j \omega t} + \frac{1}{2}\underline{\hat{A}}^{*} e^{-j \omega t} \\
-&= \operatorname{Re}\left\{\underline{\hat{A}}e^{j\omega t}\right\} \\
-&= \operatorname{Re}\left\{\hat{A}e^{j \varphi_a}e^{j \omega t}\right\} \\ 
-&= \operatorname{Re}\left\{\hat{A}\left( \cos(\omega t + \varphi_a) + j \sin(\omega t + \varphi_a)\right)\right\}
+x(t) &= \hat{x}\cos(\omega t + \varphi_x) \\
+&= \frac{1}{2} \underbrace{\hat{x} e^{j \varphi_x}}_{Phasor} e^{j \omega t} 
++ \frac{1}{2} \underbrace{\hat{x} e^{-j\varphi_x}}_{Phasor} e^{-j \omega t} \\ 
+&= \frac{1}{2}\underline{\hat{x}} e^{j \omega t} + \frac{1}{2}\underline{\hat{x}}^{*} e^{-j \omega t} \\
+&= \operatorname{Re}\left\{\underline{\hat{x}}e^{j\omega t}\right\} \\
+&= \operatorname{Re}\left\{\hat{x}e^{j \varphi_x}e^{j \omega t}\right\} \\ 
+&= \operatorname{Re}\left\{\hat{x}\left( \cos(\omega t + \varphi_x) + j \sin(\omega t + \varphi_a)\right)\right\}
 \end{align}
 :::
 
@@ -104,7 +104,7 @@ f(t) &= \hat{A}\cos(\omega t + \varphi_a) \\
 ### rotierender Zeiger, komplexer Momentanwert
 
 $$
-\underline{f}(t) = \underline{\hat{A}} e^{j\omega t} = \hat{A} e^{j \varphi_a} e^{j \omega t}
+\underline{x}(t) = \underline{\hat{x}} e^{j\omega t} = \hat{x} e^{j \varphi_x} e^{j \omega t}
 $$
 :::
 
@@ -113,7 +113,7 @@ $$
 ### ruhender Zeiger, komplexer Scheitelwert, Phasor
 
 $$
-\underline{f}(0) = \underline{\hat{A}} = \hat{A} e^{j\varphi_a}
+\underline{x}(0) = \underline{\hat{x}} = \hat{x} e^{j\varphi_x}
 $$
 :::
 
@@ -122,7 +122,7 @@ $$
 ### komplexer Effektivwert
 
 $$
-\underline{A} = \frac{1}{\sqrt{2}} \hat{A} e^{j \varphi_a}
+\underline{x} = \frac{1}{\sqrt{2}} \hat{x} e^{j \varphi_a}
 $$
 :::
 
@@ -133,12 +133,12 @@ $$
 
 ### Grundschaltelemente
 
-* Sinusgröße $i(t) = I \sqrt{2} \sin(\omega t + \varphi)$
+* Sinusgröße $i(t) = I_{eff} \sqrt{2} \sin(\omega t + \varphi)$
 
 * da alle in einer Schaltung vorkommenen Sinusgrößen (meist) dieselbe Kreisfrequenz $\omega$ aufweisen, kann man diese
   außer Acht lassen und die Zeiger als stehend betrachten; 
 
-* Der Faktor 2 in den Scheitelwerten aller Sinusgrößen wird nicht berücksichtigt und man arbeitet mit Effektivwerten,
+* Der Faktor $\sqrt{2}$ in den Scheitelwerten aller Sinusgrößen wird nicht berücksichtigt und man arbeitet mit Effektivwerten,
   [...], vor allem zur Bestimmung von Leistungen. Man reduziert also die Zeigerlängen im Maßstab $\frac{1}{\sqrt{2}}$. 
 
 
