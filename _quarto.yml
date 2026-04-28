@@ -89,8 +89,8 @@ bibliography: _bibliography/references.bib
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl"
 # csl: _bibliography/ieee.csl
 
-# execute:
-#   freeze: auto
+execute:
+  freeze: auto
   
 format:
   

@@ -300,13 +300,13 @@ $$
 
 ### Aufgabe 3.1 {.unnumbered}
 
-Ein Sinusstrom mit dem Scheitelwert $\hat{i} = 10 A$ fließt durch die Gleichrichterschaltung-Brückenschaltung von Bild 3.4.
+Ein Sinusstrom mit dem Scheitelwert $\hat{i}$ = 10 A fließt durch die Brückengleichrichterschaltung von @fig-TutChapAufg3.1
 
 ![Aufgabe 3.1](../images/tut/chap3/Brueckengleichrichter){#fig-TutChapAufg3.1}
 
 Entn. aus [@Fricke1982]
 
-Welche Elektrizitätsmenge Q wird während der Zeit t = 2 h befördert?  
+Welche Elektrizitätsmenge Q wird während der Zeit t = 2 h befördert?
 Tipp: $Q = i \cdot t$
 
 ::: {.callout-caution collapse="true"}
@@ -323,8 +323,8 @@ $$
 
 ### Aufgabe 3.2 {.unnumbered}
 
-Die übliche Netzspannung 1982 betrug $U = 220 V$ bei der Netzfrequenz $f = 50 Hz$. Es sind der Gleichrichtwert
-$\overline{|u|}$ und die Zeitfunktion u dieser Spannung zu bestimmen.
+Die übliche Netzspannung 1982 betrug U = 220 V bei der Netzfrequenz $f$ = 50 Hz. Es sind der Gleichrichtwert
+$\overline{|u|}$ und die Zeitfunktion $u(t)$ dieser Spannung zu bestimmen.
 
 ::: {.callout-caution collapse="true"}
 #### Lösung 3.2
@@ -357,12 +357,11 @@ $$
 :::
 
 ### Aufgabe 3.3 {.unnumbered}
-In den folgenden Abbildungen a bis d sind periodische, zeitabhängige Spannungen mit dem Spitzenwert $\hat{u}$ = 10 V und
-er Periodendauer $T$ gegeben. Berechnen Sie jeweils den Mittelwert, den Gleichrichtwert sowie den Effektivwert für die
-Spannungsverläufe.
+In @fig-TutChap3Aufg3.3 a bis d sind periodische, zeitabhängige Spannungen mit dem Spitzenwert $\hat{u}$ = 10 V und der Periodendauer $T$ gegeben. Berechnen Sie jeweils den Mittelwert, den Gleichrichtwert sowie den Effektivwert für die 
+gezeigten Spannungsverläufe.
 
 
-![Aufgabe 3.3](../images/tut/chap3/Aufgabe2.3){#fig-TutChap3Aufg3.3}
+![Aufgabe 3.3](../images/tut/chap3/Aufgabe23){#fig-TutChap3Aufg3.3}
 
 Entn. aus [@albach2020a]
 
@@ -547,7 +546,7 @@ $$
 
 An einem ohmschen Widerstand R liegt eine Zägezahnspannung, die von einer Gleichspannung überlagert ist, an:
 
-![Aufgabe 3.6](../images/tut/chap3/Aufgabe2.6.pdf){#fig-TutChap3Aufg3.6}
+![Aufgabe 3.6](../images/tut/chap3/Aufgabe26){#fig-TutChap3Aufg3.6}
 
 Entn. aus [@schenke2023]
 
@@ -583,7 +582,7 @@ $$
 
 Durch den ohmschen Widerstand R fließt ein Sinusstrom, der mit einem Gleichstrom überlagert ist:
 
-![Aufgabe 3.7](../images/tut/chap3/Aufgabe2.7.pdf){#fig-TutChap3Aufg3.7}
+![Aufgabe 3.7](../images/tut/chap3/Aufgabe27){#fig-TutChap3Aufg3.7}
 
 Entn. aus [@schenke2023]
 
