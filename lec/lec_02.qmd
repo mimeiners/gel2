@@ -70,6 +70,10 @@ keine Sinusschwingung (harmonische).
 
 ## Mittelwerte periodischer Zeitfunktionen
 
+"Da sich der Augenblickswert einer periodisch zeitabhängigen Größe dauernd ändert, ist eine Vereinbarung darüber
+notwendig, wie der Wert der Größe angegeben werden soll. Der arithmetische (zeitliche) Mittelwert ist zur Kennzeichung
+im Allgemeinen nicht geeignet, da er beispielsweise bei Wechselgrößen definitionsgemäß Null ist." [@hagmann2020]
+
 ::: {.callout-note} 
 
 ### Arithmetischer Mittelwert - linearer Mittelwert - Gleichwert
@@ -78,6 +82,12 @@ keine Sinusschwingung (harmonische).
 \overline{x(t)} &= \frac{1}{T} \int_t^{t+T} x(\tau) \mathrm{d} \tau
 \end{align}
 :::
+
+
+"Denkbar wäre die Angabe des Scheitelwertes, jedoch wird dann der übriege Verlauf der Funktion nicht berücksichtigt.
+Zweckmäßiger ist daher die Angabe von Kenngrößen, die die _mittlere_ Wirkung von Spannungen und Strömen wiedergeben.
+Das hat zu der Einführung der nachstehend beschriebenen Mittelwerten von periodisch zeitabhÄngigen Größen geführt."
+[@hagmann2020]
 
 ::: {.callout-note} 
 
@@ -88,6 +98,7 @@ keine Sinusschwingung (harmonische).
 \end{align}
 :::
 
+
 ::: {.callout-note} 
 
 ### Quadratischer Mittelwert - Effektivwert
@@ -97,14 +108,39 @@ X_{eff} = \sqrt{\overline{x^2(t)}} &= \sqrt{\frac{1}{T} \int_t^{t+T} x^2(\tau) \
 \end{align}
 :::
 
+"Bei Wechselgrößen bezeichnet man das Verhältnis des Effektivwertes zum Gleichrichtwert als _Formfaktor_ mit dem Symbol
+$F$." [@hagmann2020]
+
+::: {.callout-note} 
+
+### Formfaktor
+
+\begin{align}
+F &= \frac{X_{eff}}{\overline{\lvert x(t) \lvert}}
+\end{align}
+:::
+
+"Das Verhältnis des Scheitelwertes zum Effektivwert heißt _Scheitelfaktor_ mit dem Symbol $\sigma$." [@hagmann2020]
+
+::: {.callout-note} 
+
+### Scheitelfaktor
+
+\begin{align}
+\sigma &= \frac{\hat{x}}{X_{eff}}
+\end{align}
+:::
+
+
 ## Ideale Netzwerkelemente
 
 Reale Bauteile werden für die Zwecke der Schaltungssimulation durch Ersatz- schaltungen aus idealen Netzwerkelementen
 beschrieben. Für unsere Belange sind dies Zweipole mit genau definierten Strom-Spannungs-Beziehungen sowie gesteuerte
 Quellen. Für die Beschreibung aktiver Bauelemente werden zusätzlich gesteuerte Quellen benötigt. 
 
-Ein *Zweipol* ist ein Schaltungselement mit zwei elektrischen Anschlüssen, den Polen oder Klemmen. Der Strom, der durch die eine Klemme in den Zweipol hineinfließt, ist dabei gleich dem durch die andere Klemme aus dem Zweipol
-herausfließenden Strom. Ein Zweipol heißt passiv wirkend, wenn er elektrische Energie aufnimmt; gibt er elektrische
+Ein *Zweipol* ist ein Schaltungselement mit zwei elektrischen Anschlüssen, den Polen oder Klemmen. Der Strom, der durch
+die eine Klemme in den Zweipol hineinfließt, ist dabei gleich dem durch die andere Klemme aus dem Zweipol
+herausfließenden Strom. Ein Zweipol heißt passiv wirkend, wenn er elektrische Energie aufnimmt; gibt er elektrische 
 Energie ab, so wird er als aktiv wirkender Zweipol bezeichnet.
 
 ::: {.callout-note} 

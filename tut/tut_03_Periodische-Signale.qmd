@@ -255,24 +255,10 @@ $$
 X = X_{eff} = \sqrt{\frac{1}{T} \int\limits_{t_0}^{t_0 + T} x^2(t) dt}
 $$
 
-### Scheitelfaktor
-
-Der Scheitelfaktor ist das Verhältnis von Scheitelwert $\hat{i}$ bzw. $\hat{u}$ zum Effektivwert $I_{eff}$ bzw.
-$U_{eff}$. 
-
-$$
-\xi = \frac{\hat{x}}{X_{eff}}
-$$
-
-Der Scheitelfaktor für Sinusgrößen beträgt $\xi = \sqrt{2} = 1.414$.
-
-Der Scheitelfaktor für Dreieckspannung beträgt $\xi = \sqrt{3}$.
-
-Der Scheitelfaktor für Rechtecksignale beträgt $\xi = 1$.
-
 ### Formfaktor
 
-Der Formfaktor stellt das Verhältnis von Effektivwert I bzw. U zu Gleichrichtwert $\overline{|i|}$ bzw. $\overline{|u|}$ dar.
+Der Formfaktor stellt das Verhältnis von Effektivwert $I_{eff}$ bzw. $U_{eff}$ zu Gleichrichtwert $\overline{|i|}$ bzw.
+$\overline{|u|}$ dar.
 
 $$
 F = \frac{X_{eff}}{\overline{|x|}}
@@ -283,6 +269,21 @@ Der Formfaktor für Sinusgrößen beträgt $F = \frac{\pi}{2\sqrt{2}} \approx 1.
 Der Formfaktor für Dreiecksignale beträgt $F = \frac{1.11}{2}$.
 
 Der Formfaktor für Rechtecksignale beträgt $F = 1.11$.
+
+### Scheitelfaktor
+
+Der Scheitelfaktor ist das Verhältnis von Scheitelwert $\hat{i}$ bzw. $\hat{u}$ zum Effektivwert $I_{eff}$ bzw.
+$U_{eff}$. 
+
+$$
+\sigma = \frac{\hat{x}}{X_{eff}}
+$$
+
+Der Scheitelfaktor für Sinusgrößen beträgt $\sigma = \sqrt{2} = 1.414$.
+
+Der Scheitelfaktor für Dreieckspannung beträgt $\sigma = \sqrt{3}$.
+
+Der Scheitelfaktor für Rechtecksignale beträgt $\sigma = 1$.
 
 ### Effektivwert mit Gleichstromanteil
 
