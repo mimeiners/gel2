@@ -460,7 +460,7 @@ window.Quarto = {
 <section id="darstellung-von-signalen" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="darstellung-von-signalen"><span class="header-section-number">10.1</span> Darstellung von Signalen</h2>
 <p>Stellen Sie die Signale des angegebenen Netzwerks mit Python und LTspice dar.</p>
-<p>Die Komponenten Werte sind: <span class="math inline">\(\omega\)</span> = <span class="math inline">\(2 \pi\)</span> 1 kHz, <span class="math inline">\(\hat{U}_0\)</span> = 10 V, <span class="math inline">\(R\)</span> = 30 <span class="math inline">\(\Omega\)</span>, <span class="math inline">\(L\)</span> = 3 mH, <span class="math inline">\(\hat{I}_0\)</span> = 0.282 A, <span class="math inline">\(\varphi_I\)</span> = -32.1 Grad.</p>
+<p>Die Komponenten Werte sind: <span class="math inline">\(\omega\)</span> = <span class="math inline">\(2 \pi\)</span> 1 kHz, <span class="math inline">\(\hat{u}_0\)</span> = 10 V, <span class="math inline">\(R\)</span> = 30 <span class="math inline">\(\Omega\)</span>, <span class="math inline">\(L\)</span> = 3 mH, <span class="math inline">\(\hat{i}_0\)</span> = 0.282 A, <span class="math inline">\(\varphi_I\)</span> = -32.1 Grad.</p>
 <div id="fig-hw1p1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hw1p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -490,16 +490,16 @@ Abbildung&nbsp;10.1: Wechselstromschaltung
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="dv">10</span><span class="op">**</span><span class="dv">3</span>  <span class="co"># Grundfrequenz 1 kHz wird auch als 10e3 geschrieben</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> f  <span class="co"># Kreisfrequenz</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>U0p <span class="op">=</span> <span class="dv">10</span>  <span class="co"># Spannung in Volt</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>u0p <span class="op">=</span> <span class="dv">10</span>  <span class="co"># Spannung in Volt</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">30</span>  <span class="co"># Widerstand in Ohm</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="fl">3e-3</span>  <span class="co"># Induktivität in Henry</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>I0p <span class="op">=</span> <span class="fl">0.282</span>  <span class="co"># Strom in  Ampere</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>phiI <span class="op">=</span> <span class="op">-</span><span class="fl">32.1</span> <span class="op">*</span> np.pi <span class="op">/</span> <span class="dv">180</span>  <span class="co"># Winkel in rad</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>i0p <span class="op">=</span> <span class="fl">0.282</span>  <span class="co"># Strom in  Ampere</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>phii <span class="op">=</span> <span class="op">-</span><span class="fl">32.1</span> <span class="op">*</span> np.pi <span class="op">/</span> <span class="dv">180</span>  <span class="co"># Winkel in rad</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="fl">5e-3</span>, <span class="dv">1000</span>)  <span class="co"># Zeitachse anlegen</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>u0 <span class="op">=</span> U0p <span class="op">*</span> np.sin(w <span class="op">*</span> t)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>i0 <span class="op">=</span> I0p <span class="op">*</span> np.sin(w <span class="op">*</span> t <span class="op">+</span> phiI)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>uL <span class="op">=</span> w <span class="op">*</span> L <span class="op">*</span> I0p <span class="op">*</span> np.sin(w <span class="op">*</span> t <span class="op">+</span> phiI <span class="op">+</span> np.pi <span class="op">/</span> <span class="dv">2</span>)  <span class="co"># Spannung über der Spule</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>u0 <span class="op">=</span> u0p <span class="op">*</span> np.sin(w <span class="op">*</span> t)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>i0 <span class="op">=</span> i0p <span class="op">*</span> np.sin(w <span class="op">*</span> t <span class="op">+</span> phii)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>uL <span class="op">=</span> w <span class="op">*</span> L <span class="op">*</span> i0p <span class="op">*</span> np.sin(w <span class="op">*</span> t <span class="op">+</span> phii <span class="op">+</span> np.pi <span class="op">/</span> <span class="dv">2</span>)  <span class="co"># Spannung über der Spule</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>uR <span class="op">=</span> R <span class="op">*</span> i0  <span class="co"># Spannung über Widerstand</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.plot(w <span class="op">*</span> t, u0, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">u_0</span><span class="dv">$</span><span class="vs">'</span>)</span>
@@ -533,7 +533,7 @@ Abbildung&nbsp;10.2: Strom- und Spannungssignale
 <h2 data-number="10.2" class="anchored" data-anchor-id="überlagerung-von-sinusförmigen-spannungen-mit-verschiedenen-frequenzen"><span class="header-section-number">10.2</span> Überlagerung von sinusförmigen Spannungen mit verschiedenen Frequenzen</h2>
 <p>Der zeitliche Verlauf einer Spannung mit <span class="math inline">\(\omega_2 = 3 \omega_1\)</span> sei gegeben durch</p>
 <p><span class="math display">\[
-u(t) = U_0 + \hat{U}_1 \cos(\omega_1 t) + \hat{U}_2 \cos(\omega_2 t + \varphi).
+u(t) = U_0 + \hat{u}_1 \cos(\omega_1 t) + \hat{u}_2 \cos(\omega_2 t + \varphi).
 \]</span></p>
 <section id="periodendauer" class="level3" data-number="10.2.1">
 <h3 data-number="10.2.1" class="anchored" data-anchor-id="periodendauer"><span class="header-section-number">10.2.1</span> Periodendauer</h3>
@@ -614,11 +614,11 @@ Tipp
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align}
 U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
-&amp;= \frac{1}{T} \int_0^{T} ( U_0 + \hat{U}_1 \cos(\omega_1 t) + \hat{U}_2 \cos(\omega_2 t + \varphi) )^2 \\
-&amp;= \frac{1}{T} \int_0^{T} (  U^2_0 + 2U_0\hat{U}_1\cos(\omega_1t) + 2U_0\hat{U}_2\cos(\omega_2 t + \varphi) \\
-&amp;+ \hat{U}^2_1\cos^2(\omega_1 t) + 2\hat{U}_1\hat{U}_2\cos(\omega_1 t) \cos(\omega_2 t + \varphi) \\
-&amp;+ \hat{U}^2_2 \cos^2(\omega_2 t + \varphi) ) \\  
-&amp;= U_0^2 + \frac{1}{2} \hat{U}_1^2 +  \frac{1}{2} \hat{U}_2^2 \\
+&amp;= \frac{1}{T} \int_0^{T} ( U_0 + \hat{u}_1 \cos(\omega_1 t) + \hat{u}_2 \cos(\omega_2 t + \varphi) )^2 \\
+&amp;= \frac{1}{T} \int_0^{T} (  U^2_0 + 2U_0\hat{u}_1\cos(\omega_1t) + 2U_0\hat{u}_2\cos(\omega_2 t + \varphi) \\
+&amp;+ \hat{u}^2_1\cos^2(\omega_1 t) + 2\hat{u}_1\hat{u}_2\cos(\omega_1 t) \cos(\omega_2 t + \varphi) \\
+&amp;+ \hat{u}^2_2 \cos^2(\omega_2 t + \varphi) ) \\  
+&amp;= U_0^2 + \frac{1}{2} \hat{u}_1^2 +  \frac{1}{2} \hat{u}_2^2 \\
 &amp;= U^2_0 + U^2_{1,eff} + U^2_{2,eff}
 \end{align}\]</span></p>
 </div>
@@ -627,7 +627,7 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 </section>
 <section id="scheitelfaktor" class="level3" data-number="10.2.4">
 <h3 data-number="10.2.4" class="anchored" data-anchor-id="scheitelfaktor"><span class="header-section-number">10.2.4</span> Scheitelfaktor</h3>
-<p>Wie groß ist der Scheitelfaktor <span class="math inline">\(U_{max}/U_{eff}\)</span>, wenn <span class="math inline">\(U_0\)</span> = 1 V, <span class="math inline">\(\hat{U}_1\)</span> = <span class="math inline">\(\hat{U}_2\)</span> = 100 mV und <span class="math inline">\(\varphi\)</span> = 60 Grad?</p>
+<p>Wie groß ist der Scheitelfaktor <span class="math inline">\(U_{max}/U_{eff}\)</span>, wenn <span class="math inline">\(U_0\)</span> = 1 V, <span class="math inline">\(\hat{u}_1\)</span> = <span class="math inline">\(\hat{u}_2\)</span> = 100 mV und <span class="math inline">\(\varphi\)</span> = 60 Grad?</p>
 <div id="cell-fig-mittelwerte" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.integrate <span class="im">as</span> si</span>
@@ -635,8 +635,8 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>U0 <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>U1p <span class="op">=</span> <span class="fl">100e-3</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>U2p <span class="op">=</span> <span class="fl">100e-3</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>u1p <span class="op">=</span> <span class="fl">100e-3</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>u2p <span class="op">=</span> <span class="fl">100e-3</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>phi <span class="op">=</span> <span class="dv">60</span> <span class="op">*</span> np.pi <span class="op">/</span> <span class="dv">180</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>f1 <span class="op">=</span> <span class="fl">1e3</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> f1</span>
@@ -646,11 +646,11 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Definition der Spannungen als Funktion</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> u(t):</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> U0 <span class="op">+</span> U1p <span class="op">*</span> np.cos(w1 <span class="op">*</span> t) <span class="op">+</span> U2p <span class="op">*</span> np.cos(w2 <span class="op">*</span> t <span class="op">+</span> phi)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> U0 <span class="op">+</span> u1p <span class="op">*</span> np.cos(w1 <span class="op">*</span> t) <span class="op">+</span> u2p <span class="op">*</span> np.cos(w2 <span class="op">*</span> t <span class="op">+</span> phi)</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> u2(t):</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (U0 <span class="op">+</span> U1p <span class="op">*</span> np.cos(w1 <span class="op">*</span> t) <span class="op">+</span> U2p <span class="op">*</span> np.cos(w2 <span class="op">*</span> t <span class="op">+</span> phi))<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (U0 <span class="op">+</span> u1p <span class="op">*</span> np.cos(w1 <span class="op">*</span> t) <span class="op">+</span> u2p <span class="op">*</span> np.cos(w2 <span class="op">*</span> t <span class="op">+</span> phi))<span class="op">**</span><span class="dv">2</span></span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Zeit als Vektor</span></span>
@@ -679,7 +679,7 @@ U^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 <span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x, c1, c2, c3):</span>
 <span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">1.0</span> <span class="op">/</span> <span class="fl">3.0</span> <span class="op">*</span> (np.arcsin(<span class="op">-</span>c1 <span class="op">/</span> (<span class="dv">3</span> <span class="op">*</span> c2) <span class="op">*</span> np.sin(x)) <span class="op">-</span> c3)</span>
 <span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>SF <span class="op">=</span> so.fixed_point(func, <span class="dv">1</span>, args<span class="op">=</span>(U1p, U2p, phi), xtol<span class="op">=</span><span class="fl">1e-6</span>)</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>SF <span class="op">=</span> so.fixed_point(func, <span class="dv">1</span>, args<span class="op">=</span>(u1p, u2p, phi), xtol<span class="op">=</span><span class="fl">1e-6</span>)</span>
 <span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Der Scheitelfaktor:'</span>, SF)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="fig-mittelwerte" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -713,9 +713,9 @@ Der Scheitelfaktor: -0.31462061084367027</code></pre>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align}
 U_{max} &amp;= u(t_{max}); \quad \left. \frac{du(t)}{dt} \right\lvert_{t=t_{max}} = 0 \\
-\frac{du(t)}{dt} &amp;= -\hat{U}_1\omega_1\sin(\omega_1 t) - \hat{U}_2 \omega_2\sin(\omega_2 t + \varphi) \\
-\sin(3\omega_1 t_{max} + \varphi) &amp;= -\frac{\hat{U}_1}{2\hat{U}_2}\sin(\omega_1 t_{max}) \\
-\omega_1 t_{max} &amp;= \frac{1}{3} \left( \arcsin \left( -\frac{\hat{U}_1}{3\hat{U}_2}
+\frac{du(t)}{dt} &amp;= -\hat{u}_1\omega_1\sin(\omega_1 t) - \hat{u}_2 \omega_2\sin(\omega_2 t + \varphi) \\
+\sin(3\omega_1 t_{max} + \varphi) &amp;= -\frac{\hat{u}_1}{2\hat{u}_2}\sin(\omega_1 t_{max}) \\
+\omega_1 t_{max} &amp;= \frac{1}{3} \left( \arcsin \left( -\frac{\hat{u}_1}{3\hat{u}_2}
 \sin(\omega t_{max} + \varphi) \right) \right)
 \end{align}\]</span></p>
 <p>Die letzte Gleichung ist eine sog. <em>Fixpunktiteration</em>, deren numerische Lösung im Programmcode formuliert ist. Nach ein paar Iterationschritten erhält man <span class="math inline">\(\omega_1 t_{max}\)</span> = -0.315. Daraus ergeben sich <span class="math inline">\(U_{max}\)</span> = 1.195 V und <span class="math inline">\(U_{eff}\)</span> = 1.005 V.</p>
@@ -740,7 +740,7 @@ Abbildung&nbsp;10.4: Netzwerk zur Schaltungsanalyse
 </figcaption>
 </figure>
 </div>
-<p>Gegeben sei die in <a href="#fig-hw1p3" class="quarto-xref">Abbildung&nbsp;<span>10.4</span></a> skizzierte Schaltung mit einer Wechselstromquelle <span class="math inline">\(i_0(t)=\hat{I}_0 \sin(\omega t)\)</span>.</p>
+<p>Gegeben sei die in <a href="#fig-hw1p3" class="quarto-xref">Abbildung&nbsp;<span>10.4</span></a> skizzierte Schaltung mit einer Wechselstromquelle <span class="math inline">\(i_0(t)=\hat{i}_0 \sin(\omega t)\)</span>.</p>
 <section id="amplitude-und-phase" class="level3" data-number="10.3.1">
 <h3 data-number="10.3.1" class="anchored" data-anchor-id="amplitude-und-phase"><span class="header-section-number">10.3.1</span> Amplitude und Phase</h3>
 <p>Berechnen Sie Amplitude und Phasenwinkel jeweils von <span class="math inline">\(u(t)\)</span>, <span class="math inline">\(i_C(t)\)</span> und <span class="math inline">\(i_R(t)\)</span>!</p>
@@ -756,30 +756,30 @@ Abbildung&nbsp;10.4: Netzwerk zur Schaltungsanalyse
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Sei <span class="math inline">\(u(t)=\hat{U} \sin(\omega t + \varphi_u)\)</span>, dann ergeben sich die Ströme zu:</p>
+<p>Sei <span class="math inline">\(u(t)=\hat{u} \sin(\omega t + \varphi_u)\)</span>, dann ergeben sich die Ströme zu:</p>
 <p><span class="math display">\[\begin{align}
-i_C(t) &amp;= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2}) = -\omega C \hat{U} \cos(\omega t + \varphi_u) \\
-i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
+i_C(t) &amp;= \omega C \hat{u} \sin(\omega t + \varphi_u + \frac{\pi}{2}) = -\omega C \hat{u} \cos(\omega t + \varphi_u) \\
+i_R(t) &amp;= \frac{\hat{u}}{R} \sin(\omega t + \varphi_u).
 \end{align}\]</span></p>
 <p>Knotengleichung: <span class="math inline">\(i_0(t) = i_C(t) + i_R(t)\)</span></p>
 <p><span class="math display">\[\begin{align}
-\hat{I}_0 \sin(\omega t) &amp;= -\omega C \hat{U} \cos(\omega t + \varphi_u) + \frac{\hat{U}}{R} \sin(\omega t + \varphi_u) \\
-\hat{I}_0 \sin(m - \varphi_u) &amp;= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m), \quad m=\omega t + \varphi_u \\
-\hat{I}_0 \left( \sin(m) \cos(\varphi_u) - \cos(m) \sin(\varphi_u) \right) &amp;= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m) \\
+\hat{i}_0 \sin(\omega t) &amp;= -\omega C \hat{u} \cos(\omega t + \varphi_u) + \frac{\hat{u}}{R} \sin(\omega t + \varphi_u) \\
+\hat{i}_0 \sin(m - \varphi_u) &amp;= -\omega C \hat{u} \cos(m) + \frac{\hat{u}}{R} \sin(m), \quad m=\omega t + \varphi_u \\
+\hat{i}_0 \left( \sin(m) \cos(\varphi_u) - \cos(m) \sin(\varphi_u) \right) &amp;= -\omega C \hat{u} \cos(m) + \frac{\hat{u}}{R} \sin(m) \\
 \end{align}\]</span></p>
 <p>Koeffizientenvergleich:</p>
 <p><span class="math display">\[\begin{align}
-\hat{I}_0 \cos(\varphi_u) &amp;= \frac{\hat{U}}{R} \\
-\hat{I}_0 \sin(\varphi_u) &amp;= -\omega C \hat{U} \\
-\tan{\varphi_u} = \frac{\sin(\varphi_u)}{\cos(\varphi_u)} &amp;= \frac{-\omega C \hat{U}}{\frac{\hat{U}}{R}} = -\omega R C \\
+\hat{i}_0 \cos(\varphi_u) &amp;= \frac{\hat{u}}{R} \\
+\hat{i}_0 \sin(\varphi_u) &amp;= -\omega C \hat{u} \\
+\tan{\varphi_u} = \frac{\sin(\varphi_u)}{\cos(\varphi_u)} &amp;= \frac{-\omega C \hat{u}}{\frac{\hat{u}}{R}} = -\omega R C \\
 \varphi_u &amp;= \arctan(-\omega R C)
 \end{align}\]</span></p>
 <p><span class="math display">\[\begin{align}
-\hat{I}_0 \cos(\varphi_u) &amp;= \frac{\hat{U}}{R} \\
-\hat{U} &amp;= R \hat{I} \cos{\varphi_u} = R \hat{I} \frac{1}{\sqrt{1+\tan^2(\varphi)}} \\
-&amp;= \frac{R \hat{I}}{\sqrt{1+(\omega R C)^2}} \\
-\hat{I}_C &amp;= \omega C \hat{U} \\
-\hat{I}_R &amp;= \frac{\hat{U}}{R}
+\hat{i}_0 \cos(\varphi_u) &amp;= \frac{\hat{u}}{R} \\
+\hat{u} &amp;= R \hat{i} \cos{\varphi_u} = R \hat{i} \frac{1}{\sqrt{1+\tan^2(\varphi)}} \\
+&amp;= \frac{R \hat{i}}{\sqrt{1+(\omega R C)^2}} \\
+\hat{i}_C &amp;= \omega C \hat{u} \\
+\hat{i}_R &amp;= \frac{\hat{u}}{R}
 \end{align}\]</span></p>
 </div>
 </div>
@@ -787,7 +787,7 @@ i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 </section>
 <section id="spannungsverläufe" class="level3" data-number="10.3.2">
 <h3 data-number="10.3.2" class="anchored" data-anchor-id="spannungsverläufe"><span class="header-section-number">10.3.2</span> Spannungsverläufe</h3>
-<p>Skizzieren Sie mithilfe von Python <span class="math inline">\(i_0(t)\)</span>, <span class="math inline">\(u(t)\)</span>, <span class="math inline">\(i_C(t)\)</span> und <span class="math inline">\(i_R(t)\)</span> für <span class="math inline">\(\hat{I}_0\)</span> = 14.1 mA, <span class="math inline">\(f\)</span> = 3.183 kHz, <span class="math inline">\(R\)</span> = 50 <span class="math inline">\(\Omega\)</span> und <span class="math inline">\(C\)</span> = 1 <span class="math inline">\(\mu\)</span> F!</p>
+<p>Skizzieren Sie mithilfe von Python <span class="math inline">\(i_0(t)\)</span>, <span class="math inline">\(u(t)\)</span>, <span class="math inline">\(i_C(t)\)</span> und <span class="math inline">\(i_R(t)\)</span> für <span class="math inline">\(\hat{i}_0\)</span> = 14.1 mA, <span class="math inline">\(f\)</span> = 3.183 kHz, <span class="math inline">\(R\)</span> = 50 <span class="math inline">\(\Omega\)</span> und <span class="math inline">\(C\)</span> = 1 <span class="math inline">\(\mu\)</span> F!</p>
 <div id="cell-fig-u_i_plot" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plt</span>
@@ -796,21 +796,21 @@ i_R(t) &amp;= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> f  <span class="co"># Kreisfrequenz</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">50</span>  <span class="co"># Widerstand in Ohm</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="fl">1e-6</span>  <span class="co"># Kapazität in Farad</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>I0 <span class="op">=</span> <span class="fl">14.1e-3</span>  <span class="co"># Strom</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>i0p <span class="op">=</span> <span class="fl">14.1e-3</span>  <span class="co"># Strom</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="fl">1e-3</span>, <span class="dv">1000</span>)  <span class="co"># Länge der x-Achse und</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Strom- und Spannungfunktionen</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>i_0 <span class="op">=</span> I0 <span class="op">*</span> np.sin(w <span class="op">*</span> t)  <span class="co"># Stromquelle</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>i0 <span class="op">=</span> i0p <span class="op">*</span> np.sin(w <span class="op">*</span> t)  <span class="co"># Stromquelle</span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> <span class="fl">5e-3</span> <span class="op">*</span> np.sin(w <span class="op">*</span> t <span class="op">-</span> np.pi <span class="op">/</span> <span class="dv">4</span>)  <span class="co"># Spannung</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>i_C <span class="op">=</span> <span class="fl">10e-3</span> <span class="op">*</span> np.sin(w <span class="op">*</span> t <span class="op">+</span> np.pi <span class="op">/</span> <span class="dv">4</span>)  <span class="co"># Strom am Kondensator</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>i_R <span class="op">=</span> <span class="fl">10e-3</span> <span class="op">*</span> np.sin(w <span class="op">*</span> t <span class="op">-</span> np.pi <span class="op">/</span> <span class="dv">4</span>)  <span class="co"># Strom am Widerstand</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>iC <span class="op">=</span> <span class="fl">10e-3</span> <span class="op">*</span> np.sin(w <span class="op">*</span> t <span class="op">+</span> np.pi <span class="op">/</span> <span class="dv">4</span>)  <span class="co"># Strom am Kondensator</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>iR <span class="op">=</span> <span class="fl">10e-3</span> <span class="op">*</span> np.sin(w <span class="op">*</span> t <span class="op">-</span> np.pi <span class="op">/</span> <span class="dv">4</span>)  <span class="co"># Strom am Widerstand</span></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot der Signale</span></span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>plt.plot(t, i_0, label<span class="op">=</span><span class="st">'$i_0$'</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>plt.plot(t, i0, label<span class="op">=</span><span class="st">'$i_0$'</span>)</span>
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>plt.plot(t, u, label<span class="op">=</span><span class="st">'$u$'</span>)</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>plt.plot(t, i_C, label<span class="op">=</span><span class="st">'$i_C$'</span>)</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>plt.plot(t, i_R, label<span class="op">=</span><span class="st">'$i_R$'</span>)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>plt.plot(t, iC, label<span class="op">=</span><span class="st">'$i_C$'</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>plt.plot(t, iR, label<span class="op">=</span><span class="st">'$i_R$'</span>)</span>
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Zeit t in s'</span>)</span>
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Strom in i(t) mA und Spannung u(t) in 100 mV'</span>)</span>
 <span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper right'</span>)</span>
@@ -914,22 +914,22 @@ Abbildung&nbsp;10.6: Phasenanschnittsteuerung
 <li>Halbwelle</li>
 </ol>
 <p><span class="math display">\[\begin{align}
-\overline{i(t)} &amp;= \frac{1}{T} \int_0^{T} i(t) d t &amp; &amp;= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{I}\sin(\varphi) d \varphi \\
-&amp;= \frac{\hat{I}}{2\pi} \left[ -\cos(\varphi) \right]_{\alpha}^{\pi} &amp; &amp;= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
-\overline{\lvert i(t) \lvert} &amp;= \frac{1}{T} \int_0^{T} \lvert i(t) \lvert d t &amp; &amp;= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
-I^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{i^2(t)} d t &amp; &amp;= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{I}^2\sin^2(\varphi) d \varphi \\
-&amp;= \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\varphi - \frac{1}{4}\sin(2\varphi) \right]_{\alpha}^{\pi} &amp;
-&amp;= \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi -\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
-I_{eff} &amp;= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{4\pi}} &amp; &amp;
+\overline{i(t)} &amp;= \frac{1}{T} \int_0^{T} i(t) d t &amp; &amp;= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{i}\sin(\varphi) d \varphi \\
+&amp;= \frac{\hat{i}}{2\pi} \left[ -\cos(\varphi) \right]_{\alpha}^{\pi} &amp; &amp;= \frac{\hat{i}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
+\overline{\lvert i(t) \lvert} &amp;= \frac{1}{T} \int_0^{T} \lvert i(t) \lvert d t &amp; &amp;= \frac{\hat{i}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
+I^2_{eff} &amp;= \frac{1}{T} \int_0^{T} \overline{i^2(t)} d t &amp; &amp;= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{i}^2\sin^2(\varphi) d \varphi \\
+&amp;= \frac{\hat{i}}{2\pi} \left[ \frac{1}{2}\varphi - \frac{1}{4}\sin(2\varphi) \right]_{\alpha}^{\pi} &amp;
+&amp;= \frac{\hat{i}}{2\pi} \left[ \frac{1}{2}\pi -\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
+I_{eff} &amp;= \hat{i} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{4\pi}} &amp; &amp;
 \end{align}\]</span></p>
 <ol start="2" type="1">
 <li>Vollwelle</li>
 </ol>
 <p><span class="math display">\[\begin{align}
 \overline{i(t)} &amp;= 0 \\
-\overline{\lvert i(t) \lvert} &amp;=  2 \cdot \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] = \frac{\hat{I}}{\pi} \left[ 1+\cos(\varphi) \right] \\
-I^2_{eff} &amp;= 2 \cdot \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
-&amp;= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{2\pi}}
+\overline{\lvert i(t) \lvert} &amp;=  2 \cdot \frac{\hat{i}}{2\pi} \left[ 1+\cos(\varphi) \right] = \frac{\hat{i}}{\pi} \left[ 1+\cos(\varphi) \right] \\
+I^2_{eff} &amp;= 2 \cdot \frac{\hat{i}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
+&amp;= \hat{i} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{2\pi}}
 \end{align}\]</span></p>
 </div>
 </div>

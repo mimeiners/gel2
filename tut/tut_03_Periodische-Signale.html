@@ -423,6 +423,9 @@ window.Quarto = {
   <li><a href="#mittelwert" id="toc-mittelwert" class="nav-link" data-scroll-target="#mittelwert"><span class="header-section-number">17.2.3</span> Mittelwert</a></li>
   <li><a href="#gleichrichtwert" id="toc-gleichrichtwert" class="nav-link" data-scroll-target="#gleichrichtwert"><span class="header-section-number">17.2.4</span> Gleichrichtwert</a></li>
   <li><a href="#effektivwert" id="toc-effektivwert" class="nav-link" data-scroll-target="#effektivwert"><span class="header-section-number">17.2.5</span> Effektivwert</a></li>
+  <li><a href="#scheitelfaktor" id="toc-scheitelfaktor" class="nav-link" data-scroll-target="#scheitelfaktor"><span class="header-section-number">17.2.6</span> Scheitelfaktor</a></li>
+  <li><a href="#formfaktor" id="toc-formfaktor" class="nav-link" data-scroll-target="#formfaktor"><span class="header-section-number">17.2.7</span> Formfaktor</a></li>
+  <li><a href="#effektivwert-mit-gleichstromanteil" id="toc-effektivwert-mit-gleichstromanteil" class="nav-link" data-scroll-target="#effektivwert-mit-gleichstromanteil"><span class="header-section-number">17.2.8</span> Effektivwert mit Gleichstromanteil</a></li>
   </ul></li>
   <li><a href="#übungen" id="toc-übungen" class="nav-link" data-scroll-target="#übungen"><span class="header-section-number">17.3</span> Übungen</a>
   <ul class="collapse">
@@ -459,10 +462,6 @@ window.Quarto = {
 </header>
 
 
-<ul>
-<li>Stromarten</li>
-<li>Kennwerte von Wechselgrößen</li>
-</ul>
 <section id="stromarten" class="level2" data-number="17.1">
 <h2 data-number="17.1" class="anchored" data-anchor-id="stromarten"><span class="header-section-number">17.1</span> Stromarten</h2>
 <p>Neben dem Gleichstrom, der ausführlich in GEL1 behandelt wurde, gibt es weitere Stromarten.</p>
@@ -675,16 +674,16 @@ Abbildung&nbsp;17.6: Frequenz-moduliertes Signal
 <h2 data-number="17.2" class="anchored" data-anchor-id="kennwerte-von-wechselgrößen"><span class="header-section-number">17.2</span> Kennwerte von Wechselgrößen</h2>
 <p>Allgemein kann man eine sich zeitlich ändernde sinusförmige Wechselgröße mit der folgenden Funktion beschreiben.</p>
 <p><span class="math display">\[
-x = \hat{x} sin(\omega t + \varphi)
+x(t) = \hat{x} \sin(\omega t + \varphi)
 \]</span></p>
-<p>Dabei wird der Zeitwert x als auch der Scheitelwert <span class="math inline">\(\hat{x}\)</span> mit einem kleinen Formelbuchstaben bezeichnet.</p>
+<p>Dabei wird sowohl der Zeitwert <span class="math inline">\(x(t)\)</span> als auch der <em>Scheitelwert</em> <span class="math inline">\(\hat{x}\)</span> mit einem kleinen Formelbuchstaben bezeichnet.</p>
 <section id="periodendauer-und-frequenz" class="level3" data-number="17.2.1">
 <h3 data-number="17.2.1" class="anchored" data-anchor-id="periodendauer-und-frequenz"><span class="header-section-number">17.2.1</span> Periodendauer und Frequenz</h3>
-<p>Da sich eine sinusförmige Wechselgröße wiederholt sich nach Ablauf des Winkels <span class="math inline">\(2\pi = 360^° = \omega T\)</span>. Damit kann man die Periodendauer T über die Kreisfrequenz <span class="math inline">\(\omega\)</span> darstellen.</p>
+<p>Da sich eine sinusförmige Wechselgröße nach Ablauf des Winkels <span class="math inline">\(2\pi = 360^° = \omega T\)</span> wiederholt, kann man die Periodendauer <span class="math inline">\(T\)</span> über die Kreisfrequenz <span class="math inline">\(\omega\)</span> darstellen.</p>
 <p><span class="math display">\[
 T = \frac{2 \pi}{\omega}
 \]</span></p>
-<p>Die Frequenz f gibt die Anzahl der Perioden pro Sekunde an und wird in Hz = 1/s gemessen. Die Frequenz ist der Kehrwert der Periodendauer.</p>
+<p>Die Frequenz <span class="math inline">\(f\)</span> gibt die Anzahl der Perioden pro Sekunde an und wird in Hz = 1/s gemessen. Die Frequenz <span class="math inline">\(f\)</span> ist der Kehrwert der Periodendauer.</p>
 <p><span class="math display">\[
 f = \frac{1}{T}
 \]</span></p>
@@ -695,7 +694,7 @@ f = \frac{1}{T}
 </section>
 <section id="phasenlage" class="level3" data-number="17.2.2">
 <h3 data-number="17.2.2" class="anchored" data-anchor-id="phasenlage"><span class="header-section-number">17.2.2</span> Phasenlage</h3>
-<p>Sinusgrößen können zu verschiedenen Zeitpunkten ihre Scheitelwerte und Nulldurchgänge erreichen. Man sagt, dass diese Größen unterschiedliche Phasenlagen haben; sie sind gegeneinander phasenverschoben.</p>
+<p>Sinusgrößen können zu verschiedenen Zeitpunkten ihre Scheitelwerte und Nulldurchgänge erreichen. Man sagt, dass diese Größen unterschiedliche Phasenlagen haben, sie sind gegeneinander phasenverschoben.</p>
 <div id="fig-TutChapPhasenlage" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TutChapPhasenlage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -707,13 +706,13 @@ Abbildung&nbsp;17.7: Phasenlage
 </figure>
 </div>
 <p>Entn. aus <span class="citation" data-cites="Fricke1982"><a href="../references.html#ref-Fricke1982" role="doc-biblioref">[1]</a></span></p>
-<section id="nullphasenwinkel" class="level4" data-number="17.2.2.1">
-<h4 data-number="17.2.2.1" class="anchored" data-anchor-id="nullphasenwinkel"><span class="header-section-number">17.2.2.1</span> Nullphasenwinkel</h4>
-<p>Allgemein gesprochen beginnt eine Sinusfunktion bei t=0 und geht um den Nullphasenwinkel <span class="math inline">\(\varphi_x\)</span> früher als die normale Sinusfunktion <span class="math inline">\(sin(\omega t)\)</span> durch Null. Das Vorzeichen des Winkel ist sehr wichtig!</p>
-<p>Beim positiven Nulldurchgang der Sinusgröße wird ein Pfeil zum Nullpunkt gezeichnet. Ist der Pfeil in Zählrichtung der Zeitachse ist der Nullphasenwinkel positiv, ist der Pfeil entgegen der Zählrichtung der Zeitachse, dann ist er negativ (siehe Bild unter Phasenlage).</p>
+<section id="nullphasenwinkel" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="nullphasenwinkel">Nullphasenwinkel</h4>
+<p>Allgemein gesprochen beginnt eine Sinusfunktion bei <span class="math inline">\(t\)</span>=0 und geht um den Nullphasenwinkel <span class="math inline">\(\varphi_x\)</span> früher als die normale Sinusfunktion <span class="math inline">\(\sin(\omega t)\)</span> durch Null. Das Vorzeichen des Winkels ist sehr wichtig!</p>
+<p>Beim positiven Nulldurchgang der Sinusgröße wird ein Pfeil zum Nullpunkt gezeichnet. Ist der Pfeil in Zählrichtung der Zeitachse, so ist der Nullphasenwinkel positiv; ist der Pfeil entgegen der Zählrichtung der Zeitachse, so ist er negativ, vgl. <a href="#fig-TutChapPhasenlage" class="quarto-xref">Abbildung&nbsp;<span>17.7</span></a>.</p>
 </section>
-<section id="phasenwinkel" class="level4" data-number="17.2.2.2">
-<h4 data-number="17.2.2.2" class="anchored" data-anchor-id="phasenwinkel"><span class="header-section-number">17.2.2.2</span> Phasenwinkel</h4>
+<section id="phasenwinkel" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="phasenwinkel">Phasenwinkel</h4>
 <p>Zusätzlich zum Nullphasewinkel gibt es den Phasenwinkel. Dieser gibt die Phasenverschiebung zwischen zwei Sinussignalen an. Es ist festgelegt, dass der Strom in solchen Fällen als Bezugsgröße genommen wird.</p>
 <p><span class="math display">\[
 \varphi = \varphi_U - \varphi_I
@@ -753,9 +752,10 @@ Abbildung&nbsp;17.7: Phasenlage
 <p><span class="math display">\[
 X = X_{eff} = \sqrt{\frac{1}{T} \int\limits_{t_0}^{t_0 + T} x^2(t) dt}
 \]</span></p>
-<section id="scheitelfaktor" class="level4" data-number="17.2.5.1">
-<h4 data-number="17.2.5.1" class="anchored" data-anchor-id="scheitelfaktor"><span class="header-section-number">17.2.5.1</span> Scheitelfaktor</h4>
-<p>Der Scheitelfaktor ist das Verhältnis von Scheitelwert <span class="math inline">\(\hat{i}\)</span> bzw. <span class="math inline">\(\hat{u}\)</span> zum Effektivwert I bzw. U.</p>
+</section>
+<section id="scheitelfaktor" class="level3" data-number="17.2.6">
+<h3 data-number="17.2.6" class="anchored" data-anchor-id="scheitelfaktor"><span class="header-section-number">17.2.6</span> Scheitelfaktor</h3>
+<p>Der Scheitelfaktor ist das Verhältnis von Scheitelwert <span class="math inline">\(\hat{i}\)</span> bzw. <span class="math inline">\(\hat{u}\)</span> zum Effektivwert <span class="math inline">\(I_{eff}\)</span> bzw. <span class="math inline">\(U_{eff}\)</span>.</p>
 <p><span class="math display">\[
 \xi = \frac{\hat{x}}{X_{eff}}
 \]</span></p>
@@ -763,8 +763,8 @@ X = X_{eff} = \sqrt{\frac{1}{T} \int\limits_{t_0}^{t_0 + T} x^2(t) dt}
 <p>Der Scheitelfaktor für Dreieckspannung beträgt <span class="math inline">\(\xi = \sqrt{3}\)</span>.</p>
 <p>Der Scheitelfaktor für Rechtecksignale beträgt <span class="math inline">\(\xi = 1\)</span>.</p>
 </section>
-<section id="formfaktor" class="level4" data-number="17.2.5.2">
-<h4 data-number="17.2.5.2" class="anchored" data-anchor-id="formfaktor"><span class="header-section-number">17.2.5.2</span> Formfaktor</h4>
+<section id="formfaktor" class="level3" data-number="17.2.7">
+<h3 data-number="17.2.7" class="anchored" data-anchor-id="formfaktor"><span class="header-section-number">17.2.7</span> Formfaktor</h3>
 <p>Der Formfaktor stellt das Verhältnis von Effektivwert I bzw. U zu Gleichrichtwert <span class="math inline">\(\overline{|i|}\)</span> bzw. <span class="math inline">\(\overline{|u|}\)</span> dar.</p>
 <p><span class="math display">\[
 F = \frac{X_{eff}}{\overline{|x|}}
@@ -773,8 +773,8 @@ F = \frac{X_{eff}}{\overline{|x|}}
 <p>Der Formfaktor für Dreiecksignale beträgt <span class="math inline">\(F = \frac{1.11}{2}\)</span>.</p>
 <p>Der Formfaktor für Rechtecksignale beträgt <span class="math inline">\(F = 1.11\)</span>.</p>
 </section>
-<section id="effektivwert-mit-gleichstromanteil" class="level4" data-number="17.2.5.3">
-<h4 data-number="17.2.5.3" class="anchored" data-anchor-id="effektivwert-mit-gleichstromanteil"><span class="header-section-number">17.2.5.3</span> Effektivwert mit Gleichstromanteil</h4>
+<section id="effektivwert-mit-gleichstromanteil" class="level3" data-number="17.2.8">
+<h3 data-number="17.2.8" class="anchored" data-anchor-id="effektivwert-mit-gleichstromanteil"><span class="header-section-number">17.2.8</span> Effektivwert mit Gleichstromanteil</h3>
 <div id="fig-TutChapMischspannung" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TutChapMischspannung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -789,7 +789,6 @@ Abbildung&nbsp;17.8: Mischspannung
 <p><span class="math display">\[
 X_{eff} = \sqrt{X_o^2 + X_{eff\sim}^2}
 \]</span></p>
-</section>
 </section>
 </section>
 <section id="übungen" class="level2" data-number="17.3">

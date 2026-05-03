@@ -523,7 +523,7 @@ X_{eff} = \sqrt{\overline{x^2(t)}} &amp;= \sqrt{\frac{1}{T} \int_t^{t+T} x^2(\ta
 </section>
 <section id="ideale-netzwerkelemente" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="ideale-netzwerkelemente"><span class="header-section-number">2.6</span> Ideale Netzwerkelemente</h2>
-<p>Reale Bauteile werden für die Zwecke der Schaltungssimulation durch Ersatz- schaltungen aus idealen Netzwerkelementen beschrieben. Für unsere Belange sind dies Zweipole mit genau definierten Strom-Spannungs-Beziehungen sowie gesteuerte Quellen. Für die Beschreibung aktiver Bauelemente werden zusa ̈tzlich gesteuerte Quellen benötigt.</p>
+<p>Reale Bauteile werden für die Zwecke der Schaltungssimulation durch Ersatz- schaltungen aus idealen Netzwerkelementen beschrieben. Für unsere Belange sind dies Zweipole mit genau definierten Strom-Spannungs-Beziehungen sowie gesteuerte Quellen. Für die Beschreibung aktiver Bauelemente werden zusätzlich gesteuerte Quellen benötigt.</p>
 <p>Ein <em>Zweipol</em> ist ein Schaltungselement mit zwei elektrischen Anschlüssen, den Polen oder Klemmen. Der Strom, der durch die eine Klemme in den Zweipol hineinfließt, ist dabei gleich dem durch die andere Klemme aus dem Zweipol herausfließenden Strom. Ein Zweipol heißt passiv wirkend, wenn er elektrische Energie aufnimmt; gibt er elektrische Energie ab, so wird er als aktiv wirkender Zweipol bezeichnet.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -544,8 +544,8 @@ u(t) = u[i(t)].
 <p>Wird der durch einen ohmschen Widerstand fließende Strom als Funktion der Spannung aufgetragen, so ergibt sich eine Gerade.</p>
 <p><span class="math display">\[\begin{align}
 u(t) &amp;= R \cdot i(t) \\
-&amp;= R \cdot \hat{I} \sin(\omega t + \varphi_i) \\
-&amp;= \hat{U} \sin(\omega t + \varphi_u)
+&amp;= R \cdot \hat{i} \sin(\omega t + \varphi_i) \\
+&amp;= \hat{u} \sin(\omega t + \varphi_u)
 \end{align}\]</span></p>
 <p><span class="math display">\[
 R = \frac{u(t)}{i(t)} = \frac{\oint \mathbf{E}(\mathbf{r},t) \, ds}{\iint \mathbf{J}(\mathbf{r},t) \, dA}
@@ -577,8 +577,8 @@ q(t) = C u(t).
 <p>Der Proportionalitätsfaktor <span class="math inline">\(C\)</span> wird als Kapazität(swert) bezeichnet. Kapazitätswerte werden in F (Farad) angegeben, wobei gilt 1 F = 1 C = 1 As. Im Fall der linearen Kapazität (<a href="#eq-qc" class="quarto-xref">Gleichung&nbsp;<span>2.1</span></a>) über in</p>
 <p><span class="math display">\[\begin{align}
 i(t) &amp;= C \cdot \frac{du_C(t)}{dt} \\
-&amp;= \omega C \cdot \hat{U} \cos(\omega t + \varphi_u) \\
-&amp;= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2})
+&amp;= \omega C \hat{u} \cos(\omega t + \varphi_u) \\
+&amp;= \omega C \hat{u} \sin(\omega t + \varphi_u + \frac{\pi}{2})
 \end{align}\]</span></p>
 <p><span class="math display">\[
 C = \frac{q(t)}{u(t)} = \frac{\iint \mathbf{D}(\mathbf{r},t) \, dA}{\oint \mathbf{E}(\mathbf{r},t) \, ds}
@@ -611,8 +611,8 @@ u(t) = \frac{d \varphi}{dt}
 <p>und ist für lineare Induktivitäten proportional zur Änderung des Stroms (Spannungs- und Strompfeil gleichgerichtet)</p>
 <p><span class="math display">\[\begin{align}
 u(t) &amp;= L \cdot \frac{di_L(t)}{dt} \\
-&amp;= \omega L \cdot \hat{I} \cos(\omega t + \varphi_i) \\
-&amp;= \omega L \hat{I} \sin(\omega t + \varphi_i + \frac{\pi}{2})
+&amp;= \omega L \hat{i} \cos(\omega t + \varphi_i) \\
+&amp;= \omega L \hat{i} \sin(\omega t + \varphi_i + \frac{\pi}{2})
 \end{align}\]</span></p>
 <p><span class="math display">\[
 L = \frac{\varphi(t)}{i(t)} = \frac{\iint \mathbf{B}(\mathbf{r},t) \, dA}{\oint \mathbf{H}(\mathbf{r},t) \, ds}
