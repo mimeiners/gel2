@@ -423,8 +423,8 @@ window.Quarto = {
   <li><a href="#mittelwert" id="toc-mittelwert" class="nav-link" data-scroll-target="#mittelwert"><span class="header-section-number">17.2.3</span> Mittelwert</a></li>
   <li><a href="#gleichrichtwert" id="toc-gleichrichtwert" class="nav-link" data-scroll-target="#gleichrichtwert"><span class="header-section-number">17.2.4</span> Gleichrichtwert</a></li>
   <li><a href="#effektivwert" id="toc-effektivwert" class="nav-link" data-scroll-target="#effektivwert"><span class="header-section-number">17.2.5</span> Effektivwert</a></li>
-  <li><a href="#scheitelfaktor" id="toc-scheitelfaktor" class="nav-link" data-scroll-target="#scheitelfaktor"><span class="header-section-number">17.2.6</span> Scheitelfaktor</a></li>
-  <li><a href="#formfaktor" id="toc-formfaktor" class="nav-link" data-scroll-target="#formfaktor"><span class="header-section-number">17.2.7</span> Formfaktor</a></li>
+  <li><a href="#formfaktor" id="toc-formfaktor" class="nav-link" data-scroll-target="#formfaktor"><span class="header-section-number">17.2.6</span> Formfaktor</a></li>
+  <li><a href="#scheitelfaktor" id="toc-scheitelfaktor" class="nav-link" data-scroll-target="#scheitelfaktor"><span class="header-section-number">17.2.7</span> Scheitelfaktor</a></li>
   <li><a href="#effektivwert-mit-gleichstromanteil" id="toc-effektivwert-mit-gleichstromanteil" class="nav-link" data-scroll-target="#effektivwert-mit-gleichstromanteil"><span class="header-section-number">17.2.8</span> Effektivwert mit Gleichstromanteil</a></li>
   </ul></li>
   <li><a href="#übungen" id="toc-übungen" class="nav-link" data-scroll-target="#übungen"><span class="header-section-number">17.3</span> Übungen</a>
@@ -753,25 +753,25 @@ Abbildung&nbsp;17.7: Phasenlage
 X = X_{eff} = \sqrt{\frac{1}{T} \int\limits_{t_0}^{t_0 + T} x^2(t) dt}
 \]</span></p>
 </section>
-<section id="scheitelfaktor" class="level3" data-number="17.2.6">
-<h3 data-number="17.2.6" class="anchored" data-anchor-id="scheitelfaktor"><span class="header-section-number">17.2.6</span> Scheitelfaktor</h3>
-<p>Der Scheitelfaktor ist das Verhältnis von Scheitelwert <span class="math inline">\(\hat{i}\)</span> bzw. <span class="math inline">\(\hat{u}\)</span> zum Effektivwert <span class="math inline">\(I_{eff}\)</span> bzw. <span class="math inline">\(U_{eff}\)</span>.</p>
-<p><span class="math display">\[
-\xi = \frac{\hat{x}}{X_{eff}}
-\]</span></p>
-<p>Der Scheitelfaktor für Sinusgrößen beträgt <span class="math inline">\(\xi = \sqrt{2} = 1.414\)</span>.</p>
-<p>Der Scheitelfaktor für Dreieckspannung beträgt <span class="math inline">\(\xi = \sqrt{3}\)</span>.</p>
-<p>Der Scheitelfaktor für Rechtecksignale beträgt <span class="math inline">\(\xi = 1\)</span>.</p>
-</section>
-<section id="formfaktor" class="level3" data-number="17.2.7">
-<h3 data-number="17.2.7" class="anchored" data-anchor-id="formfaktor"><span class="header-section-number">17.2.7</span> Formfaktor</h3>
-<p>Der Formfaktor stellt das Verhältnis von Effektivwert I bzw. U zu Gleichrichtwert <span class="math inline">\(\overline{|i|}\)</span> bzw. <span class="math inline">\(\overline{|u|}\)</span> dar.</p>
+<section id="formfaktor" class="level3" data-number="17.2.6">
+<h3 data-number="17.2.6" class="anchored" data-anchor-id="formfaktor"><span class="header-section-number">17.2.6</span> Formfaktor</h3>
+<p>Der Formfaktor stellt das Verhältnis von Effektivwert <span class="math inline">\(I_{eff}\)</span> bzw. <span class="math inline">\(U_{eff}\)</span> zu Gleichrichtwert <span class="math inline">\(\overline{|i|}\)</span> bzw. <span class="math inline">\(\overline{|u|}\)</span> dar.</p>
 <p><span class="math display">\[
 F = \frac{X_{eff}}{\overline{|x|}}
 \]</span></p>
 <p>Der Formfaktor für Sinusgrößen beträgt <span class="math inline">\(F = \frac{\pi}{2\sqrt{2}} \approx 1.11\)</span>.</p>
 <p>Der Formfaktor für Dreiecksignale beträgt <span class="math inline">\(F = \frac{1.11}{2}\)</span>.</p>
 <p>Der Formfaktor für Rechtecksignale beträgt <span class="math inline">\(F = 1.11\)</span>.</p>
+</section>
+<section id="scheitelfaktor" class="level3" data-number="17.2.7">
+<h3 data-number="17.2.7" class="anchored" data-anchor-id="scheitelfaktor"><span class="header-section-number">17.2.7</span> Scheitelfaktor</h3>
+<p>Der Scheitelfaktor ist das Verhältnis von Scheitelwert <span class="math inline">\(\hat{i}\)</span> bzw. <span class="math inline">\(\hat{u}\)</span> zum Effektivwert <span class="math inline">\(I_{eff}\)</span> bzw. <span class="math inline">\(U_{eff}\)</span>.</p>
+<p><span class="math display">\[
+\sigma = \frac{\hat{x}}{X_{eff}}
+\]</span></p>
+<p>Der Scheitelfaktor für Sinusgrößen beträgt <span class="math inline">\(\sigma = \sqrt{2} = 1.414\)</span>.</p>
+<p>Der Scheitelfaktor für Dreieckspannung beträgt <span class="math inline">\(\sigma = \sqrt{3}\)</span>.</p>
+<p>Der Scheitelfaktor für Rechtecksignale beträgt <span class="math inline">\(\sigma = 1\)</span>.</p>
 </section>
 <section id="effektivwert-mit-gleichstromanteil" class="level3" data-number="17.2.8">
 <h3 data-number="17.2.8" class="anchored" data-anchor-id="effektivwert-mit-gleichstromanteil"><span class="header-section-number">17.2.8</span> Effektivwert mit Gleichstromanteil</h3>

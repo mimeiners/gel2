@@ -475,6 +475,7 @@ window.Quarto = {
 </section>
 <section id="mittelwerte-periodischer-zeitfunktionen" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="mittelwerte-periodischer-zeitfunktionen"><span class="header-section-number">2.5</span> Mittelwerte periodischer Zeitfunktionen</h2>
+<p>“Da sich der Augenblickswert einer periodisch zeitabhängigen Größe dauernd ändert, ist eine Vereinbarung darüber notwendig, wie der Wert der Größe angegeben werden soll. Der arithmetische (zeitliche) Mittelwert ist zur Kennzeichung im Allgemeinen nicht geeignet, da er beispielsweise bei Wechselgrößen definitionsgemäß Null ist.” <span class="citation" data-cites="hagmann2020"><a href="../references.html#ref-hagmann2020" role="doc-biblioref">[3]</a></span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -490,6 +491,7 @@ window.Quarto = {
 \end{align}\]</span></p>
 </div>
 </div>
+<p>“Denkbar wäre die Angabe des Scheitelwertes, jedoch wird dann der übriege Verlauf der Funktion nicht berücksichtigt. Zweckmäßiger ist daher die Angabe von Kenngrößen, die die <em>mittlere</em> Wirkung von Spannungen und Strömen wiedergeben. Das hat zu der Einführung der nachstehend beschriebenen Mittelwerten von periodisch zeitabhÄngigen Größen geführt.” <span class="citation" data-cites="hagmann2020"><a href="../references.html#ref-hagmann2020" role="doc-biblioref">[3]</a></span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -517,6 +519,38 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align}
 X_{eff} = \sqrt{\overline{x^2(t)}} &amp;= \sqrt{\frac{1}{T} \int_t^{t+T} x^2(\tau) \mathrm{d} \tau}
+\end{align}\]</span></p>
+</div>
+</div>
+<p>“Bei Wechselgrößen bezeichnet man das Verhältnis des Effektivwertes zum Gleichrichtwert als <em>Formfaktor</em> mit dem Symbol <span class="math inline">\(F\)</span>.” <span class="citation" data-cites="hagmann2020"><a href="../references.html#ref-hagmann2020" role="doc-biblioref">[3]</a></span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Formfaktor
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\begin{align}
+F &amp;= \frac{X_{eff}}{\overline{\lvert x(t) \lvert}}
+\end{align}\]</span></p>
+</div>
+</div>
+<p>“Das Verhältnis des Scheitelwertes zum Effektivwert heißt <em>Scheitelfaktor</em> mit dem Symbol <span class="math inline">\(\sigma\)</span>.” <span class="citation" data-cites="hagmann2020"><a href="../references.html#ref-hagmann2020" role="doc-biblioref">[3]</a></span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Scheitelfaktor
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\begin{align}
+\sigma &amp;= \frac{\hat{x}}{X_{eff}}
 \end{align}\]</span></p>
 </div>
 </div>
@@ -627,6 +661,9 @@ L = \frac{\varphi(t)}{i(t)} = \frac{\iint \mathbf{B}(\mathbf{r},t) \, dA}{\oint 
 </div>
 <div id="ref-wikipedia2024b" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[2] </div><div class="csl-right-inline">Wikipedia, <span>„Wechselstromgenerator — Wikipedia<span>,</span> die freie Enzyklopädie“</span>. 2024. Verfügbar unter: <a href="https://de.wikipedia.org/w/index.php?title=Wechselstromgenerator&amp;oldid=244474759">https://de.wikipedia.org/w/index.php?title=Wechselstromgenerator&amp;oldid=244474759</a></div>
+</div>
+<div id="ref-hagmann2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">G. Hagmann, <em>Grundlagen der Elektrotechnik</em>, 18., durchgesehene und korrigierte Auflage. in Elektrotechnik. Wiebelsheim: AULA-Verlag, 2020.</div>
 </div>
 </div>
 </section>
