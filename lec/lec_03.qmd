@@ -52,7 +52,7 @@ Gleichungssystemen ausgehen (Maschen-, Knoten- und andere Verfahren) können nic
 
 * u-i-Zusammenhänge des Zeitbereichs $\rightarrow$ ohmsche Form im Frequenzbereich durch komplexen Widerstands-/Leitwertbegriff
 
-* ODE's gehen über in algebraische Gleichungen
+* Gewöhnliche Differetialgeleichungen (DGLs) gehen über in algebraische Gleichungen
 
 * gleichwertige Darstellung harmonischer Funktionen durch komplexe Größen $\rightarrow$ Zeiger
 

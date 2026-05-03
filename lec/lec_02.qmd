@@ -101,19 +101,17 @@ X_{eff} = \sqrt{\overline{x^2(t)}} &= \sqrt{\frac{1}{T} \int_t^{t+T} x^2(\tau) \
 
 Reale Bauteile werden für die Zwecke der Schaltungssimulation durch Ersatz- schaltungen aus idealen Netzwerkelementen
 beschrieben. Für unsere Belange sind dies Zweipole mit genau definierten Strom-Spannungs-Beziehungen sowie gesteuerte
-Quellen. Für die Beschreibung aktiver Bauelemente werden zusa ̈tzlich gesteuerte Quellen benötigt. 
+Quellen. Für die Beschreibung aktiver Bauelemente werden zusätzlich gesteuerte Quellen benötigt. 
 
-Ein *Zweipol* ist ein Schaltungselement mit zwei elektrischen Anschlüssen, den Polen oder Klemmen. Der Strom, der durch
-die eine Klemme in den Zweipol hineinfließt, ist dabei gleich dem durch die andere Klemme aus dem Zweipol
+Ein *Zweipol* ist ein Schaltungselement mit zwei elektrischen Anschlüssen, den Polen oder Klemmen. Der Strom, der durch die eine Klemme in den Zweipol hineinfließt, ist dabei gleich dem durch die andere Klemme aus dem Zweipol
 herausfließenden Strom. Ein Zweipol heißt passiv wirkend, wenn er elektrische Energie aufnimmt; gibt er elektrische
-Energie ab, so wird er als aktiv wirkender Zweipol bezeichnet. 
+Energie ab, so wird er als aktiv wirkender Zweipol bezeichnet.
 
 ::: {.callout-note} 
 
 ### Widerstand $R$ - Einheit: 1 $\Omega$
 
-Ein Zweipol heißt Widerstand, falls die zwischen seinen Klemmen auftretende Spannung $u(t)$ zu jedem Zeitpunkt durch den
-Klemmenstrom $i(t)$ bestimmt ist 
+Ein Zweipol heißt Widerstand, falls die zwischen seinen Klemmen auftretende Spannung $u(t)$ zu jedem Zeitpunkt durch den Klemmenstrom $i(t)$ bestimmt ist 
 
 $$
 u(t) = u[i(t)].
@@ -128,8 +126,8 @@ Wird der durch einen ohmschen Widerstand fließende Strom als Funktion der Spann
 
 \begin{align}
 u(t) &= R \cdot i(t) \\
-&= R \cdot \hat{I} \sin(\omega t + \varphi_i) \\
-&= \hat{U} \sin(\omega t + \varphi_u)
+&= R \cdot \hat{i} \sin(\omega t + \varphi_i) \\
+&= \hat{u} \sin(\omega t + \varphi_u)
 \end{align}
 
 $$
@@ -166,8 +164,8 @@ wobei gilt 1 F = 1 C = 1 As. Im Fall der linearen Kapazität (@eq-qc) über in
 
 \begin{align}
 i(t) &= C \cdot \frac{du_C(t)}{dt} \\
-&= \omega C \cdot \hat{U} \cos(\omega t + \varphi_u) \\
-&= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2})
+&= \omega C \hat{u} \cos(\omega t + \varphi_u) \\
+&= \omega C \hat{u} \sin(\omega t + \varphi_u + \frac{\pi}{2})
 \end{align}
 
 $$
@@ -205,8 +203,8 @@ und ist für lineare Induktivitäten proportional zur Änderung des Stroms (Span
 
 \begin{align}
 u(t) &= L \cdot \frac{di_L(t)}{dt} \\
-&= \omega L \cdot \hat{I} \cos(\omega t + \varphi_i) \\
-&= \omega L \hat{I} \sin(\omega t + \varphi_i + \frac{\pi}{2})
+&= \omega L \hat{i} \cos(\omega t + \varphi_i) \\
+&= \omega L \hat{i} \sin(\omega t + \varphi_i + \frac{\pi}{2})
 \end{align}
 
 

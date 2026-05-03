@@ -4,8 +4,8 @@
 
 Stellen Sie die Signale des angegebenen Netzwerks mit Python und LTspice dar.
 
-Die Komponenten Werte sind: $\omega$ = $2 \pi$ 1 kHz, $\hat{U}_0$ = 10 V, $R$ = 30 $\Omega$, $L$ = 3 mH,
-$\hat{I}_0$ = 0.282 A, $\varphi_I$ = -32.1 Grad.
+Die Komponenten Werte sind: $\omega$ = $2 \pi$ 1 kHz, $\hat{u}_0$ = 10 V, $R$ = 30 $\Omega$, $L$ = 3 mH,
+$\hat{i}_0$ = 0.282 A, $\varphi_I$ = -32.1 Grad.
 
 ![Wechselstromschaltung](../images/hw/hw1p1){#fig-hw1p1}
 
@@ -22,16 +22,16 @@ import matplotlib.pyplot as plt
 f = 10**3  # Grundfrequenz 1 kHz wird auch als 10e3 geschrieben
 w = 2 * np.pi * f  # Kreisfrequenz
 
-U0p = 10  # Spannung in Volt
+u0p = 10  # Spannung in Volt
 R = 30  # Widerstand in Ohm
 L = 3e-3  # Induktivität in Henry
-I0p = 0.282  # Strom in  Ampere
-phiI = -32.1 * np.pi / 180  # Winkel in rad
+i0p = 0.282  # Strom in  Ampere
+phii = -32.1 * np.pi / 180  # Winkel in rad
 
 t = np.linspace(0, 5e-3, 1000)  # Zeitachse anlegen
-u0 = U0p * np.sin(w * t)
-i0 = I0p * np.sin(w * t + phiI)
-uL = w * L * I0p * np.sin(w * t + phiI + np.pi / 2)  # Spannung über der Spule
+u0 = u0p * np.sin(w * t)
+i0 = i0p * np.sin(w * t + phii)
+uL = w * L * i0p * np.sin(w * t + phii + np.pi / 2)  # Spannung über der Spule
 uR = R * i0  # Spannung über Widerstand
 
 plt.plot(w * t, u0, label=r'$u_0$')
@@ -53,7 +53,7 @@ plt.show()
 Der zeitliche Verlauf einer Spannung mit $\omega_2 = 3 \omega_1$ sei gegeben durch
 
 $$
-u(t) = U_0 + \hat{U}_1 \cos(\omega_1 t) + \hat{U}_2 \cos(\omega_2 t + \varphi).
+u(t) = U_0 + \hat{u}_1 \cos(\omega_1 t) + \hat{u}_2 \cos(\omega_2 t + \varphi).
 $$
 
 ### Periodendauer
@@ -96,18 +96,18 @@ $$
 
 \begin{align}
 U^2_{eff} &= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
-&= \frac{1}{T} \int_0^{T} ( U_0 + \hat{U}_1 \cos(\omega_1 t) + \hat{U}_2 \cos(\omega_2 t + \varphi) )^2 \\
-&= \frac{1}{T} \int_0^{T} (  U^2_0 + 2U_0\hat{U}_1\cos(\omega_1t) + 2U_0\hat{U}_2\cos(\omega_2 t + \varphi) \\
-&+ \hat{U}^2_1\cos^2(\omega_1 t) + 2\hat{U}_1\hat{U}_2\cos(\omega_1 t) \cos(\omega_2 t + \varphi) \\
-&+ \hat{U}^2_2 \cos^2(\omega_2 t + \varphi) ) \\  
-&= U_0^2 + \frac{1}{2} \hat{U}_1^2 +  \frac{1}{2} \hat{U}_2^2 \\
+&= \frac{1}{T} \int_0^{T} ( U_0 + \hat{u}_1 \cos(\omega_1 t) + \hat{u}_2 \cos(\omega_2 t + \varphi) )^2 \\
+&= \frac{1}{T} \int_0^{T} (  U^2_0 + 2U_0\hat{u}_1\cos(\omega_1t) + 2U_0\hat{u}_2\cos(\omega_2 t + \varphi) \\
+&+ \hat{u}^2_1\cos^2(\omega_1 t) + 2\hat{u}_1\hat{u}_2\cos(\omega_1 t) \cos(\omega_2 t + \varphi) \\
+&+ \hat{u}^2_2 \cos^2(\omega_2 t + \varphi) ) \\  
+&= U_0^2 + \frac{1}{2} \hat{u}_1^2 +  \frac{1}{2} \hat{u}_2^2 \\
 &= U^2_0 + U^2_{1,eff} + U^2_{2,eff}
 \end{align}
 :::
 
 ### Scheitelfaktor
 
-Wie groß ist der Scheitelfaktor $U_{max}/U_{eff}$, wenn $U_0$ = 1 V, $\hat{U}_1$ = $\hat{U}_2$ = 100 mV und
+Wie groß ist der Scheitelfaktor $U_{max}/U_{eff}$, wenn $U_0$ = 1 V, $\hat{u}_1$ = $\hat{u}_2$ = 100 mV und
 $\varphi$ = 60 Grad?
 
 ```{python}
@@ -120,8 +120,8 @@ import scipy.optimize as so
 import matplotlib.pylab as plt
 
 U0 = 1
-U1p = 100e-3
-U2p = 100e-3
+u1p = 100e-3
+u2p = 100e-3
 phi = 60 * np.pi / 180
 f1 = 1e3
 T = 1 / f1
@@ -131,11 +131,11 @@ w2 = 3 * w1
 
 # Definition der Spannungen als Funktion
 def u(t):
-    return U0 + U1p * np.cos(w1 * t) + U2p * np.cos(w2 * t + phi)
+    return U0 + u1p * np.cos(w1 * t) + u2p * np.cos(w2 * t + phi)
 
 
 def u2(t):
-    return (U0 + U1p * np.cos(w1 * t) + U2p * np.cos(w2 * t + phi))**2
+    return (U0 + u1p * np.cos(w1 * t) + u2p * np.cos(w2 * t + phi))**2
 
 
 # Zeit als Vektor
@@ -164,7 +164,7 @@ print('Der Effektivwert:', U_eff)
 def func(x, c1, c2, c3):
     return 1.0 / 3.0 * (np.arcsin(-c1 / (3 * c2) * np.sin(x)) - c3)
 
-SF = so.fixed_point(func, 1, args=(U1p, U2p, phi), xtol=1e-6)
+SF = so.fixed_point(func, 1, args=(u1p, u2p, phi), xtol=1e-6)
 print('Der Scheitelfaktor:', SF)
 ```
 ::: {.callout-caution collapse="true"}
@@ -172,9 +172,9 @@ print('Der Scheitelfaktor:', SF)
 
 \begin{align}
 U_{max} &= u(t_{max}); \quad \left. \frac{du(t)}{dt} \right\lvert_{t=t_{max}} = 0 \\
-\frac{du(t)}{dt} &= -\hat{U}_1\omega_1\sin(\omega_1 t) - \hat{U}_2 \omega_2\sin(\omega_2 t + \varphi) \\
-\sin(3\omega_1 t_{max} + \varphi) &= -\frac{\hat{U}_1}{2\hat{U}_2}\sin(\omega_1 t_{max}) \\
-\omega_1 t_{max} &= \frac{1}{3} \left( \arcsin \left( -\frac{\hat{U}_1}{3\hat{U}_2} 
+\frac{du(t)}{dt} &= -\hat{u}_1\omega_1\sin(\omega_1 t) - \hat{u}_2 \omega_2\sin(\omega_2 t + \varphi) \\
+\sin(3\omega_1 t_{max} + \varphi) &= -\frac{\hat{u}_1}{2\hat{u}_2}\sin(\omega_1 t_{max}) \\
+\omega_1 t_{max} &= \frac{1}{3} \left( \arcsin \left( -\frac{\hat{u}_1}{3\hat{u}_2} 
 \sin(\omega t_{max} + \varphi) \right) \right) 
 \end{align}
 
@@ -194,51 +194,51 @@ $$
 
 ![Netzwerk zur Schaltungsanalyse](../images/hw/hw1p3){#fig-hw1p3}
 
-Gegeben sei die in @fig-hw1p3 skizzierte Schaltung mit einer Wechselstromquelle $i_0(t)=\hat{I}_0 \sin(\omega t)$. 
+Gegeben sei die in @fig-hw1p3 skizzierte Schaltung mit einer Wechselstromquelle $i_0(t)=\hat{i}_0 \sin(\omega t)$. 
 
 ### Amplitude und Phase
 Berechnen Sie Amplitude und Phasenwinkel jeweils von $u(t)$, $i_C(t)$ und $i_R(t)$!
 
 ::: {.callout-caution collapse="true"}
 ### Lösung
-Sei $u(t)=\hat{U} \sin(\omega t + \varphi_u)$, dann ergeben sich die Ströme zu:
+Sei $u(t)=\hat{u} \sin(\omega t + \varphi_u)$, dann ergeben sich die Ströme zu:
 
 \begin{align}
-i_C(t) &= \omega C \hat{U} \sin(\omega t + \varphi_u + \frac{\pi}{2}) = -\omega C \hat{U} \cos(\omega t + \varphi_u) \\
-i_R(t) &= \frac{\hat{U}}{R} \sin(\omega t + \varphi_u).
+i_C(t) &= \omega C \hat{u} \sin(\omega t + \varphi_u + \frac{\pi}{2}) = -\omega C \hat{u} \cos(\omega t + \varphi_u) \\
+i_R(t) &= \frac{\hat{u}}{R} \sin(\omega t + \varphi_u).
 \end{align}
 
 Knotengleichung: $i_0(t) = i_C(t) + i_R(t)$
 
 \begin{align}
-\hat{I}_0 \sin(\omega t) &= -\omega C \hat{U} \cos(\omega t + \varphi_u) + \frac{\hat{U}}{R} \sin(\omega t + \varphi_u) \\
-\hat{I}_0 \sin(m - \varphi_u) &= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m), \quad m=\omega t + \varphi_u \\
-\hat{I}_0 \left( \sin(m) \cos(\varphi_u) - \cos(m) \sin(\varphi_u) \right) &= -\omega C \hat{U} \cos(m) + \frac{\hat{U}}{R} \sin(m) \\
+\hat{i}_0 \sin(\omega t) &= -\omega C \hat{u} \cos(\omega t + \varphi_u) + \frac{\hat{u}}{R} \sin(\omega t + \varphi_u) \\
+\hat{i}_0 \sin(m - \varphi_u) &= -\omega C \hat{u} \cos(m) + \frac{\hat{u}}{R} \sin(m), \quad m=\omega t + \varphi_u \\
+\hat{i}_0 \left( \sin(m) \cos(\varphi_u) - \cos(m) \sin(\varphi_u) \right) &= -\omega C \hat{u} \cos(m) + \frac{\hat{u}}{R} \sin(m) \\
 \end{align}
 
 Koeffizientenvergleich:
 
 \begin{align}
-\hat{I}_0 \cos(\varphi_u) &= \frac{\hat{U}}{R} \\
-\hat{I}_0 \sin(\varphi_u) &= -\omega C \hat{U} \\
-\tan{\varphi_u} = \frac{\sin(\varphi_u)}{\cos(\varphi_u)} &= \frac{-\omega C \hat{U}}{\frac{\hat{U}}{R}} = -\omega R C \\
+\hat{i}_0 \cos(\varphi_u) &= \frac{\hat{u}}{R} \\
+\hat{i}_0 \sin(\varphi_u) &= -\omega C \hat{u} \\
+\tan{\varphi_u} = \frac{\sin(\varphi_u)}{\cos(\varphi_u)} &= \frac{-\omega C \hat{u}}{\frac{\hat{u}}{R}} = -\omega R C \\
 \varphi_u &= \arctan(-\omega R C)
 \end{align}
 
 
 \begin{align}
-\hat{I}_0 \cos(\varphi_u) &= \frac{\hat{U}}{R} \\
-\hat{U} &= R \hat{I} \cos{\varphi_u} = R \hat{I} \frac{1}{\sqrt{1+\tan^2(\varphi)}} \\
-&= \frac{R \hat{I}}{\sqrt{1+(\omega R C)^2}} \\
-\hat{I}_C &= \omega C \hat{U} \\
-\hat{I}_R &= \frac{\hat{U}}{R}
+\hat{i}_0 \cos(\varphi_u) &= \frac{\hat{u}}{R} \\
+\hat{u} &= R \hat{i} \cos{\varphi_u} = R \hat{i} \frac{1}{\sqrt{1+\tan^2(\varphi)}} \\
+&= \frac{R \hat{i}}{\sqrt{1+(\omega R C)^2}} \\
+\hat{i}_C &= \omega C \hat{u} \\
+\hat{i}_R &= \frac{\hat{u}}{R}
 \end{align}
 
 :::
 
 
 ### Spannungsverläufe
-Skizzieren Sie mithilfe von Python $i_0(t)$, $u(t)$, $i_C(t)$ und $i_R(t)$ für $\hat{I}_0$ = 14.1 mA, $f$ = 3.183 kHz,
+Skizzieren Sie mithilfe von Python $i_0(t)$, $u(t)$, $i_C(t)$ und $i_R(t)$ für $\hat{i}_0$ = 14.1 mA, $f$ = 3.183 kHz,
 $R$ = 50 $\Omega$ und $C$ = 1 $\mu$ F!
 
 ```{python}
@@ -251,21 +251,21 @@ f = 3.183e3  # Frequenz kHz
 w = 2 * np.pi * f  # Kreisfrequenz
 R = 50  # Widerstand in Ohm
 C = 1e-6  # Kapazität in Farad
-I0 = 14.1e-3  # Strom
+i0p = 14.1e-3  # Strom
 t = np.linspace(0, 1e-3, 1000)  # Länge der x-Achse und
 
 # Strom- und Spannungfunktionen
-i_0 = I0 * np.sin(w * t)  # Stromquelle
+i0 = i0p * np.sin(w * t)  # Stromquelle
 u = 5e-3 * np.sin(w * t - np.pi / 4)  # Spannung
-i_C = 10e-3 * np.sin(w * t + np.pi / 4)  # Strom am Kondensator
-i_R = 10e-3 * np.sin(w * t - np.pi / 4)  # Strom am Widerstand
+iC = 10e-3 * np.sin(w * t + np.pi / 4)  # Strom am Kondensator
+iR = 10e-3 * np.sin(w * t - np.pi / 4)  # Strom am Widerstand
 
 # Plot der Signale
 plt.figure()
-plt.plot(t, i_0, label='$i_0$')
+plt.plot(t, i0, label='$i_0$')
 plt.plot(t, u, label='$u$')
-plt.plot(t, i_C, label='$i_C$')
-plt.plot(t, i_R, label='$i_R$')
+plt.plot(t, iC, label='$i_C$')
+plt.plot(t, iR, label='$i_R$')
 plt.xlabel('Zeit t in s')
 plt.ylabel('Strom in i(t) mA und Spannung u(t) in 100 mV')
 plt.legend(loc='upper right')
@@ -317,21 +317,21 @@ Gleichrichtmittelwert und Effektivwert als Funktion vom Phasenanschnittwinkel $\
 1. Halbwelle
 
 \begin{align}
-\overline{i(t)} &= \frac{1}{T} \int_0^{T} i(t) d t & &= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{I}\sin(\varphi) d \varphi \\
-&= \frac{\hat{I}}{2\pi} \left[ -\cos(\varphi) \right]_{\alpha}^{\pi} & &= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
-\overline{\lvert i(t) \lvert} &= \frac{1}{T} \int_0^{T} \lvert i(t) \lvert d t & &= \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
-I^2_{eff} &= \frac{1}{T} \int_0^{T} \overline{i^2(t)} d t & &= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{I}^2\sin^2(\varphi) d \varphi \\
-&= \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\varphi - \frac{1}{4}\sin(2\varphi) \right]_{\alpha}^{\pi} &
-&= \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi -\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
-I_{eff} &= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{4\pi}} & &
+\overline{i(t)} &= \frac{1}{T} \int_0^{T} i(t) d t & &= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{i}\sin(\varphi) d \varphi \\
+&= \frac{\hat{i}}{2\pi} \left[ -\cos(\varphi) \right]_{\alpha}^{\pi} & &= \frac{\hat{i}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
+\overline{\lvert i(t) \lvert} &= \frac{1}{T} \int_0^{T} \lvert i(t) \lvert d t & &= \frac{\hat{i}}{2\pi} \left[ 1+\cos(\varphi) \right] \\
+I^2_{eff} &= \frac{1}{T} \int_0^{T} \overline{i^2(t)} d t & &= \frac{1}{\omega T} \int_{\alpha}^{\pi}\hat{i}^2\sin^2(\varphi) d \varphi \\
+&= \frac{\hat{i}}{2\pi} \left[ \frac{1}{2}\varphi - \frac{1}{4}\sin(2\varphi) \right]_{\alpha}^{\pi} &
+&= \frac{\hat{i}}{2\pi} \left[ \frac{1}{2}\pi -\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
+I_{eff} &= \hat{i} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{4\pi}} & &
 \end{align}
 
 2. Vollwelle
 
 \begin{align}
 \overline{i(t)} &= 0 \\
-\overline{\lvert i(t) \lvert} &=  2 \cdot \frac{\hat{I}}{2\pi} \left[ 1+\cos(\varphi) \right] = \frac{\hat{I}}{\pi} \left[ 1+\cos(\varphi) \right] \\
-I^2_{eff} &= 2 \cdot \frac{\hat{I}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
-&= \hat{I} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{2\pi}}
+\overline{\lvert i(t) \lvert} &=  2 \cdot \frac{\hat{i}}{2\pi} \left[ 1+\cos(\varphi) \right] = \frac{\hat{i}}{\pi} \left[ 1+\cos(\varphi) \right] \\
+I^2_{eff} &= 2 \cdot \frac{\hat{i}}{2\pi} \left[ \frac{1}{2}\pi-\frac{1}{2}\alpha + \frac{1}{4}\sin(2\alpha) \right] \\
+&= \hat{i} \sqrt{\frac{\pi-\alpha +\frac{1}{2}\sin(2\alpha)}{2\pi}}
 \end{align}
 :::
