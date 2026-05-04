@@ -518,20 +518,20 @@ Abbildung&nbsp;18.3
 <div class="callout-body-container callout-body">
 <p>Berechnung Summenspannung:</p>
 <p><span class="math display">\[
-U_s = \sqrt{U_1^2 + U_2^2 + 2 U_1 U_2 cos(\varphi)} = \sqrt{30^2V^2 + 50^2V^2 + 2\cdot 30V \cdot 50V cos(60°)} = 70V
+U_s = \sqrt{U_1^2 + U_2^2 + 2 U_1 U_2 \cos(\varphi)} = \sqrt{30^2V^2 + 50^2V^2 + 2\cdot 30V \cdot 50V \cos(60°)} = 70V
 \]</span></p>
 <p>Berechnung Phasenwinkel:</p>
 <p><span class="math display">\[
-\varphi_s = arctan \left( \frac{U_1 sin(\varphi) + U_2 sin(0°)}{U_1 cos(\varphi) + U_2 cos(0°)} \right) = arctan \left( \frac{30V sin(60°) + 50V sin(0°)}{30V cos(60°) + 50V cos(0°)} \right) = 21.79°
+\varphi_s = arctan \left( \frac{U_1 \sin(\varphi) + U_2 \sin(0°)}{U_1 \cos(\varphi) + U_2 \cos(0°)} \right) = arctan \left( \frac{30V \sin(60°) + 50V \sin(0°)}{30V \cos(60°) + 50V \cos(0°)} \right) = 21.79°
 \]</span></p>
 <p>Berechnung Differenzenspannung:</p>
 <p><span class="math display">\[
-U_d = \sqrt{U_1^2 + U_2^2 - 2 U_1 U_2 cos(\varphi)} = \sqrt{30^2V^2 + 50^2V^2 - 2\cdot 30V \cdot 50V cos(60°)} = 43.59V
+U_d = \sqrt{U_1^2 + U_2^2 - 2 U_1 U_2 \cos(\varphi)} = \sqrt{30^2V^2 + 50^2V^2 - 2\cdot 30V \cdot 50V \cos(60°)} = 43.59V
 \]</span></p>
 <p>Berechnung Phasenwinkel:</p>
 <p><span class="math display">\[
-\varphi_s = arctan \left( \frac{-U_1 sin(\varphi) + U_2 sin(0°)}{-U_1 cos(\varphi) + U_2 cos(0°)} \right) = arctan
-\left( \frac{-30V sin(60°) + 50V sin(0°)}{-30V cos(60°) + 50V cos(0°)} \right) = -36.59°
+\varphi_s = arctan \left( \frac{-U_1 \sin(\varphi) + U_2 \sin(0°)}{-U_1 \cos(\varphi) + U_2 \cos(0°)} \right) = arctan
+\left( \frac{-30V \sin(60°) + 50V \sin(0°)}{-30V \cos(60°) + 50V \cos(0°)} \right) = -36.59°
 \]</span></p>
 </div>
 </div>
@@ -553,13 +553,13 @@ Abbildung&nbsp;18.4
 </figure>
 </div>
 <p>Entn. aus <span class="citation" data-cites="Fricke1982"><a href="../references.html#ref-Fricke1982" role="doc-biblioref">[1]</a></span></p>
-<p>Ein Punkt in der Komplexen Ebene (in Polarkoordinaten) wird mit den Nullpunkt-Abstand <span class="math inline">\(\hat{u}\)</span> (Scheitelwert der Sinusspannung), dem zur Zeit t=0 Winkel <span class="math inline">\(\varphi_u\)</span> (Nullphasenwinkel) und der Winkelgeschwindigkeit <span class="math inline">\(\omega\)</span> (Kreisfrequenz der Sinusspannung) beschrieben.</p>
+<p>Ein Punkt in der Komplexen Ebene (in Polarkoordinaten) wird mit den Nullpunkt-Abstand <span class="math inline">\(\hat{u}\)</span> (Scheitelwert der Sinusspannung), dem zur Zeit <span class="math inline">\(t=0\)</span> Winkel <span class="math inline">\(\varphi_u\)</span> (Nullphasenwinkel) und der Winkelgeschwindigkeit <span class="math inline">\(\omega\)</span> (Kreisfrequenz der Sinusspannung) beschrieben.</p>
 <p><span class="math display">\[
 \underline{u} = \hat{u} e^{j(\omega t + \varphi_u)} = \hat{u} e^{j\omega t} e^{j \varphi_u} = \hat{u} \angle(\omega t + \varphi_u)  = \hat{u} \angle(\omega t) \angle \varphi_u
 \]</span></p>
-<p>Der Zeitwert der Spannung u wird über den Imaginärteil der komplexen Zahl dargestellt.</p>
+<p>Der Zeitwert der Spannung <span class="math inline">\(u(t)\)</span> wird über den Imaginärteil der komplexen Zahl dargestellt.</p>
 <p><span class="math display">\[
-Im \{\underline{u}\} = \hat{u} \cdot sin(\omega t + \varphi_u)
+\operatorname{Im} \{\underline{u}\} = \hat{u} \cdot \sin(\omega t + \varphi_u)
 \]</span></p>
 </section>
 <section id="komplexer-festzeiger" class="level2" data-number="18.4">
@@ -638,7 +638,7 @@ t}e^{j\varphi_u}} = \frac{\hat{i}}{\hat{u}} \angle(\varphi_i - \varphi_u) = \fra
 \]</span></p>
 <p>Zeitwert:</p>
 <p><span class="math display">\[
-u = Im\{\underline{u}\} = \hat{u} \cdot sin(\omega t + \varphi_u) = 311.1V \cdot sin(314.2 s^{-1} \cdot 12 ms - 60°) = 126.5V
+u = Im\{\underline{u}\} = \hat{u} \cdot \sin(\omega t + \varphi_u) = 311.1V \cdot \sin(314.2 s^{-1} \cdot 12 ms - 60°) = 126.5V
 \]</span></p>
 </div>
 </div>
@@ -705,9 +705,7 @@ I_s = \sqrt{3.196^2 + 8^2}A = 8.615A
 <section id="übung-4.4" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="übung-4.4">Übung 4.4</h3>
 <p>Bestimme den Scheitelwert, Effektivwert, Frequenz, Periode, Nullphasenwinkel und die Phasenverschiebung (<span class="math inline">\(I_2\)</span> als Bezugsgröße) beider Ströme. Stelle die Gleichung für beide Ströme im Zeitbereich und in der komplexen Ebene auf.</p>
-<div id="fig-gleichstrom" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-enabled="true">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-gleichstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="cell-fig-gleichstrom" class="cell" data-enabled="true" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -731,11 +729,18 @@ I_s = \sqrt{3.196^2 + 8^2}A = 8.615A
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.legend()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-display">
+<div id="fig-gleichstrom" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gleichstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="tut_04_Komplexe-Groessen_files/figure-html/fig-gleichstrom-output-1.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-gleichstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;18.7
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gleichstrom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;18.7: Gleichstrom
 </figcaption>
 </figure>
+</div>
+</div>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
@@ -765,8 +770,8 @@ Abbildung&nbsp;18.7
 <p>Phasenverschiebung:</p>
 <p><span class="math display">\[\varphi = -\frac{7\pi}{12}\]</span></p>
 <p>Zeitbereich:</p>
-<p><span class="math display">\[i_1 = 2A \cdot sin(2000\pi t - \pi/3)\]</span></p>
-<p><span class="math display">\[i_2 = 1.5A \cdot sin(2000\pi t + \pi/4)\]</span></p>
+<p><span class="math display">\[i_1 = 2A \cdot \sin(2000\pi t - \pi/3)\]</span></p>
+<p><span class="math display">\[i_2 = 1.5A \cdot \sin(2000\pi t + \pi/4)\]</span></p>
 <p>Komplexe Ebene:</p>
 <p><span class="math display">\[ \underline{i}_1 = 2A \cdot e^{j(2000\pi t - \pi/3)} = 2A \angle(-\pi/3)\]</span> <span class="math display">\[ \underline{i}_1 = 1.5A \cdot e^{j(2000\pi t + \pi/4)} = 1.5A \angle(\pi/4)\]</span></p>
 </div>
