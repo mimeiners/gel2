@@ -98,8 +98,8 @@ format:
     theme: flatly
     fontsize: 1.2em
     linestretch: 1.7
-    # mainfont: Helvetica Neue, Helvetica, Arial, sans
-    # monofont: Cascadia Mono, Menlo, Consolas, Courier New, Courier
+    # mainfont: Verdana
+    # monofont: Menlo
     # backgroundcolor: "white"
     # fontcolor: "black"
     highlight-style: github
@@ -149,12 +149,12 @@ format:
     pdfengine: xelatex
 
     mainfont: "Calibri"
-    monofont: "Courier New"
+    monofont: "MesloLGS NF"
     mathfont: "TeX Gyre Termes Math"
     
-  #   # include-in-header:
-  #   #   - frontmatter/header.tex
-  #   # template-partials:
-  #   # - frontmatter/before-body.tex
-  #   # - frontmatter/toc.tex
+  # include-in-header:
+  #   - frontmatter/header.tex
+  # template-partials:
+  # - frontmatter/before-body.tex
+  # - frontmatter/toc.tex
   

@@ -87,13 +87,13 @@ $$
 ### Transformation
 
 \begin{align}
-x(t) &= \hat{x}\cos(\omega t + \varphi_x) \\
-&= \frac{1}{2} \underbrace{\hat{x} e^{j \varphi_x}}_{Phasor} e^{j \omega t} 
-+ \frac{1}{2} \underbrace{\hat{x} e^{-j\varphi_x}}_{Phasor} e^{-j \omega t} \\ 
+x(t) &= \hat{x}\cos(\omega t + \varphi) \\
+&= \frac{1}{2} \underbrace{\hat{x} e^{j \varphi}}_{Phasor} e^{j \omega t} 
++ \frac{1}{2} \underbrace{\hat{x} e^{-j\varphi}}_{Phasor} e^{-j \omega t} \\ 
 &= \frac{1}{2}\underline{\hat{x}} e^{j \omega t} + \frac{1}{2}\underline{\hat{x}}^{*} e^{-j \omega t} \\
 &= \operatorname{Re}\left\{\underline{\hat{x}}e^{j\omega t}\right\} \\
-&= \operatorname{Re}\left\{\hat{x}e^{j \varphi_x}e^{j \omega t}\right\} \\ 
-&= \operatorname{Re}\left\{\hat{x}\left( \cos(\omega t + \varphi_x) + j \sin(\omega t + \varphi_a)\right)\right\}
+&= \operatorname{Re}\left\{\hat{x}e^{j \varphi}e^{j \omega t}\right\} \\ 
+&= \operatorname{Re}\left\{\hat{x}\left( \cos(\omega t + \varphi) + j \sin(\omega t + \varphi)\right)\right\}
 \end{align}
 :::
 
@@ -104,7 +104,7 @@ x(t) &= \hat{x}\cos(\omega t + \varphi_x) \\
 ### rotierender Zeiger, komplexer Momentanwert
 
 $$
-\underline{x}(t) = \underline{\hat{x}} e^{j\omega t} = \hat{x} e^{j \varphi_x} e^{j \omega t}
+\underline{x}(t) = \underline{\hat{x}} e^{j\omega t} = \hat{x} e^{j \varphi} e^{j \omega t}
 $$
 :::
 
@@ -113,7 +113,7 @@ $$
 ### ruhender Zeiger, komplexer Scheitelwert, Phasor
 
 $$
-\underline{x}(0) = \underline{\hat{x}} = \hat{x} e^{j\varphi_x}
+\underline{x}(0) = \underline{\hat{x}} = \hat{x} e^{j\varphi}
 $$
 :::
 
@@ -122,7 +122,7 @@ $$
 ### komplexer Effektivwert
 
 $$
-\underline{x} = \frac{1}{\sqrt{2}} \hat{x} e^{j \varphi_a}
+\underline{x} = \frac{1}{\sqrt{2}} \hat{x} e^{j \varphi}
 $$
 :::
 

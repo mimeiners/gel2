@@ -208,7 +208,7 @@
 
 * Energietechnik
   
-  * monofrequente Signale $U = Z \cdot I$
+  * monofrequente Signale $\underline{U} = \underline{Z} \cdot \underline{I}$
 
 * Frequenz $f \rightarrow 0$
 
@@ -246,14 +246,14 @@ $$
 $$
 :::
 
-## Harmonische Signale ...
+## Harmonische Signale
 
 ::: {.callout-note}
 
 ### als Zeitfunktion
 
 $$
-u(t) = \hat{U} \cos(\omega t + \phi)
+u(t) = \hat{u} \sin(\omega t + \varphi)
 $$
 :::
 
@@ -262,6 +262,6 @@ $$
 ### als Zeiger / komplexe Grösse (Phasor)
 
 $$
-U = \lvert \hat{U} \lvert e^{j \phi}
+\underline{\hat{u}} = \\hat{u} e^{j \varphi}
 $$
 :::

@@ -7,8 +7,8 @@
 ### u/i-Verhalten
 
 $$
-\frac{\underline{u}(t)}{\underline{i}(t)} = \frac{\underline{\hat{U}}e^{j \omega t}}{\underline{\hat{I}}e^{j \omega t}}
-= \frac{\hat{U}}{\hat{I}} e^{j(\varphi_u \varphi_i)} = \underline{Z} 
+\frac{\underline{u}(t)}{\underline{i}(t)} = \frac{\underline{\hat{u}}e^{j \omega t}}{\underline{\hat{i}}e^{j \omega t}}
+= \frac{\hat{u}}{\hat{i}} e^{j(\varphi_u -\varphi_i)} = \underline{Z} 
 $$
 :::
 
@@ -18,8 +18,8 @@ $$
 
 \begin{align}
 \underline{Z} &= \frac{\underline{u}(t)}{\underline{i}(t)} =
-\frac{\underline{\hat{U}}e^{j \omega t}}{\underline{\hat{I}}e^{j \omega t}} =
-\frac{\hat{U}}{\hat{I}}e^{\varphi_u-\varphi_i} \\
+\frac{\underline{\hat{u}}e^{j \omega t}}{\underline{\hat{i}}e^{j \omega t}} =
+\frac{\hat{u}}{\hat{i}}e^{j(\varphi_u-\varphi_i)} \\
 &= Z e^{j \varphi_z} = Z \left( \cos(\varphi_z) + j \sin(\varphi_z) \right) \\
 &= \operatorname{Re}{\underline{Z}} + j \operatorname{Im}{\underline{Z}} \\
 &= R + j X
@@ -46,8 +46,8 @@ X &= \operatorname{Im}{\underline{Z}} & &\mbox{Blindwiderstand (Reaktanz)} \\
 ### Harmonische Anregung
 
 \begin{align}
-u(t) &= \hat{U} \cos(\omega t + \varphi_u) & \underline{u}(t) &= \underline{\hat{U}} e^{j \omega t} \\
-i(t) &= \hat{I} \cos(\omega t + \varphi_i) & \underline{i}(t) &= \underline{\hat{I}} e^{j \omega t}
+u(t) &= \hat{u} \cos(\omega t + \varphi_u) & \underline{u}(t) &= \underline{\hat{u}} e^{j \omega t} \\
+i(t) &= \hat{i} \cos(\omega t + \varphi_i) & \underline{i}(t) &= \underline{\hat{i}} e^{j \omega t}
 \end{align}
 :::
 
@@ -57,8 +57,8 @@ i(t) &= \hat{I} \cos(\omega t + \varphi_i) & \underline{i}(t) &= \underline{\hat
 
 \begin{align}
 \underline{Y} &= \frac{\underline{i}(t)}{\underline{u}(t)} =
-\frac{\underline{\hat{I}}e^{j \omega t}}{\underline{\hat{U}}e^{j \omega t}} =
-\frac{\hat{I}}{\hat{U}}e^{\varphi_i-\varphi_u} \\
+\frac{\underline{\hat{i}}e^{j \omega t}}{\underline{\hat{u}}e^{j \omega t}} =
+\frac{\hat{i}}{\hat{u}}e^{j(\varphi_i-\varphi_u)} \\
 &= Y e^{j \varphi_y} = Y \left( \cos(\varphi_y) + j \sin(\varphi_y) \right) \\
 &= \operatorname{Re}{\underline{Y}} + j \operatorname{Im}{\underline{Y}} \\
 &= G + j B
@@ -81,14 +81,11 @@ B &= \operatorname{Im}{\underline{Y}} & &\mbox{Blindleitwert (Suszeptanz)} \\
 ## Vergleich von RLC-Netzwerken
 
 \begin{align}
-\mbox{Zeitbereich} &: & u &= i R &  u &= \frac{1}{C} \int i\, dt & u &= L \frac{di}{dt} \\
-\mbox{Frequenzbereich} &: & \underline{u} &= \underline{i} R &
-\underline{u} &= \frac{1}{j \omega C} \underline{i} &
-\underline{u} &= j \omega L \underline{i} \\
-\mbox{Impedanz} &: & \underline{Z} &= R &
-\underline{Z} &= j X_C = -\frac{j}{\omega C} &
-\underline{Z} &= j X_L = j \omega L \\
-\mbox{Phase} &: & \varphi_Z&= 0 & \varphi_Z &= -\frac{\pi}{2} & \varphi_Z &= \frac{\pi}{2}
+\mbox{Zeitbereich} &: & u(t) &= i(t) R &  u(t) &= \frac{1}{C} \int i(t)\, dt & u(t) &= L \frac{di(t)}{dt} \\
+\mbox{Frequenzbereich} &: & \underline{U} &= \underline{I} R & \underline{U} &= \frac{1}{j \omega C} \underline{I} &
+\underline{U} &= j \omega L \underline{I} \\
+\mbox{Impedanz} &: & \underline{Z} &= R & \underline{Z} &= j X_C = -\frac{j}{\omega C} & \underline{Z} &= j X_L = j \omega L \\
+\mbox{Phase} &: & \varphi_Z &= 0 & \varphi_Z &= -\frac{\pi}{2} & \varphi_Z &= \frac{\pi}{2}
 \end{align}
 
 
@@ -99,10 +96,10 @@ B &= \operatorname{Im}{\underline{Y}} & &\mbox{Blindleitwert (Suszeptanz)} \\
 ### Harmonische Anregung
 
 \begin{align}
-u(t) &= \hat{U} \cos(\omega t + \varphi_u) & i(t) &= \hat{I} \cos(\omega t + \varphi_i) \\
-&= \frac{1}{2} \left( \underline{\hat{U}} e^{j \omega t} + \underline{\hat{U}}^* e^{-j \omega t}\right) & 
-&= \frac{1}{2} \left( \underline{\hat{I}} e^{j \omega t} +  \underline{\hat{I}}^* e^{-j \omega t}\right) \\
-&= \operatorname{Re}{\underline{\hat{U}}e^{j \omega t}} & &= \operatorname{Re}{\underline{\hat{U}}e^{j \omega t}}
+u(t) &= \hat{u} \cos(\omega t + \varphi_u) & i(t) &= \hat{i} \cos(\omega t + \varphi_i) \\
+&= \frac{1}{2} \left( \underline{\hat{u}} e^{j \omega t} + \underline{\hat{u}}^* e^{-j \omega t}\right) & 
+&= \frac{1}{2} \left( \underline{\hat{i}} e^{j \omega t} +  \underline{\hat{i}}^* e^{-j \omega t}\right) \\
+&= \operatorname{Re}{\underline{\hat{u}}e^{j \omega t}} & &= \operatorname{Re}{\underline{\hat{u}}e^{j \omega t}}
 \end{align}
 :::
 
@@ -112,14 +109,14 @@ u(t) &= \hat{U} \cos(\omega t + \varphi_u) & i(t) &= \hat{I} \cos(\omega t + \va
 
 \begin{align}
 p(t) &= u(t) \cdot i(t) \\
-&= \frac{1}{4} \left( \underline{\hat{U}} e^{j \omega t} +
-\underline{\hat{U}}^* e^{-j \omega t}\right)  
-\left(\underline{\hat{I}} e^{j \omega t} + \underline{\hat{I}}^* e^{-j \omega t}\right) \\
-&= \underbrace{\frac{1}{4} \left(\underline{\hat{U}} \underline{\hat{I}}^* +
-\underline{\hat{U}}^* \underline{\hat{I}} \right)}_{\mbox{zeitunabh. Anteil}} +
-\underbrace{\frac{1}{4} \left( \underline{\hat{U}}
-\underline{\hat{I}} e^{2j \omega t} + \underline{\hat{U}}^*
-\underline{\hat{I}}^* e^{-2j \omega t}\right)}_{\mbox{zeitabh. Anteil}}
+&= \frac{1}{4} \left( \underline{\hat{u}} e^{j \omega t} +
+\underline{\hat{u}}^* e^{-j \omega t}\right)  
+\left(\underline{\hat{i}} e^{j \omega t} + \underline{\hat{i}}^* e^{-j \omega t}\right) \\
+&= \underbrace{\frac{1}{4} \left(\underline{\hat{u}} \underline{\hat{i}}^* +
+\underline{\hat{u}}^* \underline{\hat{i}} \right)}_{\mbox{zeitunabh. Anteil}} +
+\underbrace{\frac{1}{4} \left( \underline{\hat{u}}
+\underline{\hat{i}} e^{2j \omega t} + \underline{\hat{u}}^*
+\underline{\hat{i}}^* e^{-2j \omega t}\right)}_{\mbox{zeitabh. Anteil}}
 \end{align}
 :::
 
@@ -128,12 +125,12 @@ p(t) &= u(t) \cdot i(t) \\
 ### Definitionen
 
 \begin{align}
-\underline{P} &= \frac{1}{4} \left(\underline{\hat{U}} \underline{\hat{I}}^* +
-\underline{\hat{U}}^* \underline{\hat{I}} \right), \quad
+\underline{P} &= \frac{1}{4} \left(\underline{\hat{u}} \underline{\hat{i}}^* +
+\underline{\hat{u}}^* \underline{\hat{i}} \right), \quad
 \mbox{Momentanwert, konstanter Anteil bzw. linearer Mittelwert, Momentanleistung} \\
-p(t) &= \frac{1}{2} \operatorname{Re}{\underline{\hat{U}}\underline{\hat{I}}^*} \\
-&= \frac{1}{2} \operatorname{Re}{\hat{U}\hat{I} e^{j(\varphi_u-\varphi_i)}} \\
-&= \frac{1}{2} \hat{U} \hat{I} \cos(\varphi_u-\varphi_i)
+p(t) &= \frac{1}{2} \operatorname{Re}{\underline{\hat{u}}\underline{\hat{i}}^*} \\
+&= \frac{1}{2} \operatorname{Re}{\hat{u}\hat{i} e^{j(\varphi_u-\varphi_i)}} \\
+&= \frac{1}{2} \hat{u} \hat{i} \cos(\varphi_u-\varphi_i)
 \end{align}
 :::
 
