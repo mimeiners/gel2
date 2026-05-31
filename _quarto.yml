@@ -90,7 +90,7 @@ csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/ie
 # csl: _bibliography/ieee.csl
 
 execute:
-  freeze: auto
+  freeze: true
   
 format:
   
