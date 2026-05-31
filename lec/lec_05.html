@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -97,7 +97,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-c17bf2369ec451fec7864fad2b46db76.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -469,11 +469,11 @@ window.Quarto = {
 <h2 data-number="5.2" class="anchored" data-anchor-id="übertragungsfaktor-reisch2007"><span class="header-section-number">5.2</span> Übertragungsfaktor <span class="citation" data-cites="reisch2007"><a href="../references.html#ref-reisch2007" role="doc-biblioref">[2]</a></span></h2>
 <p>Ist die Eingangsgröße <span class="math inline">\(x(t)\)</span> eines linearen Netzwerks eine sinusförmige Wechselgröße der Kreisfrequenz <span class="math inline">\(\omega\)</span>, in komplexer Schreibweise</p>
 <p><span class="math display">\[
-x(t) = \operatorname{Re}(\underline{\hat{X}} e^{j\omega t}) = \operatorname{Re}(\underline{X}),
+x(t) = \operatorname{Re}(\underline{\hat{x}} e^{j\omega t}) = \operatorname{Re}(\underline{X}),
 \]</span></p>
 <p>so gilt dies auch für die Ausgangsgröße</p>
 <p><span class="math display">\[
-y(t) = \operatorname{Re}(\underline{\hat{Y}} e^{j \omega t}) = \operatorname{Re}(\underline{Y}).
+y(t) = \operatorname{Re}(\underline{\hat{y}} e^{j \omega t}) = \operatorname{Re}(\underline{Y}).
 \]</span></p>
 <p>Das Verhältnis</p>
 <p><span class="math display">\[
@@ -765,7 +765,7 @@ Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
 </div>
 </div>
 <p>Um in LTspice das Bode-Diagramm des RC-Tiefpasses zu erhalten, muss eine <a href="https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/lec5rctp.asc">.ac Analyse</a> durchgeführt werden. Diese kann mit Python wie folgt ausgewertet werden:</p>
-<div id="f6557438" class="cell" data-execution_count="3">
+<div id="16e4c407" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der AC SPICE Analyse der RC-Schaltung</span></span>
@@ -886,7 +886,7 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 \]</span></p>
 <p>so stellt sich am Ausgang für <span class="math inline">\(t \gg \tau = 15\,\mu s\)</span> ein periodischer Spannungsverlauf mit dem Gleichanteil 2.5 V und dem Wechselanteil <span class="math inline">\(\Delta v_2(t)\)</span> ein.</p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="9b752f4c" class="cell" data-execution_count="4">
+<div id="6e8a4de6" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""Auswertung der TRAN SPICE Analyse der RC-Schaltung"""</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1060,7 +1060,7 @@ v_2 \approx \tau \frac{dv_1}{dt} =
 \end{cases}
 \]</span></p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="89e91b67" class="cell" data-execution_count="6">
+<div id="0d45e192" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der TRAN SPICE Analyse des RC-Hochpasses</span></span>
