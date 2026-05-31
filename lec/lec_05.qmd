@@ -14,13 +14,13 @@ Ist die Eingangsgröße $x(t)$ eines linearen Netzwerks eine sinusförmige Wechs
 komplexer Schreibweise 
 
 $$
-x(t) = \operatorname{Re}(\underline{\hat{X}} e^{j\omega t}) = \operatorname{Re}(\underline{X}),
+x(t) = \operatorname{Re}(\underline{\hat{x}} e^{j\omega t}) = \operatorname{Re}(\underline{X}),
 $$ 
 
 so gilt dies auch für die Ausgangsgröße
 
 $$
-y(t) = \operatorname{Re}(\underline{\hat{Y}} e^{j \omega t}) = \operatorname{Re}(\underline{Y}).
+y(t) = \operatorname{Re}(\underline{\hat{y}} e^{j \omega t}) = \operatorname{Re}(\underline{Y}).
 $$
 
 Das Verhältnis
