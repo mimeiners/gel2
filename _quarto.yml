@@ -85,15 +85,15 @@ book:
   output-file: "gel2"
 
 # Bibliography
-bibliography: _bibliography/references.bib
-csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl"
-# csl: _bibliography/ieee.csl
+bibliography: bibliography/references.bib
+# csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl"
+csl: bibliography/ieee.csl
 
 execute:
   freeze: true
   
 format:
-  
+
   html:
     theme: flatly
     fontsize: 1.2em
@@ -105,17 +105,8 @@ format:
     highlight-style: github
     default-image-extension: svg
 
- # epub:
- #   theme: flatly
- #   fontsize: 1.2em
- #   linestretch: 1.7
- #   # mainfont: Helvetica Neue, Helvetica, Arial, sans
- #   # monofont: Cascadia Mono, Menlo, Consolas, Courier New, Courier
- #   # backgroundcolor: "white"
- #   # fontcolor: "black"
- #   highlight-style: github
- #   default-image-extension: svg
- 
+  # typst: default
+  
   pdf:
     documentclass: scrbook
     classoption: [twoside]
@@ -158,3 +149,14 @@ format:
   # - frontmatter/before-body.tex
   # - frontmatter/toc.tex
   
+  # epub:
+  #   theme: flatly
+  #   fontsize: 1.2em
+  #   linestretch: 1.7
+  #   # mainfont: Helvetica Neue, Helvetica, Arial, sans
+  #   # monofont: Cascadia Mono, Menlo, Consolas, Courier New, Courier
+  #   # backgroundcolor: "white"
+  #   # fontcolor: "black"
+  #   highlight-style: github
+  #   default-image-extension: svg
+

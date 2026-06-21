@@ -6,7 +6,7 @@ Die Inhalte sind dem gleichnamigen Kapitel 9 von [@reisch2007] entnommen worden.
 
 Spulen dienen der Verwirklichung von Induktivitäten. Übertrager und Transformatoren nutzen die induktive Kopplung
 von i. allg. galvanisch getrennten Spulen zur Spannungstransformation und zum Übertragen von elektrischer
-Leistung. Spulen und Übertrager werden in der Elektronik hauptsa ̈chlich zum Aufbau von Stromversorgungen, galvanischen 
+Leistung. Spulen und Übertrager werden in der Elektronik hauptsächlich zum Aufbau von Stromversorgungen, galvanischen
 Trennungen (z\.B\. Trennverstärker) und bei der Verwirklichung von Übertragern (z.B. Filter) mit definiertem
 Frequenzgang verwendet.
 
@@ -229,44 +229,44 @@ nennenswerten Serienimpedanz hervorrufen. [...]
 Drosselspulen sollen den Gleichanteil $I_L$ des sie durchfließenden Stroms möglichst wenig, den Wechselanteil möglichst
 stark dämpfen (drosseln). Der Kern einer Drosselspule ist deshalb in der Regel mit einem starken Gleichfeld belastet,
 dem ein schwaches Wechselfeld überlagert ist. Die Verluste in der Drosselspule sind somit vorwiegend Kupferverluste, da
-der dominierende Gleichanteil keine Kernverluste verursacht; vgl. auch {cite}`schlienz2020` Kap. 2 - Abwärtswandler.
+der dominierende Gleichanteil keine Kernverluste verursacht; vgl. auch [@schlienz2020] Kap. 2 - Abwärtswandler.
 
 ![Schaltnetzteil mit Drossel-Abwärtswandler](../images/lec/lec8s6){#fig-lec8s6}
 
 
-#### Power Management Integrated Circuits (PMICs)
+<!-- #### Power Management Integrated Circuits (PMICs) -->
 
-![PMICs](../images/lec/lec8sPMICs){#fig-lec8sPMICs width=400}
+<!-- ![PMICs](../images/lec/lec8sPMICs){#fig-lec8sPMICs width=400} -->
 
-"Power management integrated circuits (PMICs) are essential in today's electronic devices. They manage power delivery
-and consumption, provide efficient power supplies, and drive power switches that control actuators and motors, as
-illustrated in @fig-lec8sPMICs PMICs can be integrated into complex integrated circuits (ICs) or
-implemented as dedicated ICs. In this book, the term PMIC will refer to any type of power integrated circuit. 
+<!-- "Power management integrated circuits (PMICs) are essential in today's electronic devices. They manage power delivery -->
+<!-- and consumption, provide efficient power supplies, and drive power switches that control actuators and motors, as -->
+<!-- illustrated in @fig-lec8sPMICs PMICs can be integrated into complex integrated circuits (ICs) or -->
+<!-- implemented as dedicated ICs. In this book, the term PMIC will refer to any type of power integrated circuit.  -->
 
-The importance of PMICs has grown significantly in recent years, driving innovation and progress in various industries,
-from consumer electronics to automotive and industrial applications. With the progress of machine learning and
-artificial intelligence (AI), intelligent power management is critical to supplying complex processors and sensors. 
+<!-- The importance of PMICs has grown significantly in recent years, driving innovation and progress in various industries, -->
+<!-- from consumer electronics to automotive and industrial applications. With the progress of machine learning and -->
+<!-- artificial intelligence (AI), intelligent power management is critical to supplying complex processors and sensors.  -->
 
-PMICs have enabled the development of smaller, more energy-efficient, and reliable electronic solutions. They also play
-an essential role in environmental aspects and sustainability. By regulating the power supply of electronic devices,
-PMICs can reduce energy consumption and carbon emissions. Moreover, PMICs are crucial for the development of renewable
-energies, such as solar and wind power, by enabling efficient power conversion and management." [@wicht2024]
+<!-- PMICs have enabled the development of smaller, more energy-efficient, and reliable electronic solutions. They also play -->
+<!-- an essential role in environmental aspects and sustainability. By regulating the power supply of electronic devices, -->
+<!-- PMICs can reduce energy consumption and carbon emissions. Moreover, PMICs are crucial for the development of renewable -->
+<!-- energies, such as solar and wind power, by enabling efficient power conversion and management." [@wicht2024] -->
 
-* IoT Nodes and Energy Harvesting
+<!-- * IoT Nodes and Energy Harvesting -->
 
-* Portable Devices, Smartphones, and Wearables
+<!-- * Portable Devices, Smartphones, and Wearables -->
 
-* Universal Serial Bus (USB)
+<!-- * Universal Serial Bus (USB) -->
 
-* Drones
+<!-- * Drones -->
 
-* Telecommunication Infrastructures
+<!-- * Telecommunication Infrastructures -->
 
-* E-Bikes
+<!-- * E-Bikes -->
 
-* Automotive
+<!-- * Automotive -->
 
-* Data-Centers
+<!-- * Data-Centers -->
 
 
 ## Transformatoren und Übertrager
