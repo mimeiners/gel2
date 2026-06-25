@@ -635,7 +635,7 @@ Abbildung&nbsp;5.2: RC-Schaltung für eine Ortskurve
 <div id="fig-nyq-rc_tp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-nyq-rc_tp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="lec_05_files/figure-html/fig-nyq-rc_tp-output-1.png" width="613" height="432" class="figure-img">
+<img src="lec_05_files/figure-html/fig-nyq-rc_tp-output-1.png" width="614" height="433" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nyq-rc_tp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.3: Ortskurve RC-Tiefpass
@@ -755,7 +755,7 @@ A_v(f) =  \frac{1}{\sqrt{1+(f/f_g)^2}}
 <div id="fig-bode-rc_tp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bode-rc_tp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="lec_05_files/figure-html/fig-bode-rc_tp-output-1.png" width="598" height="431" class="figure-img">
+<img src="lec_05_files/figure-html/fig-bode-rc_tp-output-1.png" width="597" height="433" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bode-rc_tp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
@@ -765,7 +765,7 @@ Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
 </div>
 </div>
 <p>Um in LTspice das Bode-Diagramm des RC-Tiefpasses zu erhalten, muss eine <a href="https://github.com/mimeiners/gel2/raw/refs/heads/quarto/files/spice/lec5rctp.asc">.ac Analyse</a> durchgeführt werden. Diese kann mit Python wie folgt ausgewertet werden:</p>
-<div id="16e4c407" class="cell" data-execution_count="3">
+<div id="731bdbae" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der AC SPICE Analyse der RC-Schaltung</span></span>
@@ -812,14 +812,14 @@ Abbildung&nbsp;5.6: Bode-Diagramm RC-Tiefpass
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="lec_05_files/figure-html/cell-4-output-1.png" width="598" height="431" class="figure-img"></p>
+<p><img src="lec_05_files/figure-html/cell-4-output-1.png" width="597" height="433" class="figure-img"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="lec_05_files/figure-html/cell-4-output-2.png" width="600" height="429" class="figure-img"></p>
+<p><img src="lec_05_files/figure-html/cell-4-output-2.png" width="601" height="430" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -886,7 +886,7 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 \]</span></p>
 <p>so stellt sich am Ausgang für <span class="math inline">\(t \gg \tau = 15\,\mu s\)</span> ein periodischer Spannungsverlauf mit dem Gleichanteil 2.5 V und dem Wechselanteil <span class="math inline">\(\Delta v_2(t)\)</span> ein.</p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="6e8a4de6" class="cell" data-execution_count="4">
+<div id="ef667dd6" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""Auswertung der TRAN SPICE Analyse der RC-Schaltung"""</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -915,7 +915,7 @@ v_1(t) = 2.5\,V + \Delta v_1(t); \quad
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="lec_05_files/figure-html/cell-5-output-1.png" width="576" height="431" class="figure-img"></p>
+<p><img src="lec_05_files/figure-html/cell-5-output-1.png" width="577" height="431" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1001,7 +1001,7 @@ A_v(f) \approx \frac{f}{f_g}; \quad \text{mit} \quad f_g = \frac{1}{2\pi RC}
 <div id="fig-bode-rc_hp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bode-rc_hp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="lec_05_files/figure-html/fig-bode-rc_hp-output-1.png" width="598" height="431" class="figure-img">
+<img src="lec_05_files/figure-html/fig-bode-rc_hp-output-1.png" width="597" height="433" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bode-rc_hp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.10: Bode-Diagramm RC-Hochpass
@@ -1060,7 +1060,7 @@ v_2 \approx \tau \frac{dv_1}{dt} =
 \end{cases}
 \]</span></p>
 <p>Auswertung der LTspice Analyse mit Python:</p>
-<div id="0d45e192" class="cell" data-execution_count="6">
+<div id="810f5dae" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">Auswertung der TRAN SPICE Analyse des RC-Hochpasses</span></span>
@@ -1092,7 +1092,7 @@ v_2 \approx \tau \frac{dv_1}{dt} =
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="lec_05_files/figure-html/cell-7-output-1.png" width="576" height="431" class="figure-img"></p>
+<p><img src="lec_05_files/figure-html/cell-7-output-1.png" width="577" height="431" class="figure-img"></p>
 </figure>
 </div>
 </div>
