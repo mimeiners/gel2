@@ -1,7 +1,7 @@
 project:
   type: book
   output-dir: _book
-  
+
 lang: de
 
 book:
@@ -28,7 +28,7 @@ book:
   date: last-modified
 
   #  license: "Apache-2.0 license"
-  
+
   reader-mode: true
 
   page-footer:
@@ -36,12 +36,12 @@ book:
       Grundlagen der Elektrotechnik 2 (GEL2), M. Meiners, HSB.
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
-#  cover-image: images/hsb-logo.png
+  #  cover-image: images/hsb-logo.png
   favicon: images/hsb-logo.png
   site-url: https://mimeiners.github.io/gel2/
   repo-url: https://github.com/mimeiners/gel2/
   repo-branch: quarto
-  repo-actions: [edit,issue]
+  repo-actions: [edit, issue]
   downloads: [pdf]
 
   chapters:
@@ -56,11 +56,11 @@ book:
         - lec/lec_06.qmd
         - lec/lec_07.qmd
         - lec/lec_08.qmd
-    - part: Hörsaalübungen 
+    - part: Hörsaalübungen
       chapters:
         - hw/hw_00.qmd
         - hw/hw_01.qmd
-#        - hw/hw_02.qmd
+        #        - hw/hw_02.qmd
         - hw/hw_03.qmd
         - hw/hw_04.qmd
         - hw/hw_05.qmd
@@ -68,7 +68,7 @@ book:
         - hw/hw_07.qmd
     - part: Tutorium
       chapters:
-#        - tut/tut_01_Einfuehrung.qmd
+        #        - tut/tut_01_Einfuehrung.qmd
         - tut/tut_02_Komplexe-Zahlen.ipynb
         - tut/tut_03_Periodische-Signale.qmd
         - tut/tut_04_Komplexe-Groessen.ipynb
@@ -90,10 +90,10 @@ bibliography: bibliography/references.bib
 csl: bibliography/ieee.csl
 
 execute:
-  freeze: true
-  
-format:
+  # freeze: true
+  enabled: true
 
+format:
   html:
     theme: flatly
     fontsize: 1.2em
@@ -106,7 +106,7 @@ format:
     default-image-extension: svg
 
   # typst: default
-  
+
   pdf:
     documentclass: scrbook
     classoption: [twoside]
@@ -121,9 +121,9 @@ format:
 
     number-sections: true
     number-depth: 2
-        
+
     papersize: a4
-    
+
     geometry:
       - inner=3cm
       - outer=4cm
@@ -142,13 +142,13 @@ format:
     mainfont: "Calibri"
     monofont: "MesloLGS NF"
     mathfont: "TeX Gyre Termes Math"
-    
+
   # include-in-header:
   #   - frontmatter/header.tex
   # template-partials:
   # - frontmatter/before-body.tex
   # - frontmatter/toc.tex
-  
+
   # epub:
   #   theme: flatly
   #   fontsize: 1.2em
@@ -159,4 +159,3 @@ format:
   #   # fontcolor: "black"
   #   highlight-style: github
   #   default-image-extension: svg
-

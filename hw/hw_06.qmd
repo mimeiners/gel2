@@ -36,7 +36,7 @@ Daraus folgt, dass die Wirkleistung $P$ im Resonanzfall maximal wird, wenn $(\om
 
 ### Bestimmung der Kapazität
 
-Wie groß ist $C_{opt}$ zu wählen für den Fall $R_2=90\,\Omega$, $R_i=10\,\Omega$, $L_i=20\,mH$, $U_0=141\,V$ und
+Wie groß ist $C_{opt}$ zu wählen für den Fall $R_2=90\,\Omega$, $R_i=10\,\Omega$, $L_i=20\,mH$, $\hat{U}_0=141\,V$ und
 $\omega=2\pi 100\,Hz$ 
 
 

@@ -277,9 +277,9 @@ sowie in *Übertragern* und *Trenntrafos* zur galvanischen Trennung von Wechsels
 von Gleichanteilen und zum Unterbrechen von Erdschleifen. Die Verkopplung der Induktivitäten wird gewöhnlich 
 durch einen gemeinsamen Kern erhöht, der – zur Verbesserung der Linearität – meist einen Luftspalt enthält.
 
-![Haupt- und Streuflüsse im Transformator](../images/lec/lec8s7){#fig-lec8s4}
+![Haupt- und Streuflüsse im Transformator](../images/lec/lec8s7){#fig-lec8s7}
 
-Abbildung @fig-lec8s4 zeigt den prinzipiellen Aufbau eines Transformators bzw. Übertragers mit einer 
+Abbildung @fig-lec8s7 zeigt den prinzipiellen Aufbau eines Transformators bzw. Übertragers mit einer 
 primärseitigen Wicklung der Windungszahl $n_1$ und einer sekundärseitigen Wicklung der Windungszahl $n_2$.
 Wird die primärseitige Spule von einem Strom $i_1$ durchflossen, so setzt sich der erzeugte Fluß
 

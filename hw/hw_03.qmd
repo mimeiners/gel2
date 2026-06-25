@@ -188,7 +188,7 @@ $$
 
 ```{python}
 #| code-fold: true
-#| label: fig-hw3p3
+#| label: fig-hw3p3b
 #| fig-cap: "Bode-Diagramm"
 
 import numpy as np
