@@ -444,7 +444,7 @@ Tipp
 </div>
 <section id="resonanztransformator" class="level2" data-number="15.1">
 <h2 data-number="15.1" class="anchored" data-anchor-id="resonanztransformator"><span class="header-section-number">15.1</span> Resonanztransformator</h2>
-<p>Berechnen Sie den Frequenzgang der komplexen Amplitude <span class="math inline">\(\underline{H}_u(f)=U_1(f)/U_0(f)\)</span> der folgenden Transformator-Schaltung eines dynamischen Mikrofons <a href="#fig-hw7p1" class="quarto-xref">Abbildung&nbsp;<span>15.1</span></a>.</p>
+<p>Berechnen Sie den Frequenzgang der komplexen Amplitude <span class="math inline">\(\underline{H}_u(f)=U_1(f)/U_0(f)\)</span> der folgenden Transformator-Schaltung eines <a href="https://www.thomann.de/de/onlineexpert_topic_dynamische_mikrofone.html">dynamischen Mikrofons</a> <a href="#fig-hw7p1" class="quarto-xref">Abbildung&nbsp;<span>15.1</span></a>.</p>
 <div id="fig-hw7p1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hw7p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -501,8 +501,7 @@ Abbildung&nbsp;15.2
 </div>
 <p><span class="math display">\[\begin{align}
 U_1 &amp;= \frac{Z_v}{Z_v + Z_2} U_h &amp; U_h &amp;= \frac{Z_1 || (Z_2+Z_v)}{R_{0s} + (Z_1 || (Z_2 + Z_v))} U_{0s}
-\end{align}\]</span></p>
-<p><span class="math display">\[\begin{align}
+\end{align}\]</span> <span class="math display">\[\begin{align}
 H = \frac{U_1}{U_0} = \frac{U_1}{\text{ü} U_{0s}} &amp;= \frac{1}{\text{ü}} \frac{Z_v}{Z_v + Z_2} \frac{Z_p}{R_{0s} + Z_p}
 \end{align}\]</span></p>
 <p>mit</p>
@@ -510,7 +509,7 @@ H = \frac{U_1}{U_0} = \frac{U_1}{\text{ü} U_{0s}} &amp;= \frac{1}{\text{ü}} \f
 Y_1 = \frac{1}{Z_1} &amp;= j \omega C_w + \frac{1}{j \omega L_0}; &amp; Z_2 &amp;= R_w + j \omega L_{\sigma} \\
 Y_v = \frac{1}{Z_v} &amp;= j \omega C_v + \frac{1}{R_v}; &amp; Z_p &amp;= Z_1 || (Z_2+Z_v) = \frac{Z_1(Z_2+Z_v)}{Z_1+Z_2+Z_v}
 \end{align}\]</span></p>
-<div id="35b36194" class="cell" data-execution_count="1">
+<div id="08f67e2c" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -560,29 +559,32 @@ Y_v = \frac{1}{Z_v} &amp;= j \omega C_v + \frac{1}{R_v}; &amp; Z_p &amp;= Z_1 ||
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Betrag und Phase von H(f)</span></span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>fig2 <span class="op">=</span> plt.figure(<span class="dv">2</span>)</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Betrag und Phase'</span>)</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">211</span>)</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Betrag'</span>)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.subplot(211)</span></span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, np.<span class="bu">abs</span>(H))</span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'</span><span class="cf">|</span><span class="vs">H</span><span class="cf">|</span><span class="vs">'</span>)</span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">212</span>)</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, np.angle(H))</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'</span><span class="dv">$</span><span class="er">\</span><span class="vs">log</span><span class="kw">(</span><span class="vs">f/f_0</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>)</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'arg</span><span class="kw">(</span><span class="vs">H</span><span class="kw">)</span><span class="vs">'</span>)</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Betragsfrequenzgang von H(f)</span></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>H_dB <span class="op">=</span> <span class="dv">20</span><span class="op">*</span>np.log10(np.<span class="bu">abs</span>(H))</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Phase'</span>)</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.subplot(212)</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, np.rad2deg(np.unwrap(np.angle(H))))</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'</span><span class="dv">$</span><span class="er">\</span><span class="vs">log</span><span class="kw">(</span><span class="vs">f/f_0</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'arg</span><span class="kw">(</span><span class="vs">H</span><span class="kw">)</span><span class="vs"> in Grad'</span>)</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>fig3 <span class="op">=</span> plt.figure(<span class="dv">3</span>)</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Betragsfrequenzgang'</span>)</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, H_dB)</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'</span><span class="dv">$</span><span class="er">\</span><span class="vs">log</span><span class="kw">(</span><span class="vs">f/f_0</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>)</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'</span><span class="dv">$</span><span class="cf">|</span><span class="vs">H</span><span class="cf">|</span><span class="dv">$</span><span class="vs"> in dB'</span>)</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="co"># %% Betragsfrequenzgang von H(f)</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>H_dB <span class="op">=</span> <span class="dv">20</span><span class="op">*</span>np.log10(np.<span class="bu">abs</span>(H))</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>fig4 <span class="op">=</span> plt.figure(<span class="dv">4</span>)</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Betragsfrequenzgang'</span>)</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>plt.semilogx(f, H_dB)</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'</span><span class="dv">$</span><span class="er">\</span><span class="vs">log</span><span class="kw">(</span><span class="vs">f/f_0</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'</span><span class="dv">$</span><span class="cf">|</span><span class="vs">H</span><span class="cf">|</span><span class="dv">$</span><span class="vs"> in dB'</span>)</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -593,14 +595,21 @@ Y_v = \frac{1}{Z_v} &amp;= j \omega C_v + \frac{1}{R_v}; &amp; Z_p &amp;= Z_1 ||
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="hw_07_files/figure-html/cell-2-output-2.png" width="599" height="453" class="figure-img"></p>
+<p><img src="hw_07_files/figure-html/cell-2-output-2.png" width="585" height="434" class="figure-img"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="hw_07_files/figure-html/cell-2-output-3.png" width="597" height="453" class="figure-img"></p>
+<p><img src="hw_07_files/figure-html/cell-2-output-3.png" width="605" height="453" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="hw_07_files/figure-html/cell-2-output-4.png" width="597" height="453" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -611,7 +620,8 @@ Y_v = \frac{1}{Z_v} &amp;= j \omega C_v + \frac{1}{R_v}; &amp; Z_p &amp;= Z_1 ||
 </section>
 <section id="ersatzschaltbild-eines-lautsprechers" class="level2" data-number="15.2">
 <h2 data-number="15.2" class="anchored" data-anchor-id="ersatzschaltbild-eines-lautsprechers"><span class="header-section-number">15.2</span> Ersatzschaltbild eines Lautsprechers</h2>
-<p>Die dargestellte Schaltung in <a href="#fig-hw7p2" class="quarto-xref">Abbildung&nbsp;<span>15.3</span></a> ist ein vereinfachtes Ersatzschaltbild eines elektrodynamischen Lautsprechers. Dabei repräsentiert <span class="math inline">\(\underline{Z}_1 = R_1 + j \omega L_1\)</span> die Impedanz der ruhenden Schwingspule und <span class="math inline">\(\underline{Z}_M\)</span>, die Parallelschaltung aus <span class="math inline">\(R_2\)</span>, <span class="math inline">\(L_2\)</span> und <span class="math inline">\(C_2\)</span>, repräsentiert die dynamisch-mechanischen Eigenschaften des Systems.</p>
+<p>Die dargestellte Schaltung in <a href="#fig-hw7p2" class="quarto-xref">Abbildung&nbsp;<span>15.3</span></a> ist ein vereinfachtes Ersatzschaltbild eines elektrodynamischen <a href="https://www.thomann.de/de/onlineexpert_topic_lautsprecher.html">Lautsprechers</a>. Dabei repräsentiert <span class="math inline">\(\underline{Z}_1 =
+R_1 + j \omega L_1\)</span> die Impedanz der ruhenden Schwingspule und <span class="math inline">\(\underline{Z}_M\)</span>, die Parallelschaltung aus <span class="math inline">\(R_2\)</span>, <span class="math inline">\(L_2\)</span> und <span class="math inline">\(C_2\)</span>, repräsentiert die dynamisch-mechanischen Eigenschaften des Systems.</p>
 <div id="fig-hw7p2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hw7p2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -622,9 +632,7 @@ Abbildung&nbsp;15.3: Ersatzschaltbild eines Lautsprechers.
 </figcaption>
 </figure>
 </div>
-<p><span class="math display">\[
-R_1 = 3\,\Omega,  L_1 = 200\,\mu H, C_2 = 1000\,\mu F,  L_2 = 4\,mH, R_2 = 30\,\Omega
-\]</span></p>
+<p><span class="math display">\[R_1 = 3\,\Omega,  L_1 = 200\,\mu H, C_2 = 1000\,\mu F,  L_2 = 4\,mH, R_2 = 30\,\Omega\]</span></p>
 <section id="eingangsimpedanz" class="level3" data-number="15.2.1">
 <h3 data-number="15.2.1" class="anchored" data-anchor-id="eingangsimpedanz"><span class="header-section-number">15.2.1</span> Eingangsimpedanz</h3>
 <p>Drücken Sie die Eingangsimpedanz <span class="math inline">\(\underline{Z}_E\)</span> der Schaltung als Funktion der verwandten Bauteile (<span class="math inline">\(R_1\)</span>, <span class="math inline">\(L_1\)</span>, <span class="math inline">\(R_2\)</span>, <span class="math inline">\(L_2\)</span>, <span class="math inline">\(C_2\)</span>) und der Kreisfrequenz <span class="math inline">\(\omega\)</span> aus.</p>
@@ -665,9 +673,7 @@ Z_E &amp;= R_1 + j \omega L_1 + Z_M \\
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-Z_{E0} = R_1 + Z_M
-\]</span></p>
+<p><span class="math display">\[Z_{E0} = R_1 + Z_M\]</span></p>
 <p>Konstruktion der Ortskurve <span class="math inline">\(Z_{E0}(\omega)\)</span>:</p>
 <ul>
 <li><p><span class="math inline">\(Y_M\)</span> zeichnen: Gerade</p></li>
@@ -693,9 +699,7 @@ Z_{E0} = R_1 + Z_M
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-Z_{E0}(f=100\,Hz) = (3,6 - j 4,25) \Omega
-\]</span></p>
+<p><span class="math display">\[Z_{E0}(f=100\,Hz) = (3,6 - j 4,25) \Omega\]</span></p>
 </div>
 </div>
 </div>
@@ -744,23 +748,17 @@ Z_{E0}(f=100\,Hz) = (3,6 - j 4,25) \Omega
 &amp;= \frac{1}{1 + j Q \underbrace{\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)}_{\nu}}
 \end{align}\]</span></p>
 <p>Die Güte <span class="math inline">\(Q=\frac{R_2}{\sqrt{\frac{L_2}{C_2}}}=15\)</span>.</p>
-<p><span class="math display">\[
-\frac{I_{R,eff}}{I_{eff}} = \frac{\lvert I_R \lvert}{\lvert I \lvert} = \frac{1}{\sqrt{1 + Q^2 \nu^2}}
-\]</span></p>
+<p><span class="math display">\[\frac{I_{R,eff}}{I_{eff}} = \frac{\lvert I_R \lvert}{\lvert I \lvert} = \frac{1}{\sqrt{1 + Q^2 \nu^2}}\]</span></p>
 <p>Eine vernünftige Darstellung ist doppelt-logarithmisch (Bode-Diagramm).</p>
-<p><span class="math display">\[
-\varphi = \arg\left(\frac{I_r}{I}\right) = -\arctan \left(Q \nu \right)
-\]</span></p>
+<p><span class="math display">\[\varphi = \arg\left(\frac{I_r}{I}\right) = -\arctan \left(Q \nu \right)\]</span></p>
 <p>Die Schallleistung ergibt sich wie folgt:</p>
 <p><span class="math display">\[\begin{align}
 P_S &amp;= R_2 I^2_{R,eff} = R_2 I^2_{eff} \frac{I^2_{R,eff}}{I^2_{eff}} \\
 &amp;= R_2 \frac{\frac{\hat{U}^2_0}{2}}{\lvert Z_E + R_i \lvert^2} \frac{1}{1 + Q^2 \nu^2}
 \end{align}\]</span></p>
 <p>Für die exakte Berechnung <span class="math inline">\(Z_E\)</span> aus xxx einsetzen, genähert xxx benutzen. Wenn <span class="math inline">\(\omega = \omega_0\)</span>, dann <span class="math inline">\(\nu = 0\)</span>:</p>
-<p><span class="math display">\[
-P_S \approx R_2 \frac{\frac{\hat{U}^2_0}{2}}{\left( R_1 + R_i + R_2 \right)^2} = 1,3\,W
-\]</span></p>
-<div id="20a24d81" class="cell" data-execution_count="2">
+<p><span class="math display">\[P_S \approx R_2 \frac{\frac{\hat{U}^2_0}{2}}{\left( R_1 + R_i + R_2 \right)^2} = 1,3\,W\]</span></p>
+<div id="7fa6ea83" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
