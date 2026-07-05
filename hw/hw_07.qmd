@@ -1,17 +1,16 @@
 # Audio-Applikationen
 
-::: {.callout-tip}
+::: callout-tip
 Setzen Sie zur Auswertung und graphischen Darstellung der Aufgaben Python und LTspice ein.
 :::
 
 ## Resonanztransformator
 
 Berechnen Sie den Frequenzgang der komplexen Amplitude $\underline{H}_u(f)=U_1(f)/U_0(f)$ der folgenden
-Transformator-Schaltung eines dynamischen Mikrofons @fig-hw7p1.
+Transformator-Schaltung eines [dynamischen
+Mikrofons](https://www.thomann.de/de/onlineexpert_topic_dynamische_mikrofone.html) @fig-hw7p1.
 
-
-![Ersatzschaltung eines dynamischen Mikrofons.](../images/hw/hw7p1){#fig-hw7p1 width=400}
-
+![Ersatzschaltung eines dynamischen Mikrofons.](../images/hw/hw7p1){#fig-hw7p1 width="400"}
 
 \begin{align}
 R_0 &= 3\,\Omega, \, \text{Innenwiderstand des Mikrofons}  \\
@@ -23,48 +22,42 @@ R_u &= 100\,k\Omega, \, \text{Verstärker-Eingangswiderstand} \\
 C_u &= 200\,pF, \, \text{Verstärker- und Kabelkapazität} \\
 \end{align}
 
-
 Stellen Sie die Ergebnisse als Funktion der Frequenz grafisch dar:
 
-1. als Ortskurve in der komplexen Ebene,
+1.  als Ortskurve in der komplexen Ebene,
 
-2. als Betrag $\lvert \underline{H}_u \lvert$ und Phase $\phi_{H_u}$ über $\log(f/f_0)$ (normierte Frequenz) und
+2.  als Betrag $\lvert \underline{H}_u \lvert$ und Phase $\phi_{H_u}$ über $\log(f/f_0)$ (normierte Frequenz) und
 
-3. als Bode-Darstellung $20 \cdot \log \lvert \underline{H}_u \lvert$ über $\log(f/f_0)$ (normierte Frequenz).
+3.  als Bode-Darstellung $20 \cdot \log \lvert \underline{H}_u \lvert$ über $\log(f/f_0)$ (normierte Frequenz).
 
-Bei der Analyse und Erläuterung interessieren Grenzfrequenzen, Eckfrequenzen, Hochpass/Tiefpass-Verhalten, die
-Resonanz-Güte und die Rolle der einzelnen Komponenten im Hinblick auf die genannten Frequenzen.
-
+Bei der Analyse und Erläuterung interessieren Grenzfrequenzen, Eckfrequenzen, Hochpass/Tiefpass-Verhalten, die Resonanz-Güte und die Rolle der einzelnen Komponenten im Hinblick auf die genannten Frequenzen.
 
 ::: {.callout-caution collapse="true"}
 ### Lösung
 
 Um den idealen Tranformator aufzulösen muss man:
 
-1. $R_0$ auf die Sekundärseite transformieren; erscheint dort als $R_{0s}=R_0/\text{ü}^2$ mit ü=1/30.
+1.  $R_0$ auf die Sekundärseite transformieren; erscheint dort als $R_{0s}=R_0/\text{ü}^2$ mit ü=1/30.
 
-2. $U_0$ durch eine sekundärseitige Ersatzspannungsquelle $U_{0s}=U_0/\text{ü}$ ersetzen.
+2.  $U_0$ durch eine sekundärseitige Ersatzspannungsquelle $U_{0s}=U_0/\text{ü}$ ersetzen.
 
 Neues Netzwerk:
 
-![](../images/hw/hw7p1s){#fig-hw7p1s width=400}
-
+![](../images/hw/hw7p1s){#fig-hw7p1s width="400"}
 
 \begin{align}
 U_1 &= \frac{Z_v}{Z_v + Z_2} U_h & U_h &= \frac{Z_1 || (Z_2+Z_v)}{R_{0s} + (Z_1 || (Z_2 + Z_v))} U_{0s} 
 \end{align}
-  
 \begin{align}
 H = \frac{U_1}{U_0} = \frac{U_1}{\text{ü} U_{0s}} &= \frac{1}{\text{ü}} \frac{Z_v}{Z_v + Z_2} \frac{Z_p}{R_{0s} + Z_p} 
 \end{align}
-  
+
 mit
-  
+
 \begin{align}
 Y_1 = \frac{1}{Z_1} &= j \omega C_w + \frac{1}{j \omega L_0}; & Z_2 &= R_w + j \omega L_{\sigma} \\
 Y_v = \frac{1}{Z_v} &= j \omega C_v + \frac{1}{R_v}; & Z_p &= Z_1 || (Z_2+Z_v) = \frac{Z_1(Z_2+Z_v)}{Z_1+Z_2+Z_v}
 \end{align}
-
 
 ```{python}
 import numpy as np
@@ -116,15 +109,18 @@ plt.show()
 
 # %% Betrag und Phase von H(f)
 fig2 = plt.figure(2)
-plt.title('Betrag und Phase')
-plt.subplot(211)
+plt.title('Betrag')
+# plt.subplot(211)
 plt.semilogx(f, np.abs(H))
 plt.ylabel(r'|H|')
 plt.grid()
-plt.subplot(212)
-plt.semilogx(f, np.angle(H))
+plt.show()
+
+plt.title('Phase')
+# plt.subplot(212)
+plt.semilogx(f, np.rad2deg(np.unwrap(np.angle(H))))
 plt.xlabel(r'$\log(f/f_0)$')
-plt.ylabel(r'arg(H)')
+plt.ylabel(r'arg(H) in Grad')
 plt.grid()
 plt.show()
 
@@ -132,7 +128,7 @@ plt.show()
 # %% Betragsfrequenzgang von H(f)
 H_dB = 20*np.log10(np.abs(H))
 
-fig3 = plt.figure(3)
+fig4 = plt.figure(4)
 plt.title('Betragsfrequenzgang')
 plt.semilogx(f, H_dB)
 plt.xlabel(r'$\log(f/f_0)$')
@@ -142,26 +138,20 @@ plt.show()
 ```
 :::
 
-
 ## Ersatzschaltbild eines Lautsprechers
 
 Die dargestellte Schaltung in @fig-hw7p2 ist ein vereinfachtes Ersatzschaltbild eines elektrodynamischen
-Lautsprechers. Dabei repräsentiert $\underline{Z}_1 = R_1 + j \omega L_1$ die Impedanz der ruhenden Schwingspule und
-$\underline{Z}_M$, die Parallelschaltung aus $R_2$, $L_2$ und $C_2$, repräsentiert die dynamisch-mechanischen
-Eigenschaften des Systems.
+[Lautsprechers](https://www.thomann.de/de/onlineexpert_topic_lautsprecher.html). Dabei repräsentiert $\underline{Z}_1 =
+R_1 + j \omega L_1$ die Impedanz der ruhenden Schwingspule und $\underline{Z}_M$, die Parallelschaltung aus $R_2$, $L_2$
+und $C_2$, repräsentiert die dynamisch-mechanischen Eigenschaften des Systems.
 
-![Ersatzschaltbild eines Lautsprechers.](../images/hw/hw7p2){#fig-hw7p2 width=400}
+![Ersatzschaltbild eines Lautsprechers.](../images/hw/hw7p2){#fig-hw7p2 width="400"}
 
-$$
-R_1 = 3\,\Omega,  L_1 = 200\,\mu H, C_2 = 1000\,\mu F,  L_2 = 4\,mH, R_2 = 30\,\Omega
-$$
-
+$$R_1 = 3\,\Omega,  L_1 = 200\,\mu H, C_2 = 1000\,\mu F,  L_2 = 4\,mH, R_2 = 30\,\Omega$$
 
 ### Eingangsimpedanz
 
-Drücken Sie die Eingangsimpedanz $\underline{Z}_E$ der Schaltung als Funktion der verwandten Bauteile ($R_1$, $L_1$,
-$R_2$, $L_2$, $C_2$) und der Kreisfrequenz $\omega$ aus.
-
+Drücken Sie die Eingangsimpedanz $\underline{Z}_E$ der Schaltung als Funktion der verwandten Bauteile ($R_1$, $L_1$, $R_2$, $L_2$, $C_2$) und der Kreisfrequenz $\omega$ aus.
 
 ::: {.callout-caution collapse="true"}
 ### Lösung
@@ -174,63 +164,50 @@ Z_E &= R_1 + j \omega L_1 + Z_M \\
 \end{align}
 :::
 
-
 ### Ortskurve
-Für niedrige Frequenzen ($0 \leq f \leq 100\,Hz$) kann der Beitrag $\omega L_1$ der Induktivität $L_1$ zur
-Eingangsimpedanz vernachlässigt werden. Konstruieren Sie mit dieser Vereinfachung die Ortskurve der Eingangsimpedanz
-$\underline{Z}_{E0}$ als Funktion der Kreisfrequenz $\omega$.
+
+Für niedrige Frequenzen ($0 \leq f \leq 100\,Hz$) kann der Beitrag $\omega L_1$ der Induktivität $L_1$ zur Eingangsimpedanz vernachlässigt werden. Konstruieren Sie mit dieser Vereinfachung die Ortskurve der Eingangsimpedanz $\underline{Z}_{E0}$ als Funktion der Kreisfrequenz $\omega$.
 
 ::: {.callout-caution collapse="true"}
 ### Lösung
 
-$$
-Z_{E0} = R_1 + Z_M
-$$
-
+$$Z_{E0} = R_1 + Z_M$$
 
 Konstruktion der Ortskurve $Z_{E0}(\omega)$:
 
-* $Y_M$ zeichnen: Gerade
+- $Y_M$ zeichnen: Gerade
 
-* $Y_M$ invertieren $\rightarrow Z_M$: Kreis
+- $Y_M$ invertieren $\rightarrow Z_M$: Kreis
 
-* $R_1$ addieren $\rightarrow Z_{E0}$: verschobener Kreis
+- $R_1$ addieren $\rightarrow Z_{E0}$: verschobener Kreis
 :::
 
-
 ### Wert der Impedanz
+
 Berechnen Sie den Wert der Impedanz $\underline{Z}_{E0}$ bei der Frequenz $f$ = 100 Hz.
 
 ::: {.callout-caution collapse="true"}
 ### Lösung
 
-$$
-Z_{E0}(f=100\,Hz) = (3,6 - j 4,25) \Omega
-$$
-::: 
+$$Z_{E0}(f=100\,Hz) = (3,6 - j 4,25) \Omega$$
+:::
 
+### Ortskurve
 
-### Ortskurve 
-Geben Sie näherungsweise die Ortskurve der Impedanz $\underline{Z}_E$ als Funktion der Kreisfrequenz $\omega$ an,
-inklusive des Beitrags der Induktivität $L_1$.
+Geben Sie näherungsweise die Ortskurve der Impedanz $\underline{Z}_E$ als Funktion der Kreisfrequenz $\omega$ an, inklusive des Beitrags der Induktivität $L_1$.
 
 ::: {.callout-caution collapse="true"}
 ### Lösung
 
-Für $f \leq 100\,Hz$ ist $\omega L_1 \leq 0.125$, daraus folgt für $f \leq 100\,Hz$ dass $Z_E \approx Z_{E0}$.
-Für $f >> 100\,Hz$ ist $Z_{E0} \approx R_1$ und $Z_E \approx R_1 + j \omega L_1$.
+Für $f \leq 100\,Hz$ ist $\omega L_1 \leq 0.125$, daraus folgt für $f \leq 100\,Hz$ dass $Z_E \approx Z_{E0}$. Für $f >> 100\,Hz$ ist $Z_{E0} \approx R_1$ und $Z_E \approx R_1 + j \omega L_1$.
 :::
 
-
 ### Bode-Diagramm
-Der Lautsprecher werde aus einer Sinusspannungsquelle mit $\hat{U}_0$ = 10 V und Innenwiderstand $R_i$ = 0,5 $\Omega$
-gespeist. Stellen Sie das Verhältnis der Effektivwerte von $I_R$ und $I$ sowie den Phasenwinkel von $I_R$ zu $I$ als
-Funktion der Frequenz in einem Bode-Diagramm dar.
 
+Der Lautsprecher werde aus einer Sinusspannungsquelle mit $\hat{U}_0$ = 10 V und Innenwiderstand $R_i$ = 0,5 $\Omega$ gespeist. Stellen Sie das Verhältnis der Effektivwerte von $I_R$ und $I$ sowie den Phasenwinkel von $I_R$ zu $I$ als Funktion der Frequenz in einem Bode-Diagramm dar.
 
 Berechnen Sie die abgestrahlte Schallleistung $P_S = R I^2_{R,eff}$ als Funktion der normierten Verstimmung $\nu =
-\omega/\omega_0 - \omega_0/\omega$, wobei $\omega_0=(L_2 C_2)^{-1/2}$ ist, und stellen Sie $P_S(\nu)$ graphisch dar. 
-Wie groß ist die von der Schaltung aufgenommene Wirkleistung bei $\omega=\omega_0$?
+\omega/\omega_0 - \omega_0/\omega$, wobei $\omega_0=(L_2 C_2)^{-1/2}$ ist, und stellen Sie $P_S(\nu)$ graphisch dar. Wie groß ist die von der Schaltung aufgenommene Wirkleistung bei $\omega=\omega_0$?
 
 ::: {.callout-caution collapse="true"}
 ### Lösung
@@ -242,22 +219,13 @@ Wie groß ist die von der Schaltung aufgenommene Wirkleistung bei $\omega=\omega
 &= \frac{1}{1 + j Q \underbrace{\left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)}_{\nu}}
 \end{align}
 
-
 Die Güte $Q=\frac{R_2}{\sqrt{\frac{L_2}{C_2}}}=15$.
 
-
-$$
-\frac{I_{R,eff}}{I_{eff}} = \frac{\lvert I_R \lvert}{\lvert I \lvert} = \frac{1}{\sqrt{1 + Q^2 \nu^2}}
-$$
-
+$$\frac{I_{R,eff}}{I_{eff}} = \frac{\lvert I_R \lvert}{\lvert I \lvert} = \frac{1}{\sqrt{1 + Q^2 \nu^2}}$$
 
 Eine vernünftige Darstellung ist doppelt-logarithmisch (Bode-Diagramm).
 
-
-$$
-\varphi = \arg\left(\frac{I_r}{I}\right) = -\arctan \left(Q \nu \right)
-$$
-
+$$\varphi = \arg\left(\frac{I_r}{I}\right) = -\arctan \left(Q \nu \right)$$
 
 Die Schallleistung ergibt sich wie folgt:
 
@@ -266,14 +234,9 @@ P_S &= R_2 I^2_{R,eff} = R_2 I^2_{eff} \frac{I^2_{R,eff}}{I^2_{eff}} \\
 &= R_2 \frac{\frac{\hat{U}^2_0}{2}}{\lvert Z_E + R_i \lvert^2} \frac{1}{1 + Q^2 \nu^2}
 \end{align}
 
+Für die exakte Berechnung $Z_E$ aus xxx einsetzen, genähert xxx benutzen. Wenn $\omega = \omega_0$, dann $\nu = 0$:
 
-Für die exakte Berechnung $Z_E$ aus xxx einsetzen, genähert xxx benutzen.
-Wenn $\omega = \omega_0$, dann $\nu = 0$:
-
-$$
-P_S \approx R_2 \frac{\frac{\hat{U}^2_0}{2}}{\left( R_1 + R_i + R_2 \right)^2} = 1,3\,W
-$$
-
+$$P_S \approx R_2 \frac{\frac{\hat{U}^2_0}{2}}{\left( R_1 + R_i + R_2 \right)^2} = 1,3\,W$$
 
 ```{python}
 import numpy as np

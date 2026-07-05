@@ -58,7 +58,7 @@
 * Kollaborative Frameworks
   * [ShareLaTeX, Online LaTeX](https://www.sharelatex.com/)
   * [CoCalc - Online LaTeX](https://cocalc.com/doc/latex-editor.html)
-	* ein Service der [AcademicCloud](https://academiccloud.de)
+	* ein Service der [HCI - HSB Cloud Infrastruktur](https://cocalc.on.hs-bremen.de)
 
 * Literaturverwaltung
   * [Zotero](https://www.suub.uni-bremen.de/service-beratung/literaturverwaltung/zotero/) 
