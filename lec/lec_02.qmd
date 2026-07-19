@@ -40,7 +40,7 @@
 
 * Periodendauer $T$
 
-* Wechselgröße allgem. $x(t)=\hat{X} \sin (\omega t +\varphi) = \hat{x} \sin(\omega t + \omega t_0)$
+* Wechselgröße allgem. $x(t)=\hat{x} \sin (\omega t +\varphi) = \hat{x} \sin(\omega t + \omega t_0)$
 
 * Scheitelwert, Maximalwert der Amplitude $\hat{x}=\max{x}=x_{max}$
 
@@ -86,12 +86,12 @@ im Allgemeinen nicht geeignet, da er beispielsweise bei Wechselgrößen definiti
 
 "Denkbar wäre die Angabe des Scheitelwertes, jedoch wird dann der übriege Verlauf der Funktion nicht berücksichtigt.
 Zweckmäßiger ist daher die Angabe von Kenngrößen, die die _mittlere_ Wirkung von Spannungen und Strömen wiedergeben.
-Das hat zu der Einführung der nachstehend beschriebenen Mittelwerten von periodisch zeitabhÄngigen Größen geführt."
+Das hat zu der Einführung der nachstehend beschriebenen Mittelwerten von periodisch zeitabhängigen Größen geführt."
 [@hagmann2020]
 
 ::: {.callout-note} 
 
-### Gleichrichtmittelwert
+### Gleichrichtwert
 
 \begin{align}
 \overline{\lvert x(t) \lvert} &= \frac{1}{T} \int_t^{t+T} \lvert x(\tau) \lvert \mathrm{d} \tau
@@ -115,9 +115,9 @@ $F$." [@hagmann2020]
 
 ### Formfaktor
 
-\begin{align}
-F &= \frac{X_{eff}}{\overline{\lvert x(t) \lvert}}
-\end{align}
+\begin{equation}
+F = \frac{X_{eff}}{\overline{\lvert x(t) \lvert}}
+\end{equation}
 :::
 
 "Das Verhältnis des Scheitelwertes zum Effektivwert heißt _Scheitelfaktor_ mit dem Symbol $\sigma$." [@hagmann2020]
@@ -126,9 +126,9 @@ F &= \frac{X_{eff}}{\overline{\lvert x(t) \lvert}}
 
 ### Scheitelfaktor
 
-\begin{align}
-\sigma &= \frac{\hat{x}}{X_{eff}}
-\end{align}
+\begin{equation}
+\sigma = \frac{\hat{x}}{X_{eff}}
+\end{equation}
 :::
 
 

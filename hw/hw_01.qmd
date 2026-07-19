@@ -97,9 +97,9 @@ $$
 \begin{align}
 U^2_{eff} &= \frac{1}{T} \int_0^{T} \overline{u^2(t)} dt \\
 &= \frac{1}{T} \int_0^{T} ( U_0 + \hat{u}_1 \cos(\omega_1 t) + \hat{u}_2 \cos(\omega_2 t + \varphi) )^2 \\
-&= \frac{1}{T} \int_0^{T} (  U^2_0 + 2U_0\hat{u}_1\cos(\omega_1t) + 2U_0\hat{u}_2\cos(\omega_2 t + \varphi) \\
+&= \frac{1}{T} \int_0^{T} (  U^2_0 + 2U_0\hat{u}_1\cos(\omega_1t) + 2U_0\hat{u}_2\cos(\omega_2 t + \varphi) ) \\
 &+ \hat{u}^2_1\cos^2(\omega_1 t) + 2\hat{u}_1\hat{u}_2\cos(\omega_1 t) \cos(\omega_2 t + \varphi) \\
-&+ \hat{u}^2_2 \cos^2(\omega_2 t + \varphi) ) \\  
+&+ \hat{u}^2_2 \cos^2(\omega_2 t + \varphi) ) \\
 &= U_0^2 + \frac{1}{2} \hat{u}_1^2 +  \frac{1}{2} \hat{u}_2^2 \\
 &= U^2_0 + U^2_{1,eff} + U^2_{2,eff}
 \end{align}
